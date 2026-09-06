@@ -4,7 +4,7 @@ A practice scene for learning an iterative filmmaking workflow: a botanical cath
 
 ## Current state
 
-Three five-second comparisons and three short diagnostics are preserved in the first-session archive. Olof's playback review: 0.30 is too smooth and 0.50 flickers too much. Use 0.40 as a comparison baseline while keeping all three; no final visual recipe is selected.
+Three five-second comparisons and three short diagnostics are preserved in this project’s `runs/` folder. The side-by-side comparison is in `exports/2026-09-06-comparison/`. Olof's playback review: 0.30 is too smooth and 0.50 flickers too much. Use 0.40 as a comparison baseline while keeping all three; no final visual recipe is selected.
 
 Current cut: none selected. [Cut convention](cuts/README.md) explains how to save the first version. No assembled long movie exists yet.
 

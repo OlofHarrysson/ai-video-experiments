@@ -18,6 +18,6 @@ Agent working context and conventions are in [AGENTS.md](AGENTS.md).
 
 ## Status
 
-Repository-scoped RunPod skills and MCP configuration are installed. The CLI is authenticated, and the first SDXL feedback renders have run successfully through existing Difforum nodes on a RunPod RTX 4090. See the [first experiment report](apps/deforum/results/2026-09-06.md) for comparisons, quality limitations, and resource cleanup.
+Repository-scoped RunPod skills and MCP configuration are installed. The CLI is authenticated, and the first SDXL feedback renders have run successfully through existing Difforum nodes on a RunPod RTX 4090. See the [first experiment report](apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md) for comparisons, quality limitations, and resource cleanup.
 
 Project folders and project-aware render receipts are implemented. Continuation, 3D camera validation and modern-model comparison are documented next experiments; a movie-editing harness is not yet implemented.

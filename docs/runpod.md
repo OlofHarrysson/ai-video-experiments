@@ -42,7 +42,7 @@ Verified on 2026-09-06 with Codex CLI 0.153.4:
 - The MCP configuration resolves from the repository root and `apps/deforum/`, and is absent from `/tmp` and the global Codex config.
 - `codex mcp login runpod` completed successfully; `codex mcp list --json` reports OAuth authentication. MCP tool execution remains unverified.
 - `runpodctl` 2.12.0 (`51ca7f0`) is installed globally through the official Homebrew tap. CLI authentication, account inspection, Pod creation, SSH access, and remote ComfyUI rendering succeeded with the repository's ignored API key.
-- No global RunPod skills, plugin registration, or Flash SDK was installed. The [first experiment report](../apps/deforum/results/2026-09-06.md) records the paid GPU session and cleanup.
+- No global RunPod skills, plugin registration, or Flash SDK was installed. The [first experiment report](../apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md) records the paid GPU session and cleanup.
 
 From this repository, `codex mcp get runpod --json` must resolve the hosted connection. From an unrelated directory, the same command must report no RunPod server unless the user separately configures one there. Config resolution and OAuth completion do not establish working MCP tool execution.
 

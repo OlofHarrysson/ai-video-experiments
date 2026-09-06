@@ -23,7 +23,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - Keep credentials in ignored local files or the credential store. Never commit keys, OAuth tokens, or private account responses.
 - Inspect Git status and preserve unrelated work. Keep changes on the existing branch unless asked otherwise.
 - Record workflow/model versions, settings, and outputs for each experiment. Distinguish source inspection, local checks, remote execution, and visual review.
-- Preserve every generation, original reference and cut version. New media goes under `projects/PROJECT/`; the first `outputs/` archive stays in place. A working cut references source ranges and never overwrites a generation. Git ignores media; no separate-disk backup is configured yet.
+- Preserve every generation, original reference and cut version. All project media belongs under `projects/PROJECT/`, including the first session. Shared runner, setup code and reusable workflow recipes stay at app level. A working cut references source ranges and never overwrites a generation. Git ignores media; no separate-disk backup is configured yet.
 - Keep the product vision and research living. Defer automatic editing/branching infrastructure and the simple-3D-scene-to-stylization hypothesis until short experiments justify them.
 - Check for an existing user-created Pod before provisioning. Track the resources owned by this experiment and shut down paid compute when finished; retained storage can still cost money.
 
@@ -35,4 +35,4 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - [Deforum mechanism and creative direction](docs/deforum.md).
 - [RunPod tools and repository setup](docs/runpod.md).
 - [Deforum experiment](apps/deforum/README.md): current state and next execution steps.
-- [First session results](apps/deforum/results/2026-09-06.md): execution, visual findings, and cost.
+- [First session results](apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md): execution, visual findings, and cost.

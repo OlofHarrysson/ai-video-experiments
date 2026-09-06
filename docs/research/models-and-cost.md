@@ -4,7 +4,7 @@ Researched 2026-09-06. Recommendation: keep SDXL as the workflow control, then b
 
 ## Compare the actual loop
 
-The [first session](../../apps/deforum/results/2026-09-06.md) averaged 144.66 seconds per five-second clip after the initial image was cached. At the observed all-in running rate of $0.768/hour, that is approximately $0.0309 per 40-frame clip, or $0.00079 per newly diffused frame (39 feedback iterations). The $0.24 session balance difference also includes setup/review and smoke tests; it is not a per-clip price.
+The [first session](../../apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md) averaged 144.66 seconds per five-second clip after the initial image was cached. At the observed all-in running rate of $0.768/hour, that is approximately $0.0309 per 40-frame clip, or $0.00079 per newly diffused frame (39 feedback iterations). The $0.24 session balance difference also includes setup/review and smoke tests; it is not a per-clip price.
 
 At that measured rate, one pass over 30 seconds is roughly $0.19, one minute $0.37, and five minutes $1.85. These are linear warm-runtime estimates, excluding startup, extra depth processing, interpolation, downloads, idle time, retries, and rejected creative attempts. They are not quotes or long-run benchmarks. The first image of each fresh scene also costs inference time.
 

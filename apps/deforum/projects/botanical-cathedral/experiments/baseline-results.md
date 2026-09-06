@@ -2,13 +2,13 @@
 
 Three five-second comparisons rendered successfully. Denoise 0.50 develops more organic shapes and retains more edge detail than 0.30 or 0.40 in sampled frames, although the original fine detail still fades. The Pod and its attached storage were deleted after downloading the results. Observed credit use was approximately **$0.24**.
 
-Olof's playback review: 0.30 is too smooth and 0.50 flickers too much. No final recipe is selected. Use the [project experiment index](../projects/botanical-cathedral/README.md) for current priorities: workflow and 3D practice come before further quality tuning.
+Olof's playback review: 0.30 is too smooth and 0.50 flickers too much. No final recipe is selected. Use the [project experiment index](../README.md) for current priorities: workflow and 3D practice come before further quality tuning.
 
 ## Setup verified
 
 An RTX 4090 Pod ran the official RunPod ComfyUI image, pinned Difforum 0.6.0 nodes, and checksum-verified SDXL base 1.0. CUDA inference, node registration, workflow submission, frame download, and local H.264 encoding all worked. The account began with $50 credit and no existing Pods.
 
-The repository contains the setup script, editable API graph, and a small standard-library Python submission/collection client. All animation runs in the existing Difforum nodes. See the [runbook](../README.md) for exact versions and commands.
+The repository contains the setup script, editable API graph, and a small standard-library Python submission/collection client. All animation runs in the existing Difforum nodes. See the [runbook](../../../README.md) for exact versions and commands.
 
 ## Short tests
 
@@ -30,12 +30,12 @@ Timing comes from ComfyUI execution-start/success timestamps and excludes queue 
 
 All three comparison graphs were equal after removing denoise and output-prefix fields. Decoded initial-frame pixel hashes match. Each video is 1024×576, 5.000 seconds, 24 FPS, and 120 encoded frames; full decoding completed without errors.
 
-Local output directories:
+Output directories relative to this project:
 
-- `outputs/20260906T082401782136Z-denoise-0.30-40f/`
-- `outputs/20260906T082559925877Z-denoise-0.40-40f/`
-- `outputs/20260906T082634500368Z-denoise-0.50-40f/`
-- `outputs/2026-09-06-comparison/`: side-by-side `comparison.mp4` (left to right: 0.30, 0.40, 0.50), `contact-sheet.png` (rows: strengths; columns: frames 0, 19, 39), and machine-readable validation.
+- `runs/20260906T082401782136Z-denoise-0.30-40f/`
+- `runs/20260906T082559925877Z-denoise-0.40-40f/`
+- `runs/20260906T082634500368Z-denoise-0.50-40f/`
+- `exports/2026-09-06-comparison/`: side-by-side `comparison.mp4` (left to right: 0.30, 0.40, 0.50), `contact-sheet.png` (rows: strengths; columns: frames 0, 19, 39), and machine-readable validation.
 
 Keep the middle version as a comparison baseline while testing continuation and camera control. The current comparison establishes a working feedback loop, not a finished visual recipe. A clear transition into an underwater scene remains weak in these samples.
 
@@ -53,4 +53,4 @@ The eight-frame smoke tests cover only the beginning of that prompt transition. 
 
 Visual assessment uses sampled PNG frames and contact sheets. Encoded duration, dimensions, frame count, and decoding are checked separately; that alone does not establish artistic quality or smooth playback. GPU checkpoint/resume and longer renders remain untested. `collect` reconnects to an existing ComfyUI job; it does not resume a failed worker.
 
-Media and raw receipts are local, ignored files under `apps/deforum/outputs/`; they are not included in the public Git repository.
+Media and raw receipts are local, ignored files under this project’s `runs/` and `exports/` folders; they are not included in the public Git repository.

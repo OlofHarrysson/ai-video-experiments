@@ -19,13 +19,27 @@ apps/deforum/
       runs/<run-id>/            frozen settings, frames, receipts, preview
       cuts/v001.md              ordered source ranges and editorial intent
       exports/v001/             assembled previews, when available
-  outputs/                      preserved first-session archive
   work/                         private temporary infrastructure receipts
 ```
 
 A **project** is a film or a coherent creative study. An **experiment** asks one question inside it. A **run** is one actual render attempt. A **cut** selects and orders ranges from runs. An **export** is a rendered version of a cut. Reference images and guide videos belong to their project; shared code and workflow recipes stay at app level.
 
-The first archive stays in `outputs/` and is indexed from the botanical project. Do not move it merely for cosmetic consistency. New runs go under their project. Root-level session reports remain durable historical reports.
+## Shared code
+
+All projects use the same app-level implementation and Python environment:
+
+| Location in `apps/deforum/` | Responsibility |
+| --- | --- |
+| `experiment.py` | Project scaffolding, ComfyUI submission/collection and preview encoding. |
+| `setup-pod.sh` | Shared installation of the pinned ComfyUI node/model recipe. |
+| `workflows/` | Reusable starter graphs; each render stores its exact configured copy in its run folder. |
+| `pyproject.toml`, `uv.lock` | Shared Python environment. |
+| `test_experiment.py` | Shared project/archive behavior checks. |
+| `work/`, `.env` | Ignored infrastructure scratch files and credentials, kept out of creative project assets. |
+
+Keep project-specific references, decisions, outputs and frozen render settings inside the project. Do not copy the runner or dependencies into each film. The current SDXL starter graph contains the botanical example prompts; it is a starting recipe, while each saved run graph is the authoritative record of that generation. If shared code grows, extract modules with clear responsibilities such as a ComfyUI client or video encoding when they are actually reused. There is no separate `utils` package yet.
+
+The first session follows this structure too: six attempts in the botanical project’s `runs/`, its comparison in `exports/`, and the report in `experiments/baseline-results.md`. Existing receipts and media remain unchanged; project membership is recorded in the experiment index.
 
 ## Working loop
 
@@ -52,7 +66,7 @@ Continuation also needs a global schedule frame: when branching from generated f
 
 Completed run media and settings are treated as immutable. New generations always get new IDs. Collection of an unfinished run can add missing artifacts; collection of a completed run returns its existing preview without contacting the expired Pod. No automatic media deletion is provided.
 
-`runs/`, reference assets, exports, and old outputs are ignored by Git. Git can preserve their small indices but cannot recover ignored media after disk failure. Before relocating or pruning anything, make a separate verified copy on another disk: copy originals and manifests, compare file counts and hashes, then update the archive location. No external-disk backup has been configured or performed yet. Local originals currently occupy the Mac's disk.
+`runs/`, reference assets and exports are ignored by Git. Git can preserve their small indices but cannot recover ignored media after disk failure. For moves within the same disk, rename without overwriting and verify file counts and hashes before and after. When transferring to another disk, copy originals and manifests, verify the copy, and update the archive location before considering removal of the old copy. Keep a separate backup. No external-disk backup has been configured or performed yet. Local originals currently occupy the Mac's disk.
 
 ## Boundaries
 

@@ -4,6 +4,8 @@ Work from `apps/deforum/`. The Mac submits workflows and retains results; existi
 
 Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [botanical cathedral project](projects/botanical-cathedral/README.md) indexes the first renders and next experiments.
 
+Shared code stays here: `experiment.py`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
+
 ## Create a project
 
 ```bash
@@ -38,7 +40,7 @@ uv run python experiment.py run --project botanical-cathedral --experiment basel
 uv run python experiment.py run --project botanical-cathedral --experiment baseline --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.5
 ```
 
-Each run saves its exact API graph, submission receipt, runtime information, ComfyUI history, numbered PNG frames, and `preview.mp4` in a unique ignored `projects/PROJECT/runs/RUN_ID/` directory. Its receipt identifies the project and experiment. Both the project and experiment note must exist before submission. `workflows/sdxl-feedback.api.json` is the editable canonical graph in ComfyUI API format. Change prompts and camera schedules there; each run freezes its own copy. The first-session files remain in `outputs/` at their original paths.
+Each run saves its exact API graph, submission receipt, runtime information, ComfyUI history, numbered PNG frames, and `preview.mp4` in a unique ignored `projects/PROJECT/runs/RUN_ID/` directory. Its receipt identifies the project and experiment. Both the project and experiment note must exist before submission. `workflows/sdxl-feedback.api.json` is the editable canonical graph in ComfyUI API format. Change prompts and camera schedules there; each run freezes its own copy. The first session is stored in the botanical cathedral project alongside new runs.
 
 To reconnect to an already submitted job after a client interruption:
 
@@ -46,7 +48,7 @@ To reconnect to an already submitted job after a client interruption:
 uv run python experiment.py collect projects/PROJECT/runs/RUN_ID
 ```
 
-`collect` polls the existing job and downloads its outputs; it does not resubmit or resume GPU computation. Completed archives, including old `outputs/` runs, return their existing preview offline without rewriting assets. Missing assets in a completed archive raise an error rather than triggering regeneration. Worker checkpoint/resume is not verified. The feedback node returns the frame batch after rendering finishes, so keep initial runs short. A client timeout does not stop remote compute.
+`collect` polls the existing job and downloads its outputs; it does not resubmit or resume GPU computation. Completed archives, including migrated first-session runs, return their existing preview offline without rewriting assets. Missing assets in a completed archive raise an error rather than triggering regeneration. Worker checkpoint/resume is not verified. The feedback node returns the frame batch after rendering finishes, so keep initial runs short. A client timeout does not stop remote compute.
 
 After saving outputs locally, delete the experiment's own Pod to remove compute and attached storage charges:
 
@@ -78,7 +80,7 @@ Difforum's strength schedule is denoising directly. The one-second smoke test co
 
 ## Results
 
-[First session, 2026-09-06](results/2026-09-06.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media and private infrastructure receipts stay in ignored `outputs/` and `work/`; small scripts, workflow files, and reports are tracked.
+[First session, 2026-09-06](projects/botanical-cathedral/experiments/baseline-results.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media lives in each project’s ignored `runs/` and `exports/` folders. Private infrastructure receipts stay in app-level `work/`; small scripts, workflow files, and reports are tracked.
 
 Project references, new run media and exports are also ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Branching from a selected frame, automatic movie assembly, and new 3D/model workflows remain proposed experiments. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
 
