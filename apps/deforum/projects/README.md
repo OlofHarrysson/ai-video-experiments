@@ -12,3 +12,7 @@ Create a project with `uv run python experiment.py init-project PROJECT` from `a
 | [Model comparison](model-comparison/README.md) | Compare SDXL, FLUX.1 Dev and Seedream 4.0 scene references. | Originals, native-size caveats and contact sheet preserved. |
 | [Guide redraw](guide-redraw/README.md) | Redraw each depth-camera guide independently. | Eight frames completed; compare structure against feedback. |
 | [Seedream motion](seedream-motion/README.md) | Animate the preferred Seedream reference with clearer 3D movement. | Two five-second videos completed; stronger motion exposes foreground reconstruction limits. |
+| [Marsh story](marsh-story/README.md) | E01: invitation, signal and reveal through three staged shots. | Twelve-second original and five-second revised cut; story states read clearly, feedback progressively softens each shot. |
+| [Motion lab](motion-lab/README.md) | E02–E06: compare camera direction, repaint strength and frequency. | Five preserved five-second videos with timestamped reviews. |
+| [Seedream repaint](seedream-repaint/README.md) | E07: native Seedream editing of independent moving guide frames. | Four-second video: strong source resemblance, variable invented canvas borders. |
+| [Redraw lab](redraw-lab/README.md) | E08–E10: independent guide redraw, fixed seed and masked gap repair. | Three five-second videos; fixed seed reduces measured variation, masked repairs invent geometry. |

@@ -1,6 +1,6 @@
 # Serverless worker
 
-Status: fifteen custom-worker jobs completed across three sessions and outputs verified locally. The [Seedream motion study](../projects/seedream-motion/experiments/motion.md) verifies stronger motion and recovery after an app crash. The earlier [parallel round](../../../docs/research/parallel-experiments-session.md) also tested public image APIs. The endpoint is paused (min/max workers 0), with no network volume or workers retained. See [session results](../projects/botanical-cathedral/experiments/serverless-results.md) for the first-host failure, cached timings, cuts and visual limits.
+Status: forty custom-worker jobs completed across four sessions and outputs verified locally. The latest [ten-experiment round](../../../docs/research/ten-experiments-session.md) adds 25 custom jobs and native Seedream frame editing; all ten videos and 689 cloud archive objects are local. The endpoint is paused (min/max workers 0), with no network volume or workers retained. The [Seedream motion study](../projects/seedream-motion/experiments/motion.md) verifies recovery after an app crash; [first session results](../projects/botanical-cathedral/experiments/serverless-results.md) record startup, cached timings and initial cuts.
 
 This image extends RunPod's existing ComfyUI worker. The small `handler.py` adapter adds a persistent archive and returns a manifest instead of transmitting an entire PNG sequence through the job response. Difforum supplies all diffusion and camera-warp nodes; no new diffusion or depth algorithm is implemented here.
 

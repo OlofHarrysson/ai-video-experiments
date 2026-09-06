@@ -7,10 +7,13 @@ This directory contains the durable notes behind the experiments in this reposit
 - [Olof's learning journal](olof-learning-journal.md) — explicit preferences, demonstrated concepts, unconfirmed exposure and the next learning opportunity.
 - [Iterative filmmaking direction](vision.md) — creative intent, priorities, constraints and deferred hypotheses.
 - [Project and experiment workflow](workflow.md) — references, preserved runs, versioned cuts, exports and archive handling.
+- [Local video review](video-review.md) — extract frames at timestamps, inspect event context and preserve labeled review sheets.
 - [Deforum: image diffusion as animation](deforum.md) — how its feedback loop, camera transforms, prompts, strength, and cadence create video.
 - [RunPod tools and repository setup](runpod.md) — local skills, project MCP configuration, CLI installation, and authentication.
 
 ## Experiments
+
+- [Ten adaptive video experiments](research/ten-experiments-session.md) — visual storytelling, camera/settings comparisons, independent redraw, native Seedream repainting and local frame review.
 
 - [Seedream motion](../apps/deforum/projects/seedream-motion/experiments/motion.md) — five-second feedback/redraw outputs, stronger camera travel and foreground reconstruction limits.
 
