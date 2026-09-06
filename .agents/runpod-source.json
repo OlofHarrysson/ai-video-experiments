@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/runpod/runpod-plugins-official",
+  "commit": "4912d93e5ac4746acf6415ca395413eabf0564f4",
+  "version": "1.2.0",
+  "source_directory": "plugins/runpod/skills",
+  "installed_directory": ".agents/skills",
+  "installed_at": "2026-09-06",
+  "installation": "Unmodified local copies; no global skill or plugin registration"
+}
