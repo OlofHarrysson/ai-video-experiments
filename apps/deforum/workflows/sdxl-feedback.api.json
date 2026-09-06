@@ -1,0 +1,193 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "a luminous botanical cathedral, giant curling fern leaves, emerald and amber stained glass, intricate organic architecture, surreal painted illustration",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, watermark, text, jpeg artifacts, deformed, washed out, oversaturated, plain background, low contrast",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "seed": 21,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
+    "class_type": "DifforumAnimSetup",
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "fps": 8,
+      "max_frames": 40,
+      "seed": 21
+    }
+  },
+  "8": {
+    "class_type": "DifforumCamera",
+    "inputs": {
+      "params": [
+        "7",
+        0
+      ],
+      "mode": "2d",
+      "fov": 45.0,
+      "translation_x": "0:(0)",
+      "translation_y": "0:(0)",
+      "translation_z": "0:(0)",
+      "rotation_3d_x": "0:(0)",
+      "rotation_3d_y": "0:(0)",
+      "rotation_3d_z": "0:(0.4)",
+      "zoom": "0:(1.015)"
+    }
+  },
+  "9": {
+    "class_type": "DifforumSchedule",
+    "inputs": {
+      "params": [
+        "7",
+        0
+      ],
+      "schedule": "0:(0.4)",
+      "easing": "linear"
+    }
+  },
+  "12": {
+    "class_type": "DifforumPromptSchedule",
+    "inputs": {
+      "params": [
+        "7",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "prompts": "0: a luminous botanical cathedral, giant curling fern leaves, emerald and amber stained glass, intricate organic architecture, surreal painted illustration\n39: an underwater coral cathedral, branching coral arches, turquoise and gold, intricate organic architecture, surreal painted illustration",
+      "easing": "ease_in_out"
+    }
+  },
+  "10": {
+    "class_type": "DifforumFeedbackSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "params": [
+        "7",
+        0
+      ],
+      "camera": [
+        "8",
+        0
+      ],
+      "init_image": [
+        "6",
+        0
+      ],
+      "strength_schedule": [
+        "9",
+        0
+      ],
+      "positive_schedule": [
+        "12",
+        0
+      ],
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "color_coherence": 0.8,
+      "color_mode": "lab",
+      "symmetry": "none",
+      "symmetry_segments": 6,
+      "cadence": 1,
+      "seed_mode": "increment",
+      "noise": 0.02,
+      "sharpen": 0.2
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "10",
+        0
+      ],
+      "filename_prefix": "deforum/comparison"
+    }
+  }
+}

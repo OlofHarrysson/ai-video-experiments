@@ -16,4 +16,4 @@ Agent working context and conventions are in [AGENTS.md](AGENTS.md).
 
 ## Status
 
-Repository-scoped RunPod skills and MCP configuration are installed, and the Deforum working directory is ready. CLI authentication and the first remote GPU render are still pending.
+Repository-scoped RunPod skills and MCP configuration are installed. The CLI is authenticated, and the first SDXL feedback renders have run successfully through existing Difforum nodes on a RunPod RTX 4090. See the [first experiment report](apps/deforum/results/2026-09-06.md) for comparisons, quality limitations, and resource cleanup.

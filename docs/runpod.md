@@ -27,12 +27,12 @@ MCP OAuth does not authenticate `runpodctl`. For CLI operations, put a RunPod AP
 
 ```bash
 cd apps/deforum
-uv run --no-project --env-file .env runpodctl user
+uv run --env-file .env runpodctl user
 ```
 
 Use the same prefix for other `runpodctl` commands. This uses `uv` to supply the environment for the global executable; it does not install a Python SDK. Do not add the key to shell startup files or global Codex configuration for this experiment.
 
-Use one working control interface for each operation. The MCP handles infrastructure management once connected; the CLI is useful for SSH and file transfer. No Flash SDK or companion CLI is installed merely because its skill is present.
+The CLI is the verified infrastructure interface for this experiment. The MCP is configured and authenticated but its tools were not available in the active session. No Flash SDK or companion CLI is installed merely because its skill is present.
 
 ## Verification and scope
 
@@ -40,11 +40,11 @@ Verified on 2026-09-06 with Codex CLI 0.153.4:
 
 - All 138 installed skill/reference files match the pinned upstream snapshot byte for byte.
 - The MCP configuration resolves from the repository root and `apps/deforum/`, and is absent from `/tmp` and the global Codex config.
-- `codex mcp login runpod` completed successfully; `codex mcp list --json` reports OAuth authentication. No account Pod listing has been performed yet.
-- `runpodctl` 2.12.0 (`51ca7f0`) is installed globally through the official Homebrew tap. `runpodctl user` reports `no_credentials`; it requires a separate API key.
-- No global RunPod skills or plugin registration, Flash SDK, or paid GPU resource was installed/created by this setup.
+- `codex mcp login runpod` completed successfully; `codex mcp list --json` reports OAuth authentication. MCP tool execution remains unverified.
+- `runpodctl` 2.12.0 (`51ca7f0`) is installed globally through the official Homebrew tap. CLI authentication, account inspection, Pod creation, SSH access, and remote ComfyUI rendering succeeded with the repository's ignored API key.
+- No global RunPod skills, plugin registration, or Flash SDK was installed. The [first experiment report](../apps/deforum/results/2026-09-06.md) records the paid GPU session and cleanup.
 
-From this repository, `codex mcp get runpod --json` must resolve the hosted connection. From an unrelated directory, the same command must report no RunPod server unless the user separately configures one there. Config resolution is not proof of authentication: after sign-in, list Pods with the MCP tools to verify account access.
+From this repository, `codex mcp get runpod --json` must resolve the hosted connection. From an unrelated directory, the same command must report no RunPod server unless the user separately configures one there. Config resolution and OAuth completion do not establish working MCP tool execution.
 
 Before creating paid resources, inspect existing Pods, current rates, and the live official ComfyUI template. The [Deforum app README](../apps/deforum/README.md) owns the experiment sequence and budget boundary.
 
