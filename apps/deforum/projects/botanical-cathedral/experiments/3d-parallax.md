@@ -1,6 +1,6 @@
 # Intentional 3D camera
 
-Status: proposed; not rendered. [Research and source audit](../../../../../docs/research/3d-camera-and-motion.md).
+Status: depth-camera graph implemented, not rendered. [Research and source audit](../../../../../docs/research/3d-camera-and-motion.md) · [Execution runbook](../../../serverless/README.md).
 
 ## Question
 
@@ -9,6 +9,8 @@ Can a short dolly/lateral move create correct differential parallax without unac
 ## Comparison
 
 Keep the existing SDXL model and detail controls. Use a layered scene/reference, inspect Depth Anything V2 Small output, and preview the camera warp without diffusion first. Add an eight-frame redraw only after foreground/background motion is correct. Verify that depth is connected; mode `3d` by itself is insufficient.
+
+The prepared graph uses the selected continuation anchor, Depth Anything V2 Small FP32, near/far 1/10, FOV 45°, bright depth near, and no depth inversion. A +0.02 scene-X translation per frame moves points right, equivalent to camera translation left; zoom and rotation are disabled to isolate parallax. The guide uses cumulative poses on the original image. The repainted feedback test reuses initial depth while the image evolves, so it tests a short local move only.
 
 ## Evidence to collect
 

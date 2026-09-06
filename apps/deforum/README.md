@@ -4,7 +4,13 @@ Work from `apps/deforum/`. The Mac submits workflows and retains results; existi
 
 Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [botanical cathedral project](projects/botanical-cathedral/README.md) indexes the first renders and next experiments.
 
-Shared code stays here: `experiment.py`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
+Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
+
+## Next execution: Serverless
+
+Serverless is selected for the next experiment. The [worker runbook](serverless/README.md) owns deployment, S3 credentials, scale-to-zero settings, continuation, cut assembly and the depth-camera test. Implementation and local archive tests are complete; image build and hosted execution are pending. No endpoint or persistent volume has been created yet.
+
+`run` without `--url` uses Serverless. `continue` and `camera-preview` use the same transport. Load `.env` with `uv run --env-file .env` for submission/collection. A maximum of one GPU worker, zero active workers and a five-second idle timeout are the intended configuration. The proposed 10 GB archive volume costs approximately $0.70/month even when no GPU runs.
 
 ## Create a project
 
@@ -14,7 +20,7 @@ uv run python experiment.py init-project my-film
 
 Edit `projects/my-film/README.md` and its `experiments/baseline.md`, then add the project to the index. The command creates reference, run, cut and export folders and refuses to overwrite an existing project. Further experiment notes are Markdown files with lowercase hyphenated names.
 
-## Run a comparison
+## Earlier verified Pod comparison
 
 Requirements: `uv`, `ffmpeg`, the global `runpodctl` CLI, a RunPod API key in ignored `.env`, and an accessible ComfyUI Pod with the checkpoint and nodes below. See [RunPod setup](../../docs/runpod.md) for repository-scoped tools and authentication.
 
@@ -82,8 +88,8 @@ Difforum's strength schedule is denoising directly. The one-second smoke test co
 
 [First session, 2026-09-06](projects/botanical-cathedral/experiments/baseline-results.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media lives in each project’s ignored `runs/` and `exports/` folders. Private infrastructure receipts stay in app-level `work/`; small scripts, workflow files, and reports are tracked.
 
-Project references, new run media and exports are also ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Branching from a selected frame, automatic movie assembly, and new 3D/model workflows remain proposed experiments. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
+Project references, run media and exports are ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Continuation, explicit-range cut assembly and a depth-camera graph are locally implemented; their first hosted tests are pending. Modern model comparisons remain future work. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
 
 ## Local checks
 
-`uv run python -m unittest -v test_experiment` checks project scoping, separate render attempts, refusal to overwrite projects, and offline preservation of completed archives. These tests use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.
+`uv run python -m unittest -v` runs 10 local checks covering project scoping, separate attempts, immutable cuts, global continuation indices, checksum rejection and archive recovery. They use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.

@@ -13,8 +13,8 @@ Current cut: none selected. [Cut convention](cuts/README.md) explains how to sav
 | Note | Question | Status |
 | --- | --- | --- |
 | [Baseline](experiments/baseline.md) | What does the existing SDXL feedback loop produce? | Rendered and reviewed. |
-| [Continuation](experiments/continuation.md) | Can we retain a good prefix and replace only what follows it? | Proposed next practice. |
-| [3D parallax](experiments/3d-parallax.md) | Can a short intentional camera move produce convincing near/far parallax? | Proposed, after a camera-only check. |
+| [Continuation](experiments/continuation.md) | Can we retain a good prefix and replace only what follows it? | Frame 19 selected; CLI locally tested, hosted render pending. |
+| [3D parallax](experiments/3d-parallax.md) | Can a short intentional camera move produce convincing near/far parallax? | Graph prepared; camera-only check pending. |
 | [Model quality](experiments/model-quality.md) | Can we improve detail and flicker at similar recurring cost? | Researched; no new model run. |
 
 [References](references/README.md) · [runs](runs/README.md) · [cuts](cuts/README.md) · [exports](exports/README.md) · [working convention](../../../../docs/workflow.md)

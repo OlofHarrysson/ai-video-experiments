@@ -1,6 +1,6 @@
 # Project and experiment workflow
 
-Living convention, 2026-09-06. Start with the [project index](../apps/deforum/projects/README.md). The current implementation organizes renders; it does not yet resume GPU state or assemble a movie automatically.
+Living convention, 2026-09-06. Start with the [project index](../apps/deforum/projects/README.md). Explicit frame continuation and source-range assembly are locally implemented; hosted validation is pending. They do not restore a saved GPU process. See the [serverless runbook](../apps/deforum/serverless/README.md).
 
 ## Folder ownership
 
@@ -70,4 +70,4 @@ Completed run media and settings are treated as immutable. New generations alway
 
 ## Boundaries
 
-This convention is a starting practice, not a database schema. Introduce a machine-readable cut format, OTIO export, or UI only when assembling real clips makes the need concrete. Exact continuation requires a separate validation; a saved image alone is not a guarantee of reproducing the same subsequent frames.
+Cut assembly now takes a minimal JSON list of `{run, in, out}` ranges and saves source hashes beside its export. Keep OTIO and editing UI deferred. Exact continuation requires separate validation; a saved image alone does not guarantee reproduction of the same subsequent frames.

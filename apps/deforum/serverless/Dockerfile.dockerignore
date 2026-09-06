@@ -1,0 +1,5 @@
+**
+!apps/
+!apps/deforum/
+!apps/deforum/serverless/
+!apps/deforum/serverless/handler.py

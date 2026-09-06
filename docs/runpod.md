@@ -32,7 +32,7 @@ uv run --env-file .env runpodctl user
 
 Use the same prefix for other `runpodctl` commands. This uses `uv` to supply the environment for the global executable; it does not install a Python SDK. Do not add the key to shell startup files or global Codex configuration for this experiment.
 
-The CLI is the verified infrastructure interface for this experiment. The MCP is configured and authenticated but its tools were not available in the active session. No Flash SDK or companion CLI is installed merely because its skill is present.
+The CLI is a verified infrastructure interface for this experiment. MCP `list-endpoints` also succeeded in the serverless session and returned no endpoints; infrastructure mutations through MCP are still unverified. No Flash SDK or companion CLI is installed merely because its skill is present.
 
 ## Verification and scope
 
@@ -48,7 +48,7 @@ From this repository, `codex mcp get runpod --json` must resolve the hosted conn
 
 Before creating paid resources, inspect existing Pods, current rates, and the live official ComfyUI template. The [Deforum app README](../apps/deforum/README.md) owns the experiment sequence and budget boundary.
 
-Running Pods continue to incur GPU charges while idle; stopping a Pod retains billable storage, while deleting it removes its attached disks. RunPod Serverless can instead scale GPU workers to zero. The [serverless rendering proposal](research/serverless-rendering.md) describes that migration, including durable output storage and a real shutdown check. It has not been deployed.
+Running Pods continue to incur GPU charges while idle; stopping a Pod retains billable storage, while deleting it removes its attached disks. RunPod Serverless can instead scale GPU workers to zero. The [serverless rendering research](research/serverless-rendering.md) explains that choice; the [implementation runbook](../apps/deforum/serverless/README.md) owns the selected setup and validation sequence. The implementation is locally tested but has not been deployed.
 
 ## Sources
 

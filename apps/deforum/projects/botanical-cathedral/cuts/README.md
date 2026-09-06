@@ -9,4 +9,4 @@ Each cut has a short intent and a table:
 
 For example, a five-second range in an 8 FPS PNG sequence is `[0,40)`. In its 24 FPS preview the same duration is `[0,120)`. Name which source is being cut. Keep rejected sources and old cut versions.
 
-These notes do not execute an edit. Assembly and continuation are future capabilities, described in the [working convention](../../../../../docs/workflow.md) and [continuation research](../../../../../docs/research/continuation-and-editing.md).
+`experiment.py assemble` creates the cut note and export from an explicit JSON range list. It copies source frames unchanged, records their hashes, and refuses to overwrite an existing cut version. See the [serverless runbook](../../../serverless/README.md) and [working convention](../../../../../docs/workflow.md).

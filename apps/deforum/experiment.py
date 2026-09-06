@@ -53,7 +53,7 @@ def init_project(name):
         "references": "Keep original media in `assets/`. Record source, purpose and SHA-256 here.",
         "runs": "Unique render attempts go here. Keep every attempt; link reviews from experiment notes.",
         "cuts": "Save each cut as v001.md, v002.md, etc. Record source path, FPS and half-open frame ranges.",
-        "exports": "Save assembled previews by cut version. Preserve older versions; no assembly command exists yet.",
+        "exports": "Use experiment.py assemble for versioned previews. Preserve older versions and source ranges.",
     }.items():
         (folder / directory / "README.md").write_text(
             f"# {directory.capitalize()}\n\n{description}\n\n"
@@ -98,6 +98,28 @@ def make_graph(denoise, frames, prefix):
     return graph
 
 
+def depth_camera_graph(graph, preview, frames):
+    graph['8']['inputs'].update(mode='3d', translation_x='0:(0.02)',
+                               translation_y='0:(0)', translation_z='0:(0)',
+                               rotation_3d_z='0:(0)', zoom='0:(1)')
+    graph['30'] = {'class_type': 'DownloadAndLoadDepthAnythingV2Model', 'inputs': {
+        'model': 'depth_anything_v2_vits_fp32.safetensors', 'precision': 'fp32'}}
+    graph['31'] = {'class_type': 'DepthAnything_V2', 'inputs': {'da_model': ['30', 0], 'images': ['6', 0]}}
+    graph['32'] = {'class_type': 'SaveImage', 'inputs': {'images': ['31', 0], 'filename_prefix': 'depth'}}
+    depth = {'depth': ['31', 0], 'near': 1.0, 'far': 10.0,
+             'invert_depth': False, 'translation_scale': 1.0}
+    if preview:
+        graph['7']['inputs']['max_frames'] = frames
+        graph['10'] = {'class_type': 'DifforumGuideBuilder', 'inputs': {
+            'anchor_image': ['6', 0], 'camera': ['8', 0], 'params': ['7', 0],
+            'warp_mode': 'force_3d', **depth}}
+        graph['33'] = {'class_type': 'MaskToImage', 'inputs': {'mask': ['10', 1]}}
+        graph['34'] = {'class_type': 'SaveImage', 'inputs': {'images': ['33', 0], 'filename_prefix': 'coverage'}}
+    else:
+        graph['10']['inputs'].update(depth)
+    return graph
+
+
 def preflight(base, graph):
     info = request(base, "/object_info")
     missing = sorted({node["class_type"] for node in graph.values()} - info.keys())
@@ -112,6 +134,9 @@ def preflight(base, graph):
 
 def collect(folder):
     receipt = json.loads((folder / "submission.json").read_text())
+    if receipt.get('transport') == 'runpod-serverless':
+        from serverless_client import collect as collect_serverless
+        return collect_serverless(folder)
     if receipt.get("collected_at"):
         assets = [folder / "preview.mp4"] + [
             folder / "frames" / f"{i:04d}.png" for i in range(receipt["frames"])
@@ -180,11 +205,29 @@ def main():
     run = commands.add_parser("run")
     run.add_argument("--project", type=slug, required=True)
     run.add_argument("--experiment", type=slug, required=True)
-    run.add_argument("--url", required=True)
+    run.add_argument("--url", help="Explicit legacy Pod URL; omit to use Serverless.")
     run.add_argument("--denoise", type=float, choices=[0.3, 0.4, 0.5], default=0.4)
     run.add_argument("--frames", type=int, choices=[8, 40], default=40)
     resume = commands.add_parser("collect")
     resume.add_argument("folder", type=pathlib.Path)
+    branch = commands.add_parser('continue', help='Branch from a collected frame through Serverless.')
+    branch.add_argument('--project', type=slug, required=True)
+    branch.add_argument('--experiment', type=slug, default='continuation')
+    branch.add_argument('--parent-run', required=True)
+    branch.add_argument('--frame', type=int, required=True)
+    branch.add_argument('--new-frames', type=int, default=8)
+    branch.add_argument('--camera', choices=['2d', '3d'], default='2d')
+    guide = commands.add_parser('camera-preview', help='Depth-based camera warp without diffusion.')
+    guide.add_argument('--project', type=slug, required=True)
+    guide.add_argument('--experiment', type=slug, default='3d-parallax')
+    guide.add_argument('--parent-run', required=True)
+    guide.add_argument('--frame', type=int, required=True)
+    guide.add_argument('--new-frames', type=int, default=8)
+    cut = commands.add_parser('assemble', help='Create a new cut from explicit source ranges.')
+    cut.add_argument('--project', type=slug, required=True)
+    cut.add_argument('--version', type=slug, required=True)
+    cut.add_argument('--ranges', type=pathlib.Path, required=True,
+                     help='JSON list of {run, in, out}; out is exclusive, source FPS is 8.')
     args = parser.parse_args()
     if args.command == "init-project":
         init_project(args.name)
@@ -192,10 +235,33 @@ def main():
     if args.command == "collect":
         collect(args.folder.resolve())
         return
+    if args.command == 'assemble':
+        from editing import assemble
+        print(assemble(PROJECTS / args.project, args.version, json.loads(args.ranges.read_text())))
+        return
     project = project_for_run(args.project, args.experiment)
+    if args.command in ('continue', 'camera-preview'):
+        import editing
+        import serverless_client
+        parent = (project / 'runs' / args.parent_run).resolve()
+        if parent.parent != (project / 'runs').resolve():
+            raise ValueError('Parent must be a run in this project')
+        graph, source, lineage = editing.continuation(parent, args.frame, args.new_frames)
+        if args.command == 'camera-preview' or args.camera == '3d':
+            graph = depth_camera_graph(graph, preview=args.command == 'camera-preview',
+                                       frames=lineage['frames'])
+            lineage['camera'] = 'relative-depth lateral scene translation +0.02/frame'
+        if args.command == 'camera-preview':
+            lineage.update(start_frame=0, end_frame=lineage['frames'])
+        serverless_client.submit(project, args.experiment, graph, lineage['frames'], lineage, source)
+        return
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     name = f"{stamp}-denoise-{args.denoise:.2f}-{args.frames}f"
     graph = make_graph(args.denoise, args.frames, f"deforum/{args.project}/{name}")
+    if not args.url:
+        from serverless_client import submit
+        submit(project, args.experiment, graph, args.frames, {'denoise': args.denoise})
+        return
     stats = preflight(args.url, graph)
     folder = project / "runs" / name
     folder.mkdir(parents=True, exist_ok=False)

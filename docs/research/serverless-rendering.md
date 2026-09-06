@@ -1,6 +1,6 @@
 # Serverless rendering
 
-Research date: 2026-09-06. Status: proposed; no endpoint deployed or serverless render verified. The next continuation and depth-camera experiments remain pending.
+Research date: 2026-09-06. Status: selected for the next experiment. A volume-backed worker adapter, client, continuation and cut assembly are locally implemented; no endpoint has been deployed or serverless render verified. The [implementation runbook](../../apps/deforum/serverless/README.md) owns current setup instructions. The next continuation and depth-camera experiments remain pending.
 
 ## Recommendation
 
@@ -29,7 +29,7 @@ The local runner must submit through RunPod's authenticated asynchronous `/run` 
 
 Do not rely on worker-local files or the job response as the permanent archive. Workers disappear, and asynchronous results have a limited retention period. Full-resolution PNG sequences can exceed the response payload limit. See the [operation reference](https://docs.runpod.io/serverless/endpoints/operation-reference) and [handler limits](https://docs.runpod.io/serverless/workers/handler-functions).
 
-Resolve durable output storage before a multi-frame deployment: save every attempt under a unique job/attempt prefix before the worker stops, return a small manifest, and download the frames and receipts into the existing project run directory. Preserve failed/retried attempts as well. The upstream worker supports S3 image uploads; verify private authenticated retrieval and retention rather than treating a temporary URL as a backup. Storage credentials and retention policy are still to be selected.
+The selected implementation saves outputs directly onto a 10 GB RunPod network volume under a unique attempt prefix, returns a small manifest, and downloads frames and receipts to the Mac through authenticated S3. Separate S3 credentials remain on the Mac. Preserve the volume until its generated media is safely copied; no automatic deletion policy is configured. The adapter preserves failed/retried attempts that reach disk. An interrupted feedback loop does not expose its in-memory frame batch.
 
 ## Cost and validation
 
