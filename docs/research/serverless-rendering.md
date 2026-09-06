@@ -46,3 +46,11 @@ Implementation sequence:
 5. Run the selected-frame continuation and depth-camera experiments; compare their full costs against the baseline.
 
 No paid resource was created during this investigation. The previous Pod had already been deleted.
+
+## Pod shutdown alternatives
+
+Follow-up inspection on 2026-09-06 distinguishes idle detection from a scheduled deadline. Serverless documents an idle timeout with zero active workers. A dependable built-in idle detector for ordinary Pods was not verified: one general RunPod article mentions it, but the operational Pod documentation and installed runpodctl 2.12.0 do not expose such a setting. Do not treat that article as an operational guarantee.
+
+The [published GraphQL schema](https://graphql-spec.runpod.io/#definition-PodFindAndDeployOnDemandInput) includes `stopAfter` and `terminateAfter` timestamps for Pod creation. These suggest a provider-scheduled deadline, which is a stronger potential safeguard than a timer on the Mac. Actual scheduling behavior remains unverified; live schema introspection is disabled, and no Pod was created to test it. The installed CLI exposes neither field. Do not claim that Pod deadlines are unavailable merely because the CLI omits them.
+
+A deadline can interrupt an active render. Stopping retains billable storage; termination deletes attached data outside network volumes. For interactive ComfyUI sessions, a Pod with a verified deadline may be a good fit. For automated clip jobs with gaps for human review, Serverless remains the selected first trial. Any custom idle monitor should track active/queued ComfyUI work and transfers, not GPU utilization alone.
