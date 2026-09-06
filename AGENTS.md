@@ -8,10 +8,10 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - Current priority: establish a usable iterative filmmaking workflow, then intentional 3D camera movement and quality improvements. Build toward 30-second, one-minute and five-minute assemblies from manageable clips; avoid a one-shot long render.
 - Mac: authoring, controls, previews, and local copies of results. RunPod: model inference and the camera-warp/img2img feedback loop.
 - First milestone complete: three five-second SDXL clips with the same initial image, seed sequence, and camera path at different denoise strengths. Outputs are local; the experiment Pod was deleted.
-- Runnable path: `uv run python experiment.py init-project NAME`, then `run --project NAME --experiment EXPERIMENT ...` in `apps/deforum/`. Write the experiment note before rendering. Serverless is the selected next path; its worker and client are prepared, but deployment and GPU verification are pending. See `apps/deforum/serverless/README.md`. MCP endpoint listing is now verified; the CLI also works.
+- Runnable path: `uv run python experiment.py init-project NAME`, then `run --project NAME --experiment EXPERIMENT ...` in `apps/deforum/`. Write the experiment note before rendering. Serverless is verified: continuation, depth guide and 3D repaint completed. Its endpoint is paused (min/max workers 0); the archive volume was deleted after verified local downloads. See `apps/deforum/serverless/README.md`. MCP endpoint listing is now verified; the CLI also works.
 - Seed finding: incrementing the feedback seed retained more detail than a fixed seed in the first short test. Review full-length quality in the session report before choosing the next recipe.
 - Playback feedback: 0.30 is too smooth; 0.50 flickers too much. Frame sharpness alone does not establish video quality. Keep detail, flicker, structure and camera control separate in reviews.
-- Next experiments: branch from frame 19 of the middle-denoise baseline, assemble the preserved opening, then prove depth-based parallax. Continuation/cut commands and a depth-camera graph are locally implemented; hosted execution is pending. Current 3D feedback reuses initial depth through the loop and does not establish long-shot scene consistency.
+- Current practice cuts: v001 preserves parent frames 0–19 and selects a 2D continuation; v002 selects a 3D continuation from the same anchor. Review playback before choosing the next branch. Depth-guide parallax is measured; 3D repaint has edge artifacts. Current 3D feedback reuses initial depth through the loop and does not establish long-shot scene consistency.
 - Budget: $50 total for the initial experiments; target under $10 for initial setup and comparisons. Check current resource prices and account state before provisioning.
 - Recurring cost should remain near SDXL; reconsider before approaching 3× a comparable render. Separate warm inference cost from setup/idle time and rejected attempts.
 
@@ -35,4 +35,5 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - [Deforum mechanism and creative direction](docs/deforum.md).
 - [RunPod tools and repository setup](docs/runpod.md).
 - [Deforum experiment](apps/deforum/README.md): current state and next execution steps.
+- [Serverless session results](apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md): cuts, parallax, startup failure, cached timings and cleanup.
 - [First session results](apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md): execution, visual findings, and cost.

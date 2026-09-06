@@ -1,6 +1,8 @@
 # Serverless rendering
 
-Research date: 2026-09-06. Status: selected for the next experiment. A volume-backed worker adapter, client, continuation and cut assembly are locally implemented; no endpoint has been deployed or serverless render verified. The [implementation runbook](../../apps/deforum/serverless/README.md) owns current setup instructions. The next continuation and depth-camera experiments remain pending.
+Current evidence: [serverless session results](../../apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md). Three hosted jobs completed; outputs are local, endpoint min/max workers are zero, and cloud storage is deleted. Cached requests queued for about 1.2 seconds; the first host failed during container creation.
+
+Research date: 2026-09-06. The volume-backed worker adapter, client, continuation, cut assembly and depth-camera experiment are implemented and exercised remotely. The [implementation runbook](../../apps/deforum/serverless/README.md) owns setup and resuming the paused endpoint.
 
 ## Recommendation
 
@@ -8,7 +10,7 @@ Use a queue-based RunPod Serverless endpoint for clip generation. Submit one com
 
 Start with these endpoint settings:
 
-| Setting | Proposed value | Purpose |
+| Setting | Rendering-session value | Purpose |
 | --- | --- | --- |
 | Active/minimum workers | 0 | Allow GPU compute to scale to zero |
 | Maximum workers | 1 | Bound simultaneous GPU use |
@@ -37,7 +39,7 @@ Published 4090 Flex pricing is approximately $1.10/hour of worker lifetime; the 
 
 At these indicative rates, serverless GPU time is roughly 1.5 times the Pod rate, before startup and storage. It may cost less overall when human review leaves long gaps between renders. A cold short job can cost more than a warm Pod render. Measure cold startup, warm execution, worker shutdown and durable-output transfer separately; keep the original $50 budget and comparable-render cost boundary.
 
-Implementation sequence:
+Verified implementation sequence:
 
 1. Resolve the image build/registry path and durable output storage. The Docker CLI is installed locally, but its daemon was not running during this check.
 2. Package pinned ComfyUI worker, nodes and models without per-job dependency installation.
@@ -45,7 +47,7 @@ Implementation sequence:
 4. Verify a small real render, output recovery after worker shutdown, and scale-to-zero without a Mac-side timer.
 5. Run the selected-frame continuation and depth-camera experiments; compare their full costs against the baseline.
 
-No paid resource was created during this investigation. The previous Pod had already been deleted.
+The original research created no resources. The later hosted session created an endpoint and temporary volume, rendered three jobs, recovered outputs after running workers reached zero, and removed all compute/storage allocations. The endpoint remains paused with min/max workers zero; restore the rendering settings only after attaching a fresh archive volume.
 
 ## Pod shutdown alternatives
 

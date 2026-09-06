@@ -6,11 +6,11 @@ Start with the [project index](projects/README.md), [working convention](../../d
 
 Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
 
-## Next execution: Serverless
+## Verified execution: Serverless
 
-Serverless is selected for the next experiment. The [worker runbook](serverless/README.md) owns deployment, S3 credentials, scale-to-zero settings, continuation, cut assembly and the depth-camera test. Implementation and local archive tests are complete; image build and hosted execution are pending. No endpoint or persistent volume has been created yet.
+Serverless ran the continuation, depth guide and 3D repaint. The [worker runbook](serverless/README.md) owns deployment, S3 credentials, scale-to-zero settings, continuation, cut assembly and the depth-camera test. The [session report](projects/botanical-cathedral/experiments/serverless-results.md) records three successful jobs and two preserved cuts. The endpoint is now paused with min/max workers zero, and the archive volume is deleted.
 
-`run` without `--url` uses Serverless. `continue` and `camera-preview` use the same transport. Load `.env` with `uv run --env-file .env` for submission/collection. A maximum of one GPU worker, zero active workers and a five-second idle timeout are the intended configuration. The proposed 10 GB archive volume costs approximately $0.70/month even when no GPU runs.
+`run` without `--url` uses Serverless. `continue` and `camera-preview` use the same transport. Load `.env` with `uv run --env-file .env` for submission/collection. A maximum of one GPU worker, zero active workers and a five-second idle timeout are the intended configuration. A 10 GB archive volume costs approximately $0.70/month while retained; none is currently retained. Recreate and attach one before restoring max workers to one.
 
 ## Create a project
 
@@ -88,7 +88,7 @@ Difforum's strength schedule is denoising directly. The one-second smoke test co
 
 [First session, 2026-09-06](projects/botanical-cathedral/experiments/baseline-results.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media lives in each project’s ignored `runs/` and `exports/` folders. Private infrastructure receipts stay in app-level `work/`; small scripts, workflow files, and reports are tracked.
 
-Project references, run media and exports are ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Continuation, explicit-range cut assembly and a depth-camera graph are locally implemented; their first hosted tests are pending. Modern model comparisons remain future work. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
+Project references, run media and exports are ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Continuation, explicit-range cut assembly and depth-camera rendering have passed their first hosted session. The preview schedule now starts with identity; its alignment fix was checked against the pinned upstream camera math and existing rendered poses. Modern model comparisons remain future work. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
 
 ## Local checks
 

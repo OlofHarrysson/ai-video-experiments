@@ -1,6 +1,6 @@
 # Cuts
 
-No cut selected yet. Save the first as `v001.md`; revisions get a new version. Point the project README's “current cut” to the selected version.
+Current practice cut: [v001](v001.md). [v002](v002.md) is the 3D continuation alternative. Further revisions get a new version. Point the project README's “current cut” to the selected version.
 
 Each cut has a short intent and a table:
 

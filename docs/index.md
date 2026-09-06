@@ -13,6 +13,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 - [Project index](../apps/deforum/projects/README.md) — films/studies and their experiment notes.
 - [Deforum working directory](../apps/deforum/README.md) — first render scope, implementation boundaries, and current verification status.
+- [Serverless continuation and 3D session](../apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md) — preserved cuts, depth parallax, startup and cached timing, local recovery and cleanup.
 - [First SDXL feedback session](../apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md) — short tests, denoise comparison, visual findings, cost, and cleanup.
 
 Add future shared notes as separate Markdown files and link them from this page.

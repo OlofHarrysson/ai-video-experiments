@@ -1,6 +1,6 @@
 # Continue from a chosen frame
 
-Status: CLI implemented and locally tested; serverless build/deployment and rendering pending. [Research](../../../../../docs/research/continuation-and-editing.md) · [Execution runbook](../../../serverless/README.md).
+Status: hosted experiment complete; see [session results](serverless-results.md) for outputs, timing, visual limits and cleanup.
 
 ## Question
 
@@ -18,4 +18,4 @@ A join with no duplicated anchor frame; inspectable seed/camera/prompt timing; p
 
 ## Cost boundary and result
 
-Start with eight new frames, using the SDXL cost reference and the original $50 budget. Measure cold startup, execution and actual shutdown independently. The prepared worker returns a durable volume manifest; retrieve it after GPU shutdown to test recovery. No allocation or paid resource is active yet. Result and run links: pending.
+Start with eight new frames, using the SDXL cost reference and the original $50 budget. Measure cold startup, execution and actual shutdown independently. The prepared worker returns a durable volume manifest; retrieve it after GPU shutdown to test recovery. The continuation and both cuts are preserved locally. The endpoint is paused and cloud storage deleted; see [results](serverless-results.md).

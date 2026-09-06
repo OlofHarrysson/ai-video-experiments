@@ -109,6 +109,8 @@ def depth_camera_graph(graph, preview, frames):
     depth = {'depth': ['31', 0], 'near': 1.0, 'far': 10.0,
              'invert_depth': False, 'translation_scale': 1.0}
     if preview:
+        # Guide poses include delta[0]; feedback starts with the untouched anchor.
+        graph['8']['inputs']['translation_x'] = '0:(0), 1:(0.02)'
         graph['7']['inputs']['max_frames'] = frames
         graph['10'] = {'class_type': 'DifforumGuideBuilder', 'inputs': {
             'anchor_image': ['6', 0], 'camera': ['8', 0], 'params': ['7', 0],

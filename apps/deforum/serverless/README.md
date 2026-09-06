@@ -1,10 +1,20 @@
 # Serverless worker
 
-Status: implementation prepared, 10 local tests pass. Image build, hosted rendering, storage recovery and automatic GPU shutdown have not yet been verified. No endpoint or volume has been provisioned.
+Status: three hosted jobs completed and outputs verified locally. The endpoint is paused (min/max workers 0), with no network volume or workers retained. See [session results](../projects/botanical-cathedral/experiments/serverless-results.md) for the first-host failure, cached timings, cuts and visual limits.
 
 This image extends RunPod's existing ComfyUI worker. The small `handler.py` adapter adds a persistent archive and returns a manifest instead of transmitting an entire PNG sequence through the job response. Difforum supplies all diffusion and camera-warp nodes; no new diffusion or depth algorithm is implemented here.
 
-## Deploy from this repository
+## Resume the existing endpoint
+
+The endpoint named `deforum-experiments` and its built image are retained. Do not create a duplicate endpoint. Create a fresh 10 GB volume in EU-RO-1, attach it, write `work/serverless-deployment.json` with the actual new volume ID, verify S3 access, and restore maximum workers to one (minimum stays zero). Private endpoint/image IDs and the closed deployment receipt are in `work/continuation-session/`. Existing run receipts retain their original deployment IDs; completed `collect` remains offline.
+
+After jobs finish, verify all cloud objects against local copies, including auxiliary and partial outputs. Set min/max workers to zero, detach the volume, confirm zero workers, then delete the volume. Verify the final Pod, worker and volume inventories and account spend rate. Keep old local generations and cuts. Moving the active deployment file into session receipts prevents accidental reuse of a deleted volume.
+
+For detachment, the tested MCP update with an empty volume array did not clear the attachment. An explicit REST v2 `PATCH /v2/serverless/ENDPOINT_ID` body `{"networkVolumes":[]}` did, confirmed by readback. Do not assume a successful mutation response means the desired fields changed.
+
+GitHub pushes to `main` trigger builds. The paused endpoint cannot launch GPU workers while its maximum remains zero. Reuse the verified image for experimentation unless worker code or dependencies need a rebuild.
+
+## Initial deployment from this repository
 
 1. In RunPod Settings → Connections, authorize GitHub for only `OlofHarrysson/ai-video-experiments`.
 2. Create an S3 API key in RunPod Settings. Fill `RUNPOD_S3_ACCESS_KEY_ID` and `RUNPOD_S3_SECRET_ACCESS_KEY` in the app's ignored `.env`. These stay on the Mac; the worker writes directly to its mounted volume.
@@ -65,7 +75,7 @@ Pass that file to `uv run python experiment.py assemble --project botanical-cath
 
 Use the same parent/frame with `camera-preview --project botanical-cathedral --parent-run RUN --frame 19 --new-frames 8`. It produces nine depth-warped frames plus the depth map and coverage masks. Preview this before `continue ... --experiment 3d-parallax --camera 3d`.
 
-The initial move is +0.02 scene-space X per frame, which moves scene points right (equivalent to camera translation left). FOV is 45°, relative near/far are 1/10, bright depth means near, `invert_depth=false`, zoom 1 and rotation 0. These are arbitrary relative units, not calibrated meters. The camera-only guide reprojects the original anchor at cumulative poses. The diffusion loop reuses its initial depth map on evolving images; keep this test short.
+The initial move is +0.02 scene-space X per frame, which moves scene points right (equivalent to camera translation left). FOV is 45°, relative near/far are 1/10, bright depth means near, `invert_depth=false`, zoom 1 and rotation 0. These are arbitrary relative units, not calibrated meters. The camera-only guide uses a zero first delta (`0:(0), 1:(0.02)`) so its first pose is identity, then reprojects the original anchor at cumulative poses. The original hosted guide was one step ahead; its preserved frames were aligned locally for review, and the corrected schedule was verified against pinned upstream camera code. The diffusion loop reuses its initial depth map on evolving images; keep this test short.
 
 ## Validation and billing evidence
 

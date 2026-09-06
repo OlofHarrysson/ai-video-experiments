@@ -1,6 +1,6 @@
 # Intentional 3D camera
 
-Status: depth-camera graph implemented, not rendered. [Research and source audit](../../../../../docs/research/3d-camera-and-motion.md) · [Execution runbook](../../../serverless/README.md).
+Status: hosted experiment complete; see [session results](serverless-results.md) for outputs, timing, visual limits and cleanup.
 
 ## Question
 
@@ -18,4 +18,4 @@ Near landmarks move more than distant ones for a lateral move; dolly direction i
 
 ## Cost boundary and result
 
-Use short SDXL runs, record additional depth overhead, and compare against recurring baseline cost. No allocation or paid resource is active. Result and run links: pending.
+Use short SDXL runs, record additional depth overhead, and compare against recurring baseline cost. Guide and repaint runs are preserved locally. Parallax is measured; edge artifacts and static-depth limitations remain. The endpoint is paused and storage deleted; see [results](serverless-results.md).
