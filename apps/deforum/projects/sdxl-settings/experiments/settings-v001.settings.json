@@ -1,0 +1,43 @@
+{
+  "recipe": "sdxl-settings/settings-v001",
+  "media_kind": "standalone-stills",
+  "expected_frames": 3,
+  "checkpoint": "sd_xl_base_1.0.safetensors",
+  "width": 1024,
+  "height": 576,
+  "seed": 143,
+  "sampler_name": "dpmpp_2m",
+  "scheduler": "karras",
+  "denoise": 1.0,
+  "positive_prompt": "a moonlit marsh at blue hour, close tall reeds and a hanging copper lantern framing the left foreground, a winding wooden boardwalk over still water leading toward a distant small domed astronomical observatory, tiny amber lanterns along the boardwalk, luminous blue mushrooms, low violet mist, a crescent moon, cinematic wide composition, clear foreground middle ground and distant background, atmospheric dark fantasy illustration, textured painterly brushwork, deep teal and indigo with warm amber light",
+  "negative_prompt": "blurry, low quality, watermark, text, jpeg artifacts, deformed, washed out, oversaturated, plain background, low contrast",
+  "variants": [
+    {
+      "frame_index": 0,
+      "file": "frames/0000.png",
+      "variant": "baseline",
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_node": "20",
+      "decoder_node": "21"
+    },
+    {
+      "frame_index": 1,
+      "file": "frames/0001.png",
+      "variant": "fewer-steps",
+      "steps": 20,
+      "cfg": 6.5,
+      "sampler_node": "22",
+      "decoder_node": "23"
+    },
+    {
+      "frame_index": 2,
+      "file": "frames/0002.png",
+      "variant": "lower-guidance",
+      "steps": 28,
+      "cfg": 5.0,
+      "sampler_node": "24",
+      "decoder_node": "25"
+    }
+  ]
+}

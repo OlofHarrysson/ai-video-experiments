@@ -11,6 +11,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Parallel models, settings, overscan and guide redraw](research/parallel-experiments-session.md) — four completed studies, review media, actual concurrency, cost and cleanup.
+
 - [Project index](../apps/deforum/projects/README.md) — films/studies and their experiment notes.
 - [Deforum working directory](../apps/deforum/README.md) — first render scope, implementation boundaries, and current verification status.
 - [Serverless continuation and 3D session](../apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md) — preserved cuts, depth parallax, startup and cached timing, local recovery and cleanup.

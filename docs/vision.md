@@ -31,7 +31,7 @@ A later hypothesis is to author simple objects and camera paths in a small 3D sc
 - Local Mac storage holds original references, all generations, and movie versions. Git holds small code/configuration/notes; it is not the video archive.
 - Keep existing nodes where practical. Introduce a custom component only after a concrete missing capability is demonstrated.
 - Use RunPod for heavy inference; use the Mac for planning, asset organization, preview, and editing.
-- Initial budget: $50. Comparable output should stay near the SDXL cost; a pipeline approaching three times the measured recurring cost needs reconsideration rather than automatic adoption.
+- Initial budget: $50; Olof authorized spending the available balance for parallel experiments, including multiple GPU workers. Comparable output should stay near the SDXL cost; a pipeline approaching three times the measured recurring cost needs reconsideration rather than automatic adoption.
 - Expensive image APIs may still make sense for occasional reference images or keyframes. Do not assume that makes them economical for every video frame.
 
 ## Build now and learn next

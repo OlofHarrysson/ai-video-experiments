@@ -1,5 +1,7 @@
 # Serverless rendering
 
+Latest evidence: [parallel experiment session](parallel-experiments-session.md) — five more custom-worker jobs, three public image calls, all outputs local and temporary resources removed.
+
 Current evidence: [serverless session results](../../apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md). Three hosted jobs completed; outputs are local, endpoint min/max workers are zero, and cloud storage is deleted. Cached requests queued for about 1.2 seconds; the first host failed during container creation.
 
 Research date: 2026-09-06. The volume-backed worker adapter, client, continuation, cut assembly and depth-camera experiment are implemented and exercised remotely. The [implementation runbook](../../apps/deforum/serverless/README.md) owns setup and resuming the paused endpoint.

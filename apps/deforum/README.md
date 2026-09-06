@@ -2,15 +2,15 @@
 
 Work from `apps/deforum/`. The Mac submits workflows and retains results; existing Difforum custom nodes run the camera-warp/img2img feedback loop inside ComfyUI on RunPod.
 
-Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [botanical cathedral project](projects/botanical-cathedral/README.md) indexes the first renders and next experiments.
+Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [parallel experiment report](../../docs/research/parallel-experiments-session.md) indexes the latest model, settings, overscan and guide-redraw results.
 
 Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
 
 ## Verified execution: Serverless
 
-Serverless ran the continuation, depth guide and 3D repaint. The [worker runbook](serverless/README.md) owns deployment, S3 credentials, scale-to-zero settings, continuation, cut assembly and the depth-camera test. The [session report](projects/botanical-cathedral/experiments/serverless-results.md) records three successful jobs and two preserved cuts. The endpoint is now paused with min/max workers zero, and the archive volume is deleted.
+Serverless ran the continuation, depth guide and 3D repaint. The [worker runbook](serverless/README.md) owns deployment, S3 credentials, scale-to-zero settings, continuation, cut assembly and the depth-camera test. The [first session report](projects/botanical-cathedral/experiments/serverless-results.md) records three successful jobs and two preserved cuts; the [parallel round](../../docs/research/parallel-experiments-session.md) adds five custom-worker jobs and three public image API calls. The endpoint is now paused with min/max workers zero, and the archive volume is deleted.
 
-`run` without `--url` uses Serverless. `continue` and `camera-preview` use the same transport. Load `.env` with `uv run --env-file .env` for submission/collection. A maximum of one GPU worker, zero active workers and a five-second idle timeout are the intended configuration. A 10 GB archive volume costs approximately $0.70/month while retained; none is currently retained. Recreate and attach one before restoring max workers to one.
+`run` without `--url` uses Serverless. `continue` and `camera-preview` use the same transport. Load `.env` with `uv run --env-file .env` for submission/collection. A maximum of three GPU workers, zero active workers and a five-second idle timeout are the current experimentation configuration. A 10 GB archive volume costs approximately $0.70/month while retained; none is currently retained. Recreate and attach one before restoring max workers to three.
 
 ## Create a project
 
@@ -88,8 +88,8 @@ Difforum's strength schedule is denoising directly. The one-second smoke test co
 
 [First session, 2026-09-06](projects/botanical-cathedral/experiments/baseline-results.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media lives in each project’s ignored `runs/` and `exports/` folders. Private infrastructure receipts stay in app-level `work/`; small scripts, workflow files, and reports are tracked.
 
-Project references, run media and exports are ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Continuation, explicit-range cut assembly and depth-camera rendering have passed their first hosted session. The preview schedule now starts with identity; its alignment fix was checked against the pinned upstream camera math and existing rendered poses. Modern model comparisons remain future work. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
+Project references, run media and exports are ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Continuation, explicit-range cut assembly and depth-camera rendering have passed their first hosted session. The preview schedule starts with identity; the lantern-marsh guide verified its first image pixel-identical to the reference on the GPU. FLUX.1 Dev and Seedream 4.0 still comparisons are now complete; using them for per-frame animation remains untested. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
 
 ## Local checks
 
-`uv run python -m unittest -v` runs 10 local checks covering project scoping, separate attempts, immutable cuts, global continuation indices, checksum rejection and archive recovery. They use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.
+`uv run python -m unittest -v` runs 11 local checks covering project scoping, separate attempts, immutable cuts, global continuation indices, checksum rejection, archive recovery and rejected-submission diagnostics without retries. They use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.

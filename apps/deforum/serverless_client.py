@@ -31,8 +31,12 @@ def api(endpoint, route, data=None):
           headers={'Authorization': f'Bearer {key}', 'Content-Type': 'application/json',
                    'User-Agent': 'deforum-experiment/0.2'})
     # A submission is never automatically retried after an uncertain response.
-    with urllib.request.urlopen(req, timeout=60) as response:
-        return json.load(response)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode(errors='replace')
+        raise RuntimeError(f'RunPod {route}: HTTP {error.code}: {detail}') from error
 
 
 def storage(deployment):
@@ -69,7 +73,14 @@ def submit(project, experiment, graph, frames, lineage=None, source=None, deploy
     payload = {'input': {'project': project.name, 'run': name, 'workflow': graph,
                         'images': images, 'expected_frames': frames},
                'policy': {'executionTimeout': 600000, 'ttl': 1800000}}
-    result = api(config['endpoint_id'], 'run', payload)
+    try:
+        result = api(config['endpoint_id'], 'run', payload)
+    except Exception as error:
+        save(folder / 'submission-error.json', {
+            'error': str(error),
+            'action': 'Inspect endpoint jobs before any new submission; no automatic retry.',
+        })
+        raise
     save(folder / 'submit-response.json', result)
     if not result.get('id'):
         raise RuntimeError(f'No job ID returned; inspect {folder} before submitting again')

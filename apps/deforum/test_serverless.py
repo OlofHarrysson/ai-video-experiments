@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import urllib.error
 from unittest.mock import patch
 
 import editing
@@ -25,6 +26,24 @@ class ServerlessTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
+
+    def test_rejected_submission_preserves_error_without_retry(self):
+        project = self.root / 'film'
+        (project / 'runs').mkdir(parents=True)
+        deployment = self.root / 'deployment.json'
+        client.save(deployment, {'endpoint_id': 'endpoint', 'volume_id': 'volume'})
+        failure = urllib.error.HTTPError('https://api.runpod.ai', 409, 'Conflict', {},
+                                        io.BytesIO(b'{"error":"endpoint not ready"}'))
+        with patch.dict(client.os.environ, {key: 'test' for key in
+                ('RUNPOD_API_KEY', 'RUNPOD_S3_ACCESS_KEY_ID', 'RUNPOD_S3_SECRET_ACCESS_KEY')}), \
+             patch.object(client, 'storage'), \
+             patch.object(client.urllib.request, 'urlopen', side_effect=failure) as request:
+            with self.assertRaisesRegex(RuntimeError, 'HTTP 409.*endpoint not ready'):
+                client.submit(project, 'test', {}, 1, deployment=deployment)
+        self.assertEqual(request.call_count, 1)
+        receipt = json.loads(next(project.glob('runs/*/submission-error.json')).read_text())
+        self.assertIn('endpoint not ready', receipt['error'])
+        self.assertFalse(list(project.glob('runs/*/submit-response.json')))
 
     def parent(self, name='parent', frames=40, start=0):
         folder = self.root / 'projects/film/runs' / name

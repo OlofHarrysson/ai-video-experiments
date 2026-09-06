@@ -98,8 +98,8 @@ def make_graph(denoise, frames, prefix):
     return graph
 
 
-def depth_camera_graph(graph, preview, frames):
-    graph['8']['inputs'].update(mode='3d', translation_x='0:(0.02)',
+def depth_camera_graph(graph, preview, frames, translation_x=0.02):
+    graph['8']['inputs'].update(mode='3d', translation_x=f'0:({translation_x})',
                                translation_y='0:(0)', translation_z='0:(0)',
                                rotation_3d_z='0:(0)', zoom='0:(1)')
     graph['30'] = {'class_type': 'DownloadAndLoadDepthAnythingV2Model', 'inputs': {
@@ -110,7 +110,7 @@ def depth_camera_graph(graph, preview, frames):
              'invert_depth': False, 'translation_scale': 1.0}
     if preview:
         # Guide poses include delta[0]; feedback starts with the untouched anchor.
-        graph['8']['inputs']['translation_x'] = '0:(0), 1:(0.02)'
+        graph['8']['inputs']['translation_x'] = f'0:(0), 1:({translation_x})'
         graph['7']['inputs']['max_frames'] = frames
         graph['10'] = {'class_type': 'DifforumGuideBuilder', 'inputs': {
             'anchor_image': ['6', 0], 'camera': ['8', 0], 'params': ['7', 0],

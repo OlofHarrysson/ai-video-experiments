@@ -12,8 +12,9 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - Seed finding: incrementing the feedback seed retained more detail than a fixed seed in the first short test. Review full-length quality in the session report before choosing the next recipe.
 - Playback feedback: 0.30 is too smooth; 0.50 flickers too much. Frame sharpness alone does not establish video quality. Keep detail, flicker, structure and camera control separate in reviews.
 - Current practice cuts: v001 preserves parent frames 0–19 and selects a 2D continuation; v002 selects a 3D continuation from the same anchor. Review playback before choosing the next branch. Depth-guide parallax is measured; 3D repaint has edge artifacts. Current 3D feedback reuses initial depth through the loop and does not establish long-shot scene consistency.
-- Budget: $50 total for the initial experiments; target under $10 for initial setup and comparisons. Check current resource prices and account state before provisioning.
-- Recurring cost should remain near SDXL; reconsider before approaching 3× a comparable render. Separate warm inference cost from setup/idle time and rejected attempts.
+- Budget: Olof authorized using the remaining roughly $50 RunPod balance for parallel learning. Multiple workers are allowed; the latest round used a maximum of three. Check current account state before provisioning and clean up owned resources afterward.
+- Long-term recurring cost should remain near SDXL, but the current learning budget permits model/workflow exploration. Separate warm inference cost from setup/idle time and rejected attempts.
+- Latest studies: lantern-marsh overscan, SDXL settings, FLUX/Seedream stills, and independent guide redraw. All generated media is local; see `docs/research/parallel-experiments-session.md`. Seedream is a promising keyframe source; per-frame model compatibility remains untested.
 
 ## Working conventions
 
@@ -35,5 +36,6 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - [Deforum mechanism and creative direction](docs/deforum.md).
 - [RunPod tools and repository setup](docs/runpod.md).
 - [Deforum experiment](apps/deforum/README.md): current state and next execution steps.
+- [Parallel experiment results](docs/research/parallel-experiments-session.md): model samples, settings, overscan and independent redraw.
 - [Serverless session results](apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md): cuts, parallax, startup failure, cached timings and cleanup.
 - [First session results](apps/deforum/projects/botanical-cathedral/experiments/baseline-results.md): execution, visual findings, and cost.
