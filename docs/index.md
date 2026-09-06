@@ -1,0 +1,9 @@
+# Documentation
+
+This directory contains the durable notes behind the experiments in this repository.
+
+## Topics
+
+- [Deforum: image diffusion as animation](deforum.md) — how its feedback loop, camera transforms, prompts, strength, and cadence create video.
+
+Add future shared notes as separate Markdown files and link them from this page.
