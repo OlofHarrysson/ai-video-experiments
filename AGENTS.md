@@ -24,6 +24,8 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - Keep credentials in ignored local files or the credential store. Never commit keys, OAuth tokens, or private account responses.
 - Inspect Git status and preserve unrelated work. Keep changes on the existing branch unless asked otherwise.
 - Record workflow/model versions, settings, and outputs for each experiment. Distinguish source inspection, local checks, remote execution, and visual review.
+- Present generated videos directly in chat with a brief explanation of each experiment. Reports support the review; they must not be the only place to find outputs. State when a preferred model has only produced a still rather than a video.
+- Consult and maintain [Olof's learning journal](docs/olof-learning-journal.md) when preferences or learning affect the next step. Separate explicit preferences, demonstrated concepts and unconfirmed exposure; never infer understanding from merely presenting information. The Seedream marsh still is the current preferred reference.
 - Preserve every generation, original reference and cut version. All project media belongs under `projects/PROJECT/`, including the first session. Shared runner, setup code and reusable workflow recipes stay at app level. A working cut references source ranges and never overwrites a generation. Git ignores media; no separate-disk backup is configured yet.
 - Keep the product vision and research living. Defer automatic editing/branching infrastructure and the simple-3D-scene-to-stylization hypothesis until short experiments justify them.
 - Check for an existing user-created Pod before provisioning. Track the resources owned by this experiment and shut down paid compute when finished; retained storage can still cost money.
@@ -31,6 +33,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 ## Documentation
 
 - [Documentation index](docs/index.md): canonical map of shared notes and app runbooks.
+- [Olof's learning journal](docs/olof-learning-journal.md): evidenced preferences, demonstrated concepts and open learning questions.
 - [Creative direction](docs/vision.md) and [working convention](docs/workflow.md).
 - [Project index](apps/deforum/projects/README.md): project briefs, experiments and current cuts.
 - [Deforum mechanism and creative direction](docs/deforum.md).

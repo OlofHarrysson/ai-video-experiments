@@ -4,6 +4,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Olof's learning journal](olof-learning-journal.md) — explicit preferences, demonstrated concepts, unconfirmed exposure and the next learning opportunity.
 - [Iterative filmmaking direction](vision.md) — creative intent, priorities, constraints and deferred hypotheses.
 - [Project and experiment workflow](workflow.md) — references, preserved runs, versioned cuts, exports and archive handling.
 - [Deforum: image diffusion as animation](deforum.md) — how its feedback loop, camera transforms, prompts, strength, and cadence create video.
