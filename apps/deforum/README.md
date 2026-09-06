@@ -2,6 +2,16 @@
 
 Work from `apps/deforum/`. The Mac submits workflows and retains results; existing Difforum custom nodes run the camera-warp/img2img feedback loop inside ComfyUI on RunPod.
 
+Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [botanical cathedral project](projects/botanical-cathedral/README.md) indexes the first renders and next experiments.
+
+## Create a project
+
+```bash
+uv run python experiment.py init-project my-film
+```
+
+Edit `projects/my-film/README.md` and its `experiments/baseline.md`, then add the project to the index. The command creates reference, run, cut and export folders and refuses to overwrite an existing project. Further experiment notes are Markdown files with lowercase hyphenated names.
+
 ## Run a comparison
 
 Requirements: `uv`, `ffmpeg`, the global `runpodctl` CLI, a RunPod API key in ignored `.env`, and an accessible ComfyUI Pod with the checkpoint and nodes below. See [RunPod setup](../../docs/runpod.md) for repository-scoped tools and authentication.
@@ -22,21 +32,21 @@ ssh -i ~/.ssh/id_ed25519 -p SSH_PORT root@POD_IP 'bash -s' < setup-pod.sh
 The installer checks the image's Python path, installs pinned Difforum and its requirements, and downloads checksum-verified SDXL. Check `/object_info` after startup; restart the Pod if ComfyUI loaded before the nodes were installed. Wait until `/system_stats` responds and `/object_info` contains `DifforumFeedbackSampler` before submitting.
 
 ```bash
-uv run python experiment.py run --url https://POD_ID-8188.proxy.runpod.net --frames 8 --denoise 0.4
-uv run python experiment.py run --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.3
-uv run python experiment.py run --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.4
-uv run python experiment.py run --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.5
+uv run python experiment.py run --project botanical-cathedral --experiment baseline --url https://POD_ID-8188.proxy.runpod.net --frames 8 --denoise 0.4
+uv run python experiment.py run --project botanical-cathedral --experiment baseline --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.3
+uv run python experiment.py run --project botanical-cathedral --experiment baseline --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.4
+uv run python experiment.py run --project botanical-cathedral --experiment baseline --url https://POD_ID-8188.proxy.runpod.net --frames 40 --denoise 0.5
 ```
 
-Each run saves its exact API graph, submission receipt, runtime information, ComfyUI history, numbered PNG frames, and `preview.mp4` in a timestamped ignored `outputs/` directory. `workflows/sdxl-feedback.api.json` is the editable canonical graph in ComfyUI API format. Change prompts and camera schedules there.
+Each run saves its exact API graph, submission receipt, runtime information, ComfyUI history, numbered PNG frames, and `preview.mp4` in a unique ignored `projects/PROJECT/runs/RUN_ID/` directory. Its receipt identifies the project and experiment. Both the project and experiment note must exist before submission. `workflows/sdxl-feedback.api.json` is the editable canonical graph in ComfyUI API format. Change prompts and camera schedules there; each run freezes its own copy. The first-session files remain in `outputs/` at their original paths.
 
 To reconnect to an already submitted job after a client interruption:
 
 ```bash
-uv run python experiment.py collect outputs/RUN_DIRECTORY
+uv run python experiment.py collect projects/PROJECT/runs/RUN_ID
 ```
 
-`collect` polls the existing job and downloads its outputs; it does not resubmit or resume GPU computation. Worker checkpoint/resume is not verified. The feedback node returns the frame batch after rendering finishes, so keep initial runs short. A client timeout does not stop remote compute.
+`collect` polls the existing job and downloads its outputs; it does not resubmit or resume GPU computation. Completed archives, including old `outputs/` runs, return their existing preview offline without rewriting assets. Missing assets in a completed archive raise an error rather than triggering regeneration. Worker checkpoint/resume is not verified. The feedback node returns the frame batch after rendering finishes, so keep initial runs short. A client timeout does not stop remote compute.
 
 After saving outputs locally, delete the experiment's own Pod to remove compute and attached storage charges:
 
@@ -69,3 +79,9 @@ Difforum's strength schedule is denoising directly. The one-second smoke test co
 ## Results
 
 [First session, 2026-09-06](results/2026-09-06.md) records render outcomes, visual findings, timing, cost, and cleanup. Rendered media and private infrastructure receipts stay in ignored `outputs/` and `work/`; small scripts, workflow files, and reports are tracked.
+
+Project references, new run media and exports are also ignored by Git. Original media is retained on the Mac; a separate disk backup has not been configured. Branching from a selected frame, automatic movie assembly, and new 3D/model workflows remain proposed experiments. See [continuation](../../docs/research/continuation-and-editing.md), [3D motion](../../docs/research/3d-camera-and-motion.md), and [model/cost research](../../docs/research/models-and-cost.md).
+
+## Local checks
+
+`uv run python -m unittest -v test_experiment` checks project scoping, separate render attempts, refusal to overwrite projects, and offline preservation of completed archives. These tests use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.

@@ -6,3 +6,8 @@ __pycache__/
 .venv/
 apps/*/outputs/
 apps/*/work/
+apps/deforum/projects/*/references/assets/
+apps/deforum/projects/*/runs/*
+!apps/deforum/projects/*/runs/README.md
+apps/deforum/projects/*/exports/*
+!apps/deforum/projects/*/exports/README.md

@@ -8,6 +8,7 @@ import argparse
 import datetime
 import json
 import pathlib
+import re
 import subprocess
 import time
 import urllib.error
@@ -16,10 +17,59 @@ import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent
 WORKFLOW = ROOT / "workflows/sdxl-feedback.api.json"
-OUTPUTS = ROOT / "outputs"
+PROJECTS = ROOT / "projects"
 RENDER_TIMEOUT_SECONDS = 1800
 DIFFORUM_COMMIT = "1d750efd3c1d1dda792b8ef6c14b06a14a69f879"
 MODEL_SHA256 = "31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b"
+
+
+def slug(value):
+    if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", value):
+        raise argparse.ArgumentTypeError("Use lowercase letters/numbers separated by hyphens.")
+    return value
+
+
+def init_project(name):
+    folder = PROJECTS / slug(name)
+    folder.mkdir(parents=True, exist_ok=False)
+    for directory in ("references/assets", "experiments", "runs", "cuts", "exports"):
+        (folder / directory).mkdir(parents=True)
+    title = name.replace("-", " ").capitalize()
+    (folder / "README.md").write_text(
+        f"# {title}\n\nIntent: describe the film or creative study.\n\n"
+        "Current cut: none selected.\n\n"
+        "## Experiments\n\n- [Baseline](experiments/baseline.md): planned.\n\n"
+        "[References](references/README.md) · [runs](runs/README.md) · "
+        "[cuts](cuts/README.md) · [exports](exports/README.md)\n\n"
+        "Follow the [working convention](../../../../docs/workflow.md).\n"
+    )
+    (folder / "experiments/baseline.md").write_text(
+        "# Baseline\n\nStatus: planned.\n\n## Question\n\nTo describe.\n\n"
+        "## Comparison\n\nWhat changes and what stays fixed?\n\n"
+        "## Cost boundary\n\nSet before rendering.\n\n"
+        "## Runs and findings\n\nNo runs yet. Record playback findings and source ranges here.\n"
+    )
+    for directory, description in {
+        "references": "Keep original media in `assets/`. Record source, purpose and SHA-256 here.",
+        "runs": "Unique render attempts go here. Keep every attempt; link reviews from experiment notes.",
+        "cuts": "Save each cut as v001.md, v002.md, etc. Record source path, FPS and half-open frame ranges.",
+        "exports": "Save assembled previews by cut version. Preserve older versions; no assembly command exists yet.",
+    }.items():
+        (folder / directory / "README.md").write_text(
+            f"# {directory.capitalize()}\n\n{description}\n\n"
+            "See the [working convention](../../../../../docs/workflow.md).\n"
+        )
+    print(f"Created {folder}; write the baseline question and add this project to projects/README.md.")
+
+
+def project_for_run(project, experiment):
+    folder = PROJECTS / slug(project)
+    if not (folder / "README.md").is_file():
+        raise ValueError(f"Project not found: {project}. Create it with init-project first.")
+    note = folder / "experiments" / f"{slug(experiment)}.md"
+    if not note.is_file():
+        raise ValueError(f"Write the experiment note before rendering: {note}")
+    return folder
 
 
 def request(base, route, payload=None, binary=False):
@@ -62,6 +112,14 @@ def preflight(base, graph):
 
 def collect(folder):
     receipt = json.loads((folder / "submission.json").read_text())
+    if receipt.get("collected_at"):
+        assets = [folder / "preview.mp4"] + [
+            folder / "frames" / f"{i:04d}.png" for i in range(receipt["frames"])
+        ]
+        if not all(path.is_file() and path.stat().st_size for path in assets):
+            raise RuntimeError("Completed archive is missing assets; restore them from backup.")
+        print(f"Already collected: {folder / 'preview.mp4'}", flush=True)
+        return
     base, prompt_id = receipt["base_url"], receipt["prompt_id"]
     deadline = time.monotonic() + RENDER_TIMEOUT_SECONDS
     while time.monotonic() < deadline:
@@ -84,6 +142,12 @@ def collect(folder):
     frames_dir = folder / "frames"
     frames_dir.mkdir(exist_ok=True)
     for index, image in enumerate(images):
+        target = frames_dir / f"{index:04d}.png"
+        if target.exists():
+            with target.open("rb") as existing:
+                if existing.read(8) != b"\x89PNG\r\n\x1a\n":
+                    raise RuntimeError(f"Existing frame is invalid: {target}")
+            continue
         query = urllib.parse.urlencode({
             "filename": image["filename"], "subfolder": image.get("subfolder", ""),
             "type": image.get("type", "output"),
@@ -91,13 +155,18 @@ def collect(folder):
         data = request(base, "/view?" + query, binary=True)
         if not data.startswith(b"\x89PNG\r\n\x1a\n"):
             raise RuntimeError(f"Frame {index} was not a PNG")
-        (frames_dir / f"{index:04d}.png").write_bytes(data)
-    subprocess.run([
-        "ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-framerate", "8",
-        "-i", str(frames_dir / "%04d.png"), "-vf", "fps=24",
-        "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p",
-        str(folder / "preview.mp4"),
-    ], check=True)
+        with target.open("xb") as output:
+            output.write(data)
+    preview = folder / "preview.mp4"
+    if not preview.exists():
+        temporary = folder / "preview.encoding.mp4"
+        subprocess.run([
+            "ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-framerate", "8",
+            "-i", str(frames_dir / "%04d.png"), "-vf", "fps=24",
+            "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p",
+            str(temporary),
+        ], check=True)
+        temporary.rename(preview)
     receipt["collected_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     save_json(folder / "submission.json", receipt)
     print(f"Saved {len(images)} frames and {folder / 'preview.mp4'}", flush=True)
@@ -106,21 +175,29 @@ def collect(folder):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    init = commands.add_parser("init-project", help="Create a local project and baseline note.")
+    init.add_argument("name", type=slug)
     run = commands.add_parser("run")
+    run.add_argument("--project", type=slug, required=True)
+    run.add_argument("--experiment", type=slug, required=True)
     run.add_argument("--url", required=True)
     run.add_argument("--denoise", type=float, choices=[0.3, 0.4, 0.5], default=0.4)
     run.add_argument("--frames", type=int, choices=[8, 40], default=40)
     resume = commands.add_parser("collect")
     resume.add_argument("folder", type=pathlib.Path)
     args = parser.parse_args()
+    if args.command == "init-project":
+        init_project(args.name)
+        return
     if args.command == "collect":
         collect(args.folder.resolve())
         return
+    project = project_for_run(args.project, args.experiment)
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     name = f"{stamp}-denoise-{args.denoise:.2f}-{args.frames}f"
-    graph = make_graph(args.denoise, args.frames, f"deforum/{name}")
+    graph = make_graph(args.denoise, args.frames, f"deforum/{args.project}/{name}")
     stats = preflight(args.url, graph)
-    folder = OUTPUTS / name
+    folder = project / "runs" / name
     folder.mkdir(parents=True, exist_ok=False)
     save_json(folder / "workflow.api.json", graph)
     save_json(folder / "system-stats.json", stats)
@@ -130,6 +207,7 @@ def main():
     if result.get("node_errors") or not result.get("prompt_id"):
         raise RuntimeError(f"Workflow rejected: {result}")
     save_json(folder / "submission.json", {
+        "project": args.project, "experiment": args.experiment,
         "base_url": args.url, "prompt_id": result["prompt_id"], "frames": args.frames,
         "denoise": args.denoise, "generated_fps": 8, "delivery_fps": 24,
         "difforum_commit": DIFFORUM_COMMIT, "model_sha256": MODEL_SHA256,

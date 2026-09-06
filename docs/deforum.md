@@ -4,6 +4,8 @@ Deforum turns an image diffusion model into an animation system. Its characteris
 
 Research snapshot last reviewed: 2026-09-06.
 
+For the current project practice, start with the [filmmaking direction](vision.md) and [working convention](workflow.md). The current priority is iterative editing and intentional 3D camera movement. Flow alignment and learned interpolation are welcome experiments when they improve the result; the stepped look is a creative option, not a fixed requirement.
+
 ## What I like about Deforum
 
 This is a personal creative preference rather than a claim that Deforum is technically superior to newer video models.
@@ -57,15 +59,17 @@ The previous frame can be translated, rotated, zoomed, and sheared. Zooming enla
 
 Deforum can estimate a depth map, turn pixels into an approximate point cloud, move a virtual camera, and reproject the result. The scheduled controls include translation and rotation around the three axes, with perspective settings such as field of view and near/far clipping.
 
-This is not a true persistent 3D scene. It is a new depth estimate and reprojection of an image at each step, followed by diffusion. That limitation contributes to both the instability and the lively morphing aesthetic.
+This is not a true persistent 3D scene. Classic pipelines can update depth as images change, but implementations differ. The pinned Difforum feedback sampler currently reuses its supplied depth map through the loop. That distinction matters for longer camera moves; see the [current 3D source audit](research/3d-camera-and-motion.md).
 
 ## Diffusion strength and the stop-motion character
 
-The transformed previous frame is passed to image-to-image diffusion. Deforum exposes a `strength` value, while the underlying denoising strength is its inverse:
+The transformed previous frame is passed to image-to-image diffusion. Classic Deforum exposes a `strength` value, while the underlying denoising strength is its inverse:
 
 ```text
 denoising strength = 1 - Deforum strength
 ```
+
+Our selected Difforum node instead uses its strength schedule directly as denoise. The 0.30/0.40/0.50 experiment values are direct denoise values. Do not invert them when following the app runbook.
 
 - Higher Deforum strength preserves more of the previous frame.
 - Lower Deforum strength allows more aggressive redrawing.
