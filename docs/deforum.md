@@ -4,6 +4,25 @@ Deforum turns an image diffusion model into an animation system. Its characteris
 
 Research snapshot last reviewed: 2026-09-06.
 
+## What I like about Deforum
+
+This is a personal creative preference rather than a claim that Deforum is technically superior to newer video models.
+
+What attracts me is its surreal, unstable quality. Images do not merely move through a scene; they continuously transform into new images. Shapes melt into one another, textures are reinvented, and the meaning of the scene can change while the camera keeps travelling through it.
+
+In particular, I like:
+
+- The morphing between subjects, materials, and environments.
+- The stop-motion feeling created by visible changes from one frame to the next.
+- The sense that each frame is being repainted rather than extracted from a perfectly coherent simulated world.
+- Strong, explicit camera movement—zooming, rotating, translating, and warping—combined with semantic transformation.
+- The intensity and unpredictability of longer sequences, where the animation can become a visual journey rather than a single generated shot.
+- Imperfections such as flicker, drift, and unstable geometry when they contribute to the rhythm instead of merely looking broken.
+
+Newer video-generation models are usually better at temporal consistency, realistic motion, and maintaining recognizable subjects. Those are real strengths, but consistency is not always the artistic goal. Their default outputs can feel polished yet generic: smooth cinematic movement, familiar compositions, and a recognizable “AI video” finish. That is the quality I sometimes mean when I call them *AI slop*.
+
+The goal of these experiments is therefore not maximum realism or perfect continuity. It is **controllable instability**: deliberate camera choreography combined with surreal frame-by-frame reinvention. Deforum is interesting because its technical limitations naturally produce that aesthetic.
+
 ## The core loop
 
 Conceptually, Deforum does this for each frame:
