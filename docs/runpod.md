@@ -48,6 +48,8 @@ From this repository, `codex mcp get runpod --json` must resolve the hosted conn
 
 Before creating paid resources, inspect existing Pods, current rates, and the live official ComfyUI template. The [Deforum app README](../apps/deforum/README.md) owns the experiment sequence and budget boundary.
 
+Running Pods continue to incur GPU charges while idle; stopping a Pod retains billable storage, while deleting it removes its attached disks. RunPod Serverless can instead scale GPU workers to zero. The [serverless rendering proposal](research/serverless-rendering.md) describes that migration, including durable output storage and a real shutdown check. It has not been deployed.
+
 ## Sources
 
 - [Codex MCP project configuration](https://developers.openai.com/codex/mcp/).
