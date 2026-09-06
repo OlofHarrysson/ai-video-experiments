@@ -14,7 +14,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 - Current practice cuts: v001 preserves parent frames 0–19 and selects a 2D continuation; v002 selects a 3D continuation from the same anchor. Review playback before choosing the next branch. Depth-guide parallax is measured; 3D repaint has edge artifacts. Current 3D feedback reuses initial depth through the loop and does not establish long-shot scene consistency.
 - Budget: Olof authorized using the remaining roughly $50 RunPod balance for parallel learning. Multiple workers are allowed; the latest round used a maximum of three. Check current account state before provisioning and clean up owned resources afterward.
 - Long-term recurring cost should remain near SDXL, but the current learning budget permits model/workflow exploration. Separate warm inference cost from setup/idle time and rejected attempts.
-- Latest studies: lantern-marsh overscan, SDXL settings, FLUX/Seedream stills, and independent guide redraw. All generated media is local; see `docs/research/parallel-experiments-session.md`. Seedream is a promising keyframe source; per-frame model compatibility remains untested.
+- Latest studies: lantern-marsh overscan, SDXL settings, FLUX/Seedream stills, independent guide redraw, and two five-second Seedream-reference animations with stronger movement. The latter expose serious foreground breakup and feedback style drift. All generated media is local; see `docs/research/parallel-experiments-session.md`. Seedream is the preferred still-image look; SDXL animation from it is now tested but does not yet preserve that look satisfactorily. Native Seedream per-frame animation remains untested.
 
 ## Working conventions
 
@@ -33,6 +33,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 ## Documentation
 
 - [Documentation index](docs/index.md): canonical map of shared notes and app runbooks.
+- [Filmmaking guide](docs/research/filmmaking-for-ai-animation.md): image-led storytelling, directing, composition, lighting, camera craft, editing and later music.
 - [Olof's learning journal](docs/olof-learning-journal.md): evidenced preferences, demonstrated concepts and open learning questions.
 - [Creative direction](docs/vision.md) and [working convention](docs/workflow.md).
 - [Project index](apps/deforum/projects/README.md): project briefs, experiments and current cuts.

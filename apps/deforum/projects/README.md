@@ -11,3 +11,4 @@ Create a project with `uv run python experiment.py init-project PROJECT` from `a
 | [SDXL settings](sdxl-settings/README.md) | Compare steps and guidance on the same scene/seed. | Three stills completed; lower CFG gives calmer colors in this sample. |
 | [Model comparison](model-comparison/README.md) | Compare SDXL, FLUX.1 Dev and Seedream 4.0 scene references. | Originals, native-size caveats and contact sheet preserved. |
 | [Guide redraw](guide-redraw/README.md) | Redraw each depth-camera guide independently. | Eight frames completed; compare structure against feedback. |
+| [Seedream motion](seedream-motion/README.md) | Animate the preferred Seedream reference with clearer 3D movement. | Two five-second videos completed; stronger motion exposes foreground reconstruction limits. |

@@ -4,7 +4,9 @@ Work from `apps/deforum/`. The Mac submits workflows and retains results; existi
 
 Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and intentional 3D movement while preserving every attempt. The [parallel experiment report](../../docs/research/parallel-experiments-session.md) indexes the latest model, settings, overscan and guide-redraw results.
 
-Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
+Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `workflow_recipes.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
+
+Latest: [Seedream motion](projects/seedream-motion/README.md) adds two five-second videos from the preferred reference. See the [filmmaking guide](../../docs/research/filmmaking-for-ai-animation.md) for visual storytelling, shot design and editing practice.
 
 ## Verified execution: Serverless
 

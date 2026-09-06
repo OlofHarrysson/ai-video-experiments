@@ -36,6 +36,6 @@ A later hypothesis is to author simple objects and camera paths in a small 3D sc
 
 ## Build now and learn next
 
-Now: folders, indices, experiment notes, project-aware render receipts, and a written manual cut convention. Next: one small continuation experiment and one depth/camera experiment. A timeline UI, automatic branching engine, checkpoint service, reusable 3D engine, and long unattended renders remain proposals.
+Completed: preserved project runs, continuation/cuts, depth guides, stronger camera comparisons and model stills. Next, practice visual storytelling, composition, lighting and editing alongside camera control; use the [filmmaking guide](research/filmmaking-for-ai-animation.md) to extract relevant craft. Stories can unfold through images, with music later and little need for dialogue. A timeline UI, automatic branching engine, reusable 3D engine and long unattended renders remain proposals.
 
 Useful success evidence is practical: find a previous attempt; explain its settings; preserve a good opening while replacing its continuation; identify genuine parallax; and reproduce a working cut from its source ranges. Olof's playback review decides whether the movie is compelling.

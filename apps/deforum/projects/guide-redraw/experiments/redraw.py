@@ -1,7 +1,6 @@
 """Prepare a lossless guide strip locally; submit it through the shared client."""
 
 import argparse
-import copy
 import datetime
 import hashlib
 import json
@@ -16,6 +15,7 @@ PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
 sys.dont_write_bytecode = True
 import serverless_client
+from workflow_recipes import independent_redraw_graph
 
 EXPERIMENT = 'independent-redraw'
 FRAMES = 8
@@ -42,33 +42,8 @@ def write_json(path, value):
 
 
 def build_graph(parent, width, height, indices):
-    graph = {key: copy.deepcopy(parent[key]) for key in ('1', '2', '3')}
-    graph['6'] = {'class_type': 'LoadImage', 'inputs': {'image': 'anchor.png'}}
-    seed = parent['7']['inputs']['seed']
-    previous = None
-    for order, index in enumerate(indices):
-        crop, encode, sample, decode = [str(100 + 4 * order + i) for i in range(4)]
-        graph[crop] = {'class_type': 'ImageCrop', 'inputs': {
-            'image': ['6', 0], 'x': order * width, 'y': 0, 'width': width, 'height': height}}
-        graph[encode] = {'class_type': 'VAEEncode', 'inputs': {
-            'pixels': [crop, 0], 'vae': ['1', 2]}}
-        graph[sample] = {'class_type': 'KSampler', 'inputs': {
-            'model': ['1', 0], 'positive': ['2', 0], 'negative': ['3', 0],
-            'latent_image': [encode, 0], 'seed': seed + index,
-            'steps': STEPS, 'cfg': CFG, 'denoise': DENOISE,
-            'sampler_name': 'dpmpp_2m', 'scheduler': 'karras'}}
-        graph[decode] = {'class_type': 'VAEDecode', 'inputs': {
-            'samples': [sample, 0], 'vae': ['1', 2]}}
-        if previous is None:
-            previous = [decode, 0]
-        else:
-            batch = str(200 + order)
-            graph[batch] = {'class_type': 'ImageBatch', 'inputs': {
-                'image1': previous, 'image2': [decode, 0]}}
-            previous = [batch, 0]
-    graph['11'] = {'class_type': 'SaveImage', 'inputs': {
-        'images': previous, 'filename_prefix': 'guide-redraw'}}
-    return graph
+    return independent_redraw_graph(parent, width, height, indices,
+                                    steps=STEPS, cfg=CFG, denoise=DENOISE)
 
 
 def prepare(guide_run, start=0):

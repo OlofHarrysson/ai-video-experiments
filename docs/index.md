@@ -12,6 +12,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Seedream motion](../apps/deforum/projects/seedream-motion/experiments/motion.md) — five-second feedback/redraw outputs, stronger camera travel and foreground reconstruction limits.
+
 - [Parallel models, settings, overscan and guide redraw](research/parallel-experiments-session.md) — four completed studies, review media, actual concurrency, cost and cleanup.
 
 - [Project index](../apps/deforum/projects/README.md) — films/studies and their experiment notes.
@@ -22,6 +24,8 @@ This directory contains the durable notes behind the experiments in this reposit
 Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
+
+- [Filmmaking for image-led AI animation](research/filmmaking-for-ai-animation.md) — directing attention, visual storytelling, composition, lighting, classic shots, editing and later music.
 
 Initial research dated 2026-09-06. Recommendations and integration hypotheses are distinguished from tests actually run.
 
