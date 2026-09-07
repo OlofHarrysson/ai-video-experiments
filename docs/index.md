@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Motion vocabulary: words to controls](research/motion-control-vocabulary.md) — translation, turn, bank, expansion and regional deformation, with the inspectable path from a request to repainting.
+
 - [Spatial image controls and Safety Marc presets](research/bonsai-spatial-motion.md) — full 95-file mechanism inventory, representative effect recipes, wave-guide study, two new BonsAi references and the concrete gap in our ComfyUI loop.
 
 - [Reviewing experiments together](review-and-feedback.md) — assistant first-pass review, a small human shortlist, understandable experiment cards and the current preferred recipe.
@@ -15,6 +17,8 @@ This directory contains the durable notes behind the experiments in this reposit
 - [RunPod tools and repository setup](runpod.md) — local skills, project MCP configuration, CLI installation, and authentication.
 
 ## Experiments
+
+- [Three spatial effects](../apps/deforum/projects/motion-guide-study/experiments/motion-effects.md) — turn and bank, kaleidoscope unfolding and ring expansion with the same artwork recipe.
 
 - [Move-Warp-inspired feedback](../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) — actual checker-wave guide, regional image deformation and the selected same-model/changing-seed repaint recipe.
 

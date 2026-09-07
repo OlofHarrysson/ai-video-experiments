@@ -126,3 +126,7 @@ Completed on 2026-09-07: [ten adaptive video experiments](research/ten-experimen
 The useful creative question remains the balance of preserved scene structure and visible transformation. E09 is an assistant-selected candidate for preserving structure; E10's accidental lantern transformation may suit surreal animation. E07 now establishes native Seedream editing of successive guide frames, with variable canvas borders. Show these differences without assuming which tradeoff Olof prefers.
 
 The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains available. E01 applies its three-state story exercise; neither creating that cut nor presenting the guide establishes Olof's understanding of film craft.
+
+## Motion vocabulary practice — 2026-09-07
+
+**Explicit direction:** Olof wants a few distinct effects drawn from Safety Marc's presets, including a 3D rotation-like effect. The learning objective is to connect everyday descriptions to mathematical controls and visible outputs. He does not yet regard the wave guide's strong rightward estimate as intuitively explained. Prioritize examples and preserve the chain from guide or camera settings through warped input to repaint. Independent invention of a broad motion-control system can come later.
