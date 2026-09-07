@@ -11,6 +11,7 @@ Current state: all four references archived and visually sampled. The [Brain Ent
 - [Frustration and Intoxication](references/bonsai-frustration-and-intoxication.md): The BonsAi Effect's illustrated bedroom/street/club transformations, recurring silhouettes and Parseq attribution.
 - [SDXL motion-preset examples](references/bonsai-motion-presets.md): The BonsAi Effect's Safety Marc preset atlas, with close review around Olof's 9:25 link and the downloaded circle-motion guide.
 - [First reproduction study](experiments/style-reproduction.md): proposed visual target, evaluation criteria and smallest next test.
+- [BonsAi motion experiments](experiments/bonsai-motion.md): accepted short zoom/morph baseline followed promptly by a 3D camera reveal; preparation and review criteria.
 
 Reference video copies, sampled PNGs, short excerpts, OCR, source metadata and hashes are under `references/assets/` and ignored by Git. Markdown reviews and study instructions are tracked. Original media is reference material, not newly generated work; source attribution remains attached to it. Audio samples were not listened to directly in this study; transcription/metadata evidence is identified in each review.
 

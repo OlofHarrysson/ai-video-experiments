@@ -56,6 +56,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Unconfirmed:** the [channel study](research/bonsai-effect-workflow.md) documents hybrid motion, seed mixtures, cadence, strength translation and editing. Presenting this research does not establish that Olof understands or prefers those mechanisms. We have not reproduced the newly supplied references or selected an implementation path for their presets.
 
+**Explicit follow-up:** Olof asked what “takes motion from an expanding white ring on black” means and said the earlier discovery explanation was unclear. He accepted an 8–10-second slow-zoom reference test, while stressing that we should move quickly into the reference's 3D transformations. Do not make a broad zoom-parameter sweep a prerequisite. The actual guide and a step-by-step explanation were presented; understanding remains unconfirmed. See the [two-test brief](../apps/deforum/projects/reference-studies/experiments/bonsai-motion.md).
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
