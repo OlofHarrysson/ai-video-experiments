@@ -20,9 +20,15 @@ RUN mkdir -p /comfyui/models/loras /comfyui/models/controlnet \
     && wget -q -O /comfyui/models/loras/xl_more_art-full_v1.safetensors \
       https://huggingface.co/frankjoshua/xl_more_art-full_v1/resolve/a534d8341d2741fab30581e12fae1e38b38a23cc/xl_more_art-full_v1.safetensors \
     && echo '15e31fe2b6ae2e77ee47a3ccdf27bd14f7b54ce27c6a58502875fdad26f34460  /comfyui/models/loras/xl_more_art-full_v1.safetensors' | sha256sum -c - \
-    && wget -q -O /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors \
+    && wget -q --user-agent=deforum-experiment/0.2 -O /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors \
       'https://civitai.com/api/download/models/165780?fileId=125509' \
     && echo '7000c1bbbbea48201782f018618a60f8a5fde25b2a0970f790cd192f0dd5f00f  /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors' | sha256sum -c -
+
+COPY apps/deforum/serverless/convert_qr_controlnet.py /convert_qr_controlnet.py
+RUN python /convert_qr_controlnet.py \
+      /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors \
+      /comfyui/models/controlnet/qr-sdxl-comfy.safetensors \
+    && rm /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors
 
 # Keep the upstream request handler; our adapter adds durable job archives.
 RUN mv /handler.py /upstream_handler.py \
