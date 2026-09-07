@@ -10,7 +10,7 @@ Target a readable central subject that evolves while the viewpoint approaches it
 
 The circle is a separate motion reference. Its measured movement displaces the previous artwork before diffusion; guide pixels are not composited into the artwork. Forward depth-based camera movement is another part of this preset.
 
-Before rendering, record the actual renderer, model and all deviations. Our current Difforum loop lacks an external-guide-flow input and an explicit noise-mixture input, and it reuses its starting depth. Copying settings into that loop is insufficient. An isolated original Deforum run is the recommended reference baseline; setup and runtime remain unverified. A ComfyUI adaptation would require separately verified flow/noise integration and camera conventions.
+Before rendering, record the actual renderer, model and all deviations. Our current Difforum loop lacks an external-guide-flow input and an explicit noise-mixture input, and it reuses its starting depth. Copying settings into that loop is insufficient. An isolated original Deforum run could provide a reference baseline, but setup and runtime remain unverified. Olof prefers ComfyUI as the main platform and accepts that isolated test only if easy or substantially useful; align on the execution route before proceeding. A ComfyUI adaptation would require separately verified flow/noise integration and camera conventions.
 
 Review subject readability, gradual transformation and detail through the approach. Inspect evenly spaced frames and an every-frame interval around any abrupt change. Preserve raw and interpolated versions.
 

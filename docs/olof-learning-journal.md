@@ -58,6 +58,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Explicit follow-up:** Olof asked what “takes motion from an expanding white ring on black” means and said the earlier discovery explanation was unclear. He accepted an 8–10-second slow-zoom reference test, while stressing that we should move quickly into the reference's 3D transformations. Do not make a broad zoom-parameter sweep a prerequisite. The actual guide and a step-by-step explanation were presented; understanding remains unconfirmed. See the [two-test brief](../apps/deforum/projects/reference-studies/experiments/bonsai-motion.md).
 
+**Further clarification:** Olof reports understanding diffusion/denoising, but still wants to understand how the ring influences the output. Explain the ordinary pixel warp before VAE encoding and img2img, including why changing that starting image influences denoising; distinguish it from an inpainting mask or model weights. He prefers keeping ComfyUI as the main platform. An isolated original-Deforum RunPod test is acceptable if easy or substantially useful, but he does not want a large investment in another platform and explicitly asked to align before proceeding. This is conditional permission, not evidence that setup is easy or that a migration is wanted.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
