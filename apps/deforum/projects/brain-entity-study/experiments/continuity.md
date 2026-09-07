@@ -2,6 +2,8 @@
 
 Started 2026-09-07. Follow-up to Olof's playback feedback and the [architecture comparison](../../../../../docs/research/deforum-architecture-comparison.md).
 
+Subsequent human review: C01/C03 were boring; the other outputs were pretty good, with **P3 + RIFE the tentative favorite**. Differences between similar variants were difficult to judge. This replaces the assistant's earlier C02 recommendation as the creative baseline. The [review harness follow-up](review-harness.md) records a smaller human shortlist and clearer comparison process. The sampled findings below describe the original assistant review.
+
 Keep the graphic SDXL artwork and separate postprocessing from generation. P03 is the generation baseline because Olof called it “really good”; P01 supplies a second interpolation source with interesting but abrupt morphing. The first question is whether transitions become more gradual without losing the art's evolution.
 
 ## Generation comparisons

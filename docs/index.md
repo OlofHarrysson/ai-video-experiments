@@ -4,6 +4,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Reviewing experiments together](review-and-feedback.md) — assistant first-pass review, a small human shortlist, understandable experiment cards and the current preferred recipe.
 - [Olof's learning journal](olof-learning-journal.md) — explicit preferences, demonstrated concepts, unconfirmed exposure and the next learning opportunity.
 - [Iterative filmmaking direction](vision.md) — creative intent, priorities, constraints and deferred hypotheses.
 - [Project and experiment workflow](workflow.md) — references, preserved runs, versioned cuts, exports and archive handling.
@@ -13,6 +14,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Review harness practice](../apps/deforum/projects/brain-entity-study/experiments/review-harness.md) — selective image review, matched comparisons, timestamped findings and P3 + RIFE as the current preferred baseline.
 - [Temporal continuity experiments](../apps/deforum/projects/brain-entity-study/experiments/continuity.md) — matched noise-source comparisons and separate interpolation/flow finishing tests, following the architecture research.
 
 - [Brain Entity style reproduction](../apps/deforum/projects/brain-entity-study/README.md) — original still comparisons, a six-second guided transformation, and measured build/cold-start/warm-render timings.

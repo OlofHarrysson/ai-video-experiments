@@ -32,7 +32,7 @@ All projects use the same app-level implementation and Python environment:
 | --- | --- |
 | `experiment.py` | Project scaffolding, ComfyUI submission/collection and preview encoding. |
 | `serverless_client.py`, `editing.py`, `workflow_recipes.py` | Shared RunPod transport, preserved cuts and reusable graph construction. |
-| `video_review.py` | Local timestamp and event-context frame extraction; [usage and evidence limits](video-review.md). |
+| `video_review.py` | Local overviews, every-frame windows, matched comparisons and paginated frame extraction; [usage and evidence limits](video-review.md). |
 | `setup-pod.sh` | Shared installation of the pinned ComfyUI node/model recipe. |
 | `workflows/` | Reusable starter graphs; each render stores its exact configured copy in its run folder. |
 | `pyproject.toml`, `uv.lock` | Shared Python environment. |
@@ -49,7 +49,7 @@ The first session follows this structure too: six attempts in the botanical proj
 2. Write an experiment note in `experiments/`. State the question, what changes, what stays fixed, cost boundary, and the shortest useful test. The scaffold includes `baseline.md`.
 3. Save original reference media in `references/assets/`. Record provenance, purpose, and SHA-256 in the reference manifest. A working crop or edited keyframe gets a new filename.
 4. Submit a run with explicit `--project` and `--experiment`. The runner records those identities and the exact graph in a unique run folder. Save human review in the experiment note after collection.
-5. Use `video_review.py` to inspect timestamped overview frames, then add timestamps or named events around changes. Review playback for rhythm and flicker. Record useful source ranges, camera behavior, detail loss, unwanted structural change, and cost separately; state when only sampled frames were inspected. Keep review versions in the project's ignored media directories.
+5. Use `video_review.py` for an overview, selected every-frame windows and matched comparisons. Record progression, useful source ranges, camera behavior, detail loss and structural change separately; state what was inspected. Follow the [review and feedback agreement](review-and-feedback.md): the assistant screens results, then presents a small inline-video shortlist with plain-language explanations and one useful taste question. Keep review versions beside project media; record Olof's playback verdict without inferring understanding.
 6. Draft a cut as a new `cuts/vNNN.md`, selecting source ranges. Point “current cut” in the project README to the selected version. Reordering a cut never changes its sources.
 7. To change the movie, retain the selected prefix and create a new continuation run. Record parent run, source-frame index, and changed settings. The `continue` and `assemble` CLI commands implement this image-based branch and cut workflow.
 8. Verify local originals and exports before deleting experiment-owned cloud resources. Keep rejected takes. Never use cleanup to prune creative assets.

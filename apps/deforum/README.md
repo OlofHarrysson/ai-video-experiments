@@ -8,6 +8,8 @@ Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `
 
 Current study: [Brain Entity temporal continuity](projects/brain-entity-study/experiments/continuity.md) compares diffusion-seed continuity, pixel noise and separate flow/interpolation finishing. The generation tests reuse the existing worker; local finishing keeps cloud resources off. See the [project index](projects/brain-entity-study/README.md) for all preserved comparisons and playback findings.
 
+Current creative baseline: **P3 + RIFE**, tentatively preferred by Olof. The [review harness practice](projects/brain-entity-study/experiments/review-harness.md) now supports bounded, paginated overviews, every-frame time windows and timestamp-matched comparisons. Follow the [review and feedback agreement](../../docs/review-and-feedback.md): screen results first, explain changes plainly and show a small shortlist of inline videos.
+
 Latest: [ten adaptive video experiments](../../docs/research/ten-experiments-session.md) compare story cuts, camera/settings, independent redraw, native Seedream per-frame editing and masked repairs. [Local video review](../../docs/video-review.md) extracts timestamped frames and event context into preserved review versions. See the [filmmaking guide](../../docs/research/filmmaking-for-ai-animation.md) for visual storytelling, shot design and editing practice.
 
 ## Verified execution: Serverless
@@ -96,4 +98,4 @@ Project references, run media and exports are ignored by Git. Original media is 
 
 ## Local checks
 
-`uv run python -m unittest -v` runs 11 local checks covering project scoping, separate attempts, immutable cuts, global continuation indices, checksum rejection, archive recovery and rejected-submission diagnostics without retries. They use temporary files and mocked submissions; they do not allocate a GPU or validate a new model.
+`uv run --with pillow python -m unittest -v` runs 30 local checks covering project/archive behavior, immutable cuts, continuation indices, rejected submissions, interpolation timing, selective frame review, matched comparisons, pagination and provenance. They use temporary media and mocked submissions; they do not allocate a GPU or validate a new model.

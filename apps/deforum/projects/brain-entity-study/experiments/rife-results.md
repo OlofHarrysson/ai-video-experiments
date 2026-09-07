@@ -1,5 +1,7 @@
 # RIFE finishing comparison: P01, P03 and C02
 
+Subsequent human review, 2026-09-07: Olof tentatively prefers **P3 + RIFE** among the continuity outputs, while finding several versions difficult to distinguish. The assistant's sampled-image analysis below predates that verdict and does not replace it. See [review harness practice](review-harness.md) for the follow-up and improved feedback process.
+
 ## Experiment written before rendering
 
 Test whether author RIFE interpolation makes the preferred P01/P03 morphing more gradual while retaining the artwork and visible repainting. This is interpolation of preserved original PNGs, with no new diffusion, stabilization, custom motion algorithm or cloud work.

@@ -18,7 +18,7 @@ Recorded 2026-09-07 from this project's conversation.
 
 | Preference | Evidence | How to respond |
 | --- | --- | --- |
-| Show videos directly in chat with a short experiment summary. Reports are supporting material. | “I'm mostly interested in seeing the video outputs and maybe with a brief summary of the experiment.” | Embed playable local videos in the final response, label each with what changed, and give one or two sentences about the result. A report link alone is insufficient. |
+| Show a small, understandable shortlist of videos directly in chat. Reports support it. | Initially: “I'm mostly interested in seeing the video outputs.” Later on 2026-09-07, Olof found six similar results overwhelming and asked for assistant screening and clearer explanations. | Default to one recommendation and one meaningful alternative, with what changed, why, what to watch and the result. Keep all outputs indexed. Explain unfamiliar tools; labels alone do not support useful feedback. |
 | The Seedream marsh image is the preferred look among the displayed samples. | “I like the sea dream one.” | Use that image as the candidate reference for the next animation comparison. This does not establish a preference for every Seedream model or for videos generated with it. |
 | Existing artwork should set the next visual benchmark. | On 2026-09-07 Olof supplied Tomorrow.mov and Brain Entity, identified both as Deforum work, and said “this style that we have right now is not good enough.” | Study and reproduce a short segment's visual qualities before further broad parameter sweeps. Models/settings may differ. These two references are explicitly liked; the specific reasons for liking each remain our interpretation. |
 | Brain Entity v002 is closer to the intended direction, but not yet good enough. | On 2026-09-07: “Version two is much closer to what I had in mind, but it is not great.” | Use v002 as the comparison baseline. The particular qualities Olof prefers and dislikes remain unconfirmed; do not equate this with approval of stronger denoise, flicker or simplified shapes. |
@@ -38,6 +38,16 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Next priority:** apply the completed architecture and tutorial research in [continuity experiments](../apps/deforum/projects/brain-entity-study/experiments/continuity.md). Preserve surreal semantic morphing while making its transitions more gradual. The claim that architecture or workflow is contributing is a user hypothesis to investigate, not an established diagnosis. Detailed still frames alone are insufficient for selecting a preferred video.
 
+## Continuity review and collaboration feedback — 2026-09-07
+
+**Explicit:** C01/C03 were “a bit boring”; the other outputs were “pretty good.” Olof tentatively prefers **P3 + RIFE**, but says the differences are difficult to judge. This supersedes the assistant's C02 + RIFE recommendation. Do not strengthen this into a definitive ranking of every clip.
+
+**Explicit working preference:** the assistant should inspect many useful images selectively, starting with evenly spaced samples and then every frame in selected intervals. Olof wants the assistant to screen results and surface important differences, reducing the need to hold many similar clips in mind. Keep videos inline and explain what the viewer is seeing; terms such as “Flow Stabilize” were unclear. When a video is liked, explain its important ingredients.
+
+**Explicit project purpose:** learning the industry and tools, improving the collaboration, and improving the videos are all part of this work. Olof asked to keep the process in repository instructions as a living agreement. See [reviewing experiments together](review-and-feedback.md).
+
+**Unconfirmed:** the new explanation of RIFE, flow stabilization, fixed seeds and controlled comparisons has been presented. No understanding or retention is inferred from that. The new harness and shortlist convention also need experience and feedback before treating them as proven improvements.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
@@ -53,7 +63,7 @@ Recorded 2026-09-07; these observations describe specific explanations or sugges
 
 As of 2026-09-07:
 
-- The [continuity study](../apps/deforum/projects/brain-entity-study/experiments/continuity.md) adds fixed/incrementing-seed and pixel-noise comparisons, Flow Stabilize, and local RIFE interpolation. The assistant's candidate is the incrementing-seed version with pixel noise removed, then interpolated. Olof has not yet assessed these outputs; no new playback preference or understanding of interpolation is established.
+- The [continuity study](../apps/deforum/projects/brain-entity-study/experiments/continuity.md) has now received playback feedback: P3 + RIFE is the tentative favorite, and C01/C03 were boring. Understanding of the mechanisms remains unconfirmed; see the dated feedback above.
 - Six [Brain Entity parameter comparisons](../apps/deforum/projects/brain-entity-study/experiments/parameters.md) were rendered with isolated changes to guide strength, denoise, CFG, steps, noise and prompt travel. Olof subsequently assessed these clips: P06 is clear but lacks temporal continuity; see playback feedback above. The parameter research explains this node’s behavior, but reading or understanding it is unconfirmed.
 - The [parallel experiment results](research/parallel-experiments-session.md) were shared. Do not assume the reports were read.
 - SDXL feedback and independent-redraw videos were embedded in chat. Olof has not yet stated a playback preference between these workflows.
