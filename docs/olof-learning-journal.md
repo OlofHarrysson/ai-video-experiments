@@ -66,6 +66,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Model continuity priority (2026-09-07):** Olof explicitly wants to investigate using the same model for the initial image and every subsequent frame before tuning other settings. He explains that the same prompt can produce different images across models or seeds, and hypothesizes that a fixed seed may also be necessary. This demonstrates awareness of model/seed effects on image generation; it does not establish that seed changes necessarily break img2img continuity. Source inspection confirms Deforum supports both fixed and changing seeds. Keep one exact model recipe and fixed seed as the next diagnostic baseline; do not record cross-model animation as universally impossible.
 
+**Matched seed experiment requested (2026-09-07):** Olof explicitly asks for two experiments sharing the starting seed, with one holding it fixed and the other changing it from the second frame onward. The [completed comparison](../apps/deforum/projects/motion-guide-study/experiments/seed-comparison.md) uses identical opening pixels and otherwise matched settings. Assistant review favors the changing-seed branch; Olof's preference and interpretation of these new results are unconfirmed. Do not turn the assistant's findings into a claim that Olof now understands or prefers a particular seed policy.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.

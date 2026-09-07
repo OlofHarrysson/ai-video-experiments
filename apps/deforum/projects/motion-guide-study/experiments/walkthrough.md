@@ -29,6 +29,8 @@ All six repaint images and both source/warp comparisons were visually inspected.
 
 ## User review and proposed next test
 
+Follow-up completed after Olof requested matched fixed/changing-seed branches: [same-model seed comparison](seed-comparison.md). That test generated one shared SDXL opening and two six-second sequences; it supersedes the single-branch proposal below. It uses a small ordinary camera zoom, not an integrated guide-flow loop.
+
 Olof rejects the repaint as an animation step: it looks like a completely new picture, whereas he wants gradual morphing over multiple frames or within parts of the image. The mechanism explanation is sufficiently understandable to move on, although understanding remains partial.
 
 The no-warp control already redesigns the scene. Investigate repaint preservation before attributing the failure to guide flow. The marsh crosses from a Seedream source into SDXL base with a new prompt; model/style mismatch is a plausible contributor, not an isolated finding. Denoise 0.58 was borrowed from a strength translation in another recipe, without reproducing that recipe's checkpoint, conditioning or full feedback pipeline. This is not evidence that the original preset fails.

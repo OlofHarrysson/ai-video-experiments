@@ -14,6 +14,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Same-model seed comparison](../apps/deforum/projects/motion-guide-study/experiments/seed-comparison.md) — identical opening and model recipe; fixed sampling seed versus a new seed each frame.
 - [Motion-guide walkthrough](../apps/deforum/projects/motion-guide-study/README.md) — two guide frames, measured arrows, pixel warping and six matched ComfyUI repaints, with an interactive comparison.
 - [BonsAi motion: zoom/morph and 3D reveal](../apps/deforum/projects/reference-studies/experiments/bonsai-motion.md) — next two accepted creative tests and review criteria; not rendered yet.
 - [Review harness practice](../apps/deforum/projects/brain-entity-study/experiments/review-harness.md) — selective image review, matched comparisons, timestamped findings and P3 + RIFE as the current preferred baseline.
