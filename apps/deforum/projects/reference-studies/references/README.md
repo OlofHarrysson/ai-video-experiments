@@ -2,6 +2,9 @@
 
 References supplied by Olof:
 
+- [Child of the Moon](bonsai-child-of-the-moon.md): vivid graphic cosmic-road imagery; 720p study archive, overview and temporal road samples; creator-confirmed Cheyenne.
+- [Echoes of a Thousand Years](bonsai-echoes.md): blue/cream surreal faces, landscapes, stairs and floating architecture; 720p archive and overview, with exact motion settings unknown.
+
 - [Tomorrow](tomorrow.md): byte-identical copy of the supplied MOV, sampled images, OCR, audio extraction and transcription receipt.
 - [Brain Entity](brain-entity.md): 1080p YouTube study copy, creator description and credited model metadata, sampled images and OCR.
 - [Frustration and Intoxication](bonsai-frustration-and-intoxication.md): The BonsAi Effect, 2024-01-11; whole-film samples and detailed street-to-club review.

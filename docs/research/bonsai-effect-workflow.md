@@ -1,5 +1,7 @@
 # The BonsAi Effect: Deforum workflow study
 
+Latest extension: [spatial image controls](bonsai-spatial-motion.md) inventories all 95 preset files, traces representative camera/flow/compositing combinations, and adds *Child of the Moon* and *Echoes of a Thousand Years*. Olof's latest feedback prioritizes expressive regional movement; literal 3D camera movement is a possible method. The earlier two-test sequence below records the initial plan.
+
 Research date: **2026-09-07**. The supplied channel was not already in the reference collection; *Brain Entity* is by a different creator. The new references are [Frustration and Intoxication](../../apps/deforum/projects/reference-studies/references/bonsai-frustration-and-intoxication.md) and [SDXL motion-preset examples](../../apps/deforum/projects/reference-studies/references/bonsai-motion-presets.md).
 
 **Main finding:** the artist's work combines a chosen visual language, controlled image evolution, several ways to drive motion, and substantial editing. The July preset demonstration gives us an unusually concrete reference: source settings, named model overrides and downloadable motion guides. It does not reveal the January film's exact recipe.

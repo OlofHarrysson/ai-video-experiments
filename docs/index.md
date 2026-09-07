@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Spatial image controls and Safety Marc presets](research/bonsai-spatial-motion.md) — full 95-file mechanism inventory, representative effect recipes, wave-guide study, two new BonsAi references and the concrete gap in our ComfyUI loop.
+
 - [Reviewing experiments together](review-and-feedback.md) — assistant first-pass review, a small human shortlist, understandable experiment cards and the current preferred recipe.
 - [Olof's learning journal](olof-learning-journal.md) — explicit preferences, demonstrated concepts, unconfirmed exposure and the next learning opportunity.
 - [Iterative filmmaking direction](vision.md) — creative intent, priorities, constraints and deferred hypotheses.

@@ -4,7 +4,7 @@ Living direction, recorded 2026-09-06 from Olof's brief. This is a working hypot
 
 ## What we want to learn
 
-Make expressive videos we enjoy, with intentional camera movement, recognizable forms, and room for surreal transformation. Build toward 30-second, one-minute, and eventually five-minute films assembled from manageable clips. The immediate priority is a usable creative workflow; improving image quality follows alongside it.
+Make expressive videos we enjoy, with intentional movement within the image, recognizable forms, and room for surreal transformation. Camera movement, depth reprojection and regional deformation are possible tools. Build toward 30-second, one-minute, and eventually five-minute films assembled from manageable clips. The immediate priority is a usable creative workflow; improving image quality follows alongside it.
 
 The core creative loop is: describe a shot, generate a short section, watch it, choose what works, and continue from a frame we like. Change the next scene, keyframe, camera path, model, or settings without losing earlier attempts. If a movie stops working halfway through, preserve the good part and branch from that point.
 
@@ -14,7 +14,7 @@ A working movie is a selection of ranges from saved generations. It is never the
 
 1. Organize projects and preserve every generation, its settings, and its parent frame.
 2. Practice selecting, continuing, replacing, and assembling short clips.
-3. Establish intentional depth-based 3D camera movement. 2D remains useful, but it is not the main destination.
+3. Establish clearly visible, expressive spatial motion: regions flowing, turning or expanding alongside evolving subjects. Olof's 2026-09-07 feedback questions whether literal 3D camera movement captures the desired effect. Test motion against the supplied artwork; use depth-based camera movement when it helps.
 4. Improve detail, temporal stability, and visual character through models, parameters, and ComfyUI workflows.
 5. Grow duration once continuation and editing work reliably. Duration alone is not success.
 

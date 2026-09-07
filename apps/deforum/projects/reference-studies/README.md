@@ -1,10 +1,13 @@
 # Reference studies
 
-Study artwork Olof likes and use it as the visual benchmark for short style-reproduction experiments. The collection includes four supplied Deforum references. Model and settings may differ when reproducing their visual qualities.
+Study artwork Olof likes and use it as the visual benchmark for short style-reproduction experiments. The collection includes six supplied Deforum references. Model and settings may differ when reproducing their visual qualities.
 
-Current state: all four references archived and visually sampled. The [Brain Entity style study](../brain-entity-study/README.md) contains the original still comparisons and six-second reproduction experiments. The [BonsAi Effect channel study](../../../../docs/research/bonsai-effect-workflow.md) adds creator replies, a reproducible motion-preset reference and its original guide videos.
+Current state: all six references archived and visually sampled. The [Brain Entity style study](../brain-entity-study/README.md) contains the original still comparisons and six-second reproduction experiments. The [BonsAi Effect channel study](../../../../docs/research/bonsai-effect-workflow.md) adds creator replies, a reproducible motion-preset reference and its original guide videos. The [spatial-control study](../../../../docs/research/bonsai-spatial-motion.md) maps the 95 preset files to their mechanisms and identifies external guide-flow injection as a missing part of our ComfyUI video loop.
 
 ## References
+
+- [Child of the Moon](references/bonsai-child-of-the-moon.md): graphic cosmic roads, saturated color and changing perspective/curvature.
+- [Echoes of a Thousand Years](references/bonsai-echoes.md): blue/cream surreal portraits, landscapes and floating architecture.
 
 - [Tomorrow](references/tomorrow.md): spare blue/black ink illustration, cream paper and visual metaphors about time.
 - [Brain Entity](references/brain-entity.md): dense orange/teal science-fiction illustration and continuous transforming circular forms.

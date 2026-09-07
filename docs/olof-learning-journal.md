@@ -70,6 +70,18 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Seed comparison playback feedback (2026-09-07):** Olof rejects A's fixed-seed result and explicitly selects B for a small 3D camera experiment. He accepts random or whichever changing-seed implementation is simplest. Keep B's incrementing seeds for simplicity and reproducibility. This supersedes the pending preference above; it does not establish that fixed seeds fail for all recipes or that Olof endorses every detail of B's output. [3D follow-up](../apps/deforum/projects/motion-guide-study/experiments/seed-3d.md).
 
+## Spatial motion clarification — 2026-09-07
+
+**Explicit playback feedback:** Olof could barely perceive camera motion in B's 3D repaint. He saw movement in the depth-only preview, but wanted a more dramatic effect. This supersedes the pending feedback in the original experiment report.
+
+**Explicit creative interest:** the supplied BonsAi Effect films, *Child of the Moon* and *Echoes of a Thousand Years*, join the preset compilation as desired art/production references. Olof notices different regions moving in different directions and questions whether literal 3D camera movement is the right objective. Prioritize expressive spatial motion; do not interpret this as rejecting every 3D method.
+
+**Demonstrated hypothesis, partial understanding:** Olof describes moving/stretching regions over successive frames and combining this with pan, zoom and rotation. He explicitly says the vector-field concept is not fully clear. Explain translation versus differential stretching, newly exposed pixels, and how depth/camera projection can also produce 2D displacements. Do not infer that the references use a particular method from appearance alone.
+
+See [spatial motion and the new references](research/bonsai-spatial-motion.md). Further regional-flow rendering is a proposal, not an accepted implementation yet.
+
+**Research priority:** Olof explicitly identifies Safety Marc's preset repository as important evidence of successful spatial image controls. Study the effects through their settings, actual guide footage and underlying implementation before inventing new controls. He expects concrete explanations of how the demonstrated effects work.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
