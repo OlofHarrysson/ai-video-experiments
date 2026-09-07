@@ -64,6 +64,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Walkthrough aesthetic feedback (2026-09-07):** Olof calls the SDXL repaint “horrific” and says it looks like a completely new picture. It is acceptable as a mechanism demonstration, but unacceptable as a single animation step. He wants gradual changes across multiple frames, possibly affecting only parts of the image. Preserve this feedback separately from his positive judgment of the earlier P3 + RIFE animation; neither result establishes a universal denoise setting or verdict on SDXL.
 
+**Model continuity priority (2026-09-07):** Olof explicitly wants to investigate using the same model for the initial image and every subsequent frame before tuning other settings. He explains that the same prompt can produce different images across models or seeds, and hypothesizes that a fixed seed may also be necessary. This demonstrates awareness of model/seed effects on image generation; it does not establish that seed changes necessarily break img2img continuity. Source inspection confirms Deforum supports both fixed and changing seeds. Keep one exact model recipe and fixed seed as the next diagnostic baseline; do not record cross-model animation as universally impossible.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
