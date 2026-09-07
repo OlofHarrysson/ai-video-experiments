@@ -32,6 +32,8 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [Feedback parameters](research/feedback-parameters.md) — pinned Difforum/ComfyUI behavior for denoise, steps, CFG, noise and image feedback; [controlled video comparisons](../apps/deforum/projects/brain-entity-study/experiments/parameters.md).
+
 - [Filmmaking for image-led AI animation](research/filmmaking-for-ai-animation.md) — directing attention, visual storytelling, composition, lighting, classic shots, editing and later music.
 
 Initial research dated 2026-09-06. Recommendations and integration hypotheses are distinguished from tests actually run.
