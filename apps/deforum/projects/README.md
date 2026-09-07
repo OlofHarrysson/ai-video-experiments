@@ -6,6 +6,7 @@ Create a project with `uv run python experiment.py init-project PROJECT` from `a
 
 | Project | Purpose | Status |
 | --- | --- | --- |
+| [Motion-guide walkthrough](motion-guide-study/README.md) | Make guide flow, pixel warping and diffusion repainting visible separately. | Two artworks, adjacent/larger-gap guides, six matched ComfyUI repaints and an interactive walkthrough; cloud resources cleaned up. |
 | [Brain Entity style study](brain-entity-study/README.md) | Original orange/teal mechanical-to-organic transformation against the reference benchmark. | Parameter, continuity and local RIFE comparisons preserved. P3 + RIFE is the current preferred recipe; Olof likes its morphing and wants more interesting camera work. |
 | [Reference studies](reference-studies/README.md) | Study Tomorrow, Brain Entity and two BonsAi Effect videos as benchmarks. | Four videos archived with timestamped reviews. BonsAi research adds creator replies, motion presets and original guide videos. |
 | [Botanical cathedral](botanical-cathedral/README.md) | Practice feedback, continuation and camera control using the first scene. | Baseline, continuation and 3D tests preserved; two cuts await playback review. |

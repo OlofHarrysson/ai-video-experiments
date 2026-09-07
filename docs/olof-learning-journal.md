@@ -60,6 +60,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Further clarification:** Olof reports understanding diffusion/denoising, but still wants to understand how the ring influences the output. Explain the ordinary pixel warp before VAE encoding and img2img, including why changing that starting image influences denoising; distinguish it from an inpainting mask or model weights. He prefers keeping ComfyUI as the main platform. An isolated original-Deforum RunPod test is acceptable if easy or substantially useful, but he does not want a large investment in another platform and explicitly asked to align before proceeding. This is conditional permission, not evidence that setup is easy or that a migration is wanted.
 
+**Visual examples requested:** Olof says he “sort of” understands vector-field distortion and describes needing two guide frames to estimate movements applied to an artwork. This demonstrates the two-frame-to-motion relationship, not complete understanding of flow estimation or warping. He asked to see the guide frames, intermediate deformation and next artwork, and explicitly chose to continue with ComfyUI while deferring A1111/Forge. The [interactive walkthrough](../apps/deforum/projects/motion-guide-study/README.md) supplies those stages; whether it improves understanding awaits his feedback.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.

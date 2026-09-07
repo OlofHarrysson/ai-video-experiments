@@ -10,6 +10,8 @@ Current study: [Brain Entity temporal continuity](projects/brain-entity-study/ex
 
 Current creative baseline: **P3 + RIFE**, tentatively preferred by Olof. The [review harness practice](projects/brain-entity-study/experiments/review-harness.md) now supports bounded, paginated overviews, every-frame time windows and timestamp-matched comparisons. Follow the [review and feedback agreement](../../docs/review-and-feedback.md): screen results first, explain changes plainly and show a small shortlist of inline videos.
 
+Current learning exercise: [motion-guide walkthrough](projects/motion-guide-study/README.md), with measured local optical-flow warps and six real native ComfyUI img2img outputs. It shows the intermediate pixels separately from diffusion, before integrating that mechanism into the feedback loop. Continue with ComfyUI; A1111/Forge is deferred.
+
 Latest: [ten adaptive video experiments](../../docs/research/ten-experiments-session.md) compare story cuts, camera/settings, independent redraw, native Seedream per-frame editing and masked repairs. [Local video review](../../docs/video-review.md) extracts timestamped frames and event context into preserved review versions. See the [filmmaking guide](../../docs/research/filmmaking-for-ai-animation.md) for visual storytelling, shot design and editing practice.
 
 ## Verified execution: Serverless

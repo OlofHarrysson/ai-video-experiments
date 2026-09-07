@@ -1,0 +1,108 @@
+<div id="motion-guide-walkthrough">
+  <style>
+    #motion-guide-walkthrough .mg-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+    #motion-guide-walkthrough figure {margin:0;min-width:0}
+    #motion-guide-walkthrough canvas,#motion-guide-walkthrough img {display:block;width:100%;height:auto}
+    #motion-guide-walkthrough figcaption {margin-bottom:6px}
+    #motion-guide-walkthrough .mg-wipe {position:relative;margin-top:8px;overflow:hidden}
+    #motion-guide-walkthrough .mg-wipe .mg-top {position:absolute;inset:0}
+    #motion-guide-walkthrough .mg-divider {position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--foreground);box-shadow:0 0 0 1px var(--background);pointer-events:none}
+    #motion-guide-walkthrough .mg-labels {display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:12px}
+    #motion-guide-walkthrough [hidden] {display:none!important}
+    #motion-guide-walkthrough .mg-detail {margin:12px 0 6px}
+    @media(max-width:430px){#motion-guide-walkthrough .mg-pair {grid-template-columns:1fr}}
+  </style>
+  <div class="viz-controls">
+    <label class="form-label">Artwork
+      <select class="form-select" id="mg-art"><option value="marsh">Lantern marsh</option><option value="portal">Illustrated portal</option></select>
+    </label>
+    <label class="form-label">Guide timing
+      <select class="form-select" id="mg-gap"><option value="visible">One-second gap · easier to see</option><option value="adjacent">Adjacent frames · normal step</option></select>
+    </label>
+  </div>
+  <div class="viz-row" role="group" aria-label="Walk through the process">
+    <button class="btn" type="button" data-stage="0" aria-pressed="false">1 · Guide pair</button>
+    <button class="btn" type="button" data-stage="1" aria-pressed="false">2 · Same arrows</button>
+    <button class="btn" type="button" data-stage="2" aria-pressed="true">3 · Warp pixels</button>
+    <button class="btn" type="button" data-stage="3" aria-pressed="false">4 · SDXL repaint</button>
+  </div>
+  <div class="mg-detail text-small" id="mg-detail" aria-live="polite"></div>
+  <div class="mg-pair" id="mg-pair">
+    <figure><figcaption id="mg-left-caption"></figcaption><canvas id="mg-left" width="1024" height="576" role="img" aria-label="First guide frame"></canvas></figure>
+    <figure><figcaption id="mg-right-caption"></figcaption><canvas id="mg-right" width="1024" height="576" role="img" aria-label="Second guide frame"></canvas></figure>
+  </div>
+  <div id="mg-comparison" hidden>
+    <label class="form-check" id="mg-control-label" hidden><input class="form-check-input" type="checkbox" id="mg-control"><span class="form-check-label">Compare matched repaints: no warp versus with warp</span></label>
+    <div class="mg-labels"><span id="mg-before-label"></span><span id="mg-after-label"></span></div>
+    <div class="mg-wipe" role="img" aria-label="Move the divider to compare images">
+      <img id="mg-after" alt="After the selected operation">
+      <img id="mg-before" class="mg-top" alt="Before the selected operation">
+      <div class="mg-divider" id="mg-divider"></div>
+    </div>
+    <label class="form-label">Comparison divider <output id="mg-position">50%</output><input class="form-range" id="mg-wipe" type="range" min="0" max="100" value="50"></label>
+  </div>
+  <script type="application/json" id="mg-data">__MOTION_GUIDE_DATA__</script>
+  <script>
+  (()=>{
+    const root=document.getElementById('motion-guide-walkthrough');
+    const q=id=>root.querySelector('#'+id);
+    const data=JSON.parse(q('mg-data').textContent);
+    let stage=2,revision=0;
+    const images={};
+    const ready=Promise.all(Object.entries(data.images).map(([key,src])=>new Promise((resolve,reject)=>{
+      const img=new Image();img.onload=()=>{images[key]=img;resolve()};img.onerror=reject;img.src=src;
+    })));
+    function divider(){const v=Number(q('mg-wipe').value);q('mg-before').style.clipPath=`inset(0 ${100-v}% 0 0)`;q('mg-divider').style.left=v+'%';q('mg-position').textContent=v+'%'}
+    function canvas(id,key,arrows,pair){
+      const c=q(id),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);ctx.drawImage(images[key],0,0,c.width,c.height);
+      if(!arrows)return;
+      const probe=document.createElement('span');probe.hidden=true;root.appendChild(probe);
+      probe.style.color='var(--viz-series-1, var(--blue))';const color=getComputedStyle(probe).color;
+      probe.style.color='var(--background)';const halo=getComputedStyle(probe).color;probe.remove();
+      const scale=q('mg-gap').value==='adjacent'?20:2;
+      ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=2;
+      pair.vectors.forEach(([x,y,dx,dy])=>{
+        if((x-16)%64!==0||(y-16)%64!==0)return;
+        const ex=x+dx*.8*scale,ey=y+dy*.8*scale,a=Math.atan2(ey-y,ex-x);
+        ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(ex,ey);ctx.strokeStyle=halo;ctx.lineWidth=5;ctx.stroke();ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.stroke();
+        ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(ex-6*Math.cos(a-.5),ey-6*Math.sin(a-.5));ctx.lineTo(ex-6*Math.cos(a+.5),ey-6*Math.sin(a+.5));ctx.closePath();ctx.fill();
+      });
+    }
+    async function draw(){
+      const rev=++revision;await ready;if(rev!==revision)return;
+      const art=q('mg-art').value,gap=q('mg-gap').value,pair=data.pairs[gap];
+      root.querySelectorAll('[data-stage]').forEach(b=>b.setAttribute('aria-pressed',Number(b.dataset.stage)===stage?'true':'false'));
+      q('mg-pair').hidden=stage>1;q('mg-comparison').hidden=stage<2;q('mg-control-label').hidden=stage!==3;
+      const timing=`6.000 → ${(pair.to/12).toFixed(3)} s`;
+      if(stage===0){
+        q('mg-left-caption').textContent='Guide A · 6.000 s';q('mg-right-caption').textContent=`Guide B · ${(pair.to/12).toFixed(3)} s`;
+        canvas('mg-left','guide-72',false,pair);canvas('mg-right',`guide-${pair.to}`,false,pair);
+        q('mg-left').setAttribute('aria-label','Earlier frame of expanding white ring');q('mg-right').setAttribute('aria-label','Later frame of expanding white ring');
+        q('mg-detail').textContent=gap==='visible'?'Teaching example · frames 12 steps apart':'Normal timing · two adjacent frames at 12 FPS';
+      }else if(stage===1){
+        q('mg-left-caption').textContent='Movement estimated from the guide';q('mg-right-caption').textContent='Same movement at artwork coordinates';
+        canvas('mg-left','guide-72',true,pair);canvas('mg-right',`${art}-original`,true,pair);
+        q('mg-left').setAttribute('aria-label','Optical-flow arrows on the guide');q('mg-right').setAttribute('aria-label','Identical arrows over the original artwork, before warping');
+        q('mg-detail').textContent=`${timing} · arrow lengths ×${gap==='adjacent'?20:2} for visibility only`;
+      }else{
+        const control=stage===3&&q('mg-control').checked;
+        let before=stage===2?`${art}-original`:`${art}-${gap}-warped`;
+        let after=stage===2?`${art}-${gap}-warped`:`${art}-${gap}-repainted`;
+        if(control)before=`${art}-original-repainted`;
+        q('mg-before').src=data.images[before];q('mg-after').src=data.images[after];
+        q('mg-before-label').textContent=control?'Repaint without warp':stage===2?'Original artwork':'Warped pixels';
+        q('mg-after-label').textContent=control?'Repaint with warp':stage===2?'Warped pixels':'SDXL repaint';
+        q('mg-before').alt=q('mg-before-label').textContent;q('mg-after').alt=q('mg-after-label').textContent;
+        q('mg-detail').textContent=stage===2?`${timing} · pixel movement only · no diffusion`:control?'Same seed, prompt and sampler · only the input warp differs':'Real ComfyUI img2img · denoise 0.58 · alternative next frame';
+        divider();
+      }
+    }
+    root.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',()=>{stage=Number(b.dataset.stage);draw()}));
+    ['mg-art','mg-gap','mg-control'].forEach(id=>q(id).addEventListener('change',draw));
+    q('mg-wipe').addEventListener('input',divider);
+    new MutationObserver(()=>{if(stage===1)draw()}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+    const theme=matchMedia('(prefers-color-scheme: dark)');theme.addEventListener('change',()=>{if(stage===1)draw()});
+    draw().catch(()=>{q('mg-detail').textContent='Images could not be loaded.';q('mg-detail').setAttribute('role','alert')});
+  })();
+  </script>
+</div>

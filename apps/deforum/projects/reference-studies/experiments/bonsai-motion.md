@@ -2,7 +2,7 @@
 
 Date: 2026-09-07. Status: creative scope accepted; preparation, not rendered results. Preserve P3 + RIFE as the earlier creative baseline.
 
-Olof accepted 8–10 seconds inspired by Evolve Zoom Slow, then a quick move into more interesting 3D transformations. Keep this to two distinct clips for the first human review. The [channel research](../../../../../docs/research/bonsai-effect-workflow.md) contains settings, pinned sources and original guide assets.
+Olof accepted 8–10 seconds inspired by Evolve Zoom Slow, then a quick move into more interesting 3D transformations. He subsequently chose to continue with ComfyUI and defer A1111/Forge. The [motion-guide walkthrough](../../motion-guide-study/README.md) now demonstrates the isolated warp/repaint stages using two artworks; it does not complete the full animation. Keep the later video review to two distinct clips. The [channel research](../../../../../docs/research/bonsai-effect-workflow.md) contains settings, pinned sources and original guide assets.
 
 ## First: approach and morph
 
@@ -10,7 +10,7 @@ Target a readable central subject that evolves while the viewpoint approaches it
 
 The circle is a separate motion reference. Its measured movement displaces the previous artwork before diffusion; guide pixels are not composited into the artwork. Forward depth-based camera movement is another part of this preset.
 
-Before rendering, record the actual renderer, model and all deviations. Our current Difforum loop lacks an external-guide-flow input and an explicit noise-mixture input, and it reuses its starting depth. Copying settings into that loop is insufficient. An isolated original Deforum run could provide a reference baseline, but setup and runtime remain unverified. Olof prefers ComfyUI as the main platform and accepts that isolated test only if easy or substantially useful; align on the execution route before proceeding. A ComfyUI adaptation would require separately verified flow/noise integration and camera conventions.
+Before rendering, record the actual renderer, model and all deviations. Our current Difforum loop lacks an external-guide-flow input and an explicit noise-mixture input, and it reuses its starting depth. Copying settings into that loop is insufficient. Continue with a ComfyUI adaptation, with separately verified flow/noise integration and camera conventions. An isolated original-Deforum reference run is deferred.
 
 Review subject readability, gradual transformation and detail through the approach. Inspect evenly spaced frames and an every-frame interval around any abrupt change. Preserve raw and interpolated versions.
 
