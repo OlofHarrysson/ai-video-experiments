@@ -2,7 +2,7 @@
 
 Study artwork Olof likes and use it as the visual benchmark for short style-reproduction experiments. Both references are identified by Olof as Deforum work. Model and settings may differ when reproducing their visual qualities.
 
-Current state: both references archived and reviewed; no recreation rendered yet. Start with a six-second Brain Entity-inspired transformation after comparing a few candidate stills with the reference.
+Current state: both references archived and reviewed. The [Brain Entity style study](../brain-entity-study/README.md) contains the original still comparisons and six-second reproduction experiments.
 
 ## References
 

@@ -6,7 +6,8 @@ Create a project with `uv run python experiment.py init-project PROJECT` from `a
 
 | Project | Purpose | Status |
 | --- | --- | --- |
-| [Reference studies](reference-studies/README.md) | Study Tomorrow and Brain Entity as visual benchmarks for short reproductions. | Both archived with sampled frames, OCR, reviews and reference excerpts; Brain Entity proposed first. |
+| [Brain Entity style study](brain-entity-study/README.md) | Original orange/teal mechanical-to-organic transformation against the reference benchmark. | Six stills and two six-second videos; stronger repainting improves organic evolution, but midpoint detail still fails the reference target. |
+| [Reference studies](reference-studies/README.md) | Study Tomorrow and Brain Entity as visual benchmarks for short reproductions. | Both archived with sampled frames, OCR, reviews and excerpts; Brain Entity reproduction study now available. |
 | [Botanical cathedral](botanical-cathedral/README.md) | Practice feedback, continuation and camera control using the first scene. | Baseline, continuation and 3D tests preserved; two cuts await playback review. |
 | [Lantern marsh](lantern-marsh/README.md) | Learn overscan, cropping and layered 3D movement in a new scene. | 24-frame guide and repaint completed; full/cropped exports preserved. |
 | [SDXL settings](sdxl-settings/README.md) | Compare steps and guidance on the same scene/seed. | Three stills completed; lower CFG gives calmer colors in this sample. |

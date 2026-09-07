@@ -13,6 +13,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Brain Entity style reproduction](../apps/deforum/projects/brain-entity-study/README.md) — original still comparisons, a six-second guided transformation, and measured build/cold-start/warm-render timings.
+
 - [Art references and first reproduction study](../apps/deforum/projects/reference-studies/README.md) — archived Tomorrow and Brain Entity videos, timestamped frame studies, extracted text, reviews and a proposed short style test.
 
 - [Ten adaptive video experiments](research/ten-experiments-session.md) — visual storytelling, camera/settings comparisons, independent redraw, native Seedream repainting and local frame review.

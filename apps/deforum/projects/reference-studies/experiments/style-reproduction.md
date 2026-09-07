@@ -1,6 +1,6 @@
 # First style-reproduction study
 
-Status: proposed after reference analysis; no new image/video generation in this study session.
+Status: accepted by Olof and implemented in the separate [Brain Entity style study](../../brain-entity-study/experiments/style.md). This document retains the evaluation brief; results and every generation belong to that project.
 
 ## Target
 
