@@ -20,6 +20,7 @@ Recorded 2026-09-07 from this project's conversation.
 | --- | --- | --- |
 | Show videos directly in chat with a short experiment summary. Reports are supporting material. | “I'm mostly interested in seeing the video outputs and maybe with a brief summary of the experiment.” | Embed playable local videos in the final response, label each with what changed, and give one or two sentences about the result. A report link alone is insufficient. |
 | The Seedream marsh image is the preferred look among the displayed samples. | “I like the sea dream one.” | Use that image as the candidate reference for the next animation comparison. This does not establish a preference for every Seedream model or for videos generated with it. |
+| Existing artwork should set the next visual benchmark. | On 2026-09-07 Olof supplied Tomorrow.mov and Brain Entity, identified both as Deforum work, and said “this style that we have right now is not good enough.” | Study and reproduce a short segment's visual qualities before further broad parameter sweeps. Models/settings may differ. These two references are explicitly liked; the specific reasons for liking each remain our interpretation. |
 | More visible movement than the first short clips. | On 2026-09-07: “what I see right now is a little bit too static”; Olof suggested short duration might contribute. | Test longer clips with clearer camera travel. Desired motion amount remains unconfirmed. |
 | Learn by trying several workflows and inspecting each result. | On 2026-09-07 Olof authorized ten experiments, chosen one or two at a time, with useful independent work in parallel. | Let observed results determine the next tests; show every video and highlight the useful findings. |
 | Give the assistant a local way to inspect videos over time. | “extract frames at specific timestamps or events” to understand roughly what happens. | Preserve timestamped frame reviews and use them before describing a clip; distinguish sampled-frame evidence from full playback and semantic understanding. |
@@ -55,6 +56,8 @@ As of 2026-09-07:
 **Demonstrated hypothesis:** Olof connected nearby foreground objects with making 3D movement visible, and noted that rotating a camera can move the subject out of frame. This is useful reasoning to explore; it does not yet establish the distinction between translational parallax and rotation, or knowledge of shot terminology.
 
 ## Next learning opportunity
+
+Current direction: [reference studies](../apps/deforum/projects/reference-studies/README.md). Olof wants to learn from good-looking existing art and reproduce its style in a short study. Brain Entity is the assistant's recommended first target, not yet an explicit user selection. Its creator credits SDXL/art LoRA/QR ControlNet; Tomorrow's Deforum attribution comes from Olof. Neither reference's exact settings are established. No recreation has been generated in this reference-study session.
 
 Completed on 2026-09-07: [ten adaptive video experiments](research/ten-experiments-session.md), including the first three-shot story, five camera/settings comparisons, native Seedream frame edits and three independent-redraw workflows. Each has a playable video and timestamped review. The story also has a shorter revised cut selected from the earlier, clearer source ranges. No user playback verdict on this round has been recorded.
 

@@ -36,6 +36,8 @@ A later hypothesis is to author simple objects and camera paths in a small 3D sc
 
 ## Build now and learn next
 
+Current visual benchmark: Olof supplied [Tomorrow and Brain Entity](../apps/deforum/projects/reference-studies/README.md) and wants to reproduce qualities of existing artwork before continuing broad exploration. The marsh experiments establish workflow behavior but do not meet the desired artistic standard. Begin with a short reference-based style study; choose models and controls to serve its graphic identity and motion. A newer model is not itself a success criterion.
+
 Completed: preserved project runs, continuation/cuts, depth guides, stronger camera comparisons, model stills and a local timestamp/event frame-review tool. The first [three-shot story](../apps/deforum/projects/marsh-story/experiments/story.md) uses staged Seedream edits and SDXL camera animation: cuts establish the story progression, while repeated repainting still degrades detail. Continue practicing visual storytelling, composition, lighting and editing alongside camera control; use the [filmmaking guide](research/filmmaking-for-ai-animation.md) to extract relevant craft. Stories can unfold through images, with music later and little need for dialogue. A timeline UI, automatic branching engine, reusable 3D engine and long unattended renders remain proposals.
 
 Useful success evidence is practical: find a previous attempt; explain its settings; preserve a good opening while replacing its continuation; identify genuine parallax; and reproduce a working cut from its source ranges. Olof's playback review decides whether the movie is compelling.

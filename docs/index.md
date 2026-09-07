@@ -13,6 +13,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Art references and first reproduction study](../apps/deforum/projects/reference-studies/README.md) — archived Tomorrow and Brain Entity videos, timestamped frame studies, extracted text, reviews and a proposed short style test.
+
 - [Ten adaptive video experiments](research/ten-experiments-session.md) — visual storytelling, camera/settings comparisons, independent redraw, native Seedream repainting and local frame review.
 
 - [Seedream motion](../apps/deforum/projects/seedream-motion/experiments/motion.md) — five-second feedback/redraw outputs, stronger camera travel and foreground reconstruction limits.
