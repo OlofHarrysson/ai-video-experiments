@@ -23,7 +23,7 @@ Use installed Difforum feedback/camera nodes. Small 2D zoom 1.002 per update; no
 
 Completed. [A: fixed seed](../exports/seed-v001/fixed/continue.mp4) and [B: changing seed](../exports/seed-v001/increment/continue.mp4) each contain 48 source frames / six seconds. Both begin with the exact same opening pixels. These are raw feedback results without interpolated frames; 24 FPS delivery repeats each 8 FPS source frame three times.
 
-Assistant first-pass preference: **B, changing seed**, for further creative work. User playback judgment is pending.
+Assistant first-pass preference: **B, changing seed**, for further creative work. Olof subsequently rejected A and selected B for the [small 3D follow-up](seed-3d.md). Incrementing seeds remain the simplest reproducible implementation.
 
 | Part of shot | A: fixed seed 7301 | B: seeds 7301–7348 |
 | --- | --- | --- |

@@ -14,6 +14,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [B's small 3D camera move](../apps/deforum/projects/motion-guide-study/experiments/seed-3d.md) — depth-only preview and the selected changing-seed repaint recipe with lateral motion and a slight turn.
 - [Same-model seed comparison](../apps/deforum/projects/motion-guide-study/experiments/seed-comparison.md) — identical opening and model recipe; fixed sampling seed versus a new seed each frame.
 - [Motion-guide walkthrough](../apps/deforum/projects/motion-guide-study/README.md) — two guide frames, measured arrows, pixel warping and six matched ComfyUI repaints, with an interactive comparison.
 - [BonsAi motion: zoom/morph and 3D reveal](../apps/deforum/projects/reference-studies/experiments/bonsai-motion.md) — next two accepted creative tests and review criteria; not rendered yet.

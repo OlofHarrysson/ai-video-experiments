@@ -68,6 +68,8 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Matched seed experiment requested (2026-09-07):** Olof explicitly asks for two experiments sharing the starting seed, with one holding it fixed and the other changing it from the second frame onward. The [completed comparison](../apps/deforum/projects/motion-guide-study/experiments/seed-comparison.md) uses identical opening pixels and otherwise matched settings. Assistant review favors the changing-seed branch; Olof's preference and interpretation of these new results are unconfirmed. Do not turn the assistant's findings into a claim that Olof now understands or prefers a particular seed policy.
 
+**Seed comparison playback feedback (2026-09-07):** Olof rejects A's fixed-seed result and explicitly selects B for a small 3D camera experiment. He accepts random or whichever changing-seed implementation is simplest. Keep B's incrementing seeds for simplicity and reproducibility. This supersedes the pending preference above; it does not establish that fixed seeds fail for all recipes or that Olof endorses every detail of B's output. [3D follow-up](../apps/deforum/projects/motion-guide-study/experiments/seed-3d.md).
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
