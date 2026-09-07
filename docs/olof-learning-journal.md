@@ -84,7 +84,7 @@ See [spatial motion and the new references](research/bonsai-spatial-motion.md). 
 
 **Accepted experiment:** Olof agrees to the short Move-Warp-inspired test. He also clarifies that in the referenced movement, the left/right regions did not move vertically as expected from a simple global rotation. That observation strengthens his regional-deformation hypothesis; it does not identify the exact algorithm. The [experiment](../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) uses the actual wave guide with B's repaint recipe.
 
-**Result presented, preference unconfirmed:** the completed six-second Move-Warp repaint transforms the central light into a large mechanical head while retaining an explorer and the orange/teal visual vocabulary. A warp-only comparison shows the same flow without repainting. Assistant inspection does not establish Olof's taste or understanding of this result.
+**Explicit Move-Warp playback feedback:** Olof says the result looks much better and the movement makes it more interesting. He cannot yet judge whether it is the right movement. He noticed the whole image shifting right and asked whether panning was also applied. The saved flow has a net rightward displacement; there was no separate pan. Understanding of this distinction remains unconfirmed.
 
 ## Concepts demonstrated in conversation
 
