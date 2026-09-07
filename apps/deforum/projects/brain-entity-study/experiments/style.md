@@ -1,6 +1,6 @@
 # Mechanical to organic opening
 
-Status: six original stills and two six-second videos rendered and preserved. Version v002 is the assistant-selected study cut; neither video meets the reference-quality target yet.
+Status: six original stills and two six-second videos rendered and preserved. Olof prefers v002 as much closer to his intention, but says it is still not great. It is the next comparison baseline; the particular reasons for his preference remain unconfirmed.
 
 ## Hypothesis
 
@@ -64,3 +64,9 @@ Replace the sparse binary silhouette with a richer sequence of illustrated inter
 ## Validation and cleanup
 
 All four GPU jobs completed. Both cuts have 48 preserved source frames and six-second H.264 previews. The local suite passed all 17 tests with Pillow enabled; a focused conversion check verified the four renamed header keys and unchanged tensor payload. Native ComfyUI inference establishes that the converted model loads and runs, beyond the earlier CPU startup check. All 122 cloud objects (105,018,956 bytes) were compared byte-for-byte with local archives, including requests and auxiliary files; a second inventory confirmed the volume was unchanged. Workers were set to min/max zero, idle timeout restored to five seconds, volume detached and deleted. Worker, Pod and volume inventories were empty. Private job, build, storage and account receipts remain in ignored `work/brain-entity-session/`.
+
+## User feedback and proposed next comparison
+
+On 2026-09-07 Olof said v002 is “much closer to what I had in mind, but it is not great.” This establishes a directional preference, not an endorsement of its particular settings or every visible quality.
+
+First proposed diagnostic: render v002 with only QR ControlNet disabled, retaining anchor, prompt schedule, seeds, camera and all sampler settings. Compare against preserved v002 to test whether the silhouette constraint contributes to the flat midpoint; causality is not established from the existing two runs because denoise and control strength changed together. If detail still collapses, investigate the feedback/prompt recipe before building a more elaborate guide. If the free version keeps richer detail, develop two or three strong illustrated keyframes (mechanical portal, porous coral-like membrane, organic opening) and test a richer guide between them. The latter is an unverified workflow hypothesis. Reuse the prepared model stack. Both tests remain proposed; no new renders were submitted.
