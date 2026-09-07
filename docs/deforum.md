@@ -2,7 +2,7 @@
 
 Deforum turns an image diffusion model into an animation system. Its characteristic look comes from repeatedly transforming and redrawing an image, rather than generating an entire temporally coherent video in one pass.
 
-Research snapshot last reviewed: 2026-09-06.
+Research snapshot last reviewed: 2026-09-07. See the [architecture and temporal-continuity comparison](research/deforum-architecture-comparison.md) for current repository provenance, source differences and prioritized tests.
 
 For the current project practice, start with the [filmmaking direction](vision.md) and [working convention](workflow.md). The current priority is iterative editing and intentional 3D camera movement. Flow alignment and learned interpolation are welcome experiments when they improve the result; the stepped look is a creative option, not a fixed requirement.
 
@@ -15,7 +15,7 @@ What attracts me is its surreal, unstable quality. Images do not merely move thr
 In particular, I like:
 
 - The morphing between subjects, materials, and environments.
-- The stop-motion feeling created by visible changes from one frame to the next.
+- Visible frame-by-frame repainting, with enough intermediate change to read as gradual morphing rather than a slideshow.
 - The sense that each frame is being repainted rather than extracted from a perfectly coherent simulated world.
 - Strong, explicit camera movement—zooming, rotating, translating, and warping—combined with semantic transformation.
 - The intensity and unpredictability of longer sequences, where the animation can become a visual journey rather than a single generated shot.
@@ -89,7 +89,7 @@ This separation is important:
 
 ## Cadence
 
-Deforum can diffuse only selected keyframes and generate intermediate frames by warping and interpolation. Higher cadence is faster and often smoother, but reduces the number of fully redrawn frames. Diffusing every frame usually produces the strongest hand-redrawn or stop-motion feeling.
+Classic Deforum can diffuse selected keyframes and generate intermediate frames by warping and blending two endpoints, optionally using optical flow. The current Difforum sampler instead uses camera-warp-only frames between diffusion updates. Those behaviors are not interchangeable. Our parameter study used cadence 1 and eight generated FPS, repeated for 24 FPS delivery. RIFE/FILM output interpolation is a separate operation and has not yet been applied to these clips. See the [cadence comparison](research/deforum-architecture-comparison.md).
 
 ## Why long clips drift
 
@@ -109,8 +109,8 @@ The most promising way to preserve this look is not necessarily a modern text-to
 
 ComfyUI is a natural host for that experiment because the transform, diffusion, depth, interpolation, and export stages can be separated and inspected. The main ecosystem options worth testing are:
 
-- [Deforum ComfyUI nodes](https://github.com/deforum/deforum-comfy-nodes), the official but still work-in-progress direction.
-- [XmYx Deforum Comfy nodes](https://github.com/XmYx/deforum-comfy-nodes), a broader community implementation built around established Deforum workflows.
+- [Deforum ComfyUI nodes](https://github.com/deforum/deforum-comfy-nodes), the Deforum-organization package, with graph loops, schedules and latent/image utilities; current code includes seed-interpolated noise.
+- [XmYx Deforum Comfy nodes](https://github.com/XmYx/deforum-comfy-nodes), a separate integration with classic cadence machinery and a Deforum backend.
 - [Difforum](https://github.com/chillithebillis/Difforum), a newer attempt to combine Deforum-style animation with current ComfyUI image models.
 - [KreaDeforum](https://github.com/Dream-Making-Git/KreaDeforum), an early integration experiment for Krea image models.
 

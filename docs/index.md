@@ -32,6 +32,10 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [Deforum architecture and temporal continuity](research/deforum-architecture-comparison.md) — original renderer, Difforum rewrite, official/community ComfyUI nodes, missing temporal mechanisms and next tests.
+- [Current ComfyUI animation practices](research/comfyui-animation-practices.md) — official-source workflow guidance and model/temporal compatibility.
+- [ComfyUI YouTube workflow study](research/comfyui-youtube-workflows.md) — trusted creators, transcript-backed tutorial notes, dated advice and relevance to feedback animation.
+
 - [Feedback parameters](research/feedback-parameters.md) — pinned Difforum/ComfyUI behavior for denoise, steps, CFG, noise and image feedback; [controlled video comparisons](../apps/deforum/projects/brain-entity-study/experiments/parameters.md).
 
 - [Filmmaking for image-led AI animation](research/filmmaking-for-ai-animation.md) — directing attention, visual storytelling, composition, lighting, classic shots, editing and later music.

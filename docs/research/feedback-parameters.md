@@ -55,6 +55,8 @@ The supplied initial image is output unchanged apart from resizing; sampling beg
 
 ## Applying this in the current study
 
+The subsequent [architecture comparison](deforum-architecture-comparison.md) incorporates Olof’s playback feedback: P06 has clarity but insufficient temporal continuity. It compares missing intermediate-frame synthesis, noise continuity and classical cadence. This parameter guide describes control semantics, not a complete temporal workflow.
+
 The [parameter study](../../apps/deforum/projects/brain-entity-study/experiments/parameters.md) records executed clips and their results. Keep prompts, weights, input files, resolution and camera fixed for each parameter comparison, preserve every result, and judge normal-speed playback alongside matched timestamps. Values below are local contrasts around v002, not transferable defaults.
 
 1. **Guide ablation:** P01 uses the exact archived v002 graph with only `control_strength: 0.4 → 0`. Compare linework, figure retention and flat-region growth near the midpoint. This isolates the graph change; a changed runtime remains a possible confound. v001 versus v002 did not isolate it because denoise also changed.

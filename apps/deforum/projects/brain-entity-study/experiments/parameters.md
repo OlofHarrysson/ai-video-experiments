@@ -42,9 +42,9 @@ All comparisons use the same seeded inputs, but this session has not measured co
 
 ## Interpretation and next practice
 
-P06 is the assistant's candidate for the next detail baseline, not a user-selected replacement for v002. Keeping its opening prompt constant preserved substantially more middle-frame complexity with exactly the same denoise, CFG, steps, noise and camera as P01. This supports the scheduled prompt change as a major contributor to simplification in this sample. It does not separate prompt wording from conditioning interpolation or establish general model behavior. The style phrase “flat cel shaded colors” remained in P06, so it alone does not force the observed collapse.
+P06 preserves more middle-frame complexity with the same denoise, CFG, steps, noise and camera as P01. This supports the scheduled prompt change as a contributor to simplification in this sample; it does not separate wording from conditioning interpolation. The style phrase “flat cel shaded colors” remained in P06, so that phrase alone does not force the collapse.
 
-Next: build a richer intermediate prompt that retains concrete scene content (perforated machinery, engraved surfaces, layered architecture, a scale figure) while changing one subject into another. Compare that revised schedule with P06 before adding richer image guides. The artistic tradeoff is sustained detail versus intentional transformation; the constant-prompt test is not a finished reproduction. Test 15 steps again on a successful prompt recipe before adopting it as a faster default. A second seed or repeat run would strengthen confidence before committing to a longer shot.
+Olof's subsequent playback assessment finds P06 too discontinuous. Use P01/P03 and likely P04 as the motion references; retain P06 as a clarity diagnostic. Follow the [architecture and temporal-continuity comparison](../../../../../docs/research/deforum-architecture-comparison.md) before selecting another recipe: investigate intermediate-frame synthesis, noise continuity and classic cadence. Richer intermediate prompts remain one creative component, rather than the entire solution. Test 15 steps again on a successful temporal recipe before adopting it as a faster default. A second seed or repeat run would strengthen confidence before committing to a longer shot.
 
 ## Playback and exact runs
 
@@ -69,3 +69,10 @@ P01 cached startup took 117.856s. Subsequent delay includes worker availability 
 All 318 cloud objects (296,152,091 bytes) were compared byte-for-byte and by SHA-256 with local archives, including request inputs and manifests; a second inventory was unchanged. All six videos passed duration, resolution, FPS and frame-count checks; every cut preserves exact source hashes. Workers were set to min/max zero, idle timeout restored to five seconds, and the owned volume was detached and deleted. Worker, Pod and volume inventories were empty. The active local deployment receipt was moved into the closed session archive.
 
 Observed account balance moved from $47.8552404447 to $47.5937108891 (about $0.26), with current spend/hour reported as zero after cleanup. Billing can settle later; this is an observed balance change, not a final invoice. Private verification and account receipts remain in ignored `work/brain-parameters-session/`.
+
+
+## User playback assessment — 2026-09-07
+
+Olof finds the round substantially better than the previous videos. P06 is clear but lacks temporal consistency and feels like still images, so it should remain a clarity diagnostic rather than the next motion baseline. P01 has interesting morphing and better continuity, but needs more gradual change across intermediate frames. P02 begins well, becomes boring late. P03 is very good with a flatter ending. P04 is probably the clip called “Before,” also described as cool (transcription interpretation). P05 is good but shares the abrupt-change issue.
+
+Next work is an architecture/workflow comparison with original Deforum, the newer implementation and current ComfyUI practice. The previous proposal to focus on intermediate prompt content remains one possible component; it is insufficient as a complete plan for the temporal problem. No temporal quality conclusion should be inferred from P06's contact sheet alone.

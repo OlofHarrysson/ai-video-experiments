@@ -31,6 +31,12 @@ Recorded 2026-09-07 from this project's conversation.
 | Prioritize an iterative filmmaking workflow and intentional 3D camera movement. | Olof described keeping good openings, restarting from a chosen frame, and assembling longer films from shorter clips; explicitly preferred 3D camera work. | Preserve originals and branches; practice short, inspectable continuations before extending duration. |
 | Find a balance between smoothing and flicker. | Earlier playback feedback: the lower-denoise version was too smooth and the higher-denoise version flickered too much. | Treat this as feedback on those clips. Keep detail, morphing and temporal variation separate; do not declare a universally preferred denoise value. |
 
+## Parameter-study playback feedback — 2026-09-07
+
+**Explicit:** Olof likes this round substantially more than the preceding videos. P06 has good clarity but feels like a sequence of stills with insufficient temporal consistency; it is not the preferred motion baseline. P01 has interesting morphing and better continuity, but changes should unfold through more intermediate frames instead of abrupt complete redraws. P02 begins well and becomes boring late. P03 is “really good,” with a flatter ending. “Before is also really cool” is interpreted as P04 from the sequence of comments, with that reference slightly uncertain. P05 also looks good and shares the abrupt-change problem.
+
+**Next priority:** research original Deforum, the newer implementation and the exact ComfyUI nodes, alongside current tutorial/workflow practice. Preserve surreal semantic morphing while making its transitions more gradual. The claim that architecture or workflow is contributing is a user hypothesis to investigate, not an established diagnosis. Detailed still frames alone are insufficient for selecting a preferred video.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
@@ -46,7 +52,7 @@ Recorded 2026-09-07; these observations describe specific explanations or sugges
 
 As of 2026-09-07:
 
-- Six [Brain Entity parameter comparisons](../apps/deforum/projects/brain-entity-study/experiments/parameters.md) were rendered with isolated changes to guide strength, denoise, CFG, steps, noise and prompt travel. P06 is the assistant’s preferred next detail baseline; Olof has not assessed these clips. The parameter research explains this node’s behavior, but reading or understanding it is unconfirmed.
+- Six [Brain Entity parameter comparisons](../apps/deforum/projects/brain-entity-study/experiments/parameters.md) were rendered with isolated changes to guide strength, denoise, CFG, steps, noise and prompt travel. Olof subsequently assessed these clips: P06 is clear but lacks temporal continuity; see playback feedback above. The parameter research explains this node’s behavior, but reading or understanding it is unconfirmed.
 - The [parallel experiment results](research/parallel-experiments-session.md) were shared. Do not assume the reports were read.
 - SDXL feedback and independent-redraw videos were embedded in chat. Olof has not yet stated a playback preference between these workflows.
 - We explained that cropping reduced raw uncovered guide pixels but left interior gaps. No user explanation or assessment of this result has been recorded.
