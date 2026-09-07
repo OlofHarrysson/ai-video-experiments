@@ -13,6 +13,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Temporal continuity experiments](../apps/deforum/projects/brain-entity-study/experiments/continuity.md) — matched noise-source comparisons and separate interpolation/flow finishing tests, following the architecture research.
+
 - [Brain Entity style reproduction](../apps/deforum/projects/brain-entity-study/README.md) — original still comparisons, a six-second guided transformation, and measured build/cold-start/warm-render timings.
 
 - [Art references and first reproduction study](../apps/deforum/projects/reference-studies/README.md) — archived Tomorrow and Brain Entity videos, timestamped frame studies, extracted text, reviews and a proposed short style test.

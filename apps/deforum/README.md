@@ -6,6 +6,8 @@ Start with the [project index](projects/README.md), [working convention](../../d
 
 Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `workflow_recipes.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
 
+Current study: [Brain Entity temporal continuity](projects/brain-entity-study/experiments/continuity.md) compares diffusion-seed continuity, pixel noise and separate flow/interpolation finishing. The generation tests reuse the existing worker; local finishing keeps cloud resources off. See the [project index](projects/brain-entity-study/README.md) for all preserved comparisons and playback findings.
+
 Latest: [ten adaptive video experiments](../../docs/research/ten-experiments-session.md) compare story cuts, camera/settings, independent redraw, native Seedream per-frame editing and masked repairs. [Local video review](../../docs/video-review.md) extracts timestamped frames and event context into preserved review versions. See the [filmmaking guide](../../docs/research/filmmaking-for-ai-animation.md) for visual storytelling, shot design and editing practice.
 
 ## Verified execution: Serverless

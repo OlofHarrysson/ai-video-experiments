@@ -2,6 +2,8 @@
 
 Research snapshot: 2026-09-07. Read-only source comparison; no new GPU render, installation or workflow migration. This document compares classic Deforum, the newer Difforum rewrite we use, the Deforum-organization ComfyUI nodes, and the XmYx implementation. It complements [parameter semantics](feedback-parameters.md), [current ComfyUI practices](comfyui-animation-practices.md), and the [YouTube tutorial study](comfyui-youtube-workflows.md).
 
+Subsequent execution: the [continuity study](../../apps/deforum/projects/brain-entity-study/experiments/continuity.md) tests fixed versus incrementing seeds, separate pixel noise and Flow Stabilize. [Local RIFE finishing](../../apps/deforum/projects/brain-entity-study/experiments/rife-results.md) now preserves originals and generates intermediate frames. These results are separate from this source audit; interpolated noise tensors and denser diffusion timelines are still untested.
+
 ## Recommendation
 
 Keep the current ComfyUI/SDXL setup as the comparison baseline. First test actual intermediate-frame synthesis on preserved P01/P03 footage, then test more gradual changes to the noise supplied during generation. Do not migrate the complete runtime or choose a new image model before these narrower comparisons establish what is missing.
