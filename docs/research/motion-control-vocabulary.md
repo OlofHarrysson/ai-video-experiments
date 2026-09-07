@@ -56,3 +56,14 @@ The previous wave test measured rightward displacement at about 98% of pixel/fra
 A useful request is: “Keep the center roughly still, bend the sides outward, then reverse halfway, with a gentle amount of repainting.” Translate it into an anchor, region, direction, amplitude and timing. If those are unclear, make a motion-only preview and discuss the visible result. Then repaint and compare against that preview. Avoid building a general natural-language motion engine until a few such recipes are reliable.
 
 Source basis: Safety Marc's [Move-Around](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Move-Around-30s.txt) and [Evolve-Zoom-Slow](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Evolve-Zoom-Slow-30s.txt); local archived WebUI `hybrid_video.py` at `5d63a339dbec8d476657a1f672a4eeb6dc79ed37`; Difforum `core/camera.py`, `core/warp.py`, `nodes/warp_nodes.py` at `1d750efd3c1d1dda792b8ef6c14b06a14a69f879`. See the [source study](bonsai-spatial-motion.md) for the mechanism trace. The mappings above combine inspected implementation with mathematical explanation; proposed controls are marked as such.
+
+
+## Missing coverage is not the same as dark artwork
+
+The [camera-gap diagnosis and probes](../../apps/deforum/projects/motion-guide-study/experiments/motion-effects-2.md) verify a practical distinction. Difforum's warp output mask is **white for covered positions and black for holes**, despite an output name suggesting occlusion. A ComfyUI repair/noise mask uses white for the area to regenerate, so invert coverage before sampling. Preserve valid pixels with compositing before the global repaint. The subsequent unmasked repaint can still change everything.
+
+A hole mask only describes this step. Once a black gap has been repainted into dark image content and carried forward, it can have valid coverage on later steps. Black ink, shadows, intentional backgrounds and inherited empty-looking borders cannot be separated by that mask alone. Fresh inferred depth may even treat a black band as nearby geometry.
+
+In the matched probes, full-strength noise restricted to new holes barely improved the broad dark band. Removing exterior-black prompt clauses helped modestly; neither test solved it. Increasing denoise is therefore not a demonstrated general remedy. The saved evidence is a starting point for a future outpainting/background-continuation test with an explicit spatial target.
+
+The [second effect round](../../apps/deforum/projects/motion-guide-study/experiments/motion-effects-2.md) also demonstrates two concrete knobs: multiply the same displacement field by four for a stronger effect, or compose an in-plane rotation with the preferred regional warp. Repainting may resist or reinterpret either operation; compare the motion-only preview with the final frames.

@@ -130,3 +130,9 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 ## Motion vocabulary practice — 2026-09-07
 
 **Explicit direction:** Olof wants a few distinct effects drawn from Safety Marc's presets, including a 3D rotation-like effect. The learning objective is to connect everyday descriptions to mathematical controls and visible outputs. He does not yet regard the wave guide's strong rightward estimate as intuitively explained. Prioritize examples and preserve the chain from guide or camera settings through warped input to repaint. Independent invention of a broad motion-control system can come later.
+
+## Spatial effects playback feedback — 2026-09-07
+
+**Explicit preference:** radial unfolding is by far Olof's favorite of the three spatial effects. He wants more effect trials and stronger/exaggerated movement, particularly for the ring. He finds the turn/bank motion useful for repositioning the figure, despite disliking the large black empty region.
+
+**User hypothesis:** more noise might help fill the black region. This is a proposed explanation to test, not a demonstrated understanding of warp coverage or a proven remedy. Preserve useful motion while investigating missing-content handling.

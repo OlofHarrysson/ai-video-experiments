@@ -18,6 +18,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Stronger and combined effects](../apps/deforum/projects/motion-guide-study/experiments/motion-effects-2.md) — fourfold ring, turbulence and rotating unfolding; separate camera-gap diagnosis.
+
 - [Three spatial effects](../apps/deforum/projects/motion-guide-study/experiments/motion-effects.md) — turn and bank, kaleidoscope unfolding and ring expansion with the same artwork recipe.
 
 - [Move-Warp-inspired feedback](../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) — actual checker-wave guide, regional image deformation and the selected same-model/changing-seed repaint recipe.
