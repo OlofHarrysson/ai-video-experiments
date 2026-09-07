@@ -27,6 +27,14 @@ These are measured at 1024×576 after multiplying the estimated flow by 0.8. The
 
 All six repaint images and both source/warp comparisons were visually inspected. The dynamic arrows extend into black guide regions in this estimate: black is not an instruction to preserve artwork pixels. A sparse guide still leaves motion estimation ambiguous; it does not prescribe exact object geometry.
 
+## User review and proposed next test
+
+Olof rejects the repaint as an animation step: it looks like a completely new picture, whereas he wants gradual morphing over multiple frames or within parts of the image. The mechanism explanation is sufficiently understandable to move on, although understanding remains partial.
+
+The no-warp control already redesigns the scene. Investigate repaint preservation before attributing the failure to guide flow. The marsh crosses from a Seedream source into SDXL base with a new prompt; model/style mismatch is a plausible contributor, not an isolated finding. Denoise 0.58 was borrowed from a strength translation in another recipe, without reproducing that recipe's checkpoint, conditioning or full feedback pipeline. This is not evidence that the original preset fails.
+
+Proposed, not executed: screen three gentler denoise values (0.15, 0.25, 0.35) on the same marsh input with the actual adjacent-frame warp, holding the other settings fixed. Check source-to-repaint object and style preservation, then assess the best two in short feedback sequences for accumulated drift, blur, freezing and gradual change. These values are hypotheses specific to this setup; the liked P3 animation used a different recipe and higher denoise. Surface at most two meaningful video alternatives after assistant review. Preserve the planned move into intentional 3D camera work after this bounded calibration.
+
 ## Preserved outputs and reuse
 
 - [Marsh overview](../exports/v001/marsh-walkthrough.jpg), [portal overview](../exports/v001/portal-walkthrough.jpg), [matched repaint gallery](../exports/v001/matched-repaints.jpg).
