@@ -36,6 +36,8 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [The BonsAi Effect workflow study](research/bonsai-effect-workflow.md) — two visually reviewed references, artist replies across 29 videos, exact motion presets and guide assets, seed/cadence differences, and lessons for our next experiment; [external platforms](research/bonsai-effect-external-sources.md).
+
 - [Deforum architecture and temporal continuity](research/deforum-architecture-comparison.md) — original renderer, Difforum rewrite, official/community ComfyUI nodes, missing temporal mechanisms and next tests.
 - [Current ComfyUI animation practices](research/comfyui-animation-practices.md) — official-source workflow guidance and model/temporal compatibility.
 - [ComfyUI YouTube workflow study](research/comfyui-youtube-workflows.md) — trusted creators, transcript-backed tutorial notes, dated advice and relevance to feedback animation.

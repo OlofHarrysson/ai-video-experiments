@@ -48,6 +48,14 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Unconfirmed:** the new explanation of RIFE, flow stabilization, fixed seeds and controlled comparisons has been presented. No understanding or retention is inferred from that. The new harness and shortlist convention also need experience and feedback before treating them as proven improvements.
 
+## Current baseline and new references — 2026-09-07
+
+**Explicit:** Olof calls the current P3 + RIFE result “pretty good” and says “the morphing is nice,” while its camera movement is not very interesting. Keep it as the creative baseline and investigate more purposeful camera work. He would prefer a newer model eventually, but explicitly accepts continuing with SDXL now that a recipe is working.
+
+**Explicit:** Olof supplied [Frustration and Intoxication](../apps/deforum/projects/reference-studies/references/bonsai-frustration-and-intoxication.md) and [SDXL motion-preset examples](../apps/deforum/projects/reference-studies/references/bonsai-motion-presets.md), both by The BonsAi Effect, as high-quality references. He asked for visual review and research across descriptions, comments and other platforms. The second link starts at 9:25 inside Evolve Zoom Slow; this timestamp is a useful study target, not an explicit ranking of all presets.
+
+**Unconfirmed:** the [channel study](research/bonsai-effect-workflow.md) documents hybrid motion, seed mixtures, cadence, strength translation and editing. Presenting this research does not establish that Olof understands or prefers those mechanisms. We have not reproduced the newly supplied references or selected an implementation path for their presets.
+
 ## Concepts demonstrated in conversation
 
 Recorded 2026-09-07; these observations describe specific explanations or suggestions, not a level of expertise.
@@ -79,7 +87,9 @@ As of 2026-09-07:
 
 ## Next learning opportunity
 
-Current direction: [Brain Entity style study](../apps/deforum/projects/brain-entity-study/README.md), following the [reference studies](../apps/deforum/projects/reference-studies/README.md). On 2026-09-07 Olof accepted the proposed six-second Brain Entity-inspired test with “let's try to do that.” This authorizes the experiment; it does not establish understanding of its model controls or satisfaction with results. Its creator credits SDXL/art LoRA/QR ControlNet; Tomorrow's Deforum attribution comes from Olof. Neither reference's exact settings are established.
+Current preparation: use the [BonsAi Effect study](research/bonsai-effect-workflow.md) to ground the next camera/morphing experiment in an existing preset. Preserve P3 + RIFE for comparison. The useful lesson to explain is the distinction between guiding motion before repainting and creating intermediate frames afterward; understanding remains unconfirmed.
+
+Earlier direction: [Brain Entity style study](../apps/deforum/projects/brain-entity-study/README.md), following the [reference studies](../apps/deforum/projects/reference-studies/README.md). On 2026-09-07 Olof accepted the proposed six-second Brain Entity-inspired test with “let's try to do that.” Its creator credits SDXL/art LoRA/QR ControlNet; Tomorrow's Deforum attribution comes from Olof. Neither reference's exact settings are established.
 
 Completed on 2026-09-07: [ten adaptive video experiments](research/ten-experiments-session.md), including the first three-shot story, five camera/settings comparisons, native Seedream frame edits and three independent-redraw workflows. Each has a playable video and timestamped review. The story also has a shorter revised cut selected from the earlier, clearer source ranges. No user playback verdict on this round has been recorded.
 
