@@ -78,9 +78,13 @@ Recorded 2026-09-07 from this project's conversation.
 
 **Demonstrated hypothesis, partial understanding:** Olof describes moving/stretching regions over successive frames and combining this with pan, zoom and rotation. He explicitly says the vector-field concept is not fully clear. Explain translation versus differential stretching, newly exposed pixels, and how depth/camera projection can also produce 2D displacements. Do not infer that the references use a particular method from appearance alone.
 
-See [spatial motion and the new references](research/bonsai-spatial-motion.md). Further regional-flow rendering is a proposal, not an accepted implementation yet.
+See [spatial motion and the new references](research/bonsai-spatial-motion.md). The subsequent acceptance and completed regional-flow experiment are recorded below.
 
 **Research priority:** Olof explicitly identifies Safety Marc's preset repository as important evidence of successful spatial image controls. Study the effects through their settings, actual guide footage and underlying implementation before inventing new controls. He expects concrete explanations of how the demonstrated effects work.
+
+**Accepted experiment:** Olof agrees to the short Move-Warp-inspired test. He also clarifies that in the referenced movement, the left/right regions did not move vertically as expected from a simple global rotation. That observation strengthens his regional-deformation hypothesis; it does not identify the exact algorithm. The [experiment](../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) uses the actual wave guide with B's repaint recipe.
+
+**Result presented, preference unconfirmed:** the completed six-second Move-Warp repaint transforms the central light into a large mechanical head while retaining an explorer and the orange/teal visual vocabulary. A warp-only comparison shows the same flow without repainting. Assistant inspection does not establish Olof's taste or understanding of this result.
 
 ## Concepts demonstrated in conversation
 

@@ -2,7 +2,7 @@
 
 Study artwork Olof likes and use it as the visual benchmark for short style-reproduction experiments. The collection includes six supplied Deforum references. Model and settings may differ when reproducing their visual qualities.
 
-Current state: all six references archived and visually sampled. The [Brain Entity style study](../brain-entity-study/README.md) contains the original still comparisons and six-second reproduction experiments. The [BonsAi Effect channel study](../../../../docs/research/bonsai-effect-workflow.md) adds creator replies, a reproducible motion-preset reference and its original guide videos. The [spatial-control study](../../../../docs/research/bonsai-spatial-motion.md) maps the 95 preset files to their mechanisms and identifies external guide-flow injection as a missing part of our ComfyUI video loop.
+Current state: all six references archived and visually sampled. The [Brain Entity style study](../brain-entity-study/README.md) contains the original still comparisons and six-second reproduction experiments. The [BonsAi Effect channel study](../../../../docs/research/bonsai-effect-workflow.md) adds creator replies, a reproducible motion-preset reference and its original guide videos. The [spatial-control study](../../../../docs/research/bonsai-spatial-motion.md) maps the 95 preset files to their mechanisms. Its first [Move-Warp-inspired execution](../motion-guide-study/experiments/move-warp.md) now applies actual guide flow between successive ComfyUI repaints through Mac orchestration.
 
 ## References
 

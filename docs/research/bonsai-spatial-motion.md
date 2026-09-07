@@ -1,5 +1,7 @@
 # Spatial image control: learning from Safety Marc's presets
 
+Execution update: the accepted [Move-Warp-inspired experiment](../../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) now completes guide-flow feedback through Mac warping and existing ComfyUI img2img nodes. Six-second repaint and warp-only videos are preserved; no full preset reproduction or in-worker guide-flow node is claimed. The gap analysis below records the state that motivated the experiment.
+
 2026-09-07. Olof wants the expressive movement in The BonsAi Effect's references. He found our latest 3D repaint nearly motionless and the guide too restrained. Literal camera realism is one possible technique; the current creative question is how to direct different regions of an evolving image.
 
 ## What the repository tells us
