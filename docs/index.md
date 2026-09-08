@@ -22,6 +22,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Sampling steps and input noise](../apps/deforum/projects/motion-guide-study/experiments/noise-steps.md) — test whether more sampling steps reduce accumulated grain at denoise 0.45.
 - [Repaint controls](../apps/deforum/projects/motion-guide-study/experiments/repaint-controls.md) — short matched denoise comparison, sampler protection and regional added noise, with playable comparisons.
 - [Twist, turn and ripple](../apps/deforum/projects/motion-guide-study/experiments/spatial-sequence.md) — one sequence with cadence 3 and matched RIFE finishing.
 

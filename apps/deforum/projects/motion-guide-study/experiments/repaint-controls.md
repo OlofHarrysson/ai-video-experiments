@@ -41,3 +41,7 @@ The extra reference probe reproduced the earlier 0.58 frame exactly, including i
 Local checks confirmed matched graphs, quadrant orientation, sampler-only masking, deterministic added noise, preserved opening and all generated-anchor hashes. All four individual movies and two labeled comparisons have the expected three-second duration and frame counts and fully decode. Twenty existing interpolation/review tests passed. FFmpeg here lacks `drawtext`; comparison labels were rendered with Pillow before normal video encoding.
 
 All **222 cloud objects / 66,295,384 bytes** were byte-verified against local copies. The endpoint is paused at min/max zero, no workers or Pods remain, and the temporary volume was detached and deleted. Spend rate returned to zero. Observed balance reduction was **$0.0552**, leaving about $46.19; this is an account observation, not an itemized invoice. Private job receipts, validation, copy verification and commands remain in `work/repaint-controls-session/`.
+
+## Human playback feedback
+
+Olof prefers **0.45**, finding 0.35 blurry and 0.58 too changeable. He rejects protected-region artifacts; noisy top-right remains interesting. His preference supersedes the assistant recommendation above. [Next test](noise-steps.md): 18 versus 36 sampling steps at 0.45, with and without top-right noise, without protection.
