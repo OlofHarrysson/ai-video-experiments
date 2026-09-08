@@ -18,12 +18,12 @@
   const root=document.getElementById('spatial-effects');
   const select=root.querySelector('#se-effect'),play=root.querySelector('#se-play'),slider=root.querySelector('#se-time'),clock=root.querySelector('#se-clock'),svg=root.querySelector('#se-drawing');
   const ns='http://www.w3.org/2000/svg';
+  const localRegion={x:0.5,y:0.5,radius:0.225};
   const sourceBase='https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/';
   const effects=[
-    {id:'grow-sun',name:'Grow around the sun',group:'Local reshaping',detail:'Expand the sun’s region; the surrounding grid bends outward.',source:null},
-    {id:'grow-house',name:'Grow around the house',group:'Local reshaping',detail:'Expand the house’s region while more distant areas move less.',source:null},
-    {id:'pinch-sun',name:'Pinch around the sun',group:'Local reshaping',detail:'Compress the sun’s region and stretch its surroundings.',source:null},
-    {id:'breathe-sun',name:'Make the sun breathe',group:'Local reshaping',detail:'Expand, contract, and return the sun’s region to its starting shape.',source:'Evolve-Pulse-30s'},
+    {id:'expand-region',name:'Expand region',group:'Local reshaping',detail:'Expand around the image center with a smooth falloff into the surrounding area.',source:null},
+    {id:'pinch-region',name:'Pinch region',group:'Local reshaping',detail:'Compress around the image center and stretch the surrounding area.',source:null},
+    {id:'breathe-region',name:'Make a region breathe',group:'Local reshaping',detail:'Expand, contract, and return a region around the image center to its starting shape.',source:'Evolve-Pulse-30s'},
     {id:'unfold',name:'Open the center sideways',group:'Local reshaping',detail:'Separate the sides around the middle band; keep the central line fixed.',source:'Move-Around-30s'},
     {id:'ripple',name:'Send a ripple outward',group:'Local reshaping',detail:'A moving ring of deformation travels outward from the center.',source:'Evolve-Zoom-Slow-30s'},
     {id:'left',name:'Slide left',group:'Move the whole sheet',detail:'Every part moves left by the same amount; shapes keep their proportions.',source:'Move-Left-30s'},
@@ -53,10 +53,9 @@
     if(p===0)return [x,y];
     const t=p*p*(3-2*p),dx=x-256,dy=y-160;
     switch(effect.id){
-      case 'grow-sun':return localScale(x,y,182,108,72,1.1*t);
-      case 'grow-house':return localScale(x,y,281,210,65,.85*t);
-      case 'pinch-sun':return localScale(x,y,182,108,72,-.65*t);
-      case 'breathe-sun':return localScale(x,y,182,108,72,.65*Math.sin(2*Math.PI*t));
+      case 'expand-region':return localScale(x,y,localRegion.x*512,localRegion.y*320,localRegion.radius*320,1.1*t);
+      case 'pinch-region':return localScale(x,y,localRegion.x*512,localRegion.y*320,localRegion.radius*320,-.65*t);
+      case 'breathe-region':return localScale(x,y,localRegion.x*512,localRegion.y*320,localRegion.radius*320,.65*Math.sin(2*Math.PI*t));
       case 'unfold':return [x+48*t*Math.tanh(dx/65)*Math.exp(-dy*dy/(2*78*78)),y];
       case 'ripple':{const r=Math.hypot(dx,dy),front=24+185*t,k=24*Math.sin(Math.PI*t)*Math.exp(-((r-front)**2)/(2*28*28))*r/(r+18);return [x+k*dx/Math.max(r,1),y+k*dy/Math.max(r,1)];}
       case 'left':return [x-65*t,y];

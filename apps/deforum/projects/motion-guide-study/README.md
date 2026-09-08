@@ -2,7 +2,7 @@
 
 See what happens between a motion guide and the next generated artwork. Two archived artworks receive the same measured displacement. The original, warped input, and real ComfyUI img2img output remain separate.
 
-- [Spatial effects browser](experiments/motion-catalog.md): choose among 23 direct transforms on a single drawing before the next diffusion experiment. Cadence 3 and interpolation comparisons follow motion selection.
+- [Spatial effects browser](experiments/motion-catalog.md): choose among 22 direct transforms on a single drawing before the next diffusion experiment. Cadence 3 and interpolation comparisons follow motion selection.
 
 - [Experiment and results](experiments/walkthrough.md)
 - [Runnable study](experiments/walkthrough.py)
