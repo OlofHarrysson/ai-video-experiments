@@ -25,6 +25,8 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 
 ## Working conventions
 
+- Current learning pause: [animated spatial-controls lesson](docs/research/spatial-controls-lesson.md). Olof wants to understand deformation, guide authoring and alternative motion controls before further art experiments. Two interactive examples isolate direct sheet deformation and measured guide flow. Depth is a brief secondary topic; understanding remains unconfirmed.
+
 - Start with the [documentation index](docs/index.md) and the relevant app README. Shared explanations belong in `docs/`; runnable experiments belong in `apps/`.
 - Prefer existing nodes and workflows. Add custom code only for a concrete missing capability.
 - Use the repository's RunPod skills in `.agents/skills/` for RunPod work. Keep RunPod skills and MCP configuration scoped here; the CLI may be installed globally.

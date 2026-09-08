@@ -136,3 +136,11 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 **Explicit preference:** radial unfolding is by far Olof's favorite of the three spatial effects. He wants more effect trials and stronger/exaggerated movement, particularly for the ring. He finds the turn/bank motion useful for repositioning the figure, despite disliking the large black empty region.
 
 **User hypothesis:** more noise might help fill the black region. This is a proposed explanation to test, not a demonstrated understanding of warp coverage or a proven remedy. Preserve useful motion while investigating missing-content handling.
+
+## Spatial-control learning pause — 2026-09-08
+
+**Explicit preference and request:** Olof likes the circle effect and another clip whose identity is unclear from “this one.” He sees value in expanding an interesting part of the image. He now prioritizes an animated explanation of spatial deformation and guide creation before more art experiments.
+
+**Self-reported understanding:** Olof says he understands the static vector-field picture and diffusion reasonably well. He remains unsure how movements accumulate into stretching, what the monochrome guide contributes, and how guides or fields can be authored. Treat these as self-reports, not independently demonstrated mastery. He requests a short depth overview while keeping the main lesson on guide motion.
+
+**Materials presented, understanding unconfirmed:** [Animated spatial-controls lesson](research/spatial-controls-lesson.md), with a deforming grid/drawing and a measured-guide-flow animation. Follow up on the specific point he finds unclear rather than assuming the presentation resolved it.

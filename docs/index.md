@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Animated spatial-controls lesson](research/spatial-controls-lesson.md) — a stretchable drawing, measured guide motion, direct controls, and where depth fits.
+
 - [Motion vocabulary: words to controls](research/motion-control-vocabulary.md) — translation, turn, bank, expansion and regional deformation, with the inspectable path from a request to repainting.
 
 - [Spatial image controls and Safety Marc presets](research/bonsai-spatial-motion.md) — full 95-file mechanism inventory, representative effect recipes, wave-guide study, two new BonsAi references and the concrete gap in our ComfyUI loop.
