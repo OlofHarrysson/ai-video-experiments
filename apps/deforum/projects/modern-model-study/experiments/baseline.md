@@ -24,4 +24,14 @@ Klein: four steps, Euler, Flux2 scheduler, CFG 1, reference conditioning for edi
 
 ## Execution
 
+Runnable from `apps/deforum` with `uv run --env-file .env --with pillow==12.1.0 --with opencv-python-headless==4.12.0.88 python projects/modern-model-study/experiments/audition.py` followed by a stage and model:
+
+- `openings klein` / `openings krea`: concise and detailed descriptions, matched seed within each model.
+- `select MODEL --index 0`: preserve the selected opening and motion-only preview.
+- `probe klein --instruction`: native edit of a deliberately visible mid-twist input.
+- `probe krea` / `probe krea --instruction`: matched scene-description versus imperative-prompt partial repaint.
+- `feedback klein --instruction --until 24` and `feedback krea --until 24`: eight anchors; increase to `--until 36` after inspection to complete three seconds.
+
+Each command reconnects to an existing accepted job and refuses changed graphs or source images. An uncertain submission requires inspection; it is never silently retried. [Four API graphs](workflows/) make the minimal model recipes inspectable. Actual runs preserve their exact selected prompt and graph separately.
+
 Prepared 2026-09-08. New models require a worker image build and cold download; settings/prompt changes thereafter reuse that image. Original SDXL container recipe is preserved as `serverless/Dockerfile.sdxl`. Actual runtime evidence and results will be added after execution.
