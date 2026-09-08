@@ -4,6 +4,16 @@ Living working agreement, 2026-09-07. Learning filmmaking, model behavior and ho
 
 ## Responsibilities
 
+Preserve the agreed animation feedback loop when changing model or conditioning recipes. Before a comparison, describe three inputs separately: the warped previous image used to initialize sampling, the text prompt, and any additional reference-image conditioning. State which input changes and which stay fixed. If terminology such as “text-to-image” suggests removing an established mechanism, clarify the intended data flow before implementing that interpretation. A narration of an assumption is not confirmation of alignment.
+
+### Misunderstanding record — 2026-09-08
+
+**Confirmed assistant misunderstanding:** Olof requested a text-conditioned Deforum feedback loop with an optional additional native image reference. The assistant interpreted “text-to-image” as independent fresh-noise generations and removed previous-image initialization in the text-only arms. The reference arms used the previous frame as conditioning while also sampling from fresh noise; they did not add reference conditioning to the conventional partially noised previous-image path. These experiments therefore did not test the intended combination.
+
+**Intended experiment:** retain previous artwork → spatial deformation → partial-noise diffusion initialization → repaint → next artwork, with the text prompt throughout. Compare that loop with the same loop plus a model-supported reference-image input. The reference might be a previous frame, the opening, or another deliberately chosen image. Its selection and whether it is warped should be stated explicitly. Simultaneous initialization and reference conditioning must be verified for each model; the proposed benefit remains a hypothesis.
+
+**Prevention:** distinguish sampling initialization from conditioning whenever describing “image input.” Map a proposed change onto the existing loop, then confirm any interpretation that would remove feedback or replace its mechanism. Compare the agreed baseline with an additive change, unless Olof explicitly requests a different architecture. Preserve the mistaken runs and label their scope accurately; they are not evidence against the intended combined mechanism.
+
 The assistant does the first pass: verifies the experiment, inspects images over time, investigates suspected defects, compares matched examples and recommends a small shortlist. Olof supplies taste, creative direction and playback judgments. Neither technical measurements nor the assistant's recommendation override a stated preference. An explanation being presented does not establish that Olof understood or retained it.
 
 Default human review: **one recommendation and one meaningfully different alternative**, often just one video when there is no useful choice. Keep all outputs and link the full experiment index, but do not require Olof to rank six nearly identical clips. Show the whole set when requested. Keep playable videos inline in chat.
