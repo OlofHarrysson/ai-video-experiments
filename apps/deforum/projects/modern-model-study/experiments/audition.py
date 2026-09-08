@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 import editing
 import modern_workflows as workflows
-import serverless_client as transport
+import pod_client as transport
 import spatial_sequence as motion
 
 OUT = PROJECT/'exports/audition-v001'
@@ -60,6 +60,7 @@ def image(p, rgb):
 
 
 def run(name, graph, source=None):
+    name = 'pod-'+name
     matches = sorted((PROJECT/'runs').glob('*-'+name+'-1f'))
     # A human/agent must inspect an expired request and explicitly record the
     # absence of outputs before permitting a replacement submission.
@@ -81,7 +82,7 @@ def run(name, graph, source=None):
         if source:
             assert sha(folder/'anchor.png') == sha(source)
         receipt = json.loads((folder/'submission.json').read_text())
-        if not receipt.get('job_id'):
+        if not receipt.get('prompt_id'):
             raise RuntimeError(f'Uncertain submission; inspect {folder}')
         transport.collect(folder)
         return folder

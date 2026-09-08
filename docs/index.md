@@ -22,6 +22,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Klein and Krea Pod results](../apps/deforum/projects/modern-model-study/experiments/pod-results.md) — two playable clips, model-specific prompting, native editing versus partial repaint, and cleanup.
 - [Klein and Krea audition](../apps/deforum/projects/modern-model-study/experiments/baseline.md) — same-model openings and feedback, native editing versus partial repaint, and model-specific prompts.
 
 - [Two sampler alternatives](../apps/deforum/projects/motion-guide-study/experiments/samplers.md) — matched three-second twists informed by creator recipes.

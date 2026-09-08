@@ -2,6 +2,8 @@
 
 ## Current worker: modern-model audition
 
+The subsequent [direct ComfyUI Pod session](../projects/modern-model-study/experiments/pod-results.md) completed both model tests. Use its `audition.py`/`pod_client.py` path for that verified recipe. Olof authorizes Pods whenever they are more convenient; the serverless deployment below remains paused and its new-model inference remains unverified.
+
 **Execution status:** both lean images built, but model preparation did not finish. No new-model inference was reached. The endpoint is paused at min/max 0 with no attached volume; zero workers, Pods and network volumes were verified at session cleanup. The deployment receipt is archived in `work/modern-model-session/serverless-deployment-closed.json`. This recipe is prepared, not a GPU-verified render path.
 
 The active `Dockerfile` uses native ComfyUI with **Klein 4B distilled and Krea 2 Turbo**. Follow the [audition runbook](../projects/modern-model-study/experiments/baseline.md) and `audition.py`; the older `experiment.py` SDXL commands below require the preserved **`Dockerfile.sdxl`** image.
