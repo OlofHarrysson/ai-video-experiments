@@ -1,33 +1,35 @@
-# Build context: repository root. RunPod's GitHub builder targets linux/amd64.
+# Build context: repository root. Native ComfyUI nodes; original image recipe is Dockerfile.sdxl.
 FROM runpod/worker-comfyui:5.10.0-base@sha256:5e77b7d8ad559abcb02cca08165e400bef7372bdd9f599811c746019cb410de8
 
-RUN git clone https://github.com/chillithebillis/Difforum.git /comfyui/custom_nodes/difforum \
-    && git -C /comfyui/custom_nodes/difforum checkout --detach 1d750efd3c1d1dda792b8ef6c14b06a14a69f879 \
-    && git clone https://github.com/kijai/ComfyUI-DepthAnythingV2.git /comfyui/custom_nodes/depth-anything-v2 \
-    && git -C /comfyui/custom_nodes/depth-anything-v2 checkout --detach 553187872eeb1d52e50dc53209fa57e569609a72 \
-    && uv pip install -r /comfyui/custom_nodes/difforum/requirements.txt \
-        -r /comfyui/custom_nodes/depth-anything-v2/requirements.txt
+RUN mkdir -p /comfyui/models/diffusion_models \
+    && wget -q -O /comfyui/models/diffusion_models/flux-2-klein-4b.safetensors \
+      https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-4b/resolve/5f526678002e43af5551dadb73ce2e8c91b43afe/split_files/diffusion_models/flux-2-klein-4b.safetensors \
+    && echo 'ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343  /comfyui/models/diffusion_models/flux-2-klein-4b.safetensors' | sha256sum -c -
 
-RUN mkdir -p /comfyui/models/checkpoints /comfyui/models/depthanything \
-    && wget -q -O /comfyui/models/checkpoints/sd_xl_base_1.0.safetensors \
-      https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/462165984030d82259a11f4367a4eed129e94a7b/sd_xl_base_1.0.safetensors \
-    && echo '31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b  /comfyui/models/checkpoints/sd_xl_base_1.0.safetensors' | sha256sum -c - \
-    && wget -q -O /comfyui/models/depthanything/depth_anything_v2_vits_fp32.safetensors \
-      https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/5aa7ab578df757d94c743998b157a0204ff29215/depth_anything_v2_vits_fp32.safetensors \
-    && echo 'cb2d537ed6e45921f27f61f0b605dcfafb6b97c7d1a15e551280bdd867605c86  /comfyui/models/depthanything/depth_anything_v2_vits_fp32.safetensors' | sha256sum -c -
+RUN mkdir -p /comfyui/models/text_encoders \
+    && wget -q -O /comfyui/models/text_encoders/qwen_3_4b.safetensors \
+      https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-4b/resolve/5f526678002e43af5551dadb73ce2e8c91b43afe/split_files/text_encoders/qwen_3_4b.safetensors \
+    && echo '6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a  /comfyui/models/text_encoders/qwen_3_4b.safetensors' | sha256sum -c -
 
-COPY apps/deforum/serverless/convert_qr_controlnet.py /convert_qr_controlnet.py
-RUN mkdir -p /comfyui/models/loras /comfyui/models/controlnet \
-    && wget -q -O /comfyui/models/loras/xl_more_art-full_v1.safetensors \
-      https://huggingface.co/frankjoshua/xl_more_art-full_v1/resolve/a534d8341d2741fab30581e12fae1e38b38a23cc/xl_more_art-full_v1.safetensors \
-    && echo '15e31fe2b6ae2e77ee47a3ccdf27bd14f7b54ce27c6a58502875fdad26f34460  /comfyui/models/loras/xl_more_art-full_v1.safetensors' | sha256sum -c - \
-    && wget -q --user-agent=deforum-experiment/0.2 -O /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors \
-      'https://civitai.com/api/download/models/165780?fileId=125509' \
-    && echo '7000c1bbbbea48201782f018618a60f8a5fde25b2a0970f790cd192f0dd5f00f  /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors' | sha256sum -c - \
-    && python /convert_qr_controlnet.py \
-      /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors \
-      /comfyui/models/controlnet/qr-sdxl-comfy.safetensors \
-    && rm /comfyui/models/controlnet/controlnetQRXLV2_controlnetQrSdxl.safetensors
+RUN mkdir -p /comfyui/models/vae \
+    && wget -q -O /comfyui/models/vae/flux2-vae.safetensors \
+      https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-4b/resolve/5f526678002e43af5551dadb73ce2e8c91b43afe/split_files/vae/flux2-vae.safetensors \
+    && echo '868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3  /comfyui/models/vae/flux2-vae.safetensors' | sha256sum -c -
+
+RUN mkdir -p /comfyui/models/diffusion_models \
+    && wget -q -O /comfyui/models/diffusion_models/krea2_turbo_fp8_scaled.safetensors \
+      https://huggingface.co/Comfy-Org/Krea-2/resolve/e5ea8b4dd7f38f348b138eb0fe29f92c0e367e96/diffusion_models/krea2_turbo_fp8_scaled.safetensors \
+    && echo 'eb4dd8c612cfd10f64f25b057e6e6bbcb5737c94a7372177e456dbf7579502f1  /comfyui/models/diffusion_models/krea2_turbo_fp8_scaled.safetensors' | sha256sum -c -
+
+RUN mkdir -p /comfyui/models/text_encoders \
+    && wget -q -O /comfyui/models/text_encoders/qwen3vl_4b_fp8_scaled.safetensors \
+      https://huggingface.co/Comfy-Org/Krea-2/resolve/e5ea8b4dd7f38f348b138eb0fe29f92c0e367e96/text_encoders/qwen3vl_4b_fp8_scaled.safetensors \
+    && echo '54bd5144df0bbc25dd6ccadfcb826b521445a1b06ae5a42570bdd2974ca87094  /comfyui/models/text_encoders/qwen3vl_4b_fp8_scaled.safetensors' | sha256sum -c -
+
+RUN mkdir -p /comfyui/models/vae \
+    && wget -q -O /comfyui/models/vae/qwen_image_vae.safetensors \
+      https://huggingface.co/Comfy-Org/Krea-2/resolve/e5ea8b4dd7f38f348b138eb0fe29f92c0e367e96/vae/qwen_image_vae.safetensors \
+    && echo 'a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f  /comfyui/models/vae/qwen_image_vae.safetensors' | sha256sum -c -
 
 # Keep the upstream request handler; our adapter adds durable job archives.
 RUN mv /handler.py /upstream_handler.py \

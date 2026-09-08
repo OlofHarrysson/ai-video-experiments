@@ -1,5 +1,7 @@
 # Projects
 
+- [Modern-model feedback study](modern-model-study/README.md): Klein 4B and Krea 2, same-model openings and feedback with model-specific prompting.
+
 One folder per film or coherent creative study. Each project owns its references, experiment notes, render attempts and cut versions. Follow the [working convention](../../../docs/workflow.md).
 
 Create a project with `uv run python experiment.py init-project PROJECT` from `apps/deforum/`, then add its link here. The CLI scaffolds a `baseline` experiment; edit it before rendering. Generated media stays local and is ignored by Git.
