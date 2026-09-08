@@ -18,6 +18,8 @@ Use descriptive names with stable experiment IDs in parentheses, rather than une
 
 Do not bury the video under a settings table. If Olof likes it, explain the few settings/mechanisms that made that version, then link the complete recipe. Preserve the chosen baseline so the next comparison stays recognizable.
 
+For spatial motion, first show an animated simple drawing and grid with diffusion disabled. Olof found this much easier to understand than a repainted video. Use these previews to build a small vocabulary of effects and align on movement, then show the final diffusion result for artistic judgment. Keep direct mathematical controls, visual mesh/stroke manipulation and guide footage as distinct possible authoring routes; do not assume every effect needs a guide. See the [animated lesson](research/spatial-controls-lesson.md).
+
 ## Assistant review: broad view, then close inspection
 
 Use the [local review harness](video-review.md). Its image limits are practical defaults, not a claim about a fixed model context limit.

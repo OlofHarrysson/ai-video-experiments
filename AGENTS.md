@@ -25,7 +25,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 
 ## Working conventions
 
-- Current learning pause: [animated spatial-controls lesson](docs/research/spatial-controls-lesson.md). Olof wants to understand deformation, guide authoring and alternative motion controls before further art experiments. Two interactive examples isolate direct sheet deformation and measured guide flow. Depth is a brief secondary topic; understanding remains unconfirmed.
+- Current learning pause: [animated spatial-controls lesson](docs/research/spatial-controls-lesson.md). Olof found the moving grid/drawing very helpful and wants motion effects previewed this way before diffusion obscures the transform. Build an effects vocabulary from these previews, then show final artwork too. Keep direct definitions, visual manipulation and guide videos available as authoring routes. Guide brightness-to-motion estimation remains unclear to him; depth is secondary.
 
 - Start with the [documentation index](docs/index.md) and the relevant app README. Shared explanations belong in `docs/`; runnable experiments belong in `apps/`.
 - Prefer existing nodes and workflows. Add custom code only for a concrete missing capability.
