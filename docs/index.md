@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Two sampler alternatives](../apps/deforum/projects/motion-guide-study/experiments/samplers.md) — matched three-second twists informed by creator recipes.
+
 - [Sampling steps and input noise](../apps/deforum/projects/motion-guide-study/experiments/noise-steps.md) — test whether more sampling steps reduce accumulated grain at denoise 0.45.
 - [Repaint controls](../apps/deforum/projects/motion-guide-study/experiments/repaint-controls.md) — short matched denoise comparison, sampler protection and regional added noise, with playable comparisons.
 - [Twist, turn and ripple](../apps/deforum/projects/motion-guide-study/experiments/spatial-sequence.md) — one sequence with cadence 3 and matched RIFE finishing.
@@ -57,6 +59,8 @@ This directory contains the durable notes behind the experiments in this reposit
 Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
+
+- [Model and sampler recipes](research/model-sampler-recipes.md) — exact Civitai versions, creator guidance, distilled-model constraints, conflicting recipes and two controlled sampler alternatives.
 
 - [The BonsAi Effect workflow study](research/bonsai-effect-workflow.md) — two visually reviewed references, artist replies across 29 videos, exact motion presets and guide assets, seed/cadence differences, and lessons for our next experiment; [external platforms](research/bonsai-effect-external-sources.md).
 

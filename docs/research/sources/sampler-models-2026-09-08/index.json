@@ -1,0 +1,216 @@
+{
+  "retrieved_date": "2026-09-08",
+  "sources": [
+    {
+      "file": "apps/deforum/work/sampler-session/research/more-art-version.json",
+      "url": "https://civitai.com/api/v1/model-versions/152309",
+      "sha256": "0d2dce58267f406eef5d8925cd988f3fec4f452f10c3f64360bd45229847ef41",
+      "bytes": 20101
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/more-art-model.json",
+      "url": "https://civitai.com/api/v1/models/124347",
+      "sha256": "18535b707853b5c8b788c4c22ecd17d5e36747a7f840cc921100892e5cd2dd69",
+      "bytes": 44007
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/dreamshaper-search.json",
+      "url": "https://civitai.com/api/v1/models?query=DreamShaper%20XL&limit=5&nsfw=false",
+      "sha256": "2a9affe0300356ef38eaff6975979c58134c9148c14090026d3f7f627545a300",
+      "bytes": 51766
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/juggernaut-search.json",
+      "url": "https://civitai.com/api/v1/models?query=Juggernaut%20XL&limit=5&nsfw=false",
+      "sha256": "d482dfcdb3a776b07b27d2cb47eaf4dd538fe49f4d23c33138d351d67f2c0b5f",
+      "bytes": 155087
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/dreamshaper-model.json",
+      "url": "https://civitai.com/api/v1/models/112902",
+      "sha256": "ff55c0819246dd661a50727f49a1a76ff5c0bf72f8d5f5f301b942266bb1a7c1",
+      "bytes": 32162
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/juggernaut-model.json",
+      "url": "https://civitai.com/api/v1/models/133005",
+      "sha256": "01cab9c8a4659d5186b42c4f594e9ff50c573ea18f05c5dadd0be18d4ba6baa8",
+      "bytes": 139158
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/dreamshaper-scheduler.json",
+      "url": "https://huggingface.co/Lykon/dreamshaper-xl-lightning/resolve/main/scheduler/scheduler_config.json",
+      "sha256": "93fb2cd3c439d000f8dca6658fff5e3dfd019bfdc4fb054ebf736c2b92b81299",
+      "bytes": 558
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/lightning-workflow.json",
+      "url": "https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/comfyui/sdxl_lightning_workflow_full.json",
+      "sha256": "0483c7e5cfc4b4351f96692b106d12e528aba2ca1c869b2d7f3625264fbb4870",
+      "bytes": 6644
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/klein-doc.md",
+      "url": "https://docs.comfy.org/tutorials/flux/flux-2-klein.md",
+      "sha256": "41174b9d91e23285aa4e8a9b868097441bc30152a3916542f793d0baca9ee54d",
+      "bytes": 15157
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/klein-card.md",
+      "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/raw/main/README.md",
+      "sha256": "bd447051cf2db4bf67b992e563d89c35ebf1123f009c063361a222ab14e1c4f7",
+      "bytes": 9991
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/klein-edit-workflow.json",
+      "url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/image_flux2_klein_image_edit_4b_distilled.json",
+      "sha256": "e0388a8870495802314d58fa61616ddcdb7064dac5f85a8787c9e08180b8a560",
+      "bytes": 108945
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/version-354657.json",
+      "url": "https://civitai.com/api/v1/model-versions/354657",
+      "sha256": "93a9524c68686a7eafb2372adb6879fb9aa6de62823b181659de6c70ecd5062d",
+      "bytes": 22704
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/version-782002.json",
+      "url": "https://civitai.com/api/v1/model-versions/782002",
+      "sha256": "20a293bfbb45b4e08edf7f81611cc7e93455b07042b5065b17518f6082fe21be",
+      "bytes": 12650
+    },
+    {
+      "file": "apps/deforum/work/sampler-session/research/version-920957.json",
+      "url": "https://civitai.com/api/v1/model-versions/920957",
+      "sha256": "81c969ed95232530cbd65bd5f3b049cae58302654b75c0da766e2286886ab327",
+      "bytes": 12761
+    }
+  ],
+  "selected_model_identities": [
+    {
+      "model_id": 124347,
+      "version_id": 152309,
+      "version_name": "xl_more_art-full-v1",
+      "base_model": "SDXL 1.0",
+      "files": [
+        {
+          "name": "xl_more_art-full_v1.safetensors",
+          "sha256": "15E31FE2B6AE2E77EE47A3CCDF27BD14F7B54CE27C6A58502875FDAD26F34460"
+        }
+      ]
+    },
+    {
+      "model_id": 112902,
+      "version_id": 354657,
+      "version_name": "Lightning DPM++ SDE",
+      "base_model": "SDXL Lightning",
+      "files": [
+        {
+          "name": "dreamshaperXL_lightningDPMSDE.safetensors",
+          "sha256": "FDBE56354B8F876B736F24D3AD867ECD4140C019F57642EC8DDD878088D44F64"
+        }
+      ]
+    },
+    {
+      "model_id": 133005,
+      "version_id": 1759168,
+      "version_name": "Ragnarok",
+      "base_model": "SDXL 1.0",
+      "files": [
+        {
+          "name": "juggernautXL_ragnarok.safetensors",
+          "sha256": "DD08FA32F98D05A2443CA1419E46DF1575A0811F6E3B246D9DD47FF20F5EB66A"
+        }
+      ]
+    },
+    {
+      "model_id": 133005,
+      "version_id": 782002,
+      "version_name": "Jugg_XI_by_RunDiffusion",
+      "base_model": "SDXL 1.0",
+      "files": [
+        {
+          "name": "juggernautXL_juggXIByRundiffusion.safetensors",
+          "sha256": "33E58E86686F6B386C526682B5DA9228EAD4F91D994ABD4B053442DC5B42719E"
+        }
+      ]
+    },
+    {
+      "model_id": 133005,
+      "version_id": 920957,
+      "version_name": "Jugg_XI_Lightning_by_RD",
+      "base_model": "SDXL Lightning",
+      "files": [
+        {
+          "name": "juggernautXL_juggXILightningByRD.safetensors",
+          "sha256": "609FDE646E7FC60A259AD67351E02258AC7929A0A1F5040049DFEC6A15F37B1A"
+        }
+      ]
+    },
+    {
+      "model_id": 133005,
+      "version_id": 456194,
+      "version_name": "Jugg_X_by RunDiffusion",
+      "base_model": "SDXL 1.0",
+      "files": [
+        {
+          "name": "Juggernaut_X_RunDiffusion.safetensors",
+          "sha256": "D91D35736D8F2BE038F760A9B0009A771ECF0A417E9B38C244A84EA4CB9C0C45"
+        }
+      ]
+    }
+  ],
+  "archived_sampler_node_inventory": [
+    {
+      "project": "botanical-cathedral",
+      "sampler": "dpmpp_2m",
+      "count": 14
+    },
+    {
+      "project": "brain-entity-study",
+      "sampler": "dpmpp_2m",
+      "count": 20
+    },
+    {
+      "project": "guide-redraw",
+      "sampler": "dpmpp_2m",
+      "count": 8
+    },
+    {
+      "project": "lantern-marsh",
+      "sampler": "dpmpp_2m",
+      "count": 5
+    },
+    {
+      "project": "marsh-story",
+      "sampler": "dpmpp_2m",
+      "count": 3
+    },
+    {
+      "project": "motion-guide-study",
+      "sampler": "dpmpp_2m",
+      "count": 473
+    },
+    {
+      "project": "motion-lab",
+      "sampler": "dpmpp_2m",
+      "count": 5
+    },
+    {
+      "project": "redraw-lab",
+      "sampler": "dpmpp_2m",
+      "count": 117
+    },
+    {
+      "project": "sdxl-settings",
+      "sampler": "dpmpp_2m",
+      "count": 3
+    },
+    {
+      "project": "seedream-motion",
+      "sampler": "dpmpp_2m",
+      "count": 40
+    }
+  ],
+  "inventory_scope": "Before this sampler experiment; excludes its newly submitted reference probe"
+}
