@@ -4,7 +4,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
-- [Spatial effects browser](../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) — 22 direct transforms on one drawing, effect selection, playback and scrubbing; cadence 3 and interpolation are the following tests.
+- [Spatial effects browser](../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) — 22 direct transforms on one drawing, effect selection, playback and scrubbing; the selected cadence-3/interpolation sequence is linked below.
 
 - [Animated spatial-controls lesson](research/spatial-controls-lesson.md) — a stretchable drawing, measured guide motion, direct controls, and where depth fits.
 
@@ -21,6 +21,8 @@ This directory contains the durable notes behind the experiments in this reposit
 - [RunPod tools and repository setup](runpod.md) — local skills, project MCP configuration, CLI installation, and authentication.
 
 ## Experiments
+
+- [Twist, turn and ripple](../apps/deforum/projects/motion-guide-study/experiments/spatial-sequence.md) — one sequence with cadence 3 and matched RIFE finishing.
 
 - [Stronger and combined effects](../apps/deforum/projects/motion-guide-study/experiments/motion-effects-2.md) — fourfold ring, turbulence and rotating unfolding; separate camera-gap diagnosis.
 

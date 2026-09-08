@@ -11,6 +11,18 @@ from interpolate import frame_plan, inventory
 
 
 class TimingTests(unittest.TestCase):
+    def test_nine_second_cadence_frames_doubled_without_retiming(self):
+        rows = frame_plan(108, multiplier=2)
+        self.assertEqual(len(rows), 216)
+        self.assertEqual(Fraction(len(rows), 24), 9)
+        for index, row in enumerate(rows):
+            if row['kind'] == 'anchor':
+                self.assertEqual(Fraction(index, 24), Fraction(row['source_index'], 12))
+            elif row['kind'] == 'interpolation':
+                self.assertEqual(Fraction(index, 24),
+                    (row['source_pair'][0] + Fraction(row['timestep'])) / 12)
+        self.assertEqual(rows[-1], {'kind':'final_hold','source_index':107})
+
     def test_six_second_timeline_and_original_sample_instants(self):
         rows = frame_plan(48)
         self.assertEqual(len(rows), 144)

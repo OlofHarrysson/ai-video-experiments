@@ -1,4 +1,4 @@
-"""Bounded 48-frame, 8-to-24 FPS experiment using the author's RIFE 4.25.
+"""Preserved-frame interpolation using the author's RIFE 4.25.
 
 Run with work/rife-session/.venv/bin/python. Setup and exact commands are in
 projects/brain-entity-study/experiments/rife-results.md. No model downloads,
@@ -24,7 +24,6 @@ MODEL_URL = "https://drive.google.com/uc?id=1ZKjcbmt1hypiFprJPIKW0Tt0lr_2i7bg"
 SOURCE_FRAMES = 48
 SOURCE_FPS = 8
 MULTIPLIER = 3
-OUTPUT_FPS = 24
 SCALES = [16, 8, 4, 2, 1]
 
 
@@ -37,29 +36,33 @@ def command(args):
     return subprocess.run(args, check=True, capture_output=True, text=True).stdout
 
 
-def frame_plan(count, final_holds=2):
+def frame_plan(count, final_holds=None, multiplier=MULTIPLIER):
     """Each pair owns its left anchor; the final anchor appears just once."""
+    if count < 2 or multiplier < 2:
+        raise ValueError('At least two frames and multiplier >= 2 required')
+    if final_holds is None:
+        final_holds = multiplier - 1
     rows = []
     for index in range(count - 1):
         rows.append({"kind": "anchor", "source_index": index})
-        for numerator in (1, 2):
+        for numerator in range(1, multiplier):
             rows.append({"kind": "interpolation", "source_pair": [index, index + 1],
-                         "timestep": f"{numerator}/3"})
+                         "timestep": f"{numerator}/{multiplier}"})
     rows.append({"kind": "anchor", "source_index": count - 1})
     rows.extend({"kind": "final_hold", "source_index": count - 1}
                 for _ in range(final_holds))
     return rows
 
 
-def inventory(source):
+def inventory(source, expected_count=SOURCE_FRAMES):
     from PIL import Image
 
     files = list(source.glob("*.png"))
-    if len(files) != SOURCE_FRAMES or any(not p.stem.isdecimal() for p in files):
-        raise ValueError("Expected exactly 48 numerically named original PNGs")
+    if len(files) != expected_count or any(not p.stem.isdecimal() for p in files):
+        raise ValueError(f"Expected exactly {expected_count} numerically named original PNGs")
     files.sort(key=lambda p: int(p.stem))
-    if [int(p.stem) for p in files] != list(range(SOURCE_FRAMES)):
-        raise ValueError("Source indices must be unique and contiguous from 0 through 47")
+    if [int(p.stem) for p in files] != list(range(expected_count)):
+        raise ValueError(f"Source indices must be unique and contiguous from 0 through {expected_count-1}")
     rows = []
     for path in files:
         with Image.open(path) as im:
@@ -77,19 +80,26 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--source-frames", type=int, default=SOURCE_FRAMES)
+    parser.add_argument("--source-fps", type=int, default=SOURCE_FPS)
+    parser.add_argument("--multiplier", type=int, default=MULTIPLIER)
     parser.add_argument("--rife-root", type=Path,
                         default=Path(__file__).parent / "work/rife-session/Practical-RIFE")
     parser.add_argument("--pair-only", action="store_true")
     parser.add_argument("--validated-pair", type=Path,
                         help="Successful first-pair manifest, inspected before full execution")
     args = parser.parse_args()
+    if args.source_frames < 2 or args.source_fps < 1 or args.multiplier < 2:
+        parser.error('Need at least two frames, positive FPS and multiplier >= 2')
+    output_fps = args.source_fps * args.multiplier
+    multiplier = args.multiplier
     started = time.perf_counter()
     source, output, root = args.source.resolve(), args.output.resolve(), args.rife_root.resolve()
     if output.exists() or output.is_relative_to(source):
         raise ValueError("Output must be new and outside the source directory")
     if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK", "0") != "0":
         raise ValueError("Disable PYTORCH_ENABLE_MPS_FALLBACK; this experiment requires MPS")
-    files, source_rows = inventory(source)
+    files, source_rows = inventory(source, args.source_frames)
     commit = command(["git", "-C", str(root), "rev-parse", "HEAD"]).strip()
     dirty = command(["git", "-C", str(root), "status", "--porcelain", "--untracked-files=no"])
     if commit != PIN or dirty:
@@ -111,8 +121,8 @@ def main():
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS unavailable; no automatic CPU or cloud fallback")
     versions = {name: importlib.metadata.version(name) for name in ("torch", "numpy", "pillow")}
-    settings = {"source_fps": SOURCE_FPS, "output_fps": OUTPUT_FPS,
-                "multiplier": MULTIPLIER, "timesteps": ["1/3", "2/3"],
+    settings = {"source_fps": args.source_fps, "output_fps": output_fps,
+                "multiplier": multiplier, "timesteps": [f"{i}/{multiplier}" for i in range(1,multiplier)],
                 "scale_list": SCALES, "scale": 1.0, "device": "mps", "dtype": "float32",
                 "batch_size": 1, "ensemble": False, "fastmode": True, "compilation": False,
                 "padding": "right/bottom zero padding to multiples of 128, cropped afterward",
@@ -149,7 +159,8 @@ def main():
     output.mkdir(parents=True)
     (output / "frames").mkdir()
     selected = files[:2] if args.pair_only else files
-    plan = frame_plan(len(selected), final_holds=0 if args.pair_only else 2)
+    plan = frame_plan(len(selected), final_holds=0 if args.pair_only else multiplier-1,
+                      multiplier=multiplier)
     width, height = source_rows[0]["size"]
     padding = (0, (-width) % 128, 0, (-height) % 128)
     receipt = {"status": "running", "mode": "first_pair" if args.pair_only else "full",
@@ -179,9 +190,9 @@ def main():
             for index in range(len(selected) - 1):
                 pair_start = time.perf_counter()
                 right = tensor(selected[index + 1])
-                shutil.copy2(selected[index], output / "frames" / f"{index * 3:04d}.png")
-                for offset in (1, 2):
-                    _, _, merged = network(torch.cat((left, right), 1), offset / 3, SCALES,
+                shutil.copy2(selected[index], output / "frames" / f"{index * multiplier:04d}.png")
+                for offset in range(1, multiplier):
+                    _, _, merged = network(torch.cat((left, right), 1), offset / multiplier, SCALES,
                                            fastmode=True, ensemble=False)
                     result = merged[-1][0, :, :height, :width]
                     if result.shape != (3, height, width) or not torch.isfinite(result).all().item():
@@ -189,7 +200,7 @@ def main():
                     if result.min().item() < -0.00001 or result.max().item() > 1.00001:
                         raise RuntimeError("RIFE output exceeds normalized RGB range")
                     pixels = (result * 255).byte().cpu().numpy().transpose(1, 2, 0)
-                    Image.fromarray(pixels).save(output / "frames" / f"{index * 3 + offset:04d}.png")
+                    Image.fromarray(pixels).save(output / "frames" / f"{index * multiplier + offset:04d}.png")
                     del merged, result
                 left = right
                 torch.mps.synchronize()
@@ -197,18 +208,18 @@ def main():
                 save_receipt()
                 print(f"{output.name}: pair {index + 1}/{len(selected) - 1} "
                       f"{receipt['pair_timings_seconds'][-1]:.2f}s", flush=True)
-        for index in range((len(selected) - 1) * 3, len(plan)):
+        for index in range((len(selected) - 1) * multiplier, len(plan)):
             shutil.copy2(selected[-1], output / "frames" / f"{index:04d}.png")
         for index, row in enumerate(plan):
             path = output / "frames" / f"{index:04d}.png"
             digest = sha256(path)
             if row["kind"] != "interpolation" and digest != source_rows[row["source_index"]]["sha256"]:
                 raise RuntimeError("Original anchor/hold was not preserved byte-for-byte")
-            receipt["output_frames"].append({**row, "index": index, "time_seconds": index / OUTPUT_FPS,
+            receipt["output_frames"].append({**row, "index": index, "time_seconds": index / output_fps,
                                                "file": str(path.relative_to(output)), "sha256": digest})
         receipt["render_seconds"] = time.perf_counter() - model_ready
         encode_start = time.perf_counter()
-        encode = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-n", "-framerate", "24",
+        encode = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-n", "-framerate", str(output_fps),
                   "-start_number", "0", "-i", str(output / "frames/%04d.png"),
                   "-frames:v", str(len(plan)), "-an", "-c:v", "libx264", "-preset", "slow",
                   "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(output / "preview.mp4")]
@@ -218,16 +229,16 @@ def main():
         probe = json.loads(command(["ffprobe", "-v", "error", "-count_frames", "-select_streams", "v:0",
                                     "-show_streams", "-of", "json", str(output / "preview.mp4")]))
         stream = probe["streams"][0]
-        if (int(stream["nb_read_frames"]) != len(plan) or Fraction(stream["avg_frame_rate"]) != OUTPUT_FPS
-                or abs(float(stream["duration"]) - len(plan) / OUTPUT_FPS) > 0.00001
+        if (int(stream["nb_read_frames"]) != len(plan) or Fraction(stream["avg_frame_rate"]) != output_fps
+                or abs(float(stream["duration"]) - len(plan) / output_fps) > 0.00001
                 or (stream["width"], stream["height"]) != (width, height)):
             raise RuntimeError("Encoded video count, FPS, duration or dimensions differ")
-        if inventory(source)[1] != source_rows:
+        if inventory(source, args.source_frames)[1] != source_rows:
             raise RuntimeError("Source PNGs changed during execution")
         receipt.update(status="complete", probe=probe, video_sha256=sha256(output / "preview.mp4"),
                        elapsed_seconds=time.perf_counter() - started,
                        anchors_verified=True, source_hashes_and_mtimes_preserved=True,
-                       final_holds=0 if args.pair_only else 2)
+                       final_holds=0 if args.pair_only else multiplier-1)
         save_receipt()
         print(json.dumps({"output": str(output), "frames": len(plan), "status": "complete"}), flush=True)
     except BaseException as error:
