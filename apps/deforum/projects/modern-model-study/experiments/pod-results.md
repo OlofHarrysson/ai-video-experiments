@@ -42,7 +42,7 @@ The instruction was: “Add two fine branching ink strokes inside the existing o
 
 Use the local review harness for evenly sampled progress, every displayed frame in a short interval, and timestamp-matched motion-only comparisons. Sampled frames locate drift and content changes; they do not settle human playback taste.
 
-Next recommendation: first reassemble the existing Krea anchors with warp-only intermediates to isolate cadence blending from repaint changes, without new inference. Then develop the Krea scene-description recipe with one narrowly scoped repaint-strength comparison. Keep motion and prompting fixed; inspect whether lower denoise preserves the explorer without losing texture. Klein merits a separate color-drift investigation before using longer feedback chains.
+Next study: [remove cadence blending, then compare text-only and native reference generation](conditioning.md) for both models. Preserve the original FP8 Krea partial-img2img result as the baseline; investigate Klein color drift separately from guidance assumptions.
 
 ## Execution and archive
 
