@@ -2,6 +2,7 @@
 
 See what happens between a motion guide and the next generated artwork. Two archived artworks receive the same measured displacement. The original, warped input, and real ComfyUI img2img output remain separate.
 
+- [Repaint controls](experiments/repaint-controls.md): three-second twist at denoise 0.35/0.45/0.58, plus a simple quadrant mask/noise test. Assistant recommends uniform 0.35; playback feedback pending.
 - [Twist, turn and ripple](experiments/spatial-sequence.md): selected motion sequence with cadence 3 and matched with/without RIFE finishing.
 - [Spatial effects browser](experiments/motion-catalog.md): choose among 22 direct transforms on a single drawing before the next diffusion experiment. Cadence 3 and interpolation comparisons follow motion selection.
 
