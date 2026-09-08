@@ -4,7 +4,7 @@
 
 ## Shortlist
 
-**Krea 2 Turbo — scene description and partial repaint.** The more promising continuation candidate in the assistant's sampled-frame review: restrained palette, evolving porous architecture and cablework. The explorer changes proportions and details, and some imposed tilts are straightened. Consecutive-frame review shows double edges in some cadence intermediates where newly drawn shapes differ; human playback preference remains open.
+**Krea 2 Turbo — scene description and partial repaint.** The more promising continuation candidate in the assistant's sampled-frame review: restrained palette, evolving porous architecture and cablework. The explorer changes proportions and details, and some imposed tilts are straightened. Consecutive-frame review shows double edges in some cadence intermediates where newly drawn shapes differ; Olof finds both models interesting but reports Krea is too jittery and often looks like two images at once; he has not selected a winner.
 
 [Three-second Krea clip](../exports/audition-v001/krea/scene-d045/cadence/preview.mp4) · [motion only](../exports/audition-v001/krea/motion-only/preview.mp4)
 
@@ -42,7 +42,7 @@ The instruction was: “Add two fine branching ink strokes inside the existing o
 
 Use the local review harness for evenly sampled progress, every displayed frame in a short interval, and timestamp-matched motion-only comparisons. Sampled frames locate drift and content changes; they do not settle human playback taste.
 
-Next recommendation: develop the Krea scene-description recipe with one narrowly scoped repaint-strength comparison. Keep motion and prompting fixed; inspect whether lower denoise preserves the explorer without losing texture. Klein merits a separate color-drift investigation before using longer feedback chains.
+Next recommendation: first reassemble the existing Krea anchors with warp-only intermediates to isolate cadence blending from repaint changes, without new inference. Then develop the Krea scene-description recipe with one narrowly scoped repaint-strength comparison. Keep motion and prompting fixed; inspect whether lower denoise preserves the explorer without losing texture. Klein merits a separate color-drift investigation before using longer feedback chains.
 
 ## Execution and archive
 
@@ -56,4 +56,4 @@ Median warm feedback graph time: **Klein 5.10 seconds; Krea 13.41 seconds**. Med
 
 After the queue emptied, all **62 remote input/output files** were verified against local SHA-256 copies: 32 generated outputs, 28 uploaded inputs, plus the template's example image and empty placeholder. The owned Pod and its attached disk were deleted; follow-up inventories show zero Pods and network volumes. Serverless remains paused. The account refresh showed a $0/hour spend rate and approximately $44.69 balance; the observed balance change since this session's initial refresh was $0.37 and can settle later.
 
-Private receipts live in `work/modern-pod-session/`, including model download logs, timing rows, archive verification and the closed deployment record. The 31 local tests passed with the experiment's Pillow/OpenCV dependencies; both native graphs were then verified through actual GPU generation. No user playback preference has been inferred.
+Private receipts live in `work/modern-pod-session/`, including model download logs, timing rows, archive verification and the closed deployment record. The 31 local tests passed with the experiment's Pillow/OpenCV dependencies; both native graphs were then verified through actual GPU generation. Olof’s explicit playback feedback is recorded above; the assistant shortlist does not establish a human preference.
