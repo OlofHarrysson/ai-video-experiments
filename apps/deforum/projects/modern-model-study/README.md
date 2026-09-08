@@ -2,7 +2,7 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Keep the familiar three-second twist and cadence 3; model-specific prompts and sampling recipes are intentional.
 
-Current cut: none selected.
+Current cut: none. The first session stopped during model preparation and generated no images or videos. Workflows and prompts are ready; GPU execution remains unverified. Owned compute and temporary storage are cleaned up.
 
 ## Experiments
 

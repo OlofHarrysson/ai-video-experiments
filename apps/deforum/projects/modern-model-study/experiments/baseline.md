@@ -1,5 +1,13 @@
 # Klein and Krea audition
 
+## Session outcome — 2026-09-08
+
+**Blocked before inference. No opening images, repaint probes or videos were generated.** The workflows and model-specific prompts are prepared, but their GPU behavior and visual quality remain untested. The endpoint is paused at min/max 0, zero workers and Pods were verified, and the owned volume was detached and deleted after verifying the output prefix contained zero objects. Both request receipts and preparation diagnostics remain local in ignored `runs/` and `work/modern-model-session/`.
+
+The first accepted opening request expired while queued; a replacement request was explicitly cancelled while still queued. Do not blindly resubmit either receipt. The active deployment file was moved to the closed session receipts, preventing reuse of the deleted volume.
+
+Recommended next execution: a short-lived ComfyUI Pod with direct access to inspect model-transfer progress before running these same graphs. This is a proposed deployment change, not an executed fallback. Keep the same-model opening/feedback requirement and the existing spatial controls. Avoid another container rebuild until the transfer bottleneck is understood.
+
 ## Question
 
 Can either model preserve a locally warped drawing while adding interesting detail across repeated feedback? Does an explicit next-frame edit instruction help, or cause unwanted reinterpretation?
@@ -38,4 +46,8 @@ Each command reconnects to an existing accepted job and refuses changed graphs o
 
 Prepared 2026-09-08. New models require a worker image build and cold download; settings/prompt changes thereafter reuse that image. Original SDXL container recipe is preserved as `serverless/Dockerfile.sdxl`. Actual runtime evidence and results will be added after execution.
 
-The first worker build (`addbb3c96`) downloaded and checksum-verified all six assets and passed ComfyUI's CPU startup test, but hit RunPod's **1800-second build limit** during OCI tarball export. No inference job was submitted. The model assets total 34.77 GB. The corrected packaging keeps the container small: `prepare_models.py` downloads the pinned assets into a temporary 50 GB session volume before starting ComfyUI. A verified receipt and partial-file resume avoid repeating completed downloads on a replacement worker. Output archives remain under a separate `deforum/projects/` prefix; public, reproducible model weights are deleted with the temporary volume after outputs are verified locally.
+The first worker build (`addbb3c96`) downloaded and checksum-verified all six assets and passed ComfyUI's CPU startup test, but hit RunPod's **1800-second build limit** during OCI tarball export. No inference job was submitted. The model assets total 34.77 GB. The second packaging attempt kept the container small and downloaded weights to a temporary 50 GB network volume before starting ComfyUI. That attempt was superseded by the local-disk recipe below. Output archives use the separate `deforum/projects/` prefix.
+
+The lean build `3ce60df86` succeeded. The first host spent over 20 minutes pulling its base container; another host started in under a minute. Direct `wget` into the network volume then slowed below 1 MB/s. An 8 MiB S3 write probe took 27.35 seconds, although that cross-region API timing does not isolate POSIX volume throughput. Preparation was stopped before any inference. `ede338e16` changes downloads to worker-local disk through Hugging Face’s existing loader, retains checksum verification, and keeps only outputs on network storage. This tests a suspected I/O bottleneck; it is not yet a proven diagnosis. The existing 50 GB volume is retained for this session because volumes cannot be shrunk; a fresh output-only session needs only 10 GB.
+
+The `ede338e16` build succeeded, including Hugging Face/Xet imports and the ComfyUI CPU startup check. Two worker hosts started that image, but neither reported completing its first 7.75 GB weight file: one was observed for about 14 minutes and the other for six minutes. No byte-level progress was exposed by this SDK download path, so these logs establish no completed transfer, not proof of zero transferred bytes or a confirmed cause. Both were stopped at 17:37 UTC. The output-prefix verification found zero objects. All model-cache partials were reproducible public weights and were deleted with owned storage. The final account refresh showed approximately $0.62 lower balance, $45.07 remaining and a current spend rate of $0/hour. Billing can settle later, so the balance difference is an observed session cost rather than a final invoice. Local runner imports, graph links and the saved Klein edit graph were rechecked after cleanup; no GPU test is implied.

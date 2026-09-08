@@ -23,7 +23,7 @@ PROMPTS = {
  'klein': 'A hand-inked science-fiction illustration. A lone small explorer stands beneath a huge porous alien arch. One flame-shaped light floats inside the opening. Curled cables and perforated stone frame deep teal space. Thick black contours, fine engraved hatching and flat colors in burnt orange, pale cyan and ivory. Wide composition with the explorer near the lower center.',
  'krea': 'An intricate surreal science-fiction illustration drawn in black ink with flat screen-printed colors. A tiny solitary explorer in an ivory spacesuit stands near the lower center of a wide landscape, beneath a gigantic asymmetrical arch of perforated coral-like stone and coiling cables. A single orange flame-shaped light hangs in the arch opening. The architecture curls inward around the light, with hundreds of small holes, delicate hatching and interlocking organic contours. Deep teal space and pale cyan distant ridges show through the arch. Burnt orange highlights, ivory paper-colored stone, clear black outlines, finely drawn details and broad quiet areas of flat color. The drawing fills the entire frame.'
 }
-EDIT = 'Keep the explorer, framing, color palette and the arch\'s current curved shape. Refine the ink contours along the arch. Add a few delicate branching lines within the existing flame, retaining its outer silhouette and the hand-drawn appearance.'
+EDIT = 'Add two fine branching ink strokes inside the existing orange flame. Keep the flame\'s outer silhouette. Keep every other contour, bent shape, tilted pose, object position, color and the framing exactly as in the reference image. Retain the same hand-inked illustration style.'
 OPENING_PROMPTS = {
  'klein': [PROMPTS['klein'], PROMPTS['klein']+' The arch fills the upper two thirds of the image, with clustered circular cavities and tightly curled stone tendrils. Fine black lines describe the rough surface. The orange light contrasts with the cool landscape. The explorer is small enough to establish the enormous scale of the arch. The illustration extends to every edge.'],
  'krea': ['An ink-drawn surreal science-fiction landscape in flat burnt orange, ivory and deep teal. A tiny spacesuited explorer stands beneath an enormous arch of porous stone and coiling cables. One flame-shaped light hangs inside the arch. Intricate black hatching and organic contours, quiet flat-color space beyond, wide full-frame composition.', PROMPTS['krea']],
@@ -61,6 +61,18 @@ def image(p, rgb):
 
 def run(name, graph, source=None):
     matches = sorted((PROJECT/'runs').glob('*-'+name+'-1f'))
+    # A human/agent must inspect an expired request and explicitly record the
+    # absence of outputs before permitting a replacement submission.
+    active = []
+    for folder in matches:
+        resolution = folder/'resubmission-resolution.json'
+        if resolution.exists():
+            decision = json.loads(resolution.read_text())
+            assert decision['action'] == 'resubmit-expired-queue-with-no-outputs'
+            assert decision['cloud_objects'] == 0 and decision['workers'] == 0
+        else:
+            active.append(folder)
+    matches = active
     if matches:
         if len(matches) != 1:
             raise RuntimeError(f'Multiple attempts need explicit review: {name}')

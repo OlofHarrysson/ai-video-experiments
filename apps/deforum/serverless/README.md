@@ -1,8 +1,21 @@
 # Serverless worker
 
+## Current worker: modern-model audition
+
+**Execution status:** both lean images built, but model preparation did not finish. No new-model inference was reached. The endpoint is paused at min/max 0 with no attached volume; zero workers, Pods and network volumes were verified at session cleanup. The deployment receipt is archived in `work/modern-model-session/serverless-deployment-closed.json`. This recipe is prepared, not a GPU-verified render path.
+
+The active `Dockerfile` uses native ComfyUI with **Klein 4B distilled and Krea 2 Turbo**. Follow the [audition runbook](../projects/modern-model-study/experiments/baseline.md) and `audition.py`; the older `experiment.py` SDXL commands below require the preserved **`Dockerfile.sdxl`** image.
+
+The worker uses an 80 GB container disk and an output network volume (10 GB is enough for these short clips). Startup downloads the 34.77 GB of pinned, checksum-verified assets in `modern-models.json` into worker-local `/comfyui/modern-model-cache` using the existing Hugging Face loader, then links them into ComfyUI. A restarted process on the same filesystem can reuse verified assets; a replacement worker may download them again. The job handler starts after preparation finishes. The first baked-weight build exceeded RunPod's 30-minute build limit. A subsequent direct-to-network-volume download fell below 1 MB/s, so the active recipe uses local disk.
+Set endpoint environment `RUNPOD_INIT_TIMEOUT=3600` for the first preparation. RunPod documents a seven-minute default cold-start allowance, which is too short for downloading these weights. This is distinct from the 600-second job execution limit and each submitted job's queue-inclusive TTL. See [RunPod optimization](https://docs.runpod.io/serverless/development/optimization). Preserve other environment values when changing this setting.
+
+Keep one worker for the initial sequential audition and idle timeout 120 seconds during active review; a temporary minimum of one can protect first-time preparation from the initial job TTL. Restore minimum zero after preparation and both bounds zero at cleanup. The output/archive contract is unchanged: main SaveImage node 11 and `deforum/projects/PROJECT/` on the volume. At cleanup, verify and preserve every object under that output prefix, including failed attempts; the failed preparation left reproducible public model-cache partials on this session’s volume; those can be deleted with the volume. Pause workers, detach and delete the owned volume after local verification. Record actual infrastructure state in the session report.
+
+## Earlier SDXL worker and sessions
+
 Status: forty-four custom-worker jobs completed and outputs verified locally. The latest [Brain Entity study](../projects/brain-entity-study/experiments/style.md) adds six stills and two six-second videos using the creator-credited SDXL art LoRA and QR ControlNet. All 122 archive objects are local. The endpoint is paused (min/max workers 0), idle timeout restored to five seconds, with no volume or workers retained. Earlier results include the [ten-experiment round](../../../docs/research/ten-experiments-session.md), [Seedream motion/crash recovery](../projects/seedream-motion/experiments/motion.md), and [first serverless session](../projects/botanical-cathedral/experiments/serverless-results.md).
 
-This image extends RunPod's existing ComfyUI worker. The small `handler.py` adapter adds a persistent archive and returns a manifest instead of transmitting an entire PNG sequence through the job response. Difforum supplies all diffusion and camera-warp nodes; no new diffusion or depth algorithm is implemented here.
+Both recipes extend RunPod's existing ComfyUI worker. The small `handler.py` adapter adds a persistent archive and returns a manifest instead of transmitting an entire PNG sequence through the job response. The original SDXL recipe installs Difforum/depth nodes; later feedback experiments also use standard ComfyUI sampling with local spatial transforms. No new diffusion or depth algorithm is implemented here.
 
 ## Resume the existing endpoint
 
