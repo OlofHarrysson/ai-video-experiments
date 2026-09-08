@@ -25,7 +25,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 
 ## Working conventions
 
-- Current learning pause: [animated spatial-controls lesson](docs/research/spatial-controls-lesson.md). Olof found the moving grid/drawing very helpful and wants motion effects previewed this way before diffusion obscures the transform. Build an effects vocabulary from these previews, then show final artwork too. Keep direct definitions, visual manipulation and guide videos available as authoring routes. Guide brightness-to-motion estimation remains unclear to him; depth is secondary.
+- Current step: [spatial effects browser](apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md), with 23 direct transforms, one drawing, Play and time scrubbing. Olof selected direct effects now and deferred original guide/depth mechanisms; these are not replicas of all 95 presets. He reports decent understanding of the process. Wait for a motion selection, then test cadence 3 and a matched interpolation comparison. Keep classic endpoint cadence distinct from Difforum's warp-only skipped frames; preserve duration and motion speed. Less frequent repainting is a stability hypothesis, not an established improvement. Continue showing motion-only drawing previews before diffusion results.
 
 - Start with the [documentation index](docs/index.md) and the relevant app README. Shared explanations belong in `docs/`; runnable experiments belong in `apps/`.
 - Prefer existing nodes and workflows. Add custom code only for a concrete missing capability.

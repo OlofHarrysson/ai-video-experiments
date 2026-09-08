@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Spatial effects browser](../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) — 23 direct transforms on one drawing, effect selection, playback and scrubbing; cadence 3 and interpolation are the following tests.
+
 - [Animated spatial-controls lesson](research/spatial-controls-lesson.md) — a stretchable drawing, measured guide motion, direct controls, and where depth fits.
 
 - [Motion vocabulary: words to controls](research/motion-control-vocabulary.md) — translation, turn, bank, expansion and regional deformation, with the inspectable path from a request to repainting.

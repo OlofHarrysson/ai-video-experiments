@@ -4,6 +4,8 @@
 
 ## Two local interactive examples
 
+Next step: the [spatial effects browser](../../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) expands the drawing-based approach to 23 direct controls on one image, with frame zero serving as the original. Olof selected direct effects now and deferred original guide/depth mechanisms.
+
 - [Stretchable sheet](../../apps/deforum/projects/motion-guide-study/exports/spatial-controls-lesson-v001/stretchable-sheet.html): six-second local expansion, translation, horizontal shear and local twist. Grid, drawing and two neighboring dots share the same coordinate mapping. Play/pause/replay, mode selection and time scrubbing. Motion starts only when requested and does not loop automatically.
 - [Guide to motion](../../apps/deforum/projects/motion-guide-study/exports/spatial-controls-lesson-v001/guide-to-motion.html): an animated monochrome pattern, estimated next-step arrows and a different drawing carried by those movements. The arrows are displayed six times larger for visibility; applied displacement has factor one. The grid can be hidden. At the final frame there is no next frame, so no arrows are shown.
 

@@ -1,0 +1,111 @@
+<div id="spatial-effects">
+  <div class="viz-controls">
+    <label class="form-label">Effect <select id="se-effect" class="form-select"></select></label>
+    <button id="se-play" type="button" class="btn">Play</button>
+  </div>
+  <svg id="se-drawing" role="img" aria-label="A sun, house, tree and grid transformed together; time zero is the original drawing"></svg>
+  <label class="form-label" for="se-time">Time <span id="se-clock" class="tabular-nums">0.0 / 6.0 s</span></label>
+  <input id="se-time" class="form-range" type="range" min="0" max="600" value="0" step="1">
+  <div id="se-detail" class="text-small" aria-live="polite"></div>
+  <div class="text-small"><span>Direct effect · no diffusion</span><span id="se-reference"></span></div>
+</div>
+<style>
+#spatial-effects #se-drawing{display:block;width:100%;aspect-ratio:1.6;margin:12px 0;overflow:hidden}
+#spatial-effects #se-detail{margin-bottom:6px}
+</style>
+<script>
+(() => {
+  const root=document.getElementById('spatial-effects');
+  const select=root.querySelector('#se-effect'),play=root.querySelector('#se-play'),slider=root.querySelector('#se-time'),clock=root.querySelector('#se-clock'),svg=root.querySelector('#se-drawing');
+  const ns='http://www.w3.org/2000/svg';
+  const sourceBase='https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/';
+  const effects=[
+    {id:'grow-sun',name:'Grow around the sun',group:'Local reshaping',detail:'Expand the sun’s region; the surrounding grid bends outward.',source:null},
+    {id:'grow-house',name:'Grow around the house',group:'Local reshaping',detail:'Expand the house’s region while more distant areas move less.',source:null},
+    {id:'pinch-sun',name:'Pinch around the sun',group:'Local reshaping',detail:'Compress the sun’s region and stretch its surroundings.',source:null},
+    {id:'breathe-sun',name:'Make the sun breathe',group:'Local reshaping',detail:'Expand, contract, and return the sun’s region to its starting shape.',source:'Evolve-Pulse-30s'},
+    {id:'unfold',name:'Open the center sideways',group:'Local reshaping',detail:'Separate the sides around the middle band; keep the central line fixed.',source:'Move-Around-30s'},
+    {id:'ripple',name:'Send a ripple outward',group:'Local reshaping',detail:'A moving ring of deformation travels outward from the center.',source:'Evolve-Zoom-Slow-30s'},
+    {id:'left',name:'Slide left',group:'Move the whole sheet',detail:'Every part moves left by the same amount; shapes keep their proportions.',source:'Move-Left-30s'},
+    {id:'right',name:'Slide right',group:'Move the whole sheet',detail:'Every part moves right by the same amount; shapes keep their proportions.',source:'Move-Right-30s'},
+    {id:'up',name:'Slide up',group:'Move the whole sheet',detail:'Every part moves upward together.',source:'Move-Up-30s'},
+    {id:'down',name:'Slide down',group:'Move the whole sheet',detail:'Every part moves downward together.',source:'Move-Down-30s'},
+    {id:'float',name:'Float around a loop',group:'Move the whole sheet',detail:'Drift sideways and upward, then return along a curved path.',source:'Move-Float-30s'},
+    {id:'zoom-in',name:'Zoom in',group:'Scale and rotate',detail:'Enlarge the whole drawing around the image center.',source:'Classic-Zoom-In-30s'},
+    {id:'zoom-out',name:'Zoom out',group:'Scale and rotate',detail:'Shrink the whole drawing around the image center.',source:'Classic-Zoom-Out-30s'},
+    {id:'zoom-breathe',name:'Zoom in, then back out',group:'Scale and rotate',detail:'Push inward and return to the original framing.',source:'Zoom-In-Out-30s'},
+    {id:'roll',name:'Rotate the whole sheet',group:'Scale and rotate',detail:'Turn the entire drawing clockwise by 35 degrees.',source:'Revolve-30s'},
+    {id:'rock',name:'Rock from side to side',group:'Scale and rotate',detail:'Tilt one way, then the other, and return upright.',source:'Move-Float-30s'},
+    {id:'spiral-in',name:'Zoom and rotate together',group:'Scale and rotate',detail:'Enlarge the picture while rotating clockwise.',source:'Fly-Through-Spin-30s'},
+    {id:'shear',name:'Top left, bottom right',group:'Bend and twist',detail:'Rows slide by different amounts; upright lines lean.',source:'Move-Warp-30s'},
+    {id:'horizontal-wave',name:'Wave from top to bottom',group:'Bend and twist',detail:'A sideways bend travels down the sheet and fades out.',source:'Move-Warp-30s'},
+    {id:'vertical-wave',name:'Wave from left to right',group:'Bend and twist',detail:'An up-and-down bend travels across the sheet and fades out.',source:'Move-Warp-2-30s'},
+    {id:'twist',name:'Twist around the center',group:'Bend and twist',detail:'Rotate the middle more than the outer regions.',source:'Evolve-Fast-30s'},
+    {id:'flat-turn',name:'Turn the flat sheet sideways',group:'Perspective on a flat sheet',detail:'Perspective turn of a flat drawing; it does not reveal objects’ hidden sides.',source:'Look-Around-30s'},
+    {id:'flat-tilt',name:'Tilt the flat sheet backward',group:'Perspective on a flat sheet',detail:'Perspective tilt of a flat drawing; no scene depth is inferred.',source:'Classic-3D-Motion-30s'}
+  ];
+  let effect=effects[0],progress=0,playing=false,last=0,raf=0;
+  const groups=new Map();
+  for(const item of effects){let group=groups.get(item.group);if(!group){group=document.createElement('optgroup');group.label=item.group;select.append(group);groups.set(item.group,group);}const option=document.createElement('option');option.value=item.id;option.textContent=item.name;group.append(option);}
+  function rotate(x,y,a,scale=1){const dx=x-256,dy=y-160;return [256+scale*(Math.cos(a)*dx-Math.sin(a)*dy),160+scale*(Math.sin(a)*dx+Math.cos(a)*dy)];}
+  function localScale(x,y,cx,cy,radius,amount){const dx=x-cx,dy=y-cy,k=amount*Math.exp(-(dx*dx+dy*dy)/(2*radius*radius));return [x+dx*k,y+dy*k];}
+  function map(x,y,p){
+    if(p===0)return [x,y];
+    const t=p*p*(3-2*p),dx=x-256,dy=y-160;
+    switch(effect.id){
+      case 'grow-sun':return localScale(x,y,182,108,72,1.1*t);
+      case 'grow-house':return localScale(x,y,281,210,65,.85*t);
+      case 'pinch-sun':return localScale(x,y,182,108,72,-.65*t);
+      case 'breathe-sun':return localScale(x,y,182,108,72,.65*Math.sin(2*Math.PI*t));
+      case 'unfold':return [x+48*t*Math.tanh(dx/65)*Math.exp(-dy*dy/(2*78*78)),y];
+      case 'ripple':{const r=Math.hypot(dx,dy),front=24+185*t,k=24*Math.sin(Math.PI*t)*Math.exp(-((r-front)**2)/(2*28*28))*r/(r+18);return [x+k*dx/Math.max(r,1),y+k*dy/Math.max(r,1)];}
+      case 'left':return [x-65*t,y];
+      case 'right':return [x+65*t,y];
+      case 'up':return [x,y-50*t];
+      case 'down':return [x,y+50*t];
+      case 'float':return [x+37*Math.sin(2*Math.PI*t),y+23*(Math.cos(2*Math.PI*t)-1)];
+      case 'zoom-in':return rotate(x,y,0,1+.55*t);
+      case 'zoom-out':return rotate(x,y,0,1-.38*t);
+      case 'zoom-breathe':return rotate(x,y,0,1+.45*Math.sin(Math.PI*t));
+      case 'roll':return rotate(x,y,35*Math.PI/180*t);
+      case 'rock':return rotate(x,y,.22*Math.sin(2*Math.PI*t));
+      case 'spiral-in':return rotate(x,y,.6*t,1+.4*t);
+      case 'shear':return [x+.55*dy*t,y];
+      case 'horizontal-wave':return [x+34*Math.sin(Math.PI*t)*Math.sin(y/320*2*Math.PI-t*2*Math.PI),y];
+      case 'vertical-wave':return [x,y+29*Math.sin(Math.PI*t)*Math.sin(x/512*2*Math.PI-t*2*Math.PI)];
+      case 'twist':return rotate(x,y,t*Math.exp(-(dx*dx+dy*dy)/(2*125*125)));
+      case 'flat-turn':{const a=.8*t,den=1+dx*Math.sin(a)/600;return [256+dx*Math.cos(a)/den,160+dy/den];}
+      case 'flat-tilt':{const a=.85*t,den=1+dy*Math.sin(a)/600;return [256+dx/den,160+dy*Math.cos(a)/den];}
+      default:throw new Error('Unknown effect '+effect.id);
+    }
+  }
+  function element(tag,attrs,parent){const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);parent.append(el);return el;}
+  function line(points){const out=[];for(let k=0;k<points.length-1;k++){const a=points[k],b=points[k+1],n=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/4));for(let i=0;i<n;i++)out.push([a[0]+(b[0]-a[0])*i/n,a[1]+(b[1]-a[1])*i/n]);}out.push(points.at(-1));return out;}
+  function circle(x,y,r){return Array.from({length:97},(_,i)=>[x+r*Math.cos(i*Math.PI/48),y+r*Math.sin(i*Math.PI/48)]);}
+  const shapes=[];
+  function add(points,stroke,fill='none',width=1.2,opacity=1){shapes.push({points,stroke,fill,width,opacity});}
+  for(let x=32;x<=480;x+=32)add(line([[x,24],[x,296]]),'var(--border)');
+  for(let y=32;y<=288;y+=32)add(line([[24,y],[488,y]]),'var(--border)');
+  add(line([[44,266],[468,266]]),'var(--foreground)','none',1.5);
+  add(circle(182,108,29),'var(--viz-series-1)','var(--viz-series-1)',1.5,.7);
+  for(let i=0;i<12;i++){const a=i*Math.PI/6;add(line([[182+38*Math.cos(a),108+38*Math.sin(a)],[182+47*Math.cos(a),108+47*Math.sin(a)]]),'var(--viz-series-1)','none',2);}
+  add(line([[234,266],[234,193],[328,193],[328,266],[234,266]]),'var(--viz-series-2)','var(--background)',2);
+  add(line([[221,194],[281,147],[341,194],[221,194]]),'var(--viz-series-2)','var(--viz-series-2)',2,.8);
+  add(line([[267,266],[267,223],[293,223],[293,266]]),'var(--viz-series-2)','none',2);
+  add(line([[249,204],[258,204],[258,216],[249,216],[249,204]]),'var(--viz-series-2)','none',1.5);
+  add(line([[392,266],[392,201]]),'var(--viz-series-3)','none',4);
+  add(circle(392,182,30),'var(--viz-series-3)','var(--viz-series-3)',1.5,.6);
+  add(line([[152,108],[212,108]]),'var(--foreground)','none',1.5);
+  // Cache path nodes; only their geometry changes during playback.
+  let pathNodes=[],group;
+  function layout(){const w=svg.clientWidth||512,h=w/1.6;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren();element('rect',{width:w,height:h,fill:'var(--background)',stroke:'var(--border)'},svg);group=element('g',{transform:`scale(${w/512})`},svg);pathNodes=shapes.map(s=>element('path',{stroke:s.stroke,fill:s.fill,'stroke-width':s.width,opacity:s.opacity,'vector-effect':'non-scaling-stroke','stroke-linejoin':'round'},group));for(let i=0;i<2;i++)element('circle',{r:5.5,fill:'var(--foreground)',stroke:'var(--background)','stroke-width':2,'data-dot':i},group);render();}
+  function render(){if(!group)return;shapes.forEach((s,i)=>{const d=s.points.map(([x,y],j)=>{const q=map(x,y,progress);return `${j?'L':'M'}${q[0].toFixed(2)},${q[1].toFixed(2)}`;}).join(' ');pathNodes[i].setAttribute('d',d);});for(const [i,x] of [152,212].entries()){const q=map(x,108,progress),dot=group.querySelector(`[data-dot="${i}"]`);dot.setAttribute('cx',q[0]);dot.setAttribute('cy',q[1]);}slider.value=Math.round(progress*600);clock.textContent=`${(progress*6).toFixed(1)} / 6.0 s`;root.dataset.effect=effect.id;root.dataset.progress=progress.toFixed(4);}
+  function describe(){root.querySelector('#se-detail').textContent=effect.detail;const ref=root.querySelector('#se-reference');ref.replaceChildren();if(effect.source){ref.append(' · Related preset: ');const a=document.createElement('a');a.href=sourceBase+effect.source+'.txt';a.textContent=effect.source;a.target='_blank';a.rel='noopener noreferrer';ref.append(a);}else ref.append(' · Original control example');svg.setAttribute('aria-label',effect.name+'. '+effect.detail+' Time zero is the original drawing.');}
+  function stop(){playing=false;cancelAnimationFrame(raf);play.textContent=progress>=1?'Replay':'Play';}
+  function tick(now){if(!playing)return;progress=Math.min(1,progress+Math.max(0,now-last)/6000);last=now;render();if(progress>=1)stop();else raf=requestAnimationFrame(tick);}
+  play.addEventListener('click',()=>{if(playing){stop();return;}if(progress>=1)progress=0;playing=true;last=performance.now();play.textContent='Pause';raf=requestAnimationFrame(tick);});
+  slider.addEventListener('input',()=>{stop();progress=Number(slider.value)/600;render();play.textContent=progress>=1?'Replay':'Play';});
+  select.addEventListener('change',()=>{stop();effect=effects.find(e=>e.id===select.value);progress=0;describe();render();play.textContent='Play';});
+  new ResizeObserver(layout).observe(root);describe();layout();
+})();
+</script>
