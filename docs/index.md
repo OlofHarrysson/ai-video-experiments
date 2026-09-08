@@ -22,7 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
-- [Text-only and native-reference tests](../apps/deforum/projects/modern-model-study/experiments/conditioning.md) — unblended reconstructions, model-specific conditioning recipes and color-preservation prompting.
+- [Initialized feedback plus optional reference](../apps/deforum/projects/modern-model-study/experiments/additive_reference.md) — retain warped-image sampling initialization and test additional native reference conditioning for Klein and Krea.
+- [Earlier text-only and native-reference tests](../apps/deforum/projects/modern-model-study/experiments/conditioning.md) — unblended reconstructions and preserved input-mode probes; the new sequences omitted initialized feedback and did not match the intended experiment.
 
 - [Klein and Krea Pod results](../apps/deforum/projects/modern-model-study/experiments/pod-results.md) — two playable clips, model-specific prompting, native editing versus partial repaint, and cleanup.
 - [Klein and Krea audition](../apps/deforum/projects/modern-model-study/experiments/baseline.md) — same-model openings and feedback, native editing versus partial repaint, and model-specific prompts.

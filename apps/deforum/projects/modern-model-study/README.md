@@ -4,9 +4,15 @@ Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animat
 
 Two three-second auditions are complete: [Krea and Klein results](experiments/pod-results.md). Each model generated its own opening and feedback. Olof finds both interesting but reports jitter and doubled images in Krea; he has not selected a winner. All 32 generated images and both clips are local; the Pod is deleted. The earlier serverless attempt stopped before inference.
 
-Latest follow-up: [five text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are complete. Klein retains layout through native reference conditioning but has color drift; Krea’s style adapter changes structure and fades the palette. All new outputs are local and the temporary Pod is deleted.
+Current follow-up: [initialized feedback with optional reference conditioning](experiments/additive_reference.md). Both versions keep the warped previous image as the diffusion starting point. One also receives the previous generated frame as a separate reference. Same-model openings, cadence 3 and no blending keep this focused on the additional conditioning.
+
+All four two-second clips and both labeled comparisons are complete. Klein with reference is the assistant's candidate for controlled motion; Krea supplies stronger morphing but still changes structure and fades detail. Human playback feedback is pending. All 34 generated images and 88 remote input/output files are preserved locally; the Pod and storage are deleted.
+
+Earlier [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test Olof's intended combined mechanism. The misunderstanding is recorded in the collaboration agreement.
 
 ## Experiments
+
+- [Feedback plus optional reference](experiments/additive_reference.md): matched single-step probes and short feedback comparisons for Klein and Krea.
 
 - [Text-only and native-reference comparison](experiments/conditioning.md): no-blend reconstructions and supported input-mode tests for both models.
 
