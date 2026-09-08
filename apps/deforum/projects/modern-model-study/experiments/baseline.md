@@ -22,6 +22,8 @@ Olof authorized both candidates, model-specific prompts, and same-model opening/
 
 Klein: four steps, Euler, Flux2 scheduler, CFG 1, reference conditioning for edits. Krea: eight steps, Euler/simple, CFG 1; full denoise for opening, partial denoise as an experimental feedback adaptation. Dimensions 1024×576 for both. These are model-and-workflow auditions; different editing mechanisms prevent an isolated checkpoint ranking.
 
+Klein's template rescales the reference to approximately one megapixel. Here input and output stay at the existing 1024×576 dimensions so the spatial maps and saved pixels retain their geometry. This is an explicit template adaptation; the model receives the whole warped frame as its reference. Krea's fractional-denoise schedule is also an adaptation, because its source recipe demonstrates full-denoise generation, not this recurrent img2img use.
+
 ## Execution
 
 Runnable from `apps/deforum` with `uv run --env-file .env --with pillow==12.1.0 --with opencv-python-headless==4.12.0.88 python projects/modern-model-study/experiments/audition.py` followed by a stage and model:
@@ -35,3 +37,5 @@ Runnable from `apps/deforum` with `uv run --env-file .env --with pillow==12.1.0 
 Each command reconnects to an existing accepted job and refuses changed graphs or source images. An uncertain submission requires inspection; it is never silently retried. [Four API graphs](workflows/) make the minimal model recipes inspectable. Actual runs preserve their exact selected prompt and graph separately.
 
 Prepared 2026-09-08. New models require a worker image build and cold download; settings/prompt changes thereafter reuse that image. Original SDXL container recipe is preserved as `serverless/Dockerfile.sdxl`. Actual runtime evidence and results will be added after execution.
+
+The first worker build (`addbb3c96`) downloaded and checksum-verified all six assets and passed ComfyUI's CPU startup test, but hit RunPod's **1800-second build limit** during OCI tarball export. No inference job was submitted. The model assets total 34.77 GB. The corrected packaging keeps the container small: `prepare_models.py` downloads the pinned assets into a temporary 50 GB session volume before starting ComfyUI. A verified receipt and partial-file resume avoid repeating completed downloads on a replacement worker. Output archives remain under a separate `deforum/projects/` prefix; public, reproducible model weights are deleted with the temporary volume after outputs are verified locally.

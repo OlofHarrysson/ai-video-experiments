@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Klein and Krea audition](../apps/deforum/projects/modern-model-study/experiments/baseline.md) — same-model openings and feedback, native editing versus partial repaint, and model-specific prompts.
+
 - [Two sampler alternatives](../apps/deforum/projects/motion-guide-study/experiments/samplers.md) — matched three-second twists informed by creator recipes.
 
 - [Sampling steps and input noise](../apps/deforum/projects/motion-guide-study/experiments/noise-steps.md) — test whether more sampling steps reduce accumulated grain at denoise 0.45.
