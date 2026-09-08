@@ -60,6 +60,9 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [Modern-model transition](research/modern-model-transition.md) — actual nine-node feedback graph, model-independent motion tools, remaining integration boundaries and a small Klein/Krea audition proposal.
+- [Prompting for feedback](research/prompting-for-feedback.md) — opening versus edit instructions, model-specific guidance, prompt expansion and draft prompts for the next study.
+
 - [Model and sampler recipes](research/model-sampler-recipes.md) — exact Civitai versions, creator guidance, distilled-model constraints, conflicting recipes and two controlled sampler alternatives.
 
 - [The BonsAi Effect workflow study](research/bonsai-effect-workflow.md) — two visually reviewed references, artist replies across 29 videos, exact motion presets and guide assets, seed/cadence differences, and lessons for our next experiment; [external platforms](research/bonsai-effect-external-sources.md).

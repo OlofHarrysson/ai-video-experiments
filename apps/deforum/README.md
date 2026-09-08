@@ -6,6 +6,8 @@ Start with the [project index](projects/README.md), [working convention](../../d
 
 Latest direct-motion result: [sampler comparison](projects/motion-guide-study/experiments/samplers.md). Two three-second Euler variants are complete, informed by [model-specific creator recipes](../../docs/research/model-sampler-recipes.md). Ordinary Euler stays closer to the DPM++ 2M baseline; ancestral produces more distinct redraw and some fine speckling. Keep the baseline pending playback feedback. All media is local; compute and temporary storage are cleaned up.
 
+Next proposed direction: [modern-model audition](../../docs/research/modern-model-transition.md), starting with Klein 4B native editing and preserving the existing motion/review tools. [Prompting guidance](../../docs/research/prompting-for-feedback.md) includes separate opening/edit drafts. This is researched, not installed or rendered.
+
 Shared code stays here: `experiment.py`, `editing.py`, `serverless_client.py`, `workflow_recipes.py`, `serverless/`, `setup-pod.sh`, `workflows/`, tests and the Python environment serve every project. Each project owns its references, experiment reports, runs, cuts and exports. See [shared-code responsibilities](../../docs/workflow.md#shared-code).
 
 Current study: [Brain Entity temporal continuity](projects/brain-entity-study/experiments/continuity.md) compares diffusion-seed continuity, pixel noise and separate flow/interpolation finishing. The generation tests reuse the existing worker; local finishing keeps cloud resources off. See the [project index](projects/brain-entity-study/README.md) for all preserved comparisons and playback findings.

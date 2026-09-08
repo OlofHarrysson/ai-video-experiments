@@ -57,6 +57,8 @@ These are controlled local comparisons, not recreations of Civitai's high-resolu
 
 The two sampler alternatives are now [rendered and reviewed](../../apps/deforum/projects/motion-guide-study/experiments/samplers.md). Ordinary Euler stays closer to the control in sampled frames; ancestral changes structure/texture more. Neither result establishes a universal best sampler, and human playback preference is pending.
 
+For the next model decision, the [transition audit](modern-model-transition.md) checks actual dependencies, and [prompting notes](prompting-for-feedback.md) cover native generation/edit instructions. Olof found these sampler changes small and wants to explore newer models.
+
 ## Evidence archive
 
 Public API JSON and downloaded official workflow/config snapshots are preserved locally in ignored `apps/deforum/work/sampler-session/research/`. The [source manifest](sources/sampler-models-2026-09-08/index.json) records URLs, file hashes and selected model identities without copying gallery prompts into Git. Civitai's normal webpage was unavailable through the web extraction tool; its public API supplied the author descriptions and version metadata. This research does not claim that Civitai artwork or any unexecuted model recipe was visually benchmarked.

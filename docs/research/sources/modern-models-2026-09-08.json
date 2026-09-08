@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-08",
+  "local_checkout": "1a5cbf7",
+  "comfy_release_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "template_commit": "7c25a3c586484601f94b7e8f8b14c23b2c95a096",
+  "sources": [
+    {
+      "url": "https://docs.bfl.ai/guides/prompting_unified_building.md",
+      "local_file": "apps/deforum/work/modern-model-research/bfl-building.md",
+      "sha256": "c2527ed853bc329d8445f15a1870ad61b3bd7beef2bcd61990505d7700839f77"
+    },
+    {
+      "url": "https://docs.bfl.ai/guides/prompting_editing_single_reference.md",
+      "local_file": "apps/deforum/work/modern-model-research/bfl-editing.md",
+      "sha256": "e0a4c9d2c02eb8134d58e7593cd75332bc90c3d1088e15b816bbf34329624f5f"
+    },
+    {
+      "url": "https://docs.bfl.ai/guides/prompting_unified_technical.md",
+      "local_file": "apps/deforum/work/modern-model-research/bfl-technical.md",
+      "sha256": "aa8b1e38ccc4067e3ba0011bb407b1dcfcfde4a52a27152f78da29e4306764b0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/krea-ai/krea-2/main/docs/prompting.md",
+      "local_file": "apps/deforum/work/modern-model-research/krea-prompting.md",
+      "sha256": "9f05bdd218769c820b50fcd41ca1169121887bff7958a4a756a9c50c0a4e25cf"
+    },
+    {
+      "url": "https://docs.comfy.org/tutorials/image/krea/krea-2.md",
+      "local_file": "apps/deforum/work/modern-model-research/krea-comfy.md",
+      "sha256": "d57a3189baff0f0eecf58404ef3559d1de4ff10db98fecfa057a21a106d56a1c"
+    },
+    {
+      "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/raw/main/README.md",
+      "local_file": "apps/deforum/work/modern-model-research/zimage-card.md",
+      "sha256": "87af5e1d7933dbfe091c4048a20805541130690ee813b8039b7f396b47e64338"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/v0.34.0/nodes.py",
+      "local_file": "apps/deforum/work/modern-model-research/core-nodes.py",
+      "sha256": "918a322c43665f24513856a5bec6c564ede01a29b6081b83fd67d27a49571e0c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/v0.34.0/comfy/supported_models.py",
+      "local_file": "apps/deforum/work/modern-model-research/core-supported-models.py",
+      "sha256": "0f978036c17dfee74d106f04f0d361198c0d444b4e1839e2cd8920a9dcebd40c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/v0.34.0/comfy/text_encoders/flux.py",
+      "local_file": "apps/deforum/work/modern-model-research/core-flux-encoder.py",
+      "sha256": "784de5fbf0aee15cab0182fda937adf9fc6aa1978f33ce6cb7baff7466be8f41"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/v0.34.0/comfy/text_encoders/krea2.py",
+      "local_file": "apps/deforum/work/modern-model-research/core-krea-encoder.py",
+      "sha256": "be316682d4787ff0eb2bda9f2396b3769efa8f1f28bd1a688069f414de04c5e4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/v0.34.0/comfy_extras/nodes_flux.py",
+      "local_file": "apps/deforum/work/modern-model-research/core-flux-nodes.py",
+      "sha256": "71c9d804a9acfb7a828fecb8fcc4b93e28f4417f0c4259a68910f4027059741f"
+    },
+    {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/raw/main/README.md",
+      "local_file": "apps/deforum/work/modern-model-research/klein-card.md",
+      "sha256": "bd447051cf2db4bf67b992e563d89c35ebf1123f009c063361a222ab14e1c4f7"
+    },
+    {
+      "url": "https://api.github.com/repos/Comfy-Org/ComfyUI/git/trees/v0.34.0?recursive=1",
+      "local_file": "apps/deforum/work/modern-model-research/comfy-tree.json",
+      "sha256": "d3d93f36510367643a29029d78abeb1373f36175b3bab603d8274d6f0a0ff481"
+    },
+    {
+      "url": "https://api.github.com/repos/Comfy-Org/workflow_templates/git/trees/main?recursive=1",
+      "local_file": "apps/deforum/work/modern-model-research/template-tree.json",
+      "sha256": "e237c41efe928bcbe72dbea4eeef7570a30a62706dcbf490d90cbfcd9cb4cc74"
+    },
+    {
+      "url": "https://api.github.com/repos/chillithebillis/Difforum/commits/1d750efd3c1d1dda792b8ef6c14b06a14a69f879",
+      "local_file": "apps/deforum/work/modern-model-research/difforum-pin.json",
+      "sha256": "fe5e4f4c7bab4d28b027764f4c68c4e75161fde8d208e97f8077c86caa14a322"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/7c25a3c586484601f94b7e8f8b14c23b2c95a096/templates/image_flux2_klein_image_edit_4b_distilled.json",
+      "local_file": "apps/deforum/work/modern-model-research/image_flux2_klein_image_edit_4b_distilled.json",
+      "sha256": "e0388a8870495802314d58fa61616ddcdb7064dac5f85a8787c9e08180b8a560"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/7c25a3c586484601f94b7e8f8b14c23b2c95a096/templates/image_krea2_turbo_t2i.json",
+      "local_file": "apps/deforum/work/modern-model-research/image_krea2_turbo_t2i.json",
+      "sha256": "d04b37d8345b1bf6aa247ef182a4454e0221730cf353379af27b20e932e9f11f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/7c25a3c586484601f94b7e8f8b14c23b2c95a096/templates/image_krea2_turbo_int8_image_style_reference.json",
+      "local_file": "apps/deforum/work/modern-model-research/image_krea2_turbo_int8_image_style_reference.json",
+      "sha256": "6cc06b95e9c044fa81d3e90d2bc4fc0996f7178aa5bae3408860a5c26c25ffb8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/7c25a3c586484601f94b7e8f8b14c23b2c95a096/templates/image_z_image_turbo.json",
+      "local_file": "apps/deforum/work/modern-model-research/image_z_image_turbo.json",
+      "sha256": "307904f13211cfa5405b308e748ef8035c68991b5bb4cfd4733daed9bc511b77"
+    }
+  ]
+}
