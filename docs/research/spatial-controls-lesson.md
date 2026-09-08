@@ -39,3 +39,22 @@ Recommended next learning interaction: compare slide and grow, watch dot spacing
 ## Verification
 
 Checked all four modes, start/middle/end scrubbing, play/pause/replay, mode changes during playback, the guide grid toggle and both six-second endpoints. Light/dark layouts at 736 and 360 pixels, plus the guide at 1024, have no observed horizontal overflow or clipped controls. Sampled screenshots confirm that the grid and artwork deform together and that the guide appearance remains separate. A first-frame animation-timestamp edge case was fixed and playback rechecked. These checks establish interactive behavior and geometry presentation, not a subjective video-quality judgment.
+
+## Where the other Deforum processes fit
+
+The backbone is **previous artwork → spatial deformation → image preparation → diffusion repaint → saved next artwork**. Repeat from the new artwork. A first image is generated or supplied before this loop. Optional features branch into this sequence; classic Deforum is not a requirement to run every available algorithm on every frame.
+
+| Stage | Purpose and optional components |
+| --- | --- |
+| Read this frame's controls | Evaluate camera/motion, prompt, seed, denoise and other schedules. Scheduling changes controls over movie time; it is not another image model. |
+| Obtain motion information | Direct transforms can supply coordinates immediately. Optional depth estimation supplies relative near/far distances for 3D reprojection. Optional optical flow estimates 2D movement from guide-frame pairs. Camera and guide motion can be combined. |
+| Deform the previous artwork | Move/resample its image content with the chosen transforms. Handle borders or uncovered regions according to the warp implementation. This does not recover unseen scene detail. |
+| Prepare the image | Optional color matching, contrast, sharpening and extra image-space noise. Separate image noise from the latent noise inside diffusion. Optional hybrid compositing blends actual guide pixels and is distinct from transferring guide motion. |
+| Repaint with diffusion | Encode the prepared image, sample using prompt/seed/denoise settings, then decode. Optional masks or ControlNet can constrain where or how generation changes the image; ControlNet guides sampling rather than moving pixels directly. |
+| Save and feed back | Preserve the result and use it as the next input. Depending on settings/implementation, color matching or guide compositing can also occur after generation. |
+
+Two timing mechanisms sit alongside this simplified loop. **Classic cadence** spaces out diffusion-generated endpoints and constructs intervening frames using warps/blending, optionally optical flow. This is not identical to our Difforum sampler's warp-only skipped frames. **Final frame interpolation**, such as RIFE/FILM, runs on generated images to add intermediate frames before export. It is separate from cadence and from guide motion.
+
+Optical flow is a reusable motion-estimation operation, not one fixed stage: classic code uses it for hybrid guide motion, optional cadence, and an optional extra-generation/warp redo. A separate flow-based stabilizer in the rewrite aligns and blends history to reduce changes; it should not be attributed to the classic guide path. These optional details can be taught individually after the basic map is clear.
+
+Source: locally rechecked classic WebUI [renderer](https://github.com/deforum/sd-webui-deforum/blob/5d63a339dbec8d476657a1f672a4eeb6dc79ed37/scripts/deforum_helpers/render.py), especially lines 295–399 (cadence), 415–468 (warp, hybrid motion/compositing, color, contrast/sharpening/noise), 542–593 (optional redo, generation and post-generation processing). See [architecture comparison](deforum-architecture-comparison.md) for depth and interpolation sources and the differences from our executed ComfyUI graphs. The table is an educational grouping, not a literal universal execution order.
