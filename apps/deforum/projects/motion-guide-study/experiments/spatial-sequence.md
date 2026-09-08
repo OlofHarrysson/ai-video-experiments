@@ -45,3 +45,9 @@ RIFE 4.25 completed locally on MPS in 17.98 seconds including model load, interp
 **Cleanup:** 216 cloud objects / 66,265,398 bytes were verified against local copies. The endpoint is paused at min/max zero, all jobs completed, no workers or Pods remain, and its volume is detached and deleted. Account spend rate returned to zero; the observed balance reduction was $0.0951 (billing observation, not an itemized invoice). Private receipts, commands, validation and timing data are in `work/spatial-sequence-session/`. REST detachment required an explicit User-Agent header; without it urllib received HTTP 403. MCP's empty volume list again left the attachment unchanged, so readback remains necessary.
 
 The comparison isolates RIFE on one cadence-3 render. It does not establish that cadence 3 improves quality over cadence 1. Next decisions should follow playback feedback, with border handling and how strongly repainting preserves the chosen deformation as the main open issues.
+
+## Human playback feedback
+
+Olof agrees twist reads best and is pleased with the spatial-control tooling. He sees little difference from RIFE and deprioritizes the black border. The current concern is unwanted redraw of the astronaut and background moons appearing/disappearing. Next tuning should focus on repaint restraint, with regional protection as a possible later control.
+
+Pipeline clarification: `prepare` makes a separate diagnostic from the original image. `render` feeds each newly generated anchor into the next accumulated warp and diffusion call. `finish` constructs playback intermediates from neighboring generated anchors; these blended frames never feed back into generation. This differs from a warp-only-intermediate loop. The actual graph uses uniform denoise 0.58, ordinary seeded latent sampling noise and no extra pixel-noise node, regional mask or old/new feedback composite.
