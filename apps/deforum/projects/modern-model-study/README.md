@@ -6,7 +6,7 @@ Two three-second auditions are complete: [Krea and Klein results](experiments/po
 
 Current follow-up: [initialized feedback with optional reference conditioning](experiments/additive_reference.md). Both versions keep the warped previous image as the diffusion starting point. One also receives the previous generated frame as a separate reference. Same-model openings, cadence 3 and no blending keep this focused on the additional conditioning.
 
-All four two-second clips and both labeled comparisons are complete. Klein with reference is the assistant's candidate for controlled motion; Krea supplies stronger morphing but still changes structure and fades detail. Human playback feedback is pending. All 34 generated images and 88 remote input/output files are preserved locally; the Pod and storage are deleted.
+All four two-second clips and both labeled comparisons are complete. Olof finds Klein more consistent but less interesting than the SDXL/reference art, and rejects Krea including its opening image. The next recommendation is to establish compelling still-image quality with a verified recipe before extending animation; no new run is approved by this feedback alone. All 34 generated images and 88 remote input/output files are preserved locally; the Pod and storage are deleted.
 
 Earlier [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test Olof's intended combined mechanism. The misunderstanding is recorded in the collaboration agreement.
 

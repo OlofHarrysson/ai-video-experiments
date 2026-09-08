@@ -2,6 +2,22 @@
 
 2026-09-08. Olof explicitly keeps the Deforum feedback loop. This study adds a reference input to that loop; it does not compare independent redraws with reference-only generation.
 
+## Quality diagnosis and human feedback — 2026-09-09
+
+Olof finds Klein more consistent than SDXL in some respects but less interesting and compelling than the SDXL results and original Deforum references. He rejects Krea, including its first image. This supersedes the assistant's creative shortlist below; those earlier observations remain as the experiment history.
+
+Verified findings:
+
+- The latest Krea opening used the style-reference LoRA at strength 1 with TextEncodeQwenImageEditPlus but **no reference image**. Keeping this fixed across opening/branches controlled the additive comparison, but did not establish a validated default for opening generation. The adapter author describes training with one or two reference images; the official ComfyUI normal text-to-image template defaults to no LoRA. Its effect on the poor opening is a hypothesis, not isolated proof. [Adapter card](https://huggingface.co/ostris/krea2_turbo_style_reference), [official workflows](https://docs.comfy.org/tutorials/image/krea/krea-2).
+- The earlier FP8 Krea opening without this adapter also used a flat ink-illustration treatment. It has more pronounced orange/black contrast than the latest opening in direct image inspection, but checkpoint format, encoder path and adapter changed between studies. Those images cannot isolate the adapter or quantization as the cause.
+- Our prompt explicitly requests flat screen-printed colors, pale stone, a tiny explorer and broad quiet areas. That is a narrow authored art direction, not an artist-proven recipe. Natural-language detailed prompting follows the author's general advice, but does not establish that this particular prompt or selected output meets the user's aesthetic target. Official examples use 2K; our 1024×576 test is also below their example resolution. Resolution alone is not a demonstrated explanation or fix. [Author prompting guide](https://github.com/krea-ai/krea-2/blob/main/docs/prompting.md).
+- The successful local SDXL recipe included the **More-art LoRA** and prior style/parameter iteration; it was not plain SDXL versus otherwise equivalent modern models. This describes our local recipe, not an assertion about the checkpoints used by every reference-video artist.
+- Klein's partial-noise four-update adaptation deliberately retains much of the previous image. Greater continuity with little invention is consistent with that recipe. Both modern feedback recipes remain experimental; correct executed graphs and weight hashes do not validate their artistic behavior or establish a model's limits. No specific core ComfyUI defect has been identified as the cause of the poor opening.
+
+The assistant over-weighted continuity and successful pipeline execution when recommending continuation, and extended a weak Krea opening into more video. Central record: **AF-20260909-002949**.
+
+**Next recommendation, not a new render authorization:** first run an unchanged official still-image recipe with its published example prompt/settings to check the installation, then audition a small set of reference-led opening images. Judge the starting art before the animation. Once a convincing opening exists, retain the same-model warped-image feedback loop and separately test expressive evolution. A good stock still with a poor custom still points toward prompt/style choices; a good opening that deteriorates in feedback points toward the animation recipe. A poor reproduced control calls for implementation/checkpoint investigation before declaring the model unsuitable. Model preference remains a separate artistic judgment.
+
 ## Data flow held fixed
 
 1. Take the previous generated anchor and apply the direct spatial twist.

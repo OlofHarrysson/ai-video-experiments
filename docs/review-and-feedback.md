@@ -14,6 +14,8 @@ Preserve the agreed animation feedback loop when changing model or conditioning 
 
 **Prevention:** distinguish sampling initialization from conditioning whenever describing “image input.” Map a proposed change onto the existing loop, then confirm any interpretation that would remove feedback or replace its mechanism. Compare the agreed baseline with an additive change, unless Olof explicitly requests a different architecture. Preserve the mistaken runs and label their scope accurately; they are not evidence against the intended combined mechanism.
 
+Establish a convincing opening before extending a new visual recipe into animation. A narrow mechanism test may use a diagnostic image, but successful execution or improved continuity is not evidence of artistic quality. Screen composition, visual richness and fit to the supplied art references separately from temporal behavior.
+
 The assistant does the first pass: verifies the experiment, inspects images over time, investigates suspected defects, compares matched examples and recommends a small shortlist. Olof supplies taste, creative direction and playback judgments. Neither technical measurements nor the assistant's recommendation override a stated preference. An explanation being presented does not establish that Olof understood or retained it.
 
 Default human review: **one recommendation and one meaningfully different alternative**, often just one video when there is no useful choice. Keep all outputs and link the full experiment index, but do not require Olof to rank six nearly identical clips. Show the whole set when requested. Keep playable videos inline in chat.
