@@ -33,7 +33,7 @@ Run from `apps/deforum`: `uv run python projects/modern-model-study/experiments/
 
 Completed seven stills, with no rejected jobs or regeneration. Each authored concept uses the same text and seed across models, with the native sampling recipes above. This keeps the concept comparable, but a shared seed does not mean the models receive equivalent noise or produce equivalent compositions.
 
-**Assistant recommendation:** Krea's living cathedral. Its nested openings, miniature structures and organic curves offer several places for controlled growth and twisting. Klein's cathedral is the meaningful alternative: stronger recession and darker lighting, with more literal branches and coral. Olof has not reviewed this set yet; this is not an accepted model or style selection.
+**Assistant recommendation:** Krea's living cathedral. Its nested openings, miniature structures and organic curves offer several places for controlled growth and twisting. Klein's cathedral is the meaningful alternative: stronger recession and darker lighting, with more literal branches and coral. Olof calls both displayed cathedral openings really good. Both are accepted as attractive stills; he has not chosen a model, and feedback-animation quality remains untested. His feedback does not establish a preference for the other four concepts.
 
 ![All six authored openings; Krea on the left and Klein on the right](../exports/opening-art-v001/overview.jpg)
 
