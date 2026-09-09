@@ -204,3 +204,5 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Three-step feedback (2026-09-10, explicit):** Olof calls the latest result the best so far and prefers the three-step branch for its more interesting detail. He also finds it somewhat too flickery and asks how cadence, frame rate or other controls could improve it. He requests confirmation that generation remains recurrent; do not infer that he has already understood the timing explanation or selected an anti-flicker technique.
+
+**Motion target (2026-09-10, explicit):** Olof wants smooth morphing rather than flickering. Preserve interesting structural evolution and detail; reducing change until the image becomes static would miss the creative objective.
