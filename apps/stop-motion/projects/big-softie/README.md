@@ -12,6 +12,8 @@ An original 19.5-second hand-painted anime-style cel stop-motion short about a s
 
 ## Motion study
 
+[The paw-touch study](experiments/paw-touch.md) adds a clear foreleg gesture and an adult blink while keeping the remaining artwork fixed. [Watch the four-second clip](renders/paw-touch-v1.mp4).
+
 [Dense nuzzle experiment](experiments/dense-nuzzle.md) compares twelve reviewed poses with a 60 fps interpolation pass. [Watch the four-second comparison](renders/dense-nuzzle-comparison.mp4). This separate study preserves the v3 film above.
 
 ## Production

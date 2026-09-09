@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "modelVariant": "not explicitly reported",
+  "records": [
+    {
+      "id": "keyposes",
+      "prompt": "Use case: illustration-story animation production. Reference image supplies the exact golden puppy design, teal neckerchief, cream muzzle and paws, floppy amber ears, warm delicate painted anime linework. Create a clean SIX-CEL key-pose sheet of ONLY that puppy, no adult dog. Landscape sheet, precisely 3 columns x 2 rows, each cell square, equal size. Plain pure white background, generous clear margins between cels, NO borders, labels, text, props, scenery, ground shadows or checkerboard. Each puppy faces LEFT in the same side/three-quarter view, full body visible, same size, same warm muted gold colors and exact same head design. Camera never changes. Top-left: puppy standing naturally on all four paws, looking slightly up left. Top-middle: a small step LEFT, camera-near front paw reaching forward close to ground, weight carried on other three legs. Top-right: puppy after the step with its camera-near front paw just lifted from the ground, elbow flexing. Bottom-left: that front paw lifted to chest level, wrist gently folded, puppy leaning a little forward. Bottom-middle: same front leg now reaches LEFT and slightly DOWN, paw pads facing down, ready to place paw atop a friend's low resting paw; other three paws stay grounded. Bottom-right: the same extended front paw a little LOWER in gentle contact, puppy eyes soften happily, small smile. This is ONE anatomically coherent puppy acting sequence, not six different puppies. Preserve body volume, ear shapes, tail curl, head size and palette across all six; only intended leg action and small corresponding weight shift vary. Paw contact target is low, at ankle height, not a high-five. Four legs only, no duplicates.",
+      "references": [
+        "assets/source/settle-e.png"
+      ],
+      "original": "assets/paw-touch/source/keyposes.png",
+      "toolOutputBasename": "exec-1da03cd0-8188-4ca1-a068-723f1b64753e.png"
+    },
+    {
+      "id": "inbetweens",
+      "prompt": "Animation production: create SIX missing in-between cels for the attached puppy key-pose sheet. Same exact puppy design and pale warm gold/cream colors, teal neckerchief, left-facing camera, full-body, same scale and body position. Layout is again 3 columns x 2 rows, each cell 512-square in a 1536x1024 landscape sheet. White background; no labels, gridlines or props. Use ONLY the puppy's front leg on the LEFT side of the image (the leg already moving in the references). Keep head, body, tail and the three supporting legs fixed. Top-left: between reference top-left standing pose and reference top-right raised-paw pose, the moving paw has just cleared the ground by about 25 pixels, wrist softly bent. Top-middle: that same paw now 55 pixels off the ground, midway up toward the raised pose. Top-right: between reference top-right and bottom-left poses, paw folds inward and rises a little toward chest. Bottom-left: between reference bottom-left and bottom-middle poses, forearm unfolds halfway forward-left, paw still tucked slightly, making a graceful outward arc. Bottom-middle: between reference bottom-middle and bottom-right poses, extended paw descends about one third of the way toward landing, pads facing DOWN. Bottom-right: that paw descends two thirds toward landing, almost but not yet touching ground. Anatomically connected foreleg and distinct sensible intermediate positions. Exactly six full puppy drawings, one per cell. Do not change the puppy's face, palette, sizes or camera. Soft hand-painted anime linework, crisp edges and delicate texture. No duplicate limbs.",
+      "references": [
+        "assets/paw-touch/source/keyposes.png"
+      ],
+      "original": "assets/paw-touch/source/inbetweens.png",
+      "toolOutputBasename": "exec-da15263d-d484-41b9-b2c1-c69a1b53b508.png"
+    },
+    {
+      "id": "adult-blink",
+      "prompt": "Precise animation cel edit of this exact resting Rottweiler. ONLY close its eyes in a relaxed, happy slow blink, replacing the open eyes with gentle curved eyelid lines. Keep eyelids in the same anatomical location. Preserve absolutely everything else: exact head silhouette, muzzle position, mouth, ears, eyebrows, fur pattern and muted black and tan palette, red collar, every body part, paws, tail, canvas, camera, size and framing. No head motion, no nod, no repainting or saturation increase. Full resting adult dog alone, genuine transparent alpha background with no checkerboard. One cel, no text. This is a small expression edit for a film, not a new illustration.",
+      "references": [
+        "assets/paw-touch/cels/adult.png"
+      ],
+      "original": "assets/paw-touch/source/adult-blink.png",
+      "toolOutputBasename": "exec-4f7eca4b-7008-43a7-ac5f-bb74e94807d8.png"
+    }
+  ]
+}
