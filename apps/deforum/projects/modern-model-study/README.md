@@ -4,7 +4,7 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-Current result: the [matched Turbo schedule study](experiments/turbo-schedule.md) compares one final interval with eight small updates at identical starting noise. The single interval retains cleaner flame/arch shading in the no-motion test and a three-second Lanczos twist, and is the assistant's next working candidate. Both still simplify; Olof's playback feedback is pending. All 70 images and 96 remote files are local and verified, owned Pod/storage deleted, hourly spend zero. Krea remains selected; Klein and latent-motion integration are paused. Olof saw little difference in the earlier RGB-versus-latent test and authorizes the assistant to lead the next experiments.
+Current result: [ten-second transitions and native Turbo tails](experiments/turbo-transitions.md) are complete. The accepted single-step recipe preserves recognizable forms through twist/expansion but still flattens over ten seconds. Short branches from the same frame show two steps adding contrast and three restoring richer architecture with more redraw. Three is the assistant's next creative candidate; human playback feedback is pending. All 61 images and 124 remote files are local and verified; both owned Pods are deleted. The independent persistent-volume trial remains separate.
 
 The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
 

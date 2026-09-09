@@ -198,3 +198,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Experiment leadership (2026-09-09, explicit):** Olof sees little difference between the RGB and latent results, feels unsure how to progress, and asks the assistant to lead experimental choices. He approves the matched Turbo schedule comparison and continued practical testing. Screen results first and surface a small, understandable comparison; this is not evidence that a new recipe is preferred or that the hypotheses are proven.
+
+
+**Turbo schedule preference (2026-09-09, explicit):** Olof agrees that the single final Turbo interval looks better than the eight-small-update comparison. He requests a ten-second transition shot and a follow-up using the final two and three intervals. This accepts the visible result, not a causal explanation of distillation or a general claim that fewer steps are always better.
