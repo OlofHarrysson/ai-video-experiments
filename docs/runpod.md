@@ -1,5 +1,7 @@
 # RunPod tools
 
+For modern-model experiments, use the [persistent-volume Pod workflow](../apps/deforum/POD.md). Olof authorizes retaining the 50 GB `deforum-models` standard volume between sessions ($3.50/month); delete completed experiment Pods while keeping this reusable model storage. Historical session cleanup reports below describe their own temporary resources.
+
 Latest evidence: [parallel experiment session](research/parallel-experiments-session.md) — five more custom-worker jobs, three public image calls, all outputs local and temporary resources removed.
 
 Current evidence: [serverless session results](../apps/deforum/projects/botanical-cathedral/experiments/serverless-results.md). Three hosted jobs completed; outputs are local, endpoint min/max workers are zero, and cloud storage is deleted. Cached requests queued for about 1.2 seconds; the first host failed during container creation.

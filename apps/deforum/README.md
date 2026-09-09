@@ -1,5 +1,7 @@
 # Deforum experiment
 
+Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
+
 Work from `apps/deforum/`. The Mac manages spatial transforms, cadence, workflow submission and local archives; ComfyUI on RunPod generates images. Earlier experiments using Difforum/depth nodes remain preserved.
 
 New RGB spatial warps use `spatial_warp.remap_rgb`, with Lanczos4 interpolation and reflected borders. Olof selected this after the matched bilinear/Lanczos comparison. Historical experiment scripts retain their recorded interpolation settings for reproduction.
