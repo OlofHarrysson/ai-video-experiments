@@ -10,6 +10,7 @@ from mathutils import Vector, Quaternion, Matrix
 
 ROOT=Path(__file__).resolve().parent
 ASSETS=ROOT/'assets'
+HEAD_OFFSET=(-.20,-.14)
 SOURCE=ROOT.parent/'playful-puppy/output/v003/playful-puppy.blend'
 P=argparse.ArgumentParser()
 P.add_argument('--version',default='v001')
@@ -58,7 +59,11 @@ for bone in rig.data.edit_bones:
         bone.head.x-=.14; bone.tail.x-=.14
 for name in ['ear.near','ear.far']:
     b=rig.data.edit_bones[name]
-    b.head=(.77,b.head.y,2.18); b.tail=(.51,b.tail.y,1.46)
+    b.head=(.77+HEAD_OFFSET[0],b.head.y,2.18+HEAD_OFFSET[1])
+    b.tail=(.51+HEAD_OFFSET[0],b.tail.y,1.46+HEAD_OFFSET[1])
+tip=rig.data.edit_bones.new('ear.tip')
+tip.head=(.43,-.34,1.68);tip.tail=(.34,-.34,1.25)
+tip.parent=rig.data.edit_bones['ear.near']
 bpy.ops.object.mode_set(mode='OBJECT'); rig.select_set(False)
 
 def key_pitch(name,f,pitch):
@@ -67,9 +72,16 @@ def key_pitch(name,f,pitch):
     pb.rotation_quaternion=rest.inverted() @ Quaternion((0,1,0),math.radians(pitch)) @ rest
     pb.keyframe_insert('rotation_quaternion',frame=frame30(f),group=name)
 
-# Remove out-of-plane yaw/roll: all painted pieces remain in the picture plane.
-for f,p in [(1,-3),(10,-9),(24,-31),(33,-35),(43,1),(48,4),(55,1),
-            (60,-7),(65,-14),(69,-12),(76,-4),(83,-5),(90,-5)]:
+# Head leads the invitation and follows the landing, independently of the spine.
+for layer in action.layers:
+    for strip in layer.strips:
+        for bag in strip.channelbags:
+            for fc in list(bag.fcurves):
+                if fc.data_path.startswith('pose.bones["HEAD"]'):
+                    bag.fcurves.remove(fc)
+for f,p in [(1,-3),(7,-3),(13,8),(19,-8),(24,-29),(33,-34),
+            (39,-21),(43,-6),(48,-2),(55,-6),(60,1),(65,-5),
+            (69,2),(74,-10),(81,-2),(86,-5),(90,-5)]:
     key_pitch('HEAD',f,p)
 for f in range(1,91,3):
     key_pitch('tail.01',f,9*math.sin((f-1)*.32))
@@ -78,6 +90,9 @@ for side in ['near','far']:
     for f,p in [(1,0),(10,4),(26,-11),(35,-7),(44,5),(51,25),(57,17),
                 (64,-20),(69,-27),(74,13),(80,-5),(86,1),(90,0)]:
         key_pitch('ear.'+side,f,p)
+for f,p in [(1,0),(12,2),(24,-6),(31,3),(39,0),(47,-6),(54,15),
+            (60,10),(66,-11),(71,-17),(77,12),(83,-5),(90,0)]:
+    key_pitch('ear.tip',f,p)
 for fc in fcurves(action):
     for k in fc.keyframe_points:
         k.handle_left_type=k.handle_right_type='AUTO_CLAMPED'
@@ -95,6 +110,19 @@ def mat_image(name,path,tint=(1,1,1),fade_root=False):
     mul.inputs[2].default_value=(*tint,1)
     tree.links.new(tex.outputs['Color'],mul.inputs[1]);tree.links.new(mul.outputs[0],emit.inputs['Color'])
     alpha=tex.outputs['Alpha']
+    if name=='Drawing | attentive':
+        # Blend the deliberately open jaw base into the overlapping neck artwork.
+        uv=tree.nodes.new('ShaderNodeTexCoord');sep=tree.nodes.new('ShaderNodeSeparateXYZ')
+        tree.links.new(uv.outputs['UV'],sep.inputs[0])
+        fades=[]
+        for channel,start,end in [('Y',.005,.08),('X',.53,.65)]:
+            fade=tree.nodes.new('ShaderNodeMapRange');fade.clamp=True
+            fade.inputs['From Min'].default_value=start;fade.inputs['From Max'].default_value=end
+            tree.links.new(sep.outputs[channel],fade.inputs['Value']);fades.append(fade.outputs[0])
+        keep=tree.nodes.new('ShaderNodeMath');keep.operation='MAXIMUM'
+        tree.links.new(fades[0],keep.inputs[0]);tree.links.new(fades[1],keep.inputs[1])
+        mult=tree.nodes.new('ShaderNodeMath');mult.operation='MULTIPLY'
+        tree.links.new(alpha,mult.inputs[0]);tree.links.new(keep.outputs[0],mult.inputs[1]);alpha=mult.outputs[0]
     if path.name in ['front_leg.png','front_leg_bow.png','front_paw.png']:
         uv=tree.nodes.new('ShaderNodeTexCoord');sep=tree.nodes.new('ShaderNodeSeparateXYZ');tree.links.new(uv.outputs['UV'],sep.inputs[0])
         cut=tree.nodes.new('ShaderNodeMapRange');cut.clamp=True
@@ -176,9 +204,13 @@ def rect(x0,x1,z0,z1):return lambda u,v:(x0+(x1-x0)*u,z1-(z1-z0)*v)
 def rigid(bone):return lambda u,v,x,z:{bone:1}
 
 def body_weights(u,v,x,z):
-    neck=.24*smooth(.1,.7,x)*smooth(1.15,1.65,z)
+    neck=smooth(.0,.55,x)*smooth(1.08,1.62,z)
     return {'BODY':1-neck,'HEAD':neck}
-body=mesh_piece('Paint | torso',ASSETS/'body.png',rect(-1.03,.78,.65,1.74),body_weights,0)
+def body_map(u,v):
+    x,z=rect(-1.03,.78,.65,1.74)(u,v)
+    extension=smooth(.53,.85,u)*smooth(.90,.30,v)
+    return x+.14*extension,z+.06*extension
+body=mesh_piece('Paint | torso',ASSETS/'body.png',body_map,body_weights,0)
 
 # Atlas centerline landmarks are mapped to the skeleton in its rest pose.
 def leg_mapper(name):
@@ -238,15 +270,20 @@ for name in ['front.near','front.far']:
     drawing_swap(leg_objects[name],alt,[(1,False),(16,False),(17,True),(28,True),(29,False),(72,False)])
 scene.frame_set(1)
 
-head_box=rect(.48,1.68,1.38,2.52)
+head_box=rect(.48+HEAD_OFFSET[0],1.68+HEAD_OFFSET[0],1.38+HEAD_OFFSET[1],2.52+HEAD_OFFSET[1])
 head=mesh_piece('Drawing | attentive',ASSETS/'head.png',head_box,rigid('HEAD'),-.10)
 happy=mesh_piece('Drawing | delighted eyes',ASSETS/'head-delighted.png',head_box,rigid('HEAD'),-.11)
 # Discrete, held drawing replacements; no dissolve between facial expressions.
-expression=[(1,False),(18,False),(19,True),(25,True),(26,False),(52,False),(53,True),(57,True),(58,False),(72,False)]
+expression=[(1,False),(19,False),(20,True),(21,True),(22,False),(54,False),(55,True),(56,True),(57,False),(72,False)]
 drawing_swap(head,happy,expression)
 head.animation_data_clear();head.hide_render=False;head.hide_viewport=False
 
-ear=mesh_piece('Paint | floppy ear',ASSETS/'ear.png',rect(.44,.91,1.35,2.27),rigid('ear.near'),-.16)
+def ear_weights(u,v,x,z):
+    root=1-smooth(.02,.25,v)
+    tip=smooth(.40,.90,v)
+    return {'HEAD':root,'ear.near':(1-root)*(1-tip),'ear.tip':(1-root)*tip}
+ear=mesh_piece('Paint | floppy ear',ASSETS/'ear.png',
+    rect(.44+HEAD_OFFSET[0],.91+HEAD_OFFSET[0],1.35+HEAD_OFFSET[1],2.27+HEAD_OFFSET[1]),ear_weights,-.16)
 def tail_map(u,v):return (-.67-1.0*u,1.21+.93*(1-v))
 def tail_weights(u,v,x,z):
     w=smooth(.30,.75,u);return {'tail.01':1-w,'tail.02':w}

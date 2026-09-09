@@ -19,7 +19,8 @@ if not args.verify_only and any(out.glob('frame_*.png')):
     raise FileExistsError('Choose an empty render folder to preserve prior frames')
 scene=bpy.context.scene
 rig=bpy.data.objects['BISCUIT 2D | pose controls']
-assert len(rig.data.bones)==23, len(rig.data.bones)
+assert len(rig.data.bones)==24, len(rig.data.bones)
+assert rig.data.bones['ear.tip'].parent.name=='ear.near'
 assert rig.animation_data.action is not None
 assert scene.frame_end==72 and scene.render.fps==24
 assert all(any(m.type=='ARMATURE' for m in ob.modifiers) for ob in bpy.data.objects
