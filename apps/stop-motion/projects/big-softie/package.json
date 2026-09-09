@@ -1,0 +1,16 @@
+{
+  "name": "big-softie",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.33 preview",
+    "check": "npx hyperframes@0.8.33 check --strict",
+    "render": "npx hyperframes@0.8.33 render --quality high --fps 24 --workers 2 --strict-all --output renders/big-softie.mp4",
+    "publish": "npx --yes hyperframes@0.8.33 publish",
+    "build": "node scripts/build-film.mjs"
+  },
+  "devDependencies": {
+    "gsap": "^3.15.0",
+    "sharp": "^0.35.4"
+  }
+}

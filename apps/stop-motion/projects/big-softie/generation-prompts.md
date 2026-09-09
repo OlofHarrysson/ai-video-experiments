@@ -1,0 +1,51 @@
+# Generation prompts
+
+Exact built-in image generation call bodies from this production. The routed model variant was not exposed by the tool. Local path prefixes are normalized below.
+
+## Batch 1
+
+```javascript
+// @exec: {"yield_time_ms": 120000, "max_output_tokens": 1200}
+const result=await tools.image_gen__imagegen({prompt:"Create a gorgeous production keyframe for an original Japanese hand-drawn animated short called Big Softie. Landscape 16:9. Art direction inspired by the warm, beautifully observed hand-painted anime filmmaking of Spirited Away: watercolor/gouache park background, delicate natural linework, exceptionally appealing expressive animal anatomy, restrained cel shading, cinematic warm late-afternoon sunlight, no 3D look. Two original dog characters in a leafy fenced dog park: on the LEFT, a tiny honey-gold puppy with floppy darker caramel ears, a cream muzzle and chest, short soft fur and a small teal triangular neckerchief; on the RIGHT, an adult stocky black-and-tan Rottweiler, about twice the puppy's shoulder height, natural folded ears, broad face, tan eyebrow spots and muzzle, a plain brick-red collar and a long natural tail. Both are dogs on four legs, no human hands. Puppy stands tentatively facing right toward big dog; Rottweiler stands facing left, visually imposing but soulful and gentle, mouth closed, no growling or teeth. Keep both entire bodies visible. A small faded coral-red rubber ball lies on the grass between them. Stage action across a flat sunlit grass clearing, horizontal low wooden fence behind, a wooden park gate at far left, large leafy oak behind at right, airy distant hills and soft blue sky. Camera at dog eye level, medium-wide two shot, characters grounded on same plane, ample grass foreground, no humans, no other dogs, no text, no border. Crisp feature-animation cel quality, background detail supports the characters rather than overwhelming them."});
+store("puppy_keyart",result); generatedImage(result);
+
+```
+
+## Batch 2
+
+```javascript
+// @exec: {"yield_time_ms": 120000, "max_output_tokens": 1500}
+const ref="<GENERATED_IMAGES>/exec-e034348f-ced9-40b0-b13b-829620b19731.png";
+const prompts=[
+["park","Edit the supplied image into the clean background plate for this film. Remove both dogs and the red ball completely and paint in the grass, fence, tree and scenery behind them. Preserve original framing, dimensions, sunset lighting, every visible background detail and original hand-painted anime style. This is exactly the same park viewed from exactly the same camera. No characters or animals. No text."],
+["puppy-run","Use the supplied image as an exact character/style reference for the SMALL GOLDEN PUPPY ONLY. Create a production animation sprite sheet with EXACTLY FOUR poses of this puppy, arranged in a strict 2 by 2 grid of equal cells, on a genuinely TRANSPARENT alpha background. No scenery, ground, cast shadows, checkerboard, text, labels, panel outlines or other objects. Each pose is a full-body drawing, clear separation and ample transparent margin inside its own cell. Consistent character proportions and same size across all cells. All four drawings show the puppy FACING RIGHT in a strict side view, teal triangular neckerchief, honey-gold fur, caramel floppy ears, cream muzzle/chest, fluffy tail. These are four consecutive key poses of a joyful bounding RUN CYCLE: top-left airborne extension with forepaws forward and hindpaws back; top-right front feet touching ground with hindlegs coming forward; bottom-left compressed gathering pose with hindfeet beneath body and forefeet lifted; bottom-right launch, hindfeet pushing backward, forelegs folding toward chest, ears trailing. Distinct anatomically convincing leg positions, no extra legs. The entire silhouette including tail must be in each cell. Match the reference's exquisite crisp anime ink outlines, warm cel shadows and appealing expressive face. Output a square high-resolution 2048x2048 sprite sheet, not a scene."],
+["rott-bow","Use supplied image as exact character/style reference for the BIG BLACK AND TAN ROTTWEILER ONLY. Create a production animation sprite sheet with EXACTLY FOUR poses, strict 2 by 2 grid equal cells, genuinely transparent alpha background. No scenery, no ground, no cast shadows, no checkerboard, no text, no labels or dividing lines. Full-body drawings with ample clear margin inside each cell, consistent size and identical proportions. The Rottweiler always FACES LEFT in side view, natural folded ears, long tail, black fur, tan eyebrows/muzzle/paws/chest, plain brick red collar. Four successive acting poses: top-left standing tall, all paws planted, mouth closed, looking down with serious but kind eyes; top-right beginning to invite play by lowering head and bending elbows, hindquarters still high; bottom-left full joyful PLAY BOW, forelegs stretched forward flat on ground, chest low, hips high, long tail lifted, mouth open friendly with small pink tongue; bottom-right same full play bow, slight head tilt and tail curved the other direction, smiling. Keep the exact reference character design and warm hand-drawn anime linework/cel coloring. Each dog has four anatomically consistent legs. Output square high-resolution 2048x2048."]
+];
+const results=await Promise.allSettled(prompts.map(async([id,prompt])=>{const r=await tools.image_gen__imagegen({referenced_image_paths:[ref],prompt});store("softie_"+id,r);generatedImage(r);return id;}));text(results.map(r=>r.status==="fulfilled"?r.value:String(r.reason)));
+
+```
+
+## Batch 3
+
+```javascript
+// @exec: {"yield_time_ms": 120000, "max_output_tokens": 1000}
+const base="<PROJECT>/assets/source/";
+const jobs=[
+["puppy-run-alpha",[base+"puppy-run.png"],"Remove ONLY the checkerboard background from this four-pose puppy sprite sheet. It must be genuinely transparent PNG alpha outside the puppies and in gaps between their legs. Preserve all four character drawings, exact colors, all fine outlines, positions and dimensions. Do not draw a checkerboard; make the background pixels fully transparent. No shadows, no other changes."],
+["puppy-acting",[base+"key-art.png"],"Use reference for exact SMALL PUPPY design. Create a four-pose production cel sheet, strict 2x2 equally spaced layout, full bodies, ample margins, genuinely TRANSPARENT alpha background, no ground, no shadows, no checkerboard, no text. All poses face RIGHT in the same three-quarter side view and same size. Top-left: standing on four planted paws, mouth closed, curious neutral expression, tail raised. Top-right: same standing puppy but head drawn back, ears lowered, tail low, mildly intimidated wide eyes looking up at a bigger offscreen dog, weight shifting back; do not make exaggerated terror. Bottom-left: puppy leaning forward with bright welcoming eyes and mouth open, tail up. Bottom-right: a puppy play bow, elbows bent and forepaws stretched right, hindquarters high, joyful expression. Honey-gold fur, darker caramel floppy ears, cream muzzle/chest and feet, teal triangular neckerchief, exact appealing hand-drawn anime style and warm cel shadows of reference. Consistent anatomy: only four legs. No other dogs or props."],
+["rott-run",[base+"key-art.png"],"Use reference for exact BIG ROTTWEILER design. Create FOUR animation cels in strict 2x2 equal cell grid on a genuinely TRANSPARENT alpha background. No ground, shadows, checkerboard, text or labels. Ample margins and each full body entirely visible. Adult black-and-tan Rottweiler with folded ears, broad gentle muzzle, tan eyebrow spots and paws, brick red collar and long natural tail. Each pose FACES RIGHT in strict side view, same size and character proportions. Four consecutive run-cycle poses: top-left airborne with forelegs reaching forward and hindlegs stretching back; top-right front paws ground contact, hindlegs swinging beneath body; bottom-left compressed gather with hindfeet under body and front paws raised; bottom-right powerful hindleg launch, forepaws tucked, ears bouncing. Anatomically grounded expressive running, happy dog playing, no aggression. Match reference crisp hand-drawn anime linework and cel coloring."]
+];
+const pending=Promise.allSettled(jobs.map(async([id,refs,prompt])=>{const r=await tools.image_gen__imagegen({referenced_image_paths:refs,prompt});store("softie_"+id,r);generatedImage(r);return id;}));
+await yield_control();
+text(await pending);
+
+```
+
+## Batch 4
+
+```javascript
+// @exec: {"yield_time_ms": 120000, "max_output_tokens": 1000}
+const r=tools.image_gen__imagegen({referenced_image_paths:["<PROJECT>/assets/source/key-art.png"],prompt:"Create the closing shot of the SAME original hand-drawn anime film, maintaining exact dog character designs, warm afternoon colors, crisp linework and the same fenced leafy dog park. Landscape 16:9 cinematic medium shot at dog eye level. The big black-and-tan Rottweiler with brick-red collar and long tail is now lying contentedly on the sunlit grass, facing LEFT, body to the right. The tiny honey-gold puppy with floppy caramel ears, cream muzzle/chest and teal triangular neckerchief is curled at his front left side, leaning his cheek against the Rottweiler's broad front shoulder. Both have eyes gently closed, visibly content after playing, mouths closed and little relaxed smiles. A single small coral-red ball lies by the puppy's front paws. The puppy is about half his shoulder height when standing, clearly much smaller, not an adult retriever. Rottweiler's two front paws extended beside puppy. Entire pair comfortably visible, with warm grassy space in the left third of frame for a later title. Preserve original park geography: horizontal low wooden fence, great oak behind right, hills beyond, warm shafts of sunlight and subtle foreground leaves. No other dogs, no humans, no text. A tender quiet ending frame worthy of a feature animated film, believable natural animal anatomy, original reference is character and setting guide."});
+await yield_control();const result=await r;store("softie_ending",result);generatedImage(result);
+
+```

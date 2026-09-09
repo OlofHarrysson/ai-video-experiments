@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><title>Big Softie</title><script src="assets/gsap.min.js"></script><style>
+*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#273522}#film{width:1920px;height:1080px;position:relative;overflow:hidden}#world{position:absolute;width:1920px;height:1080px;transform-origin:0 0}.plate{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover}.cel{position:absolute;left:0;top:0;transform-origin:0 0;opacity:0}.shadow{position:absolute;left:0;top:0;width:100px;height:24px;border-radius:50%;background:rgba(36,37,19,.24);filter:blur(9px);transform-origin:50% 50%}#ball{position:absolute;left:0;top:0;width:66px;height:66px;border-radius:50%;background:radial-gradient(circle at 33% 28%,#da9274 0%,#b86048 55%,#834538 100%);border:3px solid #6b4935;box-shadow:inset -7px -8px 0 #934f3b;transform-origin:center}#ball:after{content:'';position:absolute;inset:9px;border:2px dashed #9c5942;border-radius:50%;opacity:.5}#ending{position:absolute;inset:0;opacity:0;overflow:hidden}#end-plate{width:1920px;height:1080px;object-fit:cover;transform-origin:50% 55%}#title{position:absolute;left:120px;top:155px;color:#263a2e;font-family:Georgia,serif;font-size:98px;font-weight:normal;line-height:1.1;letter-spacing:-3px;text-shadow:0 1px 5px #f6deb6;opacity:0}#fade{position:absolute;inset:0;background:#20291d;opacity:0}
+</style></head><body><div id="film" data-composition-id="big-softie" data-width="1920" data-height="1080" data-duration="16.5"><div id="picture" class="clip" data-start="0" data-duration="16.5" data-track-index="0" data-layout-allow-overflow><div id="world"><img class="plate" src="assets/source/park.png" alt="Sunlit dog park"><div id="puppy-shadow" class="shadow"></div><div id="rott-shadow" class="shadow"></div><div id="ball-shadow" class="shadow"></div><img id="rott-bow-0" class="cel" src="assets/cels/rott-bow-0.png" width="603" height="467" alt="rott-bow-0">
+<img id="rott-bow-1" class="cel" src="assets/cels/rott-bow-1.png" width="561" height="435" alt="rott-bow-1">
+<img id="rott-bow-2" class="cel" src="assets/cels/rott-bow-2.png" width="594" height="496" alt="rott-bow-2">
+<img id="rott-bow-3" class="cel" src="assets/cels/rott-bow-3.png" width="593" height="462" alt="rott-bow-3">
+<img id="rott-run-0" class="cel" src="assets/cels/rott-run-0.png" width="774" height="337" alt="rott-run-0">
+<img id="rott-run-1" class="cel" src="assets/cels/rott-run-1.png" width="705" height="422" alt="rott-run-1">
+<img id="rott-run-2" class="cel" src="assets/cels/rott-run-2.png" width="677" height="430" alt="rott-run-2">
+<img id="rott-run-3" class="cel" src="assets/cels/rott-run-3.png" width="700" height="425" alt="rott-run-3">
+<img id="puppy-run-0" class="cel" src="assets/cels/puppy-run-0.png" width="581" height="316" alt="puppy-run-0">
+<img id="puppy-run-1" class="cel" src="assets/cels/puppy-run-1.png" width="515" height="399" alt="puppy-run-1">
+<img id="puppy-run-2" class="cel" src="assets/cels/puppy-run-2.png" width="520" height="443" alt="puppy-run-2">
+<img id="puppy-run-3" class="cel" src="assets/cels/puppy-run-3.png" width="521" height="436" alt="puppy-run-3">
+<img id="puppy-acting-0" class="cel" src="assets/cels/puppy-acting-0.png" width="537" height="493" alt="puppy-acting-0">
+<img id="puppy-acting-1" class="cel" src="assets/cels/puppy-acting-1.png" width="558" height="477" alt="puppy-acting-1">
+<img id="puppy-acting-2" class="cel" src="assets/cels/puppy-acting-2.png" width="586" height="476" alt="puppy-acting-2">
+<img id="puppy-acting-3" class="cel" src="assets/cels/puppy-acting-3.png" width="573" height="449" alt="puppy-acting-3">
+<img id="rott-run-0-left" class="cel" src="assets/cels/rott-run-0-left.png" width="774" height="337" alt="rott-run-0-left">
+<img id="rott-run-1-left" class="cel" src="assets/cels/rott-run-1-left.png" width="705" height="422" alt="rott-run-1-left">
+<img id="rott-run-2-left" class="cel" src="assets/cels/rott-run-2-left.png" width="677" height="430" alt="rott-run-2-left">
+<img id="rott-run-3-left" class="cel" src="assets/cels/rott-run-3-left.png" width="700" height="425" alt="rott-run-3-left">
+<img id="puppy-run-0-left" class="cel" src="assets/cels/puppy-run-0-left.png" width="581" height="316" alt="puppy-run-0-left">
+<img id="puppy-run-1-left" class="cel" src="assets/cels/puppy-run-1-left.png" width="515" height="399" alt="puppy-run-1-left">
+<img id="puppy-run-2-left" class="cel" src="assets/cels/puppy-run-2-left.png" width="520" height="443" alt="puppy-run-2-left">
+<img id="puppy-run-3-left" class="cel" src="assets/cels/puppy-run-3-left.png" width="521" height="436" alt="puppy-run-3-left"><div id="ball"></div></div><div id="ending"><img id="end-plate" src="assets/source/ending.png" alt="The two friends resting together"></div><div id="title" data-layout-allow-overlap>Big Softie</div><div id="fade"></div></div><audio id="score" src="assets/score-master.wav" data-start="0" data-duration="16.5" data-track-index="5" data-volume="0.8"></audio></div><script>
+const M={"rott-bow-0":{"width":603,"height":467,"sourceCell":[0,0,627,627],"bounds":[24,107,626,573]},"rott-bow-1":{"width":561,"height":435,"sourceCell":[627,0,627,627],"bounds":[39,142,599,576]},"rott-bow-2":{"width":594,"height":496,"sourceCell":[0,627,627,627],"bounds":[21,31,614,526]},"rott-bow-3":{"width":593,"height":462,"sourceCell":[627,627,627,627],"bounds":[17,75,609,536]},"rott-run-0":{"width":774,"height":337,"sourceCell":[0,0,768,512],"bounds":[26,51,767,387]},"rott-run-1":{"width":705,"height":422,"sourceCell":[768,0,768,512],"bounds":[0,50,737,471]},"rott-run-2":{"width":677,"height":430,"sourceCell":[0,512,768,512],"bounds":[41,20,717,449]},"rott-run-3":{"width":700,"height":425,"sourceCell":[768,512,768,512],"bounds":[34,18,733,442]},"puppy-run-0":{"width":581,"height":316,"sourceCell":[0,0,627,627],"bounds":[45,132,625,447]},"puppy-run-1":{"width":515,"height":399,"sourceCell":[627,0,627,627],"bounds":[71,136,585,534]},"puppy-run-2":{"width":520,"height":443,"sourceCell":[0,627,627,627],"bounds":[86,39,605,481]},"puppy-run-3":{"width":521,"height":436,"sourceCell":[627,627,627,627],"bounds":[70,46,590,481]},"puppy-acting-0":{"width":537,"height":493,"sourceCell":[0,0,724,543],"bounds":[95,22,631,514]},"puppy-acting-1":{"width":558,"height":477,"sourceCell":[724,0,724,543],"bounds":[59,37,616,513]},"puppy-acting-2":{"width":586,"height":476,"sourceCell":[0,543,724,543],"bounds":[72,21,657,496]},"puppy-acting-3":{"width":573,"height":449,"sourceCell":[724,543,724,543],"bounds":[79,40,651,488]},"rott-run-0-left":{"width":774,"height":337,"sourceCell":[0,0,768,512],"bounds":[26,51,767,387],"mirroredFrom":"rott-run-0"},"rott-run-1-left":{"width":705,"height":422,"sourceCell":[768,0,768,512],"bounds":[0,50,737,471],"mirroredFrom":"rott-run-1"},"rott-run-2-left":{"width":677,"height":430,"sourceCell":[0,512,768,512],"bounds":[41,20,717,449],"mirroredFrom":"rott-run-2"},"rott-run-3-left":{"width":700,"height":425,"sourceCell":[768,512,768,512],"bounds":[34,18,733,442],"mirroredFrom":"rott-run-3"},"puppy-run-0-left":{"width":581,"height":316,"sourceCell":[0,0,627,627],"bounds":[45,132,625,447],"mirroredFrom":"puppy-run-0"},"puppy-run-1-left":{"width":515,"height":399,"sourceCell":[627,0,627,627],"bounds":[71,136,585,534],"mirroredFrom":"puppy-run-1"},"puppy-run-2-left":{"width":520,"height":443,"sourceCell":[0,627,627,627],"bounds":[86,39,605,481],"mirroredFrom":"puppy-run-2"},"puppy-run-3-left":{"width":521,"height":436,"sourceCell":[627,627,627,627],"bounds":[70,46,590,481],"mirroredFrom":"puppy-run-3"}};
+const E=Object.fromEntries(Object.keys(M).map(k=>[k,document.getElementById(k)]));
+const el=id=>document.getElementById(id), clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), mix=(a,b,t)=>a+(b-a)*t, smooth=t=>{t=clamp(t);return t*t*(3-2*t)};
+function draw(name,x,y,s,flip=false,rotation=0){if(flip)name=name+'-left';const m=M[name],e=E[name];e.style.opacity=1;const xx=x-m.width*s/2;const yy=y-m.height*s;e.style.transform='translate('+ xx+'px,'+yy+'px) scale('+s+','+s+')';}
+function shadow(id,x,y,w,air=0){const e=el(id);e.style.opacity=.9-air*.007;e.style.transform='translate('+(x-50)+'px,'+(y-12)+'px) scale('+w/100+','+(1-air*.006)+')';}
+function camera(scale,x,y){el('world').style.transform='translate('+x+'px,'+y+'px) scale('+scale+')';}
+function film(t){
+ const q=Math.floor((t+0.00001)*12)/12;
+ Object.values(E).forEach(e=>e.style.opacity=0);
+ ['puppy-shadow','rott-shadow','ball-shadow','ball'].forEach(id=>el(id).style.opacity=0);
+ el('world').style.opacity=q<12.5?1:0;el('ending').style.opacity=q>=12.5?1:0;el('title').style.opacity=0;el('fade').style.opacity=t<.25?1-t/.25:t>16?clamp((t-16)/.5):0;
+ const py=855,ry=840;
+ let px=520,rx=1330,pp='puppy-acting-0',rp='rott-bow-0',ps=.65,rs=1.30,pair=0,rair=0,ballx=900,bally=857,flipP=false,flipR=false;
+ camera(1,0,0);
+ if(q<2.25){ // Puppy enters from the gate; distant big dog waits in same position.
+  px=mix(-170,510,smooth(q/2.0));
+  if(q<1.92){const f=Math.floor(q*6)%4;pp='puppy-run-'+f;ps=.68;pair=[75,0,0,20][f];}
+  rx=1330;rs=1.30;shadow('rott-shadow',rx,ry,460);draw(rp,rx,ry,rs);
+  camera(1.06,-25,-35);
+ }else if(q<3.75){ // Reveal the height difference; hold the line of action.
+  px=520;rx=1330;
+  pp=q<2.75?'puppy-acting-0':'puppy-acting-1';
+  if(q>=2.75)px=520-18*smooth((q-2.75)/.4);
+  shadow('rott-shadow',rx,ry,460);draw(rp,rx,ry,rs);
+ }else if(q<5.0){ // A close reaction preserves puppy on left looking right.
+  pp='puppy-acting-1';px=500;camera(1.8,-380,-570);
+  shadow('rott-shadow',rx,ry,460);draw(rp,rx,ry,rs);
+ }else if(q<7.25){ // The large dog lowers himself to invite play.
+  const u=q-5;rp=u<.35?'rott-bow-0':u<.6?'rott-bow-1':'rott-bow-'+(2+Math.floor((u-.6)*4)%2);
+  pp=u<1.1?'puppy-acting-1':'puppy-acting-2';px=510;
+  camera(1.10,-155,-85);
+  shadow('rott-shadow',rx,ry,460);draw(rp,rx,ry,rs);
+ }else if(q<8.5){ // Puppy answers the bow, with anticipation before the chase.
+  rp='rott-bow-'+(2+Math.floor(q*4)%2);pp=q<7.58?'puppy-acting-2':'puppy-acting-3';
+  px=540;camera(1.04,-35,-35);
+  shadow('rott-shadow',rx,ry,460);draw(rp,rx,ry,rs);
+ }else if(q<10.5){ // Puppy turns left and invites pursuit; Rottweiler follows from his established position.
+  const u=q-8.5;const f=Math.floor(u*6)%4;
+  px=540-1000*u;rx=1330-1000*u;flipP=true;
+  pp='puppy-run-'+f;ps=.68;pair=[75,0,0,20][f];
+  rp='rott-run-'+((f+2)%4);rs=1.04;rair=[88,0,0,15][(f+2)%4];
+  ballx=px+240;bally=850-50*Math.abs(Math.sin(u*Math.PI*2));
+  shadow('rott-shadow',rx,ry,450,rair);draw(rp,rx,ry-rair,rs,true);
+  camera(1,0,0);
+ }else if(q<12.5){ // After both exit left, cut to their return, puppy leading right.
+  const u=q-10.5;const f=Math.floor(u*6)%4;
+  px=-140+870*u;rx=px-720;
+  pp='puppy-run-'+f;ps=.68;pair=[75,0,0,20][f];flipP=false;
+  rp='rott-run-'+((f+2)%4);rs=1.04;rair=[88,0,0,15][(f+2)%4];
+  ballx=px-245;bally=850-35*Math.abs(Math.sin(u*Math.PI*2));
+  shadow('rott-shadow',rx,ry,450,rair);draw(rp,rx,ry-rair,rs);
+  camera(1.04,-38,-35);
+ }
+ if(q<12.5){shadow('puppy-shadow',px,py,250,pair);draw(pp,px,py-pair,ps,flipP);el('ball').style.opacity=q<8.5?1:0;el('ball').style.transform='translate('+(ballx-33)+'px,'+(bally-66)+'px) rotate('+(q>=8.5?(q-8.5)*330:0)+'deg)';if(q<8.5)shadow('ball-shadow',ballx,857,62,857-bally);}
+ else {const u=clamp((t-12.5)/3.5);el('end-plate').style.transform='scale('+mix(1,1.025,smooth(u))+')';el('title').style.opacity=smooth((t-14)/.8);}
+}
+const driver={t:0};const tl=gsap.timeline({paused:true});tl.to(driver,{t:16.5,duration:16.5,ease:'none',onUpdate:()=>film(driver.t)});window.renderFilm=film;film(0);window.__timelines=window.__timelines||{};window.__timelines['big-softie']=tl;
+</script></body></html>
