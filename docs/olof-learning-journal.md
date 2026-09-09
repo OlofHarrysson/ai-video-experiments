@@ -201,3 +201,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Turbo schedule preference (2026-09-09, explicit):** Olof agrees that the single final Turbo interval looks better than the eight-small-update comparison. He requests a ten-second transition shot and a follow-up using the final two and three intervals. This accepts the visible result, not a causal explanation of distillation or a general claim that fewer steps are always better.
+
+
+**Three-step feedback (2026-09-10, explicit):** Olof calls the latest result the best so far and prefers the three-step branch for its more interesting detail. He also finds it somewhat too flickery and asks how cadence, frame rate or other controls could improve it. He requests confirmation that generation remains recurrent; do not infer that he has already understood the timing explanation or selected an anti-flicker technique.

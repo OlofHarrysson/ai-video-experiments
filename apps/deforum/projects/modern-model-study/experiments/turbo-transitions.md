@@ -63,3 +63,18 @@ The final archive preserves **124 remote input/output files**, including two bun
 Both owned Pods and their attached storage are deleted. The account is **not idle**: the separate, user-authorized persistent-volume trial owns an active Pod and a 50 GB network volume. Those resources were left untouched. The observed account balance moved from $41.57 to $40.80 during this session; concurrent activity means that change is not an isolated cost for this experiment. Do not report zero account-wide spend from this cleanup.
 
 [Runner](turbo_transitions.py), [verification/comparison builder](turbo_transitions_review.py). Private setup, model and cleanup receipts: `apps/deforum/work/turbo-transition-session/`.
+
+
+## Human feedback and proposed next controls — 2026-09-10
+
+Olof calls this the best result so far, prefers three steps for its detail, and reports too much flicker. The recurrent feedback is confirmed from the runner and an executed three-step graph: the previous generated anchor is warped, VAE-encoded, sampled with prompt plus seeded noise, decoded, and becomes the next anchor. Between anchors, the existing assembly warps only the preceding generated anchor; it does not anticipate the next repaint.
+
+At 12 source fps and cadence 3, generated anchors are 0.25 seconds apart: four repaints per second. Repeating frames for 24 fps delivery adds no intermediate visual states. A redraw at an anchor can therefore appear abruptly after two warp-only frames. This is a plausible source of the reported flicker, alongside actual detail/lighting changes; cadence has not been isolated as its sole cause.
+
+Recommended sequence, not yet executed:
+
+1. Use the exact existing generated anchors to test RIFE interpolation across each full anchor interval. This changes display assembly only; the preserved recurrent generations remain unchanged. Compare against the current warp-only intermediates at equal duration. It could spread a redraw over time, but can distort detailed shapes and does not guarantee the exact prescribed intermediate warp. Merely doubling already-duplicated delivery frames is a different, weaker test. [RIFE's source repository](https://github.com/hzwer/ECCV2022-RIFE) supports interpolation between image pairs at arbitrary timestamps.
+2. Test a slightly lower starting sigma with three sampler intervals: approximately `[0.60, 0.5128441, 0.3109011, 0]` versus the accepted `[0.6545668, 0.5128441, 0.3109011, 0]`. This is an experimental shortened first interval, not the original native three-step tail or a percentage-of-repaint setting. Keep model, prompt, motion, cadence and seed progression fixed; see whether detail survives with less structural change.
+3. If needed, test cadence 2 at 12 source fps: six repaints per second instead of four. Smaller motion increments may help, but extra recurrent repaints can accelerate drift or introduce more flicker at the same noise strength. It costs about 50% more repaint work and is not automatically smoother.
+
+Keep the richer three-step output as the creative reference. Distinguish interpolated smoothness, lighting/texture flicker, motion fidelity and actual model consistency. No new render or cloud resource was started for this discussion.
