@@ -64,6 +64,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 Add future shared notes as separate Markdown files and link them from this page.
 
+- [Opening artwork audition](../apps/deforum/projects/modern-model-study/experiments/opening-art.md) — official Krea control and a small Klein/Krea art-direction study before further animation.
+
 ## Research
 
 - [Modern-model transition](research/modern-model-transition.md) — actual nine-node feedback graph, model-independent motion tools, remaining integration boundaries and a small Klein/Krea audition proposal.
