@@ -20,6 +20,8 @@ Use a short-lived ComfyUI Pod with the retained **deforum-models** 50 GB standar
 
 5. Verify `/system_stats`, then submit a real graph. Use the existing `pod_client.py` and the experiment's own deployment receipt. Prompt and motion changes need no infrastructure rebuild. Keep an experiment's feedback loop on the Pod when its existing runner supports it to avoid per-frame Mac transfers; download results promptly.
 
+Preflight the actual experiment runner's imports as well as ComfyUI. The spatial-helper chain currently imports the repository's `boto3` dependency even for Pod-only rendering. It is installed in the retained environment; a new empty setup may need it added with the virtual environment's `python -m pip install boto3` before launching the runner.
+
 For a **new empty volume**, copy `setup_modern_pod.py`, `prepare_pod_models.py` and `serverless/modern-models.json` into `/workspace/modern-model-session/`. Run `setup_modern_pod.py` once after the template has started, and run `prepare_pod_models.py --krea-only` to populate weights. These two independent preparations may run concurrently. The setup script pins ComfyUI to the established 0.34.0 commit and installs its small dependency update into the template’s existing environment; it is not needed at each Pod creation.
 
 

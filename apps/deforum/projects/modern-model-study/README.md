@@ -4,7 +4,7 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-Current result: [ten-second transitions and native Turbo tails](experiments/turbo-transitions.md) are complete. The accepted single-step recipe preserves recognizable forms through twist/expansion but still flattens over ten seconds. Short branches from the same frame show two steps adding contrast and three restoring richer architecture with more redraw. Three is the assistant's next creative candidate; human playback feedback is pending. All 61 images and 124 remote files are local and verified; both owned Pods are deleted. The independent persistent-volume trial remains separate.
+Current creative baseline: Olof calls the [three-step continuation](experiments/turbo-transitions.md) the best result so far and prefers its richer detail, while finding the redraws too abrupt. The completed [two morphing controls](experiments/turbo-smoothing.md) compare interpolation and cadence 2 versus 3. RIFE spreads the redraws across frames; cadence 2 increases evolution without clearly reducing abruptness. Assistant recommends cadence 3 plus diffusion-noise experiments next; human playback verdict is pending. His priority is gradual diffusion-driven evolution; these bounded timing tests precede further noise/sampling experiments. The ten-second one-step shot and all earlier outputs remain preserved.
 
 The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
 
