@@ -1,10 +1,14 @@
 # Modern model study
 
+- [Krea lower repaint strengths](experiments/krea-low-repaint.md) — 0.10/0.18/0.24 with the preserved cathedral feedback loop.
+
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-Current result: [four cathedral feedback clips](experiments/cathedral-feedback.md) compare two repaint strengths per model with the same twist and cadence 3. The assistant recommends Krea 0.45 as a candidate: clearer rebuilding than 0.30, while both Klein recipes accumulate grain. Olof’s playback selection is pending. All 44 generated frames are local, lineage and downloads verified, and the Pod/storage deleted.
+Current result: [Krea lower repaint strengths](experiments/krea-low-repaint.md) compares 0.10/0.18/0.24 against the preserved 0.30 clip. Olof selects Krea and pauses Klein because he wants less flickering. The assistant's first-pass candidate is 0.10 for smaller redraws and better retention of the original structure; playback feedback is pending. All 33 new repaints are local and verified; owned compute/storage is deleted.
 
-The [opening artwork audition](experiments/opening-art.md) completed an official Krea setup control and six reference-led openings. The assistant recommends Krea’s living cathedral, with Klein’s darker cathedral as an alternative; Olof calls both cathedral openings really good; he has not chosen between the models. All seven images are local and the Pod/storage are deleted. No animation was tested in this round.
+The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
+
+The [opening artwork audition](experiments/opening-art.md) completed an official Krea setup control and six reference-led openings. The assistant recommends Krea’s living cathedral, with Klein’s darker cathedral as an alternative; Olof calls both cathedral openings really good; he subsequently selected Krea for continued animation. All seven images are local and the Pod/storage are deleted. No animation was tested in this round.
 
 The preceding [initialized feedback with optional reference conditioning](experiments/additive_reference.md) retained the warped previous image as the diffusion starting point, with a second branch also receiving the previous generated frame as a separate reference. Its 34 generated images, four two-second clips and both comparisons are preserved locally. Olof finds Klein more consistent but less interesting than the SDXL/reference art, and rejects Krea including its opening; this prompted the still-image audition. That Pod/storage are also deleted.
 

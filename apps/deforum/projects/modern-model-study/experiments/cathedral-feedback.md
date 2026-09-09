@@ -57,3 +57,7 @@ The review used six evenly spaced samples per clip, then every displayed frame a
 All 90 remote input/output files (44 generated frames, 44 warped inputs and two bundled files) matched local SHA-256 hashes. Four full-size clips, two motion-only previews, labeled comparisons, raw frames and run histories are local. Owned Pod and attached storage deleted; final Pod and network-volume lists empty, spend rate zero. Observed balance change was **$0.37** ($43.7582 to $43.3916); billing may settle after that snapshot. Private deployment/log/archive receipts remain in `work/cathedral-feedback-session/`.
 
 Reproduce local verification/comparisons with `uv run --with pillow==12.1.0 --with opencv-python-headless==4.12.0.88 python projects/modern-model-study/experiments/cathedral_review.py` from `apps/deforum`. The comparison uses the existing Pillow-label/FFmpeg-encode approach; the local FFmpeg has no drawtext filter.
+
+## Human feedback and follow-up
+
+Olof selects Krea, pauses Klein and finds the cathedral animation still too flickery. The [lower repaint study](krea-low-repaint.md) compares 0.10/0.18/0.24 against the preserved 0.30 clip. The earlier assistant recommendation of 0.45 was not selected by Olof.
