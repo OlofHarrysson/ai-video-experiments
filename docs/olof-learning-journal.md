@@ -195,3 +195,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Latent feedback result (2026-09-09, assistant evidence):** Both 24-cycle latent-feedback branches still lose rich shading and flatten, despite first-cycle pixel identity with RGB controls. This is evidence against repeated VAE encoding as the whole explanation. It neither proves Olof's distillation hypothesis nor disproves it. A Turbo schedule comparison is the assistant's next proposal; no user preference for these new clips or approval of that next test has been inferred.
+
+
+**Experiment leadership (2026-09-09, explicit):** Olof sees little difference between the RGB and latent results, feels unsure how to progress, and asks the assistant to lead experimental choices. He approves the matched Turbo schedule comparison and continued practical testing. Screen results first and surface a small, understandable comparison; this is not evidence that a new recipe is preferred or that the hypotheses are proven.

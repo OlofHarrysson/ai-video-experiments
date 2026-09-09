@@ -74,7 +74,8 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 - [AI-controlled animation software](research/animation-software-control.md) — human animation workflows, Blender/Moho/Harmony/OpenToonz scripting, existing agent bridges, and a proposed rigged character test.
 
-- [Latent-feedback comparison](../apps/deforum/projects/modern-model-study/experiments/latent-feedback.md) — no-motion Krea tests with one encode; degradation persists and schedule behavior is the next hypothesis.
+- [Matched Turbo schedules](../apps/deforum/projects/modern-model-study/experiments/turbo-schedule.md) — one final interval versus eight small updates at matched noise; cleaner motion candidate, still some drift.
+- [Latent-feedback comparison](../apps/deforum/projects/modern-model-study/experiments/latent-feedback.md) — no-motion Krea tests with one encode; degradation persists; followed by the matched schedule study.
 
 - [Repeated repaint degradation](research/repeated-repaint-degradation.md) — why restarting diffusion differs from more steps; no-motion, VAE and warp controls.
 
