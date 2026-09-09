@@ -72,6 +72,8 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [Repeated repaint degradation](research/repeated-repaint-degradation.md) — why restarting diffusion differs from more steps; no-motion, VAE and warp controls.
+
 - [Modern-model transition](research/modern-model-transition.md) — actual nine-node feedback graph, model-independent motion tools, remaining integration boundaries and a small Klein/Krea audition proposal.
 - [Prompting for feedback](research/prompting-for-feedback.md) — opening versus edit instructions, model-specific guidance, prompt expansion and draft prompts for the next study.
 

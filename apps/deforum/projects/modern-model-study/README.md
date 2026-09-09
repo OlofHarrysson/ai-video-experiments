@@ -4,7 +4,7 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-Current result: [Krea lower repaint strengths](experiments/krea-low-repaint.md) compares 0.10/0.18/0.24 against the preserved 0.30 clip. Olof selects Krea and pauses Klein because he wants less flickering. The assistant's first-pass candidate is 0.10 for smaller redraws and better retention of the original structure; playback feedback is pending. All 33 new repaints are local and verified; owned compute/storage is deleted.
+Current result: [repaint degradation diagnosis](experiments/repaint-diagnosis.md) confirms quality loss without spatial motion. Repeated VAE round trips also develop artifacts, including with float-only feedback. Lanczos reduces warp blur but only partly improves the actual animation. Next assistant recommendation: a no-motion latent-feedback control to isolate sampling from repeated VAE encoding; not yet run. All 84 jobs and 173 remote files are local and verified; Pod/storage are deleted. Krea remains the selected model family; Klein is paused.
 
 The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
 
@@ -15,6 +15,8 @@ The preceding [initialized feedback with optional reference conditioning](experi
 Earlier [three-second auditions](experiments/pod-results.md) produced 32 images and two clips. Olof found both models interesting but reported Krea jitter and doubled images. The subsequent [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test his intended combined mechanism. The misunderstanding is recorded in the collaboration agreement. The earlier serverless attempt stopped before inference.
 
 ## Experiments
+
+- [Repaint degradation diagnosis](experiments/repaint-diagnosis.md): 24-cycle no-motion and VAE controls, repeated warps, and one matched Lanczos animation.
 
 - [Cathedral feedback](experiments/cathedral-feedback.md): two repaint strengths per model, motion-only previews and synchronized comparisons.
 

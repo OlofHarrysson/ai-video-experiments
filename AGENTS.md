@@ -2,6 +2,8 @@
 
 ## Active project
 
+- Latest diagnosis: [repeated repainting](apps/deforum/projects/modern-model-study/experiments/repaint-diagnosis.md) confirms no-motion Krea quality drift over 24 cycles; repeated VAE reconstruction adds artifacts even without intermediate PNG feedback. Bilinear warps independently blur detail. Lanczos improves motion-only detail but only partly improves the full animation. Proposed next: no-motion latent feedback, encoding once and decoding for inspection, to isolate sampling; not yet run. Preserve feedback and do not promise latent warping is equivalent to RGB warping. All 84 jobs / 173 remote files are local and verified, owned Pod/storage deleted.
+
 - Current direction: **Krea only**. Olof finds the cathedral clips still too flickery and requests repaint strengths below 0.30. [Lower repaint study](apps/deforum/projects/modern-model-study/experiments/krea-low-repaint.md) completed 0.10/0.18/0.24 with the same opening, twist and cadence. Assistant first-pass pick is 0.10 for smaller redraws and better retention of fine structure; Olof’s playback choice is pending. All 33 repaints and 68 remote files are local and verified; Pod/storage deleted, spend rate zero. Preserve Klein results as history; pause new Klein renders.
 
 AI Video Experiments is a public notebook and workspace for controllable AI animation. The creative interest is explicit camera movement combined with surreal morphing and visible frame-by-frame repainting. Perfect temporal consistency is not the goal.
