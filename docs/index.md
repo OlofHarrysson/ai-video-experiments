@@ -64,6 +64,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 Add future shared notes as separate Markdown files and link them from this page.
 
+- [Cathedral feedback](../apps/deforum/projects/modern-model-study/experiments/cathedral-feedback.md) — four short clips, two repaint strengths per model, verified initialized feedback and motion-only previews.
+
 - [Opening artwork audition](../apps/deforum/projects/modern-model-study/experiments/opening-art.md) — official Krea control and a small Klein/Krea art-direction study before further animation.
 
 ## Research
