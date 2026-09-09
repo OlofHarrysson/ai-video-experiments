@@ -4,7 +4,7 @@ import AVFoundation
 // Original miniature score. The melody opens tentatively, warms at the play bow,
 // becomes playful on the chase, and resolves as the dogs rest together.
 let rate = 48000.0
-let duration = 16.5
+let duration = 19.5
 let engine = AVAudioEngine()
 let piano = AVAudioUnitSampler()
 let celesta = AVAudioUnitSampler()
@@ -29,8 +29,9 @@ for bar in 0..<8 {
  for (j,p) in chords[bar].enumerated(){note(p,t+Double(j)*0.24,1.2,bar==1 ? 42:49)}
  if bar>=4 && bar<6 {for (j,p) in chords[bar].enumerated(){note(p+12,t+1+Double(j)*0.20,0.44,42)}}
 }
-let melody:[(Int,Double,Double)]=[(74,0.25,0.28),(78,0.75,0.4),(81,1.25,0.55),(78,2.25,0.42),(76,3.0,0.6),(74,5.05,0.38),(78,5.55,0.35),(79,6.05,0.38),(81,6.55,0.7),(78,7.55,0.3),(81,8.55,0.25),(83,8.8,0.23),(86,9.05,0.4),(83,9.55,0.3),(81,10.05,0.25),(78,10.3,0.25),(76,10.55,0.35),(78,11.05,0.3),(81,11.55,0.5),(79,12.6,0.55),(78,13.3,0.6),(74,14.05,1.8)]
+let melody:[(Int,Double,Double)]=[(74,0.25,0.28),(78,0.75,0.4),(81,1.25,0.55),(78,2.25,0.42),(76,3.0,0.6),(74,5.05,0.38),(78,5.55,0.35),(79,6.05,0.38),(81,6.55,0.7),(78,7.55,0.3),(81,8.55,0.25),(83,8.8,0.23),(86,9.05,0.4),(83,9.55,0.3),(81,10.05,0.25),(78,10.3,0.25),(76,10.55,0.35),(78,11.05,0.3),(81,11.55,0.5),(79,12.6,0.55),(78,13.3,0.6),(76,14.05,0.6),(78,14.8,0.65),(74,15.6,2.4)]
 for (p,t,l) in melody {note(p,t,l,64,1)}
+for (j,p) in [50,57,62,66].enumerated(){note(p,15.6+Double(j)*0.23,2.3,43)}
 events.sort{$0.frame < $1.frame}
 try engine.enableManualRenderingMode(.offline,format:format,maximumFrameCount:1024)
 try engine.start()
@@ -44,7 +45,7 @@ while cursor<total {
  let count=AVAudioFrameCount(min(1024,min(total-cursor,max(1,next-cursor))))
  let status=try engine.renderOffline(count,to:buffer)
  if status == .success {
-  if let channels=buffer.floatChannelData {for c in 0..<2 {for f in 0..<Int(buffer.frameLength){let t=Double(cursor+Int64(f))/rate;let gain=Float(min(1,max(0,(16.5-t)/0.8)));channels[c][f] *= gain}}}
+  if let channels=buffer.floatChannelData {for c in 0..<2 {for f in 0..<Int(buffer.frameLength){let t=Double(cursor+Int64(f))/rate;let gain=Float(min(1,max(0,(19.5-t)/0.8)));channels[c][f] *= gain}}}
   try file!.write(from:buffer);cursor += Int64(count)
  }
 }

@@ -3,8 +3,8 @@ await fs.copyFile('node_modules/gsap/dist/gsap.min.js','assets/gsap.min.js');
 const manifest=JSON.parse(await fs.readFile('assets/cels/manifest.json','utf8'));
 const celHTML=Object.entries(manifest).map(([name,m])=>`<img id="${name}" class="cel" src="assets/cels/${name}.png" width="${m.width}" height="${m.height}" alt="${name}">`).join('\n');
 const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><title>Big Softie</title><script src="assets/gsap.min.js"></script><style>
-*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#273522}#film{width:1920px;height:1080px;position:relative;overflow:hidden}#world{position:absolute;width:1920px;height:1080px;transform-origin:0 0}.plate{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover}.cel{position:absolute;left:0;top:0;transform-origin:0 0;opacity:0}.shadow{position:absolute;left:0;top:0;width:100px;height:24px;border-radius:50%;background:rgba(36,37,19,.24);filter:blur(9px);transform-origin:50% 50%}#ball{position:absolute;left:0;top:0;width:66px;height:66px;border-radius:50%;background:radial-gradient(circle at 33% 28%,#da9274 0%,#b86048 55%,#834538 100%);border:3px solid #6b4935;box-shadow:inset -7px -8px 0 #934f3b;transform-origin:center}#ball:after{content:'';position:absolute;inset:9px;border:2px dashed #9c5942;border-radius:50%;opacity:.5}#ending{position:absolute;inset:0;opacity:0;overflow:hidden}#end-plate{width:1920px;height:1080px;object-fit:cover;transform-origin:50% 55%}#title{position:absolute;left:120px;top:155px;color:#263a2e;font-family:Georgia,serif;font-size:98px;font-weight:normal;line-height:1.1;letter-spacing:-3px;text-shadow:0 1px 5px #f6deb6;opacity:0}#fade{position:absolute;inset:0;background:#20291d;opacity:0}
-</style></head><body><div id="film" data-composition-id="big-softie" data-width="1920" data-height="1080" data-duration="16.5"><div id="picture" class="clip" data-start="0" data-duration="16.5" data-track-index="0" data-layout-allow-overflow><div id="world"><img class="plate" src="assets/source/park.png" alt="Sunlit dog park"><div id="puppy-shadow" class="shadow"></div><div id="rott-shadow" class="shadow"></div><div id="ball-shadow" class="shadow"></div>${celHTML}<div id="ball"></div></div><div id="ending"><img id="end-plate" src="assets/source/ending.png" alt="The two friends resting together"></div><div id="title" data-layout-allow-overlap>Big Softie</div><div id="fade"></div></div><audio id="score" src="assets/score-master.wav" data-start="0" data-duration="16.5" data-track-index="5" data-volume="0.8"></audio></div><script>
+*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#273522}#film{width:1920px;height:1080px;position:relative;overflow:hidden}#world{position:absolute;width:1920px;height:1080px;transform-origin:0 0}.plate{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover}.cel{position:absolute;left:0;top:0;transform-origin:0 0;opacity:0}.shadow{position:absolute;left:0;top:0;width:100px;height:24px;border-radius:50%;background:rgba(36,37,19,.24);filter:blur(9px);transform-origin:50% 50%}#ball{position:absolute;left:0;top:0;width:66px;height:66px;border-radius:50%;background:radial-gradient(circle at 33% 28%,#da9274 0%,#b86048 55%,#834538 100%);border:3px solid #6b4935;box-shadow:inset -7px -8px 0 #934f3b;transform-origin:center}#ball:after{content:'';position:absolute;inset:9px;border:2px dashed #9c5942;border-radius:50%;opacity:.5}#title{position:absolute;left:120px;top:155px;color:#263a2e;font-family:Georgia,serif;font-size:98px;font-weight:normal;line-height:1.1;letter-spacing:-3px;text-shadow:0 1px 5px #f6deb6;opacity:0}
+</style></head><body><div id="film" data-composition-id="big-softie" data-width="1920" data-height="1080" data-duration="19.5"><div id="picture" class="clip" data-start="0" data-duration="19.5" data-track-index="0" data-layout-allow-overflow><div id="world"><img class="plate" src="assets/source/park.png" alt="Sunlit dog park"><div id="puppy-shadow" class="shadow"></div><div id="rott-shadow" class="shadow"></div><div id="ball-shadow" class="shadow"></div>${celHTML}<div id="ball"></div></div><div id="title" data-layout-allow-overlap>Big Softie</div></div><audio id="score" src="assets/score-master.wav" data-start="0" data-duration="19.5" data-track-index="5" data-volume="0.8"></audio></div><script>
 const M=${JSON.stringify(manifest)};
 const E=Object.fromEntries(Object.keys(M).map(k=>[k,document.getElementById(k)]));
 const el=id=>document.getElementById(id), clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), mix=(a,b,t)=>a+(b-a)*t, smooth=t=>{t=clamp(t);return t*t*(3-2*t)};
@@ -15,7 +15,7 @@ function film(t){
  const q=Math.floor((t+0.00001)*12)/12;
  Object.values(E).forEach(e=>e.style.opacity=0);
  ['puppy-shadow','rott-shadow','ball-shadow','ball'].forEach(id=>el(id).style.opacity=0);
- el('world').style.opacity=q<12.5?1:0;el('ending').style.opacity=q>=12.5?1:0;el('title').style.opacity=0;el('fade').style.opacity=t<.25?1-t/.25:t>16?clamp((t-16)/.5):0;
+ el('world').style.opacity=1;el('title').style.opacity=0;
  const py=855,ry=840;
  let px=520,rx=1330,pp='puppy-acting-0',rp='rott-bow-0',ps=.65,rs=1.30,pair=0,rair=0,ballx=900,bally=857,flipP=false,flipR=false;
  camera(1,0,0);
@@ -49,19 +49,30 @@ function film(t){
   ballx=px+240;bally=850-50*Math.abs(Math.sin(u*Math.PI*2));
   shadow('rott-shadow',rx,ry,450,rair);draw(rp,rx,ry-rair,rs,true);
   camera(1,0,0);
- }else if(q<12.5){ // After both exit left, cut to their return, puppy leading right.
-  const u=q-10.5;const f=Math.floor(u*6)%4;
-  px=-140+870*u;rx=px-720;
-  pp='puppy-run-'+f;ps=.68;pair=[75,0,0,20][f];flipP=false;
-  rp='rott-run-'+((f+2)%4);rs=1.04;rair=[88,0,0,15][(f+2)%4];
-  ballx=px-245;bally=850-35*Math.abs(Math.sin(u*Math.PI*2));
+ }else if(q<13.25){ // Return right, then each dog eases to a planted stop.
+  const u=q-10.5;
+  const travel=(t,delay)=>{const d=2.75-delay,v=clamp(t-delay,0,d);return 870*(Math.min(t,delay)+v-v*v/(2*d));};
+  px=-140+travel(u,.6);rx=-860+travel(u,1.25);
+  const pf=Math.floor(travel(u,.6)/145)%4,rf=(Math.floor(travel(u,1.25)/145)+2)%4;
+  const lift=1-smooth((u-1.9)/.65);
+  pp='puppy-run-'+pf;ps=.68;pair=[75,0,0,20][pf]*lift;
+  rp='rott-run-'+rf;rs=1.04;rair=[88,0,0,15][rf]*lift;
   shadow('rott-shadow',rx,ry,450,rair);draw(rp,rx,ry-rair,rs);
   camera(1.04,-38,-35);
  }
- if(q<12.5){shadow('puppy-shadow',px,py,250,pair);draw(pp,px,py-pair,ps,flipP);el('ball').style.opacity=q<8.5?1:0;el('ball').style.transform='translate('+(ballx-33)+'px,'+(bally-66)+'px) rotate('+(q>=8.5?(q-8.5)*330:0)+'deg)';if(q<8.5)shadow('ball-shadow',ballx,857,62,857-bally);}
- else {const u=clamp((t-12.5)/3.5);el('end-plate').style.transform='scale('+mix(1,1.025,smooth(u))+')';el('title').style.opacity=smooth((t-14)/.8);}
+ if(q<13.25){shadow('puppy-shadow',px,py,250,pair);draw(pp,px,py-pair,ps,flipP);el('ball').style.opacity=q<8.5?1:0;el('ball').style.transform='translate('+(ballx-33)+'px,'+(bally-66)+'px) rotate('+(q>=8.5?(q-8.5)*330:0)+'deg)';if(q<8.5)shadow('ball-shadow',ballx,857,62,857-bally);}
+ else {
+  // Full-body intermediate drawings stay on the same park plate and ground line.
+  const poses=[[13.25,'a',850],[13.75,'b',795],[14.0,'c',790],[14.5,'d',790],[14.75,'e',790],[15.25,'f',790],[15.5,'g',815]];
+  const pose=poses.filter(p=>q>=p[0]).at(-1),name='settle-'+pose[1],e=E[name];
+  shadow('rott-shadow',875,840,650);shadow('puppy-shadow',1315,842,300);
+  e.style.opacity=1;e.style.transform='translate(450px,'+(840-pose[2]*.64)+'px) scale(.64)';
+  const push=smooth((t-15.5)/3.5),z=mix(1.04,1.12,push);
+  camera(z,-38-1200*(z-1.04),-35-800*(z-1.04));
+  el('title').style.opacity=smooth((t-16.5)/.8);
+ }
 }
-const driver={t:0};const tl=gsap.timeline({paused:true});tl.to(driver,{t:16.5,duration:16.5,ease:'none',onUpdate:()=>film(driver.t)});window.renderFilm=film;film(0);window.__timelines=window.__timelines||{};window.__timelines['big-softie']=tl;
+const driver={t:0};const tl=gsap.timeline({paused:true});tl.to(driver,{t:19.5,duration:19.5,ease:'none',onUpdate:()=>film(driver.t)});window.renderFilm=film;film(0);window.__timelines=window.__timelines||{};window.__timelines['big-softie']=tl;
 </script></body></html>`;
 await fs.writeFile('index.html',html);
-console.log('Built 16.5-second composition with',Object.keys(manifest).length,'cels');
+console.log('Built 19.5-second composition with',Object.keys(manifest).length,'cels');

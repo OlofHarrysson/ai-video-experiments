@@ -1,4 +1,30 @@
-# Review — Big Softie
+# Review — Big Softie v3
+
+Olof liked the previous film overall, but identified a green opening frame, an odd final frame, and a jump into the cuddle without intermediate action. The revision removes the colored fade overlay completely and replaces the separate closing artwork with seven paired cels on the existing park plate.
+
+The return pass now decelerates before the dogs stand, crouch, sit, lie down, lean together and close their eyes. The adult stays on the left and puppy on the right through the finish. The cels share a fixed scale and manually registered paw baselines; the camera only begins its closing push after the cuddle. The original score now resolves over the longer ending. The full film lasts 19.5 seconds.
+
+## Verified output
+
+- `renders/big-softie-v3.mp4`: 1920×1080, 24 fps, 468 H.264 frames, 48 kHz stereo AAC, 19.500 seconds, 19,674,892 bytes.
+- `renders/big-softie.mp4`: delivery copy of v3. Earlier v1/v2/draft outputs remain preserved.
+- `renders/poster-v3.jpg`: exact final video frame (467), without a colored fade.
+- Strict HyperFrames check passed. The eleven-time targeted check had no lint, runtime, layout or contrast findings. Full video decode completed without errors.
+- Audio mean −27.0 dBFS, peak −10.4 dBFS; no clipping. The previous music master is preserved as `assets/score-v2-master.wav`.
+
+## Visual review
+
+`review/continuity-v3/v001` covers the actual decoded opening, stopping motion, every new pose and closing image. `review/adjacent-v3/v001` inspects every displayed frame across the run-to-standing transition and partial-to-full cuddle transition. Those reviews confirm stable park geometry, consistent left/right order, visible intermediate actions, clear character edges and no opaque checkerboards in the composite. The final pose is held in full color through the last frame.
+
+This remains limited cel animation: exposure changes are visible, and the generated pose drawings have small contour differences. The revision addresses the missing action rather than claiming feature-animation smoothness. Review evidence is decoded-frame and timing inspection; Olof's playback assessment remains the final taste check. The prior version's positive overall playback feedback is recorded above, not treated as approval of this revision.
+
+## Reproduction and provenance
+
+Seven originals and their alpha-prepared copies remain under `assets/source/settle-*`; each image generation is recorded in [settling-prompts.md](settling-prompts.md). `prepare-settling.mjs` validates transparency and retains full canvas coordinates. `build-film.mjs` records exact exposure times, scale, ground alignment and camera position. No cloud compute or persistent preview server was started.
+
+---
+
+# Previous review — v2
 
 ## Scope and evidence
 
