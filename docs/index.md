@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Hybrid 2D puppy](../apps/blender-animation/projects/puppy-2d/README.md) — painted mesh rig, replacement drawings, and a three-second 1080p animation.
+
 - [Blender puppy animation](../apps/blender-animation/projects/playful-puppy/README.md) — native skinned character, editable pose keys, a three-second bow and hop, and measured paw controls.
 
 - [Krea lower repaint strengths](../apps/deforum/projects/modern-model-study/experiments/krea-low-repaint.md) — 0.10/0.18/0.24 with the preserved cathedral feedback loop.
