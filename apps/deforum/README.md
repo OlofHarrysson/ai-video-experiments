@@ -2,6 +2,8 @@
 
 Work from `apps/deforum/`. The Mac manages spatial transforms, cadence, workflow submission and local archives; ComfyUI on RunPod generates images. Earlier experiments using Difforum/depth nodes remain preserved.
 
+New RGB spatial warps use `spatial_warp.remap_rgb`, with Lanczos4 interpolation and reflected borders. Olof selected this after the matched bilinear/Lanczos comparison. Historical experiment scripts retain their recorded interpolation settings for reproduction.
+
 Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and expressive spatial image movement while preserving every attempt. The [Safety Marc spatial-control study](../../docs/research/bonsai-spatial-motion.md) maps existing effects to camera transforms, guide flow and guide compositing. The completed [Move-Warp test](projects/motion-guide-study/experiments/move-warp.md) adds a Mac-orchestrated guide-flow loop using existing ComfyUI repaint nodes. The [parallel experiment report](../../docs/research/parallel-experiments-session.md) indexes earlier model, settings, overscan and guide-redraw results.
 
 Latest direct-motion result: [sampler comparison](projects/motion-guide-study/experiments/samplers.md). Two three-second Euler variants are complete, informed by [model-specific creator recipes](../../docs/research/model-sampler-recipes.md). Ordinary Euler stays closer to the DPM++ 2M baseline; ancestral produces more distinct redraw and some fine speckling. Keep the baseline pending playback feedback. All media is local; compute and temporary storage are cleaned up.

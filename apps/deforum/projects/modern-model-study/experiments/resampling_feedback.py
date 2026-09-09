@@ -3,12 +3,12 @@ import argparse
 import json
 from pathlib import Path
 import numpy as np
-import cv2
 from PIL import Image
 import cathedral_feedback as c
 from cathedral_feedback import FPS, FRAMES, CADENCE, WIDTH, HEIGHT, SEED
 import audition as a
 import opening_art as opening
+from spatial_warp import remap_rgb
 
 OUT = a.PROJECT / 'exports/resampling-feedback-v001'
 STRENGTHS = {'lanczos010': .10}
@@ -20,7 +20,7 @@ def warp(rgb, start, end):
     if start == end:
         return rgb.copy()
     coords = a.motion.coordinates(start, end, width=WIDTH, height=HEIGHT)
-    return cv2.remap(rgb, coords, None, cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REFLECT_101)
+    return remap_rgb(rgb, coords)
 
 
 def graph(strength, seed):

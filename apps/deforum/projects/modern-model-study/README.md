@@ -4,7 +4,7 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-Current result: [repaint degradation diagnosis](experiments/repaint-diagnosis.md) confirms quality loss without spatial motion. Repeated VAE round trips also develop artifacts, including with float-only feedback. Lanczos reduces warp blur but only partly improves the actual animation. Next assistant recommendation: a no-motion latent-feedback control to isolate sampling from repeated VAE encoding; not yet run. All 84 jobs and 173 remote files are local and verified; Pod/storage are deleted. Krea remains the selected model family; Klein is paused.
+Current result: [latent feedback](experiments/latent-feedback.md) completes 24 no-motion cycles at 0.10 and 0.30 without repeated VAE encoding. Both still lose the opening's rich shading; neither solves the main degradation. First cycles match their earlier RGB controls exactly. Olof selects Lanczos for future RGB warps. Next proposed test is Turbo schedule behavior, with feedback intact; not yet run. All 48 new states and 52 remote files are local and verified, and owned Pods/storage are deleted. Krea remains selected; Klein is paused.
 
 The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
 
@@ -15,6 +15,8 @@ The preceding [initialized feedback with optional reference conditioning](experi
 Earlier [three-second auditions](experiments/pod-results.md) produced 32 images and two clips. Olof found both models interesting but reported Krea jitter and doubled images. The subsequent [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test his intended combined mechanism. The misunderstanding is recorded in the collaboration agreement. The earlier serverless attempt stopped before inference.
 
 ## Experiments
+
+- [Latent feedback](experiments/latent-feedback.md): completed 24-cycle comparison; removing repeated VAE encoding does not prevent flattening.
 
 - [Repaint degradation diagnosis](experiments/repaint-diagnosis.md): 24-cycle no-motion and VAE controls, repeated warps, and one matched Lanczos animation.
 
