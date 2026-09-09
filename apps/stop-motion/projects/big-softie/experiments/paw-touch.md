@@ -1,5 +1,9 @@
 # Paw-touch motion study
 
+## User review
+
+Olof rejected this experiment on 2026-09-09 as insufficiently compelling animation and concluded that the current approach did not work well. Fixed pixels and smooth interpolation did not provide the expressive movement he wanted. This is a failed creative route, not an accepted animation baseline. A native image-to-video motion audition is proposed but has not been executed or approved as the next production method.
+
 ## Result
 
 [Watch the four-second clip](../renders/paw-touch-v1.mp4): 1920×1080, 60 fps, 240 frames, silent. The puppy lifts a paw, reaches forward and places it on the resting Rottweiler's paw. The adult closes his eyes contentedly after contact. A held opening and ending frame the two-second action.
@@ -24,7 +28,7 @@ After interpolation, original pixels are restored everywhere outside the foreleg
 
 The first RIFE pair was inspected before the full run. The full sequence was reviewed with an overview, every-frame landing and blink windows, and enlarged detail sheets. The paw has intermediate positions through its descent and lands on the adult's paw. The eyelid edit has intermediate closing positions. The broad color and silhouette shifts from the nuzzle study are prevented by the fixed artwork.
 
-The moving leg still uses inferred shape transitions and changing painted detail. At an enlarged crop, a few intermediate toe outlines soften. This experiment does not establish a solution for walking, turning, weight transfer or broad full-body acting. Human playback preference remains unconfirmed.
+The moving leg still uses inferred shape transitions and changing painted detail. At an enlarged crop, a few intermediate toe outlines soften. This experiment does not establish a solution for walking, turning, weight transfer or broad full-body acting. Olof subsequently rejected the animation; see User review above.
 
 Final verification:
 
