@@ -10,6 +10,10 @@ An original 19.5-second hand-painted anime-style cel stop-motion short about a s
 - Previous cut: [renders/big-softie-v2.mp4](renders/big-softie-v2.mp4)
 - First draft: [renders/big-softie-v1.mp4](renders/big-softie-v1.mp4)
 
+## Motion study
+
+[Dense nuzzle experiment](experiments/dense-nuzzle.md) compares twelve reviewed poses with a 60 fps interpolation pass. [Watch the four-second comparison](renders/dense-nuzzle-comparison.mp4). This separate study preserves the v3 film above.
+
 ## Production
 
 [Brief](BRIEF.md), [shot plan](STORYBOARD.md), [generation prompts](generation-prompts.md), [settling prompts](settling-prompts.md), and [review](REVIEW.md) describe the production and iteration.

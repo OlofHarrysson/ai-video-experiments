@@ -1,0 +1,242 @@
+{
+  "tool": "built-in image_gen",
+  "modelVariant": "not explicitly returned by tool",
+  "opening": "assets/source/settle-e.png",
+  "destination": "assets/source/settle-g.png",
+  "records": [
+    {
+      "id": "01",
+      "prompt": "Animation frame 01 of a 30-frame slow nuzzle. EDIT IMAGE 1, the current frame. Image 2 is only the eventual destination, do NOT jump to it. Preserve Image 1's exact canvas, camera, dog scale, body outlines, paws, tails, collar colors and delicate painted anime finish. Make only a very small next increment: golden puppy at RIGHT moves nose and forehead 5 pixels LEFT toward the adult's shoulder, with a tiny neck lean; its body and paws stay planted. Rottweiler LEFT remains exactly still, eyes open. No cuddle contact yet. Preserve the entire pose and framing otherwise. Both full bodies visible, genuinely transparent alpha background, no checkerboard or scenery, no text. A nearly identical animation frame, not a new illustration.",
+      "references": [
+        "opening",
+        "destination"
+      ],
+      "toolOutputBasename": "exec-61136912-14e5-484a-bb57-d8976e13c517.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/001-rejected-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/001-rejected.png",
+      "selected": false
+    },
+    {
+      "id": "01b",
+      "prompt": "Make an extremely subtle edit to this animation cel. The puppy's nose is currently around pixel (1175,497) on this 1672x941 canvas. Move only the puppy's head 4 pixels to the LEFT, nose ending around (1171,497); allow tiny neck deformation to connect it. Preserve the original pixels everywhere else: the entire Rottweiler, both dogs' paws and bodies, puppy torso and tail, canvas and scale. Keep eyes fully open and do not bring the puppy into contact with the adult. Do not repaint, simplify or restyle the illustration. This should look almost indistinguishable from the input because it is the very next animation frame, 1/30 second later. Keep the transparent background. No new objects, no text, no shadows.",
+      "references": [
+        "opening"
+      ],
+      "toolOutputBasename": "exec-53936c1e-2faf-4bab-ad23-f3f168ec35ad.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/001-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/001.png",
+      "selected": true
+    },
+    {
+      "id": "02",
+      "prompt": "Next animation cel, continuing this exact drawing. Move the little puppy's head a TINY step left, about 8 pixels, closer to the black dog's shoulder. Keep puppy eyes fully open and looking up, no contact yet. Rottweiler head, face, eyes, torso, legs, paws and tail must remain motionless and identical. Puppy body, paws and tail also fixed. Only a tiny neck lean and leftward head displacement. Keep this exact canvas, composition, scale, warm painted anime texture and all details. Preserve genuine alpha transparency. Not a new pose; just the next small step in this same motion, no jump to finished cuddle.",
+      "references": [
+        "01b"
+      ],
+      "toolOutputBasename": "exec-d2a0aae6-2cf7-4461-bcb6-cd48b9cee12b.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/002-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/002.png",
+      "selected": true
+    },
+    {
+      "id": "03",
+      "prompt": "Continue this exact animation drawing by ONE small increment. Puppy on right leans its forehead and nose about 12 pixels LEFT and 4 pixels DOWN, gently closer to the adult's chest. Its eyes are still open, looking at the adult. Adult remains stationary and open-eyed. All bodies, paws, tails, framing and scale stay fixed. Only puppy neck and head move slightly. Preserve the original delicate painted anime textures and outlines, not a simplified redraw. Transparent alpha background. Do not jump to eyes-closed cuddle yet.",
+      "references": [
+        "02"
+      ],
+      "toolOutputBasename": "exec-223f17b3-0474-4cfe-ba45-4f31c6cd32ce.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/003-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/003.png",
+      "selected": true
+    },
+    {
+      "id": "04",
+      "prompt": "Next animation frame. Image 1 is the PREVIOUS FRAME: preserve its puppy head position and pose. Image 2 is the MASTER ART: use its exact muted colors, painted texture and unchanged body parts. The only NEW motion is that the puppy leans 8 pixels farther LEFT, its cheek just brushing the Rottweiler's shoulder, with eyelids beginning to soften but still open. Adult remains open-eyed, head stationary. CRITICAL copy the adult body, paws, tail and coloration from Image 2; Image 1 became too orange, restore the subtle dark tan from Image 2. Keep puppy body and paws fixed. Same canvas and scale. Clean transparent alpha background, no checkerboard pixels. One cel, no text.",
+      "references": [
+        "03",
+        "opening"
+      ],
+      "toolOutputBasename": "exec-f2286a71-a3ee-4f64-8e53-5129fc26fa8f.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/004-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/004.png",
+      "selected": true
+    },
+    {
+      "id": "05",
+      "prompt": "Animation continuation from Image 1. Only change the puppy's expression: lower its upper eyelids just a little, to about 80 percent open, beginning a happy slow blink. Puppy head stays exactly in place against adult shoulder, mouth keeps its small smile. No displacement or size change of either dog, no movement of paws, tails or bodies. Adult eyes remain fully open and adult head still. Image 2 supplies the original painted color and texture; retain that finish without increased saturation. Exact same full-body canvas and camera. Genuine transparent alpha, no text.",
+      "references": [
+        "04",
+        "opening"
+      ],
+      "toolOutputBasename": "exec-4a55f3cc-63f4-4793-8548-1dfddb60fd7b.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/005-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/005.png",
+      "selected": true
+    },
+    {
+      "id": "06",
+      "prompt": "Continue this exact cel by one small animation step. Puppy eyelids, already half closed, lower a little farther to a narrow relaxed opening, about 20 percent open. Its head and nose stay exactly in their current place; keep its smile. Do not move or redraw either dog's body, paws, tails or the adult's head and open eyes. Preserve linework and colors exactly, no more orange saturation. Transparent background. Only the puppy's eyelids change.",
+      "references": [
+        "05"
+      ],
+      "toolOutputBasename": "exec-96c9f13a-e138-45ba-bf7e-d96bfdbd5544.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/006-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/006.png",
+      "selected": true
+    },
+    {
+      "id": "07",
+      "prompt": "Next animation cel: the large dog's head begins a VERY SMALL affectionate nod toward the resting puppy. Tilt only the adult's head clockwise about two degrees, muzzle about 8 pixels lower and 5 pixels right. Adult eyes remain open and gentle. Puppy stays exactly still, eyes closed, cheek against shoulder. Both bodies, paws, tail silhouettes and all framing stay fixed. Preserve the drawing and muted colors without simplifying detail. Genuine alpha transparency. This is just the first tiny stage of the adult lowering his chin, do not complete the nod yet.",
+      "references": [
+        "06"
+      ],
+      "toolOutputBasename": "exec-2a0c9702-d6d0-4f2b-a371-91fcee20abaf.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/007-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/007.png",
+      "selected": true
+    },
+    {
+      "id": "08",
+      "prompt": "Next frame of this same animation. Keep the adult's lowered head and chin exactly where they are. Its upper eyelids now lower halfway in a tender slow blink, leaving pupils partly visible. Puppy remains eyes closed and motionless, same cheek contact. No body, paw, collar, tail, scale or camera changes. Preserve precise outlines and colors. Genuine transparent background. The sole change is half-closing the adult's eyes.",
+      "references": [
+        "07"
+      ],
+      "toolOutputBasename": "exec-46e54f76-2047-49e9-86c6-122240d7bc47.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/008-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/008.png",
+      "selected": false
+    },
+    {
+      "id": "09",
+      "prompt": "Continue Image 1 by closing the adult dog's eyes the remaining small amount into relaxed curved eyelid lines. Keep the chin contact, puppy, pose, paws, tails and framing exactly unchanged. Image 2 is the color master: restore the adult's dark brown tan markings and puppy's soft golden fur; the preceding frame has become excessively bright orange. Match Image 2's subdued painterly colors and detail across both full bodies while maintaining Image 1's pose. One complete cel on transparent background, no text.",
+      "references": [
+        "08",
+        "opening"
+      ],
+      "toolOutputBasename": "exec-c97fbbdf-e3e2-42e7-be74-e51791748b1c.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/009-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/009.png",
+      "selected": true
+    },
+    {
+      "id": "mid01",
+      "prompt": "Produce the missing animation in-between exactly HALFWAY between these two nearly identical cels. Image 1 is the earlier frame. Image 2 is the later frame. The only intended movement is the golden puppy's head leaning slightly LEFT. Its nose center is about x=1180 in Image 1 and x=1160 in Image 2: in this new midpoint put it near x=1170, y=495 on the SAME 1672x941 canvas. Do not move it as far left as Image 2. Copy all other body parts, adult dog, paws, eyes, tails and colors without motion or redesign. Do not invent a new pose or jump to a cuddle. One complete paired-dog cel, exact same framing and transparent background.",
+      "references": [
+        "opening",
+        "01b"
+      ],
+      "toolOutputBasename": "exec-68a7a15d-9967-4f7e-a669-9360139e9a50.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/mid01-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/mid01.png",
+      "selected": true
+    },
+    {
+      "id": "b01",
+      "prompt": "Create ONE animation in-between cel between Image 1 (earlier) and Image 2 (later). Place the moving features at ONE THIRD of the motion from Image 1 toward Image 2, closer to Image 1. The puppy head is only one-third of the way LEFT from its first position toward its second position, eyes open. Preserve the adult dog and both bodies, paws and tails EXACTLY stationary. Keep the same canvas, scale, framing, muted colors and painted texture. This is a subtle intermediate, not the later pose and not a new design. No ghosting or double outlines. Transparent background, no text.",
+      "references": [
+        "00",
+        "01"
+      ],
+      "toolOutputBasename": "exec-847f2430-8e19-4028-89af-122eced8efb4.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b01-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b01.png",
+      "selected": false
+    },
+    {
+      "id": "b12",
+      "prompt": "Create ONE animation in-between cel between Image 1 (earlier) and Image 2 (later). Place the moving features at ONE THIRD of the motion from Image 1 toward Image 2, closer to Image 1. The puppy head is one-third of the way LEFT between its two nose positions. Keep eyes open and body still. Preserve the adult dog and both bodies, paws and tails EXACTLY stationary. Keep the same canvas, scale, framing, muted colors and painted texture. This is a subtle intermediate, not the later pose and not a new design. No ghosting or double outlines. Transparent background, no text.",
+      "references": [
+        "01",
+        "02"
+      ],
+      "toolOutputBasename": "exec-accfcabe-39aa-4304-8d51-377bed0342d0.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b12-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b12.png",
+      "selected": false
+    },
+    {
+      "id": "b23",
+      "prompt": "Create ONE animation in-between cel between Image 1 (earlier) and Image 2 (later). Place the moving features at ONE THIRD of the motion from Image 1 toward Image 2, closer to Image 1. The puppy head has moved one-third of the leftward and slightly downward distance between these poses, with eyes still open. Preserve the adult dog and both bodies, paws and tails EXACTLY stationary. Keep the same canvas, scale, framing, muted colors and painted texture. This is a subtle intermediate, not the later pose and not a new design. No ghosting or double outlines. Transparent background, no text.",
+      "references": [
+        "02",
+        "03"
+      ],
+      "toolOutputBasename": "exec-6588f219-3336-497f-a128-6184a272356c.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b23-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b23.png",
+      "selected": false
+    },
+    {
+      "id": "b34",
+      "prompt": "Create ONE animation in-between drawing between these two cels, ONE THIRD of the way from Image 1 to Image 2. Puppy cheek advances only one third of the remaining distance to the adult shoulder, eyes open. Everything except that tiny motion must stay fixed: both bodies, paws, tails, adult head, character sizes and framing. Preserve Image 1's texture, outline detail and colors without increasing orange saturation. Do not copy the later pose; visibly intermediate. One complete pair, genuine transparent alpha background, no text or ghosting.",
+      "references": [
+        "03",
+        "04"
+      ],
+      "toolOutputBasename": "exec-69026e63-1119-4a29-bc23-c506f0fd021d.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b34-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b34.png",
+      "selected": true
+    },
+    {
+      "id": "b45",
+      "prompt": "Create ONE animation in-between drawing between these two cels, ONE THIRD of the way from Image 1 to Image 2. Puppy eyelid is only one third of the way from the open eye toward the lowered lid: eyes mostly open, not yet half closed. Everything except that tiny motion must stay fixed: both bodies, paws, tails, adult head, character sizes and framing. Preserve Image 1's texture, outline detail and colors without increasing orange saturation. Do not copy the later pose; visibly intermediate. One complete pair, genuine transparent alpha background, no text or ghosting.",
+      "references": [
+        "04",
+        "05"
+      ],
+      "toolOutputBasename": "exec-dd4ea5f4-769a-4ac2-9b3f-b48b4702563b.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b45-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b45.png",
+      "selected": false
+    },
+    {
+      "id": "b56",
+      "prompt": "Create ONE animation in-between drawing between these two cels, ONE THIRD of the way from Image 1 to Image 2. Puppy eyelid is one third of the way from the partly open eye toward the closed eye, leaving a small visible brown iris. Everything except that tiny motion must stay fixed: both bodies, paws, tails, adult head, character sizes and framing. Preserve Image 1's texture, outline detail and colors without increasing orange saturation. Do not copy the later pose; visibly intermediate. One complete pair, genuine transparent alpha background, no text or ghosting.",
+      "references": [
+        "05",
+        "06"
+      ],
+      "toolOutputBasename": "exec-7f8250fb-0276-425b-bb5d-79d0c54506ab.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/b56-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/b56.png",
+      "selected": true
+    },
+    {
+      "id": "n1",
+      "prompt": "Draw one missing animation cel: the adult Rottweiler's head is 25 percent of the way from its upright position in Image 1 to its lowered position in Image 2. It is just begun lowering; much closer to Image 1. Interpolate the HEAD position and angle only, eyes remain open. Puppy is motionless with eyes closed; dog bodies, paws, tails, collars, canvas, camera and scale remain identical. This frame belongs between the two references, no duplicated outlines or crossfade. Preserve original subdued painted texture, avoid orange intensification. Transparent alpha background, one cel and no text.",
+      "references": [
+        "06",
+        "07"
+      ],
+      "toolOutputBasename": "exec-0eb607eb-1121-4a80-857f-026cfd75956a.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/n1-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/n1.png",
+      "selected": false
+    },
+    {
+      "id": "n2",
+      "prompt": "Draw one missing animation cel: the adult Rottweiler's head is 50 percent of the way from its upright position in Image 1 to its lowered position in Image 2. It is halfway lowered, exactly between both reference head positions. Interpolate the HEAD position and angle only, eyes remain open. Puppy is motionless with eyes closed; dog bodies, paws, tails, collars, canvas, camera and scale remain identical. This frame belongs between the two references, no duplicated outlines or crossfade. Preserve original subdued painted texture, avoid orange intensification. Transparent alpha background, one cel and no text.",
+      "references": [
+        "06",
+        "07"
+      ],
+      "toolOutputBasename": "exec-01bab795-a1c2-434e-ace3-d2a54f10e135.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/n2-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/n2.png",
+      "selected": false
+    },
+    {
+      "id": "n3",
+      "prompt": "Draw one missing animation cel: the adult Rottweiler's head is 75 percent of the way from its upright position in Image 1 to its lowered position in Image 2. It is mostly lowered, close to Image 2 but still visibly above it. Interpolate the HEAD position and angle only, eyes remain open. Puppy is motionless with eyes closed; dog bodies, paws, tails, collars, canvas, camera and scale remain identical. This frame belongs between the two references, no duplicated outlines or crossfade. Preserve original subdued painted texture, avoid orange intensification. Transparent alpha background, one cel and no text.",
+      "references": [
+        "06",
+        "07"
+      ],
+      "toolOutputBasename": "exec-913902ca-5cc0-4814-929e-cd8155cd6d0d.png",
+      "preservedOriginal": "assets/source/dense-nuzzle/n3-opaque-original.png",
+      "preparedFrame": "assets/dense-nuzzle/frames/n3.png",
+      "selected": false
+    }
+  ]
+}
