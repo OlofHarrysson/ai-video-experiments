@@ -2,6 +2,8 @@
 
 Research date: 2026-09-09. Scope: conventional animation authoring through scripting or APIs, excluding image-to-video generation. Documentation and selected source inspection only; no authoring integration or animation quality test has been run.
 
+Follow-up: the authorized [Blender puppy test](../../apps/blender-animation/projects/playful-puppy/README.md) implements the proposed first proof and records local execution and review separately from this research.
+
 ## Recommendation
 
 Test Blender first as an animation authoring engine controlled through its Python API. This recommendation is based on its documented control surface, editable scene format, and available animation tools, not a demonstrated result with our puppy characters. Moho is the strongest alternative to investigate if a drawn 2D puppet workflow is the priority.

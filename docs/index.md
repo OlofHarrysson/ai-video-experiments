@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Blender puppy animation](../apps/blender-animation/projects/playful-puppy/README.md) — native skinned character, editable pose keys, a three-second bow and hop, and measured paw controls.
+
 - [Krea lower repaint strengths](../apps/deforum/projects/modern-model-study/experiments/krea-low-repaint.md) — 0.10/0.18/0.24 with the preserved cathedral feedback loop.
 
 - [Initialized feedback plus optional reference](../apps/deforum/projects/modern-model-study/experiments/additive_reference.md) — retain warped-image sampling initialization and test additional native reference conditioning for Klein and Krea.
