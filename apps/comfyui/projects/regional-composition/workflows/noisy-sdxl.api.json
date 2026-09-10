@@ -1,0 +1,505 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "text, watermark, duplicate objects, cropped objects"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "distant mountains, open meadow, golden sky, painterly fantasy illustration, warm golden light from upper left, coherent perspective, grassy ground plane"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "one small red tin robot standing on grass, full body, painterly fantasy illustration, warm golden light from upper left, coherent perspective, grassy ground plane"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "one blue glass tree rooted in grass, translucent branching canopy, painterly fantasy illustration, warm golden light from upper left, coherent perspective, grassy ground plane"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningSetAreaStrength",
+    "inputs": {
+      "conditioning": [
+        "3",
+        0
+      ],
+      "strength": 0.25
+    }
+  },
+  "7": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "8": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 1.0,
+      "width": 384,
+      "height": 512
+    }
+  },
+  "9": {
+    "class_type": "FeatherMask",
+    "inputs": {
+      "mask": [
+        "8",
+        0
+      ],
+      "left": 32,
+      "top": 32,
+      "right": 32,
+      "bottom": 32
+    }
+  },
+  "10": {
+    "class_type": "MaskComposite",
+    "inputs": {
+      "destination": [
+        "7",
+        0
+      ],
+      "source": [
+        "9",
+        0
+      ],
+      "x": 64,
+      "y": 384,
+      "operation": "add"
+    }
+  },
+  "11": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "mask": [
+        "10",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "12": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "6",
+        0
+      ],
+      "conditioning_2": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "14": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 1.0,
+      "width": 384,
+      "height": 512
+    }
+  },
+  "15": {
+    "class_type": "FeatherMask",
+    "inputs": {
+      "mask": [
+        "14",
+        0
+      ],
+      "left": 32,
+      "top": 32,
+      "right": 32,
+      "bottom": 32
+    }
+  },
+  "16": {
+    "class_type": "MaskComposite",
+    "inputs": {
+      "destination": [
+        "13",
+        0
+      ],
+      "source": [
+        "15",
+        0
+      ],
+      "x": 576,
+      "y": 384,
+      "operation": "add"
+    }
+  },
+  "17": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "mask": [
+        "16",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "18": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "12",
+        0
+      ],
+      "conditioning_2": [
+        "17",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "20": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "19",
+        0
+      ],
+      "noise_seed": 21001,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "add_noise": "enable",
+      "return_with_leftover_noise": "enable"
+    }
+  },
+  "21": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "22": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/background-noisy"
+    }
+  },
+  "23": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 384,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "24": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ],
+      "noise_seed": 21002,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "add_noise": "enable",
+      "return_with_leftover_noise": "enable"
+    }
+  },
+  "25": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "24",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "26": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "25",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/object-1-noisy"
+    }
+  },
+  "27": {
+    "class_type": "LatentComposite",
+    "inputs": {
+      "samples_to": [
+        "20",
+        0
+      ],
+      "samples_from": [
+        "24",
+        0
+      ],
+      "x": 64,
+      "y": 384,
+      "feather": 32
+    }
+  },
+  "28": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 384,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "29": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "28",
+        0
+      ],
+      "noise_seed": 21003,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "add_noise": "enable",
+      "return_with_leftover_noise": "enable"
+    }
+  },
+  "30": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "29",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "31": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "30",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/object-2-noisy"
+    }
+  },
+  "32": {
+    "class_type": "LatentComposite",
+    "inputs": {
+      "samples_to": [
+        "27",
+        0
+      ],
+      "samples_from": [
+        "29",
+        0
+      ],
+      "x": 576,
+      "y": 384,
+      "feather": 32
+    }
+  },
+  "33": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "32",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "34": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "33",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/composite-noisy"
+    }
+  },
+  "35": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "32",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/composite-noisy"
+    }
+  },
+  "36": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "32",
+        0
+      ],
+      "noise_seed": 0,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 28,
+      "add_noise": "disable",
+      "return_with_leftover_noise": "disable"
+    }
+  },
+  "37": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "36",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "38": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "37",
+        0
+      ],
+      "filename_prefix": "regional-composition/20260910T080619226077Z-noisy-seed21001/noisy-final"
+    }
+  }
+}
