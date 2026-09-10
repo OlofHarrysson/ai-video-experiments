@@ -228,3 +228,9 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 - **Explicit:** Olof selects the right-hand [one-second repaint version](../apps/deforum/projects/modern-model-study/experiments/repaint-intervals.md): “I prefer the right one” and “a bit more morphing.” Keep that pacing for the next comparison. This is a preference for this shot, not a universal best interval.
 - **Explicit:** Olof approves testing interpolation settings next. The [scale experiment](../apps/deforum/projects/modern-model-study/experiments/rife-scale.md) compares unchanged paintings with full-scale and half-scale RIFE motion estimates.
 - **Unconfirmed:** No human verdict on the scale comparison yet; do not infer understanding of its internal estimation scale from approval to run it.
+
+## Park interpolation-scale tuning — 2026-09-10
+
+- **Explicit:** Olof has no strong preference between RIFE scales: “I don't think this is the biggest difference.” Half-scale is at most a weak tentative preference. Park these settings.
+- **Explicit:** He asks to explore newer interpolation models and diffusion changes, then recommend where to start. He values rich paintings that evolve more gradually, giving interpolation less drastic changes to bridge.
+- **Demonstrated:** He distinguishes changing the generated endpoint paintings from improving interpolation between them. His recollection of the successful two/three-step recipe is broadly aligned with the selected schedule tail; the exact earlier eight-update comparison still needs clarification. Do not infer understanding of sigma mathematics or the proposed new models.

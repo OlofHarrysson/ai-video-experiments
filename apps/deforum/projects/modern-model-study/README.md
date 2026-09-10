@@ -6,7 +6,7 @@ Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animat
 
 New execution convention: **24 fps source and delivery, time-based spatial motion, RIFE on by default**. The [timing migration experiment](experiments/timebase24.md) preserves the accepted baseline as cadence 6 (a repaint every 0.25 seconds). Existing cadence studies retain their historical labels and files. Use `FeedbackTiming(repaint_seconds=1)` for the selected one-second pacing; keep RIFE outside recurrent generation.
 
-Latest local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains and human playback preference is pending. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
+Latest local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains. Olof finds no strong preference and parks scale tuning. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
 
 Selected pacing: [repaint every 0.5s versus 1s](experiments/repaint-intervals.md), two six-second shots with the same Krea recipe and RIFE settings. Both run at native 24 fps (cadence 12/24). All sixteen fresh diffusion calls and finished outputs are local and verified. **Olof selects the one-second branch as better and more morphing.** It is the current pacing baseline. Owned GPU deleted; model cache retained.
 
@@ -21,6 +21,8 @@ The preceding [initialized feedback with optional reference conditioning](experi
 Earlier [three-second auditions](experiments/pod-results.md) produced 32 images and two clips. Olof found both models interesting but reported Krea jitter and doubled images. The subsequent [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test his intended combined mechanism. The misunderstanding is recorded in the collaboration agreement. The earlier serverless attempt stopped before inference.
 
 ## Experiments
+
+- [Next diffusion and interpolation research](../../../../docs/research/diffusion-and-interpolation-next.md): lower starting sigma with three sampling intervals recommended first; SPEED is a newer interpolation audition, not yet executed.
 
 - [RIFE motion-estimation scale](experiments/rife-scale.md): the same six paintings, comparing full-scale and half-scale interpolation at full-resolution 24 fps.
 

@@ -14,7 +14,7 @@ Implementation evidence: installed unmodified Practical-RIFE commit `bbfd2ea9091
 
 ## Results
 
-Both versions are complete and verified. **The assistant's tentative audition pick is half-scale**, based on less doubled architecture in the full-size 3.5s and 4.5s transition samples. The first 0.5s midpoint is mixed: both settings retain translucent/doubled contours and half-scale does not solve them. Broader forms and the central amber object remain recognizable in both. These are sampled-frame findings, not a proven reduction in playback flicker. Olof's scale preference is pending; the default remains 1.0.
+Both versions are complete and verified. **The assistant's tentative audition pick is half-scale**, based on less doubled architecture in the full-size 3.5s and 4.5s transition samples. The first 0.5s midpoint is mixed: both settings retain translucent/doubled contours and half-scale does not solve them. Broader forms and the central amber object remain recognizable in both. These are sampled-frame findings, not a proven reduction in playback flicker. Olof subsequently reports no strong preference and parks scale tuning; the default remains 1.0.
 
 ![Full-scale left, half-scale right](../exports/rife-scale-v001/comparison/preview.mp4)
 
@@ -43,3 +43,7 @@ uv run --with pillow python -m unittest test_interpolate.py
 ```
 
 [Assembly and verification script](rife_scale_review.py). Immutable manifests and regression receipt are under `exports/rife-scale-v001/`. Keep model and runner unchanged between a validated pair and its full run. The default-regression pair uses the same command without `--motion-scale`, with its separate preserved `default-regression-pair` directory.
+
+## Human feedback — 2026-09-10
+
+Olof sees no strong preference and finds the difference small; half-scale might be slightly better, but this is not a firm selection. Park scale tuning. He requests exploration of newer interpolation and diffusion changes, especially less abrupt differences between repaints. See [the research and proposed next experiment](../../../../../docs/research/diffusion-and-interpolation-next.md). The existing 1.0 default remains unchanged.

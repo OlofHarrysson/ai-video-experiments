@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Next diffusion and interpolation experiments](research/diffusion-and-interpolation-next.md) — native three-step tails, lower starting noise, and a current RIFE/GIMM/BiM/SPEED/LDF-VFI/ArbInterp research comparison.
+
 - [RIFE motion-estimation scale](../apps/deforum/projects/modern-model-study/experiments/rife-scale.md) — local interpolation comparison on the selected one-second repaint shot, preserving paintings and full-resolution 24 fps output.
 
 - [Spatial effects browser](../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) — 22 direct transforms on one drawing, effect selection, playback and scrubbing; the selected cadence-3/interpolation sequence is linked below.
