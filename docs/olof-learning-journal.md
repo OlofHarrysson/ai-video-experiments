@@ -263,3 +263,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Eased movement accepted (2026-09-10, explicit):** Olof says the eased-motion result definitely improves things and approves the proposed next deliberate subject transition. The assistant selects a porcelain mechanical owl as the new subject, compared against unchanged Oracle text after the same saved 8s painting. This is approval to test, not evidence that prompt changes can already direct reliable object replacement.
+
+
+**Playback speed audition (2026-09-10, explicit):** Olof says the Oracle-to-owl result looks quite nice and requests faster playback using exactly the same frames. He finds mistakes easier to notice when playback is slow. The assistant chooses 1.5× as a first audition; this speed is not yet a user preference. This changes delivery pacing only, not the generation recipe.

@@ -55,3 +55,8 @@ Main inspected the twelve-frame finished-video review: six evenly spaced samples
 The comparison isolates positive scene text after the shared 8s anchor. The held spatial transform, same runtime, same seeds and unchanged diffusion/RIFE settings make directed anatomy the useful finding. Assistant recommends retaining the owl version as a complete short shot: movement, settle, transformation, brief hold. A later continuation could introduce a new bounded motion phrase after the transformation, rather than extending the same twist indefinitely. No additional experiment is started.
 
 [Delivery checks](../exports/owl-transition-v001/delivery-verification.json), [finished-frame review](../exports/owl-transition-v001/review-finished/v001/review.json) and [independent painting review](../exports/owl-transition-v001/review-independent/) preserve the evidence. Every generation remains local; tracked code and notes reproduce the experiment, while media stays Git-ignored.
+
+
+## Human playback feedback
+
+Olof says the result looks quite nice. He requests the same frames played faster, observing that slow playback makes mistakes easier to notice. The [first retimed cut](../cuts/v001.md) auditions 1.5× without changing any decoded frame; fourteen seconds becomes 9⅓ seconds. Faster playback masking artifacts is his hypothesis, not an established repair to the images.
