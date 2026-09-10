@@ -1,6 +1,8 @@
 # Modern model study
 
-Latest: [three parallel directions](experiments/three-directions.md) compares stronger sustained motion and a simpler Oracle prompt against a fresh control, plus SPEED versus RIFE on saved endpoint pairs. All media is local and verified, and the shared Pod is deleted. Assistant recommends the stronger movement, especially seconds 5–9; late expansion needs framing control. Olof likes the stronger opening movement but rejects the excessive late deformation. Simpler prompting remains undecided; SPEED does not look better than RIFE. Next proposal is to ease movement to a hold in a continuation from the saved six-second painting, keeping repainting unchanged.
+Latest: [eased-motion continuation](experiments/eased-motion.md) preserves the original six-second opening and compares continuous deformation with a deceleration to a spatial hold. Ten new repaints are local and verified; the owned Pod and temporary remote files are cleaned up. Painting review favors the eased branch for keeping the face and architecture framed while repainting still changes detail. Both twelve-second finishes and comparison are verified; frame-sequence review supports easing. Human playback feedback is pending.
+
+Latest: [three parallel directions](experiments/three-directions.md) compares stronger sustained motion and a simpler Oracle prompt against a fresh control, plus SPEED versus RIFE on saved endpoint pairs. All media is local and verified, and the shared Pod is deleted. Assistant recommends the stronger movement, especially seconds 5–9; late expansion needs framing control. Olof likes the stronger opening movement but rejects the excessive late deformation. Simpler prompting remains undecided; SPEED does not look better than RIFE. The eased-motion follow-up is above.
 
 - [Krea lower repaint strengths](experiments/krea-low-repaint.md) — 0.10/0.18/0.24 with the preserved cathedral feedback loop.
 

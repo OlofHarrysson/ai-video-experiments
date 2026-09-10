@@ -130,3 +130,5 @@ Initial research dated 2026-09-06. Recommendations and integration hypotheses ar
 - [Image models and cost](research/models-and-cost.md) — SDXL baseline, Klein, DMD2, Krea, Seedream and a comparable-cost benchmark.
 - [Serverless rendering](research/serverless-rendering.md) — selected scale-to-zero architecture, output preservation and cost validation; [implementation runbook](../apps/deforum/serverless/README.md).
 - [Structure and style](research/structure-and-style.md) — guide footage, video-to-video translation and the deferred simple-3D-scene experiment.
+
+- [Eased-motion continuation](../apps/deforum/projects/modern-model-study/experiments/eased-motion.md): preserve the opening, slow deformation to a hold, and continue repainting.
