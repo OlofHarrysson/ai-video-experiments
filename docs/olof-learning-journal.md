@@ -258,6 +258,8 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 **Krea regional-composition feedback (2026-09-10, explicit):** Olof likes the initial Krea stills but questions whether regional prompting adds value over a complete prompt for two distinct objects placed left/right. After the approved eight-image test with three robots, fixed color/prop identities, two layouts and unequal sizes, he selects the complete prompt as better and notes the missing flower, flag and umbrella in the regional results. He is surprised by text-only positional accuracy and asks whether explicit regions were used. His question does not establish understanding of the conditioning mechanism or agreement with a proposed failure diagnosis. See the [layout benchmark](../apps/comfyui/projects/regional-composition/experiments/krea-layouts.md).
 
+**Regional prompting value threshold (2026-09-10, explicit):** Olof wants to stop this experiment unless it offers a fun, useful capability that ordinary prompting struggles with. He approves one final four-image comparison of a stone face with coral following a drawn S-shaped band versus the same shape described verbally. This approves the test, not its results or any claim that masks guarantee precise boundaries. See the [coral-mask experiment](../apps/comfyui/projects/regional-composition/experiments/krea-coral.md).
+
 
 **Deliberate transformation (2026-09-10, explicit):** Olof clarifies that recognizable forms should persist until we want them to morph into something else, not remain permanently protected. He proposes changing positive/negative prompt content to direct replacement. This is creative intent, not a verified guarantee that negative prompting removes objects in the current Krea recipe. He approves the eased-motion continuation described in [the experiment](../apps/deforum/projects/modern-model-study/experiments/eased-motion.md).
 
@@ -269,3 +271,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Delivery frame rate clarified (2026-09-10, explicit):** After requesting faster playback, Olof reiterates the 24 fps delivery target and asks to keep the speed of the seven-second version. The new cut uses 168 selected frames at 24 fps, retaining all original diffusion anchors. This is a delivery retime, with generation settings unchanged.
+
+
+**All frames clarified (explicit):** Olof means every diffusion painting; keeping every intermediate RIFE frame is unnecessary. He approves faster spatial movement and faster morphing at 24 fps. The selected approach is twice-speed motion with half-second repaint spacing and correspondingly shorter prompt/motion phases. The existing seven-second cut already preserves all fourteen paintings. This resolves the scope ambiguity; it does not establish a final visual-quality verdict.
