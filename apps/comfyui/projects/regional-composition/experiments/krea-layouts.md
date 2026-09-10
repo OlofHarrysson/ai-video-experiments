@@ -49,6 +49,8 @@ These are manual visual judgments, not automated detections. A pole without flag
 
 ### What this establishes
 
+**Human review (2026-09-10):** Olof selects the complete prompt as better, is surprised by its positional accuracy, and points out that the regional results lack the requested flower, flag and umbrella. He asks how text-only placement works and whether explicit regions were used. This confirms the complete prompt as the preferred recipe for this benchmark; it does not endorse a particular explanation of the regional failures.
+
 - The complete prompt remains competitive on three same-category subjects with different colors, props and relative sizes. Its A→B changes are consistent across both seeds.
 - Regional conditioning has a visible positional effect: the distant robot is more central and closer to the assigned box. It also leaves more sky and open meadow. Those are useful controls, but they do not compensate for missing props and damaged robots in this recipe.
 - Neither method accurately follows the requested 40%/25%/12% body heights. The complete-prompt foreground and middle-distance robots are visibly larger than requested. Regional sampling does not establish precise sizing either; layout B's headless pair is particularly unsuitable for interpreting body-height control.
