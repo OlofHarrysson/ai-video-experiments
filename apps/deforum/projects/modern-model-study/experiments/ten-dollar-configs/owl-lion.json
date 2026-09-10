@@ -1,0 +1,34 @@
+{
+  "case": "owl-lion",
+  "seed": 578039,
+  "duration": 7,
+  "opening_source": "accepted-owl",
+  "motion": {
+    "center": [
+      0.75,
+      0.5
+    ],
+    "settle": 2.5,
+    "zoom": 0.045,
+    "turn": -30,
+    "radius": 0.85,
+    "travel": [
+      0,
+      0.025
+    ],
+    "travel_window": [
+      3,
+      5
+    ]
+  },
+  "prompts": [
+    {
+      "at": 0,
+      "text": "A surreal visionary artwork, a close portrait of a porcelain mechanical owl within an impossible circular cathedral. Two large luminous turquoise glass eyes, broad sculpted facial discs of overlapping ivory ceramic feathers, a short hooked beak. Deep concentric architectural rings, curved chrome ribs, cyan glass and tiny amber lights. Strong sculptural side lighting, deep black cavities, glossy shaded ceramic, fine engraved textures, expressive asymmetry and intricate layered depth."
+    },
+    {
+      "at": 1.5,
+      "text": "A surreal visionary artwork, a regal mechanical lion looking directly at the viewer within an impossible circular cathedral. One large sculptural lion head with two luminous turquoise glass eyes, an expressive broad feline nose and a clearly shaped lion muzzle. A magnificent round mane radiates outward in thick curling locks of burnished gold, amber glass and ivory ceramic. The mane opens into a deep labyrinth of curved golden ribs, tiny architectural chambers and luminous amber filaments. Ivory cheek plates and polished bronze brow ridges reveal fine engraved textures. Concentric ornamental rings surround the head against deep black cavities. Dramatic warm side lighting, luxurious tactile material, strong shaded three-dimensional forms, an enigmatic gaze, intricately crafted visionary album-cover art."
+    }
+  ]
+}

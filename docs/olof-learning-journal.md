@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-10 — independent creative practice:** Olof asks the assistant to set a goal, experiment independently within **$10**, and show only the most interesting high-quality outputs at the end. The earlier timing clarification remains: keep diffusion paintings, allow fewer intermediate frames, and pursue faster spatial motion and morphing at 24 fps. This authorizes assistant selection within the budget; it does not establish that Olof likes the resulting new styles. See the [ten-dollar session](../apps/deforum/projects/modern-model-study/experiments/ten-dollar.md).
+
 Recorded 2026-09-07 from this project's conversation.
 
 | Preference | Evidence | How to respond |

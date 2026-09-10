@@ -1,0 +1,33 @@
+{
+  "case": "parasol",
+  "seed": 684927,
+  "duration": 10,
+  "motion": {
+    "center": [
+      0.75,
+      0.35
+    ],
+    "settle": 2.5,
+    "zoom": 0.13,
+    "turn": -18,
+    "radius": 0.68,
+    "travel": [
+      0,
+      -0.055
+    ],
+    "travel_window": [
+      3,
+      6
+    ]
+  },
+  "prompts": [
+    {
+      "at": 0,
+      "text": "A dreamlike underwater painting of one open red silk parasol suspended above pale rippled sand in deep still water. Seen slightly from below, its broad domed canopy occupies the upper middle of a wide composition, with scalloped fabric edges and fine dark ribs radiating from its center. A slender curved handle hangs into the open lower half of the image. Rose light shines through the cherry-red silk, revealing overlapping translucent folds and glossy droplets along its edge. Sparse drifting particles catch the light. The distant water falls into near-black plum shadow. A clear solitary silhouette, sculptural fabric, luminous layered color and generous quiet space around the parasol."
+    },
+    {
+      "at": 3,
+      "text": "A dreamlike underwater painting of one large crimson jellyfish floating above pale rippled sand in deep still water. Seen slightly from below, its translucent domed bell occupies the upper middle of a wide composition. Rose light glows through folded membranes and pearl-white radial canals beneath the red bell. A scalloped soft rim surrounds the dome; several long delicate tentacles and broad ruffled oral arms descend through the open lower half of the image. The jellyfish has a clearly readable bell and flowing suspended appendages, with luminous tissue and fine internal structures visible through its body. Sparse drifting particles, near-black plum water and generous quiet space surround its solitary silhouette."
+    }
+  ]
+}

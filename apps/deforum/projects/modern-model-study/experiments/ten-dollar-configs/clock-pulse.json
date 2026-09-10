@@ -1,0 +1,55 @@
+{
+  "case": "clock-pulse",
+  "seed": 192739,
+  "duration": 8,
+  "motion": {
+    "center": [
+      0.6,
+      0.5
+    ],
+    "settle": 2.5,
+    "zoom": 0.14,
+    "turn": 26,
+    "radius": 0.65,
+    "travel": [
+      0.05,
+      0
+    ],
+    "travel_window": [
+      3,
+      6
+    ]
+  },
+  "prompts": [
+    {
+      "at": 0,
+      "text": "A surreal illustration of one large antique brass pocket watch resting at a slight diagonal on a charcoal stone ledge. Its round amber dial faces the viewer in three-quarter view, with two dark hands and simple engraved tick marks. A loose brass chain curves along the ledge toward the right. The watch occupies the middle-left of a wide composition, with open space along the ledge on the right. Behind it, spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light catches the worn metal rim and casts a long dark shadow. Bold etched black contours, delicate engraved textures, tactile shaded metal and restrained washes of warm color."
+    },
+    {
+      "at": 2.5,
+      "text": "A surreal illustration of one large land snail resting on a charcoal stone ledge, its head extending toward the right. A rounded amber-and-brass spiral shell occupies the middle-left of the wide composition. The shell has deep sculpted coils, fine radial engravings and worn golden highlights. An elongated dark red body emerges beneath it, with a broad muscular foot touching the stone and two slender raised eyestalks. The whole snail is clearly readable, with open space in front of its head. Spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light models the shell, moist body and long shadow. Bold etched black contours, delicate textures and restrained warm washes."
+    }
+  ],
+  "prefix_source": "clock",
+  "branch_frame": 48,
+  "sigma_schedule": [
+    {
+      "at": 2.5,
+      "values": [
+        0.7,
+        0.5983180999751667,
+        0.3627179215356666,
+        0.0
+      ]
+    },
+    {
+      "at": 4.5,
+      "values": [
+        0.6,
+        0.512844085693,
+        0.310901075602,
+        0.0
+      ]
+    }
+  ]
+}
