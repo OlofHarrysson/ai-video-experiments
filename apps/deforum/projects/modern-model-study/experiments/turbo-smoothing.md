@@ -1,5 +1,7 @@
 # Three-step morphing: interpolation and cadence
 
+**Subsequent human playback verdict:** Olof finds RIFE substantially better and cadence 2 worse. RIFE makes the flicker read as morphing. Keep it optional for diagnosis, and test [cadence 4 and 5](cadence-spacing.md) before further diffusion-noise tuning. This verdict supersedes the pending-feedback statements in the original first-pass review below.
+
 ## Experiment recorded before execution
 
 Olof prefers the detail of the three-step Krea continuation and wants gradual morphing. He suspects abrupt diffusion redraws are the main problem. This round contains two bounded controls before changing diffusion noise or sampling strength.

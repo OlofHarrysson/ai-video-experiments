@@ -21,12 +21,14 @@ def encode(root):
     return stream
 
 
-def compare(kind, right_frames, right_label, right_fps):
-    root=OUT/f'compare-{kind}'
+def compare(kind, right_frames, right_label, right_fps, *, output_root=OUT,
+            left_frames=None, left_fps=12, left_label='Original: repaint every 3 frames'):
+    root=output_root/f'compare-{kind}'
+    left_frames=left_frames or s.CONTROL/'frames'
     font=ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc',23)
     for i in range(72):
         canvas=Image.new('RGB',(1536,554),'#15191d');draw=ImageDraw.Draw(canvas)
-        for x,path,label in [(0,s.CONTROL/f'frames/{i//2:04d}.png','Original: repaint every 3 frames'),
+        for x,path,label in [(0,left_frames/f'{i if left_fps==24 else i//2:04d}.png',left_label),
                              (768,right_frames/f'{i if right_fps==24 else i//2:04d}.png',right_label)]:
             canvas.paste(Image.open(path).convert('RGB').resize((768,512),Image.Resampling.LANCZOS),(x,42))
             draw.text((x+12,9),label,font=font,fill='white')

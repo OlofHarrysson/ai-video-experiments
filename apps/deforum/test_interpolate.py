@@ -11,6 +11,17 @@ from interpolate import frame_plan, inventory
 
 
 class TimingTests(unittest.TestCase):
+    def test_cadence_five_anchor_timestamps_at_fractional_source_rate(self):
+        source_fps=Fraction(12,5)
+        rows=frame_plan(8,multiplier=10)
+        for i,row in enumerate(rows):
+            if row['kind']=='anchor':
+                self.assertEqual(Fraction(i,24),row['source_index']/source_fps)
+            elif row['kind']=='interpolation':
+                self.assertEqual(Fraction(i,24),(row['source_pair'][0]+Fraction(row['timestep']))/source_fps)
+        # The last real anchor is at 35/12 seconds; the experiment trims final holds.
+        self.assertEqual(rows[70],{'kind':'anchor','source_index':7})
+
     def test_nine_second_cadence_frames_doubled_without_retiming(self):
         rows = frame_plan(108, multiplier=2)
         self.assertEqual(len(rows), 216)

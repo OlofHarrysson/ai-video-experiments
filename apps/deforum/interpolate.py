@@ -81,7 +81,8 @@ def main():
     parser.add_argument("source", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--source-frames", type=int, default=SOURCE_FRAMES)
-    parser.add_argument("--source-fps", type=int, default=SOURCE_FPS)
+    parser.add_argument("--source-fps", type=Fraction, default=Fraction(SOURCE_FPS),
+                        help="Original anchor rate, including fractions such as 12/5")
     parser.add_argument("--multiplier", type=int, default=MULTIPLIER)
     parser.add_argument("--rife-root", type=Path,
                         default=Path(__file__).parent / "work/rife-session/Practical-RIFE")
@@ -91,7 +92,8 @@ def main():
     args = parser.parse_args()
     if args.source_frames < 2 or args.source_fps < 1 or args.multiplier < 2:
         parser.error('Need at least two frames, positive FPS and multiplier >= 2')
-    output_fps = args.source_fps * args.multiplier
+    exact_output_fps = args.source_fps * args.multiplier
+    output_fps = int(exact_output_fps) if exact_output_fps.denominator == 1 else float(exact_output_fps)
     multiplier = args.multiplier
     started = time.perf_counter()
     source, output, root = args.source.resolve(), args.output.resolve(), args.rife_root.resolve()
@@ -121,7 +123,7 @@ def main():
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS unavailable; no automatic CPU or cloud fallback")
     versions = {name: importlib.metadata.version(name) for name in ("torch", "numpy", "pillow")}
-    settings = {"source_fps": args.source_fps, "output_fps": output_fps,
+    settings = {"source_fps": float(args.source_fps), "output_fps": output_fps,
                 "multiplier": multiplier, "timesteps": [f"{i}/{multiplier}" for i in range(1,multiplier)],
                 "scale_list": SCALES, "scale": 1.0, "device": "mps", "dtype": "float32",
                 "batch_size": 1, "ensemble": False, "fastmode": True, "compilation": False,
@@ -219,17 +221,18 @@ def main():
                                                "file": str(path.relative_to(output)), "sha256": digest})
         receipt["render_seconds"] = time.perf_counter() - model_ready
         encode_start = time.perf_counter()
-        encode = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-n", "-framerate", str(output_fps),
+        encode = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-n", "-framerate", str(exact_output_fps),
                   "-start_number", "0", "-i", str(output / "frames/%04d.png"),
                   "-frames:v", str(len(plan)), "-an", "-c:v", "libx264", "-preset", "slow",
-                  "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(output / "preview.mp4")]
+                  "-crf", "18", "-pix_fmt", "yuv420p", "-movie_timescale", str(exact_output_fps.numerator),
+                  "-movflags", "+faststart", str(output / "preview.mp4")]
         command(encode)
         receipt["encode_command"] = encode
         receipt["encode_seconds"] = time.perf_counter() - encode_start
         probe = json.loads(command(["ffprobe", "-v", "error", "-count_frames", "-select_streams", "v:0",
                                     "-show_streams", "-of", "json", str(output / "preview.mp4")]))
         stream = probe["streams"][0]
-        if (int(stream["nb_read_frames"]) != len(plan) or Fraction(stream["avg_frame_rate"]) != output_fps
+        if (int(stream["nb_read_frames"]) != len(plan) or Fraction(stream["avg_frame_rate"]) != exact_output_fps
                 or abs(float(stream["duration"]) - len(plan) / output_fps) > 0.00001
                 or (stream["width"], stream["height"]) != (width, height)):
             raise RuntimeError("Encoded video count, FPS, duration or dimensions differ")
