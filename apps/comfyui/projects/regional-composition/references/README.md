@@ -1,5 +1,7 @@
 # Reference evidence
 
+- **Olof's preferred tutorial:** [ControlAltAI area composition](controlaltai-area-composition.md) — complete description/transcript review; regional composition followed by a comprehensive-prompt refinement pass, optional ControlNet and upscaling.
+
 Retrieved 2026-09-10 from the official [Noisy Latent Composition page](https://comfyanonymous.github.io/ComfyUI_examples/noisy_latent_composition/).
 
 - Original workflow-bearing image: [upstream PNG](https://comfyanonymous.github.io/ComfyUI_examples/noisy_latent_composition/noisy_latents_3_subjects.png).
