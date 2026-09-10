@@ -246,3 +246,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 - **Explicit:** Olof asks for one prompt in each half of a shot and a broader starting-noise sweep at 0.3/0.4/0.5/0.6. He identifies scene transitions as an important scenario for judging the feedback process.
 - **Experiment:** [Two-prompt study](../apps/deforum/projects/modern-model-study/experiments/prompt-noise.md), interpreted as successive temporal halves. Do not infer a noise-level preference or understanding of proportional noise schedules from his request.
+
+
+**Oracle, noise and steps (2026-09-10, explicit):** Olof wants to revisit lower starting noise with more sampling steps, and allow more successive repaints after switching the prompt earlier. He dislikes the moth subject and requests Oracle or another subject. He asks to consult earlier tests and retain interpolation for this comparison. No preference for a new noise/step combination is established.

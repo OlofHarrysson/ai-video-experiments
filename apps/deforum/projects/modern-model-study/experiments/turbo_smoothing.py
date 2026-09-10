@@ -32,7 +32,7 @@ def render(cadence=CADENCE, out=OUT, study='turbo-smoothing-v001', *, timing=Non
     (a.PROJECT/'runs').mkdir(parents=True,exist_ok=True)
     a.copy(CONTROL/f'anchors/{START:04d}.png',root/f'anchors/{start:04d}.png')
     a.save(root/'manifest.json', {'cadence':cadence,'fps':timing.fps,'frames':count,'start_frame':start,
-        'tail':3,'first_repaint_seed':t.SEED+13,'seed_policy':'increment once per repaint',
+        **({'tail':3} if graph_factory is None else {'schedule_source':'per-repaint custom graph'}),'first_repaint_seed':t.SEED+13,'seed_policy':'increment once per repaint',
         'opening_sha256':a.sha(root/f'anchors/{start:04d}.png'),
         'motion_runner_sha256':a.sha(Path(t.__file__)), 'runner_sha256':a.sha(Path(__file__)),
         'graph':make_graph(t.SEED+13),'intermediates':'previous generated anchor warped; no blend'})

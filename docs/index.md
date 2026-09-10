@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Oracle: noise, steps and longer transitions](../apps/deforum/projects/modern-model-study/experiments/oracle-steps.md) — matched 0.4 with 3/9 steps and 0.6 with 3/1 steps; Oracle starts at the second repaint.
+
 - [Two prompts and wider noise benchmarks](../apps/deforum/projects/modern-model-study/experiments/prompt-noise.md) — cathedral → mechanical moth at 0.3/0.4/0.5/0.6, with preserved feedback and identical interpolation.
 
 - [Diffusion starting-noise sweep](../apps/deforum/projects/modern-model-study/experiments/starting-noise.md) — 0.655/0.62/0.60/0.56 with three sampling intervals, identical one-second repaint timing and interpolation.
