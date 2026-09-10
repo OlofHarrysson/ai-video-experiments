@@ -6,6 +6,7 @@ Build images by assigning a full-canvas background prompt and separate foregroun
 
 - [Research and recommendation](../../../../docs/research/regional-composition.md)
 - [Results and comparisons](experiments/results.md)
+- [Two-stage regional/global refinement](experiments/refinement.md) — clean 2048 detail at denoise 0.60 on two seeds, with object redesign; human preference pending.
 - [Experiment design and follow-up decisions](experiments/baseline.md)
 - [Tested editable workflows](workflows/README.md)
 - [Upstream workflow evidence](references/README.md)

@@ -1,5 +1,7 @@
 # Workflows
 
+The subsequent [two-stage experiment](../experiments/refinement.md) adds a whole-image refinement pass to regional generation: [editable graph](regional-global-refinement-sdxl.json), [API graph](regional-global-refinement-sdxl.api.json). These are exact executed exports from `20260910T102022890750Z-refinement-refine-s21001-2048-d0.60`, using bislerp latent enlargement to 2048 and global refinement at denoise 0.60. The graph includes diagnostic saves and retains fixed seeds and original output prefixes. It has no third generation/upscale stage and requires no custom nodes. The frontend-open verification below refers to the three earlier baseline graphs.
+
 These are exact copies of the executed seed-21001 graphs using feathered mask conditioning and background strength 0.25. They use SDXL base 1.0 and built-in ComfyUI nodes. See the [results](../experiments/results.md) for quality limitations and the [upstream reference](../references/README.md) for the original composition mechanism.
 
 | Method | Editable ComfyUI graph | API graph | Source run |

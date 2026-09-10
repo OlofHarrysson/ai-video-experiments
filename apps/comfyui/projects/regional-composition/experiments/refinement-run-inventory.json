@@ -1,0 +1,330 @@
+[
+  {
+    "run": "runs/20260910T101728259044Z-refinement-base-s21001-1024-d0.45",
+    "mode": "base",
+    "seed_offset": 0,
+    "size": 1024,
+    "denoise": 0.45,
+    "execution_seconds": 16.241,
+    "lineage": {
+      "identical": false,
+      "mean_absolute_difference_8bit": 2.223034222920736,
+      "maximum_channel_difference_8bit": 247,
+      "comparison_kind": "cross-session reproduction",
+      "parent_run": "runs/20260910T080602645918Z-regional-seed21001",
+      "parent_sha256": "6267723a72289ef0a29075ec080526f18dd8763f90e9b4372f1b561b96b5269c",
+      "current_sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce"
+    },
+    "files": [
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "b35af3e12a71686e116412b07a59edff91e2c6cb50fd1f7dd58b6f599407fd13",
+        "bytes": 277392
+      },
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce",
+        "bytes": 1759988
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T101846035785Z-refinement-refine-s21001-2048-d0.30",
+    "mode": "refine",
+    "seed_offset": 0,
+    "size": 2048,
+    "denoise": 0.3,
+    "execution_seconds": 33.065,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "within-session parent",
+      "parent_run": "runs/20260910T101728259044Z-refinement-base-s21001-1024-d0.45",
+      "parent_sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce",
+      "current_sha256": "a21e3cfa6037cf96326555ed37f04d1cba3226f629c464159a23b8d07b548dd6",
+      "latent_tensor_identical": true,
+      "latent_tensor": {
+        "dtype": "F32",
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "sha256": "4de760f3c199a5953887253cf2155b16f1666e12d6b5c99a1a983dfba9ba754d"
+      }
+    },
+    "files": [
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "a21e3cfa6037cf96326555ed37f04d1cba3226f629c464159a23b8d07b548dd6",
+        "bytes": 1765495
+      },
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "9cca11c858711a3da2e7416cab9612d8e265317cc9b8a67fcc48615b658bc0e2",
+        "bytes": 283552
+      },
+      {
+        "local": "outputs/enlarged-without-refinement_00001_.png",
+        "sha256": "e9539a8f24989e6f3335cac9bd6536bf35fe262621275645a8d3a94d2a60a739",
+        "bytes": 6676803
+      },
+      {
+        "local": "outputs/refined-latent_00001_.latent",
+        "sha256": "af3b5216c09ff5b28c07048b2d8cbf921349c848ea7acea7b6caf69fe6a665ec",
+        "bytes": 1069984
+      },
+      {
+        "local": "outputs/global-refined_00001_.png",
+        "sha256": "4f7f81e49538b15e025149954d9c71def3663647cf9d64b8be410348845b5ddd",
+        "bytes": 5254308
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T101943821763Z-refinement-refine-s21001-2048-d0.45",
+    "mode": "refine",
+    "seed_offset": 0,
+    "size": 2048,
+    "denoise": 0.45,
+    "execution_seconds": 30.776,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "within-session parent",
+      "parent_run": "runs/20260910T101728259044Z-refinement-base-s21001-1024-d0.45",
+      "parent_sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce",
+      "current_sha256": "b6efca64040ed354e4e1a6a7885464e700170a985ea639001f0388a7edc7bbcb",
+      "latent_tensor_identical": true,
+      "latent_tensor": {
+        "dtype": "F32",
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "sha256": "4de760f3c199a5953887253cf2155b16f1666e12d6b5c99a1a983dfba9ba754d"
+      }
+    },
+    "files": [
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "b6efca64040ed354e4e1a6a7885464e700170a985ea639001f0388a7edc7bbcb",
+        "bytes": 1765497
+      },
+      {
+        "local": "outputs/enlarged-without-refinement_00001_.png",
+        "sha256": "debdea63c151bb8953df87686da0d8e52452a48e11ee8b9b65e17890cb1c5b20",
+        "bytes": 6676805
+      },
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "11e30cc6d764eddef6f8f3ca6fe0e50d29c3dcb8e1ec5a847fbc7aaac8b7e8ac",
+        "bytes": 283552
+      },
+      {
+        "local": "outputs/refined-latent_00001_.latent",
+        "sha256": "78b99ecc47fcebe61bc327f2e6be5c8f6a58542f933769799d9265ca0d399cf1",
+        "bytes": 1069992
+      },
+      {
+        "local": "outputs/global-refined_00001_.png",
+        "sha256": "95ca906e4afc360f5bd6898187e04a3f9fe139b32425d8970b8f59b25c80261d",
+        "bytes": 4954082
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T102022890750Z-refinement-refine-s21001-2048-d0.60",
+    "mode": "refine",
+    "seed_offset": 0,
+    "size": 2048,
+    "denoise": 0.6,
+    "execution_seconds": 30.831,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "within-session parent",
+      "parent_run": "runs/20260910T101728259044Z-refinement-base-s21001-1024-d0.45",
+      "parent_sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce",
+      "current_sha256": "b78fbb562d02c87f333b2a56b4fd7ac9a28ad5d2fd55028fa3fce257cff59721",
+      "latent_tensor_identical": true,
+      "latent_tensor": {
+        "dtype": "F32",
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "sha256": "4de760f3c199a5953887253cf2155b16f1666e12d6b5c99a1a983dfba9ba754d"
+      }
+    },
+    "files": [
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "b78fbb562d02c87f333b2a56b4fd7ac9a28ad5d2fd55028fa3fce257cff59721",
+        "bytes": 1765495
+      },
+      {
+        "local": "outputs/enlarged-without-refinement_00001_.png",
+        "sha256": "654e4105d561ce99f4f95ee687af6397927b0331093978884f48660f49224e65",
+        "bytes": 6676803
+      },
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "79513913588a665e5f814df941bcad46e4ba312f90ef6f2eb1cfa04ddb216590",
+        "bytes": 283552
+      },
+      {
+        "local": "outputs/refined-latent_00001_.latent",
+        "sha256": "835fdc6c99c19e2afece740f3adb1056a8521b0bf4e62d9cbb2cce1ad2c16848",
+        "bytes": 1069984
+      },
+      {
+        "local": "outputs/global-refined_00001_.png",
+        "sha256": "b7b13f8fd808ec722e4015e2fe62eb25cdebf44660819cc4eace82e86929b836",
+        "bytes": 6635248
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T102058389718Z-refinement-refine-s21001-1024-d0.45",
+    "mode": "refine",
+    "seed_offset": 0,
+    "size": 1024,
+    "denoise": 0.45,
+    "execution_seconds": 6.801,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "within-session parent",
+      "parent_run": "runs/20260910T101728259044Z-refinement-base-s21001-1024-d0.45",
+      "parent_sha256": "990d6a2d83591802c2a8562fadc75111268760638b1fe1245935868ae0679fce",
+      "current_sha256": "38a9c9bef67b5e5e8b932bf2dccbf4343b324bdf64b1847b678c0986340fd751",
+      "latent_tensor_identical": true,
+      "latent_tensor": {
+        "dtype": "F32",
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "sha256": "4de760f3c199a5953887253cf2155b16f1666e12d6b5c99a1a983dfba9ba754d"
+      }
+    },
+    "files": [
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "38a9c9bef67b5e5e8b932bf2dccbf4343b324bdf64b1847b678c0986340fd751",
+        "bytes": 1763769
+      },
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "7678601ba09fa954e2b9a36837b7b6245093c5006f6b8e64eb22575fa816cd7c",
+        "bytes": 281600
+      },
+      {
+        "local": "outputs/refined-latent_00001_.latent",
+        "sha256": "f9b8a20620a9eed4ae914fd424c4e87f606b69968bc212b022edc7ff80c3451a",
+        "bytes": 281600
+      },
+      {
+        "local": "outputs/global-refined_00001_.png",
+        "sha256": "3c5c015c31ae48fedde86be671d24d18f3bfd3f4b453bddc5c5d3d6664053d65",
+        "bytes": 1719550
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T102210667447Z-refinement-base-s21101-1024-d0.45",
+    "mode": "base",
+    "seed_offset": 100,
+    "size": 1024,
+    "denoise": 0.45,
+    "execution_seconds": 11.462,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "cross-session reproduction",
+      "parent_run": "runs/20260910T080710732830Z-regional-seed21101",
+      "parent_sha256": "66eb434c8e31e0d8093cc3c4b898194b5698273fc155f3bebc1fea2a9d11ae93",
+      "current_sha256": "4abede507349cdb9fc5dabd8dd656e60b6ddacfa0d7bd9724a083e66de4e2b45"
+    },
+    "files": [
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "47912137bdef9517cc5aa1dd876342cbb466ec64a464f6158d103487559a5c51",
+        "bytes": 277392
+      },
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "4abede507349cdb9fc5dabd8dd656e60b6ddacfa0d7bd9724a083e66de4e2b45",
+        "bytes": 1656354
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T102321272789Z-refinement-refine-s21101-2048-d0.60",
+    "mode": "refine",
+    "seed_offset": 100,
+    "size": 2048,
+    "denoise": 0.6,
+    "execution_seconds": 32.659,
+    "lineage": {
+      "identical": true,
+      "mean_absolute_difference_8bit": 0.0,
+      "maximum_channel_difference_8bit": 0,
+      "comparison_kind": "within-session parent",
+      "parent_run": "runs/20260910T102210667447Z-refinement-base-s21101-1024-d0.45",
+      "parent_sha256": "4abede507349cdb9fc5dabd8dd656e60b6ddacfa0d7bd9724a083e66de4e2b45",
+      "current_sha256": "b88920317e70b0ded76c21660bedd0a244e943163a1bdbe22fca60b83735a96b",
+      "latent_tensor_identical": true,
+      "latent_tensor": {
+        "dtype": "F32",
+        "shape": [
+          1,
+          4,
+          128,
+          128
+        ],
+        "sha256": "5ba345e07baf15c808ed1f2f152696338986814a10b41ccd6da2ec2b7a89a5f8"
+      }
+    },
+    "files": [
+      {
+        "local": "outputs/regional_00001_.png",
+        "sha256": "b88920317e70b0ded76c21660bedd0a244e943163a1bdbe22fca60b83735a96b",
+        "bytes": 1661861
+      },
+      {
+        "local": "outputs/regional-latent_00001_.latent",
+        "sha256": "bc28e7f6b05ca022f5bfb508fa7816b32ae5ee70259386237cdcfa1b64cc8a5d",
+        "bytes": 283552
+      },
+      {
+        "local": "outputs/enlarged-without-refinement_00001_.png",
+        "sha256": "8eafa0cf8f2cbd1e0518083006b3fafb74cfeec670883a312836c28e92188035",
+        "bytes": 6103442
+      },
+      {
+        "local": "outputs/refined-latent_00001_.latent",
+        "sha256": "e42a97cae91f22a708d3452c6ea5add42d4c022fe3a4bf62bed6c26951373dc6",
+        "bytes": 1069984
+      },
+      {
+        "local": "outputs/global-refined_00001_.png",
+        "sha256": "a1c101b101c06510a20cd4fb888cbf05ade3f22f4978125a2c2aa7f58f89c5e2",
+        "bytes": 6230662
+      }
+    ]
+  }
+]
