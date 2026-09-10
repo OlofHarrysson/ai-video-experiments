@@ -13,3 +13,5 @@ Build images by assigning a full-canvas background prompt and separate foregroun
 The first model is ordinary SDXL base 1.0, already used in this repository. Regional prompting with feathered masks gave the most consistent integration in this small comparison. Noisy composition gave a good first image but a framed tree on the repeat. Incremental inpainting preserved pixels outside the insertion regions exactly, but left conspicuous patches that the gentle finish did not fix. None convincingly delivered the requested glass material. These are initial recipes, not rankings of the methods' ultimate capabilities.
 
 A modern-model follow-up should retain the same scene brief and spatial controls while adopting that model's native conditioning and sampling recipe.
+
+Olof's review: regional prompting looks best. Noisy composition may suit intentionally distinct areas or styles, but its weak blending limits general use. He rejects these layered-inpainting results and wants the apparent foreground overlap explained before further experiments.

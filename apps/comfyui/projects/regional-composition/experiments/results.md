@@ -23,7 +23,9 @@ Layer construction for the first seed:
 
 ![Background, robot insertion, tree insertion and finish](../exports/masked-seed21001-v001/layered-stages.png)
 
-The [second seed stages](../exports/masked-seed21101-v001/layered-stages.png), every original output and failed visual control are preserved. Human creative preference is pending; these rankings are the assistant's visual review.
+The [second seed stages](../exports/masked-seed21101-v001/layered-stages.png), every original output and failed visual control are preserved. Olof subsequently selected regional prompting as best, described noisy composition as potentially useful for deliberately distinct areas/styles but poorly blended and less general-purpose, and rejected these layered-inpainting results.
+
+Olof also noticed apparent overlap between the regional robot and tree. The two foreground masks do not overlap: their horizontal supports are [64,448) and [576,960), leaving a 128-pixel gap. Both cover y=[384,896), with 32-pixel inward feathering. The full-canvas background overlaps each intentionally. The three separately encoded prompts remain separate conditioning entries in one sampling process; no combined robot-and-tree text prompt was used. These masks weight denoising contributions rather than clipping object silhouettes, so the rendered tree can extend toward the robot despite disjoint prompt regions.
 
 ## What was actually tested
 
