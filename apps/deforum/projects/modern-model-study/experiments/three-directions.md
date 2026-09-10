@@ -16,7 +16,7 @@ Allocation update: two cache-region attempts failed despite a LOW availability l
 
 ## Results
 
-Complete. Three subagents prepared and reviewed independent directions on one shared Pod, with sequential GPU inference slots. The main agent integrated the results. No human preference for these new outputs is established yet.
+Complete. Three subagents prepared and reviewed independent directions on one shared Pod, with sequential GPU inference slots. The main agent integrated the results. Olof likes the stronger movement, remains undecided on simpler prompting, and sees no improvement from SPEED; detailed playback feedback follows below.
 
 | Direction | Assistant finding | Playable result |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ All 33 recurrent Krea jobs completed; requested/executed graphs, warped inputs, 
 
 The shared Pod was deleted only after both workloads' downloads were verified and the ComfyUI queue was empty. Subsequent Pod listing was empty; the authorized 50 GB EU model volume remains. Roughly twenty minutes at $0.74/hour corresponds to about $0.25 compute (estimate, not a billing receipt). The 459.73-second largest Krea download reflects the temporary uncached workspace. SPEED used a separate environment and released its GPU lease before Krea inference, allowing setup and download work to overlap without simultaneous inference or ComfyUI dependency changes.
 
-The three original experiments and all generations remain preserved. Finishing and first-pass frame-sequence review completed locally. Archive SHA256: `f3ce4dd936b1831693b8100cb2c762708eba43f1e14ce7ffb4bbdb421729209c`. Private execution and final delivery receipts live in app-level `work/three-directions-session/`; SPEED additionally preserves its 209-artifact delivery verification in its export. No user preference for these new outputs is inferred.
+The three original experiments and all generations remain preserved. Finishing and first-pass frame-sequence review completed locally. Archive SHA256: `f3ce4dd936b1831693b8100cb2c762708eba43f1e14ce7ffb4bbdb421729209c`. Private execution and final delivery receipts live in app-level `work/three-directions-session/`; SPEED additionally preserves its 209-artifact delivery verification in its export. Human playback feedback is recorded below.
 
 ## Local finishing
 
@@ -54,3 +54,14 @@ uv run --with numpy --with pillow --with opencv-python python projects/modern-mo
 ```
 
 Run the unchanged local `interpolate.py` pair gate and full pass on each twelve-painting `rife-sources/` directory, with source FPS 1, multiplier 24, and the inspected pair manifest supplied to `--validated-pair`. Then use `three_directions_review.py DIRECTION finish` for all three and `compare` for prompt/motion. Each final contains 288 frames at 24 fps; the final second retains native warp-only motion. SPEED uses the separately labeled 8 fps diagnostic described in its report and never changes this production timing.
+
+
+## Human playback feedback and next proposal — 2026-09-10
+
+Olof is happy with the learning from movement and prompting. More movement improves the beginning, but the stronger-motion ending becomes excessively deformed and no longer looks good. He is undecided whether simpler prompting helps, hurts or depends on the scene. SPEED does not appear better than RIFE. He values the preservation of large recognizable forms as visual focal points while the artwork morphs, and sees substantial progress without considering the remaining fundamental quality issues solved.
+
+The implemented motion accumulates twist and radial expansion over all twelve seconds. It has no easing or composition-aware stopping point. This establishes a plausible contributor to the late breakdown, not a complete explanation: recurrent repainting may also contribute. Stopping motion later cannot undo already accumulated changes.
+
+**Proposed next test, not executed:** reuse the accepted opening through the saved six-second painting, then ease both twist and expansion to zero incremental motion over seconds 6–8. Keep repainting once per second through second 12 with the same original Oracle prompt, sigma schedule, seed sequence, model and RIFE. Holding the deformation means holding its cumulative transform, not returning it to identity. Compare against the preserved continuous-motion result. This keeps the opening identical and asks whether the attractive forms survive once sustained deformation stops. It does not require regenerating the opening or a new model audition.
+
+If the continuation still deteriorates after spatial motion stops, inspect the new repaint anchors before attributing the problem to interpolation; recurrent repaint drift remains a candidate. If the held composition persists, use bounded motion phrases in later shots. Neither outcome is known yet. No protected-pixel copyback, masks, reference conditioning or interpolation change is part of this proposal.
