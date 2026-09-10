@@ -4,6 +4,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Intentional Oracle-to-owl transition](../apps/deforum/projects/modern-model-study/experiments/owl-transition.md): branch from the accepted held composition and compare new positive subject text with an unchanged-prompt control.
 - [Motion, prompting and newer interpolation](../apps/deforum/projects/modern-model-study/experiments/three-directions.md) — three isolated subagent experiments, coordinated shared compute, and a fresh runtime control.
 
 - [Oracle: noise, steps and longer transitions](../apps/deforum/projects/modern-model-study/experiments/oracle-steps.md) — matched 0.4 with 3/9 steps and 0.6 with 3/1 steps; Oracle starts at the second repaint.

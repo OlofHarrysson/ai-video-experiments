@@ -260,3 +260,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Deliberate transformation (2026-09-10, explicit):** Olof clarifies that recognizable forms should persist until we want them to morph into something else, not remain permanently protected. He proposes changing positive/negative prompt content to direct replacement. This is creative intent, not a verified guarantee that negative prompting removes objects in the current Krea recipe. He approves the eased-motion continuation described in [the experiment](../apps/deforum/projects/modern-model-study/experiments/eased-motion.md).
+
+
+**Eased movement accepted (2026-09-10, explicit):** Olof says the eased-motion result definitely improves things and approves the proposed next deliberate subject transition. The assistant selects a porcelain mechanical owl as the new subject, compared against unchanged Oracle text after the same saved 8s painting. This is approval to test, not evidence that prompt changes can already direct reliable object replacement.
