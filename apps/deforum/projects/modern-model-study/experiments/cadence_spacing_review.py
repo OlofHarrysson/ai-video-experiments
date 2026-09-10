@@ -40,8 +40,8 @@ def prepare(cadence, out=OUT):
     a.save(root/'verification.json',{'verified':True,'repaints':rows,'checks':'all graphs and feedback hashes, every anchor warp, frame hashes, selected cadence frames and 3-second timing'})
 
 
-def finish(cadence):
-    base=OUT/f'cadence-{cadence}';raw=base/'rife-raw';root=base/'interpolated'
+def finish(cadence, out=OUT, make_comparison=True):
+    base=out/f'cadence-{cadence}';raw=base/'rife-raw';root=base/'interpolated'
     receipt=json.loads((raw/'manifest.json').read_text())
     assert receipt['status']=='complete' and receipt['anchors_verified']
     for row in receipt['output_frames']:assert a.sha(raw/row['file'])==row['sha256']
@@ -58,7 +58,7 @@ def finish(cadence):
     a.save(root/'manifest.json',{'probe':probe,'frames':frames,'anchors_pixel_identical':True,
         'final_original_interval_starts_at':last/24,'rife_receipt_sha256':a.sha(raw/'manifest.json'),
         'feedback_generation_changed':False})
-    v.compare(str(cadence),root/'frames',f'Cadence {cadence} + RIFE',24,output_root=OUT,
+    if make_comparison:v.compare(str(cadence),root/'frames',f'Cadence {cadence} + RIFE',24,output_root=out,
         left_frames=a.PROJECT/'exports/turbo-smoothing-v001/interpolation/frames',left_fps=24,
         left_label='Your preferred cadence 3 + RIFE')
 

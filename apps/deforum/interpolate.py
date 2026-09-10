@@ -90,7 +90,7 @@ def main():
     parser.add_argument("--validated-pair", type=Path,
                         help="Successful first-pair manifest, inspected before full execution")
     args = parser.parse_args()
-    if args.source_frames < 2 or args.source_fps < 1 or args.multiplier < 2:
+    if args.source_frames < 2 or args.source_fps <= 0 or args.multiplier < 2:
         parser.error('Need at least two frames, positive FPS and multiplier >= 2')
     exact_output_fps = args.source_fps * args.multiplier
     output_fps = int(exact_output_fps) if exact_output_fps.denominator == 1 else float(exact_output_fps)

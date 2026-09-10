@@ -11,6 +11,16 @@ from interpolate import frame_plan, inventory
 
 
 class TimingTests(unittest.TestCase):
+    def test_cadence_fifteen_keeps_anchor_times_at_sub_one_fps(self):
+        source_fps=Fraction(12,15)
+        rows=frame_plan(3,multiplier=30)
+        anchors=[i for i,row in enumerate(rows) if row['kind']=='anchor']
+        self.assertEqual(anchors,[0,30,60])
+        for i,row in enumerate(rows[:61]):
+            source_time=(row['source_index']/source_fps if row['kind']=='anchor'
+                         else (row['source_pair'][0]+Fraction(row['timestep']))/source_fps)
+            self.assertEqual(Fraction(i,24),source_time)
+
     def test_cadence_five_anchor_timestamps_at_fractional_source_rate(self):
         source_fps=Fraction(12,5)
         rows=frame_plan(8,multiplier=10)
