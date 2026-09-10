@@ -16,9 +16,12 @@ TWIST_AMOUNT = 1.1
 a.transport.DEPLOYMENT = a.APP/'work/turbo-transition-session/deployment.json'
 
 
-def parameters(frame):
-    t=frame/FPS
+def parameters_at_time(t):
     return TWIST_AMOUNT*a.motion.smooth(t/5), EXPANSION_AMOUNT*a.motion.smooth((t-3)/7)
+
+
+def parameters(frame):
+    return parameters_at_time(frame/FPS)
 
 
 def expansion(x,y,amount,inverse=False):
@@ -36,8 +39,8 @@ def expansion(x,y,amount,inverse=False):
     return EXPANSION_CENTER[0]+dx*scale,EXPANSION_CENTER[1]+dy*scale
 
 
-def mapping(x,y,frame,inverse=False):
-    twist,grow=parameters(frame)
+def mapping_at_time(x,y,seconds,inverse=False):
+    twist,grow=parameters_at_time(seconds)
     if inverse:
         x,y=expansion(x,y,grow,True)
         return a.motion.twist(x,y,-twist)
@@ -45,16 +48,28 @@ def mapping(x,y,frame,inverse=False):
     return expansion(x,y,grow)
 
 
-def coordinates(start,end,width=WIDTH,height=HEIGHT):
+def mapping(x,y,frame,inverse=False):
+    return mapping_at_time(x,y,frame/FPS,inverse)
+
+
+def coordinates_at_time(start,end,width=WIDTH,height=HEIGHT):
     x,y=np.meshgrid(np.arange(width,dtype=np.float64)*512/width,np.arange(height,dtype=np.float64)*320/height)
-    x,y=mapping(x,y,end,True);x,y=mapping(x,y,start)
+    x,y=mapping_at_time(x,y,end,True);x,y=mapping_at_time(x,y,start)
     return np.stack((x*width/512,y*height/320),axis=-1).astype(np.float32)
 
 
-def warp(rgb,start,end):
+def coordinates(start,end,width=WIDTH,height=HEIGHT):
+    return coordinates_at_time(start/FPS,end/FPS,width,height)
+
+
+def warp_at_time(rgb,start,end):
     if start==end:return rgb.copy()
     h,w=rgb.shape[:2]
-    return remap_rgb(rgb,coordinates(start,end,w,h))
+    return remap_rgb(rgb,coordinates_at_time(start,end,w,h))
+
+
+def warp(rgb,start,end):
+    return warp_at_time(rgb,start/FPS,end/FPS)
 
 
 def graph(tail,seed):

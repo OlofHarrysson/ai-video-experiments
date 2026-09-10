@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [24 fps timeline and time-based motion](../apps/deforum/projects/modern-model-study/experiments/timebase24.md) — new 24 fps/RIFE defaults; replay verification preserves the accepted repaint rhythm.
+
 - [Slower cadence: 3, 7, 10 and 15](../apps/deforum/projects/modern-model-study/experiments/cadence-slow.md) — matched raw and RIFE versions with preserved repaint timing; distinguish source, repaint and delivery rates.
 
 - [Cadence 4 and 5 with RIFE](../apps/deforum/projects/modern-model-study/experiments/cadence-spacing.md) — fewer repaints with learned in-between frames, following Olof's preference for interpolation.
