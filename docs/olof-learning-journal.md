@@ -266,3 +266,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Playback speed audition (2026-09-10, explicit):** Olof says the Oracle-to-owl result looks quite nice and requests faster playback using exactly the same frames. He finds mistakes easier to notice when playback is slow. The assistant chooses 1.5× as a first audition; this speed is not yet a user preference. This changes delivery pacing only, not the generation recipe.
+
+
+**Delivery frame rate clarified (2026-09-10, explicit):** After requesting faster playback, Olof reiterates the 24 fps delivery target and asks to keep the speed of the seven-second version. The new cut uses 168 selected frames at 24 fps, retaining all original diffusion anchors. This is a delivery retime, with generation settings unchanged.
