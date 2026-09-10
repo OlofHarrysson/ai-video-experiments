@@ -4,11 +4,13 @@
 
 Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animation. Each model generates its own opening and all subsequent repaints. Use direct twist motion and cadence 3; model-specific prompts, sampling recipes and bounded clip lengths are recorded per experiment.
 
-New execution convention: **24 fps source and delivery, time-based spatial motion, RIFE on by default**. The [timing migration experiment](experiments/timebase24.md) preserves the accepted baseline as cadence 6 (a repaint every 0.25 seconds). Existing cadence studies retain their historical labels and files. Use the shared `FeedbackTiming()` defaults for future runs; keep RIFE outside recurrent generation.
+New execution convention: **24 fps source and delivery, time-based spatial motion, RIFE on by default**. The [timing migration experiment](experiments/timebase24.md) preserves the accepted baseline as cadence 6 (a repaint every 0.25 seconds). Existing cadence studies retain their historical labels and files. Use `FeedbackTiming(repaint_seconds=1)` for the selected one-second pacing; keep RIFE outside recurrent generation.
 
-Latest experiment: [repaint every 0.5s versus 1s](experiments/repaint-intervals.md), two six-second shots with the same Krea recipe and RIFE settings. Both run at native 24 fps (cadence 12/24). All sixteen fresh diffusion calls and finished outputs are local and verified. The one-second branch is the assistant's calmer audition candidate; half-second repainting develops more structure. Human playback judgment is pending. Owned GPU deleted; model cache retained.
+Latest local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains and human playback preference is pending. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
 
-Current creative baseline: Olof prefers the [three-step continuation with RIFE](experiments/turbo-smoothing.md), calling interpolation substantially better and cadence 2 worse. The latest [cadence 3, 7, 10 and 15 comparison](experiments/cadence-slow.md) is complete both raw and with the same RIFE settings. All clips retain their original three-second timing; all diffusion anchors and raw outputs are preserved. RIFE spreads the redraws over time with some softened/doubled fine details. Cadence 10 is the assistant's middle-ground audition; human playback verdict is pending. The earlier [cadence 4 and 5 study](experiments/cadence-spacing.md) remains preserved. Report seconds per repaint alongside source-motion and delivery FPS. The interpolation follow-up ran locally without new diffusion or cloud compute.
+Selected pacing: [repaint every 0.5s versus 1s](experiments/repaint-intervals.md), two six-second shots with the same Krea recipe and RIFE settings. Both run at native 24 fps (cadence 12/24). All sixteen fresh diffusion calls and finished outputs are local and verified. **Olof selects the one-second branch as better and more morphing.** It is the current pacing baseline. Owned GPU deleted; model cache retained.
+
+Earlier creative baseline: Olof prefers the [three-step continuation with RIFE](experiments/turbo-smoothing.md), calling interpolation substantially better and cadence 2 worse. The latest [cadence 3, 7, 10 and 15 comparison](experiments/cadence-slow.md) is complete both raw and with the same RIFE settings. All clips retain their original three-second timing; all diffusion anchors and raw outputs are preserved. RIFE spreads the redraws over time with some softened/doubled fine details. Cadence 10 is the assistant's middle-ground audition; human playback verdict is pending. The earlier [cadence 4 and 5 study](experiments/cadence-spacing.md) remains preserved. Report seconds per repaint alongside source-motion and delivery FPS. The interpolation follow-up ran locally without new diffusion or cloud compute.
 
 The earlier [four cathedral clips](experiments/cathedral-feedback.md) compared two strengths per model. Olof found Krea still too flickery, prompting the lower-strength follow-up.
 
@@ -19,6 +21,8 @@ The preceding [initialized feedback with optional reference conditioning](experi
 Earlier [three-second auditions](experiments/pod-results.md) produced 32 images and two clips. Olof found both models interesting but reported Krea jitter and doubled images. The subsequent [text-only/reference sequences and no-blend reconstructions](experiments/conditioning.md) are preserved, but their new sequences omitted previous-image sampling initialization and did not test his intended combined mechanism. The misunderstanding is recorded in the collaboration agreement. The earlier serverless attempt stopped before inference.
 
 ## Experiments
+
+- [RIFE motion-estimation scale](experiments/rife-scale.md): the same six paintings, comparing full-scale and half-scale interpolation at full-resolution 24 fps.
 
 - [Latent feedback](experiments/latent-feedback.md): completed 24-cycle comparison; removing repeated VAE encoding does not prevent flattening.
 

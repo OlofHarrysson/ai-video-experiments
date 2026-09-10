@@ -1,5 +1,7 @@
 # Deforum experiment
 
+Current modern-model work: **Krea, three native sampling intervals, one repaint per second, 24 fps working/delivery, and RIFE finishing**. Olof selects the one-second pacing. The [local RIFE scale comparison](projects/modern-model-study/experiments/rife-scale.md) is complete; half-scale is an assistant candidate pending playback. Historical experiment summaries below preserve earlier stages.
+
 Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
 
 Work from `apps/deforum/`. The Mac manages spatial transforms, cadence, workflow submission and local archives; ComfyUI on RunPod generates images. Earlier experiments using Difforum/depth nodes remain preserved.

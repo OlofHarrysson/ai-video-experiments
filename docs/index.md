@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [RIFE motion-estimation scale](../apps/deforum/projects/modern-model-study/experiments/rife-scale.md) — local interpolation comparison on the selected one-second repaint shot, preserving paintings and full-resolution 24 fps output.
+
 - [Spatial effects browser](../apps/deforum/projects/motion-guide-study/experiments/motion-catalog.md) — 22 direct transforms on one drawing, effect selection, playback and scrubbing; the selected cadence-3/interpolation sequence is linked below.
 
 - [Animated spatial-controls lesson](research/spatial-controls-lesson.md) — a stretchable drawing, measured guide motion, direct controls, and where depth fits.

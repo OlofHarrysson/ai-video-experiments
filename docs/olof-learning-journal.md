@@ -222,3 +222,9 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 **Native character animation (2026-09-10, explicit):** For the puppy story, Olof wants animation software with explicit controls and rejects an image-to-video model. He found the first Blender motion promising but the 3D asset amateur-looking, then approved the painted 2D rig and replacement-drawing approach. His subsequent criticism concerns visible head/body attachment and animation quality. A higher frame count alone has not satisfied him. This narrative workflow prioritizes stable character identity, anatomical joins, coherent staging and expressive movement; the separate Deforum work retains its smooth-morphing objective.
 
 **Puppy-film autonomy (2026-09-10, explicit):** Olof authorizes at least two hours of autonomous work to improve the puppy, create the larger friendly dog, prepare reusable characters and stage them in a scene. This authorization is scoped to the [A Little Brave](../apps/blender-animation/projects/a-little-brave/README.md) goal. The assistant's new film and asset checks do not establish Olof's approval of the result; his playback feedback remains pending.
+
+## One-second repainting and interpolation scale — 2026-09-10
+
+- **Explicit:** Olof selects the right-hand [one-second repaint version](../apps/deforum/projects/modern-model-study/experiments/repaint-intervals.md): “I prefer the right one” and “a bit more morphing.” Keep that pacing for the next comparison. This is a preference for this shot, not a universal best interval.
+- **Explicit:** Olof approves testing interpolation settings next. The [scale experiment](../apps/deforum/projects/modern-model-study/experiments/rife-scale.md) compares unchanged paintings with full-scale and half-scale RIFE motion estimates.
+- **Unconfirmed:** No human verdict on the scale comparison yet; do not infer understanding of its internal estimation scale from approval to run it.

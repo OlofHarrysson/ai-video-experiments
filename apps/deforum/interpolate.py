@@ -76,6 +76,13 @@ def inventory(source, expected_count=SOURCE_FRAMES):
     return files, rows
 
 
+def motion_settings(scale):
+    """Author RIFE_HDv3.inference scales and inference_video padding rule."""
+    if scale not in (0.5, 1.0):
+        raise ValueError("Motion scale must be 0.5 or 1.0")
+    return [value / scale for value in SCALES], max(128, int(128 / scale))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
@@ -84,6 +91,8 @@ def main():
     parser.add_argument("--source-fps", type=Fraction, default=Fraction(SOURCE_FPS),
                         help="Original anchor rate, including fractions such as 12/5")
     parser.add_argument("--multiplier", type=int, default=MULTIPLIER)
+    parser.add_argument("--motion-scale", type=float, choices=(0.5, 1.0), default=1.0,
+                        help="Internal motion estimation scale; output remains full resolution")
     parser.add_argument("--rife-root", type=Path,
                         default=Path(__file__).parent / "work/rife-session/Practical-RIFE")
     parser.add_argument("--pair-only", action="store_true")
@@ -95,6 +104,7 @@ def main():
     exact_output_fps = args.source_fps * args.multiplier
     output_fps = int(exact_output_fps) if exact_output_fps.denominator == 1 else float(exact_output_fps)
     multiplier = args.multiplier
+    scales, padding_multiple = motion_settings(args.motion_scale)
     started = time.perf_counter()
     source, output, root = args.source.resolve(), args.output.resolve(), args.rife_root.resolve()
     if output.exists() or output.is_relative_to(source):
@@ -125,9 +135,9 @@ def main():
     versions = {name: importlib.metadata.version(name) for name in ("torch", "numpy", "pillow")}
     settings = {"source_fps": float(args.source_fps), "output_fps": output_fps,
                 "multiplier": multiplier, "timesteps": [f"{i}/{multiplier}" for i in range(1,multiplier)],
-                "scale_list": SCALES, "scale": 1.0, "device": "mps", "dtype": "float32",
+                "scale_list": scales, "scale": args.motion_scale, "device": "mps", "dtype": "float32",
                 "batch_size": 1, "ensemble": False, "fastmode": True, "compilation": False,
-                "padding": "right/bottom zero padding to multiples of 128, cropped afterward",
+                "padding": f"right/bottom zero padding to multiples of {padding_multiple}, cropped afterward",
                 "color": "RGB, uint8 / 255", "quantization": "multiply by 255, truncate to uint8",
                 "scene_detection": False, "static_frame_skipping": False,
                 "mps_cpu_fallback": False, "versions": versions}
@@ -164,7 +174,7 @@ def main():
     plan = frame_plan(len(selected), final_holds=0 if args.pair_only else multiplier-1,
                       multiplier=multiplier)
     width, height = source_rows[0]["size"]
-    padding = (0, (-width) % 128, 0, (-height) % 128)
+    padding = (0, (-width) % padding_multiple, 0, (-height) % padding_multiple)
     receipt = {"status": "running", "mode": "first_pair" if args.pair_only else "full",
                "started_utc": datetime.now(timezone.utc).isoformat(),
                "command": [sys.executable, *sys.argv], "cwd": str(Path.cwd()),
@@ -194,7 +204,7 @@ def main():
                 right = tensor(selected[index + 1])
                 shutil.copy2(selected[index], output / "frames" / f"{index * multiplier:04d}.png")
                 for offset in range(1, multiplier):
-                    _, _, merged = network(torch.cat((left, right), 1), offset / multiplier, SCALES,
+                    _, _, merged = network(torch.cat((left, right), 1), offset / multiplier, scales,
                                            fastmode=True, ensemble=False)
                     result = merged[-1][0, :, :height, :width]
                     if result.shape != (3, height, width) or not torch.isfinite(result).all().item():
