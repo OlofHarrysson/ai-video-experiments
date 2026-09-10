@@ -22,6 +22,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Experiments
 
+- [Slower cadence: 3, 7, 10 and 15](../apps/deforum/projects/modern-model-study/experiments/cadence-slow.md) — compare repaint frequency directly, with interpolation deferred.
+
 - [Cadence 4 and 5 with RIFE](../apps/deforum/projects/modern-model-study/experiments/cadence-spacing.md) — fewer repaints with learned in-between frames, following Olof's preference for interpolation.
 
 - [Three-step morphing controls](../apps/deforum/projects/modern-model-study/experiments/turbo-smoothing.md) — anchor interpolation and cadence 2 versus 3, retaining the selected Krea sampling recipe.

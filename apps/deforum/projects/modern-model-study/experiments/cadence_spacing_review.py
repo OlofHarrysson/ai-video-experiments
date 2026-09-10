@@ -9,8 +9,8 @@ from cathedral_review import assert_warp_matches
 s,a,t,OUT=c.s,c.s.a,c.s.t,c.OUT
 
 
-def prepare(cadence):
-    root=OUT/f'cadence-{cadence}';rows=[]
+def prepare(cadence, out=OUT):
+    root=out/f'cadence-{cadence}';rows=[]
     assert a.sha(root/'anchors/0036.png')==a.sha(s.CONTROL/'anchors/0036.png')
     for i,f in enumerate(range(36,72,cadence)):
         anchor=root/f'anchors/{f:04d}.png'
