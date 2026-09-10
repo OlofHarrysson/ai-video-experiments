@@ -50,6 +50,8 @@ The prompting adjustment fixes the missing/merged-subject problem in these two s
 
 The three-interval global pass is a substantial redraw: it can repair object binding and make features more readable, but it changes designs. This is not a seam-only finishing pass. The positioned regional images already have integrated ground and lighting; the run does not establish that a second pass is always necessary.
 
+**Olof's feedback:** the results look good, but this simple composition does not make regional prompting's advantage clear. He approves the [three-robot layout benchmark](krea-layouts.md) to test a harder case. This is not a selection of the assistant's preferred seed or an endorsement of regional prompting over the complete prompt.
+
 ### Comparisons and editable workflow
 
 - [Original three-way comparison, both seeds](../exports/krea-comparison-v001/comparison.png)

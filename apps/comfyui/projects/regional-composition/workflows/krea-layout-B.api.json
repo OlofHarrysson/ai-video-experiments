@@ -1,0 +1,439 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "One red tin robot holds a single flower in one hand. This medium-sized robot stands on the right in the middle distance. Its body from head to feet is approximately 25 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. One blue tin robot holds a single open umbrella by its handle. This small robot stands near the upper centre in the far distance. Its body from head to feet is approximately 12 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. One yellow tin robot holds a single flag on a pole. This large robot stands in the lower-left foreground. Its body from head to feet is approximately 40 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. Open grass separates the robots. Each robot holds its own prop. Every robot is fully visible, including its head and both feet. An open grassy meadow stretches toward distant mountains beneath a golden sky. Warm sunlight from the upper left illuminates the scene. A painterly fantasy illustration with visible brushwork, coherent perspective and natural contact shadows on the shared grassy ground."
+    }
+  },
+  "5": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 21101,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "krea-layouts/20260910T135846964470Z-krea-layout-B-seed21101/complete"
+    }
+  },
+  "10": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "filename_prefix": "krea-layouts/20260910T135846964470Z-krea-layout-B-seed21101/complete"
+    }
+  },
+  "11": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "An open grassy meadow stretches toward distant mountains beneath a golden sky. Warm sunlight from the upper left illuminates the scene. A painterly fantasy illustration with visible brushwork, coherent perspective and natural contact shadows on the shared grassy ground."
+    }
+  },
+  "12": {
+    "class_type": "ConditioningSetAreaStrength",
+    "inputs": {
+      "conditioning": [
+        "11",
+        0
+      ],
+      "strength": 0.25
+    }
+  },
+  "13": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "One red tin robot holds a single flower in one hand. This medium-sized robot stands on the right in the middle distance. Its body from head to feet is approximately 25 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. Open grass separates the robots. Each robot holds its own prop. Every robot is fully visible, including its head and both feet. An open grassy meadow stretches toward distant mountains beneath a golden sky. Warm sunlight from the upper left illuminates the scene. A painterly fantasy illustration with visible brushwork, coherent perspective and natural contact shadows on the shared grassy ground."
+    }
+  },
+  "14": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "15": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 1.0,
+      "width": 352,
+      "height": 384
+    }
+  },
+  "16": {
+    "class_type": "FeatherMask",
+    "inputs": {
+      "mask": [
+        "15",
+        0
+      ],
+      "left": 32,
+      "top": 32,
+      "right": 32,
+      "bottom": 32
+    }
+  },
+  "17": {
+    "class_type": "MaskComposite",
+    "inputs": {
+      "destination": [
+        "14",
+        0
+      ],
+      "source": [
+        "16",
+        0
+      ],
+      "x": 624,
+      "y": 384,
+      "operation": "add"
+    }
+  },
+  "18": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "13",
+        0
+      ],
+      "mask": [
+        "17",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "19": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "12",
+        0
+      ],
+      "conditioning_2": [
+        "18",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "One blue tin robot holds a single open umbrella by its handle. This small robot stands near the upper centre in the far distance. Its body from head to feet is approximately 12 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. Open grass separates the robots. Each robot holds its own prop. Every robot is fully visible, including its head and both feet. An open grassy meadow stretches toward distant mountains beneath a golden sky. Warm sunlight from the upper left illuminates the scene. A painterly fantasy illustration with visible brushwork, coherent perspective and natural contact shadows on the shared grassy ground."
+    }
+  },
+  "21": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "22": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 1.0,
+      "width": 160,
+      "height": 224
+    }
+  },
+  "23": {
+    "class_type": "FeatherMask",
+    "inputs": {
+      "mask": [
+        "22",
+        0
+      ],
+      "left": 32,
+      "top": 32,
+      "right": 32,
+      "bottom": 32
+    }
+  },
+  "24": {
+    "class_type": "MaskComposite",
+    "inputs": {
+      "destination": [
+        "21",
+        0
+      ],
+      "source": [
+        "23",
+        0
+      ],
+      "x": 448,
+      "y": 288,
+      "operation": "add"
+    }
+  },
+  "25": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "20",
+        0
+      ],
+      "mask": [
+        "24",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "26": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "19",
+        0
+      ],
+      "conditioning_2": [
+        "25",
+        0
+      ]
+    }
+  },
+  "27": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "One yellow tin robot holds a single flag on a pole. This large robot stands in the lower-left foreground. Its body from head to feet is approximately 40 percent of the picture height. Its entire body and held prop are visible, with its feet on the grass. Open grass separates the robots. Each robot holds its own prop. Every robot is fully visible, including its head and both feet. An open grassy meadow stretches toward distant mountains beneath a golden sky. Warm sunlight from the upper left illuminates the scene. A painterly fantasy illustration with visible brushwork, coherent perspective and natural contact shadows on the shared grassy ground."
+    }
+  },
+  "28": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "29": {
+    "class_type": "SolidMask",
+    "inputs": {
+      "value": 1.0,
+      "width": 384,
+      "height": 512
+    }
+  },
+  "30": {
+    "class_type": "FeatherMask",
+    "inputs": {
+      "mask": [
+        "29",
+        0
+      ],
+      "left": 32,
+      "top": 32,
+      "right": 32,
+      "bottom": 32
+    }
+  },
+  "31": {
+    "class_type": "MaskComposite",
+    "inputs": {
+      "destination": [
+        "28",
+        0
+      ],
+      "source": [
+        "30",
+        0
+      ],
+      "x": 32,
+      "y": 448,
+      "operation": "add"
+    }
+  },
+  "32": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "27",
+        0
+      ],
+      "mask": [
+        "31",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "33": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "26",
+        0
+      ],
+      "conditioning_2": [
+        "32",
+        0
+      ]
+    }
+  },
+  "34": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "33",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 21101,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "35": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "34",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "36": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "35",
+        0
+      ],
+      "filename_prefix": "krea-layouts/20260910T135846964470Z-krea-layout-B-seed21101/regional"
+    }
+  },
+  "37": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "34",
+        0
+      ],
+      "filename_prefix": "krea-layouts/20260910T135846964470Z-krea-layout-B-seed21101/regional"
+    }
+  }
+}

@@ -1,13 +1,14 @@
 # Regional composition
 
-Status: SDXL comparisons and the Krea 2 Turbo follow-up executed and reviewed on 2026-09-10. All outputs are local and verified; owned compute is deleted.
+Status: SDXL comparisons, the Krea 2 Turbo follow-up and the eight-image three-robot benchmark executed and reviewed on 2026-09-10. All outputs are local and verified; owned compute is deleted.
 
 Build images by assigning a full-canvas background prompt and separate foreground prompts to spatial regions. Start with rectangles; retain a path to painted masks and incremental object insertion. Use ComfyUI on RunPod independently of the Deforum animation experiments.
 
 - [Research and recommendation](../../../../docs/research/regional-composition.md)
 - [Results and comparisons](experiments/results.md)
 - [Two-stage regional/global refinement](experiments/refinement.md) — clean 2048 detail at denoise 0.60 on two seeds, with object redesign; human preference pending.
-- [Krea 2 Turbo comparison](experiments/krea.md) — complete-prompt, regional and global-refinement outputs on two seeds. Explicit left/right wording fixes missing/merged subjects in the regional recipe; refinement still changes their design. Human preference pending.
+- [Krea 2 Turbo comparison](experiments/krea.md) — Olof likes the results but questions whether regions help more than a complete prompt on this simple scene. Explicit left/right wording fixes missing/merged subjects in the regional recipe; refinement still changes their design.
+- [Three-robot layout benchmark](experiments/krea-layouts.md) — the complete prompt delivers all requested props across both layouts and seeds. Regional conditioning improves the distant robot's placement but loses props and sometimes heads. This recipe does not establish a general regional advantage; human feedback is pending.
 - [Experiment design and follow-up decisions](experiments/baseline.md)
 - [Tested editable workflows](workflows/README.md)
 - [Upstream workflow evidence](references/README.md)
