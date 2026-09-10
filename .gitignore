@@ -11,3 +11,8 @@ apps/deforum/projects/*/runs/*
 !apps/deforum/projects/*/runs/README.md
 apps/deforum/projects/*/exports/*
 !apps/deforum/projects/*/exports/README.md
+apps/comfyui/projects/*/references/assets/
+apps/comfyui/projects/*/runs/*
+!apps/comfyui/projects/*/runs/README.md
+apps/comfyui/projects/*/exports/*
+!apps/comfyui/projects/*/exports/README.md

@@ -80,6 +80,8 @@ Add future shared notes as separate Markdown files and link them from this page.
 
 ## Research
 
+- [Regional prompting and layered painting](research/regional-composition.md) — native area/mask conditioning, noisy latent composition, staged inpainting and a proposed SDXL experiment in the separate ComfyUI app.
+
 - [AI-controlled animation software](research/animation-software-control.md) — human animation workflows, Blender/Moho/Harmony/OpenToonz scripting, existing agent bridges, and a proposed rigged character test.
 
 - [Ten-second transitions and Turbo tails](../apps/deforum/projects/modern-model-study/experiments/turbo-transitions.md) — longer twist/expansion and a matched one/two/three-step continuation comparison.

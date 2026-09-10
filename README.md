@@ -15,6 +15,7 @@ Agent working context and conventions are in [AGENTS.md](AGENTS.md).
 ## Experiments
 
 - [Deforum](apps/deforum/README.md): camera warping and image-to-image feedback using ComfyUI on RunPod.
+- [ComfyUI](apps/comfyui/README.md): still-image composition, regional prompts and layered painting on RunPod.
 
 ## Status
 
