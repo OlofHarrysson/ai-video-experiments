@@ -249,3 +249,6 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **Oracle, noise and steps (2026-09-10, explicit):** Olof wants to revisit lower starting noise with more sampling steps, and allow more successive repaints after switching the prompt earlier. He dislikes the moth subject and requests Oracle or another subject. He asks to consult earlier tests and retain interpolation for this comparison. No preference for a new noise/step combination is established.
+
+
+**Three experiment directions (2026-09-10, explicit):** Olof finds both noise-0.6 Oracle recipes (three sampling intervals and one) interesting and agrees that more steps at low noise did not solve flattening. He still sees jagged changes and authorizes parallel subagent experiments on movement, prompting and a newer interpolator, with shared infrastructure coordinated. He hypothesizes stronger motion may make redraws less distracting and wonders whether prompt coverage helps preserve eyes; neither explanation is established. The assistant chooses a same-runtime high3 control and a bounded 8 fps SPEED diagnostic; this is not a user-selected production FPS change.

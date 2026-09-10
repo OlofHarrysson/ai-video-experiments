@@ -64,3 +64,6 @@ For SPEED, first compare exact midpoints from two or three saved pairs against R
 3. **Different sampler/schedule or Krea's non-distilled model:** potentially useful, but changes more assumptions and can add compute. Keep shift/guidance consistent with the exact checkpoint. The native-tail result is a reason to test carefully, not evidence that all small steps or all distilled models are unsuitable.
 
 Execution follow-up: Olof approved diffusion first and requested several noise levels. The [starting-noise study](../../apps/deforum/projects/modern-model-study/experiments/starting-noise.md) compares a fresh native-tail control with 0.62, 0.60 and 0.56, preserving the recurrent pipeline and interpolation settings. SPEED remains deferred; no new interpolation model has been installed.
+
+
+Execution update (2026-09-10): the [SPEED audition](../../apps/deforum/projects/modern-model-study/experiments/speed-oracle.md) is now complete on three saved pairs, using isolated dependencies on the shared Pod. Its matched 8 fps diagnostic adds patterned ripples/doubled contours without a convincing overall win; retain production RIFE. This supersedes the deferred status above, without claiming a full 24 fps SPEED comparison.
