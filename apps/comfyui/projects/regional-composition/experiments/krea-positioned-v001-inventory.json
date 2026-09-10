@@ -1,0 +1,214 @@
+[
+  {
+    "run": "runs/20260910T124748423655Z-krea-positioned-seed21001",
+    "seed": 21001,
+    "regional_latent_directly_initializes_refinement": true,
+    "files": [
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "423109c971e8b155a4d1f1216bbdb87b0d56c533ac097e217c9423aea8050ebe",
+        "bytes": 1451101,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "29",
+        "filename": "regional_00002_.png",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "926ff4a5930e6ffc91eb04014575c0c2bb51dbab9c5751e8132a739f55097b93",
+        "bytes": 1462401,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "36",
+        "filename": "refined_00002_.png",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/refined_00002_.png",
+        "sha256": "09dfd9f51472f8f682ae69a61d20e0b2064fdd3778b11265744c81479aa6b22d",
+        "bytes": 1471700,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "834dc6c1f24a6d102ce4b7775d1e82b4df43f223afd1cd7d053455edf441986a",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "9f7e76f210d26a9b944e9673d1a8653cb09b70f192a9c11450886edc7b0cb010"
+        }
+      },
+      {
+        "node_id": "30",
+        "filename": "regional_00001_.latent",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "893f5e102a6a1784e2a6a5629895705f5abf3f9e48c0d94e96b4baa883a1b5ed",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "f2ecb17b3ed2b3fa179d064a73e5191a90b8fd7b7f809a06b8af708fba1f8df1"
+        }
+      },
+      {
+        "node_id": "37",
+        "filename": "refined_00001_.latent",
+        "subfolder": "regional-krea/20260910T124748423655Z-krea-positioned-seed21001",
+        "type": "output",
+        "local": "outputs/refined_00001_.latent",
+        "sha256": "7b2c05d17ba4511892b2e112f8aca1774b1ddfa50967731862c8a20c15d01594",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "d4d3b17e723237cf5c298ee3681d55667bf2ee1bdead5fcfd772486fc4288703"
+        }
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T124809176698Z-krea-positioned-seed21101",
+    "seed": 21101,
+    "regional_latent_directly_initializes_refinement": true,
+    "files": [
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "b39ecced0f402f228d4cf036affcb8aeb2e4dbbfb62edf1f261dac9b40da3864",
+        "bytes": 1434956,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "29",
+        "filename": "regional_00002_.png",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "c56bc778b8000582dfc140bb6c0178fbae34e379373019d8b9d9ab9c369a5a01",
+        "bytes": 1459548,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "36",
+        "filename": "refined_00002_.png",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/refined_00002_.png",
+        "sha256": "f1c0823c0862973d781cf71d1a371a616dff434c7be9c4dccf64298abafb5271",
+        "bytes": 1477840,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "6c370aec7b59b3b8763411feeda3602824eea9c01adbd014f7931ca55b78ee26",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "de291b25f8f22bd22177d80827cd948d51cfc9e7232d9aef9570c434fd3ad1ee"
+        }
+      },
+      {
+        "node_id": "30",
+        "filename": "regional_00001_.latent",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "28bce29f1d31a9755a0f7f83114e344d3ae37cb4b0e7518b312f53393671d115",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "79803808f9185ddd37fc3e53d884e9b08adcc1c5c052b928af45b2448c5270af"
+        }
+      },
+      {
+        "node_id": "37",
+        "filename": "refined_00001_.latent",
+        "subfolder": "regional-krea/20260910T124809176698Z-krea-positioned-seed21101",
+        "type": "output",
+        "local": "outputs/refined_00001_.latent",
+        "sha256": "97e6c6115a0cc5809aa363ecc527f01ea50e129c2cd28250616f93e886048934",
+        "bytes": 1075400,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "1e34a04621e2b568a9f1c419359f4d599425c584ccbd1198e4fc7f5c487828ea"
+        }
+      }
+    ]
+  }
+]

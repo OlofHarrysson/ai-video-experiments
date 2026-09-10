@@ -6,6 +6,7 @@ Still-image experiments using ComfyUI on RunPod, with explicit control over comp
 
 - [Regional composition](projects/regional-composition/README.md) — three SDXL methods executed on RunPod, with two seeds per final recipe. Regional prompting is the initial recommendation; noisy composition and staged inpainting expose useful integration failures. [Results and comparisons](projects/regional-composition/experiments/results.md).
 - [Regional composition followed by global refinement](projects/regional-composition/experiments/refinement.md) — the selected method now has a two-stage comparison based on Olof's tutorial reference. All media is local; the experiment's Pod is deleted.
+- [Krea 2 Turbo regional comparison](projects/regional-composition/experiments/krea.md) — native eight-step generation and three-interval global refinement. Explicit left/right descriptions improve masked subject placement; all results and workflows are local, and the owned Texas Pod is deleted.
 
 ## Working layout
 

@@ -1,0 +1,214 @@
+[
+  {
+    "run": "runs/20260910T124355399338Z-krea-seed21001",
+    "seed": 21001,
+    "regional_latent_directly_initializes_refinement": true,
+    "files": [
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "b122359c5e489171632993945724634a7eaa98e208992a95271f745ff914a474",
+        "bytes": 1450849,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "29",
+        "filename": "regional_00002_.png",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "201e9352af15f1aae1ed3e4612e80513be081c4cecc1a549204045c27c1f6d1f",
+        "bytes": 1414546,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "36",
+        "filename": "refined_00002_.png",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/refined_00002_.png",
+        "sha256": "3dca93e7ddfaa7ce5f223dab05864fb643210e9038f83349eabc6c4a36d4891f",
+        "bytes": 1442539,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "1c4b39a1d4ab3aeecec3378a1ad6e429436cad1584cfcd3bb0e084db3e9ab2f3",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "9f7e76f210d26a9b944e9673d1a8653cb09b70f192a9c11450886edc7b0cb010"
+        }
+      },
+      {
+        "node_id": "30",
+        "filename": "regional_00001_.latent",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "9f8146387be1ddfe5bdc56cd99035d0f4e17e873acddd1a936c79f1b645c0d95",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "02fd7d383b98f5b16c3356884bb0d0852ac7a8817fc42bc7abdd2ea14759e583"
+        }
+      },
+      {
+        "node_id": "37",
+        "filename": "refined_00001_.latent",
+        "subfolder": "regional-krea/20260910T124355399338Z-krea-seed21001",
+        "type": "output",
+        "local": "outputs/refined_00001_.latent",
+        "sha256": "245dd6f605de4405f1c629029e6cd8a906e92dcf1bc6bb7834bcc20668dc7396",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "aa6f1b07ebf36507105c39f289f8240862e188b22bd91f95821a3e40b5bfeb91"
+        }
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T124439934812Z-krea-seed21101",
+    "seed": 21101,
+    "regional_latent_directly_initializes_refinement": true,
+    "files": [
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "fc0e98ddd2c3df8f39b3a36498115b52e8305beaabaa46a4327040cb0d2fa0ed",
+        "bytes": 1434704,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "29",
+        "filename": "regional_00002_.png",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "2604ab080f79de1ec6d2957d8024f6deded9d661d600a616c0b553dfb28ba0e3",
+        "bytes": 1427658,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "36",
+        "filename": "refined_00002_.png",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/refined_00002_.png",
+        "sha256": "84f35e11d4aa2112f06ee40b5066bb66f8d8ad3f9672804031339590ce14b02d",
+        "bytes": 1465008,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "58232e8a6a5db1769c27478d203ed34ab6875e785632a8dc898e9d4452e67cec",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "de291b25f8f22bd22177d80827cd948d51cfc9e7232d9aef9570c434fd3ad1ee"
+        }
+      },
+      {
+        "node_id": "30",
+        "filename": "regional_00001_.latent",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "101d2044f92a93644f27d46e45134cc289e3bdc65e73085894ef5398b99977ae",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "f290aee8ff53f86f2cffafba53f40a92c8343e0d584e53d1eb4b36fe2b6166af"
+        }
+      },
+      {
+        "node_id": "37",
+        "filename": "refined_00001_.latent",
+        "subfolder": "regional-krea/20260910T124439934812Z-krea-seed21101",
+        "type": "output",
+        "local": "outputs/refined_00001_.latent",
+        "sha256": "aa3b90218fb6b2f9466a790a89800063b9b0f432e0fb94e87299a804a327741b",
+        "bytes": 1075144,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "dd59ffb94b4eac823495279556c7f181087e0a42470fdff43fb85da039bb172c"
+        }
+      }
+    ]
+  }
+]
