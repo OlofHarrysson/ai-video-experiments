@@ -1,0 +1,281 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A single monumental sculpted human face seen straight from the front, centred and filling almost the entire square picture. The forehead begins near the top edge and the chin ends near the bottom edge. Both eyes, the nose and the mouth form one coherent, recognizable face. A dark teal background surrounds the head. Warm directional light from the upper left reveals the sculpted volume. A richly detailed painterly fantasy illustration with subtle brushwork and unified lighting. Weathered ivory limestone forms the face, with fine cracks and carved contours. Exposed stone remains visible on both sides of the coral band. Luminous orange and peach coral grows directly from the facial surface, with intricate branching coral, tiny polyps and soft amber glow. The coral follows and reveals the underlying facial anatomy and integrates naturally into the stone. The coral occupies only one broad continuous S-shaped band from the centre of the forehead to the centre of the chin. The band curves toward the viewer's right across the upper forehead and above the right eye, returns across the bridge of the nose, curves toward the viewer's left across the lower cheek, and returns to the centre of the chin. The band is approximately one sixth of the picture width, with gently softened irregular edges. "
+    }
+  },
+  "5": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 21101,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "krea-coral/20260910T211428226692Z-krea-coral-seed21101/complete"
+    }
+  },
+  "10": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "filename_prefix": "krea-coral/20260910T211428226692Z-krea-coral-seed21101/complete"
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "krea-coral-band.png"
+    }
+  },
+  "12": {
+    "class_type": "ImageToMask",
+    "inputs": {
+      "image": [
+        "11",
+        0
+      ],
+      "channel": "red"
+    }
+  },
+  "13": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "ConditioningSetAreaStrength",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "strength": 0.25
+    }
+  },
+  "15": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A single monumental sculpted human face seen straight from the front, centred and filling almost the entire square picture. The forehead begins near the top edge and the chin ends near the bottom edge. Both eyes, the nose and the mouth form one coherent, recognizable face. A dark teal background surrounds the head. Warm directional light from the upper left reveals the sculpted volume. A richly detailed painterly fantasy illustration with subtle brushwork and unified lighting. Luminous orange and peach coral grows directly from the facial surface, with intricate branching coral, tiny polyps and soft amber glow. The coral follows and reveals the underlying facial anatomy and integrates naturally into the stone. The coral occupies only one broad continuous S-shaped band from the centre of the forehead to the centre of the chin. The band curves toward the viewer's right across the upper forehead and above the right eye, returns across the bridge of the nose, curves toward the viewer's left across the lower cheek, and returns to the centre of the chin. The band is approximately one sixth of the picture width, with gently softened irregular edges. "
+    }
+  },
+  "16": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "15",
+        0
+      ],
+      "mask": [
+        "12",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "17": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "14",
+        0
+      ],
+      "conditioning_2": [
+        "16",
+        0
+      ]
+    }
+  },
+  "18": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A single monumental sculpted human face seen straight from the front, centred and filling almost the entire square picture. The forehead begins near the top edge and the chin ends near the bottom edge. Both eyes, the nose and the mouth form one coherent, recognizable face. A dark teal background surrounds the head. Warm directional light from the upper left reveals the sculpted volume. A richly detailed painterly fantasy illustration with subtle brushwork and unified lighting. Weathered ivory limestone forms the face, with fine cracks and carved contours. Exposed stone remains visible on both sides of the coral band. "
+    }
+  },
+  "19": {
+    "class_type": "ConditioningSetMask",
+    "inputs": {
+      "conditioning": [
+        "18",
+        0
+      ],
+      "mask": [
+        "13",
+        0
+      ],
+      "set_cond_area": "default",
+      "strength": 1.0
+    }
+  },
+  "20": {
+    "class_type": "ConditioningCombine",
+    "inputs": {
+      "conditioning_1": [
+        "17",
+        0
+      ],
+      "conditioning_2": [
+        "19",
+        0
+      ]
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "20",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 21101,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "krea-coral/20260910T211428226692Z-krea-coral-seed21101/regional"
+    }
+  },
+  "24": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "filename_prefix": "krea-coral/20260910T211428226692Z-krea-coral-seed21101/regional"
+    }
+  }
+}

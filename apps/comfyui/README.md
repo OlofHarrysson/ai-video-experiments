@@ -8,6 +8,7 @@ Still-image experiments using ComfyUI on RunPod, with explicit control over comp
 - [Regional composition followed by global refinement](projects/regional-composition/experiments/refinement.md) — the selected method now has a two-stage comparison based on Olof's tutorial reference. All media is local; the experiment's Pod is deleted.
 - [Krea 2 Turbo regional comparison](projects/regional-composition/experiments/krea.md) — native eight-step generation and three-interval global refinement. Explicit left/right descriptions improve masked subject placement; all results and workflows are local, and the owned Texas Pod is deleted.
 - [Three-robot layout benchmark](projects/regional-composition/experiments/krea-layouts.md) — two layouts, two seeds and two methods test whether regional conditioning improves subject placement, relative size and color/prop binding on a harder scene.
+- [Stone face and winding coral band](projects/regional-composition/experiments/krea-coral.md) — one final four-image comparison tests a curved material mask against verbal shape instructions.
 
 ## Working layout
 

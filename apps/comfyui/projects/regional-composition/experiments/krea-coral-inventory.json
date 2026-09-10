@@ -1,0 +1,154 @@
+[
+  {
+    "run": "runs/20260910T211335432208Z-krea-coral-seed21001",
+    "seed": 21001,
+    "matched_sampling": true,
+    "control_has_no_mask_input": true,
+    "mask_sha256": "33b176bc318688766cf0a0a6c93b7fad5c70acde71816ff0cb6bf1819adb38ec",
+    "job_seconds": 37.447,
+    "files": [
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "krea-coral/20260910T211335432208Z-krea-coral-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "753767e960bed26e85380ca5ebeebfbdc0e427f9c8bc73ef47a314d591725e36",
+        "bytes": 1070040,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "98157d81e265ddd4f13fd66b7bc363a71db71252d3eb50e14fa50a2ba10bcde7"
+        }
+      },
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "krea-coral/20260910T211335432208Z-krea-coral-seed21001",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "f77fdc1aaa1c0d66b61a07d91c6abf2cd4402d1f2a7dd381bfc30f6966613a23",
+        "bytes": 1378307,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "24",
+        "filename": "regional_00001_.latent",
+        "subfolder": "krea-coral/20260910T211335432208Z-krea-coral-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "0f11398a1d4392f10afde3cf1310375ba9d4b61e139fe917c8d7b13e45586263",
+        "bytes": 1070040,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "08ddd8c2208291b62a727876c1fe0ff36c16e26bbf2a074ba016500f344c3977"
+        }
+      },
+      {
+        "node_id": "23",
+        "filename": "regional_00002_.png",
+        "subfolder": "krea-coral/20260910T211335432208Z-krea-coral-seed21001",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "fd51d99b0d5b5b7186a197fb32f5a4668f6695307e93a3dd4680838784ef21f8",
+        "bytes": 1383002,
+        "size": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "run": "runs/20260910T211428226692Z-krea-coral-seed21101",
+    "seed": 21101,
+    "matched_sampling": true,
+    "control_has_no_mask_input": true,
+    "mask_sha256": "33b176bc318688766cf0a0a6c93b7fad5c70acde71816ff0cb6bf1819adb38ec",
+    "job_seconds": 22.96,
+    "files": [
+      {
+        "node_id": "10",
+        "filename": "complete_00001_.latent",
+        "subfolder": "krea-coral/20260910T211428226692Z-krea-coral-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00001_.latent",
+        "sha256": "8b9e57af40f6cfb2785aaeeff938f40e13fbd2a4f5927d5f59d917de5493bac6",
+        "bytes": 1070040,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "51a4a1ed3c0bf6ce6ae1610f6e2470d535a53f012c5c16979db0ce30c5eb0ee6"
+        }
+      },
+      {
+        "node_id": "24",
+        "filename": "regional_00001_.latent",
+        "subfolder": "krea-coral/20260910T211428226692Z-krea-coral-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00001_.latent",
+        "sha256": "9fefc0243ef5bdd65b5f7fc38240d2355ea1d555279bde94dae6e50fbb50261c",
+        "bytes": 1070040,
+        "tensor": {
+          "dtype": "F32",
+          "shape": [
+            1,
+            16,
+            1,
+            128,
+            128
+          ],
+          "sha256": "680daaaaec43516f6e49958d9d2675a51dcfb91b50da8866ed857680e1685f46"
+        }
+      },
+      {
+        "node_id": "23",
+        "filename": "regional_00002_.png",
+        "subfolder": "krea-coral/20260910T211428226692Z-krea-coral-seed21101",
+        "type": "output",
+        "local": "outputs/regional_00002_.png",
+        "sha256": "533af1018e3e4c6cf10b5e5d1c557014a66b442cdaef632d8782270c8eb26696",
+        "bytes": 1378886,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "node_id": "9",
+        "filename": "complete_00002_.png",
+        "subfolder": "krea-coral/20260910T211428226692Z-krea-coral-seed21101",
+        "type": "output",
+        "local": "outputs/complete_00002_.png",
+        "sha256": "db1339d41971c4df63e577fb02184418cf99a9cbda0f80f7d2a2851def7b313f",
+        "bytes": 1420783,
+        "size": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  }
+]
