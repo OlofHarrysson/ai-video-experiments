@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Diffusion starting-noise sweep](../apps/deforum/projects/modern-model-study/experiments/starting-noise.md) — 0.655/0.62/0.60/0.56 with three sampling intervals, identical one-second repaint timing and interpolation.
+
 - [Next diffusion and interpolation experiments](research/diffusion-and-interpolation-next.md) — native three-step tails, lower starting noise, and a current RIFE/GIMM/BiM/SPEED/LDF-VFI/ArbInterp research comparison.
 
 - [RIFE motion-estimation scale](../apps/deforum/projects/modern-model-study/experiments/rife-scale.md) — local interpolation comparison on the selected one-second repaint shot, preserving paintings and full-resolution 24 fps output.

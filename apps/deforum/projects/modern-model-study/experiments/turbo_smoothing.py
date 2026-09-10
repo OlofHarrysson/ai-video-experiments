@@ -24,8 +24,9 @@ def prepare():
         for i,f in enumerate(range(START,START+COUNT,3))})
 
 
-def render(cadence=CADENCE, out=OUT, study='turbo-smoothing-v001', *, timing=None):
+def render(cadence=CADENCE, out=OUT, study='turbo-smoothing-v001', *, timing=None, graph_factory=None, build_frames=True):
     timing=timing or FeedbackTiming(fps=12,repaint_seconds=Fraction(cadence,12),interpolate=False)
+    make_graph=graph_factory or (lambda seed: t.graph(3,seed))
     cadence,start,count=timing.cadence,timing.start,timing.count
     root=out/f'cadence-{cadence}'
     (a.PROJECT/'runs').mkdir(parents=True,exist_ok=True)
@@ -34,11 +35,11 @@ def render(cadence=CADENCE, out=OUT, study='turbo-smoothing-v001', *, timing=Non
         'tail':3,'first_repaint_seed':t.SEED+13,'seed_policy':'increment once per repaint',
         'opening_sha256':a.sha(root/f'anchors/{start:04d}.png'),
         'motion_runner_sha256':a.sha(Path(t.__file__)), 'runner_sha256':a.sha(Path(__file__)),
-        'graph':t.graph(3,t.SEED+13),'intermediates':'previous generated anchor warped; no blend'})
+        'graph':make_graph(t.SEED+13),'intermediates':'previous generated anchor warped; no blend'})
     for i,f in enumerate(range(start+cadence,start+count,cadence),1):
         parent=root/f'anchors/{f-cadence:04d}.png';source=root/f'warped-inputs/{f:04d}.png'
         a.image(source,t.warp_at_time(np.asarray(Image.open(parent).convert('RGB')),timing.seconds(f-cadence),timing.seconds(f)))
-        graph=t.graph(3,t.SEED+12+i)
+        graph=make_graph(t.SEED+12+i)
         name=f'{study}-cadence-{cadence}-{f:04d}'
         matches=list((a.PROJECT/'runs').glob('*-'+name+'-1f'))
         if matches:
@@ -55,6 +56,8 @@ def render(cadence=CADENCE, out=OUT, study='turbo-smoothing-v001', *, timing=Non
             'parent_sha256':a.sha(parent),'initialization_sha256':a.sha(source),
             'output_sha256':a.sha(output),'seed':t.SEED+12+i})
         print('Cadence',cadence,':',i,'/',len(range(start+cadence,start+count,cadence)),flush=True)
+    if not build_frames:
+        return
     for local in range(count):
         f=start+local;anchor=start+local//cadence*cadence
         a.image(root/f'frames/{local:04d}.png',t.warp_at_time(np.asarray(Image.open(root/f'anchors/{anchor:04d}.png').convert('RGB')),timing.seconds(anchor),timing.seconds(f)))

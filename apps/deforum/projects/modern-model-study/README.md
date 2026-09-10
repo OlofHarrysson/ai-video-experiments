@@ -6,7 +6,9 @@ Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animat
 
 New execution convention: **24 fps source and delivery, time-based spatial motion, RIFE on by default**. The [timing migration experiment](experiments/timebase24.md) preserves the accepted baseline as cadence 6 (a repaint every 0.25 seconds). Existing cadence studies retain their historical labels and files. Use `FeedbackTiming(repaint_seconds=1)` for the selected one-second pacing; keep RIFE outside recurrent generation.
 
-Latest local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains. Olof finds no strong preference and parks scale tuning. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
+Latest diffusion study: [starting noise](experiments/starting-noise.md) compares 0.655/0.62/0.60/0.56 with three sampling intervals and identical timing/interpolation. All twenty repaints are local and verified, and the owned Pod is deleted. Human choice is pending; the accepted 0.655 baseline remains preserved.
+
+Earlier local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains. Olof finds no strong preference and parks scale tuning. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
 
 Selected pacing: [repaint every 0.5s versus 1s](experiments/repaint-intervals.md), two six-second shots with the same Krea recipe and RIFE settings. Both run at native 24 fps (cadence 12/24). All sixteen fresh diffusion calls and finished outputs are local and verified. **Olof selects the one-second branch as better and more morphing.** It is the current pacing baseline. Owned GPU deleted; model cache retained.
 
