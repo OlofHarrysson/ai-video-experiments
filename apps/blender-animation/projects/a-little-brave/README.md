@@ -6,10 +6,12 @@ The film uses two persistent painted 2D rigs, authored foot contacts, a rolling 
 
 ## Local deliverables
 
-The current finishing candidate is `film-v007`; its 1920×1080, 24 FPS, 128-sample native render is in progress. Earlier full cuts and every draft remain preserved. Delivery verification will be recorded after encoding.
+The selected film is `film-v007`: 1920×1080, 24 FPS, 384 native frames, 16 seconds, with stereo music. Its 128-sample render, encode, full decode and final frame review are complete. Earlier full cuts and every draft remain preserved.
 
 | Item | Local path |
 | --- | --- |
+| Finished movie | `output/film-v007/a-little-brave.mp4` |
+| Editable handoff bundle | `output/film-v007/a-little-brave-editable.zip` |
 | Editable film | `output/film-v007/a-little-brave.blend` |
 | Neutral character stage | `output/characters-v001/characters.blend` |
 | Biscuit collection asset | `output/characters-v001/biscuit-asset.blend` |
@@ -53,6 +55,8 @@ uv run --script finish.py --version film-v008
 `build_film.py` uses the previous puppy's `puppy-2d/output/v011/puppy-2d.blend`, Bruno's `output/rottweiler-v004/puppy-2d.blend`, the parked artwork in `assets/`, and `choreography.py`. It archives its authoring sources beside each saved scene. `build_rottweiler.py` and `prepare_parts.py` retain the adult character's construction recipe. `export_characters.py` produces the neutral stage and separate collection assets; `build_pose_catalog.py` extracts reusable pose actions from a film.
 
 `finish.py` verifies all PNGs, encodes H.264/AAC, checks the frame count and audio format, performs a full decode, and records SHA-256 hashes. The full film is 16 seconds at 24 FPS, with 48 kHz stereo audio. The saved film can also play its packed score directly in Blender.
+
+`uv run --script package.py --version film-v007` bundles the movie, packed film, neutral character stage, individual assets, eight pose presets, score, source and verification notes. It checks the archive CRC and every entry against its recorded SHA-256 hash. Use a new output version when rebuilding a delivery.
 
 ## Review and provenance
 
