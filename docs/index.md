@@ -4,6 +4,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Two prompts and wider noise benchmarks](../apps/deforum/projects/modern-model-study/experiments/prompt-noise.md) — cathedral → mechanical moth at 0.3/0.4/0.5/0.6, with preserved feedback and identical interpolation.
+
 - [Diffusion starting-noise sweep](../apps/deforum/projects/modern-model-study/experiments/starting-noise.md) — 0.655/0.62/0.60/0.56 with three sampling intervals, identical one-second repaint timing and interpolation.
 
 - [Next diffusion and interpolation experiments](research/diffusion-and-interpolation-next.md) — native three-step tails, lower starting noise, and a current RIFE/GIMM/BiM/SPEED/LDF-VFI/ArbInterp research comparison.

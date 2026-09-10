@@ -6,7 +6,9 @@ Test FLUX.2 Klein 4B distilled and Krea 2 Turbo for controllable, surreal animat
 
 New execution convention: **24 fps source and delivery, time-based spatial motion, RIFE on by default**. The [timing migration experiment](experiments/timebase24.md) preserves the accepted baseline as cadence 6 (a repaint every 0.25 seconds). Existing cadence studies retain their historical labels and files. Use `FeedbackTiming(repaint_seconds=1)` for the selected one-second pacing; keep RIFE outside recurrent generation.
 
-Latest diffusion study: [starting noise](experiments/starting-noise.md) compares 0.655/0.62/0.60/0.56 with three sampling intervals and identical timing/interpolation. All twenty repaints are local and verified, and the owned Pod is deleted. Human choice is pending; the accepted 0.655 baseline remains preserved.
+Latest scene-transition study: [two prompts and four noise levels](experiments/prompt-noise.md) uses cathedral → mechanical moth halfway through eight seconds. Assistant finds the strongest partial transformation at 0.6; lower levels mostly preserve the old scene. No complete moth appears in four new-prompt repaints, and Olof has not judged these clips. All 28 repaints are local and verified; owned Pod deleted.
+
+Earlier diffusion study: [starting noise](experiments/starting-noise.md) compares 0.655/0.62/0.60/0.56 with three sampling intervals and identical timing/interpolation. All twenty repaints are local and verified, and the owned Pod is deleted. Human choice is pending; the accepted 0.655 baseline remains preserved.
 
 Earlier local follow-up: [RIFE motion-estimation scale](experiments/rife-scale.md) is complete. Half-scale is the assistant's tentative candidate for less doubled later detail; some ghosting remains. Olof finds no strong preference and parks scale tuning. Both videos preserve the same paintings and warp-only tail, with no new diffusion or cloud work. RIFE scale 1.0 remains the default.
 

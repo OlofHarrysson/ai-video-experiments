@@ -240,3 +240,9 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 - **Explicit:** Olof chooses the diffusion experiment first and asks for several noise levels in the same study.
 - **Experiment:** The [four-level sweep](../apps/deforum/projects/modern-model-study/experiments/starting-noise.md) keeps three sampling intervals and changes the starting sigma. No human preference among these outputs is established yet. Approval of the experiment does not establish understanding of the sigma schedule.
+
+
+## Prompt-transition benchmarks — 2026-09-10
+
+- **Explicit:** Olof asks for one prompt in each half of a shot and a broader starting-noise sweep at 0.3/0.4/0.5/0.6. He identifies scene transitions as an important scenario for judging the feedback process.
+- **Experiment:** [Two-prompt study](../apps/deforum/projects/modern-model-study/experiments/prompt-noise.md), interpreted as successive temporal halves. Do not infer a noise-level preference or understanding of proportional noise schedules from his request.
