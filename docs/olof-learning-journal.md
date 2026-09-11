@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-11 — films need evolving scenes:** Olof says the ten-dollar outputs are good and explicitly likes umbrella → jellyfish. He wants a longer, snappier film with changing environments and compositions; a single transformation between similarly shaped objects is insufficient. Keep appealing morphs as one ingredient while adding scene changes and sustained spatial movement. This is a pacing and creative-scope direction, not a rejection of the current model. See [dynamic journey](../apps/deforum/projects/modern-model-study/experiments/dynamic-journey.md).
+
 - **2026-09-10 — independent creative practice:** Olof asks the assistant to set a goal, experiment independently within **$10**, and show only the most interesting high-quality outputs at the end. The earlier timing clarification remains: keep diffusion paintings, allow fewer intermediate frames, and pursue faster spatial motion and morphing at 24 fps. This authorizes assistant selection within the budget; it does not establish that Olof likes the resulting new styles. See the [ten-dollar session](../apps/deforum/projects/modern-model-study/experiments/ten-dollar.md).
 
 Recorded 2026-09-07 from this project's conversation.
