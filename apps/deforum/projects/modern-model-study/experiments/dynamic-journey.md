@@ -54,7 +54,7 @@ Exact prompts, timing, motion and seeds: [gentler](dynamic-journey-configs/gentl
 
 The retry's cached-region PRO 6000 allocation was rejected. A fresh temporary A100 SXM 80GB in US-MD-1 started at **$1.59/hour**, using ephemeral disk. The retained EU cache stayed untouched. Verified model downloads took **85s** and runtime preparation **32s**; warm repaint round trips were roughly **8s**. Allocation-to-first-submit was about ten minutes including orchestration; it was not all model setup time. ComfyUI was pinned to `12d5279438bfefc058a269eae805ceab6047777f` (0.34.0), with runtime and asset receipts archived.
 
-The Pod was deleted after about 31m34s. Estimated compute is **$0.8364**, plus a conservative **$0.03 disk allowance**: roughly **$0.87 for this retry**. Billing had no posted records at cleanup. The original $10 allowance also covers the preceding session's posted $0.1743 and the earlier failed startup allowance; no extra budget was needed.
+The Pod was deleted after about 31m34s. The cleanup estimate was roughly **$0.87**, including a conservative disk allowance. Billing checked during the 2026-09-13 follow-up has now posted **$0.8445** for this retry: $0.8364 compute and $0.0081 disk. The original $10 allowance also covers the preceding session's posted $0.1743 and the earlier failed startup allowance; no extra budget was needed.
 
 An empty Pod list confirmed deletion. The authorized 50 GB `deforum-models` volume in EU-RO-1 remains; its ongoing storage charge is separate. Private budget, deployment, archive and cleanup receipts are under ignored `apps/deforum/work/dynamic-journey-session/`.
 

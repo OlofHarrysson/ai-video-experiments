@@ -1,0 +1,42 @@
+{
+  "case": "soft-return",
+  "seed": 773401,
+  "duration": 6.5,
+  "source": "projects/modern-model-study/exports/ten-dollar-v001/clock-pulse/anchors/0084.png",
+  "settle_noise": 0.64,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "brass-city",
+      "prompt": "At street level inside an immense brass city built across a desert canyon. Tall angular towers rise on both sides of a broad winding avenue that recedes far into the distance. Enormous arched bridges span the canyon overhead. Terraced balconies, gold mechanical stairways, tiny glowing windows and oxidized copper rooftops fill the space. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. A panoramic urban environment, with the avenue and distant skyline occupying the center and tall buildings framing the sides. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4,
+      "center": [
+        0.6,
+        0.47
+      ],
+      "zoom": 1.05,
+      "turn": 32,
+      "radius": 0.8,
+      "travel": [
+        -0.12,
+        0.04
+      ]
+    }
+  ],
+  "transition_ramp": [
+    0.4,
+    0.4312,
+    0.5056,
+    0.5944,
+    0.6688,
+    0.7,
+    0.6844444444,
+    0.6555555556,
+    0.64
+  ]
+}

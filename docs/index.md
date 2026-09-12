@@ -4,6 +4,9 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Krea transition controls](research/krea-transition-controls.md): exact CFG conventions, latent/noise mixing, sigma schedules and candidate controls for gradual scene changes.
+- [Transition ramp experiment](../apps/deforum/projects/modern-model-study/experiments/transition-ramps.md): matched start, peak, painting-count and rise/return curves.
+
 - [Dynamic scene journey](../apps/deforum/projects/modern-model-study/experiments/dynamic-journey.md): completed 24-second recurrent film with four changing environments, overlapping motion, gradual transition-noise ramp, verified local delivery and GPU cleanup.
 
 - [Independent ten-dollar filmmaking session](../apps/deforum/projects/modern-model-study/experiments/ten-dollar.md): three visual concepts, a targeted transition refinement, assistant screening, budget accounting and preserved recurrent lineage.
