@@ -1,6 +1,6 @@
 # A faster journey through changing scenes
 
-Completed 2026-09-12. The [24-second film](../exports/dynamic-journey-v001/ramped/film/preview.mp4) preserves the watch-to-snail opening, then transforms the setting into a canyon city, underwater garden, cloud palaces and crystalline space landscape. The assistant selects the gradual transition-noise ramp after three short probes. Olof's playback assessment is pending.
+Completed 2026-09-12. The [24-second film](../exports/dynamic-journey-v001/ramped/film/preview.mp4) preserves the watch-to-snail opening, then transforms the setting into a canyon city, underwater garden, cloud palaces and crystalline space landscape. The assistant selects the gradual transition-noise ramp after three short probes. Olof says the film looks really good and is close to what he wanted. This supports the combined result; it does not establish his preference among the three probe settings.
 
 Olof likes the preceding films, especially parasol-to-jellyfish, but wants longer, snappier films with changing environments and compositions. Similar-object transformations alone are insufficient. This experiment adds four environment prompts and overlapping bounded motion while preserving recurrent feedback. It demonstrates a world changing around the viewer; some inherited spatial structure persists.
 
@@ -67,3 +67,9 @@ The earlier allocation stayed `initializing / awaiting_container` for about four
 Follow [the Pod runbook](../../../POD.md) and create a fresh owned deployment receipt; the saved receipt names a deleted Pod. Run `dynamic_journey.py CONFIG --deployment RECEIPT --through 4` for a probe, then advance a selected branch through 10s, 15s and the full 20.5s. Verified existing paintings resume without duplicate generation. Use a new case/output directory for changed settings to preserve attempts.
 
 Locally run `dynamic_journey_finish.py CASE --stage prepare`, then `pair`, inspect the pair, and run `full`. The final 41-anchor section supports `join`, creating a new film directory and refusing to overwrite an existing cut. Use the app's `uv` environment with NumPy, Pillow and OpenCV; finishing calls the pinned local RIFE environment. Archive and verify remote artifacts before deleting owned compute; keep the authorized model volume.
+
+## Human playback feedback — 2026-09-12
+
+Olof calls the 24-second film “really good” and says it is close to what he was going for. He asks what gradually increasing repaint strength means and requests the other attempts. Preserve this film as a liked reference for evolving environments and movement. The separate probe comparison and his understanding of the strength schedule remain open.
+
+Here, repaint strength means the starting noise level of each recurrent repaint, with the remaining three-interval schedule scaled proportionally. For each new scene prompt, the first four paintings use 0.60, 0.64, 0.68 and 0.70, then settle at 0.64. The ramp resets at the next scene prompt. It does not mean percentages of pixels replaced, extra steps, increasing CFG, or a continuous rise throughout the film.
