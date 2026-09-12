@@ -36,7 +36,12 @@ def warp(rgb, start, end, phrases):
 def recipe(config, seconds):
     scene = [s for s in config['scenes'] if s['at'] <= seconds][-1]
     age = seconds-scene['at']
-    noise = config['transition_noise'] if age <= 1.5 else config['settle_noise']
+    if 'transition_ramp' in config:
+        repaint = round((seconds-max(scene['at'], .5))*2)
+        ramp = config['transition_ramp']
+        noise = ramp[repaint] if 0 <= repaint < len(ramp) else config['settle_noise']
+    else:
+        noise = config['transition_noise'] if age <= 1.5 else config['settle_noise']
     return scene, [s*noise/.6 for s in base.SIGMAS]
 
 

@@ -9,3 +9,5 @@ See the [working convention](../../../../../docs/workflow.md).
 - [v002: owl at 48 fps / 2×](v002.md) — all 336 original frames in seven seconds.
 
 - [v003: owl at 2×, 24 fps](v003.md) — same seven-second speed, 168 frames, original repaint anchors retained.
+
+- [v004: changing worlds](v004.md) — 24 seconds, preserved watch/snail opening and four evolving environments; all 48 paintings retained.
