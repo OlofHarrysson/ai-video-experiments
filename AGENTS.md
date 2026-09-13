@@ -62,6 +62,8 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 
 ## Working conventions
 
+- Use the [linked media reviewer](apps/deforum/media_review/README.md) for human frame-by-frame comparisons: saved sessions generate a reusable in-chat review plus a full-quality standalone page. Default to two clips, allow up to three, preserve actual timing and verified painting labels, and identify compressed previews. Browser interaction QA for its first implementation remains pending; see its validation note.
+
 - Keep the authorized 50 GB standard `deforum-models` network volume in EU-RO-1 between sessions ($3.50/month). Use [the Pod workflow](apps/deforum/POD.md): existing model cache and ComfyUI runtime are reused; delete completed owned Pods, not this retained volume. Check GPU capacity before allocation and preserve explicit warm-Pod handoffs between experiments.
 
 - Keep the Deforum feedback loop intact when changing models or prompt inputs. Olof's modern-model request means warped previous-image sampling initialization plus text, optionally adding native reference-image conditioning. “Text-to-image” does not authorize independent redraws or removing that initialization. Explain initialization and reference conditioning separately, verify that both can be used together, and align before changing the loop. See the [misunderstanding record](docs/review-and-feedback.md#misunderstanding-record--2026-09-08).

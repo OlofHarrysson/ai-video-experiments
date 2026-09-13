@@ -18,7 +18,7 @@ Establish a convincing opening before extending a new visual recipe into animati
 
 The assistant does the first pass: verifies the experiment, inspects images over time, investigates suspected defects, compares matched examples and recommends a small shortlist. Olof supplies taste, creative direction and playback judgments. Neither technical measurements nor the assistant's recommendation override a stated preference. An explanation being presented does not establish that Olof understood or retained it.
 
-Default human review: **one recommendation and one meaningfully different alternative**, often just one video when there is no useful choice. Keep all outputs and link the full experiment index, but do not require Olof to rank six nearly identical clips. Show the whole set when requested. Keep playable videos inline in chat.
+Default human review: **one recommendation and one meaningfully different alternative**, often just one video when there is no useful choice. Keep all outputs and link the full experiment index, but do not require Olof to rank six nearly identical clips. Show the whole set when requested. Keep playable videos inline in chat. For close comparisons, build the [linked media reviewer](../apps/deforum/media_review/README.md) from a saved session: default to two labeled clips and let Olof add a third. Distinguish compressed chat previews from the original-video review when judging fine detail. Keep frame and painting controls separate.
 
 Use descriptive names with stable experiment IDs in parentheses, rather than unexplained node names. Each shortlisted video gets:
 

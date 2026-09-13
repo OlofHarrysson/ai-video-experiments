@@ -1,0 +1,24 @@
+{
+  "title": "Prompt transition review",
+  "selected": ["bridges", "direct"],
+  "clips": [
+    {
+      "id": "bridges",
+      "label": "Intermediate descriptions",
+      "note": "Shell with buildings → hollow shell → city · peak noise 0.78",
+      "source": "projects/modern-model-study/exports/prompt-bridges-v001/bridges/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "direct",
+      "label": "Direct city prompt",
+      "note": "City description throughout · peak noise 0.78",
+      "source": "projects/modern-model-study/exports/prompt-bridges-v001/direct/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "gentler",
+      "label": "Earlier experiment · gentler noise",
+      "note": "Earlier A100 run · direct city prompt · peak noise 0.70",
+      "source": "projects/modern-model-study/exports/transition-ramps-v001/soft-return/section-013/rife/preview.mp4"
+    }
+  ]
+}
