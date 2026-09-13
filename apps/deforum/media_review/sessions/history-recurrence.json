@@ -1,0 +1,51 @@
+{
+  "title": "Does recent painting history reduce redraws?",
+  "selected": [
+    "fresh-rife",
+    "history-fresh-rife"
+  ],
+  "clips": [
+    {
+      "id": "fresh-rife",
+      "label": "Latest painting + RIFE",
+      "note": "Fresh noise \u00b7 latest image latent \u00b7 RIFE finishing",
+      "details": "The same generated paintings as the corresponding raw clip, finished with our established RIFE 4.25 scale 1 interpolation. No new diffusion and no change to painting timestamps. Compare the matching raw clips to separate diffusion changes from interpolation artifacts.\n\nThe previous experiment repeatedly returned to one fixed source. This experiment instead encodes the newest completed painting and uses it to initialize the next repaint. This control adds a fresh independent noise pattern each time.\n\nThe city prompt stays unchanged; there is no spatial motion. Krea Turbo, CFG 1, starting noise 0.6, three Euler intervals. All four versions start with the same painting and identical first repaint.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/fresh/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "history-fresh-rife",
+      "label": "Recent history + RIFE",
+      "note": "Fresh noise \u00b7 recent image latents 70/20/10 \u00b7 RIFE finishing",
+      "details": "The same generated paintings as the corresponding raw clip, finished with our established RIFE 4.25 scale 1 interpolation. No new diffusion and no change to painting timestamps. Compare the matching raw clips to separate diffusion changes from interpolation artifacts.\n\nInstead of using only the newest painting's encoded image latent, mix the most recent three: 70% newest, 20% previous and 10% older. Early paints normalize the available weights. The latest painting always contributes; this is recurrent feedback, not a fixed opening.\n\nThese are clean image latents produced by VAE encoding, not random noise. The mix initializes sampling; no old pixels are pasted over the result. Fresh independent noise is the same sequence used in the control.\n\nThe scene is stationary so the history shares the same coordinate system. Any benefit here remains untested under warping or changing prompts. Same sigma 0.6, CFG 1, three Euler intervals, four paintings/s and 24 fps.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/history-fresh/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "fresh",
+      "label": "Raw \u00b7 Fresh noise \u00b7 latest painting",
+      "note": "Control \u00b7 each painting feeds the next \u00b7 no history mix",
+      "details": "The previous experiment repeatedly returned to one fixed source. This experiment instead encodes the newest completed painting and uses it to initialize the next repaint. This control adds a fresh independent noise pattern each time.\n\nThe city prompt stays unchanged; there is no spatial motion. Krea Turbo, CFG 1, starting noise 0.6, three Euler intervals. All four versions start with the same painting and identical first repaint.\n\nFifteen new paintings plus the opening, four paintings per second over four seconds at 24 fps. These are raw diagnostic videos: each painting is held for six frames. No RIFE. Shift+arrow steps through paintings.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/fresh/raw/preview.mp4"
+    },
+    {
+      "id": "gentle",
+      "label": "Raw \u00b7 Gentle noise \u00b7 latest painting",
+      "note": "Same feedback \u00b7 noise pattern changes gradually",
+      "details": "The newest completed painting still feeds the next repaint. Only the random pattern changes: adjacent noise correlation is0.995, with a fresh innovation coefficient of about 0.10. This is much gentler pattern evolution than the earlier 0.85 correlated-noise test.\n\nStarting noise strength stays 0.6. A slowly changing random pattern does not necessarily preserve the artwork, because the image input is changing too. Compare with Fresh noise to assess this factor alone.\n\nSame stationary city, prompt, CFG 1, three Euler intervals, four paintings/s and 24 fps raw holds. No RIFE.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/gentle/raw/preview.mp4"
+    },
+    {
+      "id": "history-fresh",
+      "label": "Raw \u00b7 Fresh noise \u00b7 recent history",
+      "note": "Newest 70% + previous 20% + older 10% \u00b7 image latents",
+      "details": "Instead of using only the newest painting's encoded image latent, mix the most recent three: 70% newest, 20% previous and 10% older. Early paints normalize the available weights. The latest painting always contributes; this is recurrent feedback, not a fixed opening.\n\nThese are clean image latents produced by VAE encoding, not random noise. The mix initializes sampling; no old pixels are pasted over the result. Fresh independent noise is the same sequence used in the control.\n\nThe scene is stationary so the history shares the same coordinate system. Any benefit here remains untested under warping or changing prompts. Same sigma 0.6, CFG 1, three Euler intervals, four paintings/s and 24 fps raw holds. No RIFE.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/history-fresh/raw/preview.mp4"
+    },
+    {
+      "id": "history-gentle",
+      "label": "Raw \u00b7 Gentle noise \u00b7 recent history",
+      "note": "Recent image-latent mix + slowly changing noise",
+      "details": "Combines the recent three image-latent weights 70/20/10 with noise correlation 0.995. Compare with Gentle noise/latest painting to isolate the history effect, or Fresh noise/recent history to isolate the noise-pattern effect.\n\nHistory might damp sudden redesign, but could also soften details or reinforce accumulated artifacts. Preventing the earlier mosaic appearance is a hypothesis, not a guaranteed property of averaging.\n\nSame fixed city prompt, no motion, sigma 0.6, CFG 1, three Euler intervals. Fifteen recurrent repaints plus the opening; four paintings/s over four seconds at 24 fps. Raw held paintings without RIFE.",
+      "source": "projects/modern-model-study/exports/history-recurrence-v001/history-gentle/raw/preview.mp4"
+    }
+  ]
+}

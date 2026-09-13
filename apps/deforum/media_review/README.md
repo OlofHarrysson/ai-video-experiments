@@ -16,6 +16,8 @@ The allowlisted `/state-replay` route serves the separately built `media-review-
 
 ## Build a review
 
+The `/history-recurrence` route serves `media-review-history-recurrence-v001/full-quality.html`, built from `sessions/history-recurrence.json`. Its default pair uses identical RIFE finishing; all four raw recurrent cases remain selectable, with painting versus hold labels preserved.
+
 From `apps/deforum/`:
 
 ```bash

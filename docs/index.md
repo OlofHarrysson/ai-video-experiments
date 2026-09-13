@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Recent latent history and noise recurrence](../apps/deforum/projects/modern-model-study/experiments/history-recurrence.md): four matched recurrent cases. Image-latent history with fresh noise limits some accumulated drift; gentle noise still produces mosaic colors with or without history. Includes raw and RIFE review clips.
+
 - [Krea preservation controls](../apps/deforum/projects/modern-model-study/experiments/continuity-controls.md): matched low-noise, sampler and reconstruction comparisons, with parallel research and preserved recurrent feedback.
 - [Krea sampler practice](research/krea-sampler-practice.md): official guidance, CivitAI creator recipes and first-hand community tests, separated from recurrent-animation evidence.
 - [Extra Krea reference conditioning](research/krea-reference-continuity.md): image initialization versus reference context, existing core-node route, adapters and preservation limits.

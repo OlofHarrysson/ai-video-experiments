@@ -11,6 +11,7 @@ OUTPUT = APP / 'projects/modern-model-study/exports/media-review-continuity-cont
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
     '/state-replay': APP / 'projects/modern-model-study/exports/media-review-state-replay-v001/full-quality.html',
+    '/history-recurrence': APP / 'projects/modern-model-study/exports/media-review-history-recurrence-v001/full-quality.html',
 }
 
 
