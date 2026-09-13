@@ -1,6 +1,6 @@
 # Fresh versus gradually changing noise
 
-Completed 2026-09-13. Assistant review favors independent noise for this scene. Correlation 0.85 produces pronounced color/style drift; do not adopt it as a default. Olof's playback judgment is pending.
+Completed 2026-09-13. Olof likes the correlated branch's mosaic-like colors and finds the style interesting for possible later use, while agreeing it misses the current preservation goal. Preserve it as a liked creative effect. Assistant review favors independent noise for preserving this scene; correlation 0.85 is not a new default.
 
 Two stationary four-second continuations start from the same saved Krea canyon-city painting and its unchanged city prompt. Both retain RGB recurrent initialization, CFG1, Euler, sigmas `[0.6, 0.512844085693, 0.310901075602, 0]`, four paintings/s (cadence6), 24 fps and identical RIFE finishing. Each has the opening plus fifteen fresh paintings. No warping, masks, reference conditioning or image blending is added.
 
@@ -22,6 +22,10 @@ Noise standard deviation stays approximately 0.998–1.002 in both branches. Mea
 A diagnostic correlation between the added noise and the current raw input latent grows to roughly 0.14 in the treatment, while remaining near zero in the control. This is compatible with recurrent reinforcement of noise-related structure, but does not establish the cause of the visual drift. Constant marginal noise variance does not guarantee independence from the image being repainted. [PYoCo](https://arxiv.org/abs/2305.10474) trained a video model with correlated priors; it does not validate this inference-only intervention in Krea.
 
 Retain the independent-noise recipe. This result covers one scene, sigma 0.6 and correlation 0.85; it does not rule out milder correlation or other mechanisms. No movement or intentional prompt switch was tested, and no follow-up GPU experiment is implied.
+
+## Human feedback and follow-up questions
+
+Olof calls the video “pretty cool,” specifically likes the mosaic-like colors, and says it may have a later use despite missing this test's goal. Keep that aesthetic preference separate from preservation performance. He asks to understand noise tensors, internal sampling steps, latent recurrence and an image-to-noise encoding idea. [Noise and latent continuity](../../../../../docs/research/noise-and-latent-continuity.md) answers those questions from the recorded arrays, current sampler source and inversion research; its next experiment is a proposal only.
 
 ## Verification and delivery
 

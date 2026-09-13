@@ -6,7 +6,9 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
-- [Correlated-noise test](../apps/deforum/projects/modern-model-study/experiments/correlated-noise.md): same-strength noise with gradually changing patterns; the tested setting causes strong color drift. Includes actual noise diagnostics and matched videos.
+- [Noise and latent continuity](research/noise-and-latent-continuity.md): actual tensor shape and three-step sampling, existing feedback, noise constraints, latent interpolation, saved-state replay and inversion proposals.
+
+- [Correlated-noise test](../apps/deforum/projects/modern-model-study/experiments/correlated-noise.md): same-strength noise with gradually changing patterns; Olof likes its mosaic colors as a possible future effect, while it misses preservation. Includes actual noise diagnostics and matched videos.
 
 - [Repaint frequency and noise](../apps/deforum/projects/modern-model-study/experiments/refresh-rate.md): CFG1, two/four paintings per second, fixed timed prompts/motion, and a lower-noise comparison.
 

@@ -14,7 +14,7 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
-- **2026-09-13 — correlated-noise comparison approved:** Olof enthusiastically approves testing a gradually changing random pattern at unchanged noise strength. This authorizes the stationary matched comparison and diagnostics; it is not a preference for its eventual output. The [result](../apps/deforum/projects/modern-model-study/experiments/correlated-noise.md) shows strong color drift at correlation 0.85; human playback feedback is pending.
+- **2026-09-13 — mosaic colors are a liked creative effect:** After the correlated-noise comparison, Olof says the video was “pretty cool” and likes its “mosaic-like colors.” He finds the style interesting for possible later use while agreeing it misses the current preservation goal. Preserve the [result and recipe](../apps/deforum/projects/modern-model-study/experiments/correlated-noise.md) as a liked stylistic option, without promoting correlation 0.85 to the default or assuming it generalizes to other scenes.
 
 - **2026-09-13 — frequent updates with less incidental redesign:** Olof likes the higher repaint frequency but finds the resulting changes too chaotic. With an unchanged prompt, he wants existing dunes/buildings to retain their shapes and colors more closely; slight evolution is fine, while deliberate prompt changes should permit larger transformations. Lower noise reduces distracting flicker but also loses crispness in his review. No overall recipe winner is selected. He asks to understand and visualize actual noise injection; understanding of latent noise or correlated-noise controls is unconfirmed. See [playback feedback](../apps/deforum/projects/modern-model-study/experiments/refresh-rate.md#human-playback-feedback-and-proposed-follow-up--2026-09-13).
 
@@ -298,3 +298,9 @@ Olof says he primarily uses a 14-inch MacBook. The stacked in-chat/full-quality 
 ## Intermediate prompts and CFG question — 2026-09-13
 
 Explicit feedback: intermediate scene descriptions look interesting to Olof, with a few more changes visible early in the clip. He treats their usefulness as promising but unproven, not a selected winner. He asks whether CFG outside the recommended value is ignored or merely risks worse results, and permits answering from evidence without new renders. Do not infer that he already understands the Krea CLI versus ComfyUI guidance convention.
+
+## Noise, recurrence and inversion questions — 2026-09-13
+
+Olof proposes that corruption leaves small background details open to reinterpretation, and asks about smoothly evolving noise, retaining latents across paintings, and encoding an image into a noise representation before perturbing it. These are explicit hypotheses and questions, not established results. He asks for the exact noise shape, whether randomness is introduced at each sampling step, and constraints on tailoring noise. His description shows an interest in separating video frames, diffusion paintings and internal sampling steps; it does not establish that he already knows the implementation.
+
+The [source-backed explanation](research/noise-and-latent-continuity.md) records that the current Euler path injects randomness once per painting; the saved noise movies show actual channel slices; each previous painting already initializes sampling through a VAE latent; and inversion differs from VAE encoding. The earlier direct-latent test used an older sampling recipe. These explanations have been provided, with understanding and preference for the proposed saved-state replay/perturbation test unconfirmed. No new model, sampler or inference experiment is authorized by this educational discussion alone.

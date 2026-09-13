@@ -6,6 +6,8 @@ Research checked 2026-09-13 against official Krea source/cards, ComfyUI commit `
 
 ## Exact recipe and scope
 
+For the later noise experiment and the distinction between VAE encoding, initial random noise, internal Euler updates and image inversion, see [Noise and latent continuity](noise-and-latent-continuity.md).
+
 The official Turbo recommendation is eight steps, external CFG disabled, and fixed timestep-shift `mu=1.15`. The CLI example uses `--checkpoint oss_turbo --steps 8 --cfg 0.0 --mu 1.15`. Turbo is distilled; this recommendation is for image generation, not a validated recurrent partial-noise animation recipe. [Official repository](https://github.com/krea-ai/krea-2), [official Turbo card](https://huggingface.co/krea/Krea-2-Turbo/blob/main/README.md).
 
 Our [repaint graph](../../apps/deforum/projects/modern-model-study/experiments/ten_dollar.py) uses the existing Krea Turbo FP8 model, Qwen3VL encoder and Qwen Image VAE. Each previous RGB painting is spatially warped, VAE-encoded and supplied to `SamplerCustom` as `latent_image`. Euler, CFG 1 and a fresh reproducible seed accompany each repaint. Three intervals use
