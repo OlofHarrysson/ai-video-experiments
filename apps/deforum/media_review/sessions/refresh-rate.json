@@ -1,0 +1,30 @@
+{
+  "title": "Repaint frequency and noise",
+  "selected": [
+    "two-current",
+    "four-current"
+  ],
+  "clips": [
+    {
+      "id": "two-current",
+      "label": "2 paintings/s \u00b7 baseline",
+      "note": "2 paintings/s \u00b7 original noise \u00b7 baseline",
+      "details": "New painting every 0.5s; 13 paintings including the opening.\n\nSame brass-snail opening \u2192 shell with buildings \u2192 hollow pavilion \u2192 canyon city. Prompt events stay at 1.5s and 2.5s. Motion follows the same timed path and settles at 4s.\n\nKrea Turbo, CFG 1, three Euler intervals. Starting noise: 0.40 \u2192 0.78 \u2192 0.64, scheduled in seconds. Every painting starts from the warped previous painting. Seeds match at shared half-seconds; extra quarter-seconds have their own repeatable seeds.\n\nRIFE 4.25 scale 1 fills between paintings. 6.5 seconds, 24 fps, full resolution. No interpolation feeds back into generation.\n\nAssistant painting review: the faster original-noise version opens a wider city; the lower-noise version keeps a large solid shell with a small central opening. Smaller repaint changes alone do not establish better morphing. Your playback preference is pending.",
+      "source": "projects/modern-model-study/exports/refresh-rate-v001/two-current/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "four-current",
+      "label": "4 paintings/s \u00b7 same noise",
+      "note": "4 paintings/s \u00b7 original noise \u00b7 wider city",
+      "details": "New painting every 0.25s; 26 paintings including the opening.\n\nSame brass-snail opening \u2192 shell with buildings \u2192 hollow pavilion \u2192 canyon city. Prompt events stay at 1.5s and 2.5s. Motion follows the same timed path and settles at 4s.\n\nKrea Turbo, CFG 1, three Euler intervals. Starting noise: 0.40 \u2192 0.78 \u2192 0.64, scheduled in seconds. Every painting starts from the warped previous painting. Seeds match at shared half-seconds; extra quarter-seconds have their own repeatable seeds.\n\nRIFE 4.25 scale 1 fills between paintings. 6.5 seconds, 24 fps, full resolution. No interpolation feeds back into generation.\n\nAssistant painting review: the faster original-noise version opens a wider city; the lower-noise version keeps a large solid shell with a small central opening. Smaller repaint changes alone do not establish better morphing. Your playback preference is pending.",
+      "source": "projects/modern-model-study/exports/refresh-rate-v001/four-current/section-026/rife/preview.mp4"
+    },
+    {
+      "id": "four-lower",
+      "label": "4 paintings/s \u00b7 lower noise",
+      "note": "4 paintings/s \u00b7 lower noise \u00b7 shell persists",
+      "details": "New painting every 0.25s; 26 paintings including the opening.\n\nSame brass-snail opening \u2192 shell with buildings \u2192 hollow pavilion \u2192 canyon city. Prompt events stay at 1.5s and 2.5s. Motion follows the same timed path and settles at 4s.\n\nKrea Turbo, CFG 1, three Euler intervals. Starting noise: 0.34 \u2192 0.663 \u2192 0.544, scheduled in seconds. Every painting starts from the warped previous painting. Seeds match at shared half-seconds; extra quarter-seconds have their own repeatable seeds.\n\nRIFE 4.25 scale 1 fills between paintings. 6.5 seconds, 24 fps, full resolution. No interpolation feeds back into generation.\n\nAssistant painting review: the faster original-noise version opens a wider city; the lower-noise version keeps a large solid shell with a small central opening. Smaller repaint changes alone do not establish better morphing. Your playback preference is pending.",
+      "source": "projects/modern-model-study/exports/refresh-rate-v001/four-lower/section-026/rife/preview.mp4"
+    }
+  ]
+}

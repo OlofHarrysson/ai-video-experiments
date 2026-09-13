@@ -36,7 +36,10 @@ def warp(rgb, start, end, phrases):
 def recipe(config, seconds):
     scene = [s for s in config['scenes'] if s['at'] <= seconds][-1]
     age = seconds-scene['at']
-    if 'transition_ramp' in config:
+    if 'noise_schedule' in config:
+        schedule = config['noise_schedule']
+        noise = float(np.interp(seconds, [p['at'] for p in schedule], [p['noise'] for p in schedule]))
+    elif 'transition_ramp' in config:
         repaint = round((seconds-max(scene['at'], .5))*2)
         ramp = config['transition_ramp']
         noise = ramp[repaint] if 0 <= repaint < len(ramp) else config['settle_noise']
@@ -49,6 +52,9 @@ def recipe(config, seconds):
 
 
 def render(config, through):
+    cadence = config.get('cadence', CADENCE)
+    if not isinstance(cadence, int) or cadence <= 0 or FPS % cadence:
+        raise ValueError('Cadence must be a positive integer divisor of 24')
     root = OUT/config['case']
     base.save(root/'config.json',config)
     (root/'anchors').mkdir(parents=True,exist_ok=True)
@@ -60,19 +66,19 @@ def render(config, through):
         shutil.copy2(seed_image,opening)
     base.save(root/'opening.json',{'source':config['source'], 'source_sha256':base.sha(seed_image),
         'initialization':'same-model continuation from the previous saved snail painting'})
-    last = round(config['duration']*FPS)-CADENCE
+    last = round(config['duration']*FPS)-cadence
     if through is not None:
         requested=round(through*FPS)
-        if abs(requested-through*FPS)>1e-6 or requested%CADENCE:
-            raise ValueError('Section endpoint must lie on a half-second painting')
+        if abs(requested-through*FPS)>1e-6 or requested%cadence:
+            raise ValueError('Section endpoint must lie on a painting boundary')
         last=min(last,requested)
-    for f in range(CADENCE,last+1,CADENCE):
+    for f in range(cadence,last+1,cadence):
         seconds=f/FPS
-        parent=root/f'anchors/{f-CADENCE:04d}.png'
+        parent=root/f'anchors/{f-cadence:04d}.png'
         target=root/f'anchors/{f:04d}.png'
         receipt=root/f'anchor-{f:04d}.json'
         scene,sigmas=recipe(config,seconds)
-        seed=config['seed']+f//CADENCE
+        seed=config.get('seeds_by_frame', {}).get(str(f), config['seed']+f//cadence)
         g=base.repaint_graph(scene['prompt'],seed,sigmas)
         g['9']['inputs']['cfg'] = config.get('cfg', 1.)
         g['11']['inputs']['filename_prefix']='dynamic-journey/'+config['case']
@@ -83,7 +89,7 @@ def render(config, through):
             print(f'Reusing verified painting {seconds:.1f}s',flush=True)
             continue
         source=root/f'warped-inputs/{f:04d}.png';source.parent.mkdir(exist_ok=True)
-        Image.fromarray(warp(np.asarray(Image.open(parent).convert('RGB')),seconds-.5,seconds,config['phrases'])).save(source)
+        Image.fromarray(warp(np.asarray(Image.open(parent).convert('RGB')),seconds-cadence/FPS,seconds,config['phrases'])).save(source)
         run=base.submit_once(f'dynamic-{config["case"]}-{f:04d}',g,source,
             {'parent_sha256':base.sha(parent),'frame':f,'seconds':seconds,'scene':scene['name'],
              'sigma_start':sigmas[0],'initialization':'warped previous painting; recurrent loop intact'})

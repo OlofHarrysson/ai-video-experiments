@@ -14,8 +14,10 @@ import dynamic_journey as d
 
 def prepare(case):
     root=d.OUT/case
+    config=json.loads((root/'config.json').read_text())
+    cadence=config.get('cadence',12)
     files=sorted((root/'anchors').glob('*.png'))
-    assert [int(p.stem) for p in files]==list(range(0,len(files)*12,12))
+    assert [int(p.stem) for p in files]==list(range(0,len(files)*cadence,cadence))
     target=root/f'section-{len(files):03d}'
     source=target/'sources';source.mkdir(parents=True,exist_ok=True)
     for i,p in enumerate(files):
@@ -36,9 +38,10 @@ def run(case,stage):
     root,target,source,files=prepare(case)
     if stage=='prepare':return
     if stage in ('pair','full'):
+        cadence=json.loads((root/'config.json').read_text()).get('cadence',12)
         args=[str(d.APP/'work/rife-session/.venv/bin/python'),str(d.APP/'interpolate.py'),str(source),
             str(target/('pair' if stage=='pair' else 'rife')),'--source-frames',str(len(files)),
-            '--source-fps','2','--multiplier','12']
+            '--source-fps',str(24//cadence),'--multiplier',str(cadence)]
         args+=['--pair-only'] if stage=='pair' else ['--validated-pair',str(target/'pair/manifest.json')]
         subprocess.run(args,check=True)
         return

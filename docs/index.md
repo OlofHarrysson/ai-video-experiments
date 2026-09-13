@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Repaint frequency and noise](../apps/deforum/projects/modern-model-study/experiments/refresh-rate.md): CFG1, two/four paintings per second, fixed timed prompts/motion, and a lower-noise comparison.
+
 - [Krea CFG audition](../apps/deforum/projects/modern-model-study/experiments/cfg-audition.md): four matched recurrent videos; stronger guidance adds detail and larger repaint changes. All four are available in the local reviewer.
 
 - [Intermediate scene descriptions](../apps/deforum/projects/modern-model-study/experiments/prompt-bridges.md): staged descriptive prompts versus a direct city prompt, with identical noise and motion.
