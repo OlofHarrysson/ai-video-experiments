@@ -2,7 +2,7 @@
 
 Research checked 2026-09-13 against official Krea source/cards, ComfyUI commit `12d5279438bfefc058a269eae805ceab6047777f`, and current project code/notes. This note records source inspection and theoretical recommendations. The separate [transition-ramp experiment](../../apps/deforum/projects/modern-model-study/experiments/transition-ramps.md) records execution and visual evidence.
 
-**Keep ComfyUI CFG 1. Use the completed noise-ramp study to choose pacing, then test descriptive intermediate scene prompts.** External CFG is executable but outside the recommended Turbo recipe; it is not an established way to make these transitions gradual. Manual sigmas already specify our sampling times, so changing a schedule-shift setting alone would not change this runner's numerical path.
+**Keep ComfyUI CFG 1. Treat noise ramps and descriptive prompt stages as independent creative controls.** The first [prompt-bridge comparison](../../apps/deforum/projects/modern-model-study/experiments/prompt-bridges.md) creates a clearer hybrid form but does not clearly resolve the dominant repaint jump. External CFG is executable but outside the recommended Turbo recipe; it is not an established way to make these transitions gradual. Manual sigmas already specify our sampling times, so changing a schedule-shift setting alone would not change this runner's numerical path.
 
 ## Exact recipe and scope
 
@@ -60,7 +60,7 @@ PYoCo provides primary evidence for correlated noise in a video model that was t
 | Priority | Candidate | Useful question and limit |
 | --- | --- | --- |
 | 1 — completed first sweep | Ramp start, peak, count and shape; settling level remains untested | Can recognizable intermediate forms appear without the first repaint replacing the scene? Hold prompts, seeds, motion, intervals and cadence fixed. |
-| 2 | A few frozen descriptive bridge prompts | Can the whole environment change while preserving material depth? Compare with the same selected ramp; do not simultaneously change CFG. |
+| 2 — first probe completed | A few frozen descriptive bridge prompts | The matched shell-to-city test adds a legible hybrid around 2–2.5s, but retains the major structural jump. Keep direct text as the control; further scene-specific stages remain possible. |
 | 3 | Prompt-conditioning blend | Potential continuous destination control. Requires endpoint/shape checks and a short visual probe; a 50% embedding blend is not a promise of a 50% transformed scene. |
 | 4 | Small external-CFG audition near 1, if needed | Could target recognition improve at fixed noise? Explicitly define zeroed versus encoded-empty negative; account for the extra branch. Turbo guidance-free remains the control. |
 | 5 | Internal sigma spacing / interval count | Might change reconstruction quality; prior extra-step tests did not recover depth. Compare fixed start/end, not different native tails with different starting noise. |

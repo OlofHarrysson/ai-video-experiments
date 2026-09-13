@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-13 — intermediate scene descriptions approved:** Olof accepts the staged-description comparison and describes it as a kind of prompt interpolation. This supports his interest in steering meaningful intermediate imagery; it does not establish familiarity with embedding blending or a preference among the new results. See [prompt bridges](../apps/deforum/projects/modern-model-study/experiments/prompt-bridges.md).
+
 - **2026-09-13 — shape the transition over several paintings:** Olof requests lower starting noise, different start/end values, number of diffusion paintings and the curve of the rise and return. He also asks about CFG and other ways to make transformations more gradual. He associates CFG with denoising strength but explicitly expresses uncertainty; the distinction between prompt amplification and initial image/noise mixing is being explained, not assumed understood. The [six completed ramp tests](../apps/deforum/projects/modern-model-study/experiments/transition-ramps.md) and [CFG research](research/krea-transition-controls.md) address this. His preference among these new clips remains unconfirmed.
 
 - **2026-09-12 — changing-world film is close to the target:** Olof says the 24-second [dynamic journey](../apps/deforum/projects/modern-model-study/experiments/dynamic-journey.md) looks “really good” and is close to what he was going for. Keep it as a liked reference for the combined movement and evolving scenes. This does not isolate which parameter caused his preference. He requests the other attempts and an explanation of gradually increasing repaint strength; do not infer understanding of that schedule yet.

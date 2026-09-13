@@ -42,6 +42,9 @@ def recipe(config, seconds):
         noise = ramp[repaint] if 0 <= repaint < len(ramp) else config['settle_noise']
     else:
         noise = config['transition_noise'] if age <= 1.5 else config['settle_noise']
+    # Optional text events have their own clock; they do not restart the noise ramp.
+    if 'prompt_schedule' in config:
+        scene = [s for s in config['prompt_schedule'] if s['at'] <= seconds][-1]
     return scene, [s*noise/.6 for s in base.SIGMAS]
 
 
