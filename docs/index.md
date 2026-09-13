@@ -1,6 +1,6 @@
 # Documentation
 
-- [Linked media reviewer](../apps/deforum/media_review/README.md): reusable in-chat and full-quality comparisons with synchronized controls and painting/frame stepping.
+- [Linked media reviewer](../apps/deforum/media_review/README.md): local browser comparisons that fit all frames on screen, with shared controls and painting/frame stepping.
 
 This directory contains the durable notes behind the experiments in this repository.
 

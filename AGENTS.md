@@ -62,7 +62,7 @@ AI Video Experiments is a public notebook and workspace for controllable AI anim
 
 ## Working conventions
 
-- Use the [linked media reviewer](apps/deforum/media_review/README.md) for human frame-by-frame comparisons: saved sessions generate a reusable in-chat review plus a full-quality standalone page. Default to two clips, allow up to three, preserve actual timing and verified painting labels, and identify compressed previews. Browser interaction QA for its first implementation remains pending; see its validation note.
+- Use the [linked media reviewer](apps/deforum/media_review/README.md) in a dedicated local browser window for human comparisons. Olof primarily uses a 14-inch MacBook; keep all selected frames and shared controls visible together, side by side at laptop widths, without scrolling. Default to two clips, allow up to three, preserve actual timing and verified painting labels. Use Devrun service `media-review`; obtain its current URL from Devrun. Compact in-chat previews remain optional. The localhost layout and main controls have been browser-checked; see its validation note for scope.
 
 - Keep the authorized 50 GB standard `deforum-models` network volume in EU-RO-1 between sessions ($3.50/month). Use [the Pod workflow](apps/deforum/POD.md): existing model cache and ComfyUI runtime are reused; delete completed owned Pods, not this retained volume. Check GPU capacity before allocation and preserve explicit warm-Pod handoffs between experiments.
 

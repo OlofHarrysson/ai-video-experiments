@@ -1,6 +1,6 @@
 # Local video review
 
-For interactive human review, use the [linked media reviewer](../apps/deforum/media_review/README.md): one to three stacked videos, shared scrubbing/playback, frame stepping and verified painting stepping. A saved session builds both a compact in-chat comparison and a standalone page embedding original videos. The extraction workflow below remains the assistant’s frame-inspection path.
+For interactive human review, use the [linked media reviewer](../apps/deforum/media_review/README.md): one to three videos visible together in a dedicated local browser, shared scrubbing/playback, frame stepping and verified painting stepping. A saved session builds the full-quality reviewer, with an optional compact in-chat version. The extraction workflow below remains the assistant’s frame-inspection path.
 
 Use `apps/deforum/video_review.py` to inspect the beginning, development and ending of a video, then every frame in selected intervals. It saves full-size decoded PNGs, small contact-sheet pages, and `review.json` with timestamps, frame numbers, selection reasons and hashes. Matching shots can be compared at the same elapsed time. It makes no network requests and uses local `ffmpeg`, `ffprobe` and Pillow. Follow the [review and feedback agreement](review-and-feedback.md) when selecting what to show Olof.
 

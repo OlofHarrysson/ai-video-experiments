@@ -50,7 +50,7 @@ def check_inline_size(text):
         raise ValueError('Inline review exceeds 1 MB. Choose fewer/shorter clips or a smaller --width; full-quality sources are unchanged.')
 
 
-def build(session, output, inline, width=480, crf=30):
+def build(session, output, inline=None, width=480, crf=30):
     data = json.loads(session.read_text())
     selected = validate_session(data)
     output.mkdir(parents=True, exist_ok=True)
@@ -71,62 +71,69 @@ def build(session, output, inline, width=480, crf=30):
             raise ValueError('Missing or invalid video duration')
         if abs(rows[0]['pts_seconds']) > 1e-6:
             raise ValueError('Review sources must start at timestamp zero; normalize a separate copy first')
-        target = cache / f'{digest}-{width}-crf{crf}.mp4'
-        if not target.exists():
-            partial = target.with_suffix('.partial.mp4')
-            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(source), '-map', '0:v:0', '-an',
-                            '-vf', f'scale={width}:-2,setpts=PTS-STARTPTS', '-c:v', 'libx264',
-                            '-crf', str(crf), '-preset', 'medium', '-pix_fmt', 'yuv420p',
-                            '-fps_mode', 'passthrough', '-enc_time_base', info['stream']['time_base'],
-                            '-movflags', '+faststart', str(partial)], check=True)
-            same_timeline(info, probe(partial))
-            partial.replace(target)
-        preview_info = probe(target)
-        same_timeline(info, preview_info)
-        if abs(float(preview_info['stream']['duration']) - duration) > 1e-5:
-            raise ValueError('Preview changed duration')
-        subprocess.run(['ffmpeg', '-v', 'error', '-xerror', '-i', str(target), '-f', 'null', '-'], check=True, capture_output=True)
+        target = None
+        preview_info = None
+        if inline is not None:
+            target = cache / f'{digest}-{width}-crf{crf}.mp4'
+            if not target.exists():
+                partial = target.with_suffix('.partial.mp4')
+                subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(source), '-map', '0:v:0', '-an',
+                                '-vf', f'scale={width}:-2,setpts=PTS-STARTPTS', '-c:v', 'libx264',
+                                '-crf', str(crf), '-preset', 'medium', '-pix_fmt', 'yuv420p',
+                                '-fps_mode', 'passthrough', '-enc_time_base', info['stream']['time_base'],
+                                '-movflags', '+faststart', str(partial)], check=True)
+                same_timeline(info, probe(partial))
+                partial.replace(target)
+            preview_info = probe(target)
+            same_timeline(info, preview_info)
+            if abs(float(preview_info['stream']['duration']) - duration) > 1e-5:
+                raise ValueError('Preview changed duration')
+            subprocess.run(['ffmpeg', '-v', 'error', '-xerror', '-i', str(target), '-f', 'null', '-'], check=True, capture_output=True)
         clip = {k: item[k] for k in ('id', 'label', 'note')}
         clip.update(times=times, duration=duration,
                     roles=[row.get('provenance') for row in rows],
                     anchors=[i for i, row in enumerate(rows) if row.get('provenance', {}).get('kind') == 'anchor'])
-        compact.append({**clip, 'src': data_uri(target)})
+        if target is not None:
+            compact.append({**clip, 'src': data_uri(target)})
         originals.append({**clip, 'src': data_uri(source)})
         if sha256(source) != digest:
             raise ValueError('Source changed during review build')
         receipts.append({'id': item['id'], 'source': str(source), 'source_sha256': digest,
                          'frame_count': len(times), 'duration': duration, 'paintings': len(clip['anchors']),
                          'dimensions': [info['stream']['width'], info['stream']['height']],
-                         'provenance': provenance, 'preview': str(target), 'preview_sha256': sha256(target),
-                         'preview_bytes': target.stat().st_size, 'preview_dimensions': [preview_info['stream']['width'], preview_info['stream']['height']]})
+                         'provenance': provenance, 'preview': str(target) if target else None, 'preview_sha256': sha256(target) if target else None,
+                         'preview_bytes': target.stat().st_size if target else None, 'preview_dimensions': [preview_info['stream']['width'], preview_info['stream']['height']] if preview_info else None})
     common = {'title': data['title'], 'selected': selected}
-    small = fragment({**common, 'clips': compact, 'quality': f'{width}px compressed previews · same frames and timing'})
-    check_inline_size(small)
+    small = None
+    if inline is not None:
+        small = fragment({**common, 'clips': compact, 'quality': f'{width}px compressed previews · same frames and timing'})
+        check_inline_size(small)
     full = fragment({**common, 'clips': originals, 'quality': 'Original video files · full resolution'})
     # Standalone document is separate from the size-limited conversation fragment.
     page = ASSETS.joinpath('standalone.html').read_text().replace('__TITLE__', html.escape(data['title'])).replace('__FRAGMENT__', full)
     full_path = output / 'full-quality.html'
     full_path.write_text(page)
-    inline.parent.mkdir(parents=True, exist_ok=True)
-    inline.write_text(small)
+    if inline is not None:
+        inline.parent.mkdir(parents=True, exist_ok=True)
+        inline.write_text(small)
     receipt = {'session': str(session.resolve()), 'session_sha256': sha256(session), 'clips': receipts,
-               'inline': str(inline), 'inline_bytes': len(small.encode()), 'inline_sha256': sha256(inline),
+               'inline': str(inline) if inline else None, 'inline_bytes': len(small.encode()) if small else None, 'inline_sha256': sha256(inline) if inline else None,
                'full_quality': str(full_path), 'full_quality_sha256': sha256(full_path)}
     (output / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
-    return {'inline': str(inline), 'inline_bytes': len(small.encode()), 'full_quality': str(full_path)}
+    return {'inline': str(inline) if inline else None, 'inline_bytes': len(small.encode()) if small else None, 'full_quality': str(full_path)}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('session', type=Path)
     parser.add_argument('--output', required=True, type=Path)
-    parser.add_argument('--inline', required=True, type=Path)
+    parser.add_argument('--inline', type=Path, help='Optional compact in-chat fragment')
     parser.add_argument('--width', type=int, default=480)
     parser.add_argument('--crf', type=int, default=30)
     args = parser.parse_args()
     if args.width < 128 or args.width % 2 or not 0 <= args.crf <= 51:
         parser.error('Use an even width >=128 and CRF between 0 and 51')
-    print(json.dumps(build(args.session, args.output.resolve(), args.inline.resolve(), args.width, args.crf), indent=2))
+    print(json.dumps(build(args.session, args.output.resolve(), args.inline.resolve() if args.inline else None, args.width, args.crf), indent=2))
 
 
 if __name__ == '__main__':

@@ -284,3 +284,7 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 
 
 **All frames clarified (explicit):** Olof means every diffusion painting; keeping every intermediate RIFE frame is unnecessary. He approves faster spatial movement and faster morphing at 24 fps. The selected approach is twice-speed motion with half-second repaint spacing and correspondingly shorter prompt/motion phases. The existing seven-second cut already preserves all fourteen paintings. This resolves the scope ambiguity; it does not establish a final visual-quality verdict.
+
+## Review screen preference — 2026-09-13
+
+Olof says he primarily uses a 14-inch MacBook. The stacked in-chat/full-quality reviewer did not let him see both frames simultaneously. He requests a local browser review surface with more usable space. Treat simultaneous visibility of the compared frames as a requirement; this is explicit interface feedback, not evidence about his understanding of the animation process.

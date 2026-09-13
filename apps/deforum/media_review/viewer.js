@@ -118,7 +118,7 @@
       slots.forEach(slot => { slot.video.playbackRate = speed; });
       await Promise.all(slots.filter(slot => master().times[cursor] < slot.clip.duration).map(slot => slot.video.play()));
       if (epoch !== generation || !playing) return;
-      find('[data-status]').textContent = 'Playing · linked to the top video';
+      find('[data-status]').textContent = 'Playing · linked to the first video';
       raf = requestAnimationFrame(tick);
     } catch (error) { if (epoch === generation) fail(error); }
   }
