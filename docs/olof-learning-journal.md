@@ -288,3 +288,7 @@ The [filmmaking research guide](research/filmmaking-for-ai-animation.md) remains
 ## Review screen preference — 2026-09-13
 
 Olof says he primarily uses a 14-inch MacBook. The stacked in-chat/full-quality reviewer did not let him see both frames simultaneously. He requests a local browser review surface with more usable space. Treat simultaneous visibility of the compared frames as a requirement; this is explicit interface feedback, not evidence about his understanding of the animation process.
+
+## Intermediate prompts and CFG question — 2026-09-13
+
+Explicit feedback: intermediate scene descriptions look interesting to Olof, with a few more changes visible early in the clip. He treats their usefulness as promising but unproven, not a selected winner. He asks whether CFG outside the recommended value is ignored or merely risks worse results, and permits answering from evidence without new renders. Do not infer that he already understands the Krea CLI versus ComfyUI guidance convention.

@@ -1,6 +1,6 @@
 # Intermediate descriptions for a changing scene
 
-Status: completed 2026-09-13. Both videos and all generated artifacts are verified locally; human playback preference is pending. Olof accepts a test of intermediate scene descriptions and describes it as a kind of prompt interpolation. This study uses discrete descriptive stages, not embedding blending.
+Status: completed 2026-09-13. Both videos and all generated artifacts are verified locally; Olof’s initial feedback is promising but inconclusive (see below). Olof accepts a test of intermediate scene descriptions and describes it as a kind of prompt interpolation. This study uses discrete descriptive stages, not embedding blending.
 
 Compare two 6.5-second continuations from the same saved brass snail painting. Both use the [higher-peak noise curve](transition-ramps.md): 0.40 → 0.78 across six paintings, then a smooth three-painting return to 0.64. Preserve the same Krea model, seeds, three Euler sampling intervals, CFG 1, half-second repaints, bounded Lanczos motion, 24 fps and RIFE 4.25 scale 1. The final half-second holds the native last painting after spatial motion settles.
 
@@ -47,3 +47,7 @@ Both videos fully decode at **1536×1024, 24 fps, 156 frames, 6.5 seconds**. Eac
 The retained EU cache supplied all three verified Krea assets with no downloads. ComfyUI remained pinned at `12d5279438bfefc058a269eae805ceab6047777f` (0.34.0). Both cases ran on one RTX 4090; the fresh direct control avoids comparing the treatment against an earlier GPU execution alone. Rendering and automatic archival completed in about 210 seconds after runtime readiness.
 
 After local verification, 48 owned remote input/output files and the experiment scratch directory were removed. The owned Pod was deleted, an empty Pod list confirmed, and the authorized 50 GB model volume retained. Approximately 7m49s at $0.74/hour gives **$0.0964 estimated compute**; with a conservative $0.03 disk allowance, **about $0.13** for this round. Billing was unposted at cleanup. Tracked session spending including the earlier startup allowance is about $1.98 within the original $10 budget; retained-volume ongoing storage is separate.
+
+## Human feedback — 2026-09-13
+
+Olof finds the intermediate prompt descriptions very interesting and notices a few more changes early in the video. He considers this promising, while explicitly saying the value and size of the improvement are not proven. No definitive winner or general improvement is established. He next asks to check whether non-default CFG values have an effect; see the source-verification follow-up in [Krea transition controls](../../../../../docs/research/krea-transition-controls.md).

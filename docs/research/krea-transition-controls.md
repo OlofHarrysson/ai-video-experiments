@@ -67,3 +67,15 @@ PYoCo provides primary evidence for correlated noise in a video model that was t
 | Later | Correlated noise | Test only if random repaint variation is the remaining problem. Preserve innovation/noise tensors for reproducibility; do not infer correlation from neighboring seed numbers. |
 
 Compare branches from the exact same saved painting and timestamp. Evaluate painting-level target recognition, intermediate forms, material depth and framing first, then identical RIFE playback for jumps/softness. More prompt compliance with flattened surfaces is not automatically a win. Keep the same model, VAE, recurrent initialization, half-second cadence and finishing while answering one control question at a time.
+
+## CFG verification follow-up — 2026-09-13
+
+Olof asks whether CFG outside the recommended 0/1 is ignored, or can affect results and potentially be useful. Rechecked the pinned ComfyUI `cfg_function`/`sampling_function`, official Krea sampler and current Turbo model card linked above, together with local `modern_workflows.py` and `ten_dollar.repaint_graph`. This is source verification, not new model inference; no GPU was provisioned.
+
+- **Mechanism settled:** ordinary ComfyUI CFG is active in this graph. At 1 it uses the positive prediction and skips the negative evaluation. Above 1 it extrapolates away from the negative prediction; below 1 it mixes toward it. ComfyUI 0 takes that negative prediction, not an unchanged image. The initialized previous-image latent remains part of the recurrence at every CFG value.
+- **Convention settled:** Krea's CLI 0 is positive-only, corresponding to ComfyUI 1 as a guidance convention. The reference code uses `guidance > 0` to enable its extra branch; do not assume its handling of negative CLI values is the same as ComfyUI's scalar formula.
+- **Recipe recommendation, not execution prohibition:** official Turbo examples use eight steps and no extra CFG. Source code does not establish that every alternative value produces bad art, or that a modest deviation cannot help this partial-noise recurrent workflow. Neither does the generic CFG formula establish better prompt adherence or smoother morphs for Turbo.
+- **History:** searches of the modern-model experiment notes, runners and saved workflow templates found CFG fixed at 1 and no recorded Krea CFG sweep. Earlier SDXL parameter work is not a Krea audition.
+- **Quality remains open:** overshoot, stronger redraws or amplified artifacts are plausible concerns, not observed results from a new test. Off-1 guidance requires the additional prediction branch. Our current `ConditioningZeroOut` reference differs from an encoded empty prompt; freeze that choice when varying CFG, and do not confuse zero conditioning with a zero-valued model prediction.
+
+If choosing a visual follow-up, use a small matched 0.8/1.0/1.3/1.6 audition from the same saved painting, with identical prompt stages, seeds, noise schedule and motion. Review a few recurrent paintings before extending clips. These are suggested probe values, not selected settings or completed experiments. The current CFG1 baseline remains unchanged.
