@@ -115,6 +115,8 @@ Targeted research, not a comprehensive method ranking:
 
 ## Proposed next experiment
 
+**Completed diagnostic follow-up:** Olof subsequently approved this probe in the saved-state fork. The [results](../../apps/deforum/projects/modern-model-study/experiments/state-replay.md) verify pixel-identical replay and 22 fixed-source perturbation samples. Assistant inspection finds restrained detail changes with preserved composition and palette; no human verdict yet. This completes steps 1–2 below. Steps 3–4 remain unimplemented: the result does not establish recurrent preservation, warped-state recovery or inversion. The earlier discussion and alternative directions below are retained as context.
+
 Status after Olof's follow-up: keep this replay proposal available while comparing simpler options below. Olof prefers to defer mathematical inversion unless its value justifies the complexity. No experiment is selected or started by this discussion.
 
 The earlier proposal is a **single-painting replay and perturbation test**. We already know a sampling state that produced one of the recorded city paintings. That gives a cheaper controlled starting point for Olof's idea than building an inverter.

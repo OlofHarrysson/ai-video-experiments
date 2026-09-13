@@ -12,6 +12,8 @@ Devrun service `media-review` runs `uv run python media_review_server.py` from `
 
 The full-quality local version has no 1 MB chat limit and does not need preview transcoding. The inline version remains optional for compact demonstrations, not the default close-comparison surface.
 
+The allowlisted `/state-replay` route serves the separately built `media-review-state-replay-v001/full-quality.html`. It leaves the default session available for concurrent experiment reviews. Rebuild that output from `sessions/state-replay.json` when its data changes; missing named outputs return 404.
+
 ## Build a review
 
 From `apps/deforum/`:
@@ -36,6 +38,7 @@ Present the inline file with the visualization content reference, alongside a no
 - Left/right arrows step frames and Shift + left/right steps paintings across the page when no interactive control is focused. Space toggles playback. Focused buttons, links, sliders, dropdowns and editable fields retain their own keyboard behavior; click the artwork or page background to return to review shortcuts. Alt/Ctrl/Command combinations are left to the browser.
 - The ⓘ button beside a brief description shows optional generation details on hover or keyboard focus. Click to pin it, then click again, elsewhere or press Escape to dismiss. Details include the important prompt stages, recipe and comparison caveats; they do not expand the permanent layout.
 - Frame and painting indices are zero-based. A painting is an archived anchor in the export, an in-between is a synthesized intermediate frame, and a final hold follows the last anchor.
+- Diagnostic sample sequences can certify ordinary `hold` frames as well. These repeat a generated painting and are excluded from painting-step navigation; they are not interpolation frames.
 
 The first version accepts zero-start MP4s. It deliberately rejects nonzero start timestamps rather than giving uncertain seek labels. Source files are read-only; the full-quality page embeds their original bytes. The receipt records source and preview hashes, frame counts, dimensions and provenance verification.
 

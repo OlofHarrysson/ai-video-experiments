@@ -9,6 +9,9 @@ from media_review import APP, build
 SESSION = APP / 'media_review/sessions/correlated-noise.json'
 OUTPUT = APP / 'projects/modern-model-study/exports/media-review-v002'
 DEFAULT_PORT = 3000
+NAMED_REVIEWS = {
+    '/state-replay': APP / 'projects/modern-model-study/exports/media-review-state-replay-v001/full-quality.html',
+}
 
 
 class ReviewHandler(BaseHTTPRequestHandler):
@@ -19,10 +22,12 @@ class ReviewHandler(BaseHTTPRequestHandler):
         self.respond()
 
     def respond(self, head=False):
-        if urlsplit(self.path).path not in ('/', '/full-quality.html'):
+        route = urlsplit(self.path).path
+        path = self.server.review_path if route in ('/', '/full-quality.html') else NAMED_REVIEWS.get(route)
+        if path is None or not path.is_file():
             self.send_error(404)
             return
-        content = self.server.review_path.read_bytes()
+        content = path.read_bytes()
         self.send_response(200)
         self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.send_header('Content-Length', str(len(content)))

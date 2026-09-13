@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Saved-state replay and small perturbations](../apps/deforum/projects/modern-model-study/experiments/state-replay.md): exact reconstruction of one Krea painting, then nearby fixed-source samples with preserved architecture. Diagnostic only; recurrent transfer remains untested. Includes a separate local review view.
+
 - [Noise and latent continuity](research/noise-and-latent-continuity.md): actual tensor shape and three-step sampling, existing feedback, noise constraints, latent interpolation, saved-state replay and inversion proposals.
 
 - [Correlated-noise test](../apps/deforum/projects/modern-model-study/experiments/correlated-noise.md): same-strength noise with gradually changing patterns; Olof likes its mosaic colors as a possible future effect, while it misses preservation. Includes actual noise diagnostics and matched videos.

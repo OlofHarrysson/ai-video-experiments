@@ -1,0 +1,27 @@
+{
+  "title": "Small changes around one saved painting",
+  "selected": ["wider", "detail"],
+  "clips": [
+    {
+      "id": "wider",
+      "label": "Full scene",
+      "note": "Known painting → small latent changes · 0–0.24",
+      "details": "A diagnostic sweep around one recorded city painting. The zero-change replay matches the archived painting pixel-for-pixel. The same prompt and encoded source are used for all thirteen samples. Only the initial noise changes, gradually along one fixed direction.\n\nWatch the rooftops, windows and turquoise surface markings. The palette and major architecture remain close to the starting image; the changes are deliberately subtle.\n\nKrea Turbo, CFG 1, Euler, three sampling intervals starting at 0.6. Perturbation amount advances 0.00, 0.02, …, 0.24. This amount is not the starting-noise level or a percentage of changed pixels.\n\nThirteen generated samples shown for 0.25 seconds each: 3.25 seconds, 24 fps. No RIFE or spatial warp. Held frames repeat the same generated pixels. Shift + arrow jumps between samples.\n\nThis diagnoses local sensitivity around one saved state. It does not yet test a recurrent movie with changing previous paintings, movement or prompts.",
+      "source": "projects/modern-model-study/exports/state-replay-v001/wider/preview.mp4"
+    },
+    {
+      "id": "detail",
+      "label": "Roof detail",
+      "note": "Enlarged crop of the same samples · no extra generation",
+      "details": "The same 0–0.24 sweep as Full scene, cropped to the lower-right roofs at their original resolution. Both views are synchronized. Look for changes in roof outlines, small windows and turquoise markings while overall shading stays close.\n\nThis is a crop, not a separate experiment or a sharpened/upscaled result. Thirteen generated samples, six displayed frames per sample, no RIFE.\n\nThe fixed source and fixed prompt make this a controlled diagnostic. Recurrent animation behavior remains untested.",
+      "source": "projects/modern-model-study/exports/state-replay-v001/wider/detail/preview.mp4"
+    },
+    {
+      "id": "small",
+      "label": "Smaller changes",
+      "note": "Same direction · one-quarter of the range · 0–0.06",
+      "details": "A gentler version of the same diagnostic: 0.000, 0.005, …, 0.060. The source latent, prompt, model and sampling schedule are identical to Full scene. Both paths start from the exact same painting and use the same perturbation direction.\n\nChanges are particularly subtle in this range. This is preserved as the narrower control rather than presented as a more interesting film.\n\nThirteen generated samples over 3.25 seconds at 24 fps; no RIFE, warp or recurrent image feedback. Shift + arrow steps through generated samples.",
+      "source": "projects/modern-model-study/exports/state-replay-v001/small/preview.mp4"
+    }
+  ]
+}
