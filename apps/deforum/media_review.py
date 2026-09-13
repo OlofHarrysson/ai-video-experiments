@@ -90,7 +90,7 @@ def build(session, output, inline=None, width=480, crf=30):
                 raise ValueError('Preview changed duration')
             subprocess.run(['ffmpeg', '-v', 'error', '-xerror', '-i', str(target), '-f', 'null', '-'], check=True, capture_output=True)
         clip = {k: item[k] for k in ('id', 'label', 'note')}
-        clip.update(times=times, duration=duration,
+        clip.update(details=item.get('details', ''), times=times, duration=duration,
                     roles=[row.get('provenance') for row in rows],
                     anchors=[i for i, row in enumerate(rows) if row.get('provenance', {}).get('kind') == 'anchor'])
         if target is not None:

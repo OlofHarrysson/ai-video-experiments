@@ -1,24 +1,30 @@
 {
   "title": "Prompt transition review",
-  "selected": ["bridges", "direct"],
+  "selected": [
+    "bridges",
+    "direct"
+  ],
   "clips": [
     {
       "id": "bridges",
       "label": "Intermediate descriptions",
       "note": "Shell with buildings → hollow shell → city · peak noise 0.78",
-      "source": "projects/modern-model-study/exports/prompt-bridges-v001/bridges/section-013/rife/preview.mp4"
+      "source": "projects/modern-model-study/exports/prompt-bridges-v001/bridges/section-013/rife/preview.mp4",
+      "details": "Intermediate descriptions\n\n0.5–1s: shell inhabited by buildings. 1.5–2s: hollow spiral pavilion. From 2.5s: the same canyon-city description as the direct version.\n\nStarting noise rises from 0.40 to 0.78 across six paintings, then returns smoothly to 0.64 across three. Same opening, seeds and RTX 4090 runtime as the direct comparison.\n\nKrea recurrent animation: each painting starts from the warped previous painting. Three Euler sampling intervals, CFG 1, bounded Lanczos motion. New paintings every 0.5 seconds; RIFE 4.25 creates the frames between them. 6.5 seconds at 24 fps, with 13 paintings."
     },
     {
       "id": "direct",
       "label": "Direct city prompt",
       "note": "City description throughout · peak noise 0.78",
-      "source": "projects/modern-model-study/exports/prompt-bridges-v001/direct/section-013/rife/preview.mp4"
+      "source": "projects/modern-model-study/exports/prompt-bridges-v001/direct/section-013/rife/preview.mp4",
+      "details": "Direct city prompt\n\nThe canyon-city description is used from the first repaint onward. This is the matched control for the intermediate-description experiment.\n\nStarting noise rises from 0.40 to 0.78 across six paintings, then returns smoothly to 0.64 across three. Same opening, seeds and RTX 4090 runtime as the staged comparison.\n\nKrea recurrent animation: each painting starts from the warped previous painting. Three Euler sampling intervals, CFG 1, bounded Lanczos motion. New paintings every 0.5 seconds; RIFE 4.25 creates the frames between them. 6.5 seconds at 24 fps, with 13 paintings."
     },
     {
       "id": "gentler",
       "label": "Earlier experiment · gentler noise",
       "note": "Earlier A100 run · direct city prompt · peak noise 0.70",
-      "source": "projects/modern-model-study/exports/transition-ramps-v001/soft-return/section-013/rife/preview.mp4"
+      "source": "projects/modern-model-study/exports/transition-ramps-v001/soft-return/section-013/rife/preview.mp4",
+      "details": "Earlier, gentler-noise experiment\n\nDirect canyon-city description with starting noise rising from 0.40 to 0.70, then returning to 0.64.\n\nThis is an earlier A100 run, so differences from the other two videos cannot be attributed only to noise. Use it as a visual reference, not a matched control.\n\nKrea recurrent animation: each painting starts from the warped previous painting. Three Euler sampling intervals, CFG 1, bounded Lanczos motion. New paintings every 0.5 seconds; RIFE 4.25 creates the frames between them. 6.5 seconds at 24 fps, with 13 paintings."
     }
   ]
 }

@@ -160,7 +160,39 @@
       const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'btn btn-ghost';
       remove.textContent = 'Remove'; remove.disabled = selected.length === 1; remove.setAttribute('aria-label', `Remove video ${index + 1}`);
       heading.append(remove); panel.append(heading);
-      const caption = document.createElement('div'); caption.className = 'text-small'; caption.textContent = clip.note; panel.append(caption);
+      const caption = document.createElement('div'); caption.className = 'review-caption text-small';
+      const brief = document.createElement('span'); brief.textContent = clip.note; caption.append(brief);
+      if (clip.details) {
+        const info = document.createElement('button'); info.type = 'button'; info.className = 'btn review-info';
+        info.textContent = 'ⓘ'; info.setAttribute('aria-label', `Generation details for video ${index + 1}`);
+        const details = document.createElement('div'); details.className = 'review-details';
+        details.id = `review-details-${epoch}-${index}`; details.setAttribute('popover', 'auto');
+        details.setAttribute('role', 'tooltip'); details.textContent = clip.details;
+        info.setAttribute('aria-describedby', details.id);
+        info.setAttribute('aria-expanded', 'false');
+        let pinned = false, hideTimer;
+        const hide = () => { if (!pinned && details.isConnected) details.hidePopover(); };
+        const show = () => {
+          clearTimeout(hideTimer);
+          details.showPopover();
+          const rect = info.getBoundingClientRect(), box = details.getBoundingClientRect();
+          details.style.left = `${Math.max(12, Math.min(rect.left, innerWidth - box.width - 12))}px`;
+          details.style.top = `${Math.max(12, Math.min(rect.bottom + 8, innerHeight - box.height - 12))}px`;
+        };
+        info.addEventListener('pointerenter', show);
+        info.addEventListener('pointerleave', () => { hideTimer = setTimeout(hide, 150); });
+        info.addEventListener('focus', show);
+        info.addEventListener('blur', () => { pinned = false; hide(); });
+        info.addEventListener('click', () => { pinned = !pinned; if (pinned) show(); else hide(); });
+        details.addEventListener('pointerenter', () => clearTimeout(hideTimer));
+        details.addEventListener('pointerleave', () => { hideTimer = setTimeout(hide, 150); });
+        details.addEventListener('toggle', event => {
+          info.setAttribute('aria-expanded', String(event.newState === 'open'));
+          if (event.newState === 'closed') pinned = false;
+        });
+        caption.append(info, details);
+      }
+      panel.append(caption);
       const video = document.createElement('video'); video.muted = true; video.playsInline = true; video.preload = 'auto';
       video.setAttribute('aria-label', clip.label); video.src = clip.src; panel.append(video);
       const meta = document.createElement('div'); meta.className = 'review-meta text-small tabular-nums';
@@ -202,8 +234,9 @@
       if (next && selected.length < 3) { const at = master().times[cursor]; selected.push(next.id); rebuild(at).catch(fail); }
     }
   });
-  root.addEventListener('keydown', event => {
-    if (event.target.matches('input, select, textarea') || !ready) return;
+  document.addEventListener('keydown', event => {
+    if (!ready || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey ||
+        event.target.closest('input, select, textarea, button, a, [contenteditable]:not([contenteditable="false"]), [role="slider"], [role="textbox"]')) return;
     if (event.code === 'Space') { event.preventDefault(); togglePlay(); }
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault(); const direction = event.key === 'ArrowRight' ? 1 : -1;
