@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Krea CFG audition](../apps/deforum/projects/modern-model-study/experiments/cfg-audition.md): four matched recurrent videos; stronger guidance adds detail and larger repaint changes. All four are available in the local reviewer.
+
 - [Intermediate scene descriptions](../apps/deforum/projects/modern-model-study/experiments/prompt-bridges.md): staged descriptive prompts versus a direct city prompt, with identical noise and motion.
 - [Krea transition controls](research/krea-transition-controls.md): exact CFG conventions, latent/noise mixing, sigma schedules and candidate controls for gradual scene changes.
 - [Transition ramp experiment](../apps/deforum/projects/modern-model-study/experiments/transition-ramps.md): matched start, peak, painting-count and rise/return curves.

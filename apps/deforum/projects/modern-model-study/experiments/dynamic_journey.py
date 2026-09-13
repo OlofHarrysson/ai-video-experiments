@@ -74,6 +74,7 @@ def render(config, through):
         scene,sigmas=recipe(config,seconds)
         seed=config['seed']+f//CADENCE
         g=base.repaint_graph(scene['prompt'],seed,sigmas)
+        g['9']['inputs']['cfg'] = config.get('cfg', 1.)
         g['11']['inputs']['filename_prefix']='dynamic-journey/'+config['case']
         if receipt.exists():
             row=json.loads(receipt.read_text()); run=OUT/row['run']

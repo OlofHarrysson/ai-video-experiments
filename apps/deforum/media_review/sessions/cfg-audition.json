@@ -1,0 +1,37 @@
+{
+  "title": "Krea CFG audition",
+  "selected": [
+    "cfg-10",
+    "cfg-13"
+  ],
+  "clips": [
+    {
+      "id": "cfg-08",
+      "label": "CFG 0.8",
+      "note": "Broader, simpler surfaces \u00b7 CFG 0.8",
+      "details": "ComfyUI CFG 0.8\n\nSame brass-snail opening and intermediate descriptions: shell with buildings \u2192 hollow spiral pavilion \u2192 canyon city. CFG is the only changed sampling setting. The negative branch remains zeroed conditioning, not an encoded empty prompt.\n\nKrea Turbo, three Euler intervals, noise 0.40 \u2192 0.78 \u2192 0.64. Every painting starts from the warped previous painting. Bounded Lanczos motion, new painting every 0.5s, RIFE 4.25 between paintings.\n\n6.5 seconds at 24 fps; 13 paintings. All four variants rendered on the same RTX 4090 session.\n\nAssistant painting review: 1.3 and 1.6 open the shell into architecture earlier, with more detailed cities. Higher CFG also makes larger repaint changes. This is a single-scene comparison; smoother animation is not established. CFG 1.0 remains the default pending your review.",
+      "source": "projects/modern-model-study/exports/cfg-audition-v001/cfg-08/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "cfg-10",
+      "label": "CFG 1.0 \u00b7 baseline",
+      "note": "Current baseline \u00b7 CFG 1.0",
+      "details": "ComfyUI CFG 1.0\n\nSame brass-snail opening and intermediate descriptions: shell with buildings \u2192 hollow spiral pavilion \u2192 canyon city. CFG is the only changed sampling setting. The negative branch remains zeroed conditioning, not an encoded empty prompt.\n\nKrea Turbo, three Euler intervals, noise 0.40 \u2192 0.78 \u2192 0.64. Every painting starts from the warped previous painting. Bounded Lanczos motion, new painting every 0.5s, RIFE 4.25 between paintings.\n\n6.5 seconds at 24 fps; 13 paintings. All four variants rendered on the same RTX 4090 session.\n\nAssistant painting review: 1.3 and 1.6 open the shell into architecture earlier, with more detailed cities. Higher CFG also makes larger repaint changes. This is a single-scene comparison; smoother animation is not established. CFG 1.0 remains the default pending your review.",
+      "source": "projects/modern-model-study/exports/cfg-audition-v001/cfg-10/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "cfg-13",
+      "label": "CFG 1.3",
+      "note": "Earlier architectural detail \u00b7 CFG 1.3",
+      "details": "ComfyUI CFG 1.3\n\nSame brass-snail opening and intermediate descriptions: shell with buildings \u2192 hollow spiral pavilion \u2192 canyon city. CFG is the only changed sampling setting. The negative branch remains zeroed conditioning, not an encoded empty prompt.\n\nKrea Turbo, three Euler intervals, noise 0.40 \u2192 0.78 \u2192 0.64. Every painting starts from the warped previous painting. Bounded Lanczos motion, new painting every 0.5s, RIFE 4.25 between paintings.\n\n6.5 seconds at 24 fps; 13 paintings. All four variants rendered on the same RTX 4090 session.\n\nAssistant painting review: 1.3 and 1.6 open the shell into architecture earlier, with more detailed cities. Higher CFG also makes larger repaint changes. This is a single-scene comparison; smoother animation is not established. CFG 1.0 remains the default pending your review.",
+      "source": "projects/modern-model-study/exports/cfg-audition-v001/cfg-13/section-013/rife/preview.mp4"
+    },
+    {
+      "id": "cfg-16",
+      "label": "CFG 1.6",
+      "note": "Most intricate city \u00b7 larger repaint changes \u00b7 CFG 1.6",
+      "details": "ComfyUI CFG 1.6\n\nSame brass-snail opening and intermediate descriptions: shell with buildings \u2192 hollow spiral pavilion \u2192 canyon city. CFG is the only changed sampling setting. The negative branch remains zeroed conditioning, not an encoded empty prompt.\n\nKrea Turbo, three Euler intervals, noise 0.40 \u2192 0.78 \u2192 0.64. Every painting starts from the warped previous painting. Bounded Lanczos motion, new painting every 0.5s, RIFE 4.25 between paintings.\n\n6.5 seconds at 24 fps; 13 paintings. All four variants rendered on the same RTX 4090 session.\n\nAssistant painting review: 1.3 and 1.6 open the shell into architecture earlier, with more detailed cities. Higher CFG also makes larger repaint changes. This is a single-scene comparison; smoother animation is not established. CFG 1.0 remains the default pending your review.",
+      "source": "projects/modern-model-study/exports/cfg-audition-v001/cfg-16/section-013/rife/preview.mp4"
+    }
+  ]
+}

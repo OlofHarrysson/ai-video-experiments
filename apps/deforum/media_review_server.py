@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/prompt-bridges.json'
+SESSION = APP / 'media_review/sessions/cfg-audition.json'
 OUTPUT = APP / 'projects/modern-model-study/exports/media-review-v002'
 DEFAULT_PORT = 3000
 
