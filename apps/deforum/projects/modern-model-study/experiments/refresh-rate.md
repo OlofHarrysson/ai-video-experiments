@@ -1,6 +1,6 @@
 # More frequent, smaller repaints
 
-Status: complete 2026-09-13. All three videos are preserved, verified and available in the local reviewer; human playback preference is pending. Olof approves a frequency/noise comparison and prefers **CFG 1.0**, the official Turbo convention in ComfyUI, over adopting the experimental 1.3 candidate. Keep CFG1 for all three branches.
+Status: complete 2026-09-13. All three videos are preserved, verified and available in the local reviewer. Olof likes the higher refresh rate but finds its redesigns too chaotic; he has not selected an overall winner. Olof prefers **CFG 1.0**, the official Turbo convention in ComfyUI, over adopting the experimental 1.3 candidate. Keep CFG1 for all three branches.
 
 | Case | Repaints/second | Cadence at 24 fps | Noise ramp | Fresh paintings |
 | --- | ---: | ---: | --- | ---: |
@@ -23,6 +23,14 @@ Pre-render verification: all 15 legacy scene/ramp configurations retain identica
 The original-noise 4 Hz branch develops a wider central street/canyon view with bridges and copper-roofed buildings by 3.5–6s. The 2 Hz control retains a narrower avenue through the circular structure. The 15% lower-noise 4 Hz branch makes smaller changes but keeps a dominant solid shell/disk with a small central opening through the end; it does not achieve the same open-city conversion. This does not support the initial hypothesis that a blanket 15% reduction would be the best combination for this scene.
 
 Peak mean absolute difference between each painting and its warped input, in normalized RGB, occurs at 3s: 0.0917 for 2 Hz, 0.0894 for 4 Hz at original noise, and 0.0442 for 4 Hz at lower noise. These are change measurements, not smoothness/quality scores. More frequent calls alone did not halve the biggest per-repaint change. Lower noise reduced it, with weaker scene transformation. Additional repaints also introduce more VAE/warp cycles and random-noise samples; this is an end-to-end recurrent-frequency comparison, not an isolated integrator step-size test.
+
+## Human playback feedback and proposed follow-up — 2026-09-13
+
+Olof likes the higher frequency but wants fewer distracting changes to existing buildings, roofs, colors and dunes while their prompt remains unchanged. A little evolution is welcome; larger transformations should be intentional. He finds the lower-noise branch steadier and more respectful of existing structure, but less crisp and visually attractive. Do not interpret this as selecting either 4 Hz recipe unchanged.
+
+He asks where noise is introduced, whether it can be visualized, and how to separate preserving a scene from transforming it. The current graph initializes from the warped previous-image latent, mixes fresh Gaussian noise in model space, and has no explicit object-preservation constraint. Same text does not uniquely specify the previous geometry. Noise, repeated VAE reconstruction and motion can all contribute to changes.
+
+Proposed, not authorized or implemented: isolate unchanged-prompt stability in a short stationary recurrent Krea comparison, keeping sigma and sampling intervals fixed while comparing independent noise with partially correlated noise. This tests a different control from simply reducing sigma. Preserve actual noise tensors and offer clearly labeled latent diagnostics; a decoded noisy latent is only an approximate preview. Historical fixed-seed SDXL results do not establish how partial noise correlation will behave with Krea. Any useful result should then be tested with motion and an intentional prompt transition. See [noise controls and evidence limits](../../../../../docs/research/krea-transition-controls.md).
 
 ## Execution
 
