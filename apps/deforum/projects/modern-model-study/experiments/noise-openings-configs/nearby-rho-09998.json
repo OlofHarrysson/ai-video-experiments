@@ -1,0 +1,18 @@
+{
+  "case": "nearby-rho-09998",
+  "prompt": "At street level inside an immense brass city built across a desert canyon. Tall angular towers rise on both sides of a broad winding avenue that recedes far into the distance. Enormous arched bridges span the canyon overhead. Terraced balconies, gold mechanical stairways, tiny glowing windows and oxidized copper rooftops fill the space. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. A panoramic urban environment, with the avenue and distant skyline occupying the center and tall buildings framing the sides. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition.",
+  "prompt_source": "continuity-controls-configs/euler-060.json",
+  "prompt_source_sha256": "9da95a0c960de24075b446062cafb692870f461e020758524b40c7c0bda2b930",
+  "seed": 918273,
+  "index": 1,
+  "correlation": 0.9998,
+  "tag": "noise-openings-v001-nearby-rho-09998",
+  "width": 1536,
+  "height": 1024,
+  "steps": 8,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "denoise": 1.0,
+  "cfg": 1.0,
+  "initialization": "empty latent; no prior image; independent text-to-image opening"
+}

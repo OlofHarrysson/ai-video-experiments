@@ -6,6 +6,12 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Krea preservation controls](../apps/deforum/projects/modern-model-study/experiments/continuity-controls.md): matched low-noise, sampler and reconstruction comparisons, with parallel research and preserved recurrent feedback.
+- [Krea sampler practice](research/krea-sampler-practice.md): official guidance, CivitAI creator recipes and first-hand community tests, separated from recurrent-animation evidence.
+- [Extra Krea reference conditioning](research/krea-reference-continuity.md): image initialization versus reference context, existing core-node route, adapters and preservation limits.
+- [Low-noise and reconstruction diagnosis](research/krea-low-noise-diagnostics.md): literal starting sigma, accumulated reconstruction errors, and matched latent feedback controls.
+- [Opening noise comparisons](../apps/deforum/projects/modern-model-study/experiments/noise-openings.md): identical, nearby and independent actual noise with one fixed prompt.
+
 - [Saved-state replay and small perturbations](../apps/deforum/projects/modern-model-study/experiments/state-replay.md): exact reconstruction of one Krea painting, then nearby fixed-source samples with preserved architecture. Diagnostic only; recurrent transfer remains untested. Includes a separate local review view.
 
 - [Noise and latent continuity](research/noise-and-latent-continuity.md): actual tensor shape and three-step sampling, existing feedback, noise constraints, latent interpolation, saved-state replay and inversion proposals.

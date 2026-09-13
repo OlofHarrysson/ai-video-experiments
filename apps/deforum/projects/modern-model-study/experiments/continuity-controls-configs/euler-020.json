@@ -1,0 +1,18 @@
+{
+  "case": "euler-020",
+  "sampler": "euler",
+  "seed": 918273,
+  "source": "projects/modern-model-study/exports/refresh-rate-v001/two-current/anchors/0144.png",
+  "duration": 4,
+  "cadence": 6,
+  "fps": 24,
+  "cfg": 1.0,
+  "sigmas": [
+    0.2,
+    0.17094802856433333,
+    0.10363369186733333,
+    0.0
+  ],
+  "prompt": "At street level inside an immense brass city built across a desert canyon. Tall angular towers rise on both sides of a broad winding avenue that recedes far into the distance. Enormous arched bridges span the canyon overhead. Terraced balconies, gold mechanical stairways, tiny glowing windows and oxidized copper rooftops fill the space. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. A panoramic urban environment, with the avenue and distant skyline occupying the center and tall buildings framing the sides. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition.",
+  "motion": "none"
+}

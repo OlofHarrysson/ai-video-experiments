@@ -6,8 +6,8 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/correlated-noise.json'
-OUTPUT = APP / 'projects/modern-model-study/exports/media-review-v002'
+SESSION = APP / 'media_review/sessions/continuity-controls.json'
+OUTPUT = APP / 'projects/modern-model-study/exports/media-review-continuity-controls-v001'
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
     '/state-replay': APP / 'projects/modern-model-study/exports/media-review-state-replay-v001/full-quality.html',

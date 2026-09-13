@@ -1,0 +1,51 @@
+{
+  "title": "Keeping the city between repaints",
+  "selected": [
+    "euler-060",
+    "euler-010"
+  ],
+  "clips": [
+    {
+      "id": "euler-060",
+      "label": "Current repaint \u00b7 0.6",
+      "note": "More rewriting of roofs and small buildings",
+      "details": "The same canyon-city source and unchanged prompt for four seconds. No spatial motion, prompt transition, reference image or pixel blending. Every update consumes its own previous result. Compare roof outlines, windows, metallic highlights and arch shading.\n\nKrea 2 Turbo FP8, CFG 1, Euler (three model evaluations), three sampling intervals, starting noise 0.6. Fresh independent Gaussian noise at every repaint, with the same seed sequence across branches. Sampling starts from the VAE-encoded previous painting.\n\nFour updates per second (cadence 6), 24 fps throughout. Shared opening plus fifteen updates. Identical RIFE 4.25 scale 1 only for finishing; the last quarter-second holds the final painting. This stationary diagnostic does not establish behavior during motion or scene changes.",
+      "source": "projects/modern-model-study/exports/continuity-controls-v001/euler-060/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "euler-010",
+      "label": "Much lighter repaint \u00b7 0.1",
+      "note": "Smaller changes to existing geometry",
+      "details": "The same canyon-city source and unchanged prompt for four seconds. No spatial motion, prompt transition, reference image or pixel blending. Every update consumes its own previous result. Compare roof outlines, windows, metallic highlights and arch shading.\n\nKrea 2 Turbo FP8, CFG 1, Euler (three model evaluations), three sampling intervals, starting noise 0.1. Fresh independent Gaussian noise at every repaint, with the same seed sequence across branches. Sampling starts from the VAE-encoded previous painting.\n\nFour updates per second (cadence 6), 24 fps throughout. Shared opening plus fifteen updates. Identical RIFE 4.25 scale 1 only for finishing; the last quarter-second holds the final painting. This stationary diagnostic does not establish behavior during motion or scene changes.",
+      "source": "projects/modern-model-study/exports/continuity-controls-v001/euler-010/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "euler-020",
+      "label": "Lighter repaint \u00b7 0.2",
+      "note": "An intermediate preservation setting",
+      "details": "The same canyon-city source and unchanged prompt for four seconds. No spatial motion, prompt transition, reference image or pixel blending. Every update consumes its own previous result. Compare roof outlines, windows, metallic highlights and arch shading.\n\nKrea 2 Turbo FP8, CFG 1, Euler (three model evaluations), three sampling intervals, starting noise 0.2. Fresh independent Gaussian noise at every repaint, with the same seed sequence across branches. Sampling starts from the VAE-encoded previous painting.\n\nFour updates per second (cadence 6), 24 fps throughout. Shared opening plus fifteen updates. Identical RIFE 4.25 scale 1 only for finishing; the last quarter-second holds the final painting. This stationary diagnostic does not establish behavior during motion or scene changes.",
+      "source": "projects/modern-model-study/exports/continuity-controls-v001/euler-020/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "heun-060",
+      "label": "Heun sampler \u00b7 0.6",
+      "note": "Alternative numerical updates, same noise levels",
+      "details": "The same canyon-city source and unchanged prompt for four seconds. No spatial motion, prompt transition, reference image or pixel blending. Every update consumes its own previous result. Compare roof outlines, windows, metallic highlights and arch shading.\n\nKrea 2 Turbo FP8, CFG 1, Heun (five model evaluations), three sampling intervals, starting noise 0.6. Fresh independent Gaussian noise at every repaint, with the same seed sequence across branches. Sampling starts from the VAE-encoded previous painting.\n\nFour updates per second (cadence 6), 24 fps throughout. Shared opening plus fifteen updates. Identical RIFE 4.25 scale 1 only for finishing; the last quarter-second holds the final painting. This stationary diagnostic does not establish behavior during motion or scene changes.",
+      "source": "projects/modern-model-study/exports/continuity-controls-v001/heun-060/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "vae-only",
+      "label": "Encode/decode only",
+      "note": "Reconstruction artifacts without diffusion",
+      "details": "The same canyon-city source and unchanged prompt for four seconds. No spatial motion, prompt transition, reference image or pixel blending. Every update consumes its own previous result. Compare roof outlines, windows, metallic highlights and arch shading.\n\nFifteen image \u2192 VAE latent \u2192 image reconstructions. No denoising model, prompt or random noise is used. The shared reviewer calls saved anchors paintings; in this diagnostic they are reconstruction checkpoints.\n\nFour updates per second (cadence 6), 24 fps throughout. Shared opening plus fifteen updates. Identical RIFE 4.25 scale 1 only for finishing; the last quarter-second holds the final painting. This stationary diagnostic does not establish behavior during motion or scene changes.",
+      "source": "projects/modern-model-study/exports/continuity-controls-v001/vae-only/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "latent-010",
+      "label": "Direct latent feedback \u00b7 0.1",
+      "note": "Encode once; preserve latent between repaints",
+      "details": "Same stationary city, unchanged prompt, seeds, CFG1 and three Euler intervals from starting noise0.1. The first painting exactly matches the ordinary0.1 branch.\n\nThe source is encoded once. Each generated latent goes directly into the next sampler; decoded images are saved for viewing but never re-encoded as feedback. Compare against Much lighter repaint0.1 to isolate repeated image reconstruction. This diagnostic has no spatial movement and does not implement latent-space warping.\n\nFifteen recurrent repaints plus the opening, four paintings per second, four seconds,24fps and identical RIFE4.25 scale1 finishing. All anchors preserved; final quarter-second holds. Interpolation never feeds back into generation.",
+      "source": "projects/modern-model-study/exports/continuity-latent-v001/cycles-15/section-016/rife/preview.mp4"
+    }
+  ]
+}
