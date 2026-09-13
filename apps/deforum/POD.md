@@ -33,6 +33,8 @@ S3 access is verified at `https://s3api-eu-ro-1.runpod.io/` (region `EU-RO-1`, b
 
 Download and hash-check every generated output and experiment receipt. Confirm an empty queue, then delete only the experiment's owned Pod. Verify deletion and **retain deforum-models**. Model files and runtime remain on the volume; source media and final renders also remain local under the project. Clear only verified, owned scratch/output files when space is needed; preserve the reusable models/runtime.
 
+When extracting a Mac-created archive onto the network volume, use `tar --no-same-owner` so extraction does not attempt unsupported ownership changes. Inspect the template's actual startup process before restarting ComfyUI; this image does not provide `supervisorctl`.
+
 ## Trial
 
 [Persistent-volume experiment](projects/modern-model-study/experiments/persistent-model-volume.md) owns the startup/reuse measurements. This workflow uses the official container and existing graph/transport tools; it does not introduce a custom image build or another serving layer.

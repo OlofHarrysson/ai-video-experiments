@@ -1,0 +1,37 @@
+{
+  "title": "Does gradually changing noise preserve the city?",
+  "selected": [
+    "independent",
+    "correlated"
+  ],
+  "clips": [
+    {
+      "id": "independent",
+      "label": "Fresh noise",
+      "note": "Same city prompt \u00b7 fresh random pattern each repaint",
+      "details": "A stationary four-second continuation of the same canyon-city painting, with the original city prompt unchanged throughout. Watch the roof shapes, balconies and small windows. No spatial movement or prompt transition in this diagnostic.\n\nKrea Turbo, CFG 1, three Euler intervals, starting noise 0.6. Four paintings per second (cadence 6), sixteen paintings including the opening. Every new painting starts from the previous painting.\n\nIndependent Gaussian noise on every repaint.\n\nIdentical RIFE 4.25 scale 1 finishing, 24 fps. Interpolation never feeds back into generation. Native versus explicit-noise sampler parity and the shared first repaint are checked.\n\nThis tests one stationary scene. It does not establish behavior during camera movement or intentional transformations.\n\nAssistant review: partial noise correlation 0.85 quickly produces bright patchwork colors and flatter shading. Fresh noise preserves the original palette better. The average size of painting changes is similar; this correlation setting is not recommended for preserving this scene. Human playback preference remains yours.",
+      "source": "projects/modern-model-study/exports/correlated-noise-v001/independent/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "correlated",
+      "label": "Gradually changing noise",
+      "note": "Same city prompt \u00b7 gradually changing random pattern",
+      "details": "A stationary four-second continuation of the same canyon-city painting, with the original city prompt unchanged throughout. Watch the roof shapes, balconies and small windows. No spatial movement or prompt transition in this diagnostic.\n\nKrea Turbo, CFG 1, three Euler intervals, starting noise 0.6. Four paintings per second (cadence 6), sixteen paintings including the opening. Every new painting starts from the previous painting.\n\nNoise correlation 0.85 between adjacent repaints. The amount of noise stays the same in theory; its random pattern changes more gradually. This is partial correlation, not a fixed seed.\n\nIdentical RIFE 4.25 scale 1 finishing, 24 fps. Interpolation never feeds back into generation. Native versus explicit-noise sampler parity and the shared first repaint are checked.\n\nThis tests one stationary scene. It does not establish behavior during camera movement or intentional transformations.\n\nAssistant review: partial noise correlation 0.85 quickly produces bright patchwork colors and flatter shading. Fresh noise preserves the original palette better. The average size of painting changes is similar; this correlation setting is not recommended for preserving this scene. Human playback preference remains yours.",
+      "source": "projects/modern-model-study/exports/correlated-noise-v001/correlated/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "noise-independent",
+      "label": "Noise field \u00b7 independent",
+      "note": "Actual latent noise \u00b7 channel 0 \u00b7 diagnostic only",
+      "details": "The actual noise tensor used by the sampler, showing its first spatial channel at each painting timestamp. This is not a motion guide or a protection mask.\n\nFixed grayscale mapping: -3 is black, zero is gray, +3 is white; values outside that range clip. Opening is blank because no new noise was added then. This is one channel of a many-channel latent tensor, not RGB grain over the artwork.\n\nNo RIFE between noise images: each map holds until the next repaint. Compare both noise-field videos to see how the random pattern changes while its overall variance remains similar.",
+      "source": "projects/modern-model-study/exports/correlated-noise-v001/diagnostics/independent/noise.mp4"
+    },
+    {
+      "id": "noise-correlated",
+      "label": "Noise field \u00b7 correlated",
+      "note": "Actual latent noise \u00b7 channel 0 \u00b7 diagnostic only",
+      "details": "The actual noise tensor used by the sampler, showing its first spatial channel at each painting timestamp. This is not a motion guide or a protection mask.\n\nFixed grayscale mapping: -3 is black, zero is gray, +3 is white; values outside that range clip. Opening is blank because no new noise was added then. This is one channel of a many-channel latent tensor, not RGB grain over the artwork.\n\nNo RIFE between noise images: each map holds until the next repaint. Compare both noise-field videos to see how the random pattern changes while its overall variance remains similar.",
+      "source": "projects/modern-model-study/exports/correlated-noise-v001/diagnostics/correlated/noise.mp4"
+    }
+  ]
+}
