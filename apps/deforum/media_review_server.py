@@ -6,10 +6,11 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/transition-frequency.json'
-OUTPUT = APP / 'projects/modern-model-study/exports/media-review-transition-frequency-v001'
+SESSION = APP / 'media_review/sessions/transition-stages.json'
+OUTPUT = APP / 'projects/modern-model-study/exports/media-review-transition-stages-v001'
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    '/transition-frequency': APP / 'projects/modern-model-study/exports/media-review-transition-frequency-v001/full-quality.html',
     '/early-settle': APP / 'projects/modern-model-study/exports/media-review-early-settle-v001/full-quality.html',
     '/hold-transform': APP / 'projects/modern-model-study/exports/media-review-hold-transform-v001/full-quality.html',
     '/continuity-controls': APP / 'projects/modern-model-study/exports/media-review-continuity-controls-v001/full-quality.html',

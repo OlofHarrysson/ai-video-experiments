@@ -1,0 +1,30 @@
+{
+  "title": "Smaller described steps toward the city",
+  "selected": [
+    "control",
+    "stages"
+  ],
+  "clips": [
+    {
+      "id": "control",
+      "label": "Current descriptions",
+      "note": "Shell with buildings \u2192 hollow pavilion \u2192 city",
+      "details": "The current four/s control, freshly rendered from the shared 2-second painting. Text changes at 2, 3 and 4 seconds. Noise rises to 0.69336 at 3.75s and 0.74048 at 4s. Compare how the shell opens before the final city reveal.\n\nAll versions retain the same previous-image feedback, Krea Turbo, CFG 1, three Euler sampling intervals, seeds, bounded Lanczos motion and RIFE 4.25 scale 1. Eight seconds at 24 fps. Four paintings/s during 2\u20134s, two/s outside that window. Opening paintings through 2s are shared; later each branch consumes its own previous painting. Noise settles to 0.25 at 4.5s and 0.10 from 5s. No additional reference image, masks, image blending or interpolation feedback.",
+      "source": "projects/modern-model-study/exports/transition-stages-v001/control/finish/rife/preview.mp4"
+    },
+    {
+      "id": "stages",
+      "label": "Smaller described stages",
+      "note": "Seams \u2192 windows \u2192 gaps \u2192 ribs \u2192 avenue \u2192 city",
+      "details": "Changes only the positive descriptions after 2s. Seven intermediate descriptions at quarter-second repaint times ask for narrow seams, small window openings, widening gaps, a half-open pavilion, open ribs and a street, an avenue between arches, then a city with spiral bridges. The final city prompt at 4s is identical to the control. Noise is unchanged.\n\nAll versions retain the same previous-image feedback, Krea Turbo, CFG 1, three Euler sampling intervals, seeds, bounded Lanczos motion and RIFE 4.25 scale 1. Eight seconds at 24 fps. Four paintings/s during 2\u20134s, two/s outside that window. Opening paintings through 2s are shared; later each branch consumes its own previous painting. Noise settles to 0.25 at 4.5s and 0.10 from 5s. No additional reference image, masks, image blending or interpolation feedback.",
+      "source": "projects/modern-model-study/exports/transition-stages-v001/stages/finish/rife/preview.mp4"
+    },
+    {
+      "id": "stages-capped",
+      "label": "Stages + gentler final repaints",
+      "note": "Same stages; final noise capped at 0.66",
+      "details": "Uses the same new descriptions as Smaller described stages. Changes only starting noise at the last two transition paintings: 0.66 at both 3.75s and 4s, instead of 0.69336 and 0.74048. The earlier paintings and later settling settings are unchanged. Compare with Smaller described stages to judge the noise effect; comparing directly with Current descriptions changes both text and final noise.\n\nAll versions retain the same previous-image feedback, Krea Turbo, CFG 1, three Euler sampling intervals, seeds, bounded Lanczos motion and RIFE 4.25 scale 1. Eight seconds at 24 fps. Four paintings/s during 2\u20134s, two/s outside that window. Opening paintings through 2s are shared; later each branch consumes its own previous painting. Noise settles to 0.25 at 4.5s and 0.10 from 5s. No additional reference image, masks, image blending or interpolation feedback.",
+      "source": "projects/modern-model-study/exports/transition-stages-v001/stages-capped/finish/rife/preview.mp4"
+    }
+  ]
+}

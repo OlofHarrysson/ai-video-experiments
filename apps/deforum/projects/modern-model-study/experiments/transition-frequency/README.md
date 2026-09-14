@@ -48,3 +48,7 @@ Review scope: all sixteen/twenty painting slots, including the four inserted pai
 Private operational evidence is in `work/transition-frequency-session/`, including archive inventory, verification, cleanup/cost receipt, model/import preflights and logs. Public experiment evidence and videos remain under `exports/transition-frequency-v001/` locally; large media is gitignored.
 
 If this trajectory is preferred, a useful follow-up would keep these painting times and adjust only the final two repaint noise values or their prompt descriptions, aiming to distribute the 3.75–4s opening change. That is a hypothesis, not an additional experiment run here.
+
+## Human feedback
+
+Olof finds this a little better, but says the fundamental problem remains: little changes for a while, then the image flips in one or two repaints. Extra repaint frequency has not solved gradual transformation. He suggests intermediate descriptions may help and authorizes continued experiments.

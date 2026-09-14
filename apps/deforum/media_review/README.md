@@ -2,7 +2,7 @@
 
 The local reviewer keeps one, two or three videos visible together, side by side on laptop-sized windows, with shared play/pause, speed, scrubbing, frame stepping and painting stepping. This is the reusable human-facing companion to `video_review.py`'s extracted-frame/contact-sheet review.
 
-The current session compares two paintings/s throughout with four/s only during the transformation. Both have the same prompt/noise/motion schedule, low-noise settling and 24 fps delivery. Its irregular painting timestamps are read from verified RIFE manifests. The preceding comparison remains at `/early-settle`; the initial prompt-bridges session is preserved in its saved JSON.
+The current session compares the existing shell-to-city descriptions with finer descriptive stages; a third selectable clip uses those same stages and gentler final repaints. All three retain the same actual painting timestamps, motion, CFG1, three Euler intervals and eight-second 24 fps/RIFE delivery. The preceding repaint-frequency comparison remains at `/transition-frequency`, and the earlier settling comparison at `/early-settle`.
 
 ## Run locally
 
@@ -60,3 +60,5 @@ Broader edge-case coverage remains pending: different clip lengths, rapid source
 The page-wide keyboard follow-up was browser-checked: no-focus Right steps both videos to frame 1, Shift + Right to painting 1/frame 12, focused info-button arrows leave the timeline unchanged, and the details panel opens and dismisses without shifting the video layout.
 
 The transition-frequency session was browser-checked on 2026-09-14 in the existing dedicated Chrome window (1456×858 captured viewport): both complete frames and controls fit without scrolling; frame 54 correctly shows an in-between on the control and painting 5 on the treatment; next-painting advances to frame 60 with different painting counts; linked playback reaches frame 191 and correctly labels final holds 15/19. The comparison is left paused at frame zero. No layout or keyboard behavior was changed in this experiment.
+
+The transition-stages session was browser-checked on 2026-09-14 in the existing dedicated Chrome window (1456×858 captured viewport): both complete frames and controls fit without scrolling; frame 84 labels painting 10 on both sides; the capped third variant is selectable, and next-painting advances to frame 90/painting 11. Its details explain which two noise values change. Linked playback reaches frame 191/final hold 19 on both panels. The default control/stages pair is left paused at frame zero. No layout or shortcut code changed.
