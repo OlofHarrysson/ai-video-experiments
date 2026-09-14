@@ -1,0 +1,123 @@
+{
+  "case": "low-hold",
+  "seed": 773401,
+  "duration": 8.0,
+  "cadence": 12,
+  "cfg": 1.0,
+  "source": "projects/modern-model-study/exports/ten-dollar-v001/clock-pulse/anchors/0084.png",
+  "scenes": [
+    {
+      "at": 0,
+      "name": "brass-snail",
+      "prompt": "A surreal illustration of one large land snail resting on a charcoal stone ledge, its head extending toward the right. A rounded amber-and-brass spiral shell occupies the middle-left of the wide composition. The shell has deep sculpted coils, fine radial engravings and worn golden highlights. An elongated dark red body emerges beneath it, with a broad muscular foot touching the stone and two slender raised eyestalks. The whole snail is clearly readable, with open space in front of its head. Spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light models the shell, moist body and long shadow. Bold etched black contours, delicate textures and restrained warm washes."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "brass-snail",
+      "prompt": "A surreal illustration of one large land snail resting on a charcoal stone ledge, its head extending toward the right. A rounded amber-and-brass spiral shell occupies the middle-left of the wide composition. The shell has deep sculpted coils, fine radial engravings and worn golden highlights. An elongated dark red body emerges beneath it, with a broad muscular foot touching the stone and two slender raised eyestalks. The whole snail is clearly readable, with open space in front of its head. Spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light models the shell, moist body and long shadow. Bold etched black contours, delicate textures and restrained warm washes."
+    },
+    {
+      "at": 2,
+      "name": "shell-with-buildings",
+      "prompt": "An enormous brass snail rests on dark stone in a desert canyon. Its large rounded spiral shell is an inhabited miniature city: tiny angular towers, terraced balconies, glowing windows, gold mechanical stairways and oxidized copper rooftops are built into the shell. Its warm metallic spiral remains clearly recognizable, with small deep archways opening between the buildings. Red canyon walls and sand frame the scene. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 3,
+      "name": "hollow-architectural-shell",
+      "prompt": "An immense hollow spiral pavilion made of brass and oxidized copper stands inside a desert canyon. The curved outer shell forms an architectural rim around a broad opening. Deep arched bridges, terraced balconies, gold mechanical stairways and tiny glowing windows line the inside of the spiral. Through its open center, a winding avenue and angular towers recede far into the canyon. The opening occupies the center, with tall buildings and red canyon walls framing the sides. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 4,
+      "name": "brass-city",
+      "prompt": "At street level inside an immense brass city built across a desert canyon. Tall angular towers rise on both sides of a broad winding avenue that recedes far into the distance. Enormous arched bridges span the canyon overhead. Terraced balconies, gold mechanical stairways, tiny glowing windows and oxidized copper rooftops fill the space. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. A panoramic urban environment, with the avenue and distant skyline occupying the center and tall buildings framing the sides. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.1
+    },
+    {
+      "at": 1.5,
+      "noise": 0.1
+    },
+    {
+      "at": 2.0,
+      "noise": 0.4
+    },
+    {
+      "at": 2.5,
+      "noise": 0.43952
+    },
+    {
+      "at": 3.0,
+      "noise": 0.53376
+    },
+    {
+      "at": 3.5,
+      "noise": 0.64624
+    },
+    {
+      "at": 4.0,
+      "noise": 0.74048
+    },
+    {
+      "at": 4.5,
+      "noise": 0.78
+    },
+    {
+      "at": 5.0,
+      "noise": 0.7437037037
+    },
+    {
+      "at": 5.5,
+      "noise": 0.6762962963
+    },
+    {
+      "at": 6.0,
+      "noise": 0.64
+    },
+    {
+      "at": 6.5,
+      "noise": 0.1
+    },
+    {
+      "at": 8,
+      "noise": 0.1
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4.5,
+      "center": [
+        0.6,
+        0.47
+      ],
+      "zoom": 0.75,
+      "turn": 32,
+      "radius": 0.8,
+      "travel": [
+        -0.1,
+        0.04
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 3.5,
+      "center": [
+        0.95,
+        0.48
+      ],
+      "zoom": 0.08,
+      "turn": -14,
+      "radius": 0.85,
+      "travel": [
+        0.07,
+        -0.025
+      ]
+    }
+  ]
+}

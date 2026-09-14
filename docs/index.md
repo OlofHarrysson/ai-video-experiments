@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Hold a scene, then transform it](../apps/deforum/projects/modern-model-study/experiments/hold-transform.md): a moving eight-second shot compares usual and low-noise holding around an identical deliberate transformation ramp.
+
 - [Recent latent history and noise recurrence](../apps/deforum/projects/modern-model-study/experiments/history-recurrence.md): four matched recurrent cases. Image-latent history with fresh noise limits some accumulated drift; gentle noise still produces mosaic colors with or without history. Olof sees no visual improvement; baseline retained. Includes raw and RIFE review clips.
 
 - [Krea preservation controls](../apps/deforum/projects/modern-model-study/experiments/continuity-controls.md): matched low-noise, sampler and reconstruction comparisons, with parallel research and preserved recurrent feedback.

@@ -1,0 +1,20 @@
+{
+  "title": "Hold the scene, then transform it",
+  "selected": ["usual-hold", "low-hold"],
+  "clips": [
+    {
+      "id": "usual-hold",
+      "label": "Usual repaint during holds",
+      "note": "Snail → inhabited shell → open shell → canyon city",
+      "details": "Noise 0.60 while the opening snail moves; 0.64 while the finished city settles. At 2–6 seconds, both videos use exactly the same deliberate transformation ramp: 0.40 up to 0.78, then down to 0.64. Watch the snail's etched rim early and the buildings at the end.\n\nThe text changes at 2 seconds to a shell with buildings, at 3 seconds to a hollow architectural shell and at 4 seconds to a canyon city. Both videos have identical bounded twist, expansion, counter-turn and sideways travel; motion settles by 7.5 seconds.\n\nEach painting starts from its own warped previous painting. Krea Turbo, CFG 1, Euler, three sampling intervals, fresh independent noise with matching seeds. Two paintings per second; 24 fps working and delivery timelines; RIFE 4.25 scale 1 fills between paintings. Interpolation never feeds back. Eight seconds, sixteen paintings including the opening, and a final half-second hold. No extra reference-image adapter or protected-region blending.",
+      "source": "projects/modern-model-study/exports/hold-transform-v001/usual-hold/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "low-hold",
+      "label": "Low repaint during holds",
+      "note": "Same transformation; noise 0.10 before and afterward",
+      "details": "Noise 0.10 while the opening snail moves and again from 6.5 seconds while the finished scene settles. At 2–6 seconds, the transformation ramp is identical to the other video: 0.40 up to 0.78, then down to 0.64. This tests whether less repainting during unchanged text preserves recognizable structures and surfaces, without blocking the deliberate scene change.\n\nBoth videos use the same text, motion, seeds, model and timing. The different previous paintings are an intended consequence of recurrent feedback. Compare the first two seconds, the shell opening during transformation, and the final buildings. Low noise may simplify shading even when it preserves shapes.\n\nKrea Turbo, CFG 1, Euler, three sampling intervals. Warped previous-image initialization, Lanczos, two paintings per second, 24 fps and RIFE 4.25 scale 1. Sixteen paintings over eight seconds; the last half-second holds. No noise correlation, extra image reference or protected-region blending.",
+      "source": "projects/modern-model-study/exports/hold-transform-v001/low-hold/section-016/rife/preview.mp4"
+    }
+  ]
+}
