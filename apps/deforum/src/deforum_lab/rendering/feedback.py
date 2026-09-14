@@ -22,6 +22,7 @@ def render_paintings(
     run_prefix,
     filename_prefix,
     fps=24,
+    graph_transform=None,
 ):
     cadence = config.get("cadence", 12)
     require(
@@ -58,6 +59,8 @@ def render_paintings(
         )
         graph = repaint_graph(scene["prompt"], seed, sigmas)
         graph["9"]["inputs"]["cfg"] = config.get("cfg", 1.0)
+        if graph_transform is not None:
+            graph_transform(graph, config, seconds)
         graph["11"]["inputs"]["filename_prefix"] = filename_prefix
         receipt = root / f"anchor-{frame:04d}.json"
         expected = {

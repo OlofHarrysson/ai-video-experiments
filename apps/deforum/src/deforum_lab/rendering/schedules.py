@@ -24,4 +24,16 @@ def recipe(config, seconds):
     # Optional text events have their own clock; they do not restart the noise ramp.
     if "prompt_schedule" in config:
         scene = [s for s in config["prompt_schedule"] if s["at"] <= seconds][-1]
+    if "sigma_ratios" in config:
+        ratios = np.asarray(config["sigma_ratios"], dtype=float)
+        if (
+            ratios.ndim != 1
+            or len(ratios) < 2
+            or not np.isfinite(ratios).all()
+            or ratios[0] != 1
+            or ratios[-1] != 0
+            or not (np.diff(ratios) < 0).all()
+        ):
+            raise ValueError("Sigma ratios must strictly decrease from 1 to 0")
+        return scene, [float(r * noise) for r in ratios]
     return scene, [s * noise / 0.6 for s in SIGMAS]

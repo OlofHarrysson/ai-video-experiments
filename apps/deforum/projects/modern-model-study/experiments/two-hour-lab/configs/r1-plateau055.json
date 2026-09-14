@@ -1,0 +1,179 @@
+{
+  "case": "r1-plateau055",
+  "seed": 773401,
+  "duration": 8.0,
+  "cadence": 12,
+  "cfg": 1.0,
+  "source": "projects/modern-model-study/exports/ten-dollar-v001/clock-pulse/anchors/0084.png",
+  "scenes": [
+    {
+      "at": 0,
+      "name": "brass-snail",
+      "prompt": "A surreal illustration of one large land snail resting on a charcoal stone ledge, its head extending toward the right. A rounded amber-and-brass spiral shell occupies the middle-left of the wide composition. The shell has deep sculpted coils, fine radial engravings and worn golden highlights. An elongated dark red body emerges beneath it, with a broad muscular foot touching the stone and two slender raised eyestalks. The whole snail is clearly readable, with open space in front of its head. Spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light models the shell, moist body and long shadow. Bold etched black contours, delicate textures and restrained warm washes."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "brass-snail",
+      "prompt": "A surreal illustration of one large land snail resting on a charcoal stone ledge, its head extending toward the right. A rounded amber-and-brass spiral shell occupies the middle-left of the wide composition. The shell has deep sculpted coils, fine radial engravings and worn golden highlights. An elongated dark red body emerges beneath it, with a broad muscular foot touching the stone and two slender raised eyestalks. The whole snail is clearly readable, with open space in front of its head. Spare ochre dunes recede beneath an oxblood dusk sky. Low golden side light models the shell, moist body and long shadow. Bold etched black contours, delicate textures and restrained warm washes."
+    },
+    {
+      "at": 2,
+      "name": "shell-with-buildings",
+      "prompt": "An enormous brass snail rests on dark stone in a desert canyon. Its large rounded spiral shell is an inhabited miniature city: tiny angular towers, terraced balconies, glowing windows, gold mechanical stairways and oxidized copper rooftops are built into the shell. Its warm metallic spiral remains clearly recognizable, with small deep archways opening between the buildings. Red canyon walls and sand frame the scene. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 2.25,
+      "name": "opening-seams",
+      "prompt": "An enormous rounded brass spiral shell rests on dark stone in a red desert canyon. Its engraved coils separate along narrow radial seams, with thin glowing cracks exposing tiny copper buildings inside. Most of the curved bronze surface is still intact. The open cracks reveal depth into the shell; distant dunes remain visible to the right. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 2.5,
+      "name": "small-window-openings",
+      "prompt": "A large rounded brass spiral shell in a red desert canyon has several small arched openings through its curved surface. Between the intact engraved bronze panels, tiny balconies, copper rooftops and miniature stairways are visible inside. Its central spiral has a small round open doorway revealing a sunlit street. The silhouette is still a rounded shell. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 2.75,
+      "name": "widening-gaps",
+      "prompt": "An inhabited brass spiral shell in a red desert canyon has wide gaps between its curved engraved panels. Thin golden ribs connect the remaining panels. Terraced buildings grow along the inside of the spiral and a narrow winding street is visible through the central opening. Solid metal and open architectural space share the composition. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 3.0,
+      "name": "half-open-pavilion",
+      "prompt": "A half-open spiral pavilion of brass and oxidized copper stands in a desert canyon. Curved bronze panels occupy the left rim, while the center is an open passage lined with balconies and small towers. Long radial ribs arc overhead. A winding avenue is visible through the opening, connecting the interior buildings to the distant canyon city. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 3.25,
+      "name": "open-ribs-and-street",
+      "prompt": "An open spiral framework of brass ribs frames a winding street inside a red desert canyon. A few broad engraved shell fragments cling to the outer left rim. Terraced copper buildings and stairways surround the open center. Most of the center is now deep architectural space, with a narrow avenue leading beneath the curved ribs toward distant towers. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 3.5,
+      "name": "avenue-between-arches",
+      "prompt": "A broad winding avenue runs through a brass canyon city, framed by several curved golden arches left from a giant spiral shell. Slender ribs rise overhead and a few small engraved bronze panels remain on the far left. Angular towers and terraced balconies line both sides, with open sunlit space leading toward the distant skyline. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 3.75,
+      "name": "city-with-spiral-bridges",
+      "prompt": "A panoramic brass city fills a red desert canyon. Its open winding avenue runs between tall copper towers and terraced balconies. A few giant curved spiral ribs form open bridges overhead and along the outer left edge. The center is unobstructed, revealing the street and distant skyline. Tiny glowing windows and mechanical gold stairways fill the buildings. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    },
+    {
+      "at": 4,
+      "name": "brass-city",
+      "prompt": "At street level inside an immense brass city built across a desert canyon. Tall angular towers rise on both sides of a broad winding avenue that recedes far into the distance. Enormous arched bridges span the canyon overhead. Terraced balconies, gold mechanical stairways, tiny glowing windows and oxidized copper rooftops fill the space. Warm amber sunlight slices through deep red dust and reveals countless architectural layers. A panoramic urban environment, with the avenue and distant skyline occupying the center and tall buildings framing the sides. An intricate surreal visionary painting with sculptural architecture, deep layered space, fine engraved detail, luminous color, dramatic shaded volumes, and a coherent wide cinematic composition."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.1
+    },
+    {
+      "at": 1.5,
+      "noise": 0.1
+    },
+    {
+      "at": 2,
+      "noise": 0.4
+    },
+    {
+      "at": 2.25,
+      "noise": 0.55
+    },
+    {
+      "at": 4,
+      "noise": 0.55
+    },
+    {
+      "at": 4.5,
+      "noise": 0.25
+    },
+    {
+      "at": 5,
+      "noise": 0.1
+    },
+    {
+      "at": 8,
+      "noise": 0.1
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4.5,
+      "center": [
+        0.6,
+        0.47
+      ],
+      "zoom": 0.75,
+      "turn": 32,
+      "radius": 0.8,
+      "travel": [
+        -0.1,
+        0.04
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 3.5,
+      "center": [
+        0.95,
+        0.48
+      ],
+      "zoom": 0.08,
+      "turn": -14,
+      "radius": 0.85,
+      "travel": [
+        0.07,
+        -0.025
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    54,
+    60,
+    66,
+    72,
+    78,
+    84,
+    90,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180
+  ],
+  "seeds_by_frame": {
+    "0": 773401,
+    "12": 773402,
+    "24": 773403,
+    "36": 773404,
+    "48": 773405,
+    "54": 8773454,
+    "60": 773406,
+    "66": 8773466,
+    "72": 773407,
+    "78": 8773478,
+    "84": 773408,
+    "90": 8773490,
+    "96": 773409,
+    "108": 773410,
+    "120": 773411,
+    "132": 773412,
+    "144": 773413,
+    "156": 773414,
+    "168": 773415,
+    "180": 773416
+  },
+  "prefix_root": "projects/modern-model-study/exports/transition-stages-v001/stages-capped",
+  "prefix_through": 48
+}

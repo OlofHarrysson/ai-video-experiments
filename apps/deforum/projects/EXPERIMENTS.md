@@ -1,6 +1,6 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-14. All **91 tracked experiment notes across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 91 completed renders. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-14. All **92 tracked experiment notes across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 92 completed renders. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
@@ -20,7 +20,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 49 notes
+### modern-model-study — 50 notes
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)
@@ -68,6 +68,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 - [Extra paintings during the morph](modern-model-study/experiments/transition-frequency/README.md)
 - [Shaping a recurrent scene transition](modern-model-study/experiments/transition-ramps.md)
 - [Describing smaller stages of the transformation](modern-model-study/experiments/transition-stages/README.md)
+- [Two-hour autonomous learning session](modern-model-study/experiments/two-hour-lab/README.md)
 - [Turbo schedule tail versus smaller updates](modern-model-study/experiments/turbo-schedule.md)
 - [Three-step morphing: interpolation and cadence](modern-model-study/experiments/turbo-smoothing.md)
 - [Ten-second transition and one/two/three Turbo intervals](modern-model-study/experiments/turbo-transitions.md)

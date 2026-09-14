@@ -12,6 +12,7 @@ from PIL import Image
 from deforum_lab.infrastructure.pod import PodClient
 from deforum_lab.records import read, save, sha
 from deforum_lab.rendering.feedback import render_paintings
+from deforum_lab.rendering.schedules import SIGMAS, recipe
 
 
 class LocalClient:
@@ -135,6 +136,65 @@ class PackageTests(unittest.TestCase):
             sha(self.root / "one/test/anchors/0024.png"),
             sha(self.root / "two/test/anchors/0024.png"),
         )
+
+    def test_sigma_placement_preserves_noise_and_recurrent_initialization(self):
+        self.opening(self.root)
+        client = LocalClient()
+        config = {**self.config, "sigma_ratios": [1, 2 / 3, 1 / 3, 0]}
+        self.run_frames(self.root, client, config)
+        graph = client.calls[0][2]
+        self.assertEqual(graph["9"]["inputs"]["latent_image"], ["24", 0])
+        self.assertEqual(graph["24"]["inputs"]["pixels"], ["20", 0])
+        actual = [float(x) for x in graph["43"]["inputs"]["sigmas"].split(",")]
+        np.testing.assert_allclose(actual, [0.1, 0.1 * 2 / 3, 0.1 / 3, 0], atol=1e-12)
+        self.assertEqual(
+            read(self.root / "test/anchor-0024.json")["parent_sha256"],
+            sha(self.root / "test/anchors/0012.png"),
+        )
+        self.assertEqual(recipe(self.config, 1)[1], [s * 0.1 / 0.6 for s in SIGMAS])
+
+    def test_invalid_sigma_placement_fails_before_inference(self):
+        for ratios in (
+            [1, 0.5, 0.7, 0],
+            [0.8, 0.5, 0],
+            [1, 0.5],
+            [1, float("nan"), 0],
+            [1, 1, 0],
+        ):
+            with (
+                self.subTest(ratios=ratios),
+                self.assertRaisesRegex(ValueError, "Sigma ratios"),
+            ):
+                recipe({**self.config, "sigma_ratios": ratios}, 1)
+
+    def test_graph_transform_keeps_recurrence_and_resume_checks(self):
+        self.opening(self.root)
+        client = LocalClient()
+
+        def transform(graph, config, seconds):
+            graph["9"]["inputs"]["cfg"] = 1.3 if seconds < 1 else 1.0
+
+        args = {
+            "first_frame": 12,
+            "last_frame": 24,
+            "run_prefix": "test",
+            "filename_prefix": "test",
+            "graph_transform": transform,
+        }
+        render_paintings(self.config, self.root, client, **args)
+        self.assertEqual([r[2]["9"]["inputs"]["cfg"] for r in client.calls], [1.3, 1.0])
+        self.assertTrue(
+            all(r[2]["9"]["inputs"]["latent_image"] == ["24", 0] for r in client.calls)
+        )
+        self.assertEqual(
+            client.calls[1][3]["parent_sha256"],
+            sha(self.root / "test/anchors/0012.png"),
+        )
+        render_paintings(self.config, self.root, client, **args)
+        self.assertEqual(len(client.calls), 2)
+        with self.assertRaisesRegex(ValueError, "Saved painting graph differs"):
+            self.run_frames(self.root, client)
+        self.assertEqual(len(client.calls), 2)
 
     def test_uncertain_submission_never_resubmits(self):
         client = PodClient({"base_url": "http://unused.invalid", "pod_id": "test"})
