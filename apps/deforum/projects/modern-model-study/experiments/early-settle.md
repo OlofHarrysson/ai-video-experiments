@@ -38,3 +38,7 @@ The assistant recommends earlier settling when the frame-96 composition is the d
 - [Paintings and detail crops](../exports/early-settle-v001/review/), [generation checks](../exports/early-settle-v001/generation-check.json).
 
 All 288 archive files are local and SHA-256 verified. The owned A100 Pod, sixteen owned remote media files and session scratch were removed; the authorized model volume remains. Conservative estimated round cost is **$0.22**, including a disk allowance, not posted billing. No new model or node installation was needed.
+
+## Human feedback and deferred direction — 2026-09-14
+
+Olof observes that the earlier-settling ending essentially stops transforming and does not look very different from what he expects warping alone would produce. He considers keeping low noise potentially useful for subtle additional movement, but its value over warp-only motion is not established. He proposes using diffusion when change is wanted and pausing it otherwise, and explicitly parks these experiments while we improve the codebase. This is not a completed warp-only comparison or a selection of a universal noise/cadence default. The [refactor plan](../../../../../docs/refactor-plan.md) preserves this future question while keeping current behavior unchanged.

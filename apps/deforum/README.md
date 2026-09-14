@@ -1,6 +1,6 @@
 # Deforum experiment
 
-Current modern-model work: **Krea, three native sampling intervals, one repaint per second, 24 fps working/delivery, and RIFE finishing**. Olof selects the one-second pacing. The [local RIFE scale comparison](projects/modern-model-study/experiments/rife-scale.md) is complete; Olof finds no strong scale preference and parks that tuning. [Diffusion and newer-interpolation research](../../docs/research/diffusion-and-interpolation-next.md) recommends a smaller starting sigma with the same three-step tail next. Historical experiment summaries below preserve earlier stages.
+Current work: [a small codebase refactor is being planned](../../docs/refactor-plan.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The most recent [earlier-settling test](projects/modern-model-study/experiments/early-settle.md) uses recurrent Krea, three sampling intervals, half-second repaints, a 24 fps timeline, Lanczos warps and RIFE. Olof has parked further quality experiments for now. Historical summaries below preserve earlier stages.
 
 Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
 
