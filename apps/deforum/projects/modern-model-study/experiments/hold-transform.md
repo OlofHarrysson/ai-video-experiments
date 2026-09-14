@@ -52,3 +52,7 @@ The existing metric compares each newly painted image with its **warped initiali
 Recommended next test, not yet rendered: preserve the low-hold branch through painting 96, use starting noise 0.25 at painting 108, then 0.10 at painting 120 onward. Keep prompts, seeds, three intervals, spatial motion and finishing unchanged. Frame 105 is a RIFE intermediate between paintings 96 and 108, so changing painting 108 also changes the interpolated frames immediately before it; retaining the old intermediates would be incorrect.
 
 First validate the value of an earlier explicit transition-complete point. A later adaptive controller could combine a change score with confirmation that the intended scene has arrived, then apply a short settling ramp. Change magnitude alone cannot distinguish successful transformation from unwanted redesign, lighting changes or a failed transformation; a large-change trigger alone could stop a transition prematurely. No new GPU inference or controller was added in this feedback review.
+
+## Earlier-settling follow-up — 2026-09-14
+
+The [approved follow-up](early-settle.md) is complete. It preserves the PNG delivery through frame 96 and lowers starting noise to 0.25 at painting 108 and 0.10 from 120 onward. It retains the architecture with much less repaint change and fewer doubled details in inspected interpolation, while keeping the larger arch and narrower city composition from frame 96. Human preference is pending; both alternatives are preserved in the reviewer.

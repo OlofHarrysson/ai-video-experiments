@@ -1,0 +1,20 @@
+{
+  "title": "Settle sooner after the city appears",
+  "selected": ["late-settle", "early-settle"],
+  "clips": [
+    {
+      "id": "late-settle",
+      "label": "Previous version · later settling",
+      "note": "City appears at frame 96; low noise starts at 156",
+      "details": "The liked low-hold version from the previous experiment. Its city is already present at frame 96 (4 seconds), but noise rises to 0.78 at frame 108, stays at 0.74 at 120 and 0.68 at 132, and reaches 0.10 only at frame 156 (6.5 seconds).\n\nCompare frames 105–132 and the final roofs and balconies with the new early-settling version. Everything through frame 96 is preserved. Same prompts, seeds, bounded Lanczos motion, Krea Turbo, Euler, CFG 1 and three sampling intervals. Two paintings per second, eight seconds, 24 fps and RIFE 4.25 scale 1. Each new painting consumes its own warped previous painting; interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/hold-transform-v001/low-hold/section-016/rife/preview.mp4"
+    },
+    {
+      "id": "early-settle",
+      "label": "New version · earlier settling",
+      "note": "Noise 0.25 at frame 108; 0.10 from frame 120",
+      "details": "Preserves the exact paintings and delivered PNG frames through frame 96 (4 seconds). Only seven paintings are regenerated: noise 0.25 at frame 108 (4.5 seconds), then 0.10 at frames 120–180 (5–7.5 seconds). The city prompt, seeds, motion and three-interval sampling recipe are unchanged.\n\nThe first changed delivery frame is after 96: frames 97–107 interpolate toward the new painting 108. Watch whether the city settles without losing its shading or becoming too static. The earlier shell-to-city reveal remains unchanged. This is a scheduled drop based on human review, not an automatic scene-completion detector.\n\nRecurrent Krea Turbo feedback, Euler, CFG 1, Lanczos, two paintings per second, 24 fps throughout, and RIFE 4.25 scale 1. Sixteen paintings including the preserved opening; the final half-second holds. No extra reference image, mask blending or latent history.",
+      "source": "projects/modern-model-study/exports/early-settle-v001/early-settle/section-016/rife/preview.mp4"
+    }
+  ]
+}

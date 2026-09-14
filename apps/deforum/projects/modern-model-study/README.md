@@ -1,6 +1,6 @@
 # Modern model study
 
-Current filmmaking test: [hold a moving scene, then transform it](experiments/hold-transform.md). Two eight-second clips compare usual and low-noise holding around the same deliberate snail-to-city transformation. Olof likes the low-hold version but wants noise to fall sooner after the city appears; an earlier settling test is proposed.
+Current filmmaking test: [settle promptly after the city appears](experiments/early-settle.md). Preserve the liked opening through four seconds, then lower noise to 0.25 at 4.5s and 0.10 from 5s. The new eight-second ending holds the architecture more closely, with less doubled detail in inspected interpolation; it also retains a larger arch and narrower city view. Human playback preference is pending. The [previous hold/transform comparison](experiments/hold-transform.md) remains available.
 
 Previous investigation: [preservation controls](experiments/continuity-controls.md) compares literal starting noise 0.1/0.2/0.6, Euler/Heun and reconstruction-only recurrence. The [reference screen](experiments/reference-screen.md) tests extra image conditioning while preserving image initialization; [opening-noise probes](experiments/noise-openings.md) separately demonstrate nearby text-to-image starts. These diagnostics do not change the accepted filmmaking recipe without review.
 

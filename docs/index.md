@@ -6,6 +6,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Earlier settling after the city reveal](../apps/deforum/projects/modern-model-study/experiments/early-settle.md): preserve the first four seconds, then compare a noise drop to 0.25/0.10 with the previous longer high-noise phase.
+
 - [Hold a scene, then transform it](../apps/deforum/projects/modern-model-study/experiments/hold-transform.md): a moving eight-second shot compares usual and low-noise holding around an identical deliberate transformation ramp.
 
 - [Recent latent history and noise recurrence](../apps/deforum/projects/modern-model-study/experiments/history-recurrence.md): four matched recurrent cases. Image-latent history with fresh noise limits some accumulated drift; gentle noise still produces mosaic colors with or without history. Olof sees no visual improvement; baseline retained. Includes raw and RIFE review clips.
