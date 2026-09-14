@@ -1,6 +1,6 @@
 # Recent latent history and gentle noise recurrence
 
-Completed 2026-09-14 local time (2026-09-13 UTC). No new production baseline selected; human playback feedback is pending.
+Completed 2026-09-14 local time (2026-09-13 UTC). Olof sees no improvement over the baseline; retain the production recipe.
 
 Approved 2026-09-13. Olof requests a plain explanation of the saved-state experiment, approves the recurrent follow-up, and proposes mixing recent image latents. Test both factors in a matched four-case stationary city study. Hypothesis: a short history could damp incidental redesign, but averaging may soften detail or retain overlapping forms. Mosaic avoidance is unproven.
 
@@ -34,7 +34,11 @@ Inspection covers matched paintings at 0/1/2.25/3.75 seconds, consecutive painti
 
 For fresh noise, history reduces final-versus-opening normalized RGB mean absolute difference from 0.10877 to 0.08768 (about 19% lower). However, mean consecutive-painting change is almost identical: 0.03992 versus 0.03987. These are pixel-difference summaries, not validated flicker or quality scores. They support a distinction between reduced accumulated drift and reduced per-repaint variation; they do not establish a perceptual improvement on their own.
 
-The fixed-source replay result therefore did not generalize to preservation under gently evolving noise recurrence. Keep fresh independent noise for the preservation goal. The history blend is a candidate for limiting drift, subject to Olof's taste review; motion and deliberate prompt changes remain untested and may expose alignment problems or delayed transformations.
+The fixed-source replay result therefore did not generalize to preservation under gently evolving noise recurrence. Keep fresh independent noise for the preservation goal. The tested history blend has no demonstrated visual advantage worth adopting. Motion and deliberate prompt changes remain untested and may expose alignment problems or delayed transformations.
+
+## Human feedback — 2026-09-14
+
+Olof sees no significant improvement, or any improvement, over the baseline. The assistant agrees: reduced accumulated drift did not translate into a convincing improvement in smoothness or image quality. Earlier 'promising' framing gave too much weight to that diagnostic measurement. Keep the baseline and park these tested history/correlated-noise recipes for preservation. Preserve the mosaic result as a possible stylistic option, not a continuity solution. This feedback update adds no inference.
 
 ## Outputs and inspection
 
