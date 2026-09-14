@@ -1,0 +1,275 @@
+{
+  "case": "m2-travelling-twist",
+  "seed": 939205,
+  "duration": 14,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "r5-porcelain-stage-0",
+      "prompt": "A colossal breaking ocean wave made of white glazed porcelain rises diagonally from the lower left toward the upper middle of the image. Its long crest has torn, foam-like white edges, and hand-painted cobalt currents sweep across its deep curved face. The wave forms one broad open curve above a dark ultramarine trough. Low broken foam plates spread across the near water. On the right, a wide strip of calm sea reaches a pale almost-white horizon beneath a small coral-red sun. Fine glaze crackles and sharp rim highlights make the impossible ceramic water feel heavy and tangible. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "r5-porcelain-stage-0",
+      "prompt": "A colossal breaking ocean wave made of white glazed porcelain rises diagonally from the lower left toward the upper middle of the image. Its long crest has torn, foam-like white edges, and hand-painted cobalt currents sweep across its deep curved face. The wave forms one broad open curve above a dark ultramarine trough. Low broken foam plates spread across the near water. On the right, a wide strip of calm sea reaches a pale almost-white horizon beneath a small coral-red sun. Fine glaze crackles and sharp rim highlights make the impossible ceramic water feel heavy and tangible. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 2,
+      "name": "r5-porcelain-stage-1",
+      "prompt": "A broad white porcelain wave rises on the left above an ultramarine trough. The torn crest consists of overlapping angular plates with folded edges, cobalt bands and a few exposed matte white fibers. The lower wave face has long shallow horizontal shelves between glossy blue channels. Calm pale water and a small coral-red sun occupy the open right side. Cool light casts distinct shadows beneath the raised crest plates. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 3,
+      "name": "r5-porcelain-stage-2",
+      "prompt": "A tall white ridge shaped like a breaking wave overlooks a narrow cobalt water channel. Its steep face consists of stacked angular shelves with folded paper edges and isolated patches of glossy porcelain. Low terraced foothills fill the lower left, while the channel bends toward open pale space on the right. Blue brush-painted lines follow the contour of every ledge. The highest crest is sharply creased and casts a broad shadow onto the terraces below. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 4,
+      "name": "r5-porcelain-stage-3",
+      "prompt": "An elevated view across a white folded-paper mountain valley. A high ridgeline rises on the left with a few curved porcelain overhangs near its summit. Layered angular terraces descend toward a narrow ultramarine river running diagonally through the center. Broad dry paper shelves occupy the foreground, their fibrous cut edges catching cool daylight. A second lower ridge lies on the right beneath a pale sky and a small coral-red sun. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 5,
+      "name": "r5-porcelain-stage-4",
+      "prompt": "A vast mountain valley built from thick folded white paper, viewed diagonally from above. A tall jagged ridgeline occupies the left, and lower terraced slopes recede across the right. A narrow ultramarine river threads through the deep central valley. Bold cobalt brushwork follows the mountain contours; crisp folds cast long blue-gray shadows. The foreground consists of broad exposed paper ledges with visible fibers. The pale sky and a small coral-red sun occupy the upper quarter of the composition. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 7,
+      "name": "r5-porcelain-stage-5",
+      "prompt": "A white paper mountain valley with broad triangular folds rising from its left ridge. Two adjoining folds extend sideways like open wings while their bases still join the terraced slope. Cobalt lines run along the sharp creases. Small triangular sheets hover just above the far peaks, with pale sky visible underneath them. The ultramarine river remains in the lower valley, and the coral-red sun sits in the pale distance. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 8,
+      "name": "r5-porcelain-stage-6",
+      "prompt": "Enormous white origami bird forms rise above a folded mountain ridge. The nearest has two wide angular wings and a pointed folded neck, while its long lower paper tail still joins a narrow peak at the bottom left. Two smaller folded forms float farther away, separated from the terrain by open pale sky. Cobalt contour lines cross the white wing panels. The mountains occupy the lower third, with the blue river visible as a thin distant thread. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 9,
+      "name": "r5-porcelain-stage-7",
+      "prompt": "A huge white origami crane floats diagonally left of center against a pale sky, its broad angular wings marked with ultramarine brush lines. A long folded tail points down toward a small detached paper ridge near the bottom edge. Two smaller cranes float far away on the right. Wide areas of empty sky separate the birds and the remaining paper fragments. A small coral-red sun balances the composition near the upper right. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    },
+    {
+      "at": 10,
+      "name": "r5-porcelain-stage-8",
+      "prompt": "High in an immense pale almost-white sky, one monumental white origami crane floats diagonally across the left middle of the view. Its broad folded wings, pointed neck and long angular tail form a clean unmistakable silhouette. Hand-painted cobalt lines follow its creases, and cool light reveals the fibers and thickness of the paper. Two much smaller cranes float far away on the right beneath a small coral-red sun. Soft detached cloud wisps sit near the lower edge. Open sky surrounds every bird, creating a strong sense of scale and height. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.12
+    },
+    {
+      "at": 1.5,
+      "noise": 0.12
+    },
+    {
+      "at": 2,
+      "noise": 0.4
+    },
+    {
+      "at": 2.5,
+      "noise": 0.54
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.64
+    },
+    {
+      "at": 4,
+      "noise": 0.68
+    },
+    {
+      "at": 4.5,
+      "noise": 0.7
+    },
+    {
+      "at": 5,
+      "noise": 0.64
+    },
+    {
+      "at": 5.5,
+      "noise": 0.4
+    },
+    {
+      "at": 6,
+      "noise": 0.15
+    },
+    {
+      "at": 6.5,
+      "noise": 0.15
+    },
+    {
+      "at": 7,
+      "noise": 0.4
+    },
+    {
+      "at": 7.5,
+      "noise": 0.54
+    },
+    {
+      "at": 8,
+      "noise": 0.6
+    },
+    {
+      "at": 8.5,
+      "noise": 0.7
+    },
+    {
+      "at": 9,
+      "noise": 0.78
+    },
+    {
+      "at": 9.5,
+      "noise": 0.82
+    },
+    {
+      "at": 10,
+      "noise": 0.72
+    },
+    {
+      "at": 10.5,
+      "noise": 0.4
+    },
+    {
+      "at": 11,
+      "noise": 0.15
+    },
+    {
+      "at": 14,
+      "noise": 0.15
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 3,
+      "center": [
+        0.5,
+        0.42
+      ],
+      "radius": 0.62,
+      "zoom": 0.3,
+      "turn": 70,
+      "travel": [
+        0.1,
+        0.01
+      ]
+    },
+    {
+      "start": 2.7,
+      "duration": 3.6,
+      "center": [
+        1.02,
+        0.58
+      ],
+      "radius": 0.66,
+      "zoom": 0.1,
+      "turn": -100,
+      "travel": [
+        -0.16,
+        0.03
+      ]
+    },
+    {
+      "start": 6,
+      "duration": 3.5,
+      "center": [
+        0.62,
+        0.48
+      ],
+      "radius": 0.72,
+      "zoom": 0.2,
+      "turn": 80,
+      "travel": [
+        0.13,
+        -0.07
+      ]
+    },
+    {
+      "start": 9.2,
+      "duration": 3.8,
+      "center": [
+        0.86,
+        0.5
+      ],
+      "radius": 0.7,
+      "zoom": 0.1,
+      "turn": -45,
+      "travel": [
+        -0.12,
+        0.04
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324
+  ],
+  "seeds_by_frame": {
+    "0": 939205,
+    "12": 939206,
+    "24": 939207,
+    "36": 939208,
+    "48": 939209,
+    "60": 939210,
+    "72": 939211,
+    "84": 939212,
+    "96": 939213,
+    "108": 939214,
+    "120": 939215,
+    "132": 939216,
+    "144": 939217,
+    "156": 939218,
+    "168": 939219,
+    "180": 939220,
+    "192": 939221,
+    "204": 939222,
+    "216": 939223,
+    "228": 939224,
+    "240": 939225,
+    "252": 939226,
+    "264": 939227,
+    "276": 939228,
+    "288": 939229,
+    "300": 939230,
+    "312": 939231,
+    "324": 939232
+  },
+  "prefix_root": "projects/modern-model-study/exports/two-hour-lab-v001/r5-porcelain",
+  "prefix_through": 0
+}

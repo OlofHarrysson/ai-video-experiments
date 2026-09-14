@@ -37,6 +37,24 @@ def transform(points, seconds, motion, inverse=False):
 def mapping(points, seconds, phrases, inverse=False):
     selected = reversed(phrases) if inverse else phrases
     for phrase in selected:
+        if phrase.get("kind") == "wave":
+            # Horizontal displacement depends only on y, so its inverse is exact.
+            u = (seconds - phrase["start"]) / phrase["duration"]
+            if 0 < u < 1:
+                envelope = np.sin(np.pi * u) ** 2
+                offset = (
+                    phrase["amplitude"]
+                    * envelope
+                    * np.sin(
+                        2
+                        * np.pi
+                        * (points[..., 1] / phrase["wavelength"] - phrase["cycles"] * u)
+                        + phrase.get("phase", 0)
+                    )
+                )
+                points = points.copy()
+                points[..., 0] += -offset if inverse else offset
+            continue
         motion = {
             **phrase,
             "settle": phrase["duration"],
