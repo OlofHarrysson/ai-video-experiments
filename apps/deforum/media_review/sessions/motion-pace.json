@@ -1,0 +1,23 @@
+{
+  "title": "Same 28 paintings, two playback rhythms",
+  "selected": [
+    "twist-original",
+    "twist-faster"
+  ],
+  "clips": [
+    {
+      "id": "twist-original",
+      "label": "Twist \u2014 original pace",
+      "note": "2 paintings per second \u00b7 14 seconds",
+      "details": "All 28 original paintings are preserved, in order. Time between paintings is half a second, with eleven RIFE frames between each pair. Both deliver 24 fps with RIFE 4.25 at scale 1. The same transition artifacts still exist; speeding up does not repair them. The players align by elapsed seconds, not by corresponding painting.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m2-travelling-twist/finish/rife/preview.mp4"
+    },
+    {
+      "id": "twist-faster",
+      "label": "Twist \u2014 faster",
+      "note": "3 paintings per second \u00b7 9\u2153 seconds",
+      "details": "All 28 original paintings are preserved, in order. Time between paintings is one third of a second, with seven new RIFE frames between each pair. No additional diffusion. Motion and morphing play 1.5\u00d7 faster. Both deliver 24 fps with RIFE 4.25 at scale 1. The same transition artifacts still exist; speeding up does not repair them. The players align by elapsed seconds, not by corresponding painting.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m2-travelling-twist/faster/rife/preview.mp4"
+    }
+  ]
+}

@@ -12,13 +12,15 @@ from deforum_lab.image.warps import warp_at_time
 from deforum_lab.media.sheets import sheet
 
 
-def preview(case):
+def preview(case, start_frame=0):
     config = json.loads((HERE / "configs" / f"{case}.json").read_text())
-    original = lab.APP / config["prefix_root"] / "anchors/0000.png"
+    original = lab.APP / config["prefix_root"] / f"anchors/{start_frame:04d}.png"
     image = Image.open(original).convert("RGB")
     image.thumbnail((720, 480))
     rgb = np.asarray(image)
     out = lab.OUT / "motion-only" / case
+    if start_frame:
+        out = out / f"from-{start_frame:04d}"
     out.mkdir(parents=True, exist_ok=True)
     h, w = rgb.shape[:2]
     process = subprocess.Popen(
@@ -50,8 +52,8 @@ def preview(case):
         stdin=subprocess.PIPE,
     )
     samples = []
-    for frame in range(round(config["duration"] * 24)):
-        warped = warp_at_time(rgb, 0, frame / 24, config["phrases"])
+    for frame in range(start_frame, round(config["duration"] * 24)):
+        warped = warp_at_time(rgb, start_frame / 24, frame / 24, config["phrases"])
         process.stdin.write(warped.tobytes())
         if frame in (0, 48, 96, 144, 192, 240, 288, 312):
             pic = Image.fromarray(warped)
@@ -70,5 +72,7 @@ def preview(case):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("cases", nargs="+")
-    for name in parser.parse_args().cases:
-        preview(name)
+    parser.add_argument("--from-frame", type=int, default=0)
+    args = parser.parse_args()
+    for name in args.cases:
+        preview(name, args.from_frame)

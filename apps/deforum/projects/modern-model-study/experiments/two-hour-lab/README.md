@@ -10,7 +10,7 @@ Completed 2026-09-14 17:42:29 UTC, approximately two hours after starting.
 
 The assistant shortlist is [Porcelain Weather — stronger transformation](../../exports/two-hour-lab-v001/r7-porcelain-travel-noise/finish/rife/preview.mp4) (14s) and [Velvet Harbour — short edit](../../exports/two-hour-lab-v001/velvet-harbour-cut/preview.mp4) (11s). These are creative candidates awaiting Olof’s feedback, not selected production defaults. Both retain recurrent previous-image initialization, half-second paintings, three Euler intervals, CFG1, Lanczos motion and 24 fps/RIFE finishing. No interpolated frame feeds back into generation.
 
-[Open the two-film reviewer](http://localhost:3028/). Separate pages keep comparisons manageable: [porcelain revisions](http://localhost:3028/two-hour-porcelain), [velvet revisions](http://localhost:3028/two-hour-velvet), [noise/sampling controls](http://localhost:3028/two-hour-controls), [guidance/text controls](http://localhost:3028/two-hour-conditioning), and [RAW/Turbo diagnostic](http://localhost:3028/two-hour-models). The previous task remains at [transformation stages](http://localhost:3028/transition-stages).
+[Open the two-film reviewer](http://localhost:3028/two-hour-lab). Separate pages keep comparisons manageable: [porcelain revisions](http://localhost:3028/two-hour-porcelain), [velvet revisions](http://localhost:3028/two-hour-velvet), [noise/sampling controls](http://localhost:3028/two-hour-controls), [guidance/text controls](http://localhost:3028/two-hour-conditioning), and [RAW/Turbo diagnostic](http://localhost:3028/two-hour-models). The previous task remains at [transformation stages](http://localhost:3028/transition-stages).
 
 | Round | Question | Finding |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 # Deforum experiment
 
-Current work: [the first package migration is complete](../../docs/refactor-plan.md#first-package-migration--2026-09-14). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The most recent [earlier-settling test](projects/modern-model-study/experiments/early-settle.md) uses recurrent Krea, three sampling intervals, half-second repaints, a 24 fps timeline, Lanczos warps and RIFE. Olof has parked further quality experiments for now.
+Current work: [stronger spatial motion](projects/modern-model-study/experiments/motion-hour/README.md), following the [two-hour autonomous learning session](projects/modern-model-study/experiments/two-hour-lab/README.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The uv package migration is complete; new experiments use the shared `deforum_lab` modules.
 
 ## Local development with uv
 

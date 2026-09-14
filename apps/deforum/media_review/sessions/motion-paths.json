@@ -1,0 +1,30 @@
+{
+  "title": "One opening, three motion paths",
+  "selected": [
+    "m2-travelling-twist",
+    "m3-flowing-wave"
+  ],
+  "clips": [
+    {
+      "id": "m1-sweeping-camera",
+      "label": "Broad camera sweep",
+      "note": "Zoom, pan and broad turns",
+      "details": "The wave comes closer and the horizon tilts. The first 5.5 seconds are strongest. Later framing becomes cramped and reflected edge patterns are visible.\n\nAll three start from the same porcelain wave. Opening, prompts, noise curve, seed sequence, repaint timing and sampler are identical; only spatial motion changes. Recurrent Krea Turbo, three Euler intervals, CFG1, two paintings per second, Lanczos and RIFE 4.25 at 24 fps. Reflected borders and interpolation artifacts remain; these are motion studies, not polished films.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m1-sweeping-camera/finish/rife/preview.mp4"
+    },
+    {
+      "id": "m2-travelling-twist",
+      "label": "Travelling twist",
+      "note": "Wave turns upright \u2192 folds aside \u2192 cranes",
+      "details": "Localized twist centres change over time. The strongest change in composition of these three; a larger crane appears around 9 seconds. Some double edges and smearing remain in that transition.\n\nAll three start from the same porcelain wave. Opening, prompts, noise curve, seed sequence, repaint timing and sampler are identical; only spatial motion changes. Recurrent Krea Turbo, three Euler intervals, CFG1, two paintings per second, Lanczos and RIFE 4.25 at 24 fps. Reflected borders and interpolation artifacts remain; these are motion studies, not polished films.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m2-travelling-twist/finish/rife/preview.mp4"
+    },
+    {
+      "id": "m3-flowing-wave",
+      "label": "Elastic travelling wave",
+      "note": "Different image bands slide back and forth",
+      "details": "Direct horizontal wave deformation under the same repaint recipe. The 5\u20137 second section is clearest. Severe ghosting occurs around 8.6\u20138.9 seconds, and the ending has stretched/repeated borders.\n\nAll three start from the same porcelain wave. Opening, prompts, noise curve, seed sequence, repaint timing and sampler are identical; only spatial motion changes. Recurrent Krea Turbo, three Euler intervals, CFG1, two paintings per second, Lanczos and RIFE 4.25 at 24 fps. Reflected borders and interpolation artifacts remain; these are motion studies, not polished films.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m3-flowing-wave/finish/rife/preview.mp4"
+    }
+  ]
+}

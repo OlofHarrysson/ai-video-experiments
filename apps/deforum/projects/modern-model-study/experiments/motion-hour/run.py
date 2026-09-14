@@ -16,7 +16,8 @@ lab.OUT = HERE.parents[1] / "exports/motion-hour-v001"
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "stage", choices=["prepare", "render", "check", "pair", "full", "delivery"]
+        "stage",
+        choices=["opening", "prepare", "render", "check", "pair", "full", "delivery"],
     )
     parser.add_argument("--cases", nargs="+", required=True)
     parser.add_argument("--batch", required=True)
@@ -24,10 +25,13 @@ if __name__ == "__main__":
     parser.add_argument("--last-frame", type=int)
     args = parser.parse_args()
     lab.CASES, lab.BATCH = args.cases, args.batch
-    if args.stage == "render":
+    if args.stage in ("opening", "render"):
         if not args.deployment:
             parser.error("--deployment required")
-        lab.render(args.deployment, args.last_frame)
+        if args.stage == "opening":
+            lab.openings(args.deployment)
+        else:
+            lab.render(args.deployment, args.last_frame)
     elif args.stage in ("pair", "full"):
         lab.finish(args.stage)
     else:

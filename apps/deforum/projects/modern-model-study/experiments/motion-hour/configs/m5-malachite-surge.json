@@ -1,0 +1,279 @@
+{
+  "case": "m5-malachite-surge",
+  "seed": 974013,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "malachite-0",
+      "prompt": "Just above a narrow mirror-silver stream inside an immense underground passage carved from banded malachite. A massive scalloped arch fills the near left and upper edges, its polished emerald ridges resembling the overlapping plates of a fossil. A broken arch foot occupies the lower right. Beyond it, two smaller irregular arches recede toward a bright slit slightly right of center. The stream is broad at the bottom edge and narrows between deep green banks toward that distant light. Through the slit, a few enormous violet leaves glow against saffron mist. Silver seams trace the stone's peacock-green whorls; reflected water light illuminates the underside of the nearest arch. The central passage is wide, luminous and unobstructed, with monumental dark forms close on either side. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "malachite-0",
+      "prompt": "Just above a narrow mirror-silver stream inside an immense underground passage carved from banded malachite. A massive scalloped arch fills the near left and upper edges, its polished emerald ridges resembling the overlapping plates of a fossil. A broken arch foot occupies the lower right. Beyond it, two smaller irregular arches recede toward a bright slit slightly right of center. The stream is broad at the bottom edge and narrows between deep green banks toward that distant light. Through the slit, a few enormous violet leaves glow against saffron mist. Silver seams trace the stone's peacock-green whorls; reflected water light illuminates the underside of the nearest arch. The central passage is wide, luminous and unobstructed, with monumental dark forms close on either side. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 1.5,
+      "name": "malachite-1",
+      "prompt": "At the mouth of a malachite passage, huge cropped green arch shoulders occupy the extreme left and right edges and the upper rim extends beyond the view. The silver stream leads into a jungle of violet foliage visible across the broad central opening. Thick emerald roots clasp the nearest stone, with purple leaf blades sprouting between its mineral plates. Farther ahead, two leaning trunks form a smaller pointed opening over the water. Saffron light penetrates the leaf canopy, separating the close dark stone from the luminous vegetation beyond. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 3,
+      "name": "malachite-2",
+      "prompt": "At stream level within a towering violet jungle. An enormous glossy purple leaf is cropped across the upper left, and a ridged emerald trunk stands close along the right edge. The silver stream bends gently right between thick exposed roots. Farther ahead, two smaller trunks lean together into a pointed arch slightly right of center, with bright yellow mist visible between them. Broad translucent violet leaves form overlapping fans at several distances. Emerald root ridges carry mineral-like bands, and silver droplets shine along the thick leaf veins. Vegetation fills the surroundings from the waterline to the high canopy. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 4.5,
+      "name": "malachite-3",
+      "prompt": "Deep within a violet jungle, the undersides of two immense ribbed leaves sweep across the upper corners, their thick stems cropped by the side edges. A close root curls out of view at the lower left. The silver stream widens across the foreground and narrows toward a small sunlit gap between distant trunks. Beyond that gap, vermilion rock faces and a strip of saffron sky are visible. Purple leaf veins glow like stained glass above dark emerald roots; patches of orange mineral crust cover the roots nearest the distant opening. Clear water and open space occupy the middle of the view. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 6,
+      "name": "malachite-4",
+      "prompt": "A broad silver stream crosses the boundary between a violet jungle and a vermilion rock gorge. Huge purple leaves and green roots remain close along the left edge, while a sunlit red cliff shoulder rises close on the right. At the upper corners, thick leaf ribs have hard orange mineral edges. The opening between the foliage and the cliff reveals a spacious canyon beneath saffron sky. Two separate red buttresses stand farther along the stream, their curved inner faces framing a small luminous gap. Long silver reflections connect the shaded foreground water to the bright canyon beyond. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 7.5,
+      "name": "malachite-5",
+      "prompt": "At the sunlit entrance to a vast vermilion canyon. A massive curved red cliff is cropped close on the left; a dark glassy rock shoulder fills the near right edge. A few violet leaf tips hang at the extreme upper left. Open saffron sky spans the upper middle between the separate cliffs. The silver stream runs between their broad bases and curves left toward smaller red formations in the distance. Layered orange stone carries sweeping emerald mineral veins, and polished obsidian seams catch narrow white reflections. Deep shadows at the cliff feet contrast with the bright open land ahead. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 9,
+      "name": "malachite-6",
+      "prompt": "Low over a silver stream inside an open vermilion canyon. Two enormous separated rock buttresses occupy the outer edges, their nearest surfaces heavily cropped. Beyond them, a broad ochre basin opens beneath a saffron sky, with three slender curved red monoliths diminishing toward the horizon. The stream makes a long bright S through the basin. Emerald mineral bands wrap the near cliffs, and black glass seams divide their sunlit orange faces. A low pale sun shines through the distant gap; long shadows across the canyon floor reveal the distance between each formation. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    },
+    {
+      "at": 10.5,
+      "name": "malachite-7",
+      "prompt": "Above a widening mirror-silver river in an immense open ochre basin. Large vermilion cliff shoulders are cropped at the far left and right, with uninterrupted saffron sky above the central landscape. Three tall curved red monoliths stand widely separated in the middle distance, their black glass seams and thin emerald bands catching the low sun. The river bends between them toward a pale luminous horizon. Broad empty stretches of sunlit mineral ground surround the monoliths; distant red ridges are softened by golden haze. The foreground water carries long bright reflections beneath the dark edges of the nearest cliffs. An intricate surreal landscape painting with the tactile depth of carved minerals and translucent botanical specimens. Peacock green, electric violet and vermilion surfaces catch sharp silver highlights and warm saffron light, with deep blue-black recesses. Broad sculptural shapes carry delicate mineral bands, leaf veins and weathered edges. Strong foreground-to-distance scale differences, crisp surfaces, luminous atmospheric depth and a wide cinematic composition."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.12
+    },
+    {
+      "at": 0.5,
+      "noise": 0.25
+    },
+    {
+      "at": 1,
+      "noise": 0.45
+    },
+    {
+      "at": 1.5,
+      "noise": 0.58
+    },
+    {
+      "at": 2,
+      "noise": 0.64
+    },
+    {
+      "at": 2.5,
+      "noise": 0.68
+    },
+    {
+      "at": 3,
+      "noise": 0.7
+    },
+    {
+      "at": 3.5,
+      "noise": 0.68
+    },
+    {
+      "at": 4,
+      "noise": 0.58
+    },
+    {
+      "at": 4.5,
+      "noise": 0.5
+    },
+    {
+      "at": 5,
+      "noise": 0.5
+    },
+    {
+      "at": 5.5,
+      "noise": 0.58
+    },
+    {
+      "at": 6,
+      "noise": 0.62
+    },
+    {
+      "at": 6.5,
+      "noise": 0.68
+    },
+    {
+      "at": 7,
+      "noise": 0.74
+    },
+    {
+      "at": 7.5,
+      "noise": 0.78
+    },
+    {
+      "at": 8,
+      "noise": 0.78
+    },
+    {
+      "at": 8.5,
+      "noise": 0.7
+    },
+    {
+      "at": 9,
+      "noise": 0.6
+    },
+    {
+      "at": 9.5,
+      "noise": 0.5
+    },
+    {
+      "at": 10,
+      "noise": 0.42
+    },
+    {
+      "at": 10.5,
+      "noise": 0.35
+    },
+    {
+      "at": 11,
+      "noise": 0.25
+    },
+    {
+      "at": 12,
+      "noise": 0.25
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 3.3,
+      "center": [
+        0.78,
+        0.46
+      ],
+      "radius": 0.75,
+      "zoom": 0.75,
+      "turn": 12,
+      "travel": [
+        -0.0825,
+        0.01
+      ]
+    },
+    {
+      "start": 2.8,
+      "duration": 3.5,
+      "center": [
+        0.78,
+        0.46
+      ],
+      "radius": 0.75,
+      "zoom": 0.72,
+      "turn": -18,
+      "travel": [
+        0.14250000000000002,
+        -0.015
+      ]
+    },
+    {
+      "start": 5.8,
+      "duration": 3.6,
+      "center": [
+        0.78,
+        0.46
+      ],
+      "radius": 0.75,
+      "zoom": 0.675,
+      "turn": 12,
+      "travel": [
+        -0.0975,
+        0.01
+      ]
+    },
+    {
+      "start": 8.9,
+      "duration": 2.6,
+      "center": [
+        0.78,
+        0.46
+      ],
+      "radius": 0.75,
+      "zoom": 0.5249999999999999,
+      "turn": -6,
+      "travel": [
+        0.037500000000000006,
+        0
+      ]
+    },
+    {
+      "kind": "wave",
+      "start": 2.5,
+      "duration": 6,
+      "amplitude": 0.07,
+      "wavelength": 1.1,
+      "cycles": 1,
+      "phase": 0
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "seeds_by_frame": {
+    "0": 974013,
+    "12": 974014,
+    "24": 974015,
+    "36": 974016,
+    "48": 974017,
+    "60": 974018,
+    "72": 974019,
+    "84": 974020,
+    "96": 974021,
+    "108": 974022,
+    "120": 974023,
+    "132": 974024,
+    "144": 974025,
+    "156": 974026,
+    "168": 974027,
+    "180": 974028,
+    "192": 974029,
+    "204": 974030,
+    "216": 974031,
+    "228": 974032,
+    "240": 974033,
+    "252": 974034,
+    "264": 974035,
+    "276": 974036
+  },
+  "prefix_root": "projects/modern-model-study/exports/motion-hour-v001/m4-malachite-run",
+  "prefix_through": 0
+}

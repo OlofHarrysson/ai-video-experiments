@@ -1,0 +1,30 @@
+{
+  "title": "More zoom, or choose a better path?",
+  "selected": [
+    "m4-malachite-run",
+    "m6-steer-through-gap"
+  ],
+  "clips": [
+    {
+      "id": "m4-malachite-run",
+      "label": "Forward travel",
+      "note": "4.35\u00d7 cumulative zoom",
+      "details": "The original path moves into the mineral passage and transforms its surfaces into canyon walls, but retains the large violet leaf in the middle. Twelve seconds, two paintings per second.\n\nKrea Turbo generates the opening and every new painting. Every repaint starts from the warped previous painting, with text, three Euler sampling intervals and CFG1. Motion uses time-based Lanczos warps; RIFE 4.25 fills the gaps and never feeds back into generation. Both films deliver 24 fps.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m4-malachite-run/finish/rife/preview.mp4"
+    },
+    {
+      "id": "m5-malachite-surge",
+      "label": "Stronger forward travel",
+      "note": "7.69\u00d7 cumulative zoom",
+      "details": "Same opening, prompts, noise, seeds and timing. Only each zoom amount is increased 1.5\u00d7. It exposes more orange canyon, but also enlarges the obstructing leaf. Twelve seconds, two paintings per second.\n\nKrea Turbo generates the opening and every new painting. Every repaint starts from the warped previous painting, with text, three Euler sampling intervals and CFG1. Motion uses time-based Lanczos warps; RIFE 4.25 fills the gaps and never feeds back into generation. Both films deliver 24 fps.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m5-malachite-surge/finish/rife/preview.mp4"
+    },
+    {
+      "id": "m6-steer-through-gap",
+      "label": "Steer through the gap",
+      "note": "Preserved opening \u2192 off-centre push",
+      "details": "Preserves the exact first six seconds of Forward travel, then adds an off-centre zoom and pan toward the stream. The leaf moves right and a clearer route into the canyon appears. Eleven new repaints; prompts and noise are unchanged. Twelve seconds, two paintings per second.\n\nKrea Turbo generates the opening and every new painting. Every repaint starts from the warped previous painting, with text, three Euler sampling intervals and CFG1. Motion uses time-based Lanczos warps; RIFE 4.25 fills the gaps and never feeds back into generation. Both films deliver 24 fps.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m6-steer-through-gap/finish/rife/preview.mp4"
+    }
+  ]
+}

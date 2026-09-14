@@ -1,0 +1,23 @@
+{
+  "title": "More movement: twist and forward travel",
+  "selected": [
+    "twist-fast",
+    "canyon-fast"
+  ],
+  "clips": [
+    {
+      "id": "twist-fast",
+      "label": "Porcelain \u2014 travelling twist",
+      "note": "Wave turns upright \u2192 folds aside \u2192 cranes",
+      "details": "Stronger localized turns around changing centres create a much larger composition change than the prior shot. All 28 paintings are preserved in 9\u2153 seconds: three paintings per displayed second, seven RIFE frames between them. This is 1.5\u00d7 faster than the fourteen-second generation timeline. The crane transition still has smearing around 5.75\u20135.92 seconds, and reflected left-edge patterns remain.\n\nKrea Turbo generates the opening and every new painting. Every repaint starts from the warped previous painting, with text, three Euler sampling intervals and CFG1. Motion uses time-based Lanczos warps; RIFE 4.25 fills the gaps and never feeds back into generation. Both films deliver 24 fps.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m2-travelling-twist/faster/rife/preview.mp4"
+    },
+    {
+      "id": "canyon-fast",
+      "label": "Malachite \u2014 through the gap",
+      "note": "Green passage \u2192 violet foliage \u2192 orange canyon",
+      "details": "A forward zoom with alternating lateral movement and a mild elastic wave. After four seconds in this faster edit, the path steers toward the stream beside the large leaf, opening a clearer view into the canyon. All 24 paintings are preserved in eight seconds: three paintings per displayed second, seven RIFE frames between them. Some doubled translucent contours remain during the canyon conversion around 4.2\u20135.2 seconds. The leaf and near cliff still enlarge; this is an image-space passage, not reconstructed 3D geometry.\n\nKrea Turbo generates the opening and every new painting. Every repaint starts from the warped previous painting, with text, three Euler sampling intervals and CFG1. Motion uses time-based Lanczos warps; RIFE 4.25 fills the gaps and never feeds back into generation. Both films deliver 24 fps.",
+      "source": "projects/modern-model-study/exports/motion-hour-v001/m6-steer-through-gap/faster/rife/preview.mp4"
+    }
+  ]
+}

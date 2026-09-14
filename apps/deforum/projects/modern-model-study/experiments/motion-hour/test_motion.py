@@ -10,15 +10,21 @@ from deforum_lab.image.warps import mapping
 class MotionTest(unittest.TestCase):
     def test_composed_mapping_has_exact_inverse(self):
         phrases = [
-            dict(start=0, duration=3, zoom=0.3, turn=25, travel=[0.1, -0.04]),
-            dict(
-                kind="wave",
-                start=1,
-                duration=5,
-                amplitude=0.2,
-                wavelength=0.8,
-                cycles=1.5,
-            ),
+            {
+                "start": 0,
+                "duration": 3,
+                "zoom": 0.3,
+                "turn": 25,
+                "travel": [0.1, -0.04],
+            },
+            {
+                "kind": "wave",
+                "start": 1,
+                "duration": 5,
+                "amplitude": 0.2,
+                "wavelength": 0.8,
+                "cycles": 1.5,
+            },
         ]
         p = np.random.default_rng(22).uniform(0, 1.5, (300, 2))
         for t in [0, 1, 2, 3, 5, 6, 8]:
@@ -28,9 +34,14 @@ class MotionTest(unittest.TestCase):
 
     def test_wave_returns_to_identity_and_moves_rows_differently(self):
         wave = [
-            dict(
-                kind="wave", start=0, duration=4, amplitude=0.2, wavelength=1, cycles=1
-            )
+            {
+                "kind": "wave",
+                "start": 0,
+                "duration": 4,
+                "amplitude": 0.2,
+                "wavelength": 1,
+                "cycles": 1,
+            }
         ]
         p = np.array([[0.5, 0.25], [0.5, 0.75]])
         for t in [-1, 0, 4, 5]:

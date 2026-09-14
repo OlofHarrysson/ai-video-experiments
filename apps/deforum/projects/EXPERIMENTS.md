@@ -1,6 +1,6 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-14. **92 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 92 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-14. **93 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 93 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
@@ -11,6 +11,7 @@ Snapshot: 2026-09-14. **92 experiment entries across 14 projects** are listed be
 | Longer, changing scenes | [Dynamic journey](modern-model-study/experiments/dynamic-journey.md) |
 | Prompts and transformation strength | [Prompt bridges](modern-model-study/experiments/prompt-bridges.md), [transition ramps](modern-model-study/experiments/transition-ramps.md), [CFG audition](modern-model-study/experiments/cfg-audition.md) |
 | Timing and finishing | [24 fps migration](modern-model-study/experiments/timebase24.md), [faster pacing](modern-model-study/experiments/faster-pacing.md), [repaint frequency](modern-model-study/experiments/refresh-rate.md) |
+| Stronger spatial motion and forward travel | [One-hour motion lab](modern-model-study/experiments/motion-hour/README.md) |
 | Spatial controls | [Motion catalogue](motion-guide-study/experiments/motion-catalog.md), [three effects](motion-guide-study/experiments/motion-effects.md) |
 | Models and degradation | [Opening artwork](modern-model-study/experiments/opening-art.md), [repeated repainting](modern-model-study/experiments/repaint-diagnosis.md), [preservation controls](modern-model-study/experiments/continuity-controls.md) |
 | Reference Deforum appearance | [Brain Entity parameters](brain-entity-study/experiments/parameters.md), [RIFE results](brain-entity-study/experiments/rife-results.md) |
@@ -21,7 +22,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 50 notes
+### modern-model-study — 51 notes
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)
@@ -41,6 +42,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 - [Hold a moving scene, then deliberately transform it](modern-model-study/experiments/hold-transform.md)
 - [Krea: lower repaint strength](modern-model-study/experiments/krea-low-repaint.md)
 - [No-motion latent feedback](modern-model-study/experiments/latent-feedback.md)
+- [One hour of stronger spatial motion](modern-model-study/experiments/motion-hour/README.md)
 - [Continuous movement through the Oracle transition](modern-model-study/experiments/motion-oracle.md)
 - [Five independent opening-noise probes](modern-model-study/experiments/noise-openings.md)
 - [Opening artwork audition](modern-model-study/experiments/opening-art.md)
