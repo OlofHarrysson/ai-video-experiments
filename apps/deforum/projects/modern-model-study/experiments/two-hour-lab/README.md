@@ -37,3 +37,45 @@ Different Euler spacing changes the position of windows and the width of the cen
 Compare a hard prompt switch at 3s with a linear blend from the old text embedding to the new embedding over 2–4s. Both use the same new concise prompt pair, the original capped noise ramp, CFG1, three original Euler intervals and identical recurrent input, seeds and motion. This tests embedding blending against switching; comparison with earlier elaborate descriptions would also change wording.
 
 The active Krea tokenizer returns one 97-token batch for both complete inputs, with common suffix positions aligned. The intended conditioning shape follows the inspected Krea adapter; no hidden-state tensor was exported. Before recurrent inference, test each blend endpoint against its direct prompt on the exact same image/noise, plus a CFG1 encoded-empty-negative check. Require pixel-identical outputs. This empirical gate supplements the tokenizer/source check; a failed endpoint stops the experiment. No padding machinery or custom model node is added.
+
+## Round 5: two complete changing-world shots
+
+Generate and screen fresh same-model openings for the [Velvet Flood and Porcelain Weather concepts](creative-plan.md). Each fourteen-second shot has twenty-eight paintings at half-second intervals, three distinct environments and two staged transitions. Use the established three-interval Euler recipe and CFG1. Each transition rises 0.40→0.54→0.60→0.64→0.68→0.70, returns through 0.64/0.40 and settles at 0.15. This is a creative application, not a causal two-arm comparison.
+
+The main agent increases the proposed motion amplitudes moderately to make spatial movement readable; each phrase still eases and stops, with a wider final view. Convert horizontal normalized-width coordinates to the package’s normalized-height units using 1536/1024. Keep the final half-second motion settled. Screen openings before feedback and inspect the raw scene transitions before RIFE. These new compositions test whether our current recipe works beyond the dominant spiral shape.
+
+## Operational checkpoint
+
+At approximately 16:25 UTC, the account balance had fallen by about $0.49 from the session-start snapshot; current account spend rate was $0.746/hour, including the owned GPU and storage. This remains well below the $10 cap. The working Pod and cached model/runtime are unchanged. The shared package's 54 offline tests pass.
+
+The local redirected SSH progress stream became stale while remote inference and archival continued. Direct remote receipts corrected an initially premature collection-stall diagnosis; subsequent rounds write their progress log on the Pod. Recorded centrally as AF-20260914-182316. No job was resubmitted or model/runtime changed in response.
+
+## Round 3 findings and opening review
+
+All 45 jobs and 2,522 cumulative archive entries are verified locally. Zeroed conditioning at CFG1.3 adds considerably more fine structure and background buildings than CFG1. Encoded-empty and subject-negative branches produce cleaner broad surfaces, but neither opens the central shell into a full city. The old-subject negative is not an object-removal switch: the shell remains especially solid in its arm. The low-noise CFG1 ending retains each branch's established design. Keep these as examples of guidance direction changing appearance, not a smoothness solution.
+
+Reviewed raw frames 54/66/78/84/90/96/108/132/180 for these comparisons. The new creative openings both pass: Velvet Flood has readable side curtains, reflected water and an intentionally open middle; Porcelain Weather has a strongly sculpted white/cobalt wave and ample pale sky. Continue both unchanged into their planned feedback shots. The prompt blend's old/new endpoints and CFG1 empty-negative check all reproduce the corresponding direct painting pixel-for-pixel in the active runtime; the thirty-painting recurrent blend/switch comparison is now running.
+
+## Round 6: undistilled Krea RAW diagnostic
+
+The research note initially recommended deferring because storage, transfer speed and execution time were unknown. A fresh check found about 150 GB free on the Pod’s temporary disk, and a five-minute-bounded download completed with the exact published SHA-256 at 16:34:28 UTC. RAW is stored only in owned temporary disk, with one owned model-directory symlink; both will be removed. No runtime/node installation or retained-volume resize was needed.
+
+Test the porcelain-wave prompt at 1024² with each model generating its own opening. This preserves same-model initialization throughout each arm, rather than feeding a Turbo painting into RAW. Keep the prompt unchanged, motion disabled and six paired repaint seeds. RAW uses its official full 52-interval float32 grid at mu0.90625 and Comfy CFG4.5 with encoded-empty conditioning; Turbo uses eight full intervals at mu1.15 and CFG1. For repaints both start at noise0.60, but RAW takes twenty intervals following its full grid’s tail, while Turbo keeps our established three intervals. Time one RAW opening and repaint before committing to the remainder; cap this diagnostic at fourteen jobs and about twenty minutes of inference.
+
+Compare each arm’s retained geometry/detail against its own opening and distinguish adjacent redraw from accumulated drift. Different openings, checkpoint training, guidance and integration cost make this a model-recipe screen, not proof about distillation alone. Keep RAW outputs separate from the ongoing Turbo creative films.
+
+## Round 4 findings
+
+The five fixed-input endpoint checks pass, and all thirty recurrent jobs are verified locally in the 3,123-entry cumulative archive. Blending the two text embeddings changes which buildings emerge and the geometry inside the central aperture, but the dominant shell remains in both arms. The main central opening still appears between 3.5 and 3.75 seconds in both. This establishes that the blend is active and reproducible, not that it solves abrupt semantic change. Reviewed every selected comparison at 2.25/2.75/3.25/3.5/3.75/4/4.5/5.5/7.5 seconds. Keep deliberate descriptive stages as the creative default; preserve embedding blending as an available experimental control.
+
+## Round 5 first painting review
+
+Porcelain Weather visibly changes its glaze/foam into folded material and terraced land over 3–5s. Small origami cranes appear by 8–9s; the dominant wave persists as a curved paper ridge. The intended full replacement with a large airborne crane does not happen. Late zoom-out introduces conspicuous reflected edge patterns during the low-noise hold. This is a motion-boundary issue distinct from repaint redesign. Reviewed raw paintings at 0/2/3/4/5/6/7/8/9/10/12/13.5s; adjacent transition inspection and finishing remain pending.
+
+## Round 7: improve the porcelain ending
+
+Three bounded branches use the exact existing opening and retain every earlier painting. First, remove only the final zoom-out phrase after 10.2s, restarting from the existing 10s painting; seven new repaints isolate that motion-boundary problem. Second, restart at 7s, replace the 7.3–10.5s phrase with a stronger push toward the right-hand open sky, and omit the final pullback; thirteen new repaints test whether reframing can make the composition develop beyond the inherited wave. Third, keep that exact revised motion but raise only the second transition’s noise to 0.70/0.78/0.82/0.72 at 8.5/9/9.5/10s. It tests whether a stronger transition can replace the large form, while explicitly checking the expected risk of a larger redraw. All three retain text, CFG1, original three-interval Euler placement, painting times, seeds and 24 fps/RIFE. No mask or outpainting node is added.
+
+## Round 8: curtains become sails
+
+The independent [Velvet painting review](velvet-review.md) identifies a coherent mushroom harbour, but large curtains/mushrooms persist while new boats appear in the middle. Accept its single ten-repaint branch from the existing 6.5s painting: explicitly describe those dominant red side forms as partly furled triangular sails, then as sails mounted on hulls, ending in open ocean. Keep the existing rise to 0.70, return earlier at 10s, shorten the turning phrase and replace the final pullback with a small translation. Finish at twelve seconds with settled motion. This deliberately combines creative changes; it tests a practical revision rather than isolating one parameter. Inspect whether an existing side form becomes a sail, rather than merely adding a small new boat. The package's scale component is global; its twist is localized by radius, so “local zoom-out” in the independent note is an imprecise description of the composed motion.

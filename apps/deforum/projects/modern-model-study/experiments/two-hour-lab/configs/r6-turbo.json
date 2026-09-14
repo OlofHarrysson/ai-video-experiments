@@ -1,0 +1,66 @@
+{
+  "case": "r6-turbo",
+  "seed": 939205,
+  "duration": 3.5,
+  "cadence": 12,
+  "cfg": 1.0,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "porcelain-wave",
+      "prompt": "A colossal breaking ocean wave made of white glazed porcelain rises diagonally from the lower left toward the upper middle of the image. Its long crest has torn, foam-like white edges, and hand-painted cobalt currents sweep across its deep curved face. The wave forms one broad open curve above a dark ultramarine trough. Low broken foam plates spread across the near water. On the right, a wide strip of calm sea reaches a pale almost-white horizon beneath a small coral-red sun. Fine glaze crackles and sharp rim highlights make the impossible ceramic water feel heavy and tangible. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "porcelain-wave",
+      "prompt": "A colossal breaking ocean wave made of white glazed porcelain rises diagonally from the lower left toward the upper middle of the image. Its long crest has torn, foam-like white edges, and hand-painted cobalt currents sweep across its deep curved face. The wave forms one broad open curve above a dark ultramarine trough. Low broken foam plates spread across the near water. On the right, a wide strip of calm sea reaches a pale almost-white horizon beneath a small coral-red sun. Fine glaze crackles and sharp rim highlights make the impossible ceramic water feel heavy and tangible. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72
+  ],
+  "seeds_by_frame": {
+    "0": 939205,
+    "12": 939206,
+    "24": 939207,
+    "36": 939208,
+    "48": 939209,
+    "60": 939210,
+    "72": 939211
+  },
+  "opening": {
+    "prompt": "A colossal breaking ocean wave made of white glazed porcelain rises diagonally from the lower left toward the upper middle of the image. Its long crest has torn, foam-like white edges, and hand-painted cobalt currents sweep across its deep curved face. The wave forms one broad open curve above a dark ultramarine trough. Low broken foam plates spread across the near water. On the right, a wide strip of calm sea reaches a pale almost-white horizon beneath a small coral-red sun. Fine glaze crackles and sharp rim highlights make the impossible ceramic water feel heavy and tangible. A surreal handmade miniature photographed with crisp sculptural detail and deep focus. Chalk-white surfaces carry flowing ultramarine brushwork and a few small coral-red accents. Grazing cool daylight reveals glaze cracks, pressed ridges or paper fibers appropriate to each material, with strong soft-edged blue-gray shadows. Spacious, asymmetrical wide landscape composition and restrained color.",
+    "seed": 939205,
+    "width": 1024,
+    "height": 1024
+  },
+  "opening_sigmas": [
+    1.0,
+    0.956723690032959,
+    0.9045307636260986,
+    0.8403487801551819,
+    0.7595109343528748,
+    0.6545668244361877,
+    0.5128440856933594,
+    0.31090107560157776,
+    0.0
+  ],
+  "negative_prompt": "",
+  "prefix_root": "projects/modern-model-study/exports/two-hour-lab-v001/r6-turbo",
+  "prefix_through": 0
+}

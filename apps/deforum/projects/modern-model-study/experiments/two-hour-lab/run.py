@@ -15,6 +15,7 @@ from deforum_lab.infrastructure.pod import PodClient
 from deforum_lab.paths import AppPaths
 from deforum_lab.records import copy_verified, read, require, save, sha
 from deforum_lab.rendering.feedback import render_paintings
+from deforum_lab.rendering.graphs import graph as model_graph
 from deforum_lab.rendering.graphs import node, repaint_graph
 from deforum_lab.rendering.schedules import recipe
 from deforum_lab.rendering.verification import validate_execution
@@ -30,6 +31,8 @@ BATCH = "session"
 
 def conditioning_controls(graph, config, seconds):
     """Experimental conditioning changes, kept outside the recurrent loop."""
+    if "model_filename" in config:
+        graph["1"]["inputs"]["unet_name"] = config["model_filename"]
     for event in config.get("cfg_schedule", []):
         if event["at"] <= seconds:
             graph["9"]["inputs"]["cfg"] = event["cfg"]
@@ -64,6 +67,108 @@ def pixels(path):
         return np.array(im.convert("RGB"))
 
 
+def opening_graph(config):
+    opening = config["opening"]
+    graph = model_graph("krea", opening["prompt"], opening["seed"])
+    graph["6"]["inputs"].update(width=opening["width"], height=opening["height"])
+    if "opening_sigmas" in config:
+        graph["6"] = node(
+            "EmptySD3LatentImage",
+            width=opening["width"],
+            height=opening["height"],
+            batch_size=1,
+        )
+        graph["42"] = node("KSamplerSelect", sampler_name="euler")
+        graph["43"] = node(
+            "ManualSigmas",
+            sigmas=", ".join(f"{v:.12f}" for v in config["opening_sigmas"]),
+        )
+        graph["9"] = node(
+            "SamplerCustom",
+            model=["1", 0],
+            add_noise=True,
+            noise_seed=opening["seed"],
+            cfg=config["cfg"],
+            positive=["4", 0],
+            negative=["5", 0],
+            sampler=["42", 0],
+            sigmas=["43", 0],
+            latent_image=["6", 0],
+        )
+        conditioning_controls(graph, config, 0)
+    graph["11"]["inputs"]["filename_prefix"] = (
+        "two-hour-lab/" + config["case"] + "/opening"
+    )
+    return graph
+
+
+def openings(deployment):
+    client = PodClient.from_path(deployment)
+    for case in CASES:
+        config = read(HERE / "configs" / f"{case}.json")
+        root = OUT / case
+        save(root / "config.json", config)
+        run = client.submit_once(
+            OUT, "two-hour-lab-" + case + "-opening", opening_graph(config)
+        )
+        copy_verified(run / "frames/0000.png", root / "anchors/0000.png")
+        save(
+            root / "opening.json",
+            {
+                "run": str(run.relative_to(OUT)),
+                "sha256": sha(root / "anchors/0000.png"),
+            },
+        )
+
+
+def validate_opening(root, config):
+    row = read(root / "opening.json")
+    run = OUT / row["run"]
+    graph = opening_graph(config)
+    require(
+        read(run / "workflow.api.json")
+        == read(run / "workflow.executed.json")
+        == graph,
+        "Opening graph differs",
+    )
+    history = read(run / "history.json")
+    response = read(run / "submit-response.json")
+    submission = read(run / "submission.json")
+    require(
+        history["status"]["status_str"] == "success" and history["status"]["completed"],
+        "Opening incomplete",
+    )
+    require(
+        history["prompt"][1] == response["prompt_id"] == submission["prompt_id"]
+        and bool(submission.get("collected_at")),
+        "Opening receipt differs",
+    )
+    require(
+        history["prompt"][2] == graph and not response.get("node_errors"),
+        "Opening execution differs",
+    )
+    target = root / "anchors/0000.png"
+    require(
+        sha(target) == row["sha256"] == sha(run / "frames/0000.png"),
+        "Opening pixels differ",
+    )
+    with Image.open(target) as image:
+        require(
+            json.loads(image.info["prompt"]) == graph, "Opening PNG provenance differs"
+        )
+        require(
+            image.size == (config["opening"]["width"], config["opening"]["height"]),
+            "Opening dimensions differ",
+        )
+    return {
+        "case": config["case"],
+        "frame": 0,
+        "prompt_id": response["prompt_id"],
+        "run": row["run"],
+        "output_sha256": row["sha256"],
+    }
+
+
 def prepare():
     for case in CASES:
         config = read(HERE / "configs" / f"{case}.json")
@@ -88,7 +193,7 @@ def prepare():
     print("Prepared", len(CASES), "frozen cases.")
 
 
-def render(deployment):
+def render(deployment, last_frame=None):
     client = PodClient.from_path(deployment)
     for case in CASES:
         config = read(OUT / case / "config.json")
@@ -104,7 +209,9 @@ def render(deployment):
             first_frame=next(
                 f for f in config["painting_frames"] if f > config["prefix_through"]
             ),
-            last_frame=config["painting_frames"][-1],
+            last_frame=config["painting_frames"][-1]
+            if last_frame is None
+            else last_frame,
             run_prefix="two-hour-lab-" + case,
             filename_prefix="two-hour-lab/" + case,
             graph_transform=conditioning_controls,
@@ -120,6 +227,8 @@ def check():
             config == read(HERE / "configs" / f"{case}.json"), "Frozen config differs"
         )
         positions = config["painting_frames"]
+        if "opening" in config:
+            jobs.append(validate_opening(root, config))
         require(
             [int(p.stem) for p in sorted((root / "anchors").glob("*.png"))]
             == positions,
@@ -221,6 +330,7 @@ def check():
             f > read(OUT / c / "config.json")["prefix_through"]
             for f in read(OUT / c / "config.json")["painting_frames"]
         )
+        + int("opening" in read(OUT / c / "config.json"))
         for c in CASES
     )
     require(
@@ -365,20 +475,26 @@ def delivery():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "stage", choices=["prepare", "render", "check", "pair", "full", "delivery"]
+        "stage",
+        choices=["opening", "prepare", "render", "check", "pair", "full", "delivery"],
     )
     parser.add_argument("--deployment", type=Path)
     parser.add_argument("--cases", nargs="+", required=True)
     parser.add_argument("--batch", required=True)
+    parser.add_argument("--last-frame", type=int)
     args = parser.parse_args()
     CASES = args.cases
     BATCH = args.batch
-    if args.stage == "prepare":
+    if args.stage == "opening":
+        if not args.deployment:
+            parser.error("--deployment required")
+        openings(args.deployment)
+    elif args.stage == "prepare":
         prepare()
     elif args.stage == "render":
         if not args.deployment:
             parser.error("--deployment required")
-        render(args.deployment)
+        render(args.deployment, args.last_frame)
     elif args.stage == "check":
         check()
     elif args.stage == "delivery":

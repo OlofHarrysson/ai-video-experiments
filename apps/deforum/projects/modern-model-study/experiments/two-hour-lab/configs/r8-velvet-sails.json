@@ -1,0 +1,282 @@
+{
+  "case": "r8-velvet-sails",
+  "seed": 939105,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "r5-velvet-stage-0",
+      "prompt": "Inside an immense empty theatre, viewed from just above a glossy black stage floor. Two heavy oxblood velvet curtains stand apart at the left and right edges, their thick pleats catching narrow rose-white highlights. A scalloped crimson valance hangs across the upper edge. Beyond the open curtains, a broad shallow pool covers the stage and reflects a pale pink cyclorama. Three low semicircular stage steps stretch across the bottom of the image. The open middle occupies half the view, with the curtains forming tall sculptural sides. Worn velvet pile, lacquered wood, tiny water ripples and long reflections are sharply tangible in the theatrical side light. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "r5-velvet-stage-0",
+      "prompt": "Inside an immense empty theatre, viewed from just above a glossy black stage floor. Two heavy oxblood velvet curtains stand apart at the left and right edges, their thick pleats catching narrow rose-white highlights. A scalloped crimson valance hangs across the upper edge. Beyond the open curtains, a broad shallow pool covers the stage and reflects a pale pink cyclorama. Three low semicircular stage steps stretch across the bottom of the image. The open middle occupies half the view, with the curtains forming tall sculptural sides. Worn velvet pile, lacquered wood, tiny water ripples and long reflections are sharply tangible in the theatrical side light. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 2,
+      "name": "r5-velvet-stage-1",
+      "prompt": "An open crimson theatre with thick curtain columns at both sides of a broad black pool. The lower curtain folds have pale fleshy ribs and rounded roots resting on the wet stage. Broad red shelves project from the upper pleats, their undersides finely lined like mushroom gills. The low stage steps carry small patches of mint-green moss. Pale rose mist fills the open central stage beneath the scalloped velvet valance. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 3,
+      "name": "r5-velvet-stage-2",
+      "prompt": "A shallow black pool lies between two clusters of enormous red mushrooms. Their tall pale stems carry vertical velvet pleats, and their broad cherry-red caps have scalloped edges and luminous pink gills. A few short hanging curtain folds remain along the upper corners. Moss-covered semicircular terraces occupy the foreground, with irregular gaps of water between them. Open rose-colored fog extends far behind the mushroom stems. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 4,
+      "name": "r5-velvet-stage-3",
+      "prompt": "A marsh of towering crimson mushrooms surrounds an open black-water channel. Large flattened caps overlap along the upper sides while pale ribbed stalks stand on irregular mint-green moss islands. Low curved remnants of lacquered stage steps sit at the near waterline. The distant center is a pale misty horizon; slender mushrooms recede into it at different sizes. Rain beads cling to the red caps and their delicate pink gills. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 5,
+      "name": "r5-velvet-stage-4",
+      "prompt": "At water level in a vast mushroom wetland, a broad reflective channel runs from the lower center toward a low rose-gray horizon. An enormous cherry-red mushroom rises on the left, its wide cap and luminous pleated gills silhouetted against mist. Smaller mushrooms stand far apart on low mint-green moss islands to the right. Pale stems, black water and deep reflections form clear vertical shapes. Large spaces between the islands reveal the distant landscape under a soft pink overcast sky. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 7,
+      "name": "sails-stage-7",
+      "prompt": "A flooded mushroom theatre viewed along its central black-water channel. The two enormous oxblood forms at the sides are partly furled triangular sails: each has a long diagonal inner edge, thick vertical velvet folds at its outer edge, and a narrow black boat hull beneath its lower hem. Pale mushroom stalks stand beside the sails like ivory masts. Smaller rounded red mushrooms remain in the rose mist beyond. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 8,
+      "name": "sails-stage-8",
+      "prompt": "Two large black sailing hulls flank an open water channel. Each supports an ivory mast and one triangular crimson sail with broad velvet folds and fine radial seams. The inner edges of the sails slope down toward the hulls, exposing a wide wedge of pale rose sky between them. The former overhead canopy is a thin horizontal red cloud bank. A few small mushroom caps remain far behind the boats. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 9,
+      "name": "sails-stage-9",
+      "prompt": "A broad charcoal sea surrounds two separated sailing vessels, one left of center and one smaller on the right. Their triangular oxblood sails rise from straight ivory masts above clean dark hulls. Fine pink pleats remain along the sail hems. The pale rose-gray storm sky fills the upper half, and silver-pink wakes lead toward a low distant horizon. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    },
+    {
+      "at": 10,
+      "name": "sails-stage-10",
+      "prompt": "An open charcoal ocean under a vast pale rose-gray storm sky. A dark ship left of center carries one broad triangular oxblood sail on a straight ivory mast. A smaller red-sailed vessel lies far to the right. Broad open sky surrounds the sail tips; black water separates the hulls on every side. Long silver-pink wakes cross the foreground. A richly textured surreal cinematic painting with deep sculptural shadows and physically convincing surfaces. Oxblood red, cherry lacquer, charcoal black and pale rose light dominate, with small mint-green accents. Broad readable silhouettes sit against spacious areas of shadow or sky; tactile folds, ridges and reflected light supply the fine detail. Wide landscape composition."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.12
+    },
+    {
+      "at": 1.5,
+      "noise": 0.12
+    },
+    {
+      "at": 2,
+      "noise": 0.4
+    },
+    {
+      "at": 2.5,
+      "noise": 0.54
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.64
+    },
+    {
+      "at": 4,
+      "noise": 0.68
+    },
+    {
+      "at": 4.5,
+      "noise": 0.7
+    },
+    {
+      "at": 5,
+      "noise": 0.64
+    },
+    {
+      "at": 5.5,
+      "noise": 0.4
+    },
+    {
+      "at": 6,
+      "noise": 0.15
+    },
+    {
+      "at": 6.5,
+      "noise": 0.15
+    },
+    {
+      "at": 7,
+      "noise": 0.4
+    },
+    {
+      "at": 7.5,
+      "noise": 0.54
+    },
+    {
+      "at": 8,
+      "noise": 0.6
+    },
+    {
+      "at": 8.5,
+      "noise": 0.64
+    },
+    {
+      "at": 9,
+      "noise": 0.68
+    },
+    {
+      "at": 9.5,
+      "noise": 0.7
+    },
+    {
+      "at": 10,
+      "noise": 0.4
+    },
+    {
+      "at": 10.5,
+      "noise": 0.25
+    },
+    {
+      "at": 11,
+      "noise": 0.15
+    },
+    {
+      "at": 12,
+      "noise": 0.15
+    }
+  ],
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 2,
+      "center": [
+        0.34500000000000003,
+        0.48
+      ],
+      "radius": 0.48,
+      "zoom": 0.15,
+      "turn": 12,
+      "travel": [
+        0.0225,
+        0
+      ]
+    },
+    {
+      "start": 1.8,
+      "duration": 3.4,
+      "center": [
+        1.155,
+        0.42
+      ],
+      "radius": 0.48,
+      "zoom": 0.2,
+      "turn": -24,
+      "travel": [
+        -0.045,
+        0.01
+      ]
+    },
+    {
+      "start": 5,
+      "duration": 2.5,
+      "center": [
+        0.42000000000000004,
+        0.43
+      ],
+      "radius": 0.5,
+      "zoom": 0.04,
+      "turn": 8,
+      "travel": [
+        0.10500000000000001,
+        0
+      ]
+    },
+    {
+      "start": 7.3,
+      "duration": 1.7,
+      "center": [
+        0.75,
+        0.5
+      ],
+      "radius": 0.75,
+      "zoom": 0.04,
+      "turn": -6,
+      "travel": [
+        -0.0675,
+        0.015
+      ]
+    },
+    {
+      "start": 10.2,
+      "duration": 1.1,
+      "center": [
+        0.75,
+        0.58
+      ],
+      "radius": 0.65,
+      "zoom": 0,
+      "turn": 0,
+      "travel": [
+        0.0225,
+        0.015
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "seeds_by_frame": {
+    "0": 939105,
+    "12": 939106,
+    "24": 939107,
+    "36": 939108,
+    "48": 939109,
+    "60": 939110,
+    "72": 939111,
+    "84": 939112,
+    "96": 939113,
+    "108": 939114,
+    "120": 939115,
+    "132": 939116,
+    "144": 939117,
+    "156": 939118,
+    "168": 939119,
+    "180": 939120,
+    "192": 939121,
+    "204": 939122,
+    "216": 939123,
+    "228": 939124,
+    "240": 939125,
+    "252": 939126,
+    "264": 939127,
+    "276": 939128
+  },
+  "prefix_root": "projects/modern-model-study/exports/two-hour-lab-v001/r5-velvet",
+  "prefix_through": 156
+}
