@@ -1,12 +1,14 @@
 # Project and experiment workflow
 
-Living convention, 2026-09-07. Start with the [project index](../apps/deforum/projects/README.md). Explicit frame continuation and source-range assembly have completed hosted validation. They do not restore a saved GPU process. See the [serverless runbook](../apps/deforum/serverless/README.md).
+Living convention, updated 2026-09-14. Start with the [project index](../apps/deforum/projects/README.md) and [experiment notebook](../apps/deforum/projects/EXPERIMENTS.md). Current Krea work uses [short-lived ComfyUI Pods](../apps/deforum/POD.md). Earlier explicit frame continuation and source-range assembly completed hosted validation; they do not restore a saved GPU process.
 
 ## Folder ownership
 
 ```text
 apps/deforum/
-  experiment.py                 shared submission/collection client
+  src/deforum_lab/               shared Python package, installed with uv
+  experiment.py                 earlier project/SDXL CLI
+  pyproject.toml / uv.lock       shared local environment
   workflows/                    reusable ComfyUI API graphs
   projects/
     README.md                   project index
@@ -26,20 +28,25 @@ A **project** is a film or a coherent creative study. An **experiment** asks one
 
 ## Shared code
 
-All projects use the same app-level implementation and Python environment:
+Use `uv sync --locked` from `apps/deforum/`, then `uv run --locked python ...`. New shared mechanics belong in the `deforum_lab` package; projects import it without modifying `sys.path` or another experiment's globals. [Early-settle](../apps/deforum/projects/modern-model-study/experiments/early_settle.py) is the first migrated runner. Earlier scripts remain available while the [small refactor](refactor-plan.md) proceeds in stages.
 
 | Location in `apps/deforum/` | Responsibility |
 | --- | --- |
-| `experiment.py` | Project scaffolding, ComfyUI submission/collection and preview encoding. |
-| `serverless_client.py`, `editing.py`, `workflow_recipes.py` | Shared RunPod transport, preserved cuts and reusable graph construction. |
+| `src/deforum_lab/infrastructure/` | ComfyUI requests/collection and `PodClient`, with explicit deployment and output inputs. |
+| `src/deforum_lab/image/` | Lanczos resampling and composed time-based spatial transforms. |
+| `src/deforum_lab/rendering/` | Model graphs, prompt/noise schedules, timing, recurrent painting and graph validation. |
+| `src/deforum_lab/media/` | Painting sheets, RIFE preparation/subprocess adapter and saved delivery validation. |
+| `src/deforum_lab/paths.py`, `records.py` | Caller-supplied workspace locations, hashes and immutable records. |
+| `experiment.py`, `pod_client.py`, `serverless_client.py` | Legacy project/SDXL CLI and transports still used by earlier experiments. |
+| `editing.py`, `workflow_recipes.py`, `interpolate.py` | Existing cut, legacy graph and pinned RIFE entry points awaiting later migration. |
 | `video_review.py` | Local overviews, every-frame windows, matched comparisons and paginated frame extraction; [usage and evidence limits](video-review.md). |
 | `setup-pod.sh` | Shared installation of the pinned ComfyUI node/model recipe. |
 | `workflows/` | Reusable starter graphs; each render stores its exact configured copy in its run folder. |
 | `pyproject.toml`, `uv.lock` | Shared Python environment. |
-| `test_experiment.py` | Shared project/archive behavior checks. |
+| `test_*.py` | Local tests, including isolated package execution and archive behavior. |
 | `work/`, `.env` | Ignored infrastructure scratch files and credentials, kept out of creative project assets. |
 
-Keep project-specific references, decisions, outputs and frozen render settings inside the project. Do not copy the runner or dependencies into each film. The current SDXL starter graph contains the botanical example prompts; it is a starting recipe, while each saved run graph is the authoritative record of that generation. If shared code grows, extract modules with clear responsibilities such as a ComfyUI client or video encoding when they are actually reused. There is no separate `utils` package yet.
+Keep project-specific references, decisions, outputs and frozen render settings inside the project. Shared functions take explicit config, output paths and clients; image transforms do not import network clients, and the package does not import project scripts. Add reusable code to the area that owns its behavior instead of a catch-all `utils` folder. Each saved run graph is the authoritative record of that generation.
 
 The first session follows this structure too: six attempts in the botanical project’s `runs/`, its comparison in `exports/`, and the report in `experiments/baseline-results.md`. Existing receipts and media remain unchanged; project membership is recorded in the experiment index.
 
@@ -48,7 +55,7 @@ The first session follows this structure too: six attempts in the botanical proj
 1. Create a project with `uv run python experiment.py init-project PROJECT`. Add it to the project index and write the intent in its README.
 2. Write an experiment note in `experiments/`. State the question, what changes, what stays fixed, cost boundary, and the shortest useful test. The scaffold includes `baseline.md`.
 3. Save original reference media in `references/assets/`. Record provenance, purpose, and SHA-256 in the reference manifest. A working crop or edited keyframe gets a new filename.
-4. Submit a run with explicit `--project` and `--experiment`. The runner records those identities and the exact graph in a unique run folder. Save human review in the experiment note after collection.
+4. Run the experiment-owned script with its explicit config, output directory and deployment client. The earlier SDXL CLI uses `--project` and `--experiment`. Preserve identities, graph, input hashes, parent lineage and receipts in the run folder. Save human review in the experiment note after collection.
 5. Use `video_review.py` for an overview, selected every-frame windows and matched comparisons. Record progression, useful source ranges, camera behavior, detail loss and structural change separately; state what was inspected. Follow the [review and feedback agreement](review-and-feedback.md): the assistant screens results, then presents a small inline-video shortlist with plain-language explanations and one useful taste question. Keep review versions beside project media; record Olof's playback verdict without inferring understanding.
 6. Draft a cut as a new `cuts/vNNN.md`, selecting source ranges. Point “current cut” in the project README to the selected version. Reordering a cut never changes its sources.
 7. To change the movie, retain the selected prefix and create a new continuation run. Record parent run, source-frame index, and changed settings. The `continue` and `assemble` CLI commands implement this image-based branch and cut workflow.
@@ -60,7 +67,9 @@ For a new experiment, copy the short headings from `experiments/baseline.md` int
 
 The v0 cut format is a Markdown table: order, source path relative to the project, source FPS, in-frame (inclusive), out-frame (exclusive), and intent. Preserve each reviewed version under a new number. Do not overwrite an existing export when revising the edit.
 
-Be explicit about the source: generated PNG sequences are currently 8 FPS; their delivered MP4s are 24 FPS with repeated frames. Generated frame 19 corresponds to delivery frames 57–59. A range `[0, 40)` at 8 FPS lasts five seconds. A range `[0, 120)` in the 24 FPS preview also lasts five seconds. Source-frame numbers are distinct from movie timeline positions.
+Current feedback uses a 24 fps motion and delivery timeline. Half-second repaints produce painting anchors at frames 0, 12, 24, …; RIFE fills the intervening delivery frames and never feeds back into generation. Keep painting timestamps, motion and finishing explicit.
+
+Earlier SDXL sequences used 8 generated FPS and delivered 24 FPS by repeating frames. In those archives only, generated frame 19 corresponds to delivery frames 57–59. A range `[0, 40)` at 8 FPS lasts five seconds, as does `[0, 120)` in its 24 FPS preview. Interpret each cut using its recorded source FPS.
 
 Continuation also needs a global schedule frame: when branching from generated frame 19, frame 19 is the initial state, and new rendering begins at frame 20. A cut may use that frame only once at the join. Never silently reset a camera/prompt schedule or seed sequence when starting a new chunk. See [continuation research](research/continuation-and-editing.md).
 

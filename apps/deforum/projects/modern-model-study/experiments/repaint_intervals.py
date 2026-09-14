@@ -2,7 +2,7 @@
 import argparse
 from fractions import Fraction
 import turbo_smoothing as s
-from feedback_timing import FeedbackTiming
+from deforum_lab.rendering.timing import FeedbackTiming
 
 OUT=s.a.PROJECT/'exports/repaint-intervals-v001'
 INTERVALS=('0.5','1')

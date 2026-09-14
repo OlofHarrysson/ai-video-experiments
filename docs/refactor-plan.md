@@ -1,6 +1,6 @@
 # Deforum development experience: audit and small refactor plan
 
-2026-09-14. **Proposal; code migration has not started.** This review records the current structure, creates a notebook index, and proposes a bounded first implementation. No render, model, cloud resource or reviewer runtime changes are needed for the audit.
+2026-09-14. **First package migration complete, managed with uv.** The inventory below records the pre-migration baseline. Steps 1 and 2 are complete; broader entry-point moves and historical guidance cleanup remain deferred. See the [implementation and verification](#first-package-migration--2026-09-14).
 
 ## Recommendation
 
@@ -104,7 +104,7 @@ Dependency direction: project scripts call the package; package code does not im
 ## Implementation sequence
 
 1. **Navigation and baseline — this review.** Save the catalogue, dependency findings and migration plan. Record the latest feedback in the experiment note. Identify historical recipe references without changing their outputs.
-2. **One working vertical slice — recommended next sprint.** Set up the importable package and declared local image dependencies. Extract the current Lanczos motion, graph/schedule functions, receipt helpers and explicit Pod client. Make the early-settle runner use them without importing `dynamic_journey` or `ten_dollar`, and make its checks/review functions independent of unrelated experiment globals. Preserve its current CLI arguments and paths. Update all tracked consumers of any moved module in the same checkpoint; avoid permanent forwarding modules. Earlier experiment scripts can remain at their existing paths and keep their experiment-specific algorithms.
+2. **One working vertical slice — complete.** Set up the importable package and declared local image dependencies. Extract the current Lanczos motion, graph/schedule functions, receipt helpers and explicit Pod client. Make the early-settle runner use them without importing `dynamic_journey` or `ten_dollar`, and make its checks/review functions independent of unrelated experiment globals. Preserve its current CLI arguments and paths. Update all tracked consumers of any moved module in the same checkpoint; avoid permanent forwarding modules. Earlier experiment scripts can remain at their existing paths and keep their experiment-specific algorithms.
 3. **Organize remaining shared entry points.** Move shared tests to `tests/`, then media tools, setup scripts and diagnostic nodes with their documented callers. Give the reviewer a session argument so a new comparison changes session data rather than Python constants. Update the Devrun command through its normal workflow; browser-check the same two-video laptop layout. Preserve the pinned RIFE runtime and validate its subprocess paths.
 4. **Simplify current guidance.** Root AGENTS should hold collaboration rules, current recipe, active task and links. App README should identify one current execution path. Full history belongs in linked experiment reports and the notebook catalogue. Update old statements that present 8 fps, Klein, SDXL or serverless as current defaults; retain historical recipes within their reports.
 
@@ -143,6 +143,37 @@ No new quality tuning should accompany the code migration. This lets a changed i
 - **Track:** import ordering, unused imports/variables and idiom/resource-handling findings. Review only touched modules during migration; unused imports may be intentional exports or dependency checks. No bulk autofix is proposed.
 - **Reviewed, no current behavior defect established:** B023 in `brain-entity-study/experiments/render.py:46` closes over a loop variable, but its lambda is consumed immediately inside the same iteration. ISC004 in `lantern-marsh/experiments/review.py:43` and `video_review.py:43` constructs deliberate FFmpeg/ffprobe argument strings. BLE001 in `serverless/handler.py:70` converts worker exceptions into recorded job errors. Keep these as documented advisory findings until the owning module is edited; no suppression or semantic change was applied.
 - Formatter, broader experiment execution, cloud inference and browser tests were not run: this is a documentation/planning change. AST, lint and the current local suite supply the relevant baseline. No JavaScript or React analyzer was used because no reviewer code changed.
+
+## First package migration — 2026-09-14
+
+Olof approved the first slice and specified uv. [The existing app project](../apps/deforum/pyproject.toml) now builds an internal `deforum_lab` package using Hatchling, installed through `uv sync`. The distribution retains its existing name, `deforum-experiment`; nothing is published. NumPy 2.5.3, Pillow 12.3.0 and OpenCV 5.0.0.93 match the local versions used for the baseline checks. Ruff 0.16.2 is a locked development dependency. The source-distribution allowlist includes only package source, project metadata, lockfile and README, so ignored videos and runtime caches cannot enter a build.
+
+The [package](../apps/deforum/src/deforum_lab) contains the explicit Pod client and ComfyUI collection, Lanczos resampling and composed timed warps, model graphs and schedules, recurrent painting, immutable records, painting sheets and the existing RIFE finishing adapter. App paths come from the caller; the installed package never guesses the repository location. The package does not import a project script, the older CLI, or serverless transport. RIFE still runs in its existing pinned environment.
+
+[Early-settle](../apps/deforum/projects/modern-model-study/experiments/early_settle.py), its checker and its review builder now use the package. Their CLI stages and archive paths stay the same. `render_paintings` takes config, output and client explicitly; `PodClient` owns a copy of its deployment settings. The three completely moved root modules are `spatial_warp.py` → `image/resampling.py`, `modern_workflows.py` → `rendering/graphs.py`, and `feedback_timing.py` → `rendering/timing.py`. All tracked Python callers were updated. Historical runners retain their other algorithms and legacy client; their later migration remains step 3.
+
+### Verification
+
+- **48 local unittest tests pass**, including five new tests for recurrent parent use, completed-run reuse, changed-config/output rejection, separate outputs/deployments, and accepted or uncertain remote submissions. Accepted jobs resume collection; uncertain submissions are not automatically resubmitted.
+- The existing archive checker returns **identical JSON before and after extraction**, covering the eight generation jobs, the 192-frame delivery and its preserved prefix. Original graphs, paintings, preserved prefix and final video hashes remain unchanged.
+- [Offline replay](../apps/deforum/projects/modern-model-study/experiments/early_settle_replay.py) feeds the saved model responses through the new runner. It verifies **16 identical paintings, seven identical warped input pixel arrays, and eight identical graphs and parent lineages**. Running it again creates zero new paintings. This tests orchestration with recorded responses, not fresh GPU numerical equivalence.
+- The seven newly encoded input PNGs have different file hashes from the historical Pod PNGs. Their decoded RGB pixels are exactly equal; re-encoding the original pixels with the local encoder produces exactly the replay bytes. The replay records the actual new input hashes and reports these encoding differences. Original archive files are untouched.
+- `uv sync --locked`, imports from a nested experiment directory, and `uv build` succeed. The built wheel imports all 18 submodules from a separate environment outside the repository. Wheel/source archive contents were checked for the package allowlist.
+- Ruff **0.16.2** passes for the package, new tests and migrated early-settle scripts. The 22 remaining findings in import-only historical consumers (18 I001, three F401, one RUF007) are pre-existing and tracked with the baseline audit; no new findings remain. No JavaScript analyzer or browser test was run because the reviewer was unchanged. No fresh GPU inference, remote package installation or RIFE render was performed; the existing archived RIFE delivery was validated.
+
+Reproduce the local checks from `apps/deforum/` (archive commands require this Mac's preserved media):
+
+```bash
+uv sync --locked
+uv run --locked python -m unittest discover -v
+uv run --locked python projects/modern-model-study/experiments/early_settle_check.py delivery
+uv run --locked python projects/modern-model-study/experiments/early_settle_replay.py --output work/package-refactor/replay-new
+uv build --out-dir work/package-refactor/dist
+```
+
+Use a new replay output directory for each diagnostic. Verified local evidence lives under ignored `apps/deforum/work/package-refactor/`: `before-check.json`, `after-check-final.json`, `unittest-final.log`, `replay-v002/replay-check.json` and `dist/`. The replay directories contain recorded responses explicitly labelled as replay evidence, not new ComfyUI job histories.
+
+The next deployment must install this package into the runner's selected environment and preflight imports before paid work; see [the Pod runbook](../apps/deforum/POD.md). Tests, remaining media CLIs, setup scripts, diagnostic nodes, serverless packaging and the reviewer service have not moved. No model recipe, cadence, interpolation policy, media file or cloud resource was changed by this migration.
 
 ## Deferred creative question: diffusion only when change is wanted
 

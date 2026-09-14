@@ -13,7 +13,7 @@ sys.path.insert(0, str(APP/'projects/motion-guide-study/experiments'))
 import numpy as np
 from PIL import Image
 import editing
-import modern_workflows as workflows
+import deforum_lab.rendering.graphs as workflows
 import pod_client as transport
 import spatial_sequence as motion
 

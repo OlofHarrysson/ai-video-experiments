@@ -6,7 +6,7 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
-- [Deforum refactor audit and plan](refactor-plan.md): shared-code boundaries, a small migration sequence, and verification against archived frames.
+- [Deforum refactor audit and plan](refactor-plan.md): first uv package migration, shared-code boundaries, archive replay evidence and remaining steps.
 - [Complete experiment notebook index](../apps/deforum/projects/EXPERIMENTS.md): 89 tracked notes grouped by project, plus useful starting points.
 
 - [Earlier settling after the city reveal](../apps/deforum/projects/modern-model-study/experiments/early-settle.md): preserve the first four seconds, then compare a noise drop to 0.25/0.10 with the previous longer high-noise phase.

@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import oracle_steps as previous
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
 
 s = previous.s
 a, t = s.a, s.t

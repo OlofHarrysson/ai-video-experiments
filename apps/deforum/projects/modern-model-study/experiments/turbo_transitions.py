@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import turbo_schedule_motion as old
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
 
 a, opening = old.a, old.opening
 OUT = a.PROJECT/'exports/turbo-transitions-v001'

@@ -14,7 +14,7 @@ The sampler does not decide that an image is aesthetically finished and skip wor
 
 ## Spatial default
 
-New RGB warps use app-level `spatial_warp.remap_rgb`: Lanczos4 with the existing reflected border. Historical bilinear experiments retain their original behavior so old controls remain reproducible. The accepted Lanczos runner now uses the shared helper with identical output pixels.
+New RGB warps use app-level `deforum_lab.image.resampling.remap_rgb`: Lanczos4 with the existing reflected border. Historical bilinear experiments retain their original behavior so old controls remain reproducible. The accepted Lanczos runner now uses the shared helper with identical output pixels.
 
 ## Results
 

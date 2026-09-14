@@ -1,7 +1,7 @@
 """Frame-rate migration must preserve physical repaint instants."""
 import unittest
 from fractions import Fraction
-from feedback_timing import FeedbackTiming
+from deforum_lab.rendering.timing import FeedbackTiming
 
 
 class TimingTests(unittest.TestCase):

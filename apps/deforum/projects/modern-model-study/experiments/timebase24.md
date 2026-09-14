@@ -8,7 +8,7 @@ First run a local timing-migration experiment using the accepted three-second ca
 
 New timing defaults: 24 fps source/delivery, 0.25 seconds per repaint (cadence 6), interpolation enabled. Existing experiments retain their explicit 12 fps clock. Warp APIs accept absolute start/end times in seconds, so translation, twist and expansion schedules evolve at the same speed regardless of sampling rate. The model still receives a warped previous painting, and RIFE remains display-only. Diffusion settings remain tunable, but are held fixed in this migration.
 
-[Runner](timebase24.py), shared [timing settings](../../../feedback_timing.py), [recurrent runner](turbo_smoothing.py), and [time-based motion](turbo_transitions.py).
+[Runner](timebase24.py), shared [timing settings](../../../src/deforum_lab/rendering/timing.py), [recurrent runner](turbo_smoothing.py), and [time-based motion](turbo_transitions.py).
 
 ## Result
 

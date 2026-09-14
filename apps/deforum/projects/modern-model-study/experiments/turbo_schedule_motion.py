@@ -9,7 +9,7 @@ from cathedral_feedback import FPS, FRAMES, CADENCE, WIDTH, HEIGHT, SEED
 import audition as a
 import opening_art as opening
 import turbo_schedule as schedules
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
 
 OUT = a.PROJECT / 'exports/turbo-schedule-motion-v001'
 STRENGTHS = dict(schedules.CASES)

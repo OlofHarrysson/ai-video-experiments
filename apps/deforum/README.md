@@ -1,16 +1,38 @@
 # Deforum experiment
 
-Current work: [a small codebase refactor is being planned](../../docs/refactor-plan.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The most recent [earlier-settling test](projects/modern-model-study/experiments/early-settle.md) uses recurrent Krea, three sampling intervals, half-second repaints, a 24 fps timeline, Lanczos warps and RIFE. Olof has parked further quality experiments for now. Historical summaries below preserve earlier stages.
+Current work: [the first package migration is complete](../../docs/refactor-plan.md#first-package-migration--2026-09-14). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The most recent [earlier-settling test](projects/modern-model-study/experiments/early-settle.md) uses recurrent Krea, three sampling intervals, half-second repaints, a 24 fps timeline, Lanczos warps and RIFE. Olof has parked further quality experiments for now.
+
+## Local development with uv
+
+Run from `apps/deforum/`:
+
+```bash
+uv sync --locked
+uv run --locked python -m unittest discover -v
+uv run --locked python projects/modern-model-study/experiments/early_settle.py --help
+```
+
+uv installs the internal `deforum_lab` package in editable mode. NumPy, Pillow and OpenCV are declared and locked alongside the existing serverless dependency; ordinary local commands no longer need `--with` additions. Package imports also work when running scripts from nested experiment directories with `uv run`.
+
+Shared code lives in [src/deforum_lab](src/deforum_lab): `infrastructure` handles ComfyUI transport, `image` handles warps, `rendering` handles graphs and recurrent painting, and `media` handles painting review and finishing. `paths.py` and `records.py` provide explicit workspace paths and immutable records. New experiments import these modules and pass their output path and client explicitly. The [early-settle runner](projects/modern-model-study/experiments/early_settle.py) is the first migrated example; its runner, checker and review builder no longer import earlier experiments.
+
+The source and wheel build uses `uv build`; Hatchling is the build backend. Only package source and metadata enter the distributions. The existing RIFE environment, reviewer service, model installation and historical runners remain in their current locations. [Shared-code responsibilities](../../docs/workflow.md#shared-code) distinguish the extracted code from those remaining entry points. Remote execution of this package awaits the next Pod session's preflight; local archive replay has passed.
+
+## Current creative workflow
 
 Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
 
 Work from `apps/deforum/`. The Mac manages spatial transforms, cadence, workflow submission and local archives; ComfyUI on RunPod generates images. Earlier experiments using Difforum/depth nodes remain preserved.
 
-New RGB spatial warps use `spatial_warp.remap_rgb`, with Lanczos4 interpolation and reflected borders. Olof selected this after the matched bilinear/Lanczos comparison. Historical experiment scripts retain their recorded interpolation settings for reproduction.
+New RGB spatial warps use `deforum_lab.image.resampling.remap_rgb`, with Lanczos4 interpolation and reflected borders. Olof selected this after the matched bilinear/Lanczos comparison. Historical experiment scripts retain their recorded interpolation settings for reproduction.
 
 Start with the [project index](projects/README.md), [working convention](../../docs/workflow.md), and [filmmaking direction](../../docs/vision.md). The current priority is practicing continuation and expressive spatial image movement while preserving every attempt. The [Safety Marc spatial-control study](../../docs/research/bonsai-spatial-motion.md) maps existing effects to camera transforms, guide flow and guide compositing. The completed [Move-Warp test](projects/motion-guide-study/experiments/move-warp.md) adds a Mac-orchestrated guide-flow loop using existing ComfyUI repaint nodes. The [parallel experiment report](../../docs/research/parallel-experiments-session.md) indexes earlier model, settings, overscan and guide-redraw results.
 
-Latest direct-motion result: [sampler comparison](projects/motion-guide-study/experiments/samplers.md). Two three-second Euler variants are complete, informed by [model-specific creator recipes](../../docs/research/model-sampler-recipes.md). Ordinary Euler stays closer to the DPM++ 2M baseline; ancestral produces more distinct redraw and some fine speckling. Keep the baseline pending playback feedback. All media is local; compute and temporary storage are cleaned up.
+## Earlier experiments
+
+These summaries preserve previous models, runtimes and timing choices; use the current workflow above for new work.
+
+Earlier direct-motion result: [sampler comparison](projects/motion-guide-study/experiments/samplers.md). Two three-second Euler variants are complete, informed by [model-specific creator recipes](../../docs/research/model-sampler-recipes.md). Ordinary Euler stays closer to the DPM++ 2M baseline; ancestral produces more distinct redraw and some fine speckling. Keep the baseline pending playback feedback. All media is local; compute and temporary storage are cleaned up.
 
 Latest execution: [text-only and native-reference tests](projects/modern-model-study/experiments/conditioning.md), including both originals rebuilt without cadence blending. Five new short sequences are complete, reviewed and archived; the Pod is deleted. Native Krea style reference requires the verified ComfyUI v0.34.0 update.
 
@@ -112,4 +134,4 @@ Project references, run media and exports are ignored by Git. Original media is 
 
 ## Local checks
 
-`uv run --with pillow python -m unittest -v` runs 30 local checks covering project/archive behavior, immutable cuts, continuation indices, rejected submissions, interpolation timing, selective frame review, matched comparisons, pagination and provenance. They use temporary media and mocked submissions; they do not allocate a GPU or validate a new model.
+`uv run --locked python -m unittest discover -v` runs 48 local checks covering project/archive behavior, immutable cuts, continuation indices, rejected submissions, interpolation timing, selective frame review, comparisons, provenance, recurrent parent use and isolated clients. They use temporary media and mocked submissions; they do not allocate a GPU or validate a new model. The [migration evidence](../../docs/refactor-plan.md#first-package-migration--2026-09-14) also records the archived-run check and offline recurrent replay.

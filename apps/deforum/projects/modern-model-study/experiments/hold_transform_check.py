@@ -24,7 +24,7 @@ from PIL import Image
 
 import hold_transform as study
 from interpolate import PIN, frame_plan
-import spatial_warp
+import deforum_lab.image.resampling as spatial_warp
 
 HERE, OUT = study.HERE, study.OUT
 journey = study.journey

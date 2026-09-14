@@ -6,7 +6,7 @@ from PIL import Image
 import turbo_smoothing as s
 import turbo_smoothing_review as review
 from cathedral_review import assert_warp_matches
-from feedback_timing import FeedbackTiming
+from deforum_lab.rendering.timing import FeedbackTiming
 
 a,t=s.a,s.t
 OUT=a.PROJECT/'exports/timebase24-v001'

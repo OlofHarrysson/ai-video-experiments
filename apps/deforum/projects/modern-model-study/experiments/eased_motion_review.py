@@ -51,7 +51,7 @@ def check():
 
 def preview():
     from fractions import Fraction
-    from feedback_timing import FeedbackTiming
+    from deforum_lab.rendering.timing import FeedbackTiming
     root = study.OUT/'motion-only'
     rgb = np.asarray(Image.open(study.BASELINE/'anchors/0216.png').convert('RGB').resize((768,512),Image.Resampling.LANCZOS))
     font = ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc', 23)

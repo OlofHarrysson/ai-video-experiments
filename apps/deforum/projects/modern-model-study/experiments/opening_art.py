@@ -2,15 +2,15 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
 import shutil
 import sys
+from pathlib import Path
 
 APP = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(APP))
 import pod_client
+from deforum_lab.rendering.graphs import graph, node
 from experiment import save_json
-from modern_workflows import graph, node
 
 PROJECT = Path(__file__).resolve().parents[1]
 SESSION = APP / 'work/opening-art-session'

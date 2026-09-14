@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import eased_motion as previous
-from feedback_timing import FeedbackTiming
+from deforum_lab.rendering.timing import FeedbackTiming
 
 a, t = previous.a, previous.t
 OUT = a.PROJECT / 'exports/owl-transition-v001'

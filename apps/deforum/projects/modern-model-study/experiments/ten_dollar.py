@@ -2,9 +2,9 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
 import shutil
 import sys
+from pathlib import Path
 
 import numpy as np
 from PIL import Image
@@ -12,8 +12,8 @@ from PIL import Image
 APP = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(APP))
 import pod_client
-from modern_workflows import graph, node
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
+from deforum_lab.rendering.graphs import graph, node
 
 OUT = Path(__file__).resolve().parents[1] / 'exports/ten-dollar-v001'
 FPS, CADENCE = 24, 12

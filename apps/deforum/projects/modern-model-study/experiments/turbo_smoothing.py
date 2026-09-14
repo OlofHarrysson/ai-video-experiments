@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import turbo_transitions as t
-from feedback_timing import FeedbackTiming
+from deforum_lab.rendering.timing import FeedbackTiming
 from fractions import Fraction
 
 a = t.a

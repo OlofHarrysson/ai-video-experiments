@@ -8,7 +8,7 @@ import cathedral_feedback as c
 from cathedral_feedback import FPS, FRAMES, CADENCE, WIDTH, HEIGHT, SEED
 import audition as a
 import opening_art as opening
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
 
 OUT = a.PROJECT / 'exports/resampling-feedback-v001'
 STRENGTHS = {'lanczos010': .10}

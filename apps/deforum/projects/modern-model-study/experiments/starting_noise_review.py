@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import starting_noise as study
-from spatial_warp import remap_rgb
+from deforum_lab.image.resampling import remap_rgb
 from cathedral_review import assert_warp_matches
 def encode(root, clock=None):
     clock=clock or study.timing()

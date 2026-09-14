@@ -1,4 +1,5 @@
 """RGB spatial resampling for new feedback experiments."""
+
 import cv2
 
 INTERPOLATION = cv2.INTER_LANCZOS4
