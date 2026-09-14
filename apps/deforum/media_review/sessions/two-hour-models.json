@@ -1,0 +1,23 @@
+{
+  "title": "Same text, no movement: six repaints",
+  "selected": [
+    "r6-raw",
+    "r6-turbo"
+  ],
+  "clips": [
+    {
+      "id": "r6-raw",
+      "label": "Krea RAW",
+      "note": "20 Euler intervals per repaint; CFG 4.5",
+      "details": "Opening uses 52 Euler intervals and the official resolution-dependent shifted grid. RAW generated the wide inset within this square canvas itself. Its median repaint took 36.23 seconds. Fine foam still simplifies over recurrence.\n\nSame porcelain-wave text, 1024\u00d71024, no movement, six recurrent repaints after each model creates its own opening. Starting noise 0.60 and paired seeds. Seven paintings, held for 0.5s each, encoded at 24 fps; no interpolation. This compares model recipes, not distillation alone. Different starting compositions and occupied areas prevent a fair ranking by whole-image pixel difference.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r6-raw/finish/diagnostic/preview.mp4"
+    },
+    {
+      "id": "r6-turbo",
+      "label": "Krea Turbo",
+      "note": "3 Euler intervals per repaint; CFG 1",
+      "details": "Opening uses eight Euler intervals with shift 1.15. Median repaint 4.88 seconds. Its foam becomes more rounded and the ceramic patterns change across the six repaints.\n\nSame porcelain-wave text, 1024\u00d71024, no movement, six recurrent repaints after each model creates its own opening. Starting noise 0.60 and paired seeds. Seven paintings, held for 0.5s each, encoded at 24 fps; no interpolation. This compares model recipes, not distillation alone. Different starting compositions and occupied areas prevent a fair ranking by whole-image pixel difference.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r6-turbo/finish/diagnostic/preview.mp4"
+    }
+  ]
+}

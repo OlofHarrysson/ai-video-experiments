@@ -1,0 +1,37 @@
+{
+  "title": "Porcelain Weather: movement and transition strength",
+  "selected": [
+    "r7-porcelain-travel",
+    "r7-porcelain-travel-noise"
+  ],
+  "clips": [
+    {
+      "id": "r5-porcelain",
+      "label": "Porcelain Weather \u2014 original",
+      "note": "Ceramic wave \u2192 folded paper \u2192 cranes",
+      "details": "Fourteen seconds. The wave becomes folded paper and cranes appear in the sky, but the dominant curved ridge remains. The original final pullback develops reflected edge patterns; preserved as the control for revised endings.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r5-porcelain/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r7-porcelain-travel-noise",
+      "label": "Porcelain Weather \u2014 stronger transformation",
+      "note": "Paper wave \u2192 a larger crane",
+      "details": "Fourteen seconds. Reuses the exact first seven seconds, pushes toward the open sky and raises the second transition peak from 0.70 to 0.82. A larger crane emerges and the final pullback is removed. Compare with Same move, gentler repaint to isolate the noise change. Some backdrop persists, and the crane still develops strongly between 8.5 and 9s.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r7-porcelain-travel-noise/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r7-porcelain-travel",
+      "label": "Same move, gentler repaint",
+      "note": "Reframing with the original noise curve",
+      "details": "Fourteen seconds. Same revised motion as the stronger transformation, but keeps the original noise peak 0.70. This separates movement from repaint strength. Compare the crane and remaining paper-wave structure.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r7-porcelain-travel/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r7-porcelain-settle",
+      "label": "Original motion, calmer ending",
+      "note": "Only the final pullback is removed",
+      "details": "Fourteen seconds. Exact original through 10s, then seven fresh repaints with the final zoom-out removed. Same prompts, noise and seeds as the original. This isolates the late motion-boundary problem.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r7-porcelain-settle/finish/rife/preview.mp4"
+    }
+  ]
+}

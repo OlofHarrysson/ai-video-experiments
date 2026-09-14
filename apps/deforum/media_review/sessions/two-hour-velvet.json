@@ -1,0 +1,30 @@
+{
+  "title": "Velvet Harbour: original and direct sail descriptions",
+  "selected": [
+    "r5-velvet",
+    "r8-velvet-sails"
+  ],
+  "clips": [
+    {
+      "id": "velvet-harbour-cut",
+      "label": "Velvet Harbour \u2014 short edit",
+      "note": "Theatre \u2192 mushroom world \u2192 boats",
+      "details": "Eleven-second edit of the original. Preserves its first 22 paintings and all intervening RIFE frames through 10.5s, then holds that painting for half a second. Ends before the worst late pullback distortion. The complete original remains selectable. This is an editorial cut; no extra diffusion was used.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/velvet-harbour-cut/preview.mp4"
+    },
+    {
+      "id": "r5-velvet",
+      "label": "Velvet Flood \u2014 original",
+      "note": "Empty theatre \u2192 mushroom harbour",
+      "details": "Fourteen seconds. Curtains become organic surfaces; mushrooms and then boats inhabit the central channel. It becomes a mushroom harbour rather than the intended open ocean. The last seconds accumulate edge deformation.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r5-velvet/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r8-velvet-sails",
+      "label": "Velvet \u2014 attempted curtain-to-sail revision",
+      "note": "More explicit prompts; mushrooms persist",
+      "details": "Twelve seconds. Reuses the original through 6.5s, explicitly describes side curtains as sails, shortens the later movement and settles sooner. It adds ropes and pale fabric but does not replace the large forms. A combined creative revision, not a one-parameter test.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r8-velvet-sails/finish/rife/preview.mp4"
+    }
+  ]
+}

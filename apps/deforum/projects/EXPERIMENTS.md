@@ -1,11 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-14. All **92 tracked experiment notes across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 92 completed renders. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-14. **92 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 92 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
+| Autonomous learning session and new films | [Two-hour lab: controls, RAW diagnostic, porcelain and velvet films](modern-model-study/experiments/two-hour-lab/README.md) |
 | Current control of holds and transformations | [Extra paintings during the morph](modern-model-study/experiments/transition-frequency/README.md), [Earlier settling](modern-model-study/experiments/early-settle.md), [moving hold and transformation](modern-model-study/experiments/hold-transform.md) |
 | Longer, changing scenes | [Dynamic journey](modern-model-study/experiments/dynamic-journey.md) |
 | Prompts and transformation strength | [Prompt bridges](modern-model-study/experiments/prompt-bridges.md), [transition ramps](modern-model-study/experiments/transition-ramps.md), [CFG audition](modern-model-study/experiments/cfg-audition.md) |

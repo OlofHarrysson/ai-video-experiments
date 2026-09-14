@@ -4,6 +4,36 @@ Started 2026-09-14 at 15:43:47 UTC. Start new experiments until approximately 17
 
 Keep recurrent previous-image initialization, the existing uv/ComfyUI package and 24 fps output. Preserve every attempt. Record the question and settings before each round; inspect paintings first, then relevant interpolated frames. Distinguish more texture, changed composition and smaller redraws from useful gradual transformation. Change the next round in response to evidence. Finish by verifying local media, cleaning up owned compute/scratch, retaining the authorized model cache and updating the reviewer. No requirement to spend the whole budget.
 
+## Session result
+
+Completed 2026-09-14 17:42:29 UTC, approximately two hours after starting.
+
+The assistant shortlist is [Porcelain Weather — stronger transformation](../../exports/two-hour-lab-v001/r7-porcelain-travel-noise/finish/rife/preview.mp4) (14s) and [Velvet Harbour — short edit](../../exports/two-hour-lab-v001/velvet-harbour-cut/preview.mp4) (11s). These are creative candidates awaiting Olof’s feedback, not selected production defaults. Both retain recurrent previous-image initialization, half-second paintings, three Euler intervals, CFG1, Lanczos motion and 24 fps/RIFE finishing. No interpolated frame feeds back into generation.
+
+[Open the two-film reviewer](http://localhost:3028/). Separate pages keep comparisons manageable: [porcelain revisions](http://localhost:3028/two-hour-porcelain), [velvet revisions](http://localhost:3028/two-hour-velvet), [noise/sampling controls](http://localhost:3028/two-hour-controls), [guidance/text controls](http://localhost:3028/two-hour-conditioning), and [RAW/Turbo diagnostic](http://localhost:3028/two-hour-models). The previous task remains at [transformation stages](http://localhost:3028/transition-stages).
+
+| Round | Question | Finding |
+| --- | --- | --- |
+| 1 | Can earlier moderate noise open the shell gradually? | It adds detail and small openings, but mostly retains the solid spiral. A shared final peak does not erase the effects of earlier history. |
+| 2 | Does the placement of three Euler updates help? | Some shading and aperture changes; no convincing full-transformation improvement. |
+| 3 | Can old-subject negative text remove the shell at CFG1.3? | The conditioning changes appearance, but the shell persists. Not an object eraser. |
+| 4 | Does continuously blending text embeddings soften the change? | Both verified endpoints reproduce direct prompts. The blend is active, but the main opening still appears in one short interval. |
+| 5 | Do two new compositions work with the established recipe? | Ceramic wave → paper landscape → cranes and theatre → mushroom world → harbour both make more interesting films. Major inherited shapes still persist. |
+| 6 | Is undistilled Krea RAW a quick remedy? | Native ComfyUI execution works. RAW repaints take about 36s versus 4.9s for Turbo in this screen, and both alter/simplify the unchanged scene. No clear reason to switch. |
+| 7 | Can reframing plus stronger transition noise improve the cranes? | More open sky and a larger crane improve the visual progression. Removing the final pullback avoids its reflected edge bands. Higher noise still creates blurred/doubled RIFE intermediates around 8.7–9.3s. |
+| 8 | Can direct descriptions turn the inherited curtains into sails? | The revision retains curtains and mushrooms and makes smaller boats. The original’s central sail is clearer; the revision is not featured. |
+| 9 | What does noise alone do to one fixed sampling input? | Increasing 0.60→0.74 progressively opens the same spiral into an architectural frame. This is a parameter diagnostic, not a recurrent video or a universal threshold. |
+
+The most useful creative lesson is that material changes were easier than replacing dominant silhouettes in these shots. Changing glaze into paper was visibly progressive; turning a large curved ridge or curtain into a different object remained difficult. Movement can reveal new space and make change more readable. More transition noise can permit a stronger redesign, with a real interpolation cost. Neither more fine detail nor a smooth parameter curve guarantees a smooth semantic transformation.
+
+My next choice would be a short shot whose intended new object follows the existing large shape, with a deliberate move into open space and an early settled ending. Keep the best current recipe while testing one transition at a time. Defer more negative-conditioning and Euler-spacing sweeps, and keep RAW as a documented alternative rather than the next default.
+
+All **307 unique successful image jobs**, graphs, inputs and outputs are local; the final archive verifies **5,117 files** by SHA-256. All selected deliveries have verified frame counts, painting timestamps/pixels and complete decoding. The 11s Velvet edit preserves original frames 0–252 then holds painting 252 for eleven frames; the complete 14s original remains available. No original generation was discarded.
+
+The owned Pod was deleted after local archival; 610 owned remote media files, session scratch and the temporary RAW checkpoint/symlink were removed. The authorized 50 GB model volume is retained. Account balance decreased **$1.3611** during this session; allow approximately **$1.45** including unposted usage, comfortably below $10. Pod billing is still partially posted, so the account debit is not a final itemized invoice. No other paid API was used. Receipts live in ignored `work/two-hour-lab-session/` and the export’s `checks/` directory. The preserved model cache retains its already-authorized ongoing storage cost.
+
+Shared package validation: 54 offline tests. Media review validation: 17 Python tests and two timeline tests. Frozen legacy controls and conditioning endpoints reproduce their expected pixels exactly. Visual review used raw overviews, adjacent transition paintings and targeted RIFE frames; it does not establish every-frame artistic quality.
+
 ## Round 1: earlier moderate noise
 
 The last test's finer descriptions still keep a mostly solid shell until 3.25s, then open it sharply at 3.5s. Test whether earlier time at moderate noise can introduce meaningful open space over several repaints.
@@ -79,3 +109,33 @@ Three bounded branches use the exact existing opening and retain every earlier p
 ## Round 8: curtains become sails
 
 The independent [Velvet painting review](velvet-review.md) identifies a coherent mushroom harbour, but large curtains/mushrooms persist while new boats appear in the middle. Accept its single ten-repaint branch from the existing 6.5s painting: explicitly describe those dominant red side forms as partly furled triangular sails, then as sails mounted on hulls, ending in open ocean. Keep the existing rise to 0.70, return earlier at 10s, shorten the turning phrase and replace the final pullback with a small translation. Finish at twelve seconds with settled motion. This deliberately combines creative changes; it tests a practical revision rather than isolating one parameter. Inspect whether an existing side form becomes a sail, rather than merely adding a small new boat. The package's scale component is global; its twist is localized by radius, so “local zoom-out” in the independent note is an imprecise description of the composed motion.
+
+## Round 9: inspect one repaint’s noise response
+
+Freeze the round-one control’s exact warped input, seed and prompt at 3.5s. Run nine independent probes at starting noise 0.60/0.62/0.64/0.64624/0.66/0.68/0.70/0.72/0.74, with the same proportional three-interval Euler recipe and CFG1. Require 0.64624 to reproduce the recorded painting pixel-for-pixel. These are parameter probes from one state, not a time sequence or a substitute for recurrent animation. Unlike the earlier recurrent arms, they separate the immediate noise response from the changing history of previous paintings. Inspect whether small increments change the opening gradually or trigger a major redesign. This is one local response curve, not a universal noise threshold, and changing starting noise also changes the remaining integration trajectory.
+
+## Round 6 findings
+
+All fourteen jobs and 4,219 cumulative archive entries are verified locally. RAW loads natively with the existing encoder/VAE and no additional nodes. Its full opening takes 95.01s, and its median twenty-interval repaint takes 36.23s; Turbo's median three-interval repaint takes 4.88s. The Turbo opening takes 69.14s including the model switch, so that number is not warm eight-step inference time.
+
+Both models change their waves and simplify fine foam without motion or a prompt change. RAW retains strong glossy blue/white shading but makes its foam less irregular; Turbo turns its crest into larger rounded ceramic lobes. Neither demonstrates that repeated repainting converges toward an ever-better version of the original. These six cycles do not establish a universal degradation rate or a model winner. RAW generated a wide inset inside the square canvas; those blank margins also make its lower full-image pixel-change scores unsuitable as evidence of better preservation. The stored diagnostics separate adjacent change and deviation from each model's own opening, with that caveat.
+
+All seven paintings per arm were reviewed, with enlarged fixed RAW wave crops and the first/last paintings. The diagnostic videos hold each actual painting for half a second, with no RIFE. Keep Turbo for this session's moving films; RAW remains a verified alternative for a better matched future screen, not an adopted replacement.
+
+## Round 5 finishing review
+
+Both 14s deliveries are verified at 336 frames and 28 paintings, with the final motion settled. The sampled porcelain transition retains a readable curved form while the surface becomes angular, although its sun briefly deforms. In Velvet, the large mushrooms arrive through a foggy/dissolving intermediate rather than continuous visible growth; interpolation cannot recover a growth path that the paintings did not contain. Inspected Velvet frames 74/77/80 and Porcelain 83/87/91 in addition to the raw painting sequences. Both originals remain available while the revised endings render.
+
+## Revised-ending painting review
+
+Round seven's thirty-three jobs pass remote lineage/graph checks, and every downloaded painting matches that validated receipt before finishing. Removing only the final pullback keeps the original paper-wave composition without its conspicuous late reflected bands. Stronger reframing makes a larger crane emerge from the left-hand folded form. With the same revised motion, the higher-noise arm creates a more distinct, centered crane and opens more sky around it by 9–10s; part of the curved backdrop remains. This is a promising creative result, not a solved smoothness problem: the larger structure still changes markedly between 8.5 and 9s. Reviewed matched paintings at 8/8.5/9/9.5/10/11/13.5s and the settle-only ending. The first interpolation pairs reproduce every frame of the already-inspected original opening pair exactly.
+
+Round eight's ten jobs pass remote verification and the downloaded paintings match their receipts. The revised descriptions add ropes and pale sail-like fabric to the mushroom harbour, but the dominant curtains do not become separate ocean-going sails. It fails its replacement hypothesis. The shorter, gentler ending is less corrugated, yet the original's central boat is more readable. Reviewed matched paintings at 7/8/9/9.5/10/11.5s. Preserve the revision as evidence; the creative shortlist instead uses an eleven-second edit of the original, retaining original delivery frames 0–252 and then holding painting 252 for eleven frames. That keeps the first twenty-two paintings and all intervening RIFE frames, ending before the worst late pullback artifacts. The complete fourteen-second original and every later painting remain archived.
+
+## Final frame review and fixed-input probe
+
+Inspected R7’s two matched RIFE branches at frames 206/209/212/215/220/224/227. The stronger-noise version yields the larger crane and more open centre, but frame 209 has conspicuous soft/doubled surfaces during the large redraw; similar softness remains at 220–224. This is the more expressive candidate, not a demonstrated flicker reduction. The calmer same-motion branch remains selectable.
+
+Round 9’s nine fixed-input probes all pass provenance checks, including exact pixel reproduction of the recorded 0.64624 control. The [contact page](../../exports/two-hour-lab-v001/noise-response/comparison.jpg) shows a mostly solid spiral at 0.60, increasing open ribs by 0.64–0.68 and a more open architectural frame at 0.70–0.74. The holes grow across this sampled parameter range, but the geometry also changes; there is no measured universal linear response. Every probe starts from the identical warped painting and seed. None consumes the prior probe. This separates local noise response from the path-dependent recurrent experiment.
+
+The initial seven-film embedded reviewer exceeded the browser inspection tool’s 64 MiB message limit. The library was split into smaller named pages with the two-film shortlist at the root, preserving all source bytes. Recorded as AF-20260914-193910; large single-file review libraries remain a known tooling limit.

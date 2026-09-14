@@ -2,7 +2,7 @@
 
 The local reviewer keeps one, two or three videos visible together, side by side on laptop-sized windows, with shared play/pause, speed, scrubbing, frame stepping and painting stepping. This is the reusable human-facing companion to `video_review.py`'s extracted-frame/contact-sheet review.
 
-The current session compares the existing shell-to-city descriptions with finer descriptive stages; a third selectable clip uses those same stages and gentler final repaints. All three retain the same actual painting timestamps, motion, CFG1, three Euler intervals and eight-second 24 fps/RIFE delivery. The preceding repaint-frequency comparison remains at `/transition-frequency`, and the earlier settling comparison at `/early-settle`.
+The current session features Porcelain Weather (14s) and Velvet Harbour (11s), selected from the [two-hour lab](../projects/modern-model-study/experiments/two-hour-lab/README.md). Revisions and controls are grouped at `/two-hour-porcelain`, `/two-hour-velvet`, `/two-hour-controls`, `/two-hour-conditioning` and `/two-hour-models`. `/transition-stages` preserves the previous default. Keep the longest clip first for a shared timeline that can show both full videos. Embedded pages are split by experiment family: the initial 75.5 MB page exceeded the browser inspection tool’s 64 MiB response limit.
 
 ## Run locally
 
@@ -62,3 +62,7 @@ The page-wide keyboard follow-up was browser-checked: no-focus Right steps both 
 The transition-frequency session was browser-checked on 2026-09-14 in the existing dedicated Chrome window (1456×858 captured viewport): both complete frames and controls fit without scrolling; frame 54 correctly shows an in-between on the control and painting 5 on the treatment; next-painting advances to frame 60 with different painting counts; linked playback reaches frame 191 and correctly labels final holds 15/19. The comparison is left paused at frame zero. No layout or keyboard behavior was changed in this experiment.
 
 The transition-stages session was browser-checked on 2026-09-14 in the existing dedicated Chrome window (1456×858 captured viewport): both complete frames and controls fit without scrolling; frame 84 labels painting 10 on both sides; the capped third variant is selectable, and next-painting advances to frame 90/painting 11. Its details explain which two noise values change. Linked playback reaches frame 191/final hold 19 on both panels. The default control/stages pair is left paused at frame zero. No layout or shortcut code changed.
+
+The two-hour lab shortlist was browser-checked on 2026-09-14 in the dedicated Chrome window (1456×858): both full frames and controls fit without scrolling; painting-step reaches frame 12/painting 1 in both films; at shared frame 267 the fourteen-second film continues while the eleven-second film holds frame 263 and reports its ended state. All six named session routes return HTTP 200. The shorter-clip behavior is verified for this pair; other mixed-timing cases remain untested.
+
+The featured pair also reaches frame 335/final hold 27 on the first film while retaining the shorter film’s final hold 21. Generation details open and close correctly. The reviewer is left paused at frame zero with both films visible; Devrun remains running for Olof’s review.

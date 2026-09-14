@@ -1,5 +1,7 @@
 # Small Krea 2 RAW versus Turbo diagnostic
 
+The main agent subsequently resolved the temporary-storage and download constraints and ran a revised same-model-opening diagnostic. See the [executed round-six design and findings](README.md#round-6-undistilled-krea-raw-diagnostic). The dated recommendation and unexecuted shared-source proposal below preserve the original research handoff; they are not the current execution status.
+
 Research checked **2026-09-14, 16:23–16:28 UTC**. **NO-GO for this session; defer the download and diagnostic.** Native compatibility looks practical, including FP8 on the existing 32 GB GPU, but RAW requires another **13.14 GB** of weights. Free retained-volume space, transfer throughput and RAW execution time are unverified. Preserve the current ComfyUI/Torch runtime and complete the ongoing comparisons and films. This is a scheduling/storage decision, not evidence that RAW cannot run.
 
 Only public primary-source text/metadata and local files were read. No weight payload, GPU job, infrastructure operation, installation, resize or runtime change was performed. This note is the only file written. Proposed settings below have **not** been executed.

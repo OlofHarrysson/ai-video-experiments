@@ -1,0 +1,23 @@
+{
+  "title": "Two-hour lab: changing worlds",
+  "selected": [
+    "r7-porcelain-travel-noise",
+    "velvet-harbour-cut"
+  ],
+  "clips": [
+    {
+      "id": "velvet-harbour-cut",
+      "label": "Velvet Harbour \u2014 short edit",
+      "note": "Theatre \u2192 mushroom world \u2192 boats",
+      "details": "Eleven-second edit of the original. Preserves its first 22 paintings and all intervening RIFE frames through 10.5s, then holds that painting for half a second. Ends before the worst late pullback distortion. The complete original remains selectable. This is an editorial cut; no extra diffusion was used.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/velvet-harbour-cut/preview.mp4"
+    },
+    {
+      "id": "r7-porcelain-travel-noise",
+      "label": "Porcelain Weather \u2014 stronger transformation",
+      "note": "Paper wave \u2192 a larger crane",
+      "details": "Fourteen seconds. Reuses the exact first seven seconds, pushes toward the open sky and raises the second transition peak from 0.70 to 0.82. A larger crane emerges and the final pullback is removed. Compare with Same move, gentler repaint to isolate the noise change. Some backdrop persists, and the crane still develops strongly between 8.5 and 9s.\n\nKrea Turbo generates the opening and every subsequent painting. Warped previous-image initialization remains connected throughout. Two paintings per second, three Euler intervals per repaint, CFG 1, fresh deterministic seeds, bounded time-based Lanczos motion and RIFE 4.25. All clips play at 24 fps. RIFE frames are for delivery and do not feed back into generation.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r7-porcelain-travel-noise/finish/rife/preview.mp4"
+    }
+  ]
+}

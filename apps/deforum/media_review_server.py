@@ -6,10 +6,16 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/transition-stages.json'
-OUTPUT = APP / 'projects/modern-model-study/exports/media-review-transition-stages-v001'
+SESSION = APP / 'media_review/sessions/two-hour-lab.json'
+OUTPUT = APP / 'projects/modern-model-study/exports/media-review-two-hour-lab-v001'
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    '/two-hour-porcelain': APP / 'projects/modern-model-study/exports/media-review-two-hour-porcelain-v001/full-quality.html',
+    '/two-hour-velvet': APP / 'projects/modern-model-study/exports/media-review-two-hour-velvet-v001/full-quality.html',
+    '/two-hour-conditioning': APP / 'projects/modern-model-study/exports/media-review-two-hour-conditioning-v001/full-quality.html',
+    '/two-hour-controls': APP / 'projects/modern-model-study/exports/media-review-two-hour-controls-v001/full-quality.html',
+    '/two-hour-models': APP / 'projects/modern-model-study/exports/media-review-two-hour-models-v001/full-quality.html',
+    '/transition-stages': APP / 'projects/modern-model-study/exports/media-review-transition-stages-v001/full-quality.html',
     '/transition-frequency': APP / 'projects/modern-model-study/exports/media-review-transition-frequency-v001/full-quality.html',
     '/early-settle': APP / 'projects/modern-model-study/exports/media-review-early-settle-v001/full-quality.html',
     '/hold-transform': APP / 'projects/modern-model-study/exports/media-review-hold-transform-v001/full-quality.html',

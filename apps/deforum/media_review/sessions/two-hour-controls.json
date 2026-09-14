@@ -1,0 +1,51 @@
+{
+  "title": "Two-hour lab: technical controls",
+  "selected": [
+    "r1-current",
+    "r1-plateau060"
+  ],
+  "clips": [
+    {
+      "id": "r1-current",
+      "label": "Capped ramp control",
+      "note": "Noise rises to 0.66",
+      "details": "Reproduces all twenty paintings from the previous experiment exactly. A broad city opens, but the largest repaint jump remains.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r1-current/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r1-plateau060",
+      "label": "Earlier steady noise 0.60",
+      "note": "Earlier detail; large shell remains",
+      "details": "Changes only the noise curve to an earlier 0.60 plateau. It gradually opens a smaller central hole but fails to become the broad city.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r1-plateau060/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r1-early055-peak066",
+      "label": "Earlier 0.55 then peak 0.66",
+      "note": "Same peak, different history",
+      "details": "Earlier moderate noise followed by the original peak still leaves the shell closed. The sequence of earlier paintings matters.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r1-early055-peak066/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r2-even",
+      "label": "Evenly spaced sampling steps",
+      "note": "0.60 \u2192 0.40 \u2192 0.20 \u2192 0",
+      "details": "Compare against Earlier steady noise 0.60. Changes only the placement of the three Euler intervals; all lower-noise holds scale the same ratios.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r2-even/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r2-early-step",
+      "label": "Larger first sampling update",
+      "note": "0.60 \u2192 0.30 \u2192 0.10 \u2192 0",
+      "details": "Compare against Earlier steady noise 0.60. Some aperture and shading differences, without a full city conversion.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r2-early-step/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r2-large-final",
+      "label": "Larger final sampling update",
+      "note": "0.60 \u2192 0.55 \u2192 0.50 \u2192 0",
+      "details": "Compare against Earlier steady noise 0.60. Simpler panels; no clear transformation improvement.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r2-large-final/finish/rife/preview.mp4"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Guidance and prompt blending controls",
+  "selected": [
+    "r4-switch",
+    "r4-blend"
+  ],
+  "clips": [
+    {
+      "id": "r3-zero",
+      "label": "CFG 1.3, zeroed negative",
+      "note": "More fine structure",
+      "details": "Uses the 0.60 plateau and CFG 1.3 during the transition, returning to CFG 1 for the hold. Compare the three CFG 1.3 cases to isolate negative conditioning.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r3-zero/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r3-empty",
+      "label": "CFG 1.3, empty-text negative",
+      "note": "Cleaner broad surfaces",
+      "details": "Same as CFG 1.3 zeroed negative, but encodes an empty string for the negative input. It still retains the shell.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r3-empty/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r3-shell",
+      "label": "CFG 1.3, old-subject negative",
+      "note": "Negative text names the intact shell",
+      "details": "Same CFG 1.3 and noise. An explicit old-subject negative changes appearance but does not function as an object eraser.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r3-shell/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r4-switch",
+      "label": "Short prompt: hard switch",
+      "note": "Shell text \u2192 city text at 3s",
+      "details": "Uses a new concise matched prompt pair and the capped control noise. Compare only with Text embedding blend to isolate how conditioning changes; earlier controls also use different wording.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r4-switch/finish/rife/preview.mp4"
+    },
+    {
+      "id": "r4-blend",
+      "label": "Text embedding blend",
+      "note": "Shell-to-city conditioning over 2\u20134s",
+      "details": "Same concise text pair and capped noise as Short prompt: hard switch. Blends text embeddings linearly. Endpoint checks reproduce their direct prompts pixel-for-pixel, but the shell still opens in the same short interval.\n\nEight seconds, 24 fps, recurrent Krea Turbo feedback, three Euler intervals, bounded Lanczos motion and RIFE 4.25 scale 1. Each branch consumes its own previous painting. The opening through 2s is shared.",
+      "source": "projects/modern-model-study/exports/two-hour-lab-v001/r4-blend/finish/rife/preview.mp4"
+    }
+  ]
+}
