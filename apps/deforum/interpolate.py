@@ -6,18 +6,19 @@ source edits, device fallback, frame skipping, or motion estimation live here.
 """
 
 import argparse
-from datetime import datetime, timezone
-from fractions import Fraction
 import hashlib
 import importlib.metadata
 import json
 import os
-from pathlib import Path
 import platform
 import shutil
 import subprocess
 import sys
 import time
+from datetime import UTC, datetime
+from fractions import Fraction
+from itertools import pairwise
+from pathlib import Path
 
 PIN = "bbfd2ea90910789a860ea3e2b32a240cd577b75e"
 MODEL_URL = "https://drive.google.com/uc?id=1ZKjcbmt1hypiFprJPIKW0Tt0lr_2i7bg"
@@ -51,6 +52,24 @@ def frame_plan(count, final_holds=None, multiplier=MULTIPLIER):
     rows.append({"kind": "anchor", "source_index": count - 1})
     rows.extend({"kind": "final_hold", "source_index": count - 1}
                 for _ in range(final_holds))
+    return rows
+
+
+def frame_plan_at(positions, frame_count):
+    """Preserve explicit painting timestamps and interpolate each actual interval."""
+    if (len(positions) < 2 or positions[0] != 0
+            or any(type(f) is not int for f in positions)
+            or any(a >= b for a, b in pairwise(positions))
+            or type(frame_count) is not int or frame_count <= positions[-1]):
+        raise ValueError('Expected increasing integer anchor frames from zero and a later frame count')
+    rows = []
+    for index, (left, right) in enumerate(pairwise(positions)):
+        rows.append({'kind': 'anchor', 'source_index': index})
+        rows.extend({'kind': 'interpolation', 'source_pair': [index, index + 1],
+                     'timestep': f'{offset}/{right-left}'} for offset in range(1, right-left))
+    rows.append({'kind': 'anchor', 'source_index': len(positions)-1})
+    rows.extend({'kind': 'final_hold', 'source_index': len(positions)-1}
+                for _ in range(frame_count-positions[-1]-1))
     return rows
 
 
@@ -91,6 +110,12 @@ def main():
     parser.add_argument("--source-fps", type=Fraction, default=Fraction(SOURCE_FPS),
                         help="Original anchor rate, including fractions such as 12/5")
     parser.add_argument("--multiplier", type=int, default=MULTIPLIER)
+    parser.add_argument('--anchor-frames', type=Path,
+                        help='JSON list of explicit painting positions on the output timeline')
+    parser.add_argument('--output-fps', type=int, default=24,
+                        help='Output FPS when --anchor-frames is supplied')
+    parser.add_argument('--frame-count', type=int,
+                        help='Total output frames, required with --anchor-frames')
     parser.add_argument("--motion-scale", type=float, choices=(0.5, 1.0), default=1.0,
                         help="Internal motion estimation scale; output remains full resolution")
     parser.add_argument("--rife-root", type=Path,
@@ -104,6 +129,18 @@ def main():
     exact_output_fps = args.source_fps * args.multiplier
     output_fps = int(exact_output_fps) if exact_output_fps.denominator == 1 else float(exact_output_fps)
     multiplier = args.multiplier
+    positions = list(range(0, args.source_frames * multiplier, multiplier))
+    total_frames = args.source_frames * multiplier
+    if args.anchor_frames:
+        positions = json.loads(args.anchor_frames.read_text())
+        if len(positions) != args.source_frames or args.output_fps <= 0:
+            parser.error('Anchor count must match source count, with positive output FPS')
+        frame_plan_at(positions, args.frame_count)
+        total_frames = args.frame_count
+        exact_output_fps = Fraction(args.output_fps)
+        output_fps = args.output_fps
+    elif args.frame_count is not None:
+        parser.error('--frame-count requires --anchor-frames')
     scales, padding_multiple = motion_settings(args.motion_scale)
     started = time.perf_counter()
     source, output, root = args.source.resolve(), args.output.resolve(), args.rife_root.resolve()
@@ -126,9 +163,9 @@ def main():
         "runner_sha256": sha256(__file__),
     }
     import numpy as np
-    from PIL import Image
     import torch
     import torch.nn.functional as F
+    from PIL import Image
 
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS unavailable; no automatic CPU or cloud fallback")
@@ -141,6 +178,10 @@ def main():
                 "color": "RGB, uint8 / 255", "quantization": "multiply by 255, truncate to uint8",
                 "scene_detection": False, "static_frame_skipping": False,
                 "mps_cpu_fallback": False, "versions": versions}
+    if args.anchor_frames:
+        settings.update(source_fps=None, multiplier=None, timesteps=None,
+                        anchor_frames=positions, frame_count=total_frames,
+                        pair_lengths=[b-a for a,b in pairwise(positions)])
     if not args.pair_only:
         if not args.validated_pair:
             raise ValueError("Run and inspect --pair-only before supplying --validated-pair")
@@ -171,12 +212,13 @@ def main():
     output.mkdir(parents=True)
     (output / "frames").mkdir()
     selected = files[:2] if args.pair_only else files
-    plan = frame_plan(len(selected), final_holds=0 if args.pair_only else multiplier-1,
-                      multiplier=multiplier)
+    selected_positions = positions[:len(selected)]
+    plan = frame_plan_at(selected_positions,
+                         selected_positions[-1]+1 if args.pair_only else total_frames)
     width, height = source_rows[0]["size"]
     padding = (0, (-width) % padding_multiple, 0, (-height) % padding_multiple)
     receipt = {"status": "running", "mode": "first_pair" if args.pair_only else "full",
-               "started_utc": datetime.now(timezone.utc).isoformat(),
+               "started_utc": datetime.now(UTC).isoformat(),
                "command": [sys.executable, *sys.argv], "cwd": str(Path.cwd()),
                "platform": platform.platform(), "python": sys.version,
                "hardware": command(["sysctl", "-n", "machdep.cpu.brand_string"]).strip(),
@@ -202,9 +244,11 @@ def main():
             for index in range(len(selected) - 1):
                 pair_start = time.perf_counter()
                 right = tensor(selected[index + 1])
-                shutil.copy2(selected[index], output / "frames" / f"{index * multiplier:04d}.png")
-                for offset in range(1, multiplier):
-                    _, _, merged = network(torch.cat((left, right), 1), offset / multiplier, scales,
+                left_frame, right_frame = selected_positions[index:index+2]
+                interval = right_frame-left_frame
+                shutil.copy2(selected[index], output / "frames" / f"{left_frame:04d}.png")
+                for offset in range(1, interval):
+                    _, _, merged = network(torch.cat((left, right), 1), offset / interval, scales,
                                            fastmode=True, ensemble=False)
                     result = merged[-1][0, :, :height, :width]
                     if result.shape != (3, height, width) or not torch.isfinite(result).all().item():
@@ -212,7 +256,7 @@ def main():
                     if result.min().item() < -0.00001 or result.max().item() > 1.00001:
                         raise RuntimeError("RIFE output exceeds normalized RGB range")
                     pixels = (result * 255).byte().cpu().numpy().transpose(1, 2, 0)
-                    Image.fromarray(pixels).save(output / "frames" / f"{index * multiplier + offset:04d}.png")
+                    Image.fromarray(pixels).save(output / "frames" / f"{left_frame + offset:04d}.png")
                     del merged, result
                 left = right
                 torch.mps.synchronize()
@@ -220,7 +264,7 @@ def main():
                 save_receipt()
                 print(f"{output.name}: pair {index + 1}/{len(selected) - 1} "
                       f"{receipt['pair_timings_seconds'][-1]:.2f}s", flush=True)
-        for index in range((len(selected) - 1) * multiplier, len(plan)):
+        for index in range(selected_positions[-1], len(plan)):
             shutil.copy2(selected[-1], output / "frames" / f"{index:04d}.png")
         for index, row in enumerate(plan):
             path = output / "frames" / f"{index:04d}.png"
@@ -251,7 +295,7 @@ def main():
         receipt.update(status="complete", probe=probe, video_sha256=sha256(output / "preview.mp4"),
                        elapsed_seconds=time.perf_counter() - started,
                        anchors_verified=True, source_hashes_and_mtimes_preserved=True,
-                       final_holds=0 if args.pair_only else multiplier-1)
+                       final_holds=len(plan)-selected_positions[-1]-1)
         save_receipt()
         print(json.dumps({"output": str(output), "frames": len(plan), "status": "complete"}), flush=True)
     except BaseException as error:

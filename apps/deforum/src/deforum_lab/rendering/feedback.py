@@ -1,5 +1,7 @@
 """Recurrent painting execution with explicit output and client ownership."""
 
+from itertools import pairwise
+
 import numpy as np
 from PIL import Image
 
@@ -26,17 +28,27 @@ def render_paintings(
         isinstance(cadence, int) and cadence > 0 and fps % cadence == 0,
         "Cadence must be a positive integer divisor of FPS",
     )
+    positions = config.get("painting_frames", list(range(0, last_frame + 1, cadence)))
     require(
-        first_frame >= cadence
-        and first_frame % cadence == last_frame % cadence == 0
+        len(positions) >= 2
+        and positions[0] == 0
+        and all(type(f) is int for f in positions)
+        and all(a < b for a, b in pairwise(positions)),
+        "Expected strictly increasing painting frames starting at zero",
+    )
+    require(
+        first_frame in positions[1:]
+        and last_frame in positions
         and last_frame >= first_frame,
         "Expected ordered painting boundaries",
     )
     root = output / config["case"]
     save(root / "config.json", config)
-    for frame in range(first_frame, last_frame + 1, cadence):
+    for previous_frame, frame in pairwise(positions):
+        if not first_frame <= frame <= last_frame:
+            continue
         seconds = frame / fps
-        parent = root / f"anchors/{frame - cadence:04d}.png"
+        parent = root / f"anchors/{previous_frame:04d}.png"
         target = root / f"anchors/{frame:04d}.png"
         source = root / f"warped-inputs/{frame:04d}.png"
         source.parent.mkdir(exist_ok=True)
@@ -78,7 +90,7 @@ def render_paintings(
         with Image.open(parent) as im:
             rgb = np.asarray(im.convert("RGB"))
         Image.fromarray(
-            warp_at_time(rgb, seconds - cadence / fps, seconds, config["phrases"])
+            warp_at_time(rgb, previous_frame / fps, seconds, config["phrases"])
         ).save(source)
         run = client.submit_once(
             output,

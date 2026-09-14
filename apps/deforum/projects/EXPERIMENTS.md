@@ -1,12 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-14. All **89 tracked experiment notes across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 89 completed renders. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-14. All **90 tracked experiment notes across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 90 completed renders. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
-| Current control of holds and transformations | [Earlier settling](modern-model-study/experiments/early-settle.md), [moving hold and transformation](modern-model-study/experiments/hold-transform.md) |
+| Current control of holds and transformations | [Extra paintings during the morph](modern-model-study/experiments/transition-frequency/README.md), [Earlier settling](modern-model-study/experiments/early-settle.md), [moving hold and transformation](modern-model-study/experiments/hold-transform.md) |
 | Longer, changing scenes | [Dynamic journey](modern-model-study/experiments/dynamic-journey.md) |
 | Prompts and transformation strength | [Prompt bridges](modern-model-study/experiments/prompt-bridges.md), [transition ramps](modern-model-study/experiments/transition-ramps.md), [CFG audition](modern-model-study/experiments/cfg-audition.md) |
 | Timing and finishing | [24 fps migration](modern-model-study/experiments/timebase24.md), [faster pacing](modern-model-study/experiments/faster-pacing.md), [repaint frequency](modern-model-study/experiments/refresh-rate.md) |
@@ -20,7 +20,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 47 notes
+### modern-model-study — 48 notes
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)
@@ -65,6 +65,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 - [Three directions: motion, prompt and interpolation](modern-model-study/experiments/three-directions.md)
 - [A 24 fps working timeline with interpolation by default](modern-model-study/experiments/timebase24.md)
 - [Transition ramps: independent painting review](modern-model-study/experiments/transition-ramps-independent-review.md)
+- [Extra paintings during the morph](modern-model-study/experiments/transition-frequency/README.md)
 - [Shaping a recurrent scene transition](modern-model-study/experiments/transition-ramps.md)
 - [Turbo schedule tail versus smaller updates](modern-model-study/experiments/turbo-schedule.md)
 - [Three-step morphing: interpolation and cadence](modern-model-study/experiments/turbo-smoothing.md)

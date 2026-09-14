@@ -1,0 +1,23 @@
+{
+  "title": "More paintings during the transformation",
+  "selected": [
+    "two",
+    "four-transition"
+  ],
+  "clips": [
+    {
+      "id": "two",
+      "label": "2 paintings/s throughout",
+      "note": "Shell \u2192 architectural shell \u2192 canyon city",
+      "details": "Sixteen paintings at half-second intervals; twelve are newly rendered. Compare the shell opening at 3\u20134 seconds with the other version.\n\nBoth clips are eight seconds at 24 fps. Same recurrent Krea Turbo feedback, CFG 1, three Euler intervals, staged prompts at 2/3/4 seconds, bounded Lanczos motion, and RIFE 4.25 scale 1. No added reference conditioning or blending. The noise rises from 0.40 at 2s to 0.74048 at 4s, drops to 0.25 at 4.5s and 0.10 from 5s. Interpolation never feeds back.\n\nBoth preserve the same opening paintings through 1.5s and reproduce the first fresh painting at 2s identically. Later each branch consumes its own previous painting. Extra repaints mean extra resampling and VAE cycles as well as extra model calls.",
+      "source": "projects/modern-model-study/exports/transition-frequency-v001/two/finish/rife/preview.mp4"
+    },
+    {
+      "id": "four-transition",
+      "label": "4/s during the morph",
+      "note": "Four extra paintings between 2 and 4 seconds",
+      "details": "Twenty paintings in total; sixteen are newly rendered. Adds paintings at 2.25, 2.75, 3.25 and 3.75 seconds. Opening and ending remain at two paintings per second. Same noise curve by time: inserted paintings sample intermediate values. Watch for earlier openings in the shell, and whether the final city reveal still feels abrupt. Painting-step controls follow the first selected video; choose this version first to step through all extra paintings.\n\nBoth clips are eight seconds at 24 fps. Same recurrent Krea Turbo feedback, CFG 1, three Euler intervals, staged prompts at 2/3/4 seconds, bounded Lanczos motion, and RIFE 4.25 scale 1. No added reference conditioning or blending. The noise rises from 0.40 at 2s to 0.74048 at 4s, drops to 0.25 at 4.5s and 0.10 from 5s. Interpolation never feeds back.\n\nBoth preserve the same opening paintings through 1.5s and reproduce the first fresh painting at 2s identically. Later each branch consumes its own previous painting. Extra repaints mean extra resampling and VAE cycles as well as extra model calls.",
+      "source": "projects/modern-model-study/exports/transition-frequency-v001/four-transition/finish/rife/preview.mp4"
+    }
+  ]
+}

@@ -91,6 +91,31 @@ class PackageTests(unittest.TestCase):
             self.run_frames(self.root, client)
         self.assertEqual(len(client.calls), 2)
 
+    def test_irregular_paintings_use_actual_parent_time_and_seed(self):
+        self.opening(self.root)
+        client = LocalClient()
+        config = {
+            **self.config,
+            "painting_frames": [0, 12, 18, 24],
+            "seeds_by_frame": {"12": 72, "18": 999, "24": 73},
+        }
+        with patch(
+            "deforum_lab.rendering.feedback.warp_at_time",
+            side_effect=lambda pixels, start, end, phrases: pixels,
+        ) as warp:
+            self.run_frames(self.root, client, config)
+        self.assertEqual(
+            [(x.args[1], x.args[2]) for x in warp.call_args_list],
+            [(0, 0.5), (0.5, 0.75), (0.75, 1)],
+        )
+        self.assertEqual(
+            client.calls[-1][3]["parent_sha256"],
+            sha(self.root / "test/anchors/0018.png"),
+        )
+        self.assertEqual(read(self.root / "test/anchor-0018.json")["seed"], 999)
+        self.run_frames(self.root, client, config)
+        self.assertEqual(len(client.calls), 3)
+
     def test_outputs_and_deployments_are_isolated(self):
         deployment = {"base_url": "http://first.invalid", "pod_id": "one"}
         first = PodClient(deployment)

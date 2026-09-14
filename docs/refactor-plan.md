@@ -173,7 +173,7 @@ uv build --out-dir work/package-refactor/dist
 
 Use a new replay output directory for each diagnostic. Verified local evidence lives under ignored `apps/deforum/work/package-refactor/`: `before-check.json`, `after-check-final.json`, `unittest-final.log`, `replay-v002/replay-check.json` and `dist/`. The replay directories contain recorded responses explicitly labelled as replay evidence, not new ComfyUI job histories.
 
-The next deployment must install this package into the runner's selected environment and preflight imports before paid work; see [the Pod runbook](../apps/deforum/POD.md). Tests, remaining media CLIs, setup scripts, diagnostic nodes, serverless packaging and the reviewer service have not moved. No model recipe, cadence, interpolation policy, media file or cloud resource was changed by this migration.
+The subsequent [transition-frequency experiment](../apps/deforum/projects/modern-model-study/experiments/transition-frequency/README.md) verified remote installation through `uv sync --locked --no-dev` in a separate runner environment, then completed 28 real ComfyUI jobs; see [the Pod runbook](../apps/deforum/POD.md). Tests, remaining media CLIs, setup scripts, diagnostic nodes, serverless packaging and the reviewer service have not moved. No model recipe, cadence, interpolation policy, media file or cloud resource was changed by this migration.
 
 ## Deferred creative question: diffusion only when change is wanted
 
@@ -182,3 +182,7 @@ Olof observes that the new low-noise ending barely transforms and may offer litt
 A later matched test can branch from painting 96: warp-only versus the existing low-noise ending, with identical motion and timing. At native 24 fps, warp-only motion can render each timestamp directly; it need not invent new paintings just to feed RIFE. If diffusion resumes later, its initialization should be the current warped state of the last accepted painting. The feedback loop still applies whenever a repaint occurs.
 
 Keep motion, repaint scheduling and finishing separate in the refactor so optional holds can be explored later. Do not implement irregular painting events, an automatic completion detector, or new interpolation policy in this migration; the current cadence and RIFE assumptions must remain explicit until that separate experiment.
+
+### Explicit painting times — 2026-09-14
+
+The transition-frequency follow-up adds an optional ordered `painting_frames` list to the shared recurrent runner. Each repaint consumes the immediately preceding painting and warps over its actual time interval. The existing uniform cadence path is preserved. RIFE finishing accepts matching explicit timestamps and interpolates each interval without moving its anchor paintings. No new model dependency was added. The 51-test local suite covers irregular parent/timing/resume behavior and equivalence with the former uniform interpolation plan; the historical early-settle graph/warp replay still passes.

@@ -1,16 +1,37 @@
 """Timing and source-inventory checks; actual RIFE/MPS is verified by saved pair runs."""
 
-from fractions import Fraction
-from pathlib import Path
 import tempfile
 import unittest
+from fractions import Fraction
+from pathlib import Path
 
 from PIL import Image
 
-from interpolate import frame_plan, inventory
+from interpolate import frame_plan, frame_plan_at, inventory
 
 
 class TimingTests(unittest.TestCase):
+    def test_explicit_uniform_timeline_matches_existing_plan(self):
+        for count, multiplier in [(16,12), (20,6), (48,3)]:
+            positions=list(range(0,count*multiplier,multiplier))
+            self.assertEqual(frame_plan_at(positions,count*multiplier),
+                             frame_plan(count,multiplier=multiplier))
+            self.assertEqual(frame_plan_at(positions[:2],multiplier+1),
+                             frame_plan(2,final_holds=0,multiplier=multiplier))
+
+    def test_variable_intervals_retain_positions_and_fractional_time(self):
+        positions=[0,12,18,24,36]
+        rows=frame_plan_at(positions,48)
+        self.assertEqual(len(rows),48)
+        self.assertEqual([i for i,r in enumerate(rows) if r['kind']=='anchor'],positions)
+        for i,row in enumerate(rows):
+            if row['kind']=='interpolation':
+                a,b=(positions[j] for j in row['source_pair'])
+                self.assertEqual(a+Fraction(row['timestep'])*(b-a),i)
+        self.assertEqual(sum(r['kind']=='final_hold' for r in rows),11)
+        for invalid in ([1,12], [0,12,12], [0,12,6], [0,1.5]):
+            with self.assertRaises(ValueError): frame_plan_at(invalid,48)
+
     def test_cadence_fifteen_keeps_anchor_times_at_sub_one_fps(self):
         source_fps=Fraction(12,15)
         rows=frame_plan(3,multiplier=30)
