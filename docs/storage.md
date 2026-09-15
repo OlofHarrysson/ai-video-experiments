@@ -60,6 +60,8 @@ Validation: the repository's **63 local tests** pass, including archive corrupti
 
 ## Selective frame retention: proposed next step
 
+See the [format benchmark and cleanup boundaries](research/frame-storage-formats.md): twelve-frame tests find practical lossless WebP about 23% smaller, while stronger PNG compression saves about 5%. Current PNGs already use compression. Recorded cadence alone is insufficient for safe cleanup across old experiments.
+
 Olof has no external drive yet and is open to removing old frames if they can be regenerated conveniently. Recommended boundary: preserve final videos, original diffusion paintings, references and reconstruction records; treat verified RIFE and warp-only intermediate sequences as reclaimable working files. This is a proposed retention change, not authorization for a blanket purge of `frames/` directories, which also contain original paintings in some runs.
 
 On 2026-09-15, a local reconstruction check reran the first RIFE interval of `fluent-hour-v001/f3-sweeping-worlds/faster` from its saved paintings and recorded settings. All nine PNG files, including seven interpolated frames, reproduced their original SHA-256 hashes. The check took 10.39 seconds including setup; temporary verification output was removed afterward. The existing complete sixteen-second clip recorded 111.54 seconds of local finishing. This proves one interval with the retained runtime/weights, not exact reproduction of every historical experiment or future software version. Evidence: `apps/deforum/work/storage-audit/rebuild-proof.json`.

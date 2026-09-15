@@ -1,0 +1,675 @@
+{
+  "pillow": "12.3.0",
+  "webp_version": "1.6.0",
+  "original_bytes": 20404357,
+  "raw_RGB_bytes": 46817280,
+  "sample_count": 12,
+  "methods": [
+    {
+      "method": "png-default",
+      "bytes": 20483401,
+      "reduction_percent": -0.39,
+      "encode_seconds": 0.955,
+      "median_encode_seconds": 0.098,
+      "decode_seconds": 0.238,
+      "all_pixels_identical": true
+    },
+    {
+      "method": "png-optimized",
+      "bytes": 19411941,
+      "reduction_percent": 4.86,
+      "encode_seconds": 7.536,
+      "median_encode_seconds": 0.8,
+      "decode_seconds": 0.23,
+      "all_pixels_identical": true
+    },
+    {
+      "method": "webp-lossless",
+      "bytes": 15638461,
+      "reduction_percent": 23.36,
+      "encode_seconds": 6.624,
+      "median_encode_seconds": 0.649,
+      "decode_seconds": 0.267,
+      "all_pixels_identical": true
+    },
+    {
+      "method": "webp-lossless-max",
+      "bytes": 14986317,
+      "reduction_percent": 26.55,
+      "encode_seconds": 142.594,
+      "median_encode_seconds": 12.513,
+      "decode_seconds": 0.263,
+      "all_pixels_identical": true
+    }
+  ],
+  "samples": [
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/anchors/0000.png",
+      "kind": "painting",
+      "source_sha256": "5d1e68af8d3afb48b2b5e6609f285a37bcab02463ff6d954e850a6957a607f0f",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 2033546,
+      "metadata_bytes": 2181,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 2054085,
+          "storage_bytes_including_metadata": 2054085,
+          "encode_seconds": 0.10010579111985862,
+          "decode_seconds": 0.02368591702543199,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1937528,
+          "storage_bytes_including_metadata": 1937528,
+          "encode_seconds": 0.7667462909594178,
+          "decode_seconds": 0.022695166990160942,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1480854,
+          "storage_bytes_including_metadata": 1483035,
+          "encode_seconds": 0.7397339171729982,
+          "decode_seconds": 0.02721549989655614,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1443126,
+          "storage_bytes_including_metadata": 1445307,
+          "encode_seconds": 8.64660737500526,
+          "decode_seconds": 0.027231000130996108,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/anchors/0288.png",
+      "kind": "painting",
+      "source_sha256": "9537733f4bf6d029520399fabc2926c8dc5fdf1f19ba0895ce274928f66b4987",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 1873003,
+      "metadata_bytes": 2509,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1856970,
+          "storage_bytes_including_metadata": 1856970,
+          "encode_seconds": 0.09626358305104077,
+          "decode_seconds": 0.023752042092382908,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1757891,
+          "storage_bytes_including_metadata": 1757891,
+          "encode_seconds": 0.8652077920269221,
+          "decode_seconds": 0.023393125040456653,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1363900,
+          "storage_bytes_including_metadata": 1366409,
+          "encode_seconds": 0.7408671251032501,
+          "decode_seconds": 0.024153167149052024,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1300332,
+          "storage_bytes_including_metadata": 1302841,
+          "encode_seconds": 10.637705249944702,
+          "decode_seconds": 0.025437749922275543,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/anchors/0564.png",
+      "kind": "painting",
+      "source_sha256": "37822ba4f853046e1385019b5cebc8c19c3e6837c6a35a18196690af4646daa9",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 1950830,
+      "metadata_bytes": 2446,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1918346,
+          "storage_bytes_including_metadata": 1918346,
+          "encode_seconds": 0.10085029201582074,
+          "decode_seconds": 0.0241350419819355,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1839227,
+          "storage_bytes_including_metadata": 1839227,
+          "encode_seconds": 0.8662082499358803,
+          "decode_seconds": 0.023768624989315867,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1404764,
+          "storage_bytes_including_metadata": 1407210,
+          "encode_seconds": 0.7664947079028934,
+          "decode_seconds": 0.024191957898437977,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1340838,
+          "storage_bytes_including_metadata": 1343284,
+          "encode_seconds": 16.011435916880146,
+          "decode_seconds": 0.021109624998643994,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/faster/rife/frames/0003.png",
+      "kind": "interpolation",
+      "source_sha256": "8ac982e88f59de22d28cbc11ae11e9bff633be30ee89d9bae9f3a94a11284232",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 2012809,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 2012809,
+          "storage_bytes_including_metadata": 2012809,
+          "encode_seconds": 0.09082879195921123,
+          "decode_seconds": 0.021344332955777645,
+          "identical_pixels": true,
+          "same_file_bytes": true
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1883020,
+          "storage_bytes_including_metadata": 1883020,
+          "encode_seconds": 0.7355905422009528,
+          "decode_seconds": 0.021862583002075553,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1488238,
+          "storage_bytes_including_metadata": 1488240,
+          "encode_seconds": 0.5882628748659045,
+          "decode_seconds": 0.028178834123536944,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1418824,
+          "storage_bytes_including_metadata": 1418826,
+          "encode_seconds": 8.735574333928525,
+          "decode_seconds": 0.026437791995704174,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/faster/rife/frames/0195.png",
+      "kind": "interpolation",
+      "source_sha256": "c21f412bbbfe81ef86f4c4b61e4cb58a345e7eed7d1ca65c16a7154e8ed1e1ab",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 1805337,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1805337,
+          "storage_bytes_including_metadata": 1805337,
+          "encode_seconds": 0.10132849984802306,
+          "decode_seconds": 0.022027666913345456,
+          "identical_pixels": true,
+          "same_file_bytes": true
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1691003,
+          "storage_bytes_including_metadata": 1691003,
+          "encode_seconds": 0.9492334588430822,
+          "decode_seconds": 0.02136170817539096,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1330538,
+          "storage_bytes_including_metadata": 1330540,
+          "encode_seconds": 0.6609493750147521,
+          "decode_seconds": 0.02757245791144669,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1268964,
+          "storage_bytes_including_metadata": 1268966,
+          "encode_seconds": 12.61089550005272,
+          "decode_seconds": 0.023664041189476848,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/faster/rife/frames/0371.png",
+      "kind": "interpolation",
+      "source_sha256": "95c3d818b1293a43b995f0e64ee6e797a7e5583f4afa309160f0ccfa42932a55",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 1903808,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1903808,
+          "storage_bytes_including_metadata": 1903808,
+          "encode_seconds": 0.1008832089137286,
+          "decode_seconds": 0.02163462503813207,
+          "identical_pixels": true,
+          "same_file_bytes": true
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1811504,
+          "storage_bytes_including_metadata": 1811504,
+          "encode_seconds": 0.9035391670186073,
+          "decode_seconds": 0.02107058302499354,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1401590,
+          "storage_bytes_including_metadata": 1401592,
+          "encode_seconds": 0.6573704588226974,
+          "decode_seconds": 0.026501042069867253,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1342364,
+          "storage_bytes_including_metadata": 1342366,
+          "encode_seconds": 14.90922287502326,
+          "decode_seconds": 0.02657295810058713,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/warped-inputs/0288.png",
+      "kind": "warped input",
+      "source_sha256": "02064c2a96829dc9aafd7d20c95394edd636ca4de77f0d77ffbd368b84077c1a",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 1854442,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1882238,
+          "storage_bytes_including_metadata": 1882238,
+          "encode_seconds": 0.10348650021478534,
+          "decode_seconds": 0.022220666985958815,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1783616,
+          "storage_bytes_including_metadata": 1783616,
+          "encode_seconds": 0.8590209169778973,
+          "decode_seconds": 0.0210316670127213,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1407462,
+          "storage_bytes_including_metadata": 1407464,
+          "encode_seconds": 0.6397301671095192,
+          "decode_seconds": 0.026068540988489985,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1345922,
+          "storage_bytes_including_metadata": 1345924,
+          "encode_seconds": 13.18516437499784,
+          "decode_seconds": 0.0266871671192348,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/modern-model-study/exports/correlated-noise-v001/correlated/anchors/0090.png",
+      "kind": "correlated noise painting",
+      "source_sha256": "7e40074f4d6717dbe19acdbe8cae584cb99f6675a1e4dd23e39152b7855eee30",
+      "size": [
+        1536,
+        1024
+      ],
+      "raw_RGB_bytes": 4718592,
+      "original_bytes": 2069458,
+      "metadata_bytes": 3035,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 2058055,
+          "storage_bytes_including_metadata": 2058055,
+          "encode_seconds": 0.09874200006015599,
+          "decode_seconds": 0.024360790848731995,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1959290,
+          "storage_bytes_including_metadata": 1959290,
+          "encode_seconds": 0.8337817909196019,
+          "decode_seconds": 0.024087082827463746,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1673602,
+          "storage_bytes_including_metadata": 1676637,
+          "encode_seconds": 0.6750169589649886,
+          "decode_seconds": 0.027531957952305675,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1587766,
+          "storage_bytes_including_metadata": 1590801,
+          "encode_seconds": 21.383210875093937,
+          "decode_seconds": 0.025250541977584362,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/motion-guide-study/runs/20260907T202425197182Z-motion-effects-v001-ring-expand-frame-0038-1f/frames/0000.png",
+      "kind": "earlier SDXL",
+      "source_sha256": "c5abc5a4af7b5416ff36f43f7d248b19d3b48ef590140d97ae99f9a1a5523b8d",
+      "size": [
+        1024,
+        576
+      ],
+      "raw_RGB_bytes": 1769472,
+      "original_bytes": 911756,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 948129,
+          "storage_bytes_including_metadata": 948129,
+          "encode_seconds": 0.0326401658821851,
+          "decode_seconds": 0.010447666980326176,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 900828,
+          "storage_bytes_including_metadata": 900828,
+          "encode_seconds": 0.164845708059147,
+          "decode_seconds": 0.01069433311931789,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 794314,
+          "storage_bytes_including_metadata": 794316,
+          "encode_seconds": 0.2590631248895079,
+          "decode_seconds": 0.010470875073224306,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 756830,
+          "storage_bytes_including_metadata": 756832,
+          "encode_seconds": 12.604132124921307,
+          "decode_seconds": 0.014490416971966624,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/motion-guide-study/runs/rejected/20260908T135036819548Z-noise-steps-v001-us-noise18-0003-1f/anchor.png",
+      "kind": "earlier warp",
+      "source_sha256": "8b3c68989838b84c846abe01fc39aee36762bf680fe0facd1320021de455d1ab",
+      "size": [
+        1024,
+        576
+      ],
+      "raw_RGB_bytes": 1769472,
+      "original_bytes": 1094157,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1094157,
+          "storage_bytes_including_metadata": 1094157,
+          "encode_seconds": 0.03584645804949105,
+          "decode_seconds": 0.00995275005698204,
+          "identical_pixels": true,
+          "same_file_bytes": true
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1051458,
+          "storage_bytes_including_metadata": 1051458,
+          "encode_seconds": 0.1375067918561399,
+          "decode_seconds": 0.009402708150446415,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 851208,
+          "storage_bytes_including_metadata": 851210,
+          "encode_seconds": 0.279278582893312,
+          "decode_seconds": 0.010348208015784621,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 827852,
+          "storage_bytes_including_metadata": 827854,
+          "encode_seconds": 12.421959500061348,
+          "decode_seconds": 0.010259542148560286,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/seedream-motion/runs/20260906T222637730990Z-motion-40f/anchor.png",
+      "kind": "earlier animation",
+      "source_sha256": "31d03b3b1ff1e4ff9d7abd424c18d5013d5ff83821339e5476053776f45f1e03",
+      "size": [
+        1280,
+        720
+      ],
+      "raw_RGB_bytes": 2764800,
+      "original_bytes": 1399193,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1399193,
+          "storage_bytes_including_metadata": 1399193,
+          "encode_seconds": 0.05132487486116588,
+          "decode_seconds": 0.01600154209882021,
+          "identical_pixels": true,
+          "same_file_bytes": true
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1329012,
+          "storage_bytes_including_metadata": 1329012,
+          "encode_seconds": 0.25931966700591147,
+          "decode_seconds": 0.01427633292041719,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1132970,
+          "storage_bytes_including_metadata": 1132972,
+          "encode_seconds": 0.304450707975775,
+          "decode_seconds": 0.018312915926799178,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1092448,
+          "storage_bytes_including_metadata": 1092450,
+          "encode_seconds": 6.317252792185172,
+          "decode_seconds": 0.016908291960135102,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    },
+    {
+      "source": "projects/seedream-motion/runs/20260906T223549623622Z-motion-8f/frames/0007.png",
+      "kind": "earlier animation",
+      "source_sha256": "ae318a088f4301ad4df8d1d7bddf5bc87e03fb6afee3c3fb57becd1d830da137",
+      "size": [
+        1280,
+        720
+      ],
+      "raw_RGB_bytes": 2764800,
+      "original_bytes": 1496018,
+      "metadata_bytes": 2,
+      "results": [
+        {
+          "method": "png-default",
+          "file_bytes": 1550274,
+          "storage_bytes_including_metadata": 1550274,
+          "encode_seconds": 0.04287395882420242,
+          "decode_seconds": 0.018368416000157595,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "png-optimized",
+          "file_bytes": 1467564,
+          "storage_bytes_including_metadata": 1467564,
+          "encode_seconds": 0.19533391599543393,
+          "decode_seconds": 0.015866792062297463,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless",
+          "file_bytes": 1298834,
+          "storage_bytes_including_metadata": 1298836,
+          "encode_seconds": 0.31295004207640886,
+          "decode_seconds": 0.016913332976400852,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        },
+        {
+          "method": "webp-lossless-max",
+          "file_bytes": 1250864,
+          "storage_bytes_including_metadata": 1250866,
+          "encode_seconds": 5.131080291932449,
+          "decode_seconds": 0.018488749861717224,
+          "identical_pixels": true,
+          "same_file_bytes": false
+        }
+      ]
+    }
+  ],
+  "scope": "Small mixed sample; no originals replaced. WebP metadata sidecar size included. Encoding is a single pass per image, not a throughput guarantee.",
+  "decoder_validation": {
+    "Pillow_pixels_exact": true,
+    "OpenCV_pixels_exact": true,
+    "FFmpeg_pixels_exact": true,
+    "RIFE_environment_Pillow_pixels_exact": true,
+    "ComfyUI_remote_tested": false
+  },
+  "method_parameters": {
+    "png-default": {
+      "compress_level": 6
+    },
+    "png-optimized": {
+      "optimize": true
+    },
+    "webp-lossless": {
+      "lossless": true,
+      "quality": 80,
+      "method": 4,
+      "exact": true
+    },
+    "webp-lossless-max": {
+      "lossless": true,
+      "quality": 100,
+      "method": 6,
+      "exact": true
+    }
+  }
+}

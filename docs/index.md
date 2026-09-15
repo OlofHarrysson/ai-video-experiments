@@ -8,6 +8,7 @@ This directory contains the durable notes behind the experiments in this reposit
 ## Topics
 
 - [Media storage and lossless cleanup](storage.md): where space goes, verified archive retirement, shared media copies, and preservation rules.
+- [Frame-format benchmark and cleanup boundaries](research/frame-storage-formats.md): lossless PNG/WebP measurements, tooling compatibility and reconstruction requirements across historical workflows.
 - [Deforum refactor audit and plan](refactor-plan.md): first uv package migration, shared-code boundaries, archive replay evidence and remaining steps.
 - [Complete experiment notebook index](../apps/deforum/projects/EXPERIMENTS.md): 89 tracked notes grouped by project, plus useful starting points.
 
