@@ -19,6 +19,30 @@ A standard phrase also needs `start` and `duration`. Its amount eases from zero 
 
 The browser additionally shows local expansion/pinch, radial ripples and unfolding. Those have historical experimental implementations, but are **not all exposed by the shared recurrent renderer**. Do not silently map an unknown `kind` to an unrelated transform or claim every browser effect is already connected. A regional expansion is the same effect wherever its center is placed; it is not named after a sun, house or other background object.
 
+## Families and reference recipes
+
+The [Safety Marc comparison](research/bonsai-spatial-motion.md#current-palette-comparison--2026-09-15) separates four mechanisms. Deforum's menu labels alone do not make this distinction: all 95 saved presets select `3D`, including 45 with depth disabled.
+
+| Family | What determines the movement | Current Krea loop |
+| --- | --- | --- |
+| Flat image transforms | Pan, zoom, roll, shear and local coordinate deformations | Available |
+| Perspective on a flat sheet | Project a sheet tilted around its horizontal/vertical axes | Available through `plane`; different from depth parallax |
+| Depth-based camera movement | Assign different distances to image regions, then move/project them; near and far regions can travel differently | Historical trials exist; deferred in the current recipe |
+| Guide-derived deformation | Estimate motion between guide frames and apply it to the artwork | Historical Move-Warp trials exist; deferred in the current recipe |
+
+Add **motion recipes** above those individual controls. These candidates adapt the reference's timing ideas; they are not exact preset reproductions or newly validated renderer options.
+
+| Recipe to develop | Reference | How to construct a direct version | Status / omitted mechanism |
+| --- | --- | --- | --- |
+| Floating drift | `Move-Float-30s` | Phase-offset horizontal/vertical travel, slower rocking roll, gentle forward scale change. Keep travel active as roll reverses. | Existing controls can approximate it; a continuous periodic path is not yet a named renderer primitive. Original adds turbulent guide flow. |
+| Travelling look-around | `Look-Around-30s`, `Classic-3D-Motion` | Continue sideways/upward travel while a slower plane tilt turns toward a focal region; counter-turn before the framing becomes too skewed. | Direct approximation possible now. Exact reference uses depth, and Look-Around also adds guide flow. This is not a target-locked 3D orbit. |
+| Advancing spiral with a release | `Fly-Through-Spin-30s`, `Revolve-30s` | Combine travel, roll and a regional spiral; overlap a pullback before the subject fills the image. Carry lateral drift through the push/pull reversal. | Existing controls. The release is our adaptation for Olof's crowding/repetition feedback; the references additionally use depth and guide flow. |
+| Uneven push–pull journey | `Classic-3D-Motion-2/3/4-30s`, `Move-Around-30s` | Vary translation, scale and rotation on different timescales, with a few broader accelerations. Avoid equal-duration repeated cycles and simultaneous full stops. | Existing phrases can approximate the choreography. Original narrow motion pulses may conflict with Olof's preference for fluent movement; exact schedules need validation and recalibration. |
+
+Start with **floating drift** and **travelling look-around** as motion-only previews on one artwork, then repaint a selected route. Retain the accepted diffusion recipe. Add depth later when near/far separation is the artistic purpose, and guide flow when a particular guide's regional motion is wanted.
+
+Reference presets mostly describe per-frame movement at 12 fps. Our renderer composes time-based mappings and uses image-height units, so their numeric amplitudes and frame numbers are not drop-in parameters. Convert timing to seconds, calibrate motion strength visually, and inspect the relative warp between consecutive times. The name `Dolly-Zoom-Out` is also insufficient evidence of a cinematic dolly zoom: its inspected preset disables depth and keeps field of view constant.
+
 ## Choosing the next motion
 
 1. Inspect the actual latest painting. Identify the focal form, available space, useful curves and crowded edges.

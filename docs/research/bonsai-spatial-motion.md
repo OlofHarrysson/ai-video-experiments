@@ -2,6 +2,8 @@
 
 Execution update: the accepted [Move-Warp-inspired experiment](../../apps/deforum/projects/motion-guide-study/experiments/move-warp.md) now completes guide-flow feedback through Mac warping and existing ComfyUI img2img nodes. Six-second repaint and warp-only videos are preserved; no full preset reproduction or in-worker guide-flow node is claimed. The gap analysis below records the state that motivated the experiment.
 
+Current Krea comparison: see [the September 15 palette review](#current-palette-comparison--2026-09-15). The older gap analysis describes the original investigation; current direct spatial controls are documented in the [motion palette](../motion-palette.md).
+
 2026-09-07. Olof wants the expressive movement in The BonsAi Effect's references. He found our latest 3D repaint nearly motionless and the guide too restrained. Literal camera realism is one possible technique; the current creative question is how to direct different regions of an evolving image.
 
 ## What the repository tells us
@@ -68,3 +70,21 @@ The earlier local walkthrough estimates actual ring flow and warps an artwork, b
 **Recommendation:** study/adapt Move-Warp's actual wave guide next, using B's accepted same-model/changing-seed repaint recipe as the art control. First verify the field and a plainly visible warp-only preview, then a short guide-flow feedback clip, then add the preset's scheduled turn if needed. This would isolate an authentic reference mechanism while acknowledging that B's seed/conditioning recipe differs from the complete preset. Do not call it an exact preset reproduction.
 
 Implementation remains a proposal pending alignment. Prefer an existing compatible warp node; if the current monolithic feedback sampler prevents inserting guide flow, scope one small explicit integration rather than a broad platform migration. Keep ComfyUI as requested. The next pass should resolve this concrete missing mechanism before another generic camera-strength sweep.
+
+## Current palette comparison — 2026-09-15
+
+Olof calls the continuous-motion results very good and endorses a reusable spatial palette. He asks to revisit the GitHub examples and recalls 2D/3D categories. Rechecked upstream HEAD: still `bb8ce2fb0fd693319087460c8b21c13e19864be5`, matching the saved reference. Recounting all 95 JSON preset files finds **95 in `3D` mode**, 50 with depth enabled / 45 disabled, and 77 with optical-flow hybrid motion / 18 without. The 18 Classic files have no hybrid motion; short and 30-second versions are separate files.
+
+Deforum itself does have separate 2D/3D paths. Its [warp implementation](https://github.com/deforum-art/sd-webui-deforum/blob/5d63a339dbec8d476657a1f672a4eeb6dc79ed37/scripts/deforum_helpers/animation.py) uses translation/zoom/angle in 2D and projected XYZ translation/rotation in 3D. With no usable depth tensor, the latter uses a constant-depth plane. Accordingly, distinguish flat transforms, flat-sheet perspective, depth parallax and guide flow when choosing an effect. Guide motion can accompany camera motion, and compositing is another separate switch.
+
+The current recurrent Krea renderer already implements pans, inward/outward scale changes, global/local turns, cruise, flat-plane tilts, shear and horizontal/vertical waves. Original depth and guide-flow experiments remain archived; their mechanisms are not active in this recipe. The [new palette](../motion-palette.md#families-and-reference-recipes) records four candidate combinations with these boundaries.
+
+### Specific lessons from the settings
+
+- [Move-Float-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Move-Float-30s.txt): sine X travel, cosine Y travel, slower cosine roll and constant Z movement. Different timing across axes is useful for keeping movement alive. Its original turbulent-guide flow remains a separate contribution; a direct approximation will differ.
+- [Classic-3D-Motion-2-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Classic-3D-Motion-2-30s.txt), plus variants 3/4: coordinated translation and rotation curves mix broad oscillations with narrow pulses and changing sections. They provide choreography ideas, although sharper pulses can conflict with the desired smooth movement. A raw import would also change the SDXL sampler, repaint strength, color treatment, cadence and finishing; those are outside this motion comparison.
+- [Look-Around-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Look-Around-30s.txt): ongoing Y/Z translation with varying yaw and slower roll, plus depth and kaleidoscope flow. Adapt the coupled travel/turn idea to a visible destination; a plane-based approximation cannot claim true parallax or a target-locked orbit.
+- [Fly-Through-Spin-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Fly-Through-Spin-30s.txt) and [Revolve-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Revolve-30s.txt): translation plus roll, with different guide fields. A direct travelling spiral is feasible; adding a pullback before crowding is our proposed adaptation, not a claim about the original preset.
+- [Dolly-Zoom-Out-30s](https://github.com/S4f3tyMarc/Deforum-Studio-Presets/blob/bb8ce2fb0fd693319087460c8b21c13e19864be5/Deforum-Presets/Dolly-Zoom-Out-30s.txt): depth off, fixed FOV70, Z direction changes late, turbulent flow. The name does not establish the near/far perspective effect of a cinematic dolly zoom.
+
+These findings come from settings and implementation review; no new preset video was rendered or watched in this follow-up. Next recommended comparison is two direct motion-only recipes—floating drift and travelling look-around—before adding any new depth/flow mechanism. Keep original preset settings as research data; frame-based increments, coordinate units, border behavior and scheduling semantics differ from our renderer.
