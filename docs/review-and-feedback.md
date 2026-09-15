@@ -62,7 +62,9 @@ These were small controlled comparisons using the same SDXL image model and art 
 
 One artistic sequence and seed family were tested, so these comparisons establish behavior for this example rather than universal best settings. Sub-agents divide the work; the experimental questions determine the variants.
 
-## Current preferred recipe: P3 with RIFE
+## Historical preferred recipe: P3 with RIFE
+
+This section records the earlier Brain Entity study. Use [current state](current-state.md) for the active model and recipe.
 
 Olof tentatively prefers **P3 + RIFE** from the seven continuity outputs; he found C01/C03 boring and the others pretty good, while noting that similar variants were difficult to distinguish. This preference supersedes the assistant's earlier recommendation of C02 + RIFE.
 

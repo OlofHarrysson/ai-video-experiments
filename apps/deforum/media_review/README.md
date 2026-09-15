@@ -2,13 +2,13 @@
 
 The local reviewer keeps one, two or three videos visible together, side by side on laptop-sized windows, with shared play/pause, speed, scrubbing, frame stepping and painting stepping. This is the reusable human-facing companion to `video_review.py`'s extracted-frame/contact-sheet review.
 
-The current session features Porcelain Weather (14s) and Velvet Harbour (11s), selected from the [two-hour lab](../projects/modern-model-study/experiments/two-hour-lab/README.md). Revisions and controls are grouped at `/two-hour-porcelain`, `/two-hour-velvet`, `/two-hour-controls`, `/two-hour-conditioning` and `/two-hour-models`. `/transition-stages` preserves the previous default. Keep the longest clip first for a shared timeline that can show both full videos. Embedded pages are split by experiment family: the initial 75.5 MB page exceeded the browser inspection tool’s 64 MiB response limit.
+The default session is selected by `SESSION` in [media_review_server.py](../media_review_server.py); named comparison routes are recorded there too. See [current state](../../../docs/current-state.md) for the latest experiment, rather than treating a historical validation below as the current playlist. Keep the longest clip first for a shared timeline that can show both full videos. Split embedded pages by experiment family when useful for comparison.
 
 ## Run locally
 
 The default human review path is a dedicated browser window. Olof primarily uses a 14-inch MacBook; the initial vertical stack inside Codex did not keep both frames visible. The local layout fits the available viewport, keeps shared controls compact, and offers Full screen. At widths below 600px it uses fitted rows. Source aspect ratios are preserved without cropping.
 
-Devrun service `media-review` runs `uv run python media_review_server.py` from `apps/deforum/`. The current assigned URL is `http://localhost:3028/`; inspect Devrun's `effectiveUrl` before future handoffs. The server binds only to loopback and serves the generated review document at `/` or `/full-quality.html`, with no repository directory listing or arbitrary file routes. It rebuilds the default saved session on startup. Restart through Devrun after source/session edits; the service remains running for Olof's review until stopped.
+Devrun service `media-review` runs `uv run python media_review_server.py` from `apps/deforum/`. The last recorded URL is `http://localhost:3028/`; inspect Devrun's `effectiveUrl` before handoff. Use Devrun/shared terminal for routine delivery and verification; Olof prefers this over Chrome integration. The server binds only to loopback and serves the generated review document at `/` or `/full-quality.html`, with no repository directory listing or arbitrary file routes. It rebuilds the default saved session on startup. Restart through Devrun after source/session edits; the service remains running for Olof's review until stopped.
 
 The full-quality local version has no 1 MB chat limit and does not need preview transcoding. The inline version remains optional for compact demonstrations, not the default close-comparison surface.
 

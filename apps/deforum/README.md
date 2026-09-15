@@ -16,13 +16,13 @@ uv installs the internal `deforum_lab` package in editable mode. NumPy, Pillow a
 
 Shared code lives in [src/deforum_lab](src/deforum_lab): `infrastructure` handles ComfyUI transport, `image` handles warps, `rendering` handles graphs and recurrent painting, and `media` handles painting review and finishing. `paths.py` and `records.py` provide explicit workspace paths and immutable records. New experiments import these modules and pass their output path and client explicitly. The [early-settle runner](projects/modern-model-study/experiments/early_settle.py) is the first migrated example; its runner, checker and review builder no longer import earlier experiments.
 
-The source and wheel build uses `uv build`; Hatchling is the build backend. Only package source and metadata enter the distributions. The existing RIFE environment, reviewer service, model installation and historical runners remain in their current locations. [Shared-code responsibilities](../../docs/workflow.md#shared-code) distinguish the extracted code from those remaining entry points. Remote execution of this package awaits the next Pod session's preflight; local archive replay has passed.
+The source and wheel build uses `uv build`; Hatchling is the build backend. Only package source and metadata enter the distributions. The existing RIFE environment, reviewer service, model installation and historical runners remain in their current locations. [Shared-code responsibilities](../../docs/workflow.md#shared-code) distinguish the extracted code from those remaining entry points. Both local archive replay and remote package execution are recorded in the [migration report](../../docs/refactor-plan.md).
 
 ## Current creative workflow
 
 Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
 
-Work from `apps/deforum/`. The Mac manages spatial transforms, cadence, workflow submission and local archives; ComfyUI on RunPod generates images. Earlier experiments using Difforum/depth nodes remain preserved.
+Work from `apps/deforum/`. The Python runner manages spatial transforms, cadence and workflow submission, locally or on the Pod; ComfyUI generates images on RunPod. Collection and review preserve local archives. See [current state](../../docs/current-state.md) for the active recipe. Earlier experiments using Difforum/depth nodes remain preserved.
 
 New RGB spatial warps use `deforum_lab.image.resampling.remap_rgb`, with Lanczos4 interpolation and reflected borders. Olof selected this after the matched bilinear/Lanczos comparison. Historical experiment scripts retain their recorded interpolation settings for reproduction.
 
@@ -30,7 +30,7 @@ Start with the [project index](projects/README.md), [working convention](../../d
 
 ## Earlier experiments
 
-These summaries preserve previous models, runtimes and timing choices; use the current workflow above for new work.
+These summaries preserve previous models, runtimes and timing choices. Any “current” or “latest” wording below is historical; use [current state](../../docs/current-state.md) for new work.
 
 Earlier direct-motion result: [sampler comparison](projects/motion-guide-study/experiments/samplers.md). Two three-second Euler variants are complete, informed by [model-specific creator recipes](../../docs/research/model-sampler-recipes.md). Ordinary Euler stays closer to the DPM++ 2M baseline; ancestral produces more distinct redraw and some fine speckling. Keep the baseline pending playback feedback. All media is local; compute and temporary storage are cleaned up.
 
