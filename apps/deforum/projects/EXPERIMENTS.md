@@ -1,6 +1,6 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-15. **97 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 97 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-15. **98 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 98 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
@@ -27,7 +27,9 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 55 notes
+### modern-model-study — 56 notes
+
+- [Floating drift and travelling look-around previews](modern-model-study/experiments/motion-recipe-previews/README.md)
 
 - [Continuous movement and a wider motion palette](modern-model-study/experiments/continuous-motion-hour/README.md)
 

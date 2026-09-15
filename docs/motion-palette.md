@@ -41,6 +41,8 @@ Add **motion recipes** above those individual controls. These candidates adapt t
 
 Start with **floating drift** and **travelling look-around** as motion-only previews on one artwork, then repaint a selected route. Retain the accepted diffusion recipe. Add depth later when near/far separation is the artistic purpose, and guide flow when a particular guide's regional motion is wanted.
 
+The first [two motion-only previews](../apps/deforum/projects/modern-model-study/experiments/motion-recipe-previews/README.md) are now rendered with the current shared controls. Each lasts ten seconds at 24 fps on the same artwork; [compare them](http://localhost:3028/motion-recipes). Floating drift uses phase-offset eased travel phrases. Look-around combines plane tilts with ongoing travel. They expose reflected borders, preserve the initial artwork, and await Olof's selection before a recurrent repaint test.
+
 Reference presets mostly describe per-frame movement at 12 fps. Our renderer composes time-based mappings and uses image-height units, so their numeric amplitudes and frame numbers are not drop-in parameters. Convert timing to seconds, calibrate motion strength visually, and inspect the relative warp between consecutive times. The name `Dolly-Zoom-Out` is also insufficient evidence of a cinematic dolly zoom: its inspected preset disables depth and keeps field of view constant.
 
 ## Choosing the next motion

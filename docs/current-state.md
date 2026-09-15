@@ -1,6 +1,6 @@
 # Current creative and technical state
 
-Snapshot: 2026-09-15, after the [continuous-motion session](../apps/deforum/projects/modern-model-study/experiments/continuous-motion-hour/README.md). This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
+Snapshot: 2026-09-15, after the [motion-recipe previews](../apps/deforum/projects/modern-model-study/experiments/motion-recipe-previews/README.md), following the continuous-motion session. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
 
 ## What we are working toward
 
@@ -11,7 +11,8 @@ The working method is iterative: generate a short passage, inspect it, keep what
 ## Where we are
 
 - **Active project:** [modern-model study](../apps/deforum/projects/modern-model-study/README.md). Krea is the current creative model; Klein results remain historical.
-- **Latest results:** two matched 16-second motion routes, a 24-second orchid-railway-to-harp continuation, and an optional motion-separated interpolation comparison. The assistant favors Banking voyage and its continuation; Olof has not yet judged these new films.
+- **Current preview:** floating drift and travelling look-around, ten seconds each on one unchanged painting, with no new diffusion or RIFE. The [reviewer](http://localhost:3028/motion-recipes) compares their spatial movement; Olof's selection is pending. These use 1× displayed time, distinct from the recent 1.5× film finishes.
+- **Recent films:** two matched 16-second motion routes, a 24-second orchid-railway-to-harp continuation, and an optional motion-separated interpolation comparison. Olof calls the overall result very good and endorses the reusable motion palette; he has not selected an individual variant. The assistant favors Banking voyage and its continuation.
 - **Progress:** footage is more expressive than the early studies, with reusable spatial controls, scene descriptions and transition noise curves. Motion now includes persistent drift, flat-sheet plane projection, shear and waves alongside pans, zooms and local twists.
 - **Remaining problems:** abrupt structural changes between some paintings, interpolation ghosts, accumulated flattening, reflected borders and crowded foregrounds. Increased geometric movement alone does not guarantee fluent or well-composed footage.
 - **Current emphasis:** movement variety and visual storytelling. Storage optimization is parked until disk pressure returns; no new permission to discard unique media is implied.
@@ -40,7 +41,7 @@ The [latest config](../apps/deforum/projects/modern-model-study/experiments/cont
 - Use Devrun/shared terminal for the local `media-review` service. Check its `effectiveUrl`; do not assume the historical port is free. Saved sessions and allowlisted routes are configured by [the reviewer](../apps/deforum/media_review/README.md).
 - Preserve original media, configurations, parent lineage and delivery manifests. Videos and frames are ignored by Git; current originals are local, without a separate external backup. Follow [storage conventions](storage.md).
 
-At completion of the latest recorded session, all 118 image jobs and 1,989 archive entries were verified locally; its owned Pod and scratch/media were removed, and the authorized `deforum-models` EU-RO-1 volume was retained. The recorded conservative total for the ongoing $10 experiment series is $4.40. These are dated records, not live infrastructure or billing checks; verify both before resuming cloud work. Detailed accounting belongs in [the session receipt](../apps/deforum/projects/modern-model-study/experiments/continuous-motion-hour/execution-summary.json).
+At completion of the continuous-motion GPU session, all 118 image jobs and 1,989 archive entries were verified locally; its owned Pod and scratch/media were removed, and the authorized `deforum-models` EU-RO-1 volume was retained. The recorded conservative total for the ongoing $10 experiment series is $4.40. The subsequent motion-recipe previews used local computation only. These are dated records, not live infrastructure or billing checks; verify both before resuming cloud work. Detailed accounting belongs in [the session receipt](../apps/deforum/projects/modern-model-study/experiments/continuous-motion-hour/execution-summary.json).
 
 ## Finding previous work
 
