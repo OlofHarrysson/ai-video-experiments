@@ -2,31 +2,28 @@
 
 ## Project brief
 
-A public notebook and working environment for learning to make controllable AI films. We want surreal, visually rich scenes with recognizable forms that gradually transform, supported by deliberate spatial movement. The aim is to build longer films from short, reviewable sections: generate, inspect, preserve a good prefix, and branch or continue from a chosen frame.
+A public notebook and working environment for AI-assisted filmmaking. We explore how to create expressive videos with intentional visual style, movement, transformation and storytelling, and develop practical tools and workflows for doing so.
 
-The immediate product is a useful creative workflow, a library of working effects and reproducible experiments—not a complete video editor. Learning filmmaking, model behavior and effective human–agent collaboration are part of the work. Olof sets artistic direction and judges taste; the assistant researches, implements, experiments and screens results.
+The project combines creative experiments, reusable tooling and reproducible records. Work proceeds through research, generation, inspection and iteration, with the ability to preserve successful material and explore alternatives. Learning filmmaking, model behavior and effective human–agent collaboration are explicit outcomes. Olof sets artistic direction and judges taste; the assistant researches, implements, experiments and screens results.
 
-## Current brief
+## Finding context
 
-Active work is in `apps/deforum/`, especially the [modern-model study](apps/deforum/projects/modern-model-study/README.md). It uses a recurrent Krea/ComfyUI workflow: warp the previous painting, initialize another diffusion repaint from it, then interpolate for presentation. The latest focus is continuous, varied spatial motion and visual storytelling; the artwork is promising, but repetitive movement, crowded framing and abrupt redraws remain. Storage work is deferred until disk pressure returns.
-
-Read [current state and recipe](docs/current-state.md) before choosing a baseline or resuming an experiment. It identifies the latest results, unresolved questions and dated resource/budget records. Historical experiment settings are not global defaults.
+Use the documentation index below to find the relevant project, workflow or research. When resuming ongoing experiments, read [current state](docs/current-state.md) and the owning project's brief. Treat historical findings as evidence with a specific scope, rather than general defaults. Read further only where the task needs it.
 
 ## Working rules
 
-- Preserve recurrent feedback when changing models, prompts or conditioning. Image initialization and optional reference-image conditioning are different inputs; align before changing the loop.
-- Preserve unique generations, references and cut versions. Verify local collection before removing owned cloud media/compute. Media is ignored by Git, and there is no external backup. Follow [storage rules](docs/storage.md); do not infer permission to purge artwork.
-- Use `uv` and the app's `pyproject.toml`/`uv.lock`. Shared Python mechanics belong in `apps/deforum/src/deforum_lab/`; experiment configs, runners and results belong to their project. See [workflow and code ownership](docs/workflow.md).
-- Review images and selected frame sequences first. Show Olof one recommendation and one meaningful alternative as playable videos in chat, with plain-language explanations. Separate assistant findings from his taste judgments; do not infer understanding from exposure. Follow [review and feedback](docs/review-and-feedback.md).
-- Manage the local reviewer through Devrun/shared terminal; obtain its current URL there. Avoid Chrome integration for routine delivery. Keep compared frames visible together on a 14-inch laptop.
-- For GPU work, read [POD.md](apps/deforum/POD.md) and the repository-scoped RunPod skills. Check current resources, track ownership and spend, remove completed owned Pods, and preserve the authorized shared model cache. Credentials and private account receipts stay ignored.
-- Record exact configurations, provenance and validation scope. Keep unreviewed ideas distinct from tested findings. Log consequential workflow/tool/communication problems with `log-agent-friction`.
+- Keep experiments aligned with the agreed artistic intent and question. Consult the owning project's workflow before changing its generation method or interpretation of inputs.
+- Preserve original references, unique generations and versioned creative decisions. Verify preservation before cleanup; follow the [storage policy](docs/storage.md) and relevant runbooks.
+- Record enough configuration, provenance and evidence to understand and reproduce an experiment. Distinguish hypotheses, observed results, assistant judgments and human preferences.
+- Screen results before asking Olof to judge taste. Present a small visual shortlist with plain-language explanations. Keep collaboration and learning notes evidence-based; follow the [review agreement](docs/review-and-feedback.md).
+- Use the repository's tooling and code-ownership conventions, documented in the [workflow](docs/workflow.md) and app guides. Reusable mechanics and project-specific experiments have separate owners.
+- Protect credentials, respect spending boundaries, track resource ownership and clean up completed work according to its runbook. Log consequential communication, workflow and tool problems with `log-agent-friction`.
 
 ## Documentation Index
 
 Start here for repository documentation. Add shared explanations as separate `docs/*.md` pages and link them here. Research lives under `docs/research/`; app runbooks and project-specific briefs, experiments and cuts stay beside their owners. Link research through its index and experiments through theirs instead of expanding this entry point with each result.
 
-### Direction and current work
+### Purpose and orientation
 
 - [AGENTS.md](AGENTS.md): project brief, operating rules and canonical documentation index.
 - [README.md](README.md): public introduction and workspace overview.
@@ -47,9 +44,9 @@ Start here for repository documentation. Add shared explanations as separate `do
 
 ### Develop and operate
 
-- [Deforum app](apps/deforum/README.md): active Python workspace and entry points.
-- [ComfyUI Pods](apps/deforum/POD.md): current GPU execution and cleanup runbook.
-- [RunPod setup](docs/runpod.md): repository-scoped tools and authentication; [serverless runbook](apps/deforum/serverless/README.md) for earlier deployments.
+- [Deforum app](apps/deforum/README.md): workspace and development entry points.
+- [ComfyUI Pods](apps/deforum/POD.md): GPU execution and resource lifecycle.
+- [RunPod setup](docs/runpod.md): repository-scoped tools and authentication; [serverless runbook](apps/deforum/serverless/README.md) for serverless operation.
 - [Media storage](docs/storage.md): preservation, shared copies and verified duplicate cleanup.
 - [Refactor plan](docs/refactor-plan.md): package migration, legacy boundaries and remaining work.
 - [ComfyUI studies](apps/comfyui/README.md), [Blender animation](apps/blender-animation/README.md), [stop-motion](apps/stop-motion/README.md): other areas of this workspace, each with its own brief.
@@ -57,4 +54,4 @@ Start here for repository documentation. Add shared explanations as separate `do
 
 ## Keeping this entry point useful
 
-Keep the project brief and working rules short. Replace the current brief when focus changes; put settings and dated status in `docs/current-state.md`, findings in the experiment report, and explicit user feedback in the learning journal. Do not append successive session recaps here. Maintain a link to each shared documentation entry point without duplicating its contents.
+Keep this file focused on the project's enduring purpose, working principles and documentation map. Update it when those change. Priorities, selected models, settings, budgets, resource conditions and recent results belong in linked status pages, project briefs and runbooks. Record findings in experiment reports and explicit user feedback in the learning journal. Routine experiments should not require edits here; maintain links without copying their changing contents into this entry point.
