@@ -20,6 +20,8 @@ The assistant does the first pass: verifies the experiment, inspects images over
 
 Default human review: **one recommendation and one meaningfully different alternative**, often just one video when there is no useful choice. Keep all outputs and link the full experiment index, but do not require Olof to rank six nearly identical clips. Show the whole set when requested. Keep playable videos inline in chat. For close comparisons, build the [linked media reviewer](../apps/deforum/media_review/README.md) from a saved session in a dedicated local browser window: default to two labeled clips and let Olof add a third. Keep the complete frames visible simultaneously on his 14-inch MacBook; a vertical stack requiring scrolling is unsuitable for close comparisons. Distinguish compressed chat previews from the original-video review when judging fine detail. Keep frame and painting controls separate.
 
+For routine delivery, manage the reviewer and verify its served data through Devrun and the shared terminal. Olof explicitly prefers this to Chrome integration (2026-09-15). Preserve the established player layout; new film data alone does not require attaching to his browser. Report any unverified UI behavior accurately when the interface itself changes.
+
 Use descriptive names with stable experiment IDs in parentheses, rather than unexplained node names. Each shortlisted video gets:
 
 1. **What changed:** one plain-language sentence relative to a named baseline.
