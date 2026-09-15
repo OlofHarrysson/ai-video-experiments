@@ -1,0 +1,23 @@
+{
+  "title": "Regional movement: opposite directions",
+  "selected": [
+    "t3-petals-part",
+    "t4-petals-open"
+  ],
+  "clips": [
+    {
+      "id": "t3-petals-part",
+      "label": "Petal crosses the opening",
+      "note": "Regional turns obscure the destination",
+      "details": "The two local turns pull a near orchid across the central opening. The flower becomes prominent and the new railway is pushed toward the lower edge. This is an instructive alternative, not a successful clearing of the opening.\n\nEach painting repaints the warped previous painting with Krea Turbo, three Euler intervals and CFG1. All comparisons keep the text, seeds and noise curve fixed; only spatial motion changes. Lanczos warps run on the source timeline. RIFE 4.25 scale 1 supplies intermediate frames. Delivery is 24 fps at 1.5\u00d7 source speed: three paintings per second. These excerpts begin at the shared original frame 384, omitting the identical opening.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t3-petals-part/excerpt-0384/rife/preview.mp4"
+    },
+    {
+      "id": "t4-petals-open",
+      "label": "Reverse the regional turns",
+      "note": "Same local effects, opposite direction",
+      "details": "Reversing the two local turns moves the opening upward and exposes a large perforated ivory form. The railway leaves the upper edge and the ivory structure becomes dominant. This gave us the wheel-like shape used in a later clockwork-world branch.\n\nEach painting repaints the warped previous painting with Krea Turbo, three Euler intervals and CFG1. All comparisons keep the text, seeds and noise curve fixed; only spatial motion changes. Lanczos warps run on the source timeline. RIFE 4.25 scale 1 supplies intermediate frames. Delivery is 24 fps at 1.5\u00d7 source speed: three paintings per second. These excerpts begin at the shared original frame 384, omitting the identical opening.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t4-petals-open/excerpt-0384/rife/preview.mp4"
+    }
+  ]
+}

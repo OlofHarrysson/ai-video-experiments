@@ -2,7 +2,7 @@
 
 Olof calls the preceding stronger spatial motion an improvement and identifies **surrealism** as the art direction: odd and impossible scenes are welcome. This session follows that direction while retaining recurrent Krea feedback. Human preference among these new films is pending.
 
-**Assistant shortlist:** the sixteen-second fruit-to-garden journey and the eight-second piano-to-swans shot. Both combine visible turns and travel with changing subject matter. [Open the two-film reviewer](http://localhost:3028/).
+**Assistant shortlist:** the sixteen-second fruit-to-garden journey and the eight-second piano-to-swans shot. Both combine visible turns and travel with changing subject matter. [Open the two-film reviewer](http://localhost:3028/surreal-hour).
 
 ## Films and comparisons
 

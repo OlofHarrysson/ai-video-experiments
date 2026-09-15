@@ -1,0 +1,23 @@
+{
+  "title": "Additional passages and boundary tests",
+  "selected": [
+    "t5-the-travelling-library",
+    "t9-reveal-the-orrery"
+  ],
+  "clips": [
+    {
+      "id": "t5-the-travelling-library",
+      "label": "Train into library",
+      "note": "Carriage windows \u2192 reading rooms; rails \u2192 paper",
+      "details": "A 5\u2154-second excerpt. Paper appears along the train before the carriage becomes library architecture. This continuation is included in the longer living-book film.\n\nKrea Turbo recurrent feedback, CFG1, three Euler intervals. Time-based Lanczos warps. RIFE 4.25 scale 1, 24 fps, three paintings per displayed second. All paintings are preserved.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t5-the-travelling-library/excerpt-0564/rife/preview.mp4"
+    },
+    {
+      "id": "t9-reveal-the-orrery",
+      "label": "Pull back from the clockwork world",
+      "note": "Reveal the sun \u2014 with reflected edge artifacts",
+      "details": "Three-second extension of the clockwork film. A 30% shrink and small downward shift bring the sun into view. Reflected borders become repeated gears and ribbons; repainting does not convincingly replace them with a wider open scene. Preserve as a useful boundary test.\n\nKrea Turbo recurrent feedback, CFG1, three Euler intervals. Time-based Lanczos warps. RIFE 4.25 scale 1, 24 fps, three paintings per displayed second. All paintings are preserved.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t9-reveal-the-orrery/excerpt-0756/rife/preview.mp4"
+    }
+  ]
+}

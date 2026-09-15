@@ -1,0 +1,23 @@
+{
+  "title": "Surreal journeys \u2014 compare the new passages",
+  "selected": [
+    "t7-through-the-living-book",
+    "t6-the-clockwork-sun"
+  ],
+  "clips": [
+    {
+      "id": "t7-through-the-living-book",
+      "label": "Through the living book",
+      "note": "Fruit \u2192 garden \u2192 railway \u2192 library \u2192 paper forest",
+      "details": "This review omits the identical first 10\u2154 seconds. Player time zero is the shared garden painting. The complete film remains available in the session report and chat.\n\nA 26\u2154-second continuous recurrent journey. The earlier fruit/city/fish opening is preserved. From 10\u2154 seconds, travel through the garden opening to balloon stations, then follow the train into a library and through a glowing arch toward a paper forest. The route adapts to forms that appeared in the preceding painting. Some major redraws still produce ghosted intermediate details.\n\nKrea Turbo repaints its own warped previous painting using three Euler intervals, CFG1 and scene-specific noise ramps. Lanczos controls spatial movement. RIFE 4.25 scale 1 fills the gaps and never feeds back. 24 fps delivery, three paintings per displayed second; all diffusion paintings are preserved. This is a 1.5\u00d7 edition of the recorded source timeline.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t7-through-the-living-book/excerpt-0384/rife/preview.mp4"
+    },
+    {
+      "id": "t6-the-clockwork-sun",
+      "label": "The clockwork world",
+      "note": "Garden \u2192 ivory wheel \u2192 gears and inhabited planets",
+      "details": "This review omits the identical first 10\u2154 seconds. Player time zero is the shared garden painting. The complete film remains available in the session report and chat.\n\nA 21\u2153-second alternative journey with the same preserved opening. Reversed local turns produced a perforated ivory form. That accidental shape became the starting point for a clockwork world. The sun is partly cropped and the near wheel remains large.\n\nKrea Turbo repaints its own warped previous painting using three Euler intervals, CFG1 and scene-specific noise ramps. Lanczos controls spatial movement. RIFE 4.25 scale 1 fills the gaps and never feeds back. 24 fps delivery, three paintings per displayed second; all diffusion paintings are preserved. This is a 1.5\u00d7 edition of the recorded source timeline.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t6-the-clockwork-sun/excerpt-0384/rife/preview.mp4"
+    }
+  ]
+}

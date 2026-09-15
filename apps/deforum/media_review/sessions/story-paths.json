@@ -1,0 +1,23 @@
+{
+  "title": "Two routes through the same painting",
+  "selected": [
+    "t1-through-the-opening",
+    "t2-turn-and-unfold"
+  ],
+  "clips": [
+    {
+      "id": "t1-through-the-opening",
+      "label": "Travel through the opening",
+      "note": "Stairs \u2192 railway \u2192 balloon stations",
+      "details": "A forward push keeps the bright circular destination in view. The smaller staircase becomes rails; the dominant right staircase persists. Some station/carriage and glass/rock redraws leave ghosted intermediate details.\n\nEach painting repaints the warped previous painting with Krea Turbo, three Euler intervals and CFG1. All comparisons keep the text, seeds and noise curve fixed; only spatial motion changes. Lanczos warps run on the source timeline. RIFE 4.25 scale 1 supplies intermediate frames. Delivery is 24 fps at 1.5\u00d7 source speed: three paintings per second. These excerpts begin at the shared original frame 384, omitting the identical opening.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t1-through-the-opening/excerpt-0384/rife/preview.mp4"
+    },
+    {
+      "id": "t2-turn-and-unfold",
+      "label": "Turn beneath the petals",
+      "note": "Same scene, a stronger turn",
+      "details": "A larger radial turn sends the destination downward. It creates a dramatic diagonal railway and dark petal canopy, but the route is less clear.\n\nEach painting repaints the warped previous painting with Krea Turbo, three Euler intervals and CFG1. All comparisons keep the text, seeds and noise curve fixed; only spatial motion changes. Lanczos warps run on the source timeline. RIFE 4.25 scale 1 supplies intermediate frames. Delivery is 24 fps at 1.5\u00d7 source speed: three paintings per second. These excerpts begin at the shared original frame 384, omitting the identical opening.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t2-turn-and-unfold/excerpt-0384/rife/preview.mp4"
+    }
+  ]
+}

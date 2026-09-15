@@ -328,3 +328,7 @@ Explicit feedback: extra paintings during the morph look a little better, but Ol
 ## Surrealism and stronger motion — 2026-09-15
 
 Olof calls the motion-hour results an improvement and explicitly identifies surrealism as the intended art direction: odd scenes do not need to be realistic. This supports more impossible scale, objects and environments while retaining visible spatial movement. He has not selected a specific motion-hour variant. A further autonomous hour is authorized within the remaining original $10 budget.
+
+### 2026-09-15 — artistic direction and emergence
+
+Olof finds the surreal-world results super cool and says we are getting somewhere. He approves deliberate movement and visual storytelling, balancing an artistic vision with adapting to unexpected model results. Backtracking from a preserved frame with changed prompts is welcome. He wants more tools for control while recognizing that complete control is unrealistic. No individual new variant is selected.

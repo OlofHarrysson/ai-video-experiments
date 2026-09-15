@@ -1,0 +1,23 @@
+{
+  "title": "A gentle wave in the paper forest",
+  "selected": [
+    "t7-through-the-living-book",
+    "t8-the-paper-forest-breathes"
+  ],
+  "clips": [
+    {
+      "id": "t7-through-the-living-book",
+      "label": "Forest \u2014 original motion",
+      "note": "Library \u2192 paper trees \u2192 traveler and distant city",
+      "details": "Three-second ending excerpt. The main approach and turn continue as the library becomes a forest. The final lone figure provides a readable focal point, though the change from several people to one is abrupt.\n\nKrea Turbo recurrent feedback, CFG1, three Euler intervals. Time-based Lanczos warps. RIFE 4.25 scale 1, 24 fps, three paintings per displayed second. All paintings are preserved.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t7-through-the-living-book/excerpt-0852/rife/preview.mp4"
+    },
+    {
+      "id": "t8-the-paper-forest-breathes",
+      "label": "Forest \u2014 added wave",
+      "note": "Same paintings up to the branch, then one extra spatial wave",
+      "details": "Adds one bounded horizontal wave to the existing movement, with the same prompt, noise and seeds. The new paintings react to that altered geometry. The ending is more abstract, and the figure becomes a dark flowing shape. A wave in recurrent generation changes more than the final playback motion.\n\nKrea Turbo recurrent feedback, CFG1, three Euler intervals. Time-based Lanczos warps. RIFE 4.25 scale 1, 24 fps, three paintings per displayed second. All paintings are preserved.",
+      "source": "projects/modern-model-study/exports/story-hour-v001/t8-the-paper-forest-breathes/excerpt-0852/rife/preview.mp4"
+    }
+  ]
+}

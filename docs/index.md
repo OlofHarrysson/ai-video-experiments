@@ -1,5 +1,6 @@
 # Documentation
 
+- [Deliberate movement and emerging stories](../apps/deforum/projects/modern-model-study/experiments/story-hour/README.md): matched spatial routes, continuations adapted to actual paintings, and a preserved longer journey.
 - [Linked media reviewer](../apps/deforum/media_review/README.md): local browser comparisons that fit all frames on screen, with shared controls and painting/frame stepping.
 
 This directory contains the durable notes behind the experiments in this repository.

@@ -1,0 +1,215 @@
+{
+  "date": "2026-09-15",
+  "goal_started_utc": "2026-09-15T10:52:19Z",
+  "new_experiment_cutoff_utc": "2026-09-15T11:52:19Z",
+  "attempts": 9,
+  "new_image_jobs": 124,
+  "generation_checks": [
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/eighth-generation.json",
+      "jobs": 8,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/fifth-generation.json",
+      "jobs": 16,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/first-generation.json",
+      "jobs": 15,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/fourth-generation.json",
+      "jobs": 16,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/second-generation.json",
+      "jobs": 30,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/seventh-generation.json",
+      "jobs": 8,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/sixth-generation.json",
+      "jobs": 16,
+      "verified": true
+    },
+    {
+      "file": "projects/modern-model-study/exports/story-hour-v001/checks/third-generation.json",
+      "jobs": 15,
+      "verified": true
+    }
+  ],
+  "archive": {
+    "verified": true,
+    "archive_sha256": "a5ac7d6e6102eb018d0368fd4d335138e99ade91bfa4e3b85fbaf7ab42a350e3",
+    "files": 2518,
+    "restored_exports": "projects/modern-model-study/exports/story-hour-v001"
+  },
+  "deliveries": [
+    {
+      "directory": "t1-through-the-opening/excerpt-0384",
+      "verified": true,
+      "paintings": 16,
+      "frames": 128,
+      "fps": 24,
+      "video_sha256": "153349fb3b587408562dcfbd0deae5dc103e0be070dfa138ff47c538df94e283"
+    },
+    {
+      "directory": "t2-turn-and-unfold/excerpt-0384",
+      "verified": true,
+      "paintings": 16,
+      "frames": 128,
+      "fps": 24,
+      "video_sha256": "d671652210a3cddc95b2993c2f80818295c04c5854438e24db89d14d39d30308"
+    },
+    {
+      "directory": "t3-petals-part/excerpt-0384",
+      "verified": true,
+      "paintings": 16,
+      "frames": 128,
+      "fps": 24,
+      "video_sha256": "69933893c5ed71a755d9298f35dcbfcab6e9c382a5084d0d0b030618f68427ca"
+    },
+    {
+      "directory": "t4-petals-open/excerpt-0384",
+      "verified": true,
+      "paintings": 16,
+      "frames": 128,
+      "fps": 24,
+      "video_sha256": "085d21570610fb8d9a3e1ee89d01cc1fb3a65ced9495ad5a1cf4250edb26d2c6"
+    },
+    {
+      "directory": "t5-the-travelling-library/excerpt-0564",
+      "verified": true,
+      "paintings": 17,
+      "frames": 136,
+      "fps": 24,
+      "video_sha256": "c31a628db56d24055049195d94d2eef85fecffd7b8be88d18d75c0371feee4e5"
+    },
+    {
+      "directory": "t6-the-clockwork-sun/excerpt-0384",
+      "verified": true,
+      "paintings": 32,
+      "frames": 256,
+      "fps": 24,
+      "video_sha256": "34453dd85a2f4f00a7c84db2be7973d411209e630a0532e19768d0d15d865430"
+    },
+    {
+      "directory": "t6-the-clockwork-sun/faster",
+      "verified": true,
+      "paintings": 64,
+      "frames": 512,
+      "fps": 24,
+      "video_sha256": "32ea5cf56bbf403fcac2b17cd630dcb373424fcb8b8a2b3116ab1f91b1422264"
+    },
+    {
+      "directory": "t7-through-the-living-book/excerpt-0384",
+      "verified": true,
+      "paintings": 48,
+      "frames": 384,
+      "fps": 24,
+      "video_sha256": "d1663673158b7e7a17ebbeff145d4cbac1fc927dad10a38ee281681198219d0e"
+    },
+    {
+      "directory": "t7-through-the-living-book/excerpt-0852",
+      "verified": true,
+      "paintings": 9,
+      "frames": 72,
+      "fps": 24,
+      "video_sha256": "2c05421d55db5fc5de503a350533441cad9a945a6ef9baecc48d235878e87a7d"
+    },
+    {
+      "directory": "t7-through-the-living-book/faster",
+      "verified": true,
+      "paintings": 80,
+      "frames": 640,
+      "fps": 24,
+      "video_sha256": "f6d443d52f6c43904b1304d060f3007da895a741f158f59019c35a9927a231d2"
+    },
+    {
+      "directory": "t8-the-paper-forest-breathes/excerpt-0852",
+      "verified": true,
+      "paintings": 9,
+      "frames": 72,
+      "fps": 24,
+      "video_sha256": "ef09d0b2ce5f233ae1955dd9de43ee1075e200aa8b69e8e3e2cc3e678ff57284"
+    },
+    {
+      "directory": "t9-reveal-the-orrery/excerpt-0756",
+      "verified": true,
+      "paintings": 9,
+      "frames": 72,
+      "fps": 24,
+      "video_sha256": "d112b43ae0428bf55aabd820e5faee0c49c2f5811ffab73fa0b24d51575713a6"
+    }
+  ],
+  "shortlist": [
+    "t7-through-the-living-book",
+    "t6-the-clockwork-sun"
+  ],
+  "human_preference": "pending",
+  "source_fps": 24,
+  "source_paintings_per_second": 2,
+  "delivery_fps": 24,
+  "delivery_paintings_per_second": 3,
+  "interpolation": "RIFE 4.25 scale 1, outside recurrence",
+  "review_excerpts": {
+    "source_start_frame": 384,
+    "full_film_delivery_offset": 256,
+    "all_excerpt_png_bytes_match_full_films": true,
+    "verification_log": "work/story-hour-session/review-excerpts.log"
+  },
+  "resources": {
+    "owned_pod_id": "gzxby97q6hvhmr",
+    "owned_pod_deleted": true,
+    "fresh_pod_list_empty": true,
+    "remote_media_files_removed": 248,
+    "session_scratch_removed": true,
+    "retained_model_volume_id": "vd3jnbwko1",
+    "cleanup_receipt": "work/story-hour-session/cloud-cleanup.json"
+  },
+  "cost_usd": {
+    "posted_account_decrease": 0.511814111,
+    "conservative_session_allowance": 0.6,
+    "prior_conservative_total": 2.7,
+    "cumulative_conservative_total": 3.3,
+    "original_cap": 10
+  },
+  "browser_review": {
+    "status": "verified",
+    "url": "http://localhost:3028/",
+    "viewport": [
+      1456,
+      858
+    ],
+    "both_videos_and_controls_visible": true,
+    "arrow_frame_step": 1,
+    "shift_arrow_painting_step": 8,
+    "shared_playback_reached_frame": 383,
+    "shorter_video_held_last_frame": 255,
+    "generation_tooltip_verified": true,
+    "routes_http_200": [
+      "/",
+      "/story-paths",
+      "/story-regional",
+      "/story-endings",
+      "/story-extras",
+      "/surreal-hour"
+    ],
+    "full_films_linked_in_report": true,
+    "transport_note": "CUA AX capture exceeded 64 MiB; compact browser DOM and screenshot APIs verified the rendered page."
+  },
+  "limitations": [
+    "Major structural redraws and RIFE overlap remain.",
+    "Continuous physical character travel is not demonstrated.",
+    "Pullback exposes reflected border patterns.",
+    "Later creative branches change both prompts and movement."
+  ]
+}

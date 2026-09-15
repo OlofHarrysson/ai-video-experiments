@@ -1,11 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-15. **94 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 94 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-15. **95 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 95 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
+| Deliberate movement and adaptive storytelling | [Living book and clockwork worlds](modern-model-study/experiments/story-hour/README.md) |
 | Surreal scenes and changing worlds | [One-hour surreal lab](modern-model-study/experiments/surreal-hour/README.md) |
 | Autonomous learning session and new films | [Two-hour lab: controls, RAW diagnostic, porcelain and velvet films](modern-model-study/experiments/two-hour-lab/README.md) |
 | Current control of holds and transformations | [Extra paintings during the morph](modern-model-study/experiments/transition-frequency/README.md), [Earlier settling](modern-model-study/experiments/early-settle.md), [moving hold and transformation](modern-model-study/experiments/hold-transform.md) |
@@ -23,7 +24,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 52 notes
+### modern-model-study — 53 notes
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)
@@ -62,6 +63,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 - [RIFE motion-estimation scale](modern-model-study/experiments/rife-scale.md)
 - [SPEED on saved Oracle transitions](modern-model-study/experiments/speed-oracle.md)
 - [Three-step repainting: starting-noise sweep](modern-model-study/experiments/starting-noise.md)
+- [Deliberate movement and emerging stories](modern-model-study/experiments/story-hour/README.md)
 - [Saved-state replay and perturbation](modern-model-study/experiments/state-replay.md)
 - [Surreal worlds: seven attempts and two favorites](modern-model-study/experiments/surreal-hour/README.md)
 - [Two concepts for the $10 filmmaking session](modern-model-study/experiments/ten-dollar-concepts.md)
