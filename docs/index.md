@@ -7,6 +7,8 @@ This directory contains the durable notes behind the experiments in this reposit
 
 ## Topics
 
+- [Spatial motion palette](motion-palette.md): choose pans, plane turns, waves, shear and spirals from the actual scene; combine them without repeated full stops.
+
 - [Media storage and lossless cleanup](storage.md): where space goes, verified archive retirement, shared media copies, and preservation rules.
 - [Frame-format benchmark and cleanup boundaries](research/frame-storage-formats.md): lossless PNG/WebP measurements, tooling compatibility and reconstruction requirements across historical workflows.
 - [Deforum refactor audit and plan](refactor-plan.md): first uv package migration, shared-code boundaries, archive replay evidence and remaining steps.

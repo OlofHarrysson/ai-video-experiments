@@ -1,6 +1,6 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-15. **96 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 96 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-15. **97 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 97 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
@@ -21,11 +21,15 @@ Snapshot: 2026-09-15. **96 experiment entries across 14 projects** are listed be
 
 These are navigation suggestions, not a ranking of successful experiments. For project briefs and cuts, use the [project index](README.md). The [refactor plan](../../../docs/refactor-plan.md) describes how the code and documentation can become easier to navigate.
 
+[Continuous motion hour](modern-model-study/experiments/continuous-motion-hour/README.md) tests a wider integrated spatial palette and persistent movement. Use the [motion palette](../../../docs/motion-palette.md) to select supported effects for a scene.
+
 ## All notes
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 54 notes
+### modern-model-study — 55 notes
+
+- [Continuous movement and a wider motion palette](modern-model-study/experiments/continuous-motion-hour/README.md)
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)

@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-15",
+  "new_image_jobs": 118,
+  "jobs_by_case": {
+    "c3-banking-voyage": 47,
+    "c4-folding-worlds": 47,
+    "c5-under-the-orchids": 24
+  },
+  "archive": {
+    "verified": true,
+    "archive_sha256": "26718ca8ba57a0d18809423f206321c2edcfc5e9ecdd99c031ac5bfd4098d2b4",
+    "files": 1989,
+    "restored_exports": "projects/modern-model-study/exports/continuous-motion-hour-v001"
+  },
+  "local_finishing_verified": {
+    "verified": true,
+    "aligned_pairs_recomputed_exactly": 47,
+    "all_48_paintings_preserved": true,
+    "pinned_rife_provenance_verified": true,
+    "direct_frames_equal_original_delivery": true,
+    "final_seven_warps_equal": true,
+    "deliveries": [
+      {
+        "mode": "direct",
+        "video_sha256": "a255705410ea72a9b2364bfc02ee9ed27d7bad89028706f15ec98e9adc83b917",
+        "probe": {
+          "width": 1536,
+          "height": 1024,
+          "r_frame_rate": "24/1",
+          "duration": "16.000000",
+          "nb_read_frames": "384"
+        }
+      },
+      {
+        "mode": "explicit-motion",
+        "video_sha256": "a0587c4aa111f322256b0a4260e85866e72da0e32967e37d9c0ba75491125af9",
+        "probe": {
+          "width": 1536,
+          "height": 1024,
+          "r_frame_rate": "24/1",
+          "duration": "16.000000",
+          "nb_read_frames": "384"
+        }
+      }
+    ]
+  },
+  "deliveries": [
+    {
+      "path": "projects/modern-model-study/exports/continuous-motion-hour-v001/c3-banking-voyage/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "4e2f9afd42cecf1716381772d31d42870a4fd8e378b7e0b32a00c93992aae1c2",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "final_holds": 0
+    },
+    {
+      "path": "projects/modern-model-study/exports/continuous-motion-hour-v001/c4-folding-worlds/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "10934154cfa2a36420d7daf5d993aea964711fc0b6ee62ab58561b8f224d3d05",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "final_holds": 0
+    },
+    {
+      "path": "projects/modern-model-study/exports/continuous-motion-hour-v001/c5-under-the-orchids/assembled/preview.mp4",
+      "video_sha256": "83edcc4b4f3001e4445faf7ef78a94f9f59107077ad4685ddd91387542cabc78",
+      "frames": 576,
+      "paintings": 72,
+      "fps": 24,
+      "final_warps": 7,
+      "final_holds": 0
+    },
+    {
+      "path": "projects/modern-model-study/exports/continuous-motion-hour-v001/motion-aware-full/direct/preview.mp4",
+      "video_sha256": "a255705410ea72a9b2364bfc02ee9ed27d7bad89028706f15ec98e9adc83b917",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "final_holds": 0
+    },
+    {
+      "path": "projects/modern-model-study/exports/continuous-motion-hour-v001/motion-aware-full/explicit-motion/preview.mp4",
+      "video_sha256": "a0587c4aa111f322256b0a4260e85866e72da0e32967e37d9c0ba75491125af9",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "final_holds": 0
+    }
+  ],
+  "unit_tests": 69,
+  "posted_account_debit_at_cleanup": 0.3703550666,
+  "conservative_session_usd": 0.45,
+  "conservative_cumulative_usd": 4.4,
+  "budget_usd": 10,
+  "resources": {
+    "pod": "gfi5npsdectm5w",
+    "deleted_at_utc": "2026-09-15T20:36:18Z",
+    "delete_http_status": 204,
+    "pods_after": [],
+    "retained_model_volume": "vd3jnbwko1",
+    "removed_remote_media_files": 236,
+    "remote_scratch_removed": true
+  },
+  "human_feedback": "pending",
+  "reviewer": {
+    "ready": true,
+    "served_files_hash_verified": true,
+    "browser_rendering": "not verified: existing Chrome tab attachment timed out twice",
+    "friction_record": "AF-20260915-224533"
+  }
+}

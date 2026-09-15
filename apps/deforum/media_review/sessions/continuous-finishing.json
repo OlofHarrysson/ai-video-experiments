@@ -1,0 +1,23 @@
+{
+  "title": "Same paintings \u2014 two ways to create movement",
+  "selected": [
+    "banking",
+    "explicit"
+  ],
+  "clips": [
+    {
+      "id": "banking",
+      "label": "Banking voyage",
+      "note": "City \u2192 palace-fish \u2192 orchid railway",
+      "details": "An underlying drift carries a spiral bank, sideways plane turn, pullback and vertical wave. The composition travels diagonally and changes scale. A plane turn tips a flat sheet; it does not reveal the hidden sides of objects.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, independent noise and the established scene noise curves. Lanczos spatial transforms; RIFE 4.25 scale 1. Source motion is 24 fps, with half-second repaints. The 1.5\u00d7 finish is 24 fps with three paintings per displayed second. All paintings are preserved and the final seven frames continue spatial warping. Interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/continuous-motion-hour-v001/c3-banking-voyage/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "explicit",
+      "label": "Motion separated from morphing",
+      "note": "Exactly the same paintings; different in-between frames",
+      "details": "Local finishing experiment: align the next painting back to the previous painting's spatial position, ask RIFE to interpolate that pair, then apply the planned spatial movement to each intermediate frame. This reduces the motion RIFE must infer, but adds resampling and can still create distortion. No new diffusion or change to the feedback loop.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, independent noise and the established scene noise curves. Lanczos spatial transforms; RIFE 4.25 scale 1. Source motion is 24 fps, with half-second repaints. The 1.5\u00d7 finish is 24 fps with three paintings per displayed second. All paintings are preserved and the final seven frames continue spatial warping. Interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/continuous-motion-hour-v001/motion-aware-full/explicit-motion/preview.mp4"
+    }
+  ]
+}

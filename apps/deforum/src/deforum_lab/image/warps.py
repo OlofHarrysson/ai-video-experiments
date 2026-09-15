@@ -37,23 +37,79 @@ def transform(points, seconds, motion, inverse=False):
 def mapping(points, seconds, phrases, inverse=False):
     selected = reversed(phrases) if inverse else phrases
     for phrase in selected:
+        if phrase.get("kind") not in (None, "cruise", "plane", "shear", "wave"):
+            raise ValueError(f"Unknown spatial effect: {phrase['kind']}")
+        if phrase.get("kind") == "cruise":
+            # A constant underlying velocity can carry motion through phrase joins.
+            t = max(0.0, seconds - phrase.get("start", 0.0))
+            center = np.array(phrase.get("center", [0.75, 0.5]))
+            shift = t * np.array(phrase.get("velocity", [0, 0]))
+            scale = np.exp(t * phrase.get("log_zoom_rate", 0))
+            angle = np.deg2rad(t * phrase.get("roll_rate", 0))
+            q = (points - center - shift) / scale if inverse else points - center
+            if inverse:
+                angle = -angle
+            c, s = np.cos(angle), np.sin(angle)
+            q = np.stack(
+                [c * q[..., 0] - s * q[..., 1], s * q[..., 0] + c * q[..., 1]], -1
+            )
+            points = center + q if inverse else center + q * scale + shift
+            continue
+        if phrase.get("kind") == "plane":
+            # Project a flat sheet rotated about its x/y axes, not a depth scene.
+            progress = ease(
+                seconds, phrase["start"], phrase["start"] + phrase["duration"]
+            )
+            ax, ay = np.deg2rad(np.array(phrase.get("tilt", [0, 0])) * progress)
+            cx, sx, cy, sy = np.cos(ax), np.sin(ax), np.cos(ay), np.sin(ay)
+            distance = phrase.get("distance", 2.0)
+            matrix = np.array(
+                [[cy, sy * sx, 0], [0, cx, 0], [-sy / distance, cy * sx / distance, 1]]
+            )
+            if inverse:
+                matrix = np.linalg.inv(matrix)
+            center = np.array(phrase.get("center", [0.75, 0.5]))
+            q = points - center
+            homogeneous = np.concatenate([q, np.ones_like(q[..., :1])], axis=-1)
+            # Avoid the macOS BLAS batched-matmul path for full-size image grids.
+            h = np.einsum("...j,ij->...i", homogeneous, matrix, optimize=False)
+            if np.any(np.abs(h[..., 2]) < 1e-6):
+                raise ValueError("Plane turn reaches the projective horizon")
+            points = center + h[..., :2] / h[..., 2:]
+            continue
+        if phrase.get("kind") == "shear":
+            progress = ease(
+                seconds, phrase["start"], phrase["start"] + phrase["duration"]
+            )
+            points = points.copy()
+            offset = (
+                phrase["amount"]
+                * progress
+                * (points[..., 1] - phrase.get("center_y", 0.5))
+            )
+            points[..., 0] += -offset if inverse else offset
+            continue
         if phrase.get("kind") == "wave":
-            # Horizontal displacement depends only on y, so its inverse is exact.
+            # Displacement depends only on the other axis, so inversion is exact.
             u = (seconds - phrase["start"]) / phrase["duration"]
             if 0 < u < 1:
                 envelope = np.sin(np.pi * u) ** 2
+                axis = 1 if phrase.get("axis") == "vertical" else 0
                 offset = (
                     phrase["amplitude"]
                     * envelope
                     * np.sin(
                         2
                         * np.pi
-                        * (points[..., 1] / phrase["wavelength"] - phrase["cycles"] * u)
+                        * (
+                            points[..., 1 - axis] / phrase["wavelength"]
+                            - phrase["cycles"] * u
+                        )
                         + phrase.get("phase", 0)
                     )
                 )
                 points = points.copy()
-                points[..., 0] += -offset if inverse else offset
+                points[..., axis] += -offset if inverse else offset
             continue
         motion = {
             **phrase,

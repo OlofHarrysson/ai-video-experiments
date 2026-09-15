@@ -1,0 +1,15 @@
+{
+  "title": "Under the orchids \u2014 complete film",
+  "selected": [
+    "orchids"
+  ],
+  "clips": [
+    {
+      "id": "orchids",
+      "label": "Under the orchids",
+      "note": "City \u2192 orchid railway \u2192 harp bridges",
+      "details": "A complete 24-second film. Preserves Banking voyage through its last painting, then steers beneath the large orchid toward the visible train. Rails become golden strings and harp-like bridges. The late foreground is crowded and more illustrative, despite continued movement.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, independent noise and the established scene noise curves. Lanczos spatial transforms; RIFE 4.25 scale 1. Source motion is 24 fps, with half-second repaints. The 1.5\u00d7 finish is 24 fps with three paintings per displayed second. All paintings are preserved and the final seven frames continue spatial warping. Interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/continuous-motion-hour-v001/c5-under-the-orchids/assembled/preview.mp4"
+    }
+  ]
+}

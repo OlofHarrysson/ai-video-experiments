@@ -1,6 +1,6 @@
 # Deforum experiment
 
-Current work: [fluent varied spatial movement](projects/modern-model-study/experiments/fluent-hour/README.md), following [deliberate movement and emerging stories](projects/modern-model-study/experiments/story-hour/README.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). New experiments use the uv-managed `deforum_lab` package.
+Current work: [continuous movement](projects/modern-model-study/experiments/continuous-motion-hour/README.md), following [fluent varied spatial movement](projects/modern-model-study/experiments/fluent-hour/README.md). Use the [motion palette](../../docs/motion-palette.md) to select supported effects for a scene, and the [experiment notebook index](projects/EXPERIMENTS.md) for prior results. New experiments use the uv-managed `deforum_lab` package.
 
 ## Local development with uv
 

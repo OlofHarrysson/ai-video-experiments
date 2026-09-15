@@ -1,0 +1,23 @@
+{
+  "title": "Two continuous spatial routes",
+  "selected": [
+    "banking",
+    "folding"
+  ],
+  "clips": [
+    {
+      "id": "banking",
+      "label": "Banking voyage",
+      "note": "City \u2192 palace-fish \u2192 orchid railway",
+      "details": "An underlying drift carries a spiral bank, sideways plane turn, pullback and vertical wave. The composition travels diagonally and changes scale. A plane turn tips a flat sheet; it does not reveal the hidden sides of objects.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, independent noise and the established scene noise curves. Lanczos spatial transforms; RIFE 4.25 scale 1. Source motion is 24 fps, with half-second repaints. The 1.5\u00d7 finish is 24 fps with three paintings per displayed second. All paintings are preserved and the final seven frames continue spatial warping. Interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/continuous-motion-hour-v001/c3-banking-voyage/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "folding",
+      "label": "Folding worlds",
+      "note": "Same story, a different spatial route",
+      "details": "Same opening, prompts, noise, seeds and repaint timing as Banking voyage. Pull back first, tilt the sheet, slide its upper and lower regions differently, then spiral and bend it. The wider framing also exposes more repeated forms near the borders.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, independent noise and the established scene noise curves. Lanczos spatial transforms; RIFE 4.25 scale 1. Source motion is 24 fps, with half-second repaints. The 1.5\u00d7 finish is 24 fps with three paintings per displayed second. All paintings are preserved and the final seven frames continue spatial warping. Interpolation never feeds back.",
+      "source": "projects/modern-model-study/exports/continuous-motion-hour-v001/c4-folding-worlds/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}
