@@ -1,0 +1,23 @@
+{
+  "title": "A prewritten story, then a revision",
+  "selected": [
+    "p1-captive-light",
+    "p2-the-open-door"
+  ],
+  "clips": [
+    {
+      "id": "p1-captive-light",
+      "label": "Captive Light \u2014 original plan",
+      "note": "Cage \u2192 free wings \u2192 growing forest",
+      "details": "The whole story was written before generation: liberation becoming renewal. The golden bird and cage-shaped tree provide a clear visual link. Its actual exit is ambiguous, and the final forest is less extensive than intended.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/p1-captive-light/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "p2-the-open-door",
+      "label": "Captive Light \u2014 revised",
+      "note": "An earlier open door; more birds and branches",
+      "details": "Rewinds to the same 2.5-second source painting and makes the door/threshold descriptions more explicit, with an earlier noise rise. The door opens sooner, but extra birds complicate the identity of the original captive. Motion is unchanged.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/p2-the-open-door/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

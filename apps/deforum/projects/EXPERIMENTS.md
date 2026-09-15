@@ -1,11 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-15. **98 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 98 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-16. **99 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 99 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
+| Planned, improvised and hybrid visual stories | [Three ways to tell a surreal story](modern-model-study/experiments/storytelling-lab/README.md) |
 | Fluent varied pans, pullbacks and local turns | [Continuous spatial routes](modern-model-study/experiments/fluent-hour/README.md) |
 | Deliberate movement and adaptive storytelling | [Living book and clockwork worlds](modern-model-study/experiments/story-hour/README.md) |
 | Surreal scenes and changing worlds | [One-hour surreal lab](modern-model-study/experiments/surreal-hour/README.md) |
@@ -27,7 +28,9 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 56 notes
+### modern-model-study — 57 notes
+
+- [Three ways to tell a surreal story](modern-model-study/experiments/storytelling-lab/README.md) — [independent blind review](modern-model-study/experiments/storytelling-lab/independent-review.md), [decisions](modern-model-study/experiments/storytelling-lab/DECISIONS.md)
 
 - [Floating drift and travelling look-around previews](modern-model-study/experiments/motion-recipe-previews/README.md)
 

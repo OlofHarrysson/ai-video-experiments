@@ -344,3 +344,7 @@ Olof calls the story-hour results really good. He wants large spatial change wit
 ### 2026-09-15 — fluent results and local storage
 
 Olof says the fluent-hour results look super nice and raises the checkout's disk consumption. This confirms the creative direction, without selecting an individual film. Reduce duplicate storage while preserving his standing preference to keep previous generations; no permission to discard unique artwork or lower its quality is implied.
+
+### 2026-09-15 — three storytelling approaches
+
+Olof accepts the new motion previews and authorizes a 90-minute storytelling session. He proposes writing a story and revising toward it, improvising from actual paintings, and a hybrid that keeps an intention while adapting. He wants recurring characters, animals, objects or symbols, with something happening that suggests meaning beyond attractive imagery. This is an explicit creative brief; it does not establish preference for any new story or understanding of a particular technique.

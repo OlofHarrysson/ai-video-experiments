@@ -1,0 +1,51 @@
+{
+  "title": "Follow the paintings \u2014 two endings",
+  "selected": [
+    "i5-the-open-dream-edit",
+    "i3-the-whales-dream"
+  ],
+  "clips": [
+    {
+      "id": "i5-the-open-dream-edit",
+      "label": "The Open Dream \u2014 selected ending",
+      "note": "Whale railway \u2192 clock doorway \u2192 open ocean",
+      "details": "The improvised story ends at the clearer ocean reveal, before the last six crowded paintings. All generated paintings remain in the complete version. A measured spatial push into the actual window improves the reveal and retains a red train on the far bridge. Literal train travel is still ambiguous.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/through-0684/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "i3-the-whales-dream",
+      "label": "The Whale\u2019s Dream \u2014 clock ending",
+      "note": "Sleeping whale \u2192 clock \u2192 ocean of whales",
+      "details": "The whale\u2019s closed eye suggested a dream. The clock becomes a doorway onto whales and water. The ending remains enclosed in monumental clockwork.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i3-the-whales-dream/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "i5-the-open-dream",
+      "label": "The Open Dream",
+      "note": "Whale railway \u2192 clock doorway \u2192 open ocean",
+      "details": "Rewinds to the visible ocean window. Its measured position guides a new spatial push, checked first without diffusion. The story grows from what the model actually painted; the red train and whale motif link its worlds. This complete version retains the crowded, distorted final paintings.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "i4-through-the-clock",
+      "label": "Through the Clock",
+      "note": "A railway journey into the whale\u2019s dream",
+      "details": "Branches from the actual small ocean doorway in The Whale\u2019s Dream. A focused push and new scene descriptions try to pass beyond its rim. The doorway drifts toward the lower-left corner, so this ending misses its framing goal.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i4-through-the-clock/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "i2-bridge-to-the-moon",
+      "label": "Bridge to the Moon",
+      "note": "Whale \u2192 ivory railway \u2192 clock doorway",
+      "details": "Improvised from the opening: the whale\u2019s back becomes a railway viaduct toward the moon. The small station clock returns as the giant destination. Literal train travel remains less clear than the changing world.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i2-bridge-to-the-moon/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "i1-whale-station",
+      "label": "Whale Station \u2014 opening",
+      "note": "A whale, a train and a red moon",
+      "details": "Only this opening was planned. The next scene was chosen after inspecting the whale\u2019s nose pointing toward the moon.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i1-whale-station/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

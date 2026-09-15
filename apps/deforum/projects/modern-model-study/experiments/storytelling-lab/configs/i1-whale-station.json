@@ -1,0 +1,210 @@
+{
+  "case": "i1-whale-station",
+  "seed": 915422,
+  "duration": 6,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space.",
+    "seed": 915422,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.65
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 10,
+      "duration": 10,
+      "zoom": 0.58,
+      "turn": 22,
+      "travel": [
+        -0.21,
+        0.11
+      ],
+      "center": [
+        0.9,
+        0.52
+      ],
+      "radius": 0.95
+    },
+    {
+      "kind": "wave",
+      "start": 13,
+      "duration": 12,
+      "amplitude": 0.043,
+      "wavelength": 1.35,
+      "cycles": 0.6,
+      "axis": "vertical"
+    },
+    {
+      "start": 16,
+      "duration": 14,
+      "zoom": -0.26,
+      "turn": -21,
+      "travel": [
+        0.28,
+        -0.08
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 18,
+      "duration": 12,
+      "tilt": [
+        -18,
+        -15
+      ],
+      "distance": 2.5,
+      "center": [
+        0.85,
+        0.5
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132
+  ],
+  "seeds_by_frame": {
+    "12": 916434,
+    "24": 916446,
+    "36": 916458,
+    "48": 916470,
+    "60": 916482,
+    "72": 916494,
+    "84": 916506,
+    "96": 916518,
+    "108": 916530,
+    "120": 916542,
+    "132": 916554
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/i1-whale-station",
+  "prefix_through": 0
+}

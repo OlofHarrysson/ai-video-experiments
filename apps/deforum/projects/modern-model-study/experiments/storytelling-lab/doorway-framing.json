@@ -1,0 +1,22 @@
+{
+  "source_frame": 552,
+  "source_point": [
+    0.6201171875,
+    0.8466796875
+  ],
+  "target_point": [
+    0.75,
+    0.55
+  ],
+  "end_time": 31.5,
+  "zoom": 3.2,
+  "travel": [
+    1.6687933890874136,
+    -3.167292631049646
+  ],
+  "predicted_endpoint": [
+    0.75,
+    0.5500000000000003
+  ],
+  "scope": "Geometric prediction on one fixed painting; repainting can move the subject."
+}

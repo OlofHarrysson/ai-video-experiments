@@ -1,0 +1,363 @@
+{
+  "case": "h3-follow-the-beacon",
+  "seed": 915423,
+  "duration": 18,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "a-light-seeks-shelter",
+      "prompt": "A small vermilion red paper boat carries one bright golden lantern across an immense midnight-blue ocean. The boat sits clearly near the center-left, its folded red silhouette reflected below. Towering dark teal waves curve like the pages of a vast open book around it. Far to the right, a warm amber doorway shines in an enormous pearly spiral shell rising from the water. The tiny boat is dwarfed by the waves and shell, but its red color and lantern are clearly visible. A thin white moon hangs above the distant shell. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "a-light-seeks-shelter",
+      "prompt": "A small vermilion red paper boat carries one bright golden lantern across an immense midnight-blue ocean. The boat sits clearly near the center-left, its folded red silhouette reflected below. Towering dark teal waves curve like the pages of a vast open book around it. Far to the right, a warm amber doorway shines in an enormous pearly spiral shell rising from the water. The tiny boat is dwarfed by the waves and shell, but its red color and lantern are clearly visible. A thin white moon hangs above the distant shell. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "approaching-shelter",
+      "prompt": "A little vermilion paper boat with a bright golden lantern approaches the warm amber opening of an immense pearly spiral shell. The folded red hull sits below the center. Tall midnight-blue waves arch overhead like pages, framing a diagonal passage toward the golden doorway at the right. Thin gold lines run through the shell like streets and windows, suggesting a city inside. Dark blue water reflects the little red boat and the amber light. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "threshold",
+      "prompt": "The immense pearly spiral shell opens like a protective arch over a small vermilion red paper boat carrying a golden lantern. The boat enters a sheltered pool of dark turquoise water beneath the spiral. Warm amber windows trace a winding street along the inner shell, and delicate golden bridges cross the water. Dark page-like waves curl outside at the left edge, while the interior has open calm water and luminous architecture. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 8,
+      "name": "shelter-forms-around-the-boat",
+      "prompt": "A huge pearly shell arch shelters a small red paper boat with a golden lantern in a calm turquoise pool. The threatening wave has become the curved roof of a warm harbour, lined with amber windows. A smaller spiral shell house stands to the right, linked to the arch by a delicate golden bridge. The red boat sits clearly in the foreground beneath the protective arch; its lantern casts a bright reflection across the water. Outside the arch the sky remains deep midnight blue. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 10,
+      "name": "the-traveller-becomes-a-beacon",
+      "prompt": "Inside a sheltered pearl-shell harbour, a red paper boat unfolds upward into a small red lighthouse. The pointed folded bow becomes a tall triangular red tower, while its golden lantern rises toward the top. Red folded paper ridges remain visible along the tower and little hull-shaped base at the waterline. A vast pearly arch and warm amber windows protect the new light. Calm turquoise water reflects the red tower; an open channel runs from it toward the dark sea on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 13,
+      "name": "a-home-that-guides-others",
+      "prompt": "A vermilion red lighthouse made from folded paper rises from a small boat-shaped island in a luminous pearl-shell harbour. One brilliant golden lantern shines at its top. The red tower has crisp folded ridges, warm amber windows and a small red boat-like base. A huge ivory shell arch curves overhead, its inner surface lined with golden windows. A thin golden beam reaches across calm turquoise water toward two tiny red paper boats arriving through an opening at the right. Beyond them lies the dark blue sea. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 16,
+      "name": "the-light-is-shared",
+      "prompt": "A warm sheltered harbour beneath enormous pearly shell arches. A red folded-paper lighthouse stands to the left of center, its golden lamp shining over a winding turquoise channel. Several small red paper boats, each carrying a tiny golden lantern, gather near its foot and along the channel toward the open sea. Golden window lights repeat across the shell houses. The nearest curved shell roof frames the upper edge while the water and boats have space below. The distant storm is small beyond the harbour entrance at the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.65
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.6
+    },
+    {
+      "at": 6.5,
+      "noise": 0.68
+    },
+    {
+      "at": 7,
+      "noise": 0.74
+    },
+    {
+      "at": 7.5,
+      "noise": 0.76
+    },
+    {
+      "at": 8,
+      "noise": 0.64
+    },
+    {
+      "at": 8.5,
+      "noise": 0.6
+    },
+    {
+      "at": 9,
+      "noise": 0.55
+    },
+    {
+      "at": 9.5,
+      "noise": 0.58
+    },
+    {
+      "at": 10,
+      "noise": 0.64
+    },
+    {
+      "at": 10.5,
+      "noise": 0.7
+    },
+    {
+      "at": 11,
+      "noise": 0.75
+    },
+    {
+      "at": 11.5,
+      "noise": 0.77
+    },
+    {
+      "at": 12,
+      "noise": 0.72
+    },
+    {
+      "at": 12.5,
+      "noise": 0.64
+    },
+    {
+      "at": 13,
+      "noise": 0.66
+    },
+    {
+      "at": 13.5,
+      "noise": 0.72
+    },
+    {
+      "at": 14,
+      "noise": 0.76
+    },
+    {
+      "at": 14.5,
+      "noise": 0.7
+    },
+    {
+      "at": 15,
+      "noise": 0.6
+    },
+    {
+      "at": 15.5,
+      "noise": 0.5
+    },
+    {
+      "at": 16,
+      "noise": 0.6
+    },
+    {
+      "at": 16.5,
+      "noise": 0.69
+    },
+    {
+      "at": 17,
+      "noise": 0.67
+    },
+    {
+      "at": 17.5,
+      "noise": 0.5
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 7.5,
+      "duration": 10,
+      "zoom": 0.55,
+      "turn": -12,
+      "travel": [
+        0.1,
+        -0.05
+      ],
+      "center": [
+        0.35,
+        0.65
+      ],
+      "radius": 3.5
+    },
+    {
+      "start": 12,
+      "duration": 10,
+      "zoom": 0.05,
+      "turn": 17,
+      "travel": [
+        -0.1,
+        0
+      ],
+      "center": [
+        0.7,
+        0.5
+      ],
+      "radius": 3
+    },
+    {
+      "kind": "wave",
+      "start": 12,
+      "duration": 11,
+      "amplitude": 0.032,
+      "wavelength": 1.5,
+      "cycles": 0.6
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420
+  ],
+  "seeds_by_frame": {
+    "12": 916435,
+    "24": 916447,
+    "36": 916459,
+    "48": 916471,
+    "60": 916483,
+    "72": 916495,
+    "84": 916507,
+    "96": 916519,
+    "108": 916531,
+    "120": 916543,
+    "132": 916555,
+    "144": 916567,
+    "156": 916579,
+    "168": 916591,
+    "180": 916603,
+    "192": 916615,
+    "204": 916627,
+    "216": 916639,
+    "228": 916651,
+    "240": 916663,
+    "252": 916675,
+    "264": 916687,
+    "276": 916699,
+    "288": 916711,
+    "300": 916723,
+    "312": 916735,
+    "324": 916747,
+    "336": 916759,
+    "348": 916771,
+    "360": 916783,
+    "372": 916795,
+    "384": 916807,
+    "396": 916819,
+    "408": 916831,
+    "420": 916843
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/h1-lantern-harbour",
+  "prefix_through": 180
+}

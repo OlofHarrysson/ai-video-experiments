@@ -1,0 +1,23 @@
+{
+  "title": "An action that resisted direction",
+  "selected": [
+    "p3-release-direct",
+    "p4-release-stronger"
+  ],
+  "clips": [
+    {
+      "id": "p3-release-direct",
+      "label": "Release probe \u2014 0.78",
+      "note": "Can the bird leave the cage?",
+      "details": "A short preserved-prefix test describes one bird to the right of an empty cage. The model adds a second bird instead of relocating the original.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/p3-release-direct/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "p4-release-stronger",
+      "label": "Release probe \u2014 0.86",
+      "note": "More repaint freedom; still an extra bird",
+      "details": "Same source painting, prompts, seeds, motion and timing as the 0.78 probe. Only the first four new starting-noise values rise to 0.86. The door and wings change more, but the requested single-bird departure still fails.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/p4-release-stronger/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

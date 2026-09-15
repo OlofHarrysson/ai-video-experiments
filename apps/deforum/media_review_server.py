@@ -6,10 +6,15 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/motion-recipes.json'
-OUTPUT = APP / 'projects/modern-model-study/exports/media-review-motion-recipes-v001'
+SESSION = APP / 'media_review/sessions/storytelling.json'
+OUTPUT = APP / 'projects/modern-model-study/exports/media-review-storytelling-v001'
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    '/storytelling': APP / 'projects/modern-model-study/exports/media-review-storytelling-v001/full-quality.html',
+    '/storytelling-planned': APP / 'projects/modern-model-study/exports/media-review-storytelling-planned-v001/full-quality.html',
+    '/storytelling-improvised': APP / 'projects/modern-model-study/exports/media-review-storytelling-improvised-v001/full-quality.html',
+    '/storytelling-hybrid': APP / 'projects/modern-model-study/exports/media-review-storytelling-hybrid-v001/full-quality.html',
+    '/storytelling-release': APP / 'projects/modern-model-study/exports/media-review-storytelling-release-v001/full-quality.html',
     '/motion-recipes': APP / 'projects/modern-model-study/exports/media-review-motion-recipes-v001/full-quality.html',
     '/continuous-motion': APP / 'projects/modern-model-study/exports/media-review-continuous-motion-v001/full-quality.html',
     '/continuous-film': APP / 'projects/modern-model-study/exports/media-review-continuous-film-v001/full-quality.html',

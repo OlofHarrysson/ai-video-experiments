@@ -1,0 +1,37 @@
+{
+  "title": "Keep the meaning, adapt the route",
+  "selected": [
+    "h4-a-sky-of-lanterns",
+    "h3-follow-the-beacon"
+  ],
+  "clips": [
+    {
+      "id": "h4-a-sky-of-lanterns",
+      "label": "A Sky of Lanterns",
+      "note": "One vulnerable light becomes many lights",
+      "details": "Continues the observed lighthouse and smaller lantern boats. The proposed ending carries their shared light upward into a constellation, retaining the original red and gold motif.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/h4-a-sky-of-lanterns/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "h3-follow-the-beacon",
+      "label": "Follow the Beacon \u2014 closer route",
+      "note": "Same story; more attention on the red beacon",
+      "details": "Same prompts, noise, seeds and timing as the wide route after the preserved opening. A closer spatial path keeps the beacon more central. A gray foreground still intrudes, so framing has not solved that artifact.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/h3-follow-the-beacon/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "h2-a-light-for-others",
+      "label": "A Light for Others \u2014 wide route",
+      "note": "Boat \u2192 beacon \u2192 arriving boats",
+      "details": "Keeps the surprising shelter and turns the lantern boat into a lighthouse for others. The wider motion exposes a distracting reflected foreground.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/h2-a-light-for-others/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "h1-lantern-harbour",
+      "label": "A Light Seeks Shelter \u2014 opening",
+      "note": "Lantern boat \u2192 sheltering shell",
+      "details": "Hybrid approach: keep the intention of finding refuge, but adapt the route. The wave becomes shelter around the boat rather than the boat entering the originally distant shell.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/h1-lantern-harbour/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

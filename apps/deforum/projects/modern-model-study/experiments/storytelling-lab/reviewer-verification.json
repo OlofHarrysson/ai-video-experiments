@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "effective_url": "http://localhost:3028/",
+  "run_id": "ecc47694-8fa1-4b70-8cfa-e6e6e30c24ad",
+  "routes": [
+    {
+      "route": "/storytelling",
+      "bytes": 60607815,
+      "sha256": "00de40962d0de5defc2e1fda793a007a544daf6a6385a50733a6c36c53540f4c"
+    },
+    {
+      "route": "/storytelling-planned",
+      "bytes": 37811458,
+      "sha256": "c6a094ded3946a775c5f08c4b227868f32d1ee88c677f657f09a34b486a7e5c8"
+    },
+    {
+      "route": "/storytelling-improvised",
+      "bytes": 91863870,
+      "sha256": "b85f7031cf4ff1f2d091c8f44e461f04114978b4d3c0f282bfd4cd368504c0a8"
+    },
+    {
+      "route": "/storytelling-hybrid",
+      "bytes": 56235779,
+      "sha256": "65bb6108896afe36153376b3745b76d714bf4f0ef587a535c9ff6cee32e7bc86"
+    },
+    {
+      "route": "/storytelling-release",
+      "bytes": 13650118,
+      "sha256": "e03ac48b5f5a779497920d593148c45b7a52f4537021eaaf3f0dc80be0e34290"
+    },
+    {
+      "route": "/motion-recipes",
+      "bytes": 5677794,
+      "sha256": "3f9d08d1fe4c094cbf564539f46cdb4f06ec079e1e124645a0669152fdb916fd"
+    },
+    {
+      "route": "/continuous-motion",
+      "bytes": 44893880,
+      "sha256": "ff32f37cdc599101b5069047d7039ca4070edaf7fd6454fe2b7fe80975857b79"
+    }
+  ],
+  "root_matches_storytelling": true,
+  "browser_interaction": "not rerun; interface unchanged",
+  "service_left_running_for_user": true
+}

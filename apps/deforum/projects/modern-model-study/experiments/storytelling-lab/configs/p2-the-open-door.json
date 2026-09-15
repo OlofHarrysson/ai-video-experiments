@@ -1,0 +1,406 @@
+{
+  "case": "p2-the-open-door",
+  "seed": 915421,
+  "duration": 24,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "captive-light",
+      "prompt": "A single luminous golden songbird sits inside a tall black iron birdcage on an empty turquoise stone terrace. The bird glows from within like a tiny sun, with a long amber tail. The cage occupies the center-left, its sparse curved bars clearly surrounding the bird. Beyond the cage stretches a barren indigo valley with bare leafless trees. A small round red moon hangs above the distant horizon on the right. The cage has an arched door with a conspicuous golden latch. Warm light spills onto the cold terrace. The bird and bars are separated and readable. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "captive-light",
+      "prompt": "A single luminous golden songbird sits inside a tall black iron birdcage on an empty turquoise stone terrace. The bird glows from within like a tiny sun, with a long amber tail. The cage occupies the center-left, its sparse curved bars clearly surrounding the bird. Beyond the cage stretches a barren indigo valley with bare leafless trees. A small round red moon hangs above the distant horizon on the right. The cage has an arched door with a conspicuous golden latch. Warm light spills onto the cold terrace. The bird and bars are separated and readable. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "unlatched-and-open",
+      "prompt": "The black iron birdcage has a wide open arched doorway. Its door is swung flat outward to the right, leaving an uninterrupted dark-blue gap in front of a luminous golden songbird. The bird stands on the doorway sill with one foot outside the cage and its amber wings half spread. The detached golden latch lies on the turquoise terrace below. Bare dark trees and a round red moon overlook the indigo valley. The open gap and the bird's step over the threshold are the clear central event. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 4.5,
+      "name": "beyond-the-bars",
+      "prompt": "A luminous golden songbird flies immediately in front of an empty black birdcage, with both broad amber wings spread across open dark blue sky. Its entire golden body is in front of the bars and its feet are lifted away from the perch. The empty cage recedes behind it to the left, with the open door swung outward to the right. A trail of tiny golden seeds falls from the bird into the barren indigo valley. The turquoise terrace is below and the red moon is far to the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 7,
+      "name": "feathers-take-root",
+      "prompt": "A large radiant golden songbird flies freely above an indigo valley. Its sweeping wings extend into fine branching boughs with golden feather-shaped leaves. Beneath it, bright seeds become small glowing saplings among the bare black trees. The empty open birdcage is now a small object at the far left, separate from the flying bird. The golden branching wings spread across open blue sky around a round red moon. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 10,
+      "name": "light-takes-root",
+      "prompt": "A magnificent luminous golden tree grows in the once-barren indigo valley. Its broad canopy has the recognizable sweeping silhouette of a songbird with outstretched wings; amber leaves resemble overlapping feathers. The trunk descends into twisting roots across turquoise stone. Small golden saplings appear on both sides. An empty black birdcage hangs open from one low branch. A small red moon is visible through a gap in the golden canopy. Deep blue sky and dark ground remain between the bright branches. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 14,
+      "name": "forest",
+      "prompt": "A grove of luminous golden trees spreads across an indigo valley. The largest tree stands to the left, its canopy shaped like the sweeping wings of a songbird. Smaller trees repeat that wing-like branching at different distances. The roots weave across turquoise stone into a winding path toward the right. A tiny golden songbird sits above an empty open black cage hanging from a low branch. The round red moon is framed by an open dark gap in the canopy. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 19,
+      "name": "return",
+      "prompt": "A small luminous golden songbird rests freely on a curved branch above an empty open black birdcage. The cage is small against an immense radiant forest of amber feather-shaped leaves. A winding turquoise path leads through the trees toward the low red moon. Golden seeds float away from the branch into the open blue valley, each carrying a tiny light. The view opens outward to reveal space around the trees, with the bird and empty cage still readable at the left. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.64
+    },
+    {
+      "at": 3.5,
+      "noise": 0.74
+    },
+    {
+      "at": 4,
+      "noise": 0.78
+    },
+    {
+      "at": 4.5,
+      "noise": 0.76
+    },
+    {
+      "at": 5,
+      "noise": 0.78
+    },
+    {
+      "at": 5.5,
+      "noise": 0.74
+    },
+    {
+      "at": 6,
+      "noise": 0.64
+    },
+    {
+      "at": 6.5,
+      "noise": 0.6
+    },
+    {
+      "at": 7,
+      "noise": 0.65
+    },
+    {
+      "at": 7.5,
+      "noise": 0.72
+    },
+    {
+      "at": 8,
+      "noise": 0.77
+    },
+    {
+      "at": 8.5,
+      "noise": 0.76
+    },
+    {
+      "at": 9,
+      "noise": 0.68
+    },
+    {
+      "at": 9.5,
+      "noise": 0.6
+    },
+    {
+      "at": 10,
+      "noise": 0.67
+    },
+    {
+      "at": 10.5,
+      "noise": 0.74
+    },
+    {
+      "at": 11,
+      "noise": 0.78
+    },
+    {
+      "at": 11.5,
+      "noise": 0.74
+    },
+    {
+      "at": 12,
+      "noise": 0.65
+    },
+    {
+      "at": 13,
+      "noise": 0.56
+    },
+    {
+      "at": 14,
+      "noise": 0.6
+    },
+    {
+      "at": 15,
+      "noise": 0.7
+    },
+    {
+      "at": 16,
+      "noise": 0.72
+    },
+    {
+      "at": 17,
+      "noise": 0.64
+    },
+    {
+      "at": 18,
+      "noise": 0.55
+    },
+    {
+      "at": 19,
+      "noise": 0.62
+    },
+    {
+      "at": 20,
+      "noise": 0.7
+    },
+    {
+      "at": 21,
+      "noise": 0.65
+    },
+    {
+      "at": 22,
+      "noise": 0.5
+    },
+    {
+      "at": 23,
+      "noise": 0.4
+    },
+    {
+      "at": 23.5,
+      "noise": 0.3
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 10,
+      "duration": 10,
+      "zoom": 0.58,
+      "turn": 22,
+      "travel": [
+        -0.21,
+        0.11
+      ],
+      "center": [
+        0.9,
+        0.52
+      ],
+      "radius": 0.95
+    },
+    {
+      "kind": "wave",
+      "start": 13,
+      "duration": 12,
+      "amplitude": 0.043,
+      "wavelength": 1.35,
+      "cycles": 0.6,
+      "axis": "vertical"
+    },
+    {
+      "start": 16,
+      "duration": 14,
+      "zoom": -0.26,
+      "turn": -21,
+      "travel": [
+        0.28,
+        -0.08
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 18,
+      "duration": 12,
+      "tilt": [
+        -18,
+        -15
+      ],
+      "distance": 2.5,
+      "center": [
+        0.85,
+        0.5
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564
+  ],
+  "seeds_by_frame": {
+    "12": 916433,
+    "24": 916445,
+    "36": 916457,
+    "48": 916469,
+    "60": 916481,
+    "72": 916493,
+    "84": 916505,
+    "96": 916517,
+    "108": 916529,
+    "120": 916541,
+    "132": 916553,
+    "144": 916565,
+    "156": 916577,
+    "168": 916589,
+    "180": 916601,
+    "192": 916613,
+    "204": 916625,
+    "216": 916637,
+    "228": 916649,
+    "240": 916661,
+    "252": 916673,
+    "264": 916685,
+    "276": 916697,
+    "288": 916709,
+    "300": 916721,
+    "312": 916733,
+    "324": 916745,
+    "336": 916757,
+    "348": 916769,
+    "360": 916781,
+    "372": 916793,
+    "384": 916805,
+    "396": 916817,
+    "408": 916829,
+    "420": 916841,
+    "432": 916853,
+    "444": 916865,
+    "456": 916877,
+    "468": 916889,
+    "480": 916901,
+    "492": 916913,
+    "504": 916925,
+    "516": 916937,
+    "528": 916949,
+    "540": 916961,
+    "552": 916973,
+    "564": 916985
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/p1-captive-light",
+  "prefix_through": 60
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Surreal stories \u2014 three approaches",
+  "selected": [
+    "i5-the-open-dream-edit",
+    "h4-a-sky-of-lanterns"
+  ],
+  "clips": [
+    {
+      "id": "i5-the-open-dream-edit",
+      "label": "The Open Dream \u2014 selected ending",
+      "note": "Whale railway \u2192 clock doorway \u2192 open ocean",
+      "details": "The improvised story ends at the clearer ocean reveal, before the last six crowded paintings. All generated paintings remain in the complete version. A measured spatial push into the actual window improves the reveal and retains a red train on the far bridge. Literal train travel is still ambiguous.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/through-0684/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "h4-a-sky-of-lanterns",
+      "label": "A Sky of Lanterns",
+      "note": "One vulnerable light becomes many lights",
+      "details": "Continues the observed lighthouse and smaller lantern boats. The proposed ending carries their shared light upward into a constellation, retaining the original red and gold motif.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/h4-a-sky-of-lanterns/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "p1-captive-light",
+      "label": "Captive Light \u2014 original plan",
+      "note": "Cage \u2192 free wings \u2192 growing forest",
+      "details": "The whole story was written before generation: liberation becoming renewal. The golden bird and cage-shaped tree provide a clear visual link. Its actual exit is ambiguous, and the final forest is less extensive than intended.\n\nRecurrent Krea Turbo: each painting uses the warped previous painting, text and recorded independent noise. CFG1 and three Euler intervals. Continuous Lanczos spatial motion; RIFE 4.25 scale 1. Source: 24 fps and one repaint every half-second. Delivery: 1.5\u00d7 faster at 24 fps, three paintings per displayed second. Original paintings and complete versions are retained. The last seven frames continue spatial warping. No audio.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/p1-captive-light/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

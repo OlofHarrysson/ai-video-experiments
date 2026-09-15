@@ -82,3 +82,16 @@ Recommended practice order: plan a three-image reveal; test a readable scene cha
 Watch one short sequence and note the first focus of attention, the change, the camera's role, and the reason for the cut. BFI's analysis sheet prompts examination of framing, camera, light, sound and editing together. Our application: borrow one decision, test it in a short clip, and show the result in chat with a brief explanation. [BFI: Reading a Short Film or Scene](https://ugc.futurelearn.com/uploads/files/d3/95/d395220f-bbb0-4e76-810f-e3caca25727b/Reading_a_short_film_or_scene.pdf).
 
 For each new experiment, record: **intention → start/end composition → scene change → camera choice → what must stay recognizable → intended cut**. Update this guide from actual results and Olof's feedback. Commercial tutorials and practitioners offer useful approaches rather than universal psychological laws; our workflow recommendations remain hypotheses until tested.
+
+## Storytelling practice — September 2026
+
+The [three-method session](../../apps/deforum/projects/modern-model-study/experiments/storytelling-lab/README.md) tests prewritten, improvised and hybrid stories. Its subjects differ, so it cannot rank the methods causally. Practical lessons from the actual paintings:
+
+- Repeating a motif across scale or material can connect worlds: a station clock becomes a giant destination; a lantern becomes a beacon and then sky lights.
+- A depicted route is not the same as a depicted journey. An independent reader saw the themes but could not establish several literal departures, arrivals or guiding actions.
+- Describe and frame the next visible state. Stronger position instructions and higher starting noise still added an extra bird rather than moving the original.
+- Adapt to useful surprises while retaining meaning. Shelter formed around the boat, which was more workable than forcing it through the originally planned entrance.
+- Plan movement from the actual painting. Measuring a window's location and solving its landing improved the whale-ocean reveal after a guessed push lost it in a corner.
+- End at a strong composition. The selected whale cut precedes repeated-eye distortion; this improves the edit without claiming to solve recurrent degradation.
+
+The [timestamped decisions](../../apps/deforum/projects/modern-model-study/experiments/storytelling-lab/DECISIONS.md) separate choices made before and after seeing paintings. The [blind review](../../apps/deforum/projects/modern-model-study/experiments/storytelling-lab/independent-review.md) records plausible readings separately from visible actions. Human preference among the new films remains pending.

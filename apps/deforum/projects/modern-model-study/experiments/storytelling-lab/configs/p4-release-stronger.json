@@ -1,0 +1,243 @@
+{
+  "case": "p4-release-stronger",
+  "seed": 915421,
+  "duration": 8,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "captive-light",
+      "prompt": "A single luminous golden songbird sits inside a tall black iron birdcage on an empty turquoise stone terrace. The bird glows from within like a tiny sun, with a long amber tail. The cage occupies the center-left, its sparse curved bars clearly surrounding the bird. Beyond the cage stretches a barren indigo valley with bare leafless trees. A small round red moon hangs above the distant horizon on the right. The cage has an arched door with a conspicuous golden latch. Warm light spills onto the cold terrace. The bird and bars are separated and readable. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "captive-light",
+      "prompt": "A single luminous golden songbird sits inside a tall black iron birdcage on an empty turquoise stone terrace. The bird glows from within like a tiny sun, with a long amber tail. The cage occupies the center-left, its sparse curved bars clearly surrounding the bird. Beyond the cage stretches a barren indigo valley with bare leafless trees. A small round red moon hangs above the distant horizon on the right. The cage has an arched door with a conspicuous golden latch. Warm light spills onto the cold terrace. The bird and bars are separated and readable. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "door-opening",
+      "prompt": "The arched door of the black iron birdcage swings wide open to the right. A radiant golden songbird is poised in the doorway, its wings beginning to unfold, its long amber tail trailing inside. The cage bars are sparse curved black stems, leaving a broad unobstructed view of the glowing bird. The tiny golden latch lies on the turquoise terrace. A barren indigo valley of leafless trees stretches into the distance beneath a round red moon. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 5,
+      "name": "clear-release",
+      "prompt": "One golden songbird flies in open blue sky to the RIGHT of an empty black iron birdcage. The bird is fully outside, separated from the cage by a visible gap of blue sky. Its two amber wings spread widely, its feet lifted in flight and its long golden tail trailing to the left. The empty cage stands in the LEFT third on a turquoise stone terrace with its door swung open. A bare tree and a round red moon remain beyond the terrace. The bird in the open sky and the empty cage are two separate silhouettes. An exquisitely detailed surrealist oil painting, luminous golden enamel against deep indigo shadows, crisp readable silhouettes and dimensional shading."
+    },
+    {
+      "at": 6.5,
+      "name": "departure",
+      "prompt": "One luminous golden songbird flies freely above a barren indigo valley in the RIGHT half of the view. Its wide amber wings, small head and long tail form a single clean silhouette against the dark blue sky. Farther to the LEFT an empty black birdcage rests on a turquoise terrace, with its open door visible. A few golden sparks fall from the free bird toward the valley. A round red moon and bare black trees remain in the distance. An exquisitely detailed surrealist oil painting, luminous golden enamel against deep indigo shadows, crisp readable silhouettes and dimensional shading."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.86
+    },
+    {
+      "at": 5.5,
+      "noise": 0.86
+    },
+    {
+      "at": 6,
+      "noise": 0.86
+    },
+    {
+      "at": 6.5,
+      "noise": 0.86
+    },
+    {
+      "at": 7,
+      "noise": 0.7
+    },
+    {
+      "at": 7.5,
+      "noise": 0.56
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 10,
+      "duration": 10,
+      "zoom": 0.58,
+      "turn": 22,
+      "travel": [
+        -0.21,
+        0.11
+      ],
+      "center": [
+        0.9,
+        0.52
+      ],
+      "radius": 0.95
+    },
+    {
+      "kind": "wave",
+      "start": 13,
+      "duration": 12,
+      "amplitude": 0.043,
+      "wavelength": 1.35,
+      "cycles": 0.6,
+      "axis": "vertical"
+    },
+    {
+      "start": 16,
+      "duration": 14,
+      "zoom": -0.26,
+      "turn": -21,
+      "travel": [
+        0.28,
+        -0.08
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 18,
+      "duration": 12,
+      "tilt": [
+        -18,
+        -15
+      ],
+      "distance": 2.5,
+      "center": [
+        0.85,
+        0.5
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180
+  ],
+  "seeds_by_frame": {
+    "12": 916433,
+    "24": 916445,
+    "36": 916457,
+    "48": 916469,
+    "60": 916481,
+    "72": 916493,
+    "84": 916505,
+    "96": 916517,
+    "108": 916529,
+    "120": 916541,
+    "132": 916553,
+    "144": 916565,
+    "156": 916577,
+    "168": 916589,
+    "180": 916601
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/p1-captive-light",
+  "prefix_through": 108
+}

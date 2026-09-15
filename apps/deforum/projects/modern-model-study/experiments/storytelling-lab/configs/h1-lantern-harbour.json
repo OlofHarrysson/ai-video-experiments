@@ -1,0 +1,244 @@
+{
+  "case": "h1-lantern-harbour",
+  "seed": 915423,
+  "duration": 8,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "A small vermilion red paper boat carries one bright golden lantern across an immense midnight-blue ocean. The boat sits clearly near the center-left, its folded red silhouette reflected below. Towering dark teal waves curve like the pages of a vast open book around it. Far to the right, a warm amber doorway shines in an enormous pearly spiral shell rising from the water. The tiny boat is dwarfed by the waves and shell, but its red color and lantern are clearly visible. A thin white moon hangs above the distant shell. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space.",
+    "seed": 915423,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "a-light-seeks-shelter",
+      "prompt": "A small vermilion red paper boat carries one bright golden lantern across an immense midnight-blue ocean. The boat sits clearly near the center-left, its folded red silhouette reflected below. Towering dark teal waves curve like the pages of a vast open book around it. Far to the right, a warm amber doorway shines in an enormous pearly spiral shell rising from the water. The tiny boat is dwarfed by the waves and shell, but its red color and lantern are clearly visible. A thin white moon hangs above the distant shell. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "a-light-seeks-shelter",
+      "prompt": "A small vermilion red paper boat carries one bright golden lantern across an immense midnight-blue ocean. The boat sits clearly near the center-left, its folded red silhouette reflected below. Towering dark teal waves curve like the pages of a vast open book around it. Far to the right, a warm amber doorway shines in an enormous pearly spiral shell rising from the water. The tiny boat is dwarfed by the waves and shell, but its red color and lantern are clearly visible. A thin white moon hangs above the distant shell. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "approaching-shelter",
+      "prompt": "A little vermilion paper boat with a bright golden lantern approaches the warm amber opening of an immense pearly spiral shell. The folded red hull sits below the center. Tall midnight-blue waves arch overhead like pages, framing a diagonal passage toward the golden doorway at the right. Thin gold lines run through the shell like streets and windows, suggesting a city inside. Dark blue water reflects the little red boat and the amber light. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "threshold",
+      "prompt": "The immense pearly spiral shell opens like a protective arch over a small vermilion red paper boat carrying a golden lantern. The boat enters a sheltered pool of dark turquoise water beneath the spiral. Warm amber windows trace a winding street along the inner shell, and delicate golden bridges cross the water. Dark page-like waves curl outside at the left edge, while the interior has open calm water and luminous architecture. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.65
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.6
+    },
+    {
+      "at": 6.5,
+      "noise": 0.68
+    },
+    {
+      "at": 7,
+      "noise": 0.74
+    },
+    {
+      "at": 7.5,
+      "noise": 0.76
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 10,
+      "duration": 10,
+      "zoom": 0.58,
+      "turn": 22,
+      "travel": [
+        -0.21,
+        0.11
+      ],
+      "center": [
+        0.9,
+        0.52
+      ],
+      "radius": 0.95
+    },
+    {
+      "kind": "wave",
+      "start": 13,
+      "duration": 12,
+      "amplitude": 0.043,
+      "wavelength": 1.35,
+      "cycles": 0.6,
+      "axis": "vertical"
+    },
+    {
+      "start": 16,
+      "duration": 14,
+      "zoom": -0.26,
+      "turn": -21,
+      "travel": [
+        0.28,
+        -0.08
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 18,
+      "duration": 12,
+      "tilt": [
+        -18,
+        -15
+      ],
+      "distance": 2.5,
+      "center": [
+        0.85,
+        0.5
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180
+  ],
+  "seeds_by_frame": {
+    "12": 916435,
+    "24": 916447,
+    "36": 916459,
+    "48": 916471,
+    "60": 916483,
+    "72": 916495,
+    "84": 916507,
+    "96": 916519,
+    "108": 916531,
+    "120": 916543,
+    "132": 916555,
+    "144": 916567,
+    "156": 916579,
+    "168": 916591,
+    "180": 916603
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/h1-lantern-harbour",
+  "prefix_through": 0
+}

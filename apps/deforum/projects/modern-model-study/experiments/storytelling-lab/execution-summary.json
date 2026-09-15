@@ -1,0 +1,177 @@
+{
+  "date": "2026-09-16",
+  "work_window_utc": [
+    "2026-09-15T21:21:17Z",
+    "2026-09-15T22:51:17Z"
+  ],
+  "new_image_jobs": 269,
+  "jobs_by_case": {
+    "i5-the-open-dream": 17,
+    "i3-the-whales-dream": 24,
+    "h3-follow-the-beacon": 20,
+    "i1-whale-station": 12,
+    "i2-bridge-to-the-moon": 20,
+    "h1-lantern-harbour": 16,
+    "h2-a-light-for-others": 20,
+    "h4-a-sky-of-lanterns": 22,
+    "i4-through-the-clock": 16,
+    "p1-captive-light": 48,
+    "p2-the-open-door": 42,
+    "p3-release-direct": 6,
+    "p4-release-stronger": 6
+  },
+  "generation_checks": [
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/doorway-landing-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/first-endings-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/first-four-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/hybrid-lights-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/improvised-exit-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/planned-original-generation.json",
+    "projects/modern-model-study/exports/storytelling-lab-v001/checks/planned-revisions-generation.json"
+  ],
+  "archive": {
+    "verified": true,
+    "archive_sha256": "bdd69ba86cc25e64e340288dfa7d9880982846f863cd9d7cffc2dc165a3622f0",
+    "files": 4635,
+    "restored_exports": "projects/modern-model-study/exports/storytelling-lab-v001"
+  },
+  "deliveries": [
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/h1-lantern-harbour/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "317ab5412011a47aeae5c9ffa21401e96caae4e67d77cd17e2be275c9956dc90",
+      "frames": 128,
+      "paintings": 16,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/h2-a-light-for-others/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "55ff86b18963b16b68abf0f75b915050315727e858b63bca1b73be8018e19122",
+      "frames": 288,
+      "paintings": 36,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/h3-follow-the-beacon/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "8dbdf0ef90b83f35c130899f3aa30df5c94347e7c93bb19919e2a783f0bcb0dc",
+      "frames": 288,
+      "paintings": 36,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/h4-a-sky-of-lanterns/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "522c4b1481ee7e2bb5f42878bc0bb8d2846ef757c6cd76f57df381b14cdd0d5e",
+      "frames": 464,
+      "paintings": 58,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i1-whale-station/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "333cffc10dc3e46d1922d081338e510807a9c8282c527ac5eadb1a01c2485291",
+      "frames": 96,
+      "paintings": 12,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i2-bridge-to-the-moon/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "573d6c01ff93af6f5a272f6141790cec0bec8a4e1b8db0302f3cce5645cdd55f",
+      "frames": 256,
+      "paintings": 32,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i3-the-whales-dream/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "d872e6d58e7cc84d650ff95300717b5ae35e451894ad1b44dec383db0f3093cc",
+      "frames": 448,
+      "paintings": 56,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i4-through-the-clock/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "979cfe96b7a92a42bac8f1d06a46c7d6d59e25c20f31d447416842f7bf060a7b",
+      "frames": 448,
+      "paintings": 56,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "9e4ce0d4214d2ed0e9bbbdad4ec59de3e1143a255b2840f4bc41b71d3bdab1fc",
+      "frames": 512,
+      "paintings": 64,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/p1-captive-light/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "b128aac939bebd8596eb1c218f955e82f40a1b7d9724241183de8207bb1e6ada",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/p2-the-open-door/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "4458b48577ae2720f433670541b86b4e3fdc9a9d22abc76a57a59425c6f01d34",
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/p3-release-direct/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "8210aabe56bb925053044188e10f9decdf97cbdf6a5730604a06be4d37581189",
+      "frames": 128,
+      "paintings": 16,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/p4-release-stronger/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "04dfc21f8090e43e9d87555c475a3b856ec58a9342fab19f07879850e594272e",
+      "frames": 128,
+      "paintings": 16,
+      "fps": 24,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/through-0684/rife-moving-tail/preview.mp4",
+      "video_sha256": "730f0a595daa1e92029bb7295a17b4bef1f2e499f973c3964f5e299a5181c61b",
+      "frames": 464,
+      "paintings": 58,
+      "fps": 24,
+      "final_warps": 7
+    }
+  ],
+  "posted_account_debit_at_cleanup": 0.8637624665,
+  "conservative_session_usd": 1.0,
+  "conservative_cumulative_usd": 5.4,
+  "budget_usd": 10,
+  "account_spend_per_hour_after": 0.005,
+  "resources": {
+    "pod": "r45if1euh3f9bc",
+    "deleted_at_utc": "2026-09-15T22:37:28Z",
+    "delete_response": {
+      "status": 204
+    },
+    "pods_after": [],
+    "retained_model_volume": {
+      "dataCenter": "EU-RO-1",
+      "id": "vd3jnbwko1",
+      "name": "deforum-models",
+      "size": 50,
+      "type": "STANDARD"
+    },
+    "quoted_hourly_gpu_usd": 0.72,
+    "removed_remote_media_files": 535,
+    "remote_scratch_removed": true
+  },
+  "human_feedback": "pending",
+  "review_scope": "Chronological painting samples, selected full images, consecutive finishing ranges, independent plot-blind painting review"
+}

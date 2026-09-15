@@ -1,0 +1,544 @@
+{
+  "case": "i4-through-the-clock",
+  "seed": 915422,
+  "duration": 28,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "rails-on-the-whale",
+      "prompt": "The immense ivory whale carries a little red steam train along its curved back toward a huge crimson eclipse on the right. Two golden rails continue over the whale's forehead and long nose, curving upward toward the glowing red circle. The whale's calm black eye remains near the lower left. Behind the train, the old station is partly cropped at the upper left. Dark blue ocean lies below, and open night sky surrounds the red destination. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 8,
+      "name": "bridge-growing",
+      "prompt": "The ivory whale's long forehead and nose extend into a sweeping white railway bridge across the night sky. Golden rails follow the bridge toward the enormous crimson moon at the right. A small red steam train moves along the ridge, trailing a silver ribbon of smoke. The whale's large calm eye remains in the curved white stone at the lower left, where its skin is becoming carved arches. The bridge has open dark spaces beneath it, suspended above a deep indigo sea. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 10,
+      "name": "moonward-bridge",
+      "prompt": "A slender white railway viaduct curves upward across a vast indigo night toward an enormous glowing red moon. A little vermilion steam train travels on the golden rails. The bridge's nearest arch at the lower left has the carved shape of a whale's head with one calm dark eye; farther arches grow smaller toward the moon. Inside the red circle a warm amber railway doorway is beginning to appear. Long silver smoke from the train links the bridge to the luminous moon. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 13,
+      "name": "moon-station",
+      "prompt": "A small red steam train follows a narrow ivory railway bridge into a glowing amber doorway in an enormous crimson moon. The moon's surface is red enamel, with fine gold seams like a clock face around the entrance. A station window shines above the doorway. Curved ivory arches sweep in from the lower left across open dark blue space, with a faint carved whale eye on the nearest support. The red train and warm doorway remain the clear focus, while the old ocean is far below. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 16,
+      "name": "the-sleeping-carrier",
+      "prompt": "The ivory whale-shaped railway bridge has a closed sleeping eye carved into its nearest arch. A little red train follows the golden rails toward a huge crimson clock at the upper right. The clock's warm amber doorway opens onto a bright turquoise sea beneath a golden dawn. The red enamel rim is marked with fine gold numerals; the dark outer night contrasts with the luminous water inside the doorway. Silver train smoke flows toward the opening. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 18,
+      "name": "inside-the-clock",
+      "prompt": "A monumental crimson enamel clock doorway fills the center of the view, its red and gold rim cropped along the upper corners. A narrow ivory railway bridge and small red train approach from the lower left. Through the wide open arch is a sunlit turquoise ocean under a pale golden sky. Three distant ivory whales float freely above the bright water inside. The nearest carved whale-eye support lies partly outside the lower left edge. A few gold clock hands are loosening into thin rays of sunlight. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 20,
+      "name": "the-open-water-door",
+      "prompt": "A wide open circular doorway occupies the lower center of a monumental antique clock. Its thin crimson rim surrounds a bright turquoise ocean beneath a golden sunrise. An ivory whale floats above the water inside the doorway. A narrow ivory railway and tiny red train reach the bottom edge of the opening. The surrounding black and gold clock mechanism is cropped far outside the view. A finely detailed surrealist oil painting, luminous ivory and turquoise water, crimson enamel and gold, strong readable silhouettes, dimensional shading, deep velvet shadows and sharp highlights."
+    },
+    {
+      "at": 22,
+      "name": "beyond-the-rim",
+      "prompt": "We are passing through a broad open crimson arch into a luminous turquoise ocean. The last curved red rim recedes at the outer edges. A large graceful ivory whale floats above the water near the center, its dark eye calm and distinct. Two smaller ivory whales float farther away. A thin ivory railway carrying a tiny red train follows the left horizon. A round golden sun hangs in spacious pale sky. A finely detailed surrealist oil painting, luminous ivory and turquoise water, crimson enamel and gold, strong readable silhouettes, dimensional shading, deep velvet shadows and sharp highlights."
+    },
+    {
+      "at": 24,
+      "name": "morning-without-clocks",
+      "prompt": "An expansive turquoise sea at golden dawn, with three ivory whales floating freely above it. One large ivory whale near the center has a warm light on its back and a calm dark eye. Smaller whales travel in the distance. A tiny red train crosses a distant thin ivory bridge at the far left. Soft golden sunbeams fall through open pale sky. Dark teal waves and dimensional ivory shading. A spacious open landscape. A finely detailed surrealist oil painting, luminous ivory and turquoise water, crimson enamel and gold, strong readable silhouettes, dimensional shading, deep velvet shadows and sharp highlights."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.65
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.6
+    },
+    {
+      "at": 6.5,
+      "noise": 0.65
+    },
+    {
+      "at": 7,
+      "noise": 0.7
+    },
+    {
+      "at": 7.5,
+      "noise": 0.73
+    },
+    {
+      "at": 8,
+      "noise": 0.75
+    },
+    {
+      "at": 8.5,
+      "noise": 0.75
+    },
+    {
+      "at": 9,
+      "noise": 0.66
+    },
+    {
+      "at": 9.5,
+      "noise": 0.6
+    },
+    {
+      "at": 10,
+      "noise": 0.68
+    },
+    {
+      "at": 10.5,
+      "noise": 0.74
+    },
+    {
+      "at": 11,
+      "noise": 0.78
+    },
+    {
+      "at": 11.5,
+      "noise": 0.76
+    },
+    {
+      "at": 12,
+      "noise": 0.65
+    },
+    {
+      "at": 12.5,
+      "noise": 0.56
+    },
+    {
+      "at": 13,
+      "noise": 0.63
+    },
+    {
+      "at": 13.5,
+      "noise": 0.71
+    },
+    {
+      "at": 14,
+      "noise": 0.76
+    },
+    {
+      "at": 14.5,
+      "noise": 0.68
+    },
+    {
+      "at": 15,
+      "noise": 0.55
+    },
+    {
+      "at": 15.5,
+      "noise": 0.4
+    },
+    {
+      "at": 16,
+      "noise": 0.56
+    },
+    {
+      "at": 16.5,
+      "noise": 0.64
+    },
+    {
+      "at": 17,
+      "noise": 0.7
+    },
+    {
+      "at": 17.5,
+      "noise": 0.75
+    },
+    {
+      "at": 18,
+      "noise": 0.76
+    },
+    {
+      "at": 18.5,
+      "noise": 0.76
+    },
+    {
+      "at": 19,
+      "noise": 0.68
+    },
+    {
+      "at": 19.5,
+      "noise": 0.62
+    },
+    {
+      "at": 20.0,
+      "noise": 0.64
+    },
+    {
+      "at": 20.5,
+      "noise": 0.7
+    },
+    {
+      "at": 21.0,
+      "noise": 0.76
+    },
+    {
+      "at": 21.5,
+      "noise": 0.78
+    },
+    {
+      "at": 22.0,
+      "noise": 0.76
+    },
+    {
+      "at": 22.5,
+      "noise": 0.7
+    },
+    {
+      "at": 23.0,
+      "noise": 0.66
+    },
+    {
+      "at": 23.5,
+      "noise": 0.72
+    },
+    {
+      "at": 24.0,
+      "noise": 0.78
+    },
+    {
+      "at": 24.5,
+      "noise": 0.76
+    },
+    {
+      "at": 25.0,
+      "noise": 0.68
+    },
+    {
+      "at": 25.5,
+      "noise": 0.62
+    },
+    {
+      "at": 26.0,
+      "noise": 0.54
+    },
+    {
+      "at": 26.5,
+      "noise": 0.46
+    },
+    {
+      "at": 27.0,
+      "noise": 0.38
+    },
+    {
+      "at": 27.5,
+      "noise": 0.32
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "cruise",
+      "start": -2,
+      "velocity": [
+        -0.018,
+        0.007
+      ],
+      "roll_rate": 0.8,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": -1,
+      "duration": 8,
+      "zoom": 0.44,
+      "turn": 18,
+      "travel": [
+        -0.12,
+        0.04
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "kind": "plane",
+      "start": 2,
+      "duration": 10,
+      "tilt": [
+        6,
+        19
+      ],
+      "distance": 2.5,
+      "center": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 11,
+      "zoom": -0.27,
+      "turn": -28,
+      "travel": [
+        0.22,
+        -0.09
+      ],
+      "center": [
+        0.85,
+        0.48
+      ],
+      "radius": 4
+    },
+    {
+      "start": 5.5,
+      "duration": 10,
+      "zoom": 0.5,
+      "turn": -15,
+      "travel": [
+        -0.2,
+        0.06
+      ],
+      "center": [
+        1.05,
+        0.42
+      ],
+      "radius": 2.4
+    },
+    {
+      "start": 11,
+      "duration": 10,
+      "zoom": -0.15,
+      "turn": 20,
+      "travel": [
+        0.08,
+        -0.05
+      ],
+      "center": [
+        0.9,
+        0.5
+      ],
+      "radius": 4
+    },
+    {
+      "start": 15.5,
+      "duration": 9,
+      "zoom": 0.82,
+      "turn": -12,
+      "travel": [
+        -0.3,
+        0.15
+      ],
+      "center": [
+        1.06,
+        0.3
+      ],
+      "radius": 3.5
+    },
+    {
+      "start": 19.5,
+      "duration": 7,
+      "zoom": 1.1,
+      "turn": 9,
+      "travel": [
+        -0.1,
+        -0.12
+      ],
+      "center": [
+        0.88,
+        0.72
+      ],
+      "radius": 3.5
+    },
+    {
+      "start": 24,
+      "duration": 9,
+      "zoom": -0.16,
+      "turn": -13,
+      "travel": [
+        0.08,
+        0.02
+      ],
+      "center": [
+        0.75,
+        0.5
+      ],
+      "radius": 3.5
+    },
+    {
+      "kind": "wave",
+      "start": 21,
+      "duration": 10,
+      "amplitude": 0.028,
+      "wavelength": 1.7,
+      "cycles": 0.5,
+      "axis": "vertical"
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660
+  ],
+  "seeds_by_frame": {
+    "12": 916434,
+    "24": 916446,
+    "36": 916458,
+    "48": 916470,
+    "60": 916482,
+    "72": 916494,
+    "84": 916506,
+    "96": 916518,
+    "108": 916530,
+    "120": 916542,
+    "132": 916554,
+    "144": 916566,
+    "156": 916578,
+    "168": 916590,
+    "180": 916602,
+    "192": 916614,
+    "204": 916626,
+    "216": 916638,
+    "228": 916650,
+    "240": 916662,
+    "252": 916674,
+    "264": 916686,
+    "276": 916698,
+    "288": 916710,
+    "300": 916722,
+    "312": 916734,
+    "324": 916746,
+    "336": 916758,
+    "348": 916770,
+    "360": 916782,
+    "372": 916794,
+    "384": 916806,
+    "396": 916818,
+    "408": 916830,
+    "420": 916842,
+    "432": 916854,
+    "444": 916866,
+    "456": 916878,
+    "468": 916890,
+    "480": 916902,
+    "492": 916914,
+    "504": 916926,
+    "516": 916938,
+    "528": 916950,
+    "540": 916962,
+    "552": 916974,
+    "564": 916986,
+    "576": 916998,
+    "588": 917010,
+    "600": 917022,
+    "612": 917034,
+    "624": 917046,
+    "636": 917058,
+    "648": 917070,
+    "660": 917082
+  },
+  "prefix_root": "projects/modern-model-study/exports/storytelling-lab-v001/i3-the-whales-dream",
+  "prefix_through": 468
+}
