@@ -31,6 +31,7 @@
     if (item.kind === 'anchor') return `Painting ${item.source_index}`;
     if (item.kind === 'hold') return `Hold · painting ${item.source_index}`;
     if (item.kind === 'final_hold') return `Final hold · painting ${item.source_index}`;
+    if (item.kind === 'warp') return `Spatial warp · painting ${item.source_index}`;
     return `In-between · paintings ${item.source_pair[0]} → ${item.source_pair[1]}`;
   }
   function updateReadouts(time, exact) {

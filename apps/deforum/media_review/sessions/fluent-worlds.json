@@ -1,0 +1,15 @@
+{
+  "title": "Continuous motion through the whole opening",
+  "selected": [
+    "f3-sweeping-worlds"
+  ],
+  "clips": [
+    {
+      "id": "f3-sweeping-worlds",
+      "label": "Sweeping worlds",
+      "note": "Fruit city \u2192 palace fish \u2192 garden \u2192 railway",
+      "details": "The whole opening is regenerated from the same fruit painting. Overlapping motion starts immediately and continues through changing scenes. Text, noise and seeds match the earlier journey, while movement differs.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

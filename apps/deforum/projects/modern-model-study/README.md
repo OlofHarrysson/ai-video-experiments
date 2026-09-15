@@ -1,6 +1,8 @@
 # Modern model study
 
-Current follow-up: [deliberate movement and emerging stories](experiments/story-hour/README.md) adapts the liked surreal opening into a railway, travelling library and paper forest, with a clockwork-world alternative. Nine branches preserve recurrent Krea feedback. The assistant shortlist contains two complete films; the [reviewer](http://localhost:3028/) compares their new passages after the shared opening. All media is verified locally and owned compute is removed; human preference is pending.
+Current follow-up: [fluent varied spatial movement](experiments/fluent-hour/README.md) overlaps large pans, turns, inward/outward zoom and regional warps. The assistant shortlist is an orbital railway and a dreaming moon, with all six new attempts preserved. The [reviewer](http://localhost:3028/) compares matched motion paths; complete films are in the report and chat. All generation artifacts are local, owned compute is removed, and human preference is pending.
+
+Previous session: [deliberate movement and emerging stories](experiments/story-hour/README.md) adapts the liked surreal opening into a railway, travelling library and paper forest, with a clockwork-world alternative. Nine branches preserve recurrent Krea feedback. The assistant shortlist contains two complete films; the [reviewer](http://localhost:3028/story-hour) compares their new passages after the shared opening. All media is verified locally and owned compute is removed; human preference is pending.
 
 Previous session: [surreal worlds](experiments/surreal-hour/README.md) combines impossible scenes with stronger spatial movement. Olof calls the previous movement an improvement and welcomes surrealism. All seven attempts retain recurrent Krea feedback; the assistant shortlist is fruit-to-garden and piano-to-swans.
 

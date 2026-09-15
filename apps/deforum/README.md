@@ -1,6 +1,6 @@
 # Deforum experiment
 
-Current work: [deliberate movement and emerging stories](projects/modern-model-study/experiments/story-hour/README.md), following the [surreal worlds session](projects/modern-model-study/experiments/surreal-hour/README.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). The uv package migration is complete; new experiments use the shared `deforum_lab` modules.
+Current work: [fluent varied spatial movement](projects/modern-model-study/experiments/fluent-hour/README.md), following [deliberate movement and emerging stories](projects/modern-model-study/experiments/story-hour/README.md). Start with the [experiment notebook index](projects/EXPERIMENTS.md) or the [modern-model project](projects/modern-model-study/README.md). New experiments use the uv-managed `deforum_lab` package.
 
 ## Local development with uv
 

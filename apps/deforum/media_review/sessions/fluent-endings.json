@@ -1,0 +1,23 @@
+{
+  "title": "Fluent movement \u2014 moon ships and an orbital railway",
+  "selected": [
+    "f5-the-dreaming-moon",
+    "f6-the-orbital-railway"
+  ],
+  "clips": [
+    {
+      "id": "f5-the-dreaming-moon",
+      "label": "The dreaming moon",
+      "note": "Library \u2192 moon faces \u2192 sailing ships",
+      "details": "Continues from the face and library that appeared in Arcing route. The descriptions ask for a dreaming profile and crescent moon, then paper ships; the actual result develops full moon faces and sailing ships instead. Pullback, drift and another turn carry the scene forward. This 8\u2153-second excerpt starts at original source time 31.5 seconds.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f5-the-dreaming-moon/excerpt-0756/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "f6-the-orbital-railway",
+      "label": "The orbital railway",
+      "note": "Railway \u2192 floating water-world \u2192 orbiting city",
+      "details": "A sustained pullback and roll opens the view around the emerging water-world. The old railway remains a compositional link. The planet appears, but it does not fully split as requested, and some near railway still occupies the right edge. This excerpt begins at original source time 23.5 seconds.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f6-the-orbital-railway/excerpt-0564/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

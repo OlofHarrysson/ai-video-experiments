@@ -6,10 +6,16 @@ from urllib.parse import urlsplit
 
 from media_review import APP, build
 
-SESSION = APP / 'media_review/sessions/story-hour.json'
-OUTPUT = APP / 'projects/modern-model-study/exports/media-review-story-hour-v001'
+SESSION = APP / 'media_review/sessions/fluent-hour.json'
+OUTPUT = APP / 'projects/modern-model-study/exports/media-review-fluent-hour-v001'
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    '/story-hour': APP / 'projects/modern-model-study/exports/media-review-story-hour-v001/full-quality.html',
+    '/fluent-paths': APP / 'projects/modern-model-study/exports/media-review-fluent-paths-v001/full-quality.html',
+    '/fluent-strength': APP / 'projects/modern-model-study/exports/media-review-fluent-strength-v001/full-quality.html',
+    '/fluent-control': APP / 'projects/modern-model-study/exports/media-review-fluent-control-v001/full-quality.html',
+    '/fluent-worlds': APP / 'projects/modern-model-study/exports/media-review-fluent-worlds-v001/full-quality.html',
+    '/fluent-endings': APP / 'projects/modern-model-study/exports/media-review-fluent-endings-v001/full-quality.html',
     '/surreal-hour': APP / 'projects/modern-model-study/exports/media-review-surreal-hour-v001/full-quality.html',
     '/story-paths': APP / 'projects/modern-model-study/exports/media-review-story-paths-v001/full-quality.html',
     '/story-regional': APP / 'projects/modern-model-study/exports/media-review-story-regional-v001/full-quality.html',

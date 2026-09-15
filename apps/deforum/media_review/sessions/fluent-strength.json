@@ -1,0 +1,23 @@
+{
+  "title": "Continuous motion \u2014 gentler versus stronger",
+  "selected": [
+    "f1-arcing-route",
+    "f4-bolder-arc"
+  ],
+  "clips": [
+    {
+      "id": "f1-arcing-route",
+      "label": "Arcing route",
+      "note": "Garden \u2192 railway \u2192 a library beside a face",
+      "details": "Broad turn and approach, overlapping pullback and reversal, then a new diagonal approach. The face emerged without being explicitly requested. This excerpt starts at original source time 16 seconds, after the preserved opening.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f1-arcing-route/excerpt-0384/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "f4-bolder-arc",
+      "label": "Bolder arc",
+      "note": "Same story, larger push\u2013pull and turns",
+      "details": "Identical text, noise, seeds and timing to Arcing route. Motion amounts after source time 16 seconds are multiplied by 1.6. Direction changes remain overlapped; net outward movement is stronger.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f4-bolder-arc/excerpt-0384/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

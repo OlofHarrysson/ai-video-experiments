@@ -1,0 +1,607 @@
+{
+  "case": "f2-woven-route",
+  "seed": 815239,
+  "duration": 32,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "opening",
+      "prompt": "An immense split pomegranate floats above an ink-blue ocean at night. Its cut half is very close along the left edge, a sweeping dark crimson rind curling overhead like a theatre balcony. Inside the fruit, luminous amber seeds are miniature windows and staircases. A wide opening between the seeds reveals a tiny bright golden city near the center-right. One long ivory staircase descends from the fruit toward the water, where the small city is reflected. A thin turquoise moon hangs far to the right. The fruit is cropped by the top and left edges; the distant city has clear breathing room. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "stage-0",
+      "prompt": "An immense split pomegranate floats above an ink-blue ocean at night. Its cut half is very close along the left edge, a sweeping dark crimson rind curling overhead like a theatre balcony. Inside the fruit, luminous amber seeds are miniature windows and staircases. A wide opening between the seeds reveals a tiny bright golden city near the center-right. One long ivory staircase descends from the fruit toward the water, where the small city is reflected. A thin turquoise moon hangs far to the right. The fruit is cropped by the top and left edges; the distant city has clear breathing room. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "stage-1",
+      "prompt": "Inside the split pomegranate, huge translucent amber seeds form curved houses and hanging balconies around a broad central opening. The crimson rind frames the upper left like an immense cathedral vault. An ivory staircase leads diagonally toward a luminous city of rounded golden towers suspended over dark blue water. Several seed skins peel away into red silk banners. The nearest seed buildings are heavily cropped at both edges, while a tiny turquoise moon shines through the wide central opening. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "stage-2",
+      "prompt": "A city of translucent amber towers hangs above a dark blue ocean. The giant pomegranate rind has become a red silk sky draped across the upper corners. Ivory staircases curl between the suspended buildings, ending in open air. The broad central avenue opens directly onto the moonlit sea; a school of small gold fish swims through the air between the towers. Architectural windows shine in the sides of the fish. Close curved golden towers frame the edges, leaving open space ahead. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 9,
+      "name": "stage-3",
+      "prompt": "Flying golden fish, each the size of a palace, swim through an immense indigo ocean of clouds. Their scales are illuminated arched windows, their fins broad folds of crimson silk. A close fish body curves along the left edge and another tail is cropped at the upper right. Farther away, a loose school of smaller palace-fish circles a thin turquoise moon. Ivory stairs float in fragments below them, reflected in a black mirror sea. The middle of the view is open luminous blue space. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 12,
+      "name": "garden-12",
+      "prompt": "Enormous golden palace-fish are cropped at the upper and outer edges, their red silk fins flowing around a bright circular turquoise window near the center-right. Through the hollow blue glass ring lies a luminous ivory garden under a pale mint sky. Red orchids shaped like fish tails grow along its white stairs. A broad clear blue passage opens between the near fish, leading into the circular window. Tiny golden fish swim toward the bright garden; the nearest fin hangs across the lower edge. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 15,
+      "name": "garden-15",
+      "prompt": "Passing through a huge translucent turquoise glass ring into an impossible ivory garden. The ring is cropped at the left and upper edges. White staircases branch through open air over a pale mint lake. Giant crimson orchids rise on thin golden stems, their petals shaped like flowing silk fish fins. A few tiny golden fish float between the flowers. The nearest orchid petals frame the outer corners while broad open water and smaller flowers recede toward a luminous horizon. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 16.5,
+      "name": "railway-16.5",
+      "prompt": "The ivory stairway crosses a bright circular opening between enormous crimson orchids and polished turquoise glass walls. Beyond the opening a silver river curves toward a tiny golden railway station. The steps flatten into closely spaced ivory railway sleepers, two bright silver rails running along their length. Golden stems bend into delicate railway signals, while near crimson petals curl away from the center. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 18.5,
+      "name": "railway-18.5",
+      "prompt": "An impossible railway bridge crosses a silver river under a pale mint sky. Its ivory steps are becoming smooth railway sleepers and silver rails. Tall crimson orchids curve over the track, their petals lifting into red silk balloons tethered to thin golden stems. A small luminous train with arched amber windows waits in the open distance. The near turquoise glass rim peels outward, revealing broad open sky and distant violet mountains. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 20.5,
+      "name": "railway-20.5",
+      "prompt": "A slender golden train follows curving silver rails across an impossible floating ivory bridge above a moonlit violet sea. The red orchids have become giant crimson silk balloons carrying miniature golden railway stations. Thin gold tethers and elegant bridges connect these floating structures. One large red balloon is cropped near the upper edge, with much smaller balloons receding toward pale mountains. Polished amber train windows glow against deep teal and violet shadows. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 22.5,
+      "name": "railway-22.5",
+      "prompt": "A luminous golden train travels along a sweeping ivory railway bridge across a vast violet sea beneath a mint moon. Enormous crimson silk balloons carry tiny ornate railway stations in their baskets. One near balloon frames the upper corner; open sky separates the more distant floating stations. The silver rails and amber windows reflect the moonlight. Thin gold ropes and curved ivory bridges lead toward a distant bright horizon. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 24,
+      "name": "library-24",
+      "prompt": "A golden train glides around a curved ivory bridge above a violet sea. Its amber carriage windows resemble illuminated miniature rooms lined with books. Near crimson orchid petals frame the right edge. Far ahead, a golden railway station hangs beneath a red silk balloon. The track leads toward a bright arch in the station, with open pale sky between the suspended buildings. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 26,
+      "name": "library-26",
+      "prompt": "The golden train has become a travelling library: each carriage is a tall leather-bound volume with glowing amber windows between its gilded pages. Several ivory pages curl out from its roof into broad delicate wings. Silver railway tracks become long ribbons of handwritten music, spiralling toward a luminous open arch. Tiny suspended stations have unfolded into open books tethered to crimson silk balloons. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 28,
+      "name": "library-28",
+      "prompt": "Enormous open books float above a violet ocean, their gilded pages unfolding into ivory staircases and slender library balconies. A close red leather book is cropped along the right edge. Luminous amber reading rooms are hidden within its thick spine. Long curling paper ribbons bridge the floating books, with miniature golden windows along their edges. Small red silk balloons carry more open books toward a distant mint moon. Broad pale sky is visible between the pages. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 30,
+      "name": "library-30",
+      "prompt": "An impossible library sails across a violet sea. Vast open books form ivory terraces and vaulted paper arches, with amber windows nested in their red leather spines. Pages curve gently into bridges over the water. Near pages sweep through the upper corners, while small floating books recede toward a pale mint moon. A wide luminous passage opens through the library, its floor a ribbon of gilded paper with delicate handwritten musical notes. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.2
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.62
+    },
+    {
+      "at": 3.5,
+      "noise": 0.68
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.62
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.62
+    },
+    {
+      "at": 6.5,
+      "noise": 0.7
+    },
+    {
+      "at": 7,
+      "noise": 0.76
+    },
+    {
+      "at": 7.5,
+      "noise": 0.78
+    },
+    {
+      "at": 8,
+      "noise": 0.68
+    },
+    {
+      "at": 8.5,
+      "noise": 0.6
+    },
+    {
+      "at": 9,
+      "noise": 0.64
+    },
+    {
+      "at": 9.5,
+      "noise": 0.72
+    },
+    {
+      "at": 10,
+      "noise": 0.76
+    },
+    {
+      "at": 10.5,
+      "noise": 0.64
+    },
+    {
+      "at": 11,
+      "noise": 0.45
+    },
+    {
+      "at": 11.5,
+      "noise": 0.3
+    },
+    {
+      "at": 12,
+      "noise": 0.45
+    },
+    {
+      "at": 12.5,
+      "noise": 0.6
+    },
+    {
+      "at": 13,
+      "noise": 0.68
+    },
+    {
+      "at": 13.5,
+      "noise": 0.72
+    },
+    {
+      "at": 14,
+      "noise": 0.76
+    },
+    {
+      "at": 14.5,
+      "noise": 0.78
+    },
+    {
+      "at": 15,
+      "noise": 0.76
+    },
+    {
+      "at": 15.5,
+      "noise": 0.72
+    },
+    {
+      "at": 16,
+      "noise": 0.64
+    },
+    {
+      "at": 16.5,
+      "noise": 0.55
+    },
+    {
+      "at": 17,
+      "noise": 0.6
+    },
+    {
+      "at": 17.5,
+      "noise": 0.68
+    },
+    {
+      "at": 18,
+      "noise": 0.74
+    },
+    {
+      "at": 18.5,
+      "noise": 0.76
+    },
+    {
+      "at": 19,
+      "noise": 0.72
+    },
+    {
+      "at": 19.5,
+      "noise": 0.64
+    },
+    {
+      "at": 20,
+      "noise": 0.6
+    },
+    {
+      "at": 20.5,
+      "noise": 0.66
+    },
+    {
+      "at": 21,
+      "noise": 0.72
+    },
+    {
+      "at": 21.5,
+      "noise": 0.76
+    },
+    {
+      "at": 22,
+      "noise": 0.7
+    },
+    {
+      "at": 22.5,
+      "noise": 0.6
+    },
+    {
+      "at": 23,
+      "noise": 0.5
+    },
+    {
+      "at": 23.5,
+      "noise": 0.42
+    },
+    {
+      "at": 24,
+      "noise": 0.5
+    },
+    {
+      "at": 24.5,
+      "noise": 0.56
+    },
+    {
+      "at": 25,
+      "noise": 0.62
+    },
+    {
+      "at": 25.5,
+      "noise": 0.68
+    },
+    {
+      "at": 26,
+      "noise": 0.72
+    },
+    {
+      "at": 26.5,
+      "noise": 0.76
+    },
+    {
+      "at": 27,
+      "noise": 0.76
+    },
+    {
+      "at": 27.5,
+      "noise": 0.7
+    },
+    {
+      "at": 28,
+      "noise": 0.64
+    },
+    {
+      "at": 28.5,
+      "noise": 0.68
+    },
+    {
+      "at": 29,
+      "noise": 0.72
+    },
+    {
+      "at": 29.5,
+      "noise": 0.74
+    },
+    {
+      "at": 30,
+      "noise": 0.68
+    },
+    {
+      "at": 30.5,
+      "noise": 0.6
+    },
+    {
+      "at": 31,
+      "noise": 0.48
+    },
+    {
+      "at": 31.5,
+      "noise": 0.38
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756
+  ],
+  "seeds_by_frame": {
+    "0": 815239,
+    "12": 815240,
+    "24": 815241,
+    "36": 815242,
+    "48": 815243,
+    "60": 815244,
+    "72": 815245,
+    "84": 815246,
+    "96": 815247,
+    "108": 815248,
+    "120": 815249,
+    "132": 815250,
+    "144": 815251,
+    "156": 815252,
+    "168": 815253,
+    "180": 815254,
+    "192": 815255,
+    "204": 815256,
+    "216": 815257,
+    "228": 815258,
+    "240": 815259,
+    "252": 815260,
+    "264": 815261,
+    "276": 815262,
+    "288": 815263,
+    "300": 815264,
+    "312": 815265,
+    "324": 815266,
+    "336": 815267,
+    "348": 815268,
+    "360": 815269,
+    "372": 815270,
+    "384": 815271,
+    "396": 815272,
+    "408": 815273,
+    "420": 815274,
+    "432": 815275,
+    "444": 815276,
+    "456": 815277,
+    "468": 815278,
+    "480": 815279,
+    "492": 815280,
+    "504": 815281,
+    "516": 815282,
+    "528": 815283,
+    "540": 815284,
+    "552": 815285,
+    "564": 815286,
+    "576": 815287,
+    "588": 815288,
+    "600": 815289,
+    "612": 815290,
+    "624": 815291,
+    "636": 815292,
+    "648": 815293,
+    "660": 815294,
+    "672": 815295,
+    "684": 815296,
+    "696": 815297,
+    "708": 815298,
+    "720": 815299,
+    "732": 815300,
+    "744": 815301,
+    "756": 815302
+  },
+  "prefix_root": "projects/modern-model-study/exports/story-hour-v001/t7-through-the-living-book",
+  "prefix_through": 384,
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4,
+      "center": [
+        0.9,
+        0.48
+      ],
+      "radius": 0.8,
+      "zoom": 0.85,
+      "turn": 30,
+      "travel": [
+        -0.15,
+        0.02
+      ]
+    },
+    {
+      "start": 3.5,
+      "duration": 4.5,
+      "center": [
+        0.8,
+        0.47
+      ],
+      "radius": 0.7,
+      "zoom": 0.65,
+      "turn": -65,
+      "travel": [
+        0.16,
+        -0.04
+      ]
+    },
+    {
+      "start": 7.5,
+      "duration": 4,
+      "center": [
+        0.9,
+        0.5
+      ],
+      "radius": 0.9,
+      "zoom": 0.5,
+      "turn": 45,
+      "travel": [
+        -0.12,
+        0.03
+      ]
+    },
+    {
+      "start": 11.5,
+      "duration": 4.5,
+      "center": [
+        1.08,
+        0.43
+      ],
+      "radius": 0.9,
+      "zoom": 0.85,
+      "turn": -45,
+      "travel": [
+        -0.26,
+        0.08
+      ]
+    },
+    {
+      "start": 16,
+      "duration": 12,
+      "center": [
+        0.95,
+        0.5
+      ],
+      "radius": 7,
+      "zoom": 0.4,
+      "turn": -18,
+      "travel": [
+        -0.34,
+        0.05
+      ]
+    },
+    {
+      "start": 18,
+      "duration": 8,
+      "center": [
+        1.15,
+        0.28
+      ],
+      "radius": 0.5,
+      "zoom": 0,
+      "turn": 44,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "start": 20,
+      "duration": 10,
+      "center": [
+        0.8,
+        0.5
+      ],
+      "radius": 8,
+      "zoom": -0.18,
+      "turn": 16,
+      "travel": [
+        0.18,
+        -0.12
+      ]
+    },
+    {
+      "start": 24,
+      "duration": 9,
+      "center": [
+        0.38,
+        0.6
+      ],
+      "radius": 0.45,
+      "zoom": 0,
+      "turn": -40,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "start": 28,
+      "duration": 8,
+      "center": [
+        0.78,
+        0.46
+      ],
+      "radius": 7,
+      "zoom": 0.52,
+      "turn": 18,
+      "travel": [
+        -0.18,
+        0.1
+      ]
+    }
+  ]
+}

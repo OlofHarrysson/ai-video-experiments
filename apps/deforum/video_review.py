@@ -221,8 +221,8 @@ def attach_provenance(source, digest, info, rows):
             left, right = item['source_pair']
             method = 'RIFE' if data.get('provenance', {}).get('model', '').startswith('RIFE') else 'In-between'
             label = f"{method} {item['timestep']} between source {left}->{right}"
-        elif kind in ('anchor', 'hold', 'final_hold'):
-            name = {'anchor': 'Original', 'hold': 'Hold', 'final_hold': 'Final hold'}[kind]
+        elif kind in ('anchor', 'hold', 'final_hold', 'warp'):
+            name = {'anchor': 'Original', 'hold': 'Hold', 'final_hold': 'Final hold', 'warp': 'Spatial warp'}[kind]
             label = f"{name} source {item['source_index']}"
         else:
             raise ValueError(f'Unknown frame provenance kind: {kind}')

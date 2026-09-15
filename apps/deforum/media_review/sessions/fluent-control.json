@@ -1,0 +1,23 @@
+{
+  "title": "Earlier stops versus connected movement",
+  "selected": [
+    "f0-original-motion",
+    "f4-bolder-arc"
+  ],
+  "clips": [
+    {
+      "id": "f0-original-motion",
+      "label": "Previous movement",
+      "note": "Garden \u2192 railway \u2192 library",
+      "details": "Historical control: earlier motion ends and restarts at separate phrase boundaries, with repeated forward approaches. This reuses the prior paintings and preserves the original seven held finishing frames. Same prompts, noise, seeds and repaint times as the stronger-arc branch.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f0-original-motion/excerpt-0384/rife/preview.mp4"
+    },
+    {
+      "id": "f4-bolder-arc",
+      "label": "Bolder arc",
+      "note": "Same story, larger push\u2013pull and turns",
+      "details": "Identical text, noise, seeds and timing to Arcing route. Motion amounts after source time 16 seconds are multiplied by 1.6. Direction changes remain overlapped; net outward movement is stronger.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f4-bolder-arc/excerpt-0384/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

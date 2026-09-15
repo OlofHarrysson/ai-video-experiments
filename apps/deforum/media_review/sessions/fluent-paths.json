@@ -1,0 +1,23 @@
+{
+  "title": "Continuous routes \u2014 two movement patterns",
+  "selected": [
+    "f1-arcing-route",
+    "f2-woven-route"
+  ],
+  "clips": [
+    {
+      "id": "f1-arcing-route",
+      "label": "Arcing route",
+      "note": "Garden \u2192 railway \u2192 a library beside a face",
+      "details": "Broad turn and approach, overlapping pullback and reversal, then a new diagonal approach. The face emerged without being explicitly requested. This excerpt starts at original source time 16 seconds, after the preserved opening.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f1-arcing-route/excerpt-0384/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "f2-woven-route",
+      "label": "Woven route",
+      "note": "Garden \u2192 curving railway \u2192 folded books",
+      "details": "Longer lateral travel with overlapping regional twists. This path is continuous but gentler; a large near staircase keeps occupying the view. This excerpt starts at original source time 16 seconds.\n\nKrea Turbo repaints its own warped previous painting. CFG1, three Euler intervals, unchanged prompt/noise/seed timing in the matched branches. Overlapping Lanczos motion paths combine pans, rolls, inward/outward zoom and regional twists. RIFE 4.25 scale 1 never feeds back. 24 fps delivery, three paintings per displayed second. All paintings retained; the seven frames after the final painting continue spatial warping.",
+      "source": "projects/modern-model-study/exports/fluent-hour-v001/f2-woven-route/excerpt-0384/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

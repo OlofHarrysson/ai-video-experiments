@@ -2,7 +2,7 @@
 
 Nine recurrent Krea branches explore how spatial movement can guide a surreal journey—and how to adapt the next scene to what the model actually paints. Olof called the preceding surreal films “super cool” and authorized another hour. He explicitly welcomes backtracking and balancing artistic intention with unexpected results. His preference among these new films is pending.
 
-**Assistant shortlist:** [Through the living book — 26⅔ seconds](../../exports/story-hour-v001/t7-through-the-living-book/faster/rife/preview.mp4) and [The clockwork world — 21⅓ seconds](../../exports/story-hour-v001/t6-the-clockwork-sun/faster/rife/preview.mp4). [Open the reviewer](http://localhost:3028/), which skips the identical first 10⅔ seconds so both new passages are easier to compare. The complete films retain that opening.
+**Assistant shortlist:** [Through the living book — 26⅔ seconds](../../exports/story-hour-v001/t7-through-the-living-book/faster/rife/preview.mp4) and [The clockwork world — 21⅓ seconds](../../exports/story-hour-v001/t6-the-clockwork-sun/faster/rife/preview.mp4). [Open the reviewer](http://localhost:3028/story-hour), which skips the identical first 10⅔ seconds so both new passages are easier to compare. The complete films retain that opening.
 
 ## All attempts
 

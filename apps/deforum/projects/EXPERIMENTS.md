@@ -1,11 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-15. **95 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 95 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-15. **96 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 96 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
+| Fluent varied pans, pullbacks and local turns | [Continuous spatial routes](modern-model-study/experiments/fluent-hour/README.md) |
 | Deliberate movement and adaptive storytelling | [Living book and clockwork worlds](modern-model-study/experiments/story-hour/README.md) |
 | Surreal scenes and changing worlds | [One-hour surreal lab](modern-model-study/experiments/surreal-hour/README.md) |
 | Autonomous learning session and new films | [Two-hour lab: controls, RAW diagnostic, porcelain and velvet films](modern-model-study/experiments/two-hour-lab/README.md) |
@@ -24,7 +25,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### modern-model-study — 53 notes
+### modern-model-study — 54 notes
 
 - [Previous-image feedback plus optional image conditioning](modern-model-study/experiments/additive_reference.md)
 - [Klein and Krea audition](modern-model-study/experiments/baseline.md)
@@ -39,6 +40,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 - [A faster journey through changing scenes](modern-model-study/experiments/dynamic-journey.md)
 - [Settle promptly after the city appears](modern-model-study/experiments/early-settle.md)
 - [Ease motion while repainting continues](modern-model-study/experiments/eased-motion.md)
+- [Fluent varied spatial movement](modern-model-study/experiments/fluent-hour/README.md) — [independent geometry and frame review](modern-model-study/experiments/fluent-hour/motion-continuity-review.md)
 - [Faster motion and morphing at 24 fps](modern-model-study/experiments/faster-pacing.md)
 - [Recent latent history and gentle noise recurrence](modern-model-study/experiments/history-recurrence.md)
 - [Hold a moving scene, then deliberately transform it](modern-model-study/experiments/hold-transform.md)

@@ -332,3 +332,7 @@ Olof calls the motion-hour results an improvement and explicitly identifies surr
 ### 2026-09-15 — artistic direction and emergence
 
 Olof finds the surreal-world results super cool and says we are getting somewhere. He approves deliberate movement and visual storytelling, balancing an artistic vision with adapting to unexpected model results. Backtracking from a preserved frame with changed prompts is welcome. He wants more tools for control while recognizing that complete control is unrealistic. No individual new variant is selected.
+
+### 2026-09-15 — fluent, varied spatial movement
+
+Olof calls the story-hour results really good. He wants large spatial change with fewer repeated pauses: more fluent combinations of pans, rotations, zooming both inward and outward, and regional warps. Variety and some unpredictability are welcome; repeated stop-start movement and repetitive zooms are not. He authorizes another autonomous hour. This is feedback on the overall direction, not a preference between the two shortlisted films.

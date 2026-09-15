@@ -169,13 +169,15 @@ class VideoReviewTests(unittest.TestCase):
         output[1] = {'index': 1, 'time_seconds': .1, 'kind': 'interpolation',
                      'source_pair': [0, 1], 'timestep': '1/3'}
         output[2] = {'index': 2, 'time_seconds': .2, 'kind': 'hold', 'source_index': 1}
+        output[3] = {'index': 3, 'time_seconds': .3, 'kind': 'warp', 'source_index': 1}
         manifest = {'status': 'complete', 'video_sha256': vr.sha256(video), 'output_frames': output}
         path = folder / 'manifest.json'
         path.write_text(json.dumps(manifest))
-        _, data = self.read_review(video, overview=0, times=[0, .1, .2])
+        _, data = self.read_review(video, overview=0, times=[0, .1, .2, .3])
         self.assertEqual(data['provenance']['status'], 'verified')
-        self.assertEqual([r['provenance']['kind'] for r in data['frames']], ['anchor', 'interpolation', 'hold'])
+        self.assertEqual([r['provenance']['kind'] for r in data['frames']], ['anchor', 'interpolation', 'hold', 'warp'])
         self.assertEqual(data['frames'][2]['provenance_label'], 'Hold source 1')
+        self.assertEqual(data['frames'][3]['provenance_label'], 'Spatial warp source 1')
         manifest['video_sha256'] = 'stale'
         path.write_text(json.dumps(manifest))
         _, stale = self.read_review(video, overview=0, times=[0])

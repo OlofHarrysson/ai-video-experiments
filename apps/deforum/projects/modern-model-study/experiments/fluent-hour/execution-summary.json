@@ -1,0 +1,161 @@
+{
+  "started_utc": "2026-09-15T13:51:00Z",
+  "experiment_start_cutoff_utc": "2026-09-15T14:51:00Z",
+  "new_generation_jobs": {
+    "verified": true,
+    "unique_jobs": 180,
+    "by_case": {
+      "f1-arcing-route": 31,
+      "f2-woven-route": 31,
+      "f3-sweeping-worlds": 47,
+      "f4-bolder-arc": 31,
+      "f5-the-dreaming-moon": 24,
+      "f6-the-orbital-railway": 16
+    }
+  },
+  "archive": {
+    "verified": true,
+    "archive_sha256": "492dc619b316baf9fc4bd3f05b4ecf23d84885339c35c2793d6ad334726edba4",
+    "files": 3184,
+    "restored_exports": "projects/modern-model-study/exports/fluent-hour-v001"
+  },
+  "cleanup": {
+    "cleanup_command_exit_code": 0,
+    "remote_media_removed": 360,
+    "owned_scratch_removed": true,
+    "pod_id": "sqeox79q8gjwfs",
+    "pod_delete_http_status": 204,
+    "pods_after": [],
+    "retained_volume": "vd3jnbwko1",
+    "deleted_by_utc": "2026-09-15T14:38:17Z"
+  },
+  "deliveries": [
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f0-original-motion/excerpt-0384/rife",
+      "verified": true,
+      "paintings": 32,
+      "frames": 256,
+      "fps": 24,
+      "video_sha256": "21c7132048f15d401dc1b484d01d2d3c0b80a41d5508a2934b9391a59e115216"
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f1-arcing-route/excerpt-0384/rife-moving-tail",
+      "verified": true,
+      "frames": 256,
+      "paintings": 32,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "0b878931488cf49733934d83ff8d8075a0f6dde736565117f60434cd71e656f5",
+      "preserved_through_delivery_frame": 248,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f2-woven-route/excerpt-0384/rife-moving-tail",
+      "verified": true,
+      "frames": 256,
+      "paintings": 32,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "a2e710be75fdda4ec08ce1d9214a8b373cdba52701fa48bb3af1f4beab7683d1",
+      "preserved_through_delivery_frame": 248,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f3-sweeping-worlds/faster/rife-moving-tail",
+      "verified": true,
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "e17c20b99ed17cf638d23655a30c734175b8301f6296188de4e295ce643a50ea",
+      "preserved_through_delivery_frame": 376,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f4-bolder-arc/excerpt-0384/rife-moving-tail",
+      "verified": true,
+      "frames": 256,
+      "paintings": 32,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "0b08b3ce0539362f5a508b6e6839774173e0e4d40ecd6a54918c3209b89d3f9c",
+      "preserved_through_delivery_frame": 248,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f5-the-dreaming-moon/excerpt-0756/rife-moving-tail",
+      "verified": true,
+      "frames": 200,
+      "paintings": 25,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "752cd4cf7923f35aa7a9a81d67a1c9c1c21aef8708400df785f4c8ea4b321a66",
+      "preserved_through_delivery_frame": 192,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f6-the-orbital-railway/excerpt-0564/rife-moving-tail",
+      "verified": true,
+      "frames": 136,
+      "paintings": 17,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "b3b53b1d015a8e06a8dcd0f45f60a51f120b99f7b5eee81836f9885a94a115b6",
+      "preserved_through_delivery_frame": 128,
+      "tail_changed_pixels": true
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f5-the-dreaming-moon/assembled",
+      "verified": true,
+      "frames": 704,
+      "paintings": 88,
+      "fps": 24,
+      "video_sha256": "f236e9bced5a360ec3eb1303765e0a7f2fb5ae2e5d93da14420ab437921e98ba",
+      "all_source_frame_hashes_verified": true,
+      "all_paintings_preserved": true,
+      "final_warps": 7
+    },
+    {
+      "path": "projects/modern-model-study/exports/fluent-hour-v001/f6-the-orbital-railway/assembled",
+      "verified": true,
+      "frames": 512,
+      "paintings": 64,
+      "fps": 24,
+      "video_sha256": "1bdfdc2565b49459a48883d7327e04dff188d3db438c3dfca83f7c1fee35c2e6",
+      "all_source_frame_hashes_verified": true,
+      "all_paintings_preserved": true,
+      "final_warps": 7
+    }
+  ],
+  "posted_account_debit_at_first_cleanup_check": 0.498577,
+  "conservative_session_usd": 0.65,
+  "previous_conservative_cumulative_usd": 3.3,
+  "conservative_cumulative_usd": 3.95,
+  "budget_usd": 10,
+  "gpu_hourly_usd": 0.72,
+  "account_spend_per_hour_after": 0.005,
+  "checks": {
+    "python_tests": 17,
+    "javascript_tests": 2,
+    "ruff_passed": true,
+    "all_generation_parent_warps_verified": true
+  },
+  "note": "The final archive is the complete sixth-batch snapshot; earlier archive containers were removed only after equal file inventories were verified in its successor. All generations remain local. Posted billing can lag.",
+  "posted_account_debit_at_final_check": 0.5467354,
+  "final_account_spend_per_hour": 0.005,
+  "reviewer_validation": {
+    "url": "http://localhost:3028/",
+    "ready": true,
+    "run_id": "7fa24876-e30b-4014-91ae-390e2405fe2a",
+    "default_cases": [
+      "f1-arcing-route",
+      "f4-bolder-arc"
+    ],
+    "all_six_review_pages_and_preserved_story_page_http_200": true,
+    "frame_arrow_and_shift_arrow_observed": true,
+    "linked_playback_observed": true,
+    "last_frame_255_both_label_spatial_warp": true,
+    "generation_details_visible": true,
+    "local_free_space_approx_gb": 0.8
+  }
+}
