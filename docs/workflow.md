@@ -77,6 +77,8 @@ Continuation also needs a global schedule frame: when branching from generated f
 
 Completed run media and settings are treated as immutable. New generations always get new IDs. Collection of an unfinished run can add missing artifacts; collection of a completed run returns its existing preview without contacting the expired Pod. No automatic media deletion is provided.
 
+Use `copy_verified` when reusing media: supported Mac volumes share storage through independent copy-on-write clones. Verify session archives as streams and retire redundant unpacked scratch copies only after checking every file against a retained archive. See [storage conventions and cleanup](storage.md). Unique generations, original references and cut versions remain preserved.
+
 `runs/`, reference assets and exports are ignored by Git. Git can preserve their small indices but cannot recover ignored media after disk failure. For moves within the same disk, rename without overwriting and verify file counts and hashes before and after. When transferring to another disk, copy originals and manifests, verify the copy, and update the archive location before considering removal of the old copy. Keep a separate backup. No external-disk backup has been configured or performed yet. Local originals currently occupy the Mac's disk.
 
 ## Boundaries

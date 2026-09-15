@@ -2,8 +2,9 @@
 
 import hashlib
 import json
-import shutil
 from pathlib import Path
+
+from deforum_lab.media.clones import copy_media
 
 
 def sha(path):
@@ -23,7 +24,7 @@ def copy_verified(source, target):
     if target.exists():
         require(sha(target) == sha(source), f"Saved copy differs: {target}")
     else:
-        shutil.copy2(source, target)
+        copy_media(source, target)
 
 
 def read(path):

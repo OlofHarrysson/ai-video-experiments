@@ -336,3 +336,7 @@ Olof finds the surreal-world results super cool and says we are getting somewher
 ### 2026-09-15 — fluent, varied spatial movement
 
 Olof calls the story-hour results really good. He wants large spatial change with fewer repeated pauses: more fluent combinations of pans, rotations, zooming both inward and outward, and regional warps. Variety and some unpredictability are welcome; repeated stop-start movement and repetitive zooms are not. He authorizes another autonomous hour. This is feedback on the overall direction, not a preference between the two shortlisted films.
+
+### 2026-09-15 — fluent results and local storage
+
+Olof says the fluent-hour results look super nice and raises the checkout's disk consumption. This confirms the creative direction, without selecting an individual film. Reduce duplicate storage while preserving his standing preference to keep previous generations; no permission to discard unique artwork or lower its quality is implied.
