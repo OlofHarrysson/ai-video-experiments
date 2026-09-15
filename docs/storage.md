@@ -57,3 +57,13 @@ The default verifies and writes a dry-run receipt. Add `--apply` to retire the c
 `deforum_lab.media.clones.share_duplicate` is the guarded helper used for the existing duplicate cleanup. Use it only for hash-matched inactive media; the original scan and applied paths are retained in the local audit receipts. Repeated cloning of already shared files does not establish further savings.
 
 Validation: the repository's **63 local tests** pass, including archive corruption/mismatch rejection, archive hardlinks, extraction dry runs, independent writes to cloned copies, immutable targets, and the recurrent runner checks. Both latest full films decode successfully and the existing reviewer returns HTTP 200. No render recipe or reviewer UI changed.
+
+## Selective frame retention: proposed next step
+
+Olof has no external drive yet and is open to removing old frames if they can be regenerated conveniently. Recommended boundary: preserve final videos, original diffusion paintings, references and reconstruction records; treat verified RIFE and warp-only intermediate sequences as reclaimable working files. This is a proposed retention change, not authorization for a blanket purge of `frames/` directories, which also contain original paintings in some runs.
+
+On 2026-09-15, a local reconstruction check reran the first RIFE interval of `fluent-hour-v001/f3-sweeping-worlds/faster` from its saved paintings and recorded settings. All nine PNG files, including seven interpolated frames, reproduced their original SHA-256 hashes. The check took 10.39 seconds including setup; temporary verification output was removed afterward. The existing complete sixteen-second clip recorded 111.54 seconds of local finishing. This proves one interval with the retained runtime/weights, not exact reproduction of every historical experiment or future software version. Evidence: `apps/deforum/work/storage-audit/rebuild-proof.json`.
+
+The videos use H.264, CRF 18, and YUV 4:2:0. Extracting an image from a video is convenient for playback review, but does not recover the original lossless PNG pixels. Keeping the original diffusion paintings protects high-quality continuation and avoids rerunning diffusion, which can be costly and need not reproduce identically.
+
+A future purge command should operate from frame-role manifests and reconstruction dependencies, preserve active experiments and painting sources, show a dry run, and pair with a restore command that handles the existing new-output and first-pair validation rules. Older outputs with missing inputs or an unverified reconstruction path stay ineligible. No unique intermediate frames were purged in this diagnostic.
