@@ -1,6 +1,6 @@
 # Modern model study
 
-Current follow-up: [stronger spatial motion](experiments/motion-hour/README.md) compares broad pans, moving twists, elastic waves and a directed forward journey. Olof likes the previous films but wants more movement. All variants retain recurrent Krea feedback.
+Current follow-up: [surreal worlds](experiments/surreal-hour/README.md) combines impossible scenes with stronger spatial movement. Olof calls the previous movement an improvement and welcomes surrealism. All seven attempts retain recurrent Krea feedback; the assistant shortlist is fruit-to-garden and piano-to-swans.
 
 Previous study: [smaller described transformation stages](experiments/transition-stages/README.md) is complete. Seven finer prompt states open the shell sooner and produce a broader avenue, but still make a large structural jump at 3.25–3.5s. Capping only the final two transition noises at 0.66 retains more spiral and softens the last reveal; it does not fix that earlier jump. All three eight-second, 24 fps/RIFE videos are in the [local reviewer](http://localhost:3028/transition-stages), initially comparing current versus finer descriptions. All 45 jobs/778 archive files and delivery anchors are verified. The control reproduces all twenty prior four/s paintings exactly; the owned Pod is deleted and model cache retained. Conservative round estimate $0.21, posted billing pending. Human preference is pending; preserve the accepted recipe.
 

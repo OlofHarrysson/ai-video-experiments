@@ -1,0 +1,247 @@
+{
+  "case": "s6-staged-palace-fish",
+  "seed": 815239,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "opening",
+      "prompt": "An immense split pomegranate floats above an ink-blue ocean at night. Its cut half is very close along the left edge, a sweeping dark crimson rind curling overhead like a theatre balcony. Inside the fruit, luminous amber seeds are miniature windows and staircases. A wide opening between the seeds reveals a tiny bright golden city near the center-right. One long ivory staircase descends from the fruit toward the water, where the small city is reflected. A thin turquoise moon hangs far to the right. The fruit is cropped by the top and left edges; the distant city has clear breathing room. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "stage-0",
+      "prompt": "An immense split pomegranate floats above an ink-blue ocean at night. Its cut half is very close along the left edge, a sweeping dark crimson rind curling overhead like a theatre balcony. Inside the fruit, luminous amber seeds are miniature windows and staircases. A wide opening between the seeds reveals a tiny bright golden city near the center-right. One long ivory staircase descends from the fruit toward the water, where the small city is reflected. A thin turquoise moon hangs far to the right. The fruit is cropped by the top and left edges; the distant city has clear breathing room. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "stage-1",
+      "prompt": "Inside the split pomegranate, huge translucent amber seeds form curved houses and hanging balconies around a broad central opening. The crimson rind frames the upper left like an immense cathedral vault. An ivory staircase leads diagonally toward a luminous city of rounded golden towers suspended over dark blue water. Several seed skins peel away into red silk banners. The nearest seed buildings are heavily cropped at both edges, while a tiny turquoise moon shines through the wide central opening. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "stage-2",
+      "prompt": "A city of translucent amber towers hangs above a dark blue ocean. The giant pomegranate rind has become a red silk sky draped across the upper corners. Ivory staircases curl between the suspended buildings, ending in open air. The broad central avenue opens directly onto the moonlit sea; a school of small gold fish swims through the air between the towers. Architectural windows shine in the sides of the fish. Close curved golden towers frame the edges, leaving open space ahead. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 6.5,
+      "name": "fish-bridge-6.5",
+      "prompt": "A suspended city of rounded amber towers over a deep blue ocean. The gold tower surfaces are covered with overlapping fish scales around their glowing arched windows. The tallest curved tower has one large round dark window near its lower end, resembling an eye. Red silk banners attach to its sides like narrow fins. Ivory stairs still connect the buildings. Small gold fish gather in the broad blue passage between the towers, beneath red drapery. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 7,
+      "name": "fish-bridge-7",
+      "prompt": "Above a dark blue ocean, the rounded golden buildings are lengthening into large curved fish bodies while retaining rows of lit arched windows. One central gold building has a blunt fish-like face at its lower end with two circular black eyes and a small mouth. Its red silk balconies have spread into broad ribbed fins. The nearby ivory stairs curve around scaled buildings, and a school of tiny fish passes through the central gap. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 7.5,
+      "name": "fish-bridge-7.5",
+      "prompt": "Several enormous golden palace-fish float among the remaining curved ivory towers above dark blue water. Their rounded scaled bodies carry glowing arched windows; red silk fins unfold from their sides and tails. One large fish faces diagonally down toward the open middle. A few ivory stairs still connect the fish-shaped palaces, gradually ending in open air. Smaller fish swim through the blue opening beneath them. The former fruit rind now hangs as red silk across the upper corners. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 8,
+      "name": "fish-bridge-8",
+      "prompt": "Golden palace-fish, each the size of a tower, curve around a wide blue opening above a mirror-dark sea. Their heads have clear round eyes and small mouths, their scaled flanks retain rows of luminous windows, and their red ribbed fins flow like silk curtains. Fragments of ivory staircase float below them. A close fish is heavily cropped across the upper right while smaller golden fish circle through the distant blue space. Red fabric and ivory architectural fragments connect this impossible city of fish. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 9,
+      "name": "stage-3",
+      "prompt": "Flying golden fish, each the size of a palace, swim through an immense indigo ocean of clouds. Their scales are illuminated arched windows, their fins broad folds of crimson silk. A close fish body curves along the left edge and another tail is cropped at the upper right. Farther away, a loose school of smaller palace-fish circles a thin turquoise moon. Ivory stairs float in fragments below them, reflected in a black mirror sea. The middle of the view is open luminous blue space. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.2
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.62
+    },
+    {
+      "at": 3.5,
+      "noise": 0.68
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.62
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.62
+    },
+    {
+      "at": 6.5,
+      "noise": 0.7
+    },
+    {
+      "at": 7,
+      "noise": 0.76
+    },
+    {
+      "at": 7.5,
+      "noise": 0.78
+    },
+    {
+      "at": 8,
+      "noise": 0.68
+    },
+    {
+      "at": 8.5,
+      "noise": 0.6
+    },
+    {
+      "at": 9,
+      "noise": 0.64
+    },
+    {
+      "at": 9.5,
+      "noise": 0.72
+    },
+    {
+      "at": 10,
+      "noise": 0.76
+    },
+    {
+      "at": 10.5,
+      "noise": 0.64
+    },
+    {
+      "at": 11,
+      "noise": 0.45
+    },
+    {
+      "at": 11.5,
+      "noise": 0.3
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "seeds_by_frame": {
+    "0": 815239,
+    "12": 815240,
+    "24": 815241,
+    "36": 815242,
+    "48": 815243,
+    "60": 815244,
+    "72": 815245,
+    "84": 815246,
+    "96": 815247,
+    "108": 815248,
+    "120": 815249,
+    "132": 815250,
+    "144": 815251,
+    "156": 815252,
+    "168": 815253,
+    "180": 815254,
+    "192": 815255,
+    "204": 815256,
+    "216": 815257,
+    "228": 815258,
+    "240": 815259,
+    "252": 815260,
+    "264": 815261,
+    "276": 815262
+  },
+  "prefix_root": "projects/modern-model-study/exports/surreal-hour-v001/s1-pomegranate-world",
+  "prefix_through": 144,
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4,
+      "center": [
+        0.9,
+        0.48
+      ],
+      "radius": 0.8,
+      "zoom": 0.85,
+      "turn": 30,
+      "travel": [
+        -0.15,
+        0.02
+      ]
+    },
+    {
+      "start": 3.5,
+      "duration": 4.5,
+      "center": [
+        0.8,
+        0.47
+      ],
+      "radius": 0.7,
+      "zoom": 0.65,
+      "turn": -65,
+      "travel": [
+        0.16,
+        -0.04
+      ]
+    },
+    {
+      "start": 7.5,
+      "duration": 4,
+      "center": [
+        0.9,
+        0.5
+      ],
+      "radius": 0.9,
+      "zoom": 0.5,
+      "turn": 45,
+      "travel": [
+        -0.12,
+        0.03
+      ]
+    }
+  ]
+}

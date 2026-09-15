@@ -1,0 +1,23 @@
+{
+  "title": "Fish transformation: direct or earlier shape descriptions",
+  "selected": [
+    "s1-pomegranate-world",
+    "s6-staged-palace-fish"
+  ],
+  "clips": [
+    {
+      "id": "s1-pomegranate-world",
+      "label": "Pomegranate world",
+      "note": "Fruit \u2192 suspended city \u2192 palace-fish",
+      "details": "Eight seconds. A close fruit opens into an architectural world, then large windowed fish. Strong turns and forward movement; the largest fish redraw still produces doubled imagery around 6.5 seconds.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s1-pomegranate-world/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s6-staged-palace-fish",
+      "label": "Palace-fish \u2014 earlier shape descriptions",
+      "note": "Buildings gain scales, eyes and fins earlier",
+      "details": "Eight seconds. The first four displayed seconds match the original pomegranate shot. Four extra descriptions then prepare fish-shaped architecture before the same final fish prompt. Motion, noise and seeds remain unchanged. Fish appear earlier, but there is still a concentrated conversion around 4.7\u20135 displayed seconds; this has not solved gradual morphing.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s6-staged-palace-fish/faster/rife/preview.mp4"
+    }
+  ]
+}

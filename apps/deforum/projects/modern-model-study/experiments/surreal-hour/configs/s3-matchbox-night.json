@@ -1,0 +1,253 @@
+{
+  "case": "s3-matchbox-night",
+  "seed": 1094187,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "matchbox",
+      "prompt": "A half-open burnt-orange matchbox rests diagonally on a dark wooden table, its open drawer occupying the central half of the picture. Inside the drawer, two bright parallel rails run between rows of upright wooden matches toward a tiny amber-lit station canopy, slightly right of center. Scarlet matchheads hang above the tracks. The hollow sleeve frames the upper left; its torn cream edge and the exposed table establish household scale. The central route is wide and visibly empty, with deep blue night inside the box. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "matchbox-0",
+      "prompt": "A half-open burnt-orange matchbox rests diagonally on a dark wooden table, its open drawer occupying the central half of the picture. Inside the drawer, two bright parallel rails run between rows of upright wooden matches toward a tiny amber-lit station canopy, slightly right of center. Scarlet matchheads hang above the tracks. The hollow sleeve frames the upper left; its torn cream edge and the exposed table establish household scale. The central route is wide and visibly empty, with deep blue night inside the box. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    },
+    {
+      "at": 2,
+      "name": "matchbox-1",
+      "prompt": "Close to the drawer's front lip, two rails cross a cream cardboard floor toward the same amber station canopy. Upright matches tower along either side, their square wooden stems catching warm light. The orange sleeve is cropped at the upper left, while the tabletop remains visible only in the lower corners. Red matchheads hang high above a clear central aisle filled with blue haze. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    },
+    {
+      "at": 4.5,
+      "name": "matchbox-2",
+      "prompt": "Inside a cavernous railway station built from a matchbox. Pale matchwood columns rise from long cardboard platforms beside the two rails. Their scarlet heads have swollen into round, rough-surfaced globes supported by narrow stems. The orange sleeve forms a distant overhead vault; torn paper fibers line its edges. The amber canopy remains ahead, visible through a broad opening between the columns. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    },
+    {
+      "at": 7,
+      "name": "matchbox-3",
+      "prompt": "Beside the near end of the amber canopy, long cream platforms extend into midnight-blue space. The matchwood columns stand at the outer edges; three enormous red globes hover above their shortened stems, with visible dark gaps underneath. The orange ceiling survives as one curled cardboard ribbon across the upper left, exposing a star-filled sky. Two luminous rails continue through the open center beneath the canopy. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    },
+    {
+      "at": 9.5,
+      "name": "matchbox-4",
+      "prompt": "An empty railway platform hangs in an immense midnight sky beneath three widely separated scarlet moons with granular sulfur surfaces. Pale splintered timber supports the amber station canopy at the right. Two rails converge toward a small warm light in the open distance. A curled orange cardboard edge remains at the far upper left, and cream paper fibers fringe the near platform, preserving the impossible matchbox world. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.2
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.62
+    },
+    {
+      "at": 3.5,
+      "noise": 0.68
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.62
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.62
+    },
+    {
+      "at": 6.5,
+      "noise": 0.7
+    },
+    {
+      "at": 7,
+      "noise": 0.76
+    },
+    {
+      "at": 7.5,
+      "noise": 0.78
+    },
+    {
+      "at": 8,
+      "noise": 0.68
+    },
+    {
+      "at": 8.5,
+      "noise": 0.6
+    },
+    {
+      "at": 9,
+      "noise": 0.64
+    },
+    {
+      "at": 9.5,
+      "noise": 0.72
+    },
+    {
+      "at": 10,
+      "noise": 0.76
+    },
+    {
+      "at": 10.5,
+      "noise": 0.64
+    },
+    {
+      "at": 11,
+      "noise": 0.45
+    },
+    {
+      "at": 11.5,
+      "noise": 0.3
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "seeds_by_frame": {
+    "0": 1094187,
+    "12": 1094188,
+    "24": 1094189,
+    "36": 1094190,
+    "48": 1094191,
+    "60": 1094192,
+    "72": 1094193,
+    "84": 1094194,
+    "96": 1094195,
+    "108": 1094196,
+    "120": 1094197,
+    "132": 1094198,
+    "144": 1094199,
+    "156": 1094200,
+    "168": 1094201,
+    "180": 1094202,
+    "192": 1094203,
+    "204": 1094204,
+    "216": 1094205,
+    "228": 1094206,
+    "240": 1094207,
+    "252": 1094208,
+    "264": 1094209,
+    "276": 1094210
+  },
+  "prefix_root": "projects/modern-model-study/exports/surreal-hour-v001/s3-matchbox-night",
+  "prefix_through": 0,
+  "opening": {
+    "prompt": "A half-open burnt-orange matchbox rests diagonally on a dark wooden table, its open drawer occupying the central half of the picture. Inside the drawer, two bright parallel rails run between rows of upright wooden matches toward a tiny amber-lit station canopy, slightly right of center. Scarlet matchheads hang above the tracks. The hollow sleeve frames the upper left; its torn cream edge and the exposed table establish household scale. The central route is wide and visibly empty, with deep blue night inside the box. Tactile surreal oil painting, crisp sculptural forms, deep atmospheric perspective, warm amber illumination against midnight blue, scarlet accents, broad readable shapes, spacious asymmetrical composition.",
+    "seed": 1094187,
+    "width": 1536,
+    "height": 1024
+  },
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 3,
+      "center": [
+        0.9,
+        0.52
+      ],
+      "radius": 0.7,
+      "zoom": 0.55,
+      "turn": 35,
+      "travel": [
+        -0.05,
+        0.01
+      ]
+    },
+    {
+      "start": 2.7,
+      "duration": 3.3,
+      "center": [
+        0.9,
+        0.38
+      ],
+      "radius": 0.7,
+      "zoom": 0.5,
+      "turn": -45,
+      "travel": [
+        0.03,
+        -0.025
+      ]
+    },
+    {
+      "start": 5.7,
+      "duration": 3.3,
+      "center": [
+        0.9,
+        0.5
+      ],
+      "radius": 0.72,
+      "zoom": 0.3,
+      "turn": 25,
+      "travel": [
+        -0.04,
+        0.02
+      ]
+    },
+    {
+      "start": 8.7,
+      "duration": 2.3,
+      "center": [
+        0.75,
+        0.5
+      ],
+      "radius": 0.72,
+      "zoom": 0.1,
+      "turn": -10,
+      "travel": [
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Piano ending: continued zoom or wider view",
+  "selected": [
+    "s2-ivory-whirlpool",
+    "s5-open-the-sky"
+  ],
+  "clips": [
+    {
+      "id": "s2-ivory-whirlpool",
+      "label": "Piano into swans",
+      "note": "Spiral keys \u2192 feathered wings \u2192 flying swans",
+      "details": "Eight seconds. A twisting keyboard becomes a sky of winged boats and swans with red sails. The original ending keeps zooming, enlarging the foreground wing and pushing the pearl moon out of view.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s2-ivory-whirlpool/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s5-open-the-sky",
+      "label": "Piano into swans \u2014 wider view",
+      "note": "Same opening, then less late enlargement",
+      "details": "Eight seconds. Identical to the original piano trial through four displayed seconds. A bounded scale correction and small upward shift then ease continued enlargement. Prompts, noise, seeds and twists stay unchanged. More small swans remain visible, but the result is busier; the assistant favors the original simpler ending.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s5-open-the-sky/faster/rife/preview.mp4"
+    }
+  ]
+}

@@ -324,3 +324,7 @@ Follow-up annotations: Olof explicitly says he had not realized that the previou
 ### 2026-09-14 — gradual transformation remains unresolved
 
 Explicit feedback: extra paintings during the morph look a little better, but Olof still sees little change followed by a sudden flip in one or two repaints. He values a gradual semantic transformation, beyond extra detail or earlier windows. He considers intermediate descriptions a possible aid, not a proven solution, and wants to continue the experiment series.
+
+## Surrealism and stronger motion — 2026-09-15
+
+Olof calls the motion-hour results an improvement and explicitly identifies surrealism as the intended art direction: odd scenes do not need to be realistic. This supports more impossible scale, objects and environments while retaining visible spatial movement. He has not selected a specific motion-hour variant. A further autonomous hour is authorized within the remaining original $10 budget.

@@ -1,0 +1,242 @@
+{
+  "case": "s2-ivory-whirlpool",
+  "seed": 917643,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "opening",
+      "prompt": "A giant ivory piano keyboard spirals down into an impossible circular well above a vermilion desert. The near keys sweep diagonally across the lower left, huge polished black keys rising like dark monoliths. The spiral has a wide hollow center just right of the image center, filled with deep cobalt water. An enormous pearl moon rests in the water far below, with a tiny red sail beside it. The outer keyboard dissolves into folded cream silk along the upper corners. A precise surreal architectural painting with a sweeping spiral and a clear open center. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "stage-0",
+      "prompt": "A giant ivory piano keyboard spirals down into an impossible circular well above a vermilion desert. The near keys sweep diagonally across the lower left, huge polished black keys rising like dark monoliths. The spiral has a wide hollow center just right of the image center, filled with deep cobalt water. An enormous pearl moon rests in the water far below, with a tiny red sail beside it. The outer keyboard dissolves into folded cream silk along the upper corners. A precise surreal architectural painting with a sweeping spiral and a clear open center. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 3,
+      "name": "stage-1",
+      "prompt": "The ivory piano staircase curls around a wide cobalt pool suspended above a red desert. Its black keys bend into the necks of glossy black swans; white keys stretch into overlapping feather-like boats. A close curved ivory balustrade sweeps across the lower left and a black swan neck curves along the upper right. At the center, a pearl moon floats on blue water between small red sails. The stairwell is opening into a broad watery sky. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "stage-2",
+      "prompt": "An impossible spiral of white feather boats and long-necked black swans turns through a cobalt sky. Their wings still carry narrow piano-key stripes. An enormous pearl moon floats far below them above a red desert, while red sails hang upside down from thin golden threads. The nearest sweeping white wing fills the left edge; a cropped black curved neck frames the right. A wide open blue passage lies between them, with smaller boats spiralling toward the moon. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    },
+    {
+      "at": 9,
+      "name": "stage-3",
+      "prompt": "A vast cobalt sky above vermilion dunes, filled with graceful white feather boats and black swans carrying tiny red sails on their backs. A monumental white wing is cropped across the lower left, its ivory ridges gleaming. Smaller winged boats glide in a loose curve toward a pearl moon near the upper right. Golden threads trail from the sails into empty blue space. Strong impossible scale and broad open sky between a few widely separated sculptural forms. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.2
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.62
+    },
+    {
+      "at": 3.5,
+      "noise": 0.68
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.62
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.62
+    },
+    {
+      "at": 6.5,
+      "noise": 0.7
+    },
+    {
+      "at": 7,
+      "noise": 0.76
+    },
+    {
+      "at": 7.5,
+      "noise": 0.78
+    },
+    {
+      "at": 8,
+      "noise": 0.68
+    },
+    {
+      "at": 8.5,
+      "noise": 0.6
+    },
+    {
+      "at": 9,
+      "noise": 0.64
+    },
+    {
+      "at": 9.5,
+      "noise": 0.72
+    },
+    {
+      "at": 10,
+      "noise": 0.76
+    },
+    {
+      "at": 10.5,
+      "noise": 0.64
+    },
+    {
+      "at": 11,
+      "noise": 0.45
+    },
+    {
+      "at": 11.5,
+      "noise": 0.3
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "seeds_by_frame": {
+    "0": 917643,
+    "12": 917644,
+    "24": 917645,
+    "36": 917646,
+    "48": 917647,
+    "60": 917648,
+    "72": 917649,
+    "84": 917650,
+    "96": 917651,
+    "108": 917652,
+    "120": 917653,
+    "132": 917654,
+    "144": 917655,
+    "156": 917656,
+    "168": 917657,
+    "180": 917658,
+    "192": 917659,
+    "204": 917660,
+    "216": 917661,
+    "228": 917662,
+    "240": 917663,
+    "252": 917664,
+    "264": 917665,
+    "276": 917666
+  },
+  "prefix_root": "projects/modern-model-study/exports/surreal-hour-v001/s2-ivory-whirlpool",
+  "prefix_through": 0,
+  "opening": {
+    "prompt": "A giant ivory piano keyboard spirals down into an impossible circular well above a vermilion desert. The near keys sweep diagonally across the lower left, huge polished black keys rising like dark monoliths. The spiral has a wide hollow center just right of the image center, filled with deep cobalt water. An enormous pearl moon rests in the water far below, with a tiny red sail beside it. The outer keyboard dissolves into folded cream silk along the upper corners. A precise surreal architectural painting with a sweeping spiral and a clear open center. An exquisitely detailed surrealist oil painting, impossible scale and dream logic, luminous jewel-colored enamel and deep velvet shadows. Monumental readable silhouettes, delicate engraved textures and sharp reflected highlights. Broad cinematic composition with dramatic near and far forms. Rich colors remain separated by dark negative space.",
+    "seed": 917643,
+    "width": 1536,
+    "height": 1024
+  },
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 4.5,
+      "center": [
+        0.84,
+        0.5
+      ],
+      "radius": 0.85,
+      "zoom": 0.65,
+      "turn": 100,
+      "travel": [
+        -0.06,
+        0.02
+      ]
+    },
+    {
+      "start": 4,
+      "duration": 4,
+      "center": [
+        0.76,
+        0.53
+      ],
+      "radius": 0.75,
+      "zoom": 0.6,
+      "turn": -65,
+      "travel": [
+        0.12,
+        -0.02
+      ]
+    },
+    {
+      "start": 7.5,
+      "duration": 4,
+      "center": [
+        0.87,
+        0.46
+      ],
+      "radius": 0.9,
+      "zoom": 0.45,
+      "turn": 45,
+      "travel": [
+        -0.08,
+        0.04
+      ]
+    },
+    {
+      "kind": "wave",
+      "start": 3,
+      "duration": 7,
+      "amplitude": 0.08,
+      "wavelength": 1.2,
+      "cycles": 0.8,
+      "phase": 0
+    }
+  ]
+}

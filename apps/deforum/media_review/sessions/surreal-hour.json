@@ -1,0 +1,23 @@
+{
+  "title": "Surreal worlds \u2014 two favorites",
+  "selected": [
+    "s4-through-the-blue-ring",
+    "s2-ivory-whirlpool"
+  ],
+  "clips": [
+    {
+      "id": "s4-through-the-blue-ring",
+      "label": "Garden journey \u2014 gentle ending",
+      "note": "Fruit \u2192 city \u2192 fish \u2192 orchid garden",
+      "details": "Sixteen seconds, preserving the complete pomegranate opening. The view travels toward a blue ring and a garden of red orchids and floating stairs. The final noise ramp falls to 0.30, and the late surfaces become flatter. Some ghosting remains during major changes.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s4-through-the-blue-ring/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s2-ivory-whirlpool",
+      "label": "Piano into swans",
+      "note": "Spiral keys \u2192 feathered wings \u2192 flying swans",
+      "details": "Eight seconds. A twisting keyboard becomes a sky of winged boats and swans with red sails. The original ending keeps zooming, enlarging the foreground wing and pushing the pearl moon out of view.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s2-ivory-whirlpool/faster/rife/preview.mp4"
+    }
+  ]
+}

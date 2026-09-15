@@ -1,0 +1,23 @@
+{
+  "title": "Garden ending: gentle or richer repaint",
+  "selected": [
+    "s4-through-the-blue-ring",
+    "s7-rich-garden-ending"
+  ],
+  "clips": [
+    {
+      "id": "s4-through-the-blue-ring",
+      "label": "Garden journey \u2014 gentle ending",
+      "note": "Fruit \u2192 city \u2192 fish \u2192 orchid garden",
+      "details": "Sixteen seconds, preserving the complete pomegranate opening. The view travels toward a blue ring and a garden of red orchids and floating stairs. The final noise ramp falls to 0.30, and the late surfaces become flatter. Some ghosting remains during major changes.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s4-through-the-blue-ring/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s7-rich-garden-ending",
+      "label": "Garden journey \u2014 richer ending",
+      "note": "Fruit \u2192 city \u2192 fish \u2192 orchid garden",
+      "details": "Sixteen seconds. The journey matches the gentle-ending version through 13\u2153 displayed seconds. The last seven paintings use starting noise 0.64 to test richer shading instead of the decline to 0.30. All other settings stay the same. It changes the late garden layout but does not clearly restore the original shading; the assistant keeps the gentle ending for the shortlist.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s7-rich-garden-ending/faster/rife/preview.mp4"
+    }
+  ]
+}

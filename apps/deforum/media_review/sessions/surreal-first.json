@@ -1,0 +1,30 @@
+{
+  "title": "Three surreal worlds",
+  "selected": [
+    "s1-pomegranate-world",
+    "s2-ivory-whirlpool"
+  ],
+  "clips": [
+    {
+      "id": "s1-pomegranate-world",
+      "label": "Pomegranate world",
+      "note": "Fruit \u2192 suspended city \u2192 palace-fish",
+      "details": "Eight seconds. A close fruit opens into an architectural world, then large windowed fish. Strong turns and forward movement; the largest fish redraw still produces doubled imagery around 6.5 seconds.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s1-pomegranate-world/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s2-ivory-whirlpool",
+      "label": "Piano into swans",
+      "note": "Spiral keys \u2192 feathered wings \u2192 flying swans",
+      "details": "Eight seconds. A twisting keyboard becomes a sky of winged boats and swans with red sails. The original ending keeps zooming, enlarging the foreground wing and pushing the pearl moon out of view.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s2-ivory-whirlpool/faster/rife/preview.mp4"
+    },
+    {
+      "id": "s3-matchbox-night",
+      "label": "Matchbox night",
+      "note": "Tiny matchbox \u2192 moonlit railway station",
+      "details": "Eight seconds. A readable change of scale into a miniature station. Matchsticks become columns, while moons appear in the background; the individual match-to-moon transformation is less convincing. The shelter becomes crowded near the top edge.\n\nKrea Turbo generates the opening and every new painting. Each repaint starts from the warped previous painting, using three Euler intervals and CFG1. Time-based Lanczos transforms control spatial motion. RIFE 4.25 fills the gaps and never feeds back into generation. These editions preserve every painting and run 1.5 times faster than the original timeline: 24 fps, three paintings per displayed second, seven intermediate frames per pair.",
+      "source": "projects/modern-model-study/exports/surreal-hour-v001/s3-matchbox-night/faster/rife/preview.mp4"
+    }
+  ]
+}
