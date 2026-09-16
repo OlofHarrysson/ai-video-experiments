@@ -1,0 +1,129 @@
+{
+  "case": "s1-leaving-the-shell",
+  "seed": 916613,
+  "duration": 7.5,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    },
+    {
+      "at": 2,
+      "name": "the-spillway",
+      "prompt": "A small vermilion wooden boat carrying one luminous white pearl floats at the lip of a vast ivory nautilus shell. Turquoise water pours gently from the shell into a narrow winding river across cracked terracotta desert. The open shell recedes at the left edge; the red boat and its round white cargo occupy the lower middle of the view. Far ahead at the right stands an enormous closed ivory flower bud beneath a deep blue dusk sky. An exquisite dimensional surrealist oil painting, luminous turquoise against copper-red cracked earth and an ink-blue sky, pearlescent ivory, velvet shadows and crisp engraved textures. Monumental readable forms, poetic dream logic, generous open space."
+    },
+    {
+      "at": 4.5,
+      "name": "the-river",
+      "prompt": "A small vermilion wooden boat carrying one luminous white pearl floats on a winding ribbon of turquoise water in the foreground. The narrow river winds across cracked copper-red desert toward an immense closed ivory flower bud ahead. The last curved edge of an empty nautilus shell is partly cropped at the far left. Open earth and a dark blue evening sky surround the tiny red vessel and pale distant flower. An exquisite dimensional surrealist oil painting, luminous turquoise against copper-red cracked earth and an ink-blue sky, pearlescent ivory, velvet shadows and crisp engraved textures. Monumental readable forms, poetic dream logic, generous open space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.48
+    },
+    {
+      "at": 1.5,
+      "noise": 0.56
+    },
+    {
+      "at": 2.5,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.64
+    },
+    {
+      "at": 4.5,
+      "noise": 0.67
+    },
+    {
+      "at": 5.5,
+      "noise": 0.67
+    },
+    {
+      "at": 6.5,
+      "noise": 0.6
+    },
+    {
+      "at": 7,
+      "noise": 0.57
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 7.5,
+      "center": [
+        0.65,
+        0.4
+      ],
+      "end": [
+        -0.33,
+        0.055,
+        0.30010459245033816,
+        -0.085
+      ],
+      "velocity_start": [
+        -0.025,
+        0,
+        0.025,
+        -0.006
+      ],
+      "velocity_end": [
+        -0.045,
+        0.004,
+        0.06,
+        0.003
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168
+  ],
+  "seeds_by_frame": {
+    "12": 917625,
+    "24": 917637,
+    "36": 917649,
+    "48": 917661,
+    "60": 917673,
+    "72": 917685,
+    "84": 917697,
+    "96": 917709,
+    "108": 917721,
+    "120": 917733,
+    "132": 917745,
+    "144": 917757,
+    "156": 917769,
+    "168": 917781
+  },
+  "prefix_root": "projects/modern-model-study/exports/seed-for-sea-v001/o2-the-last-pool",
+  "prefix_through": 0
+}

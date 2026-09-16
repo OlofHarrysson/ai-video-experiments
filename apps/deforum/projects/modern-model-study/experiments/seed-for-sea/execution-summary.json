@@ -1,0 +1,157 @@
+{
+  "title": "A Seed for the Sea",
+  "session_started_utc": "2026-09-16T21:39:46Z",
+  "generation_complete": true,
+  "new_image_jobs": 77,
+  "generation_checks": [
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-v001/checks/openings-generation.json",
+      "jobs": 2
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-v001/checks/s1-leaving-the-shell-generation.json",
+      "jobs": 14
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-v001/checks/s2-the-waiting-flower-generation.json",
+      "jobs": 15
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-v001/checks/s3-a-sea-unfolds-generation.json",
+      "jobs": 22
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-v001/checks/s4-the-floating-garden-generation.json",
+      "jobs": 24
+    }
+  ],
+  "archive": {
+    "verified": true,
+    "archive_sha256": "ee0ad3f834281f95559eb27c8776899ff96aaf3cb2cd72265475044adb1edf0e",
+    "files": 1373,
+    "restored_exports": "projects/modern-model-study/exports/seed-for-sea-v001"
+  },
+  "archive_local_path": "work/seed-for-sea-session/final.tar.gz",
+  "deliveries": {
+    "s1-leaving-the-shell": {
+      "verified": true,
+      "frames": 120,
+      "paintings": 15,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "95c61a69e79b2c3a375ee6f2a8e24cf3ba7d6614b2d4c971219a3e82be9d40f4",
+      "preserved_through_delivery_frame": 112,
+      "tail_changed_pixels": true
+    },
+    "s2-the-waiting-flower": {
+      "verified": true,
+      "frames": 240,
+      "paintings": 30,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "1ad8ccc6e6d13749bc7cc0873276b9d526c9f004395ce936db2ad5d0aaa806b5",
+      "preserved_through_delivery_frame": 232,
+      "tail_changed_pixels": true
+    },
+    "s3-a-sea-unfolds": {
+      "verified": true,
+      "frames": 384,
+      "paintings": 48,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "d56351f40e63753765fb61c6869e571c9dd36d5360ab08c4d000fe14abdbe781",
+      "preserved_through_delivery_frame": 376,
+      "tail_changed_pixels": true
+    },
+    "s4-the-floating-garden": {
+      "verified": true,
+      "frames": 576,
+      "paintings": 72,
+      "fps": 24,
+      "final_warps": 7,
+      "video_sha256": "c37216416da1b1a0b86a40b8f14ea24f610d1fe6f887f2ededb0e4b37a215608",
+      "preserved_through_delivery_frame": 568,
+      "tail_changed_pixels": true
+    }
+  },
+  "selected_case": "s4-the-floating-garden",
+  "alternate_case": "s3-a-sea-unfolds",
+  "human_feedback": "pending",
+  "runtime": {
+    "model": "Krea Turbo",
+    "comfyui_version": "0.34.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "pod_id": "3120fc0v5noevc",
+    "pod_created_utc": "2026-09-16T21:41:16.29Z",
+    "pod_deleted_utc": "2026-09-16T22:33:49Z",
+    "deletion_status": 204,
+    "absence_verified": true,
+    "retained_volume_id": "vd3jnbwko1",
+    "retained_volume_name": "deforum-models",
+    "retained_volume_gb": 50,
+    "region": "EU-RO-1",
+    "pinned_image": "runpod/comfyui:cuda12.8@sha256:498e3c4ac7ef5071214badb1681d82ab3a8f922b1055742ae692fa02cd3b59ff"
+  },
+  "cost": {
+    "gpu_usd_per_hour": 2.09,
+    "active_account_usd_per_hour_observed": 2.116,
+    "account_balance_start": 26.1717198521,
+    "account_balance_at_cleanup": 24.4743475355,
+    "posted_account_debit_at_cleanup": 1.6973723166,
+    "estimated_session_compute_and_disk_usd": 1.85,
+    "conservative_session_reserve_usd": 2.1,
+    "prior_series_reserve_usd": 6.65,
+    "series_reserve_usd": 8.75,
+    "series_limit_usd": 10,
+    "note": "Posted debit can lag usage. Estimate uses this owned Pod interval; reserve includes headroom. A separate Night Orchard Pod appeared after this Pod was deleted; it is excluded from ownership and this session estimate."
+  },
+  "other_pods_at_cleanup": [
+    {
+      "id": "dkiq4f0ov7ct3t",
+      "name": "night-orchard-20260917",
+      "owned_by_this_session": false
+    }
+  ],
+  "reviewer": {
+    "url": "http://localhost:3028/",
+    "named_route": "/seed-for-sea",
+    "devrun_run_id": "7f4202a1-7363-4225-b51b-e3b9ed7d1883",
+    "http_verification": {
+      "verified": true,
+      "checks": [
+        {
+          "route": "/",
+          "status": 200,
+          "bytes": 96167
+        },
+        {
+          "route": "/seed-for-sea",
+          "status": 200,
+          "bytes": 45281027
+        },
+        {
+          "route": "/doorway-cli",
+          "status": 200,
+          "bytes": 60058810
+        },
+        {
+          "clip": "floating-garden",
+          "status": 206,
+          "content_range": "bytes 0-63/20649019"
+        },
+        {
+          "clip": "sea-ending",
+          "status": 206,
+          "content_range": "bytes 0-63/13239805"
+        }
+      ]
+    },
+    "left_running_for_human_review": true
+  },
+  "validation": {
+    "server_tests": 3,
+    "scoped_lint": "passed",
+    "review_scope": "Overview paintings and selected dense windows; see quality-review.md",
+    "browser_layout_changed": false
+  }
+}

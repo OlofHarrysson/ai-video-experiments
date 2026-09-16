@@ -1,0 +1,22 @@
+{
+  "title": "A Seed for the Sea",
+  "selected": [
+    "floating-garden"
+  ],
+  "clips": [
+    {
+      "id": "floating-garden",
+      "label": "A Seed for the Sea \u2014 full piece",
+      "note": "Last pool \u2192 dormant flower \u2192 living sea \u2192 a tree in the boat",
+      "details": "A red boat and luminous pearl connect a dry world to a new sea. The final scene lets the pearl sprout into a floating garden. Movement follows the painted river and flower, then curls/pulls back into a new world and travels across the water. The boat does not literally leave the original shell; it returns as a recurring motif. Small details still redraw.\n\nSame-model Krea Turbo opening and recurrent repainting of the warped previous painting. CFG 1, three Euler intervals, independent recorded seeds and scene-specific noise ramps. Source cadence 12 at 24 fps; delivery runs 1.5\u00d7 faster, still at 24 fps, retaining three paintings per displayed second. RIFE 4.25 scale 1 fills the intervals outside generation. The final seven frames continue spatial warping.",
+      "source": "projects/modern-model-study/exports/seed-for-sea-v001/s4-the-floating-garden/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "sea-ending",
+      "label": "Shorter cut \u2014 stop at the new sea",
+      "note": "Same journey, ending before the tree grows",
+      "details": "Sixteen-second earlier ending. It shares the full piece\u2019s paintings through source frame 564, then finishes with seven spatial-only frames. The longer piece instead continues repainting, so these final seven frames need not match. This is a choice of ending and length, not a controlled model comparison.\n\nSame-model Krea Turbo opening and recurrent repainting of the warped previous painting. CFG 1, three Euler intervals, independent recorded seeds and scene-specific noise ramps. Source cadence 12 at 24 fps; delivery runs 1.5\u00d7 faster, still at 24 fps, retaining three paintings per displayed second. RIFE 4.25 scale 1 fills the intervals outside generation. The final seven frames continue spatial warping.",
+      "source": "projects/modern-model-study/exports/seed-for-sea-v001/s3-a-sea-unfolds/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

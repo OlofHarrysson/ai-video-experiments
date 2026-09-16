@@ -1,0 +1,510 @@
+{
+  "case": "s4-the-floating-garden",
+  "seed": 916613,
+  "duration": 36,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    },
+    {
+      "at": 2,
+      "name": "the-spillway",
+      "prompt": "A small vermilion wooden boat carrying one luminous white pearl floats at the lip of a vast ivory nautilus shell. Turquoise water pours gently from the shell into a narrow winding river across cracked terracotta desert. The open shell recedes at the left edge; the red boat and its round white cargo occupy the lower middle of the view. Far ahead at the right stands an enormous closed ivory flower bud beneath a deep blue dusk sky. An exquisite dimensional surrealist oil painting, luminous turquoise against copper-red cracked earth and an ink-blue sky, pearlescent ivory, velvet shadows and crisp engraved textures. Monumental readable forms, poetic dream logic, generous open space."
+    },
+    {
+      "at": 4.5,
+      "name": "the-river",
+      "prompt": "A small vermilion wooden boat carrying one luminous white pearl floats on a winding ribbon of turquoise water in the foreground. The narrow river winds across cracked copper-red desert toward an immense closed ivory flower bud ahead. The last curved edge of an empty nautilus shell is partly cropped at the far left. Open earth and a dark blue evening sky surround the tiny red vessel and pale distant flower. An exquisite dimensional surrealist oil painting, luminous turquoise against copper-red cracked earth and an ink-blue sky, pearlescent ivory, velvet shadows and crisp engraved textures. Monumental readable forms, poetic dream logic, generous open space."
+    },
+    {
+      "at": 7.5,
+      "name": "follow-the-water",
+      "prompt": "A winding luminous turquoise river crosses dry copper-red desert toward an enormous closed ivory flower bud. The flower stands upright ahead at the center-right, with long smooth pearlescent petals and a faint warm light inside. The last cropped edge of a white shell and its small red boat is disappearing at the far left. Clear open ground leads toward the flower beneath an ink-blue evening sky. An exquisite dimensional surrealist oil painting, pearlescent ivory, luminous turquoise, copper-red earth, dark ultramarine sky, crisp engraved detail and deep shadows. Monumental readable silhouettes and generous open space."
+    },
+    {
+      "at": 10,
+      "name": "the-pearl-returns",
+      "prompt": "A monumental ivory flower bud stands in the middle of a dry terracotta plain. Its lower petals curl outward around a shallow turquoise pool, and between the upper petals a single round luminous pearl becomes visible. A thin turquoise river leads directly into the cupped blossom. A small vermilion leaf floats on the blue water, recalling the shape of a red boat. Open night sky frames the solitary flower. An exquisite dimensional surrealist oil painting, pearlescent ivory, luminous turquoise, copper-red earth, dark ultramarine sky, crisp engraved detail and deep shadows. Monumental readable silhouettes and generous open space."
+    },
+    {
+      "at": 12,
+      "name": "first-bloom",
+      "prompt": "A vast ivory lotus flower opens its long curved petals around a luminous white pearl suspended just above turquoise water. The bloom fills the middle of the image, with dark blue sky beyond the upper petals and a last strip of cracked red desert below. Fine golden light flows down the petal veins into the blue pool. A small red boat-shaped petal rests on the water at the base of the pearl. An exquisite dimensional surrealist oil painting, pearlescent ivory, luminous turquoise, copper-red earth, dark ultramarine sky, crisp engraved detail and deep shadows. Monumental readable silhouettes and generous open space."
+    },
+    {
+      "at": 13,
+      "name": "the-gift",
+      "prompt": "The huge ivory flower unfolds its petals outward over a growing pool of turquoise water. One luminous pearl rests at the flower base, touching the water and sending fine golden ripples outward. Small vermilion boat-shaped petals float on the pool. The cracked red earth between the petals is beginning to break into curved islands, while dark blue sky surrounds the unfolding white blossom. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 15.5,
+      "name": "petals-become-shores",
+      "prompt": "Broad curved ivory petals spread far apart like the shores of a newly born turquoise sea. The pearl shines near the water between the white curves, surrounded by luminous golden ripples. A small red wooden boat floats in the clear water. The former copper-red desert has broken into a few low islands, with delicate green shoots growing along their edges. The composition opens into depth and breathing room beneath a dark blue sky. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 18,
+      "name": "a-new-sea",
+      "prompt": "An expansive turquoise sea fills a surreal valley between immense curved ivory cliffs shaped like unfurled flower petals. A small vermilion wooden boat carries one glowing pearl across the water. Former cracked earth becomes tiny green islands with delicate golden trees and blue flowers. The ivory cliffs sweep outward toward a distant luminous horizon, leaving open water at the center. Night is giving way to warm pale dawn. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 21,
+      "name": "the-living-archipelago",
+      "prompt": "A little vermilion boat carrying a luminous pearl floats on a wide turquoise sea among delicate green islands. Ivory petal-shaped mountains curve along the distant horizon. Slender golden trees, pink flowering branches and small blue flowers grow on the islands where dry red earth once lay. Open water surrounds the boat, reflecting a soft dawn sky and fine threads of gold. A spacious living archipelago has emerged from a single flower. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 24,
+      "name": "a-living-seed",
+      "prompt": "A little vermilion wooden boat carrying one luminous pearl floats on a turquoise sea among green islands. A slender golden sprout emerges from the top of the pearl, with two tiny pale leaves opening above it. The pearl remains clearly visible in the red hull. Great curved ivory cliffs shaped like flower petals frame the distant horizon. The foreground boat is the quiet focus of this new living world. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 26,
+      "name": "the-pearl-takes-root",
+      "prompt": "A small luminous golden tree grows directly from a glowing pearl in a vermilion wooden boat. Its slender trunk and delicate branching crown rise above the red hull, with ivory leaves and a few pale pink flowers. The boat floats on clear turquoise water among small green islands. Towering ivory petal-shaped mountains sweep away toward the horizon, lit by the first warm sunlight. The tree and red hull form one unmistakable floating object. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 29,
+      "name": "a-garden-afloat",
+      "prompt": "A graceful golden flowering tree grows in a little vermilion wooden boat on a luminous turquoise sea. Its slender trunk rises from a round pearl-like seed at the center of the hull. An airy crown of small ivory leaves and pale pink blossoms spreads above the boat, clearly separated from the distant cliffs. Tiny green islands and golden trees dot the water. The old desert has become a living sea beneath a pale rose dawn sky. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    },
+    {
+      "at": 32,
+      "name": "the-gift-continues",
+      "prompt": "A little red wooden boat carries a delicate flowering tree across a wide luminous turquoise sea. An ivory pearl nestles at the roots of its slender golden trunk. Pale pink flowers and pearlescent leaves form a graceful open crown above the red hull. Quiet green islands float nearby, and immense ivory cliffs curve away toward the warm dawn horizon. Fine golden ripples spread from the living boat, a tiny floating garden in a vast new world. An exquisite dimensional surrealist oil painting with jewel-colored turquoise water, pearlescent ivory, warm rose-gold light, deep ultramarine shadows and intricate tactile textures. Luminous highlights, generous open space, majestic dream logic."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.48
+    },
+    {
+      "at": 1.5,
+      "noise": 0.56
+    },
+    {
+      "at": 2.5,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.64
+    },
+    {
+      "at": 4.5,
+      "noise": 0.67
+    },
+    {
+      "at": 5.5,
+      "noise": 0.67
+    },
+    {
+      "at": 6.5,
+      "noise": 0.6
+    },
+    {
+      "at": 7,
+      "noise": 0.57
+    },
+    {
+      "at": 8,
+      "noise": 0.59
+    },
+    {
+      "at": 9,
+      "noise": 0.61
+    },
+    {
+      "at": 10,
+      "noise": 0.65
+    },
+    {
+      "at": 10.5,
+      "noise": 0.68
+    },
+    {
+      "at": 11,
+      "noise": 0.72
+    },
+    {
+      "at": 11.5,
+      "noise": 0.72
+    },
+    {
+      "at": 12,
+      "noise": 0.7
+    },
+    {
+      "at": 12.5,
+      "noise": 0.67
+    },
+    {
+      "at": 13,
+      "noise": 0.68
+    },
+    {
+      "at": 14,
+      "noise": 0.72
+    },
+    {
+      "at": 15,
+      "noise": 0.75
+    },
+    {
+      "at": 16,
+      "noise": 0.76
+    },
+    {
+      "at": 17,
+      "noise": 0.74
+    },
+    {
+      "at": 18,
+      "noise": 0.75
+    },
+    {
+      "at": 19,
+      "noise": 0.76
+    },
+    {
+      "at": 20,
+      "noise": 0.74
+    },
+    {
+      "at": 21,
+      "noise": 0.7
+    },
+    {
+      "at": 22,
+      "noise": 0.66
+    },
+    {
+      "at": 23,
+      "noise": 0.62
+    },
+    {
+      "at": 23.5,
+      "noise": 0.6
+    },
+    {
+      "at": 24,
+      "noise": 0.64
+    },
+    {
+      "at": 25,
+      "noise": 0.7
+    },
+    {
+      "at": 26,
+      "noise": 0.76
+    },
+    {
+      "at": 27,
+      "noise": 0.78
+    },
+    {
+      "at": 28,
+      "noise": 0.77
+    },
+    {
+      "at": 29,
+      "noise": 0.74
+    },
+    {
+      "at": 30,
+      "noise": 0.71
+    },
+    {
+      "at": 31,
+      "noise": 0.69
+    },
+    {
+      "at": 32,
+      "noise": 0.67
+    },
+    {
+      "at": 33,
+      "noise": 0.65
+    },
+    {
+      "at": 34,
+      "noise": 0.63
+    },
+    {
+      "at": 35,
+      "noise": 0.61
+    },
+    {
+      "at": 35.5,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 7.0,
+      "duration": 7.5,
+      "center": [
+        0.99,
+        0.18
+      ],
+      "end": [
+        -0.24,
+        0.3,
+        0.9555114450274363,
+        0.08726646259971647
+      ],
+      "velocity_start": [
+        -0.010670761818128,
+        -0.010562074122329505,
+        0.05673373602975027,
+        -0.00127504730808739
+      ],
+      "velocity_end": [
+        -0.018,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "start": 12.5,
+      "duration": 8,
+      "zoom": -0.22,
+      "turn": -27,
+      "travel": [
+        0.04,
+        -0.13
+      ],
+      "center": [
+        0.77,
+        0.53
+      ],
+      "radius": 1.05
+    },
+    {
+      "kind": "wave",
+      "start": 14,
+      "duration": 10,
+      "amplitude": 0.028,
+      "wavelength": 1.5,
+      "cycles": 0.45,
+      "axis": "vertical"
+    },
+    {
+      "kind": "continuation",
+      "start": 23.5,
+      "duration": 12,
+      "center": [
+        0.83,
+        0.7
+      ],
+      "end": [
+        -0.15,
+        -0.06,
+        0.1823215567939546,
+        -0.03490658503988659
+      ],
+      "velocity_start": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "velocity_end": [
+        -0.005,
+        0,
+        0.004,
+        0
+      ]
+    },
+    {
+      "kind": "plane",
+      "start": 23.5,
+      "duration": 10,
+      "tilt": [
+        6,
+        -12
+      ],
+      "distance": 2.5,
+      "center": [
+        0.83,
+        0.65
+      ]
+    },
+    {
+      "start": 23.5,
+      "duration": 6,
+      "zoom": 0.12,
+      "turn": 12,
+      "travel": [
+        0,
+        0
+      ],
+      "center": [
+        0.83,
+        0.7
+      ],
+      "radius": 0.42
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828,
+    840,
+    852
+  ],
+  "seeds_by_frame": {
+    "12": 917625,
+    "24": 917637,
+    "36": 917649,
+    "48": 917661,
+    "60": 917673,
+    "72": 917685,
+    "84": 917697,
+    "96": 917709,
+    "108": 917721,
+    "120": 917733,
+    "132": 917745,
+    "144": 917757,
+    "156": 917769,
+    "168": 917781,
+    "180": 917793,
+    "192": 917805,
+    "204": 917817,
+    "216": 917829,
+    "228": 917841,
+    "240": 917853,
+    "252": 917865,
+    "264": 917877,
+    "276": 917889,
+    "288": 917901,
+    "300": 917913,
+    "312": 917925,
+    "324": 917937,
+    "336": 917949,
+    "348": 917961,
+    "360": 917973,
+    "372": 917985,
+    "384": 917997,
+    "396": 918009,
+    "408": 918021,
+    "420": 918033,
+    "432": 918045,
+    "444": 918057,
+    "456": 918069,
+    "468": 918081,
+    "480": 918093,
+    "492": 918105,
+    "504": 918117,
+    "516": 918129,
+    "528": 918141,
+    "540": 918153,
+    "552": 918165,
+    "564": 918177,
+    "576": 918189,
+    "588": 918201,
+    "600": 918213,
+    "612": 918225,
+    "624": 918237,
+    "636": 918249,
+    "648": 918261,
+    "660": 918273,
+    "672": 918285,
+    "684": 918297,
+    "696": 918309,
+    "708": 918321,
+    "720": 918333,
+    "732": 918345,
+    "744": 918357,
+    "756": 918369,
+    "768": 918381,
+    "780": 918393,
+    "792": 918405,
+    "804": 918417,
+    "816": 918429,
+    "828": 918441,
+    "840": 918453,
+    "852": 918465
+  },
+  "prefix_root": "projects/modern-model-study/exports/seed-for-sea-v001/s3-a-sea-unfolds",
+  "prefix_through": 564
+}

@@ -1,0 +1,40 @@
+{
+  "case": "o1-the-last-pool",
+  "seed": 916601,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space.",
+    "seed": 916601,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "last-pool",
+      "prompt": "An immense ivory nautilus shell lies half buried in a vast cracked terracotta desert beneath an ink-blue dusk sky. The shell is a sculpted vessel tilted toward us, its open chamber containing the last pool of luminous turquoise water. A small vermilion wooden boat rests on this pool, carrying a single round glowing pearl in its hull. A narrow silver-blue stream escapes the shell toward the lower right and winds far across the dry landscape. On the distant horizon stands one enormous closed ivory flower bud. The shell occupies the left half, the red boat is clearly readable near the middle, and the right half opens into spacious desert and twilight. An exquisite surrealist oil painting with dimensional carved ivory, jewel-colored enamel, deep velvet shadows, warm copper earth, delicate engraved textures and precise luminous highlights. Monumental distinct silhouettes, tactile detail, poetic dream logic and generous negative space."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.58
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ],
+  "seeds_by_frame": {},
+  "prefix_root": "projects/modern-model-study/exports/seed-for-sea-v001/o1-the-last-pool",
+  "prefix_through": 0
+}

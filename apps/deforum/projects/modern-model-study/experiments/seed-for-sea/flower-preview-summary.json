@@ -1,0 +1,110 @@
+{
+  "display_start": 4.666666666666667,
+  "source_frame": 168,
+  "duration": 5.0,
+  "source_duration": 7.5,
+  "speed": 1.5,
+  "zoom_min": 1.0,
+  "zoom_max": 2.6,
+  "zoom_end": 2.6,
+  "incoming_velocity": [
+    -0.010670761818128,
+    -0.010562074122329505,
+    0.05673373602975027,
+    -0.00127504730808739
+  ],
+  "outgoing_start_velocity": [
+    -0.010670761818128,
+    -0.010562074122329505,
+    0.05673373602975027,
+    -0.00127504730808739
+  ],
+  "incoming_residual": 7.631477437282217e-14,
+  "warnings": [],
+  "timeline": [
+    {
+      "after": 0.333,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 0.667,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 1.0,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 1.333,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 1.667,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 2.0,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 2.333,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 2.667,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 3.0,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 3.333,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 3.667,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 4.0,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 4.333,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 4.667,
+      "noise": 0.62,
+      "prompt": "New description"
+    },
+    {
+      "after": 5.0,
+      "noise": 0.62,
+      "prompt": "New description"
+    }
+  ],
+  "intent": "Follow the river away from the shell, raise the view to the ivory bud, and arrive as the bud opens around the pearl.",
+  "prompt": "A huge ivory flower bud opens above a turquoise pool in a copper-red desert. Curved pearlescent petals surround one luminous round pearl. A small vermilion boat rests on the blue water beneath the flower, beside the winding river. Deep blue evening sky and broad shadowed dunes surround the monumental blossom. An exquisite dimensional surrealist oil painting with tactile ivory, jewel colors, delicate engraving, rich shadows and generous open space.",
+  "id": "4f67f4b4688342e5a03ffc45a918609b",
+  "lead_seconds": 1.0,
+  "frame_count": 145,
+  "fps": 24,
+  "preview_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/4f67f4b4688342e5a03ffc45a918609b/preview.mp4",
+  "summary_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/4f67f4b4688342e5a03ffc45a918609b/summary.json",
+  "request_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/4f67f4b4688342e5a03ffc45a918609b/request.json"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "projects/modern-model-study/exports/seed-for-sea-v001/s1-leaving-the-shell/faster/rife-moving-tail/preview.mp4",
+  "frame": 112,
+  "intent": "Follow the river away from the shell, raise the view to the ivory bud, and arrive as the bud opens around the pearl.",
+  "duration": 5,
+  "zoom": 2.6,
+  "pan_x": 0.16,
+  "pan_y": -0.3,
+  "roll": 5,
+  "center_x": 0.66,
+  "center_y": 0.18,
+  "end_drift": 0.018,
+  "match_speed": true,
+  "prompt": "A huge ivory flower bud opens above a turquoise pool in a copper-red desert. Curved pearlescent petals surround one luminous round pearl. A small vermilion boat rests on the blue water beneath the flower, beside the winding river. Deep blue evening sky and broad shadowed dunes surround the monumental blossom. An exquisite dimensional surrealist oil painting with tactile ivory, jewel colors, delicate engraving, rich shadows and generous open space.",
+  "noise": 0.62
+}
