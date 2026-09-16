@@ -1,0 +1,30 @@
+{
+  "case": "o2-silver-branch",
+  "seed": 917102,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "An immense abandoned Victorian greenhouse stands above a midnight sea. Its tall curved blue glass roof and slender silver ribs sweep diagonally into deep indigo darkness. In the foreground a graceful silver branch arcs upward from the lower left, carrying one luminous translucent amber pear near the right third of the painting, slightly below center. The single pear is the unmistakable focal point, large enough to see its glowing flesh and delicate branching veins. Soft amber light from the pear illuminates a few silver leaves and the nearby glass ribs. Through the glass, a small cold moon hangs above an almost black sea. The air around the pear is open and dark; no branch or leaf crosses in front of it. A few tiny fallen leaves establish the enormous scale of the greenhouse. Rich surreal oil painting with dimensional chiaroscuro, silver botanical engraving, subtle imperfect glass reflections and luminous amber enamel. Strong asymmetrical composition, clear near and far forms, selective intricate detail, broad quiet shadows. The impossible scene feels intimate, mysterious and inhabited by light. No people, no lettering.",
+    "seed": 917102,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-last-fruit",
+      "prompt": "An immense abandoned Victorian greenhouse stands above a midnight sea. Its tall curved blue glass roof and slender silver ribs sweep diagonally into deep indigo darkness. In the foreground a graceful silver branch arcs upward from the lower left, carrying one luminous translucent amber pear near the right third of the painting, slightly below center. The single pear is the unmistakable focal point, large enough to see its glowing flesh and delicate branching veins. Soft amber light from the pear illuminates a few silver leaves and the nearby glass ribs. Through the glass, a small cold moon hangs above an almost black sea. The air around the pear is open and dark; no branch or leaf crosses in front of it. A few tiny fallen leaves establish the enormous scale of the greenhouse. Rich surreal oil painting with dimensional chiaroscuro, silver botanical engraving, subtle imperfect glass reflections and luminous amber enamel. Strong asymmetrical composition, clear near and far forms, selective intricate detail, broad quiet shadows. The impossible scene feels intimate, mysterious and inhabited by light. No people, no lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.56
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}
