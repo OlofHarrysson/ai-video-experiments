@@ -348,3 +348,11 @@ Olof says the fluent-hour results look super nice and raises the checkout's disk
 ### 2026-09-15 — three storytelling approaches
 
 Olof accepts the new motion previews and authorizes a 90-minute storytelling session. He proposes writing a story and revising toward it, improvising from actual paintings, and a hybrid that keeps an intention while adapting. He wants recurring characters, animals, objects or symbols, with something happening that suggests meaning beyond attractive imagery. This is an explicit creative brief; it does not establish preference for any new story or understanding of a particular technique.
+
+### 2026-09-16 — favorites, tailored motion and doorway payoff
+
+Explicit feedback on [the storytelling shortlist](../apps/deforum/projects/modern-model-study/experiments/storytelling-lab/README.md): Olof strongly prefers #1 The Open Dream and #2 A Sky of Lanterns; #3 Captive Light is poor. He endorses keeping a plan, theme and recurring motifs while adapting the route to each actual painting. This does not establish a controlled ranking of the three storytelling methods.
+
+He finds the spatial movements too simplistic and repetitive, and wants them handcrafted for the artwork. Reusable effects should be individual moves that can be mixed and combined: left/right/left/right is four moves, not one primitive. His earlier preference for fluent, continuous motion still applies.
+
+He likes the railway doorway approach in The Open Dream but wants an earlier push, a downward viewpoint pan to center the opening, and preservation of its doorway identity instead of becoming a clock. Passing through should invite anticipation and reveal a new, exciting environment; repeating the whale/train scene is boring. Recurring motifs should provide continuity without repeating the whole scene. The revised shot remains unrendered; this records creative preferences, not a claim about model controllability.

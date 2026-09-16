@@ -6,11 +6,20 @@ The Safety Marc [preset collection](https://github.com/S4f3tyMarc/Deforum-Studio
 
 ## Watch the shortlist
 
-The [reviewer](http://localhost:3028/storytelling) opens two films with linked controls; the planned bird film is selectable as a third. These are different stories, not synchronized scenes or a controlled ranking of the methods. Human preference is pending.
+The [reviewer](http://localhost:3028/storytelling) opens two films with linked controls; the planned bird film is selectable as a third. Olof strongly prefers the first two and rejects the third. These are different stories, not synchronized scenes or a controlled ranking of the methods.
 
 - **[The Open Dream](../../exports/storytelling-lab-v001/i5-the-open-dream/through-0684/rife-moving-tail/preview.mp4), improvised, 19⅓s.** A whale carries a station; its back becomes a railway toward the moon. The moon becomes a clock doorway onto whales and a red train in golden daylight. This destination was chosen after seeing the paintings. The selected ending stops before late repeated-eye distortion.
 - **[A Sky of Lanterns](../../exports/storytelling-lab-v001/h4-a-sky-of-lanterns/faster/rife-moving-tail/preview.mp4), hybrid, 19⅓s.** An exposed lantern boat gains shelter, becomes a beacon, and its warm light is echoed by boats and a constellation. The intention develops from finding refuge to sharing light. Literal guiding action remains ambiguous, but the visual connection is readable.
 - **[Captive Light](../../exports/storytelling-lab-v001/p1-captive-light/faster/rife-moving-tail/preview.mp4), prewritten, 16s.** A golden bird, cage and barren valley develop into free wings and golden foliage. Liberation becoming renewal was planned from the start. The metaphor reads more clearly than the physical escape; the full intended forest never arrives.
+
+## Human feedback — 2026-09-16
+
+- **Favorites:** #1 The Open Dream and #2 A Sky of Lanterns, by far. #3 Captive Light is judged poor; retain it as a diagnostic rather than a creative reference to pursue.
+- **Working approach:** keep a plan, theme and recurring motifs while adapting the route to the actual paintings. The preference for these films does not isolate the storytelling method from their different subjects.
+- **Motion:** too simplistic and repetitive. Handcraft each passage from reusable individual moves. Left → right → left → right is four movements, not a single primitive. Overlap the moves to keep them fluent, and choose them from the artwork rather than a canned sequence.
+- **Doorway opportunity:** Olof likes approaching the opening at the end of the railway, but wants it centered by panning the view down, with an earlier push and a recognizable doorway instead of a clock transformation. Crossing should create anticipation and reveal something new; another whale/train scene feels repetitive.
+
+Next proposed revision: preserve the earlier successful footage, branch before the clock takes over, and compose **recenter → approach → cross → reveal** around the observed doorway. Inspect short generated passages and revise the target if it moves. Carry one motif into a contrasting environment. The [motion palette](../../../../../../docs/motion-palette.md#primitives-and-composed-shots) now separates individual controls from longer example recipes. This revised shot is not yet rendered.
 
 ## What the approaches taught us
 
