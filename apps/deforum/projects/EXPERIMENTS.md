@@ -1,11 +1,12 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-16. **100 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 100 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-09-16. **101 experiment entries across 14 projects** are listed below. This includes plans, session reports and independent reviews; it does not mean 100 completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
+| Assistant tooling and a continuous doorway crossing | [Doorway CLI dogfood](modern-model-study/experiments/doorway-cli/README.md) |
 | Tailored doorway approach and a different world beyond it | [Through the railway doorway](modern-model-study/experiments/doorway-revision/README.md) |
 | Planned, improvised and hybrid visual stories | [Three ways to tell a surreal story](modern-model-study/experiments/storytelling-lab/README.md) |
 | Fluent varied pans, pullbacks and local turns | [Continuous spatial routes](modern-model-study/experiments/fluent-hour/README.md) |
@@ -30,6 +31,8 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
 ### modern-model-study — 58 notes
+
+- [A continuous passage through the doorway](modern-model-study/experiments/doorway-cli/README.md) — CLI previews, generated checkpoint, alternate ending and preserved source lineage.
 
 - [Through the railway doorway](modern-model-study/experiments/doorway-revision/README.md) — [frame review](modern-model-study/experiments/doorway-revision/quality-review.md)
 

@@ -233,9 +233,29 @@ class BranchTests(unittest.TestCase):
         self.assertEqual(owner_at(self.app, child, 24)["case"], "child")
 
     def test_reject_nonfinite_or_excessive_request(self):
-        for change in ({"zoom": float("nan")}, {"duration": 99}, {"prompt": ""}):
+        for change in (
+            {"zoom": float("nan")},
+            {"zoom": 33},
+            {"duration": 99},
+            {"prompt": ""},
+        ):
             with self.assertRaises(ValueError):
                 self.planner.plan({**self.request, **change})
+
+    def test_large_doorway_push_warns_and_releases_zoom(self):
+        _, config, summary = self.planner.plan(
+            {**self.request, "zoom": 26, "duration": 6}
+        )
+        self.assertTrue(
+            any("Large enlargement" in warning for warning in summary["warnings"])
+        )
+        phrase = config["phrases"][0]
+        end = phrase["start"] + phrase["duration"]
+        points = np.array([[0.4, 0.4], [0.6, 0.6]])
+        a = mapping(points, end, [phrase])
+        b = mapping(points, end + 1, [phrase])
+        np.testing.assert_allclose(b[1] - b[0], a[1] - a[0])
+        self.assertLess(b[0, 0], a[0, 0])
 
     def cli(self, *args, success=True):
         result = subprocess.run(

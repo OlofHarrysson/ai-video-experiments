@@ -40,7 +40,7 @@ All commands emit JSON to stdout. Failures print a brief error to stderr and exi
 | `source`, `frame` | Parent MP4 and zero-based delivery frame. |
 | `intent` | What the move should follow, reveal or change. |
 | `duration` | Playback seconds, rounded to a whole painting interval. |
-| `zoom` | Final enlargement relative to the branch painting; below 1 pulls back. |
+| `zoom` | Final enlargement relative to the branch painting, 0.5–32; below 1 pulls back. Above 8 warns to inspect the passage in short sections. |
 | `pan_x`, `pan_y` | Viewpoint displacement in screen widths/heights; positive is right/down. |
 | `roll` | Artwork rotation in degrees. |
 | `center_x`, `center_y` | Zoom center, normalized 0…1 across the image. |
@@ -49,6 +49,8 @@ All commands emit JSON to stdout. Failures print a brief error to stderr and exi
 | `prompt`, `noise` | Next description and starting noise from the first new painting onward. |
 
 The curve ends with zero zoom/roll speed and retains the chosen lateral drift. Speed matching can cause overshoot; inspect scale diagnostics, framing and the entire path. The [motion palette](../../docs/motion-palette.md) records other primitives for more complex choreography; this short-plan interface currently covers pan, zoom and roll with one future prompt/noise level.
+
+Large pushes can be necessary to fill the viewport from a narrow distant doorway. The preview magnifies existing detail and cannot reconstruct what lies beyond it. Inspect the full path for obstructions, then generate a short passage before committing to its ending. The [doorway dogfood experiment](projects/modern-model-study/experiments/doorway-cli/README.md) preserves the CLI draft separately from a production branch with staged descriptions and noise.
 
 ## Outputs and preservation
 

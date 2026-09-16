@@ -1,0 +1,10 @@
+{
+  "branch": "projects/modern-model-study/branches/doorway-clear-passage",
+  "preview_id": "379a1d60345e4bc78ae0bd75586231d0",
+  "preview_motion_unchanged": true,
+  "frozen_config_sha256": "529ba4f91bf86d313543c3bcbc9225d68900d9c984595b924b255499b402531c",
+  "checkpoint_source_frame": 528,
+  "planned_new_paintings": 24,
+  "preserved_paintings": 36,
+  "purpose": "Clear the doorway with a continuous push, then reveal the new world without further enlargement. Prompt and noise staging are separate from the warp-only preview."
+}

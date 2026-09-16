@@ -1,0 +1,16 @@
+{
+  "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4",
+  "frame": 280,
+  "intent": "Carry the doorway approach continuously through the threshold; reveal an open harp-tree meadow, then release forward travel into a gentle sideways drift.",
+  "duration": 6,
+  "zoom": 26,
+  "pan_x": 0.022,
+  "pan_y": -0.005,
+  "roll": 0,
+  "center_x": 0.522,
+  "center_y": 0.495,
+  "end_drift": 0.025,
+  "match_speed": true,
+  "prompt": "A broad open ivory arch frames an expansive sunlit emerald meadow beyond. The railway enters the open grass and curves toward the far horizon. Slender golden harp-shaped trees stand far away at the sides of the meadow, leaving the passage clear. A little red steam train travels in the middle distance. The near foreground is empty mossy ground and tiny blue flowers. An exquisite dimensional surrealist oil painting with carved ivory, emerald greens, golden sunbeams, deep shadows and fine engraved textures.",
+  "noise": 0.6
+}

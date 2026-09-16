@@ -165,7 +165,7 @@ class BranchPlanner:
         values = {}
         bounds = {
             "duration": (1, 8),
-            "zoom": (0.5, 8),
+            "zoom": (0.5, 32),
             "pan_x": (-1, 1),
             "pan_y": (-1, 1),
             "roll": (-45, 45),
@@ -253,10 +253,14 @@ class BranchPlanner:
         )
         scales = np.exp(states[:, 2])
         require(
-            np.isfinite(states).all() and scales.min() >= 0.2 and scales.max() <= 12,
+            np.isfinite(states).all() and scales.min() >= 0.2 and scales.max() <= 48,
             "Incoming speed causes excessive zoom; shorten duration or disable speed matching",
         )
         warnings = []
+        if values["zoom"] > 8:
+            warnings.append(
+                "Large enlargement: inspect the route and repaint in short sections; the preview cannot invent detail."
+            )
         if residual > 0.005:
             warnings.append(
                 "Incoming regional deformation is only approximately matched by pan, zoom and roll."

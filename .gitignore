@@ -13,6 +13,12 @@ apps/deforum/projects/*/exports/*
 !apps/deforum/projects/*/exports/README.md
 apps/deforum/projects/*/branches/*/anchors/
 apps/deforum/projects/*/branches/*/motion-preview.mp4
+apps/deforum/projects/*/branches/runs/
+apps/deforum/projects/*/branches/checks/
+apps/deforum/projects/*/branches/*/anchor-*.json
+apps/deforum/projects/*/branches/*/warped-inputs/
+apps/deforum/projects/*/branches/*/faster/
+apps/deforum/projects/*/branches/*/through-*/
 apps/comfyui/projects/*/references/assets/
 apps/comfyui/projects/*/runs/*
 !apps/comfyui/projects/*/runs/README.md

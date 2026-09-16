@@ -1,0 +1,138 @@
+{
+  "status": "draft-not-generated",
+  "intent": "Carry the doorway approach continuously through the threshold; reveal an open harp-tree meadow, then release forward travel into a gentle sideways drift.",
+  "source": {
+    "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4",
+    "frame": 280,
+    "painting_sha256": "b41be7adb8355cefead5ea72003824dd6c66201fc1ad9c2ee615dbb78e168e46",
+    "config_sha256": "361de4ec2b61f7fae10a9be018528d9ec45458cb5148bb107d67c47aeeb2b78f",
+    "video_sha256": "65b7ec65728c67e856fbdc67c4affe4ea5789e2fdd55c14e99ca8475c7ce936c"
+  },
+  "motion_preview": {
+    "display_start": 11.666666666666666,
+    "source_frame": 420,
+    "duration": 6.0,
+    "source_duration": 9.0,
+    "speed": 1.5,
+    "zoom_min": 1.0,
+    "zoom_max": 26.000000000000004,
+    "zoom_end": 26.0,
+    "incoming_velocity": [
+      0.02327167738047321,
+      -0.014983756833284317,
+      0.2533334566077425,
+      1.3037272755327184e-17
+    ],
+    "outgoing_start_velocity": [
+      0.02327167738047321,
+      -0.014983756833284317,
+      0.2533334566077425,
+      1.3037272755327184e-17
+    ],
+    "incoming_residual": 2.2998921656256415e-13,
+    "warnings": [
+      "Large enlargement: inspect the route and repaint in short sections; the preview cannot invent detail."
+    ],
+    "timeline": [
+      {
+        "after": 0.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.333,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.667,
+        "noise": 0.6,
+        "prompt": "New description"
+      },
+      {
+        "after": 6.0,
+        "noise": 0.6,
+        "prompt": "New description"
+      }
+    ],
+    "intent": "Carry the doorway approach continuously through the threshold; reveal an open harp-tree meadow, then release forward travel into a gentle sideways drift.",
+    "prompt": "A broad open ivory arch frames an expansive sunlit emerald meadow beyond. The railway enters the open grass and curves toward the far horizon. Slender golden harp-shaped trees stand far away at the sides of the meadow, leaving the passage clear. A little red steam train travels in the middle distance. The near foreground is empty mossy ground and tiny blue flowers. An exquisite dimensional surrealist oil painting with carved ivory, emerald greens, golden sunbeams, deep shadows and fine engraved textures.",
+    "id": "379a1d60345e4bc78ae0bd75586231d0",
+    "lead_seconds": 1.0,
+    "frame_count": 169,
+    "fps": 24,
+    "preview_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/379a1d60345e4bc78ae0bd75586231d0/preview.mp4",
+    "summary_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/379a1d60345e4bc78ae0bd75586231d0/summary.json",
+    "request_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/379a1d60345e4bc78ae0bd75586231d0/request.json"
+  }
+}

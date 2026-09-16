@@ -1,0 +1,66 @@
+{
+  "pod_id": "ev4cgqbfha3gh3",
+  "created_at": "2026-09-16T15:46:12.939Z",
+  "deleted_and_verified_at": "2026-09-16T16:04:38.792256+00:00",
+  "post_delete_pods": [],
+  "retained_volume": "vd3jnbwko1",
+  "account_spend_per_hour_after": 0.005,
+  "new_unique_jobs": 34,
+  "runtime_elapsed_seconds": 1105.853256,
+  "gpu_hourly": 2.09,
+  "posted_account_debit": 0.6423335915999999,
+  "conservative_session_reserve": 0.8,
+  "series_prior": 5.85,
+  "series_conservative_total": 6.65,
+  "series_limit": 10,
+  "archive": {
+    "verified": true,
+    "archive_sha256": "0a743386a2d054ce335877b1faa7d6af8f251ac68282fb56f61d5eca4977d1a4",
+    "files": 678,
+    "restored_exports": "projects/modern-model-study/branches"
+  },
+  "status": "complete",
+  "date": "2026-09-16",
+  "selected": "doorway-textured-arrival",
+  "human_preference": "pending",
+  "preserved_opening": {
+    "verified": true,
+    "preserved_display_frames": 281,
+    "through_display_frame": 280,
+    "through_source_frame": 420,
+    "scope": "Exact archived PNG frames before H.264 encoding. No byte-prefix claim for the MP4."
+  },
+  "cases": {
+    "doorway-clear-passage": {
+      "jobs_verified": 24,
+      "config_sha256": "529ba4f91bf86d313543c3bcbc9225d68900d9c984595b924b255499b402531c",
+      "generation_check": "projects/modern-model-study/branches/checks/doorway-clear-passage-generation.json",
+      "delivery": {
+        "verified": true,
+        "frames": 480,
+        "paintings": 60,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "6ac0735c1c5cf89ab2f63f654f9b1f9a5ccea332911f30bdd708d0df14d8b74e",
+        "preserved_through_delivery_frame": 472,
+        "tail_changed_pixels": true
+      }
+    },
+    "doorway-textured-arrival": {
+      "jobs_verified": 10,
+      "config_sha256": "f29da42fac699af73004fc9697b7f980a108591e0a066aae70d5a52e5dbe2673",
+      "generation_check": "projects/modern-model-study/branches/checks/doorway-textured-arrival-generation.json",
+      "delivery": {
+        "verified": true,
+        "frames": 480,
+        "paintings": 60,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "62387db4c23f08bc298d6d999bcd89428417799cf22074dd9e42d3d4448d0586",
+        "preserved_through_delivery_frame": 472,
+        "tail_changed_pixels": true
+      }
+    }
+  },
+  "review_scope": "Selected actual paintings and matched endings, plus overview and dense displayed-frame windows at the branch and motion release. Human playback judgment pending."
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Through the doorway \u2014 continuous passage",
+  "selected": [
+    "previous-doorway",
+    "continuous-passage"
+  ],
+  "clips": [
+    {
+      "id": "previous-doorway",
+      "label": "Previous doorway shot",
+      "note": "Staged approach \u2192 harp forest \u2192 another large push",
+      "details": "The previous 20-second version. Olof found the zoom jerky and the extra enlargement after crossing excessive. Preserved unchanged for this comparison.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "continuous-passage",
+      "label": "Continuous passage \u2014 new",
+      "note": "One approach \u2192 open meadow \u2192 gentle drift",
+      "details": "Branches earlier so a giant harp never blocks the doorway. A red train connects the night-time railway to the sunlit meadow. The final repaint strength remains around 0.58 to retain more texture; thin string-like details and slight redraws remain.\n\nThe opening through 11.67 seconds is preserved. A single curve matches the incoming spatial velocity, passes through the doorway and ends forward enlargement at 17.67 seconds, retaining a gentle sideways drift. Krea Turbo repaints the warped previous image with staged descriptions of the meadow. CFG 1, three Euler intervals, 24 fps source at cadence 12. Delivery is 1.5\u00d7 faster at 24 fps: three paintings per displayed second. RIFE 4.25 scale 1 is presentation only; seven final frames continue actual spatial warps.",
+      "source": "projects/modern-model-study/branches/doorway-textured-arrival/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "softer-ending",
+      "label": "Same motion \u2014 softer ending",
+      "note": "Same crossing \u2192 lower-strength arrival",
+      "details": "The first new take, retained for comparison. It reduces repaint strength to 0.36 after arrival. Assistant frame review found more flattening and patterned edge artifacts near the end. All spatial movement and descriptions are the same as the new selected take; only the final noise schedule differs.\n\nThe opening through 11.67 seconds is preserved. A single curve matches the incoming spatial velocity, passes through the doorway and ends forward enlargement at 17.67 seconds, retaining a gentle sideways drift. Krea Turbo repaints the warped previous image with staged descriptions of the meadow. CFG 1, three Euler intervals, 24 fps source at cadence 12. Delivery is 1.5\u00d7 faster at 24 fps: three paintings per displayed second. RIFE 4.25 scale 1 is presentation only; seven final frames continue actual spatial warps.",
+      "source": "projects/modern-model-study/branches/doorway-clear-passage/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}
