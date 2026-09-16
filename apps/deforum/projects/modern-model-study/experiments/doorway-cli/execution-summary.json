@@ -22,7 +22,7 @@
   "status": "complete",
   "date": "2026-09-16",
   "selected": "doorway-textured-arrival",
-  "human_preference": "pending",
+  "human_preference": "Motion approved: perfect! Good motion controls. No separate preference stated between ending noise schedules.",
   "preserved_opening": {
     "verified": true,
     "preserved_display_frames": 281,
@@ -62,5 +62,5 @@
       }
     }
   },
-  "review_scope": "Selected actual paintings and matched endings, plus overview and dense displayed-frame windows at the branch and motion release. Human playback judgment pending."
+  "review_scope": "Selected actual paintings and matched endings, plus overview and dense displayed-frame windows at the branch and motion release. Olof subsequently approved the motion."
 }

@@ -6,7 +6,7 @@
 
 [Compare new and previous films](http://localhost:3028/) · [Generation and delivery receipt](execution-summary.json) · [Original doorway revisions](../doorway-revision/README.md)
 
-The new take preserves the opening through **11.67 seconds**, approaches the doorway in one continuous move, reveals an open meadow, and releases the forward zoom into a gentle sideways drift. The red train connects the two worlds. This is an artistic revision with coupled framing, prompt and noise choices, not an isolated proof of one motion setting. Human playback feedback is pending.
+The new take preserves the opening through **11.67 seconds**, approaches the doorway in one continuous move, reveals an open meadow, and releases the forward zoom into a gentle sideways drift. The red train connects the two worlds. This is an artistic revision with coupled framing, prompt and noise choices, not an isolated proof of one motion setting. Olof’s feedback: “perfect! Good motion controls”. The shot is an approved motion reference; he has not expressed a preference between the two ending noise schedules.
 
 ## What the tooling changed in practice
 
@@ -32,7 +32,7 @@ The saved [motion plan](motion-plan.json), [preview summary](preview-summary.jso
 
 The assistant reviewed six checkpoint paintings, six arrival paintings, matched endings at frames 612/660/708, and [the finished-film sheets](../../exports/doorway-cli-review-v001/film/v001/contact-sheet.jpg). Dense displayed-frame windows cover the preserved/new join and the zoom release. This supports continuity of the inspected shapes; it is not an exhaustive playback judgment. Olof's review remains decisive for perceived rhythm.
 
-The destination is open and readable, and the new curve avoids the old branch-speed discontinuities. Some harp-string lines remain near the edges; the scene still simplifies relative to the opening and the train is a recurring motif rather than an exactly tracked physical locomotive. Low-strength finishing was not a clean solution to preserving texture. The steadier ending is preferred by the assistant, not yet selected by Olof.
+The destination is open and readable, and the new curve avoids the old branch-speed discontinuities. Some harp-string lines remain near the edges; the scene still simplifies relative to the opening and the train is a recurring motif rather than an exactly tracked physical locomotive. Low-strength finishing was not a clean solution to preserving texture. The steadier ending is preferred by the assistant; Olof approves the delivered motion without separately comparing ending noise schedules.
 
 Krea Turbo, CFG 1, three Euler intervals and recurrent warped-image initialization remain unchanged. Source time is 24 fps with cadence 12. Delivery is 1.5× faster at 24 fps, retaining all 60 paintings; RIFE 4.25 scale 1 fills the intervals and never feeds the recurrent loop. The final seven frames use actual spatial warps.
 
