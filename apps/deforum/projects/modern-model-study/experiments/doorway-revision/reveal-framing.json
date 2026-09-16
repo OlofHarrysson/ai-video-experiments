@@ -1,0 +1,113 @@
+{
+  "source_frame": 624,
+  "source_point": [
+    1.318359375,
+    0.5869140625
+  ],
+  "target_point": [
+    0.77,
+    0.57
+  ],
+  "clearance": {
+    "start": 25.75,
+    "duration": 2.75,
+    "zoom": 0.8,
+    "turn": 0,
+    "travel": [
+      0,
+      0
+    ],
+    "center": [
+      0.88,
+      0.5
+    ]
+  },
+  "pan": {
+    "start": 27.25,
+    "duration": 4.25,
+    "zoom": 0,
+    "turn": 0,
+    "travel": [
+      -2.5882575504314813,
+      1.2741296325278393
+    ],
+    "center": [
+      0.75,
+      0.5
+    ]
+  },
+  "bank": {
+    "start": 27.5,
+    "duration": 5,
+    "zoom": 0,
+    "turn": -7,
+    "travel": [
+      0,
+      0
+    ],
+    "center": [
+      0.77,
+      0.57
+    ],
+    "radius": 6
+  },
+  "release": {
+    "start": 29.5,
+    "duration": 5,
+    "zoom": -0.12,
+    "turn": 0,
+    "travel": [
+      0,
+      0
+    ],
+    "center": [
+      0.77,
+      0.57
+    ]
+  },
+  "path": [
+    {
+      "seconds": 26,
+      "point": [
+        1.3183593750000007,
+        0.5869140625000026
+      ]
+    },
+    {
+      "seconds": 27,
+      "point": [
+        1.6514063064833389,
+        0.43844387737870094
+      ]
+    },
+    {
+      "seconds": 28,
+      "point": [
+        1.924446336109433,
+        0.29123628726685136
+      ]
+    },
+    {
+      "seconds": 29,
+      "point": [
+        1.5568926966193781,
+        0.37672298541607424
+      ]
+    },
+    {
+      "seconds": 30.5,
+      "point": [
+        0.8012286017499224,
+        0.640853878831056
+      ]
+    },
+    {
+      "seconds": 31.5,
+      "point": [
+        0.77,
+        0.5699999999999998
+      ]
+    }
+  ],
+  "scope": "Fixed-image path; reflected right edge is exposed and needs inspection after repainting."
+}

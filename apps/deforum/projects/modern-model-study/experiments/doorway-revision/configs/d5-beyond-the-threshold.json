@@ -1,0 +1,493 @@
+{
+  "case": "d5-beyond-the-threshold",
+  "seed": 915422,
+  "duration": 30,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    }
+  ],
+  "prompt_schedule": [
+    {
+      "at": 0,
+      "name": "unplanned-opening",
+      "prompt": "An immense ivory whale floats above an ink-blue sea beneath a crimson eclipse. Its curved back carries a deserted miniature railway station, with one glowing amber clock and a little red train. An ivory staircase hangs from the station down toward the mirror water, ending just above it. The whale has one large calm dark eye near the center-right. Wisps of pale steam trail from the station into the dark sky. The huge whale is cropped at the left edge, while open ocean and the eclipse leave breathing room on the right. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 6,
+      "name": "rails-on-the-whale",
+      "prompt": "The immense ivory whale carries a little red steam train along its curved back toward a huge crimson eclipse on the right. Two golden rails continue over the whale's forehead and long nose, curving upward toward the glowing red circle. The whale's calm black eye remains near the lower left. Behind the train, the old station is partly cropped at the upper left. Dark blue ocean lies below, and open night sky surrounds the red destination. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 8,
+      "name": "bridge-growing",
+      "prompt": "The ivory whale's long forehead and nose extend into a sweeping white railway bridge across the night sky. Golden rails follow the bridge toward the enormous crimson moon at the right. A small red steam train moves along the ridge, trailing a silver ribbon of smoke. The whale's large calm eye remains in the curved white stone at the lower left, where its skin is becoming carved arches. The bridge has open dark spaces beneath it, suspended above a deep indigo sea. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 10,
+      "name": "moonward-bridge",
+      "prompt": "A slender white railway viaduct curves upward across a vast indigo night toward an enormous glowing red moon. A little vermilion steam train travels on the golden rails. The bridge's nearest arch at the lower left has the carved shape of a whale's head with one calm dark eye; farther arches grow smaller toward the moon. Inside the red circle a warm amber railway doorway is beginning to appear. Long silver smoke from the train links the bridge to the luminous moon. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 13,
+      "name": "moon-station",
+      "prompt": "A small red steam train follows a narrow ivory railway bridge into a glowing amber doorway in an enormous crimson moon. The moon's surface is red enamel, with fine gold seams like a clock face around the entrance. A station window shines above the doorway. Curved ivory arches sweep in from the lower left across open dark blue space, with a faint carved whale eye on the nearest support. The red train and warm doorway remain the clear focus, while the old ocean is far below. An exquisitely detailed surrealist oil painting, dream logic, luminous jewel-colored enamel against deep velvet shadows. Monumental readable silhouettes, delicate engraved textures, sharp reflected highlights and dimensional shading. Broad cinematic composition, dramatic near and far forms, rich colors separated by dark negative space."
+    },
+    {
+      "at": 14,
+      "name": "the-doorway",
+      "prompt": "A narrow ivory railway curves upward into a tall open amber doorway. The doorway has two straight carved stone jambs and a rounded top, with a small station window above it. A crimson moon surrounds the doorway. The railway leads directly into the bright opening. A little red steam train and the ivory whale-shaped bridge remain at the lower left. Warm daylight shines through the opening. A finely detailed surrealist oil painting, dimensional ivory architecture, crimson enamel, deep indigo shadows and luminous warm golden light. Crisp engraved details and spacious readable forms."
+    },
+    {
+      "at": 16,
+      "name": "approaching-the-opening",
+      "prompt": "A large open arched doorway of carved ivory stone is centered in a deep crimson wall. Two railway tracks curve up from the lower edge and pass through the tall opening. The arch has two separate straight vertical jambs and a curved lintel. Through the opening is golden daylight, distant jade foliage and slender gold tree trunks. The red locomotive is small at the lower left edge. The near stone threshold is clearly visible. A finely detailed surrealist oil painting, dimensional ivory architecture, crimson enamel, deep indigo shadows and luminous warm golden light. Crisp engraved details and spacious readable forms."
+    },
+    {
+      "at": 18,
+      "name": "a-glimpse-beyond",
+      "prompt": "A broad open ivory arch frames a sunlit jade forest beyond. Two golden railway rails enter the opening from the bottom center. The carved doorway has tall straight side pillars and a curved ivory top; the crimson surrounding wall is cropped at the outer edges. Inside the arch, distant trees have golden harp strings stretched between their branches, lit by shafts of warm sunlight. The forest remains beyond the stone threshold, with deep green shade between the golden trunks. A finely detailed surrealist oil painting, dimensional ivory architecture, crimson enamel, deep indigo shadows and luminous warm golden light. Crisp engraved details and spacious readable forms."
+    },
+    {
+      "at": 20,
+      "name": "entering-the-arch",
+      "prompt": "A tall open ivory doorway fills most of the view. Its straight pale jambs frame a sunlit emerald forest with a monumental golden harp standing among the trees. Curving golden railway rails cross the near threshold and continue into the forest. The crimson wall is confined to the outer sides. The scene inside the doorway has deep layered foliage and warm sunlight. A luminous surrealist oil painting, dimensional carved ivory and polished golden instruments, deep emerald foliage, warm sunbeams, rich shadows and crisp reflected details. Readable near and far forms."
+    },
+    {
+      "at": 21.5,
+      "name": "crossing-the-threshold",
+      "prompt": "The view passes through a huge open ivory arch into a sunlit forest of giant golden musical instruments. Pale doorway pillars are cropped at the extreme sides. A golden harp grows into a branching tree on the right, its fine vertical strings catching sunlight. A railway curves from the foreground toward a bright clearing beyond the harp. Deep jade leaves and open golden sky fill the passage. A luminous surrealist oil painting, dimensional carved ivory and polished golden instruments, deep emerald foliage, warm sunbeams, rich shadows and crisp reflected details. Readable near and far forms."
+    },
+    {
+      "at": 22.5,
+      "name": "past-the-near-harp",
+      "prompt": "Beyond an open stone arch lies a broad sunlit green meadow. A railway curves from the lower right into the distant clearing. The huge near harp is cropped almost entirely off the left edge, leaving the center and right as open mossy ground and golden sky. A small red steam train sits on the railway in the middle distance. Delicate harp-shaped trees stand far away along the edges of the meadow. An exquisitely detailed surrealist oil painting, dimensional sculptural forms, emerald moss and jade foliage, luminous golden light, rich deep shadows, sharp highlights and delicate engraved textures. A broad cinematic landscape with open space and clearly separated near and far forms."
+    },
+    {
+      "at": 24,
+      "name": "the-open-glade",
+      "prompt": "An expansive sunlit emerald meadow fills the view. A little red steam train travels on a golden railway winding across the open middle distance. The foreground is mossy ground with scattered tiny blue flowers. Only distant slender trees line the left and right edges, with delicate golden harp strings among their branches. Broad shafts of warm sunlight cross the open glade. The center is spacious, and the train is clearly visible against the green ground. An exquisitely detailed surrealist oil painting, dimensional sculptural forms, emerald moss and jade foliage, luminous golden light, rich deep shadows, sharp highlights and delicate engraved textures. A broad cinematic landscape with open space and clearly separated near and far forms."
+    },
+    {
+      "at": 24.5,
+      "name": "through-the-visible-gap",
+      "prompt": "A little red steam train travels along a curving railway through a sunlit green meadow. The view is entering the open space around the train. A golden harp and a dark tree arch are cropped at the far left edge, while the meadow fills the center and right. Tiny blue flowers dot the moss beside the tracks. Tall slender trees stand far away beneath a warm pale sky. A richly detailed surrealist oil painting, luminous green moss, delicate blue flowers, deep dimensional shadows, polished red enamel, warm sunlight and crisp reflected highlights. A spacious landscape with readable shapes at different distances."
+    },
+    {
+      "at": 26,
+      "name": "the-meadow-opens",
+      "prompt": "A red steam locomotive with a short line of red carriages travels on curving rails across a vast sunlit emerald meadow. The train is the clear focal point near the lower center, with soft white steam above it. Blue wildflowers and moss fill the foreground. A few distant golden harp-shaped trees mark the rolling hills on the horizon. Broad open green ground and luminous sky surround the train. A richly detailed surrealist oil painting, luminous green moss, delicate blue flowers, deep dimensional shadows, polished red enamel, warm sunlight and crisp reflected highlights. A spacious landscape with readable shapes at different distances."
+    },
+    {
+      "at": 28,
+      "name": "the-journey-continues",
+      "prompt": "A polished vermilion steam train travels through a luminous green valley, its curved golden rails winding into the distance. Moss and tiny blue flowers border the railway. Distant slender trees have delicate golden harp-shaped branches, beneath warm clouds and a pale golden sky. The red locomotive and its small carriages remain distinct, with deep shadows and warm highlights. The view remains open around the train. A richly detailed surrealist oil painting, luminous green moss, delicate blue flowers, deep dimensional shadows, polished red enamel, warm sunlight and crisp reflected highlights. A spacious landscape with readable shapes at different distances."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.22
+    },
+    {
+      "at": 0.5,
+      "noise": 0.4
+    },
+    {
+      "at": 1,
+      "noise": 0.52
+    },
+    {
+      "at": 2,
+      "noise": 0.58
+    },
+    {
+      "at": 3,
+      "noise": 0.6
+    },
+    {
+      "at": 3.5,
+      "noise": 0.66
+    },
+    {
+      "at": 4,
+      "noise": 0.72
+    },
+    {
+      "at": 4.5,
+      "noise": 0.72
+    },
+    {
+      "at": 5,
+      "noise": 0.65
+    },
+    {
+      "at": 5.5,
+      "noise": 0.56
+    },
+    {
+      "at": 6,
+      "noise": 0.6
+    },
+    {
+      "at": 6.5,
+      "noise": 0.65
+    },
+    {
+      "at": 7,
+      "noise": 0.7
+    },
+    {
+      "at": 7.5,
+      "noise": 0.73
+    },
+    {
+      "at": 8,
+      "noise": 0.75
+    },
+    {
+      "at": 8.5,
+      "noise": 0.75
+    },
+    {
+      "at": 9,
+      "noise": 0.66
+    },
+    {
+      "at": 9.5,
+      "noise": 0.6
+    },
+    {
+      "at": 10,
+      "noise": 0.68
+    },
+    {
+      "at": 10.5,
+      "noise": 0.74
+    },
+    {
+      "at": 11,
+      "noise": 0.78
+    },
+    {
+      "at": 11.5,
+      "noise": 0.76
+    },
+    {
+      "at": 12,
+      "noise": 0.65
+    },
+    {
+      "at": 12.5,
+      "noise": 0.56
+    },
+    {
+      "at": 13,
+      "noise": 0.63
+    },
+    {
+      "at": 13.5,
+      "noise": 0.71
+    },
+    {
+      "at": 14.0,
+      "noise": 0.5
+    },
+    {
+      "at": 14.5,
+      "noise": 0.54
+    },
+    {
+      "at": 15.0,
+      "noise": 0.56
+    },
+    {
+      "at": 15.5,
+      "noise": 0.58
+    },
+    {
+      "at": 16.0,
+      "noise": 0.6
+    },
+    {
+      "at": 16.5,
+      "noise": 0.62
+    },
+    {
+      "at": 17.0,
+      "noise": 0.64
+    },
+    {
+      "at": 17.5,
+      "noise": 0.66
+    },
+    {
+      "at": 18.0,
+      "noise": 0.68
+    },
+    {
+      "at": 18.5,
+      "noise": 0.68
+    },
+    {
+      "at": 19.0,
+      "noise": 0.64
+    },
+    {
+      "at": 19.5,
+      "noise": 0.58
+    },
+    {
+      "at": 20.0,
+      "noise": 0.56
+    },
+    {
+      "at": 20.5,
+      "noise": 0.6
+    },
+    {
+      "at": 21.0,
+      "noise": 0.64
+    },
+    {
+      "at": 21.5,
+      "noise": 0.68
+    },
+    {
+      "at": 22.0,
+      "noise": 0.72
+    },
+    {
+      "at": 22.5,
+      "noise": 0.7
+    },
+    {
+      "at": 23.0,
+      "noise": 0.76
+    },
+    {
+      "at": 23.5,
+      "noise": 0.8
+    },
+    {
+      "at": 24.0,
+      "noise": 0.8
+    },
+    {
+      "at": 24.5,
+      "noise": 0.56
+    },
+    {
+      "at": 25.0,
+      "noise": 0.58
+    },
+    {
+      "at": 25.5,
+      "noise": 0.6
+    },
+    {
+      "at": 26.0,
+      "noise": 0.62
+    },
+    {
+      "at": 26.5,
+      "noise": 0.64
+    },
+    {
+      "at": 27.0,
+      "noise": 0.64
+    },
+    {
+      "at": 27.5,
+      "noise": 0.6
+    },
+    {
+      "at": 28.0,
+      "noise": 0.56
+    },
+    {
+      "at": 28.5,
+      "noise": 0.5
+    },
+    {
+      "at": 29.0,
+      "noise": 0.44
+    },
+    {
+      "at": 29.5,
+      "noise": 0.36
+    }
+  ],
+  "phrases": [
+    {
+      "start": 23.75,
+      "duration": 5.75,
+      "zoom": 5,
+      "turn": 0,
+      "travel": [
+        0,
+        0
+      ],
+      "center": [
+        0.720703125,
+        0.572265625
+      ]
+    },
+    {
+      "start": 24,
+      "duration": 5.5,
+      "zoom": 0,
+      "turn": 0,
+      "travel": [
+        0.049891754014415673,
+        -0.012563064507207825
+      ],
+      "center": [
+        0.720703125,
+        0.572265625
+      ]
+    },
+    {
+      "kind": "cruise",
+      "start": 24,
+      "velocity": [
+        -0.004,
+        0.002
+      ],
+      "log_zoom_rate": 0.012,
+      "center": [
+        0.75,
+        0.57
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708
+  ],
+  "seeds_by_frame": {
+    "12": 916434,
+    "24": 916446,
+    "36": 916458,
+    "48": 916470,
+    "60": 916482,
+    "72": 916494,
+    "84": 916506,
+    "96": 916518,
+    "108": 916530,
+    "120": 916542,
+    "132": 916554,
+    "144": 916566,
+    "156": 916578,
+    "168": 916590,
+    "180": 916602,
+    "192": 916614,
+    "204": 916626,
+    "216": 916638,
+    "228": 916650,
+    "240": 916662,
+    "252": 916674,
+    "264": 916686,
+    "276": 916698,
+    "288": 916710,
+    "300": 916722,
+    "312": 916734,
+    "324": 916746,
+    "336": 916758,
+    "348": 916770,
+    "360": 916782,
+    "372": 916794,
+    "384": 916806,
+    "396": 916818,
+    "408": 916830,
+    "420": 916842,
+    "432": 916854,
+    "444": 916866,
+    "456": 916878,
+    "468": 916890,
+    "480": 916902,
+    "492": 916914,
+    "504": 916926,
+    "516": 916938,
+    "528": 916950,
+    "540": 916962,
+    "552": 916974,
+    "564": 916986,
+    "576": 916998,
+    "588": 917010,
+    "600": 917022,
+    "612": 917034,
+    "624": 917046,
+    "636": 917058,
+    "648": 917070,
+    "660": 917082,
+    "672": 917094,
+    "684": 917106,
+    "696": 917118,
+    "708": 917130
+  },
+  "prefix_root": "projects/modern-model-study/exports/doorway-revision-v001/d4-the-open-glade",
+  "prefix_through": 576
+}

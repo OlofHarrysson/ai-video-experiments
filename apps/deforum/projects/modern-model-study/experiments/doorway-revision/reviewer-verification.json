@@ -1,0 +1,32 @@
+{
+  "verified": true,
+  "run_id": "b5368a35-f77e-4912-9ce4-a43abcd607c4",
+  "effective_url": "http://localhost:3028/",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 40875547,
+      "sha256": "4698ed49c66b49994586d251d39fb316194bdbe361eba6870ff68bb7a80faa28"
+    },
+    {
+      "route": "/doorway",
+      "status": 200,
+      "bytes": 40875547,
+      "sha256": "4698ed49c66b49994586d251d39fb316194bdbe361eba6870ff68bb7a80faa28"
+    },
+    {
+      "route": "/doorway-attempts",
+      "status": 200,
+      "bytes": 94557566,
+      "sha256": "ce43420e9790831474f5604887d106f01cae7a73b0079c2317f2851d4d982a79"
+    },
+    {
+      "route": "/storytelling",
+      "status": 200,
+      "bytes": 60607815,
+      "sha256": "00de40962d0de5defc2e1fda793a007a544daf6a6385a50733a6c36c53540f4c"
+    }
+  ],
+  "scope": "Ready service plus served HTML hash equality; no new browser interaction test, unchanged player controls."
+}

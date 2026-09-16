@@ -1,0 +1,44 @@
+{
+  "title": "Doorway revisions \u2014 preserved attempts",
+  "selected": [
+    "d3-the-music-beyond",
+    "d4-the-open-glade"
+  ],
+  "clips": [
+    {
+      "id": "d3-the-music-beyond",
+      "label": "Crowded continuation \u2014 rejected",
+      "note": "Lateral follow \u2192 repeated foreground shapes",
+      "details": "Tries to clear the doorway and follow the train sideways. The generated train changes position, and the ending develops repeated shapes that obscure it. Preserved as a failed attempt, not a recommended film.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d3-the-music-beyond/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "d4-the-open-glade",
+      "label": "Meadow revision",
+      "note": "Harp forest \u2192 meadow, with an obstructing wall",
+      "details": "Rewinds to source second 22. Gentler motion, a temporary noise rise to 0.80 and descriptions of a spacious meadow open a new landscape. A large red wall or curtain still occupies much of the right side.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d4-the-open-glade/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "d5-beyond-the-threshold",
+      "label": "Beyond the Threshold \u2014 revised film",
+      "note": "Whale railway \u2192 doorway \u2192 music forest \u2192 meadow",
+      "details": "Branches before the clock dominates. Reframes and approaches the actual doorway, introduces a different world beyond it, then aims through a measured gap between the near harp and red wall toward the train and meadow. The opening matches the original through nine seconds; later passages have different timing and imagery, so this is an artistic revision rather than a controlled test of one setting.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "d2-through-the-door",
+      "label": "First crossing",
+      "note": "Doorway \u2192 close harp forest",
+      "details": "A measured push enters the opening. The new forest and red train appear, but the nearest harp and remaining pale margins crowd the result.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d2-through-the-door/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "d1-doorway-approach",
+      "label": "Doorway approach",
+      "note": "Recenter \u2192 earlier push \u2192 forest glimpse",
+      "details": "Preserves the first nine seconds of the previous film. Measures the existing doorway, overlaps a recentering pan and push, and keeps a readable open arch while a golden harp and forest appear beyond it. This stops before crossing.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d1-doorway-approach/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

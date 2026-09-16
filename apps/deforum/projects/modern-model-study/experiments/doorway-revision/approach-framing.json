@@ -1,0 +1,71 @@
+{
+  "source_frame": 324,
+  "source_point": [
+    1.0810546875,
+    0.416015625
+  ],
+  "target_point": [
+    0.75,
+    0.51
+  ],
+  "target_time": 16,
+  "pan": {
+    "start": 13,
+    "duration": 3,
+    "zoom": 0,
+    "turn": 0,
+    "travel": [
+      -0.3683390624999999,
+      0.10960312500000002
+    ],
+    "center": [
+      0.75,
+      0.5
+    ]
+  },
+  "path": [
+    {
+      "seconds": 13.5,
+      "point": [
+        1.0810546875,
+        0.416015625
+      ]
+    },
+    {
+      "seconds": 14.5,
+      "point": [
+        0.9725820528881195,
+        0.44715970982142855
+      ]
+    },
+    {
+      "seconds": 16,
+      "point": [
+        0.7500000000000002,
+        0.51
+      ]
+    },
+    {
+      "seconds": 17,
+      "point": [
+        0.7630000000000003,
+        0.50025
+      ]
+    },
+    {
+      "seconds": 18,
+      "point": [
+        0.783504373177843,
+        0.48487172011661805
+      ]
+    },
+    {
+      "seconds": 19.5,
+      "point": [
+        0.8235102040816333,
+        0.45486734693877545
+      ]
+    }
+  ],
+  "scope": "Fixed-painting geometry; inspect generated doorway position before crossing."
+}

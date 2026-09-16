@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "frames": 217,
+  "through_source_frame": 324,
+  "through_delivery_frame": 216,
+  "scope": "Exact PNG delivery frames before video encoding; this is not an H.264 byte-prefix claim.",
+  "case": "d5-beyond-the-threshold"
+}

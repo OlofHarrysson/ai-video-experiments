@@ -1,0 +1,23 @@
+{
+  "title": "Through the doorway \u2014 revision and original",
+  "selected": [
+    "d5-beyond-the-threshold",
+    "original"
+  ],
+  "clips": [
+    {
+      "id": "d5-beyond-the-threshold",
+      "label": "Beyond the Threshold \u2014 revised film",
+      "note": "Whale railway \u2192 doorway \u2192 music forest \u2192 meadow",
+      "details": "Branches before the clock dominates. Reframes and approaches the actual doorway, introduces a different world beyond it, then aims through a measured gap between the near harp and red wall toward the train and meadow. The opening matches the original through nine seconds; later passages have different timing and imagery, so this is an artistic revision rather than a controlled test of one setting.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "original",
+      "label": "The Open Dream \u2014 previous film",
+      "note": "Whale railway \u2192 clock doorway \u2192 ocean of whales",
+      "details": "The previously liked film. Its late doorway becomes a clock and reveals another whale/train environment. Preserved unchanged for comparison.\n\nRecurrent Krea Turbo, CFG1, three Euler intervals. Every new painting starts from the warped previous painting encoded into latent space. Source: 24 fps, one repaint each half-second. Delivery: 1.5\u00d7 faster, 24 fps, three paintings per displayed second. RIFE 4.25 scale 1 runs outside the feedback loop; the final seven frames use actual spatial warps. All original paintings and earlier attempts are preserved.",
+      "source": "projects/modern-model-study/exports/storytelling-lab-v001/i5-the-open-dream/through-0684/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

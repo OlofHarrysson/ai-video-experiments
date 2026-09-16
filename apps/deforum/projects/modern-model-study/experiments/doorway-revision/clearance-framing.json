@@ -1,0 +1,99 @@
+{
+  "source_frame": 576,
+  "source_point": [
+    0.720703125,
+    0.572265625
+  ],
+  "target_point": [
+    0.75,
+    0.57
+  ],
+  "phrases": [
+    {
+      "start": 23.75,
+      "duration": 5.75,
+      "zoom": 5,
+      "turn": 0,
+      "travel": [
+        0,
+        0
+      ],
+      "center": [
+        0.720703125,
+        0.572265625
+      ]
+    },
+    {
+      "start": 24,
+      "duration": 5.5,
+      "zoom": 0,
+      "turn": 0,
+      "travel": [
+        0.049891754014415673,
+        -0.012563064507207825
+      ],
+      "center": [
+        0.720703125,
+        0.572265625
+      ]
+    },
+    {
+      "kind": "cruise",
+      "start": 24,
+      "velocity": [
+        -0.004,
+        0.002
+      ],
+      "log_zoom_rate": 0.012,
+      "center": [
+        0.75,
+        0.57
+      ]
+    }
+  ],
+  "path": [
+    {
+      "seconds": 24,
+      "point": [
+        0.720703125,
+        0.572265625
+      ]
+    },
+    {
+      "seconds": 25,
+      "point": [
+        0.7207501292263535,
+        0.5731848556060484
+      ]
+    },
+    {
+      "seconds": 26,
+      "point": [
+        0.7273494632119953,
+        0.5724534224884301
+      ]
+    },
+    {
+      "seconds": 27.5,
+      "point": [
+        0.7418413705743058,
+        0.5701983329584802
+      ]
+    },
+    {
+      "seconds": 28.5,
+      "point": [
+        0.7491481280482066,
+        0.5692868640906117
+      ]
+    },
+    {
+      "seconds": 29.5,
+      "point": [
+        0.7500000000000001,
+        0.5700000000000001
+      ]
+    }
+  ],
+  "scope": "Measured open gap between harp/tree on left and red wall on right; fixed-painting geometric preview."
+}

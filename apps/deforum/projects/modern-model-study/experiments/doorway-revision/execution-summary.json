@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-16",
+  "status": "complete",
+  "selected": "d5-beyond-the-threshold",
+  "human_preference": "pending",
+  "new_unique_image_jobs": 60,
+  "cases": {
+    "d1-doorway-approach": {
+      "new_jobs": 12,
+      "delivery": {
+        "verified": true,
+        "frames": 320,
+        "paintings": 40,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "f4725893e9f925bae79e286fd257997be46555c98dd9d7b1bd4923b054497e3a",
+        "preserved_through_delivery_frame": 312,
+        "tail_changed_pixels": true
+      },
+      "full_decode_verified": true
+    },
+    "d5-beyond-the-threshold": {
+      "new_jobs": 11,
+      "delivery": {
+        "verified": true,
+        "frames": 480,
+        "paintings": 60,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "65b7ec65728c67e856fbdc67c4affe4ea5789e2fdd55c14e99ca8475c7ce936c",
+        "preserved_through_delivery_frame": 472,
+        "tail_changed_pixels": true
+      },
+      "full_decode_verified": true
+    },
+    "d2-through-the-door": {
+      "new_jobs": 13,
+      "delivery": {
+        "verified": true,
+        "frames": 424,
+        "paintings": 53,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "f67f4bb7fef3710c3da205f87bc83cae6cabe7931795bd376cca3891c02014dd",
+        "preserved_through_delivery_frame": 416,
+        "tail_changed_pixels": true
+      },
+      "full_decode_verified": true
+    },
+    "d4-the-open-glade": {
+      "new_jobs": 13,
+      "delivery": {
+        "verified": true,
+        "frames": 464,
+        "paintings": 58,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "202b944264724a38e5989afa2f76a41f0e857734f578063855b614dd10ad657b",
+        "preserved_through_delivery_frame": 456,
+        "tail_changed_pixels": true
+      },
+      "full_decode_verified": true
+    },
+    "d3-the-music-beyond": {
+      "new_jobs": 11,
+      "delivery": {
+        "verified": true,
+        "frames": 512,
+        "paintings": 64,
+        "fps": 24,
+        "final_warps": 7,
+        "video_sha256": "e94cc267b476e5cea65d980fc08de7b00addf45c45e7eec96de3a38cc8244097",
+        "preserved_through_delivery_frame": 504,
+        "tail_changed_pixels": true
+      },
+      "full_decode_verified": true
+    }
+  },
+  "archive": {
+    "verified": true,
+    "archive_sha256": "a703d5274eddd4caa3830a2d6244d69e18effe73707238d77c1e5f7fdcdda67d",
+    "files": 1269,
+    "restored_exports": "projects/modern-model-study/exports/doorway-revision-v001"
+  },
+  "preserved_opening": {
+    "verified": true,
+    "frames": 217,
+    "through_source_frame": 324,
+    "through_delivery_frame": 216,
+    "scope": "Exact PNG delivery frames before video encoding; this is not an H.264 byte-prefix claim.",
+    "case": "d5-beyond-the-threshold"
+  },
+  "pod": {
+    "id": "n1rm2mdjkjhdsz",
+    "created_at": "2026-09-16T07:10:01.302Z",
+    "deleted_at": "2026-09-16T07:43:01.196Z",
+    "delete_http_status": 204,
+    "post_delete_pods": [],
+    "removed_media": 120,
+    "scratch_removed": true,
+    "retained_volume": "vd3jnbwko1"
+  },
+  "cost": {
+    "currency": "USD",
+    "gpu_hourly": 0.72,
+    "posted_account_debit": 0.3617250666,
+    "conservative_session": 0.45,
+    "series_prior": 5.4,
+    "series_conservative_total": 5.85,
+    "series_limit": 10,
+    "remaining_spend_hourly_at_cleanup": 0.005,
+    "note": "Starting balance was recorded after provisioning. Posted account delta is not a complete owned-resource invoice; conservative reserve includes that gap and disk."
+  },
+  "review_scope": "Selected paintings plus dense delivery-frame windows, not exhaustive real-time viewing. Reviewer HTML and media hashes checked separately."
+}
