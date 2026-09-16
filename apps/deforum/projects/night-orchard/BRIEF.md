@@ -28,4 +28,4 @@ Inspect source paintings and selected delivered windows separately. Verify sourc
 
 ## Cost and ownership
 
-The older $10 series is being used by the concurrent A Seed for the Sea session. Do not count that unreserved balance twice or use its Pod without an agreed handoff. Proposed independent ceiling for this film: $3 total incremental GPU/session expense, with a target below $2. Prepare locally while a separate cap is confirmed. No paid work has started for this project.
+On 2026-09-17, Olof removed session spending limits and authorized using the available platform balance for this work. Track actual cost and close owned compute after verified preservation; no additional budget confirmation is needed. Use a separately owned Pod and session folder so the concurrent A Seed for the Sea work remains independent. See the [standing authorization](../../../../docs/runpod.md#spending-authorization).

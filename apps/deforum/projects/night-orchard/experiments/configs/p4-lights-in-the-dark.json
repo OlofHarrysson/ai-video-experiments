@@ -1,0 +1,172 @@
+{
+  "case": "p4-lights-in-the-dark",
+  "seed": 917501,
+  "duration": 30,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-last-fruit",
+      "prompt": "An immense abandoned Victorian greenhouse stands above a midnight sea. Its tall curved blue glass roof and slender silver ribs sweep diagonally into deep indigo darkness. In the foreground a graceful silver branch arcs upward from the lower left, carrying one luminous translucent amber pear near the right third of the painting, slightly below center. The single pear is the unmistakable focal point, large enough to see its glowing flesh and delicate branching veins. Soft amber light from the pear illuminates a few silver leaves and the nearby glass ribs. Through the glass, a small cold moon hangs above an almost black sea. The air around the pear is open and dark; no branch or leaf crosses in front of it. A few tiny fallen leaves establish the enormous scale of the greenhouse. Rich surreal oil painting with dimensional chiaroscuro, silver botanical engraving, subtle imperfect glass reflections and luminous amber enamel. Strong asymmetrical composition, clear near and far forms, selective intricate detail, broad quiet shadows. The impossible scene feels intimate, mysterious and inhabited by light. No people, no lettering."
+    },
+    {
+      "at": 4,
+      "name": "the-light-within",
+      "prompt": "A closer view of one luminous translucent amber pear hanging from a graceful silver branch against the immense midnight-blue curved glass of an abandoned greenhouse above a black sea. The pear is the clear focal point, its amber skin now translucent like warm enamel and honey glass. Fine pale branching veins glow beneath the skin; a small delicate silver tree silhouette becomes visible within the glowing fruit, as though the fruit holds its own enormous interior. Silver leaves and blue greenhouse ribs frame the outer edges. Strong dimensional chiaroscuro, surreal oil painting, delicate botanical engraving, amber transmitted light against broad quiet indigo shadows. Keep the fruit volume simple and luminous, with depth behind its surface. No lettering, no people."
+    },
+    {
+      "at": 8.5,
+      "name": "an-opening-in-the-fruit",
+      "prompt": "The immense amber pear opens along a graceful curved cleft beside its silver branching veins. Its translucent honey-glass skin curls gently outward at the sides. Through the opening, a tiny complete silver orchard is clearly visible in deep blue starry darkness inside the fruit: delicate pale trees grow on small floating islands, carrying luminous amber pears. The large pear silhouette remains recognizable around this much deeper interior. A real view into a spacious impossible world, with near amber edges and faraway silver trees. The silver branching pattern becomes the tree at the edge of the opening. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    },
+    {
+      "at": 10.5,
+      "name": "the-orchard-inside",
+      "prompt": "Looking through a widening opening in translucent amber fruit into an enormous midnight orchard. The curved amber skin rolls back toward the far left and right edges like thin warm glass. Beyond it, silver trees with luminous amber pears grow on separate floating islands, their roots hanging in open starry indigo space. A slender nearest silver branch crosses the upper right and the path ahead is open. Distinct foreground edges, middle-distance tree silhouettes and distant small islands create profound spatial depth. The inside is much larger than the fruit outside. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    },
+    {
+      "at": 12.5,
+      "name": "among-the-silver-trees",
+      "prompt": "An impossible silver orchard suspended in a vast midnight-blue starry sky. Elegant silver trees bearing small luminous amber pears grow on a few distinct floating islands with hanging roots. One graceful silver tree at the right edge, another farther away on the left, and tiny islands scattered across the deep distance. Open dark blue space between the islands is the clear route into the scene. The last translucent amber curve frames only the far left edge; the central view is the immense orchard beyond. The lights are a few distinct warm fruit, not a wall of glitter. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    },
+    {
+      "at": 14.5,
+      "name": "leaving-the-amber-edge",
+      "prompt": "Moving out from beneath the last silver branch into the immense open sky of the night orchard. The nearest branch and its amber pears recede out of the right edge. The translucent amber veil dissolves, revealing deep midnight-blue starry space all across the center. Ahead and to the left, three distinct floating islands carry elegant silver pear trees, with long fine roots hanging into the dark void. Their small amber fruit illuminate nearby leaves. Near islands are richly shaded, distant ones tiny and blue. A clear open route between these separate islands, no enclosing walls or dome. Rich dimensional surreal oil painting, silver botanical engraving with soft enamel highlights, amber light in deep indigo. Large distinct silhouettes with air and depth between them, selective detail, subdued distant forms. No people, no lettering."
+    },
+    {
+      "at": 17,
+      "name": "the-wide-night-orchard",
+      "prompt": "A vast impossible orchard suspended among the stars: graceful silver pear trees grow upon separate floating rocky islands, their fine roots hanging freely in a deep midnight-blue void. A large island with a silver tree and several glowing amber pears hangs to the left, a smaller island is farther away near the upper right, and a distant procession of tiny islands recedes into the indigo horizon. Broad quiet dark sky between the islands gives an enormous sense of space. A faint ribbon of blue mist far below. The warm fruit are distinct points of light on the trees. Fully open starry sky, without glass, enclosing shell or architecture. Rich dimensional surreal oil painting, silver botanical engraving with soft enamel highlights, amber light in deep indigo. Large distinct silhouettes with air and depth between them, selective detail, subdued distant forms. No people, no lettering."
+    },
+    {
+      "at": 22.5,
+      "name": "lights-in-the-dark",
+      "prompt": "A majestic night orchard suspended in deep indigo starry space. One broad graceful silver pear tree dominates the left half on a large irregular floating rock island, its long exposed silver roots reaching down into the void. Warm luminous amber pears shine from within its canopy, gently lighting nearby silver leaves and the bark. Farther away to the right, a few much smaller islands with different elegant tree silhouettes recede into the dark blue distance, separated by broad quiet space. Cold blue moonlight rims the islands; amber fruit provide the warm pools of light. Rich dimensional oil painting with delicate silver botanical engraving and glowing amber enamel, strong chiaroscuro, subtle material texture. A spacious asymmetrical composition with one dominant tree and a clear sense of immense scale. The entire background is midnight-blue stars, no enclosing walls, no glass, no daylight, no people, no lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.59
+    },
+    {
+      "at": 22,
+      "noise": 0.59
+    },
+    {
+      "at": 23,
+      "noise": 0.65
+    },
+    {
+      "at": 25,
+      "noise": 0.65
+    },
+    {
+      "at": 27,
+      "noise": 0.59
+    },
+    {
+      "at": 29.5,
+      "noise": 0.55
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 22,
+      "duration": 7.5,
+      "center": [
+        0.42,
+        0.4
+      ],
+      "end": [
+        0.25,
+        0.12,
+        -0.2231435513142097,
+        0.025
+      ],
+      "velocity_start": [
+        0.0850051995806834,
+        -0.002999313476737727,
+        1.1665608190164318e-06,
+        -1.5005850618556674e-06
+      ],
+      "velocity_end": [
+        0.018,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708
+  ],
+  "prefix_root": "projects/night-orchard/exports/v001/p3-the-suspended-orchard",
+  "prefix_through": 528,
+  "motion_note": {
+    "incoming_fit_residual": 7.003393238045885e-14,
+    "target": "A modest widening and rising viewpoint to reveal the largest island and its roots; keep a gentle ending drift."
+  }
+}

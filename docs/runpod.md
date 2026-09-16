@@ -8,6 +8,10 @@ Current evidence: [serverless session results](../apps/deforum/projects/botanica
 
 RunPod skills and the Codex MCP connection are scoped to this Git repository. The `runpodctl` executable may be installed globally. No global RunPod skill, plugin marketplace, or MCP registration is needed.
 
+## Spending authorization
+
+On 2026-09-17, Olof removed the earlier session budget limits. The available RunPod account balance is authorized for this project's filmmaking and experiments; Olof manages funding the account. Do not ask for a new dollar cap for each session. Historical $3/$10/$50 limits remain provenance for their original runs, not current constraints. Continue tracking actual costs, choosing useful experiments, and deleting owned idle compute after verified preservation. This does not authorize topping up the account or changing payment arrangements.
+
 ## Installed files
 
 - `.agents/skills/`: eight unmodified official skills and their references: `runpod`, `runpod-mcp`, `runpodctl`, `runpod-templates`, `runpod-usage`, `flash`, `companion-clis`, and `runpod-migrate`.

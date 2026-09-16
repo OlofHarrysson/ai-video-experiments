@@ -1,0 +1,126 @@
+{
+  "case": "p2-a-world-within",
+  "seed": 917301,
+  "duration": 14.5,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-last-fruit",
+      "prompt": "An immense abandoned Victorian greenhouse stands above a midnight sea. Its tall curved blue glass roof and slender silver ribs sweep diagonally into deep indigo darkness. In the foreground a graceful silver branch arcs upward from the lower left, carrying one luminous translucent amber pear near the right third of the painting, slightly below center. The single pear is the unmistakable focal point, large enough to see its glowing flesh and delicate branching veins. Soft amber light from the pear illuminates a few silver leaves and the nearby glass ribs. Through the glass, a small cold moon hangs above an almost black sea. The air around the pear is open and dark; no branch or leaf crosses in front of it. A few tiny fallen leaves establish the enormous scale of the greenhouse. Rich surreal oil painting with dimensional chiaroscuro, silver botanical engraving, subtle imperfect glass reflections and luminous amber enamel. Strong asymmetrical composition, clear near and far forms, selective intricate detail, broad quiet shadows. The impossible scene feels intimate, mysterious and inhabited by light. No people, no lettering."
+    },
+    {
+      "at": 4,
+      "name": "the-light-within",
+      "prompt": "A closer view of one luminous translucent amber pear hanging from a graceful silver branch against the immense midnight-blue curved glass of an abandoned greenhouse above a black sea. The pear is the clear focal point, its amber skin now translucent like warm enamel and honey glass. Fine pale branching veins glow beneath the skin; a small delicate silver tree silhouette becomes visible within the glowing fruit, as though the fruit holds its own enormous interior. Silver leaves and blue greenhouse ribs frame the outer edges. Strong dimensional chiaroscuro, surreal oil painting, delicate botanical engraving, amber transmitted light against broad quiet indigo shadows. Keep the fruit volume simple and luminous, with depth behind its surface. No lettering, no people."
+    },
+    {
+      "at": 8.5,
+      "name": "an-opening-in-the-fruit",
+      "prompt": "The immense amber pear opens along a graceful curved cleft beside its silver branching veins. Its translucent honey-glass skin curls gently outward at the sides. Through the opening, a tiny complete silver orchard is clearly visible in deep blue starry darkness inside the fruit: delicate pale trees grow on small floating islands, carrying luminous amber pears. The large pear silhouette remains recognizable around this much deeper interior. A real view into a spacious impossible world, with near amber edges and faraway silver trees. The silver branching pattern becomes the tree at the edge of the opening. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    },
+    {
+      "at": 10.5,
+      "name": "the-orchard-inside",
+      "prompt": "Looking through a widening opening in translucent amber fruit into an enormous midnight orchard. The curved amber skin rolls back toward the far left and right edges like thin warm glass. Beyond it, silver trees with luminous amber pears grow on separate floating islands, their roots hanging in open starry indigo space. A slender nearest silver branch crosses the upper right and the path ahead is open. Distinct foreground edges, middle-distance tree silhouettes and distant small islands create profound spatial depth. The inside is much larger than the fruit outside. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    },
+    {
+      "at": 12.5,
+      "name": "among-the-silver-trees",
+      "prompt": "An impossible silver orchard suspended in a vast midnight-blue starry sky. Elegant silver trees bearing small luminous amber pears grow on a few distinct floating islands with hanging roots. One graceful silver tree at the right edge, another farther away on the left, and tiny islands scattered across the deep distance. Open dark blue space between the islands is the clear route into the scene. The last translucent amber curve frames only the far left edge; the central view is the immense orchard beyond. The lights are a few distinct warm fruit, not a wall of glitter. Rich dimensional surreal oil painting, silver botanical engraving, warm transmitted amber light, midnight indigo shadows, selective detail and broad open darkness. No people, no lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.61
+    },
+    {
+      "at": 8,
+      "noise": 0.61
+    },
+    {
+      "at": 8.5,
+      "noise": 0.69
+    },
+    {
+      "at": 10,
+      "noise": 0.74
+    },
+    {
+      "at": 12,
+      "noise": 0.74
+    },
+    {
+      "at": 14,
+      "noise": 0.68
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 8,
+      "duration": 6,
+      "center": [
+        0.635,
+        0.488
+      ],
+      "end": [
+        0.115,
+        0.012,
+        1.1631508098056809,
+        0.05
+      ],
+      "velocity_start": [
+        -0.029302268535823,
+        -0.011042064727545098,
+        0.21996344302248455,
+        -2.5773430693469732e-06
+      ],
+      "velocity_end": [
+        0.012,
+        0,
+        0.13,
+        -0.003
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336
+  ],
+  "prefix_root": "projects/night-orchard/exports/v001/p1-into-the-amber",
+  "prefix_through": 192,
+  "motion_note": {
+    "incoming_fit_residual": 1.160275184794196e-13,
+    "target": "Gap left of the engraved silver trunk; open the pear before entry."
+  }
+}

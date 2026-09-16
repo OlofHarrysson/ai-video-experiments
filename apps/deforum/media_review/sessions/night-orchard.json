@@ -1,0 +1,15 @@
+{
+  "title": "The Night Orchard",
+  "selected": [
+    "night-orchard"
+  ],
+  "clips": [
+    {
+      "id": "night-orchard",
+      "label": "The Night Orchard",
+      "note": "One amber pear becomes an orchard among the stars.",
+      "details": "A midnight greenhouse, a silver branch and one amber pear lead into a suspended orchard. The final drift reveals the islands and their roots. The transition is a visual transformation; the fruit does not perform a literal hinged opening. Fine leaves, bark and architecture redraw along the way.\n\nSilent first cut. Native 1536×1024 paintings. Same-model Krea opening and recurrent repainting, CFG 1, three Euler intervals, recorded fresh seeds. Forty-eight paintings retained at three paintings per displayed second. RIFE 4.25 scale 1 fills the intervals outside generation; the final seven frames continue the camera warp. Sixteen seconds at 24 fps.",
+      "source": "projects/night-orchard/exports/v001/p5-the-final-glide/through-0564/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

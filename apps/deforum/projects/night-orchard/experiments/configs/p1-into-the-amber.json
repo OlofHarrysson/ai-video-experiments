@@ -1,0 +1,87 @@
+{
+  "case": "p1-into-the-amber",
+  "seed": 917201,
+  "duration": 8.5,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-last-fruit",
+      "prompt": "An immense abandoned Victorian greenhouse stands above a midnight sea. Its tall curved blue glass roof and slender silver ribs sweep diagonally into deep indigo darkness. In the foreground a graceful silver branch arcs upward from the lower left, carrying one luminous translucent amber pear near the right third of the painting, slightly below center. The single pear is the unmistakable focal point, large enough to see its glowing flesh and delicate branching veins. Soft amber light from the pear illuminates a few silver leaves and the nearby glass ribs. Through the glass, a small cold moon hangs above an almost black sea. The air around the pear is open and dark; no branch or leaf crosses in front of it. A few tiny fallen leaves establish the enormous scale of the greenhouse. Rich surreal oil painting with dimensional chiaroscuro, silver botanical engraving, subtle imperfect glass reflections and luminous amber enamel. Strong asymmetrical composition, clear near and far forms, selective intricate detail, broad quiet shadows. The impossible scene feels intimate, mysterious and inhabited by light. No people, no lettering."
+    },
+    {
+      "at": 4,
+      "name": "the-light-within",
+      "prompt": "A closer view of one luminous translucent amber pear hanging from a graceful silver branch against the immense midnight-blue curved glass of an abandoned greenhouse above a black sea. The pear is the clear focal point, its amber skin now translucent like warm enamel and honey glass. Fine pale branching veins glow beneath the skin; a small delicate silver tree silhouette becomes visible within the glowing fruit, as though the fruit holds its own enormous interior. Silver leaves and blue greenhouse ribs frame the outer edges. Strong dimensional chiaroscuro, surreal oil painting, delicate botanical engraving, amber transmitted light against broad quiet indigo shadows. Keep the fruit volume simple and luminous, with depth behind its surface. No lettering, no people."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.54
+    },
+    {
+      "at": 3,
+      "noise": 0.53
+    },
+    {
+      "at": 5,
+      "noise": 0.58
+    },
+    {
+      "at": 8,
+      "noise": 0.61
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 8,
+      "center": [
+        0.929,
+        0.622
+      ],
+      "end": [
+        -0.179,
+        -0.102,
+        1.0296194171811581,
+        -0.055
+      ],
+      "velocity_start": [
+        -0.008,
+        -0.002,
+        0.045,
+        0
+      ],
+      "velocity_end": [
+        -0.004,
+        -0.004,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192
+  ],
+  "prefix_root": "projects/night-orchard/exports/v001/o1-silver-branch",
+  "prefix_through": 0
+}

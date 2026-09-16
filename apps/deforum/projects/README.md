@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Night Orchard](night-orchard/README.md): a new directed short; an amber fruit opens into an orchard among stars. In preparation.
+- [The Night Orchard](night-orchard/README.md): a 16-second directed short; an amber pear becomes an orchard among stars. Selected cut delivered, human feedback pending.
 
 - [Modern-model feedback study](modern-model-study/README.md): Klein 4B and Krea 2, same-model openings and feedback with model-specific prompting.
 

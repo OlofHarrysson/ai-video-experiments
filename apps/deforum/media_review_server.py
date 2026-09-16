@@ -13,6 +13,8 @@ SESSION = APP / "media_review/sessions/seed-for-sea.json"
 OUTPUT = APP / "projects/modern-model-study/exports/media-review-seed-for-sea-v001"
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    "/night-orchard": APP
+    / "projects/night-orchard/exports/media-review-v001/full-quality.html",
     "/seed-for-sea": APP
     / "projects/modern-model-study/exports/media-review-seed-for-sea-v001/full-quality.html",
     "/doorway-cli": APP
