@@ -10,6 +10,8 @@ The current focus is an iterative filmmaking practice: preserve every generation
 
 Start with [AGENTS.md](AGENTS.md): the project brief, working guidance and canonical documentation index. Read [current state](docs/current-state.md) for the active workflow and latest results, or the [research index](docs/research/README.md) for a specific technical or creative question.
 
+[Lessons learned](docs/lessons-learned.md) brings together a cross-project critique of the films and artwork, technical findings, recorded preferences and independent second opinions. Its [evidence index](docs/reviews/2026-09-16-retrospective.md) identifies the media actually inspected and the limits of the review.
+
 ## Experiments
 
 - [Deforum](apps/deforum/README.md): recurrent image diffusion, spatial controls and film experiments using ComfyUI on RunPod.

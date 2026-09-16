@@ -36,6 +36,7 @@ Start here for repository documentation. Add shared explanations as separate `do
 - [Project workflow](docs/workflow.md): folder ownership, shared code, generation records, continuation and cuts.
 - [Motion palette](docs/motion-palette.md): choose supported pans, zooms, plane turns, waves, shear and spirals.
 - [Review and feedback](docs/review-and-feedback.md): first-pass screening, human comparisons and collaboration conventions.
+- [Lessons learned](docs/lessons-learned.md): cross-project critique, evidence, second opinions and implications for the next film.
 - [Learning journal](docs/olof-learning-journal.md): explicit preferences, demonstrated understanding and open learning questions.
 - [Frame inspection](docs/video-review.md): timestamp extraction, dense windows and comparison sheets.
 - [Media reviewer](apps/deforum/media_review/README.md): linked playback, frame/painting stepping and generation details.
