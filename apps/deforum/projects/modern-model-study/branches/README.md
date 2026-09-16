@@ -1,6 +1,6 @@
 # Continuation drafts
 
-Each folder records an alternative future from a preserved painting. The original film stays unchanged. The local [reviewer](http://localhost:3028/) creates these through **Branch from here**; see [planner usage](../../../media_review/README.md#plan-a-continuation).
+Each folder records an alternative future from a preserved painting. The original film stays unchanged. The assistant creates these with the [motion-preview CLI](../../../MOTION_PREVIEW.md). The earlier browser-created draft is retained as a historical tool-validation record.
 
 | Draft | Purpose | Status |
 | --- | --- | --- |

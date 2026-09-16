@@ -20,6 +20,8 @@ The source and wheel build uses `uv build`; Hatchling is the build backend. Only
 
 ## Current creative workflow
 
+Use the [motion-preview CLI](MOTION_PREVIEW.md) for assistant-operated painting inspection, editable motion plans, previews with the incoming join, and preserved continuation drafts. The human media reviewer stays focused on playback and artistic feedback.
+
 Use the [persistent-volume Pod workflow](POD.md) for modern-model sessions. Retain the authorized 50 GB `deforum-models` volume between experiments; delete finished owned Pods.
 
 Work from `apps/deforum/`. The Python runner manages spatial transforms, cadence and workflow submission, locally or on the Pod; ComfyUI generates images on RunPod. Collection and review preserve local archives. See [current state](../../docs/current-state.md) for the active recipe. Earlier experiments using Difforum/depth nodes remain preserved.

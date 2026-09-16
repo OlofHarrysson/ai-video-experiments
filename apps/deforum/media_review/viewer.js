@@ -44,7 +44,6 @@
       slot.label.textContent = `Frame ${frame} · ${slot.clip.times[frame].toFixed(3)} s`;
       slot.kind.textContent = textFor(slot.clip, frame) + (time >= slot.clip.duration ? ' · clip ended' : '');
       slot.panel.dataset.frame = String(frame);
-      if (slot.branch) slot.branch.href = `/branch?${new URLSearchParams({source:slot.clip.branch_source,frame})}`;
     }
     const anchors = master().anchors;
     find('[data-action="previous-painting"]').disabled = !ready || paintingAt(anchors, cursor, -1) === cursor;
@@ -200,13 +199,7 @@
       video.setAttribute('aria-label', clip.label); video.src = clip.src; panel.append(video);
       const meta = document.createElement('div'); meta.className = 'review-meta text-small tabular-nums';
       const label = document.createElement('span'), kind = document.createElement('span'); meta.append(label, kind); panel.append(meta);
-      let branch = null;
-      if (clip.branch_source && ['localhost','127.0.0.1'].includes(location.hostname)) {
-        branch = document.createElement('a'); branch.className = 'btn'; branch.textContent = 'Branch from here';
-        branch.setAttribute('aria-label', `Plan a continuation from video ${index+1}`);
-        branch.addEventListener('click', pause); meta.append(branch);
-      }
-      stack.append(panel); slots.push({clip, video, panel, label, kind, branch});
+      stack.append(panel); slots.push({clip, video, panel, label, kind});
       if (video.requestVideoFrameCallback) {
         const presented = (_, metadata) => {
           if (epoch !== generation) return;

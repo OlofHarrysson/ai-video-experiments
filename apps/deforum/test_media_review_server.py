@@ -1,13 +1,11 @@
 """Exercise the loopback HTTP boundary with temporary media, without inference."""
 
-import json
 import tempfile
 import threading
 import unittest
 from http.client import HTTPConnection
 from http.server import ThreadingHTTPServer
 from pathlib import Path
-from types import SimpleNamespace
 from unittest.mock import patch
 from urllib.parse import urlencode
 
@@ -30,9 +28,7 @@ class ServerTests(unittest.TestCase):
         mocked_app.start()
         self.addCleanup(mocked_app.stop)
         self.http = ThreadingHTTPServer(("127.0.0.1", 0), QuietHandler)
-        self.http.planner = SimpleNamespace(
-            sources={"movie.mp4": "Fixture"}, work=self.app
-        )
+        self.http.media_sources = {"movie.mp4": "Fixture"}
         self.http.review_path = self.app / "local.html"
         thread = threading.Thread(target=self.http.serve_forever, daemon=True)
         thread.start()
@@ -77,19 +73,23 @@ class ServerTests(unittest.TestCase):
             self.assertNotIn(b"private fixture", content)
         self.assertEqual(self.request("GET", "/branch-assets/../private.txt")[0], 404)
 
-    def test_reject_cross_origin_and_invalid_write_bodies(self):
-        for body, headers in (
-            (
-                "{}",
-                {"Content-Type": "application/json", "Origin": "https://example.com"},
-            ),
-            ("{}", {"Content-Type": "text/plain"}),
-            ("[]", {"Content-Type": "application/json"}),
-            ("bad JSON", {"Content-Type": "application/json"}),
+    def test_reviewer_has_no_authoring_routes_or_write_api(self):
+        for route in (
+            "/branch",
+            "/branch.js",
+            "/api/branch/source",
+            "/api/branch/painting",
         ):
-            status, _, content = self.request("POST", "/api/branch/save", body, headers)
-            self.assertEqual(status, 400)
-            self.assertIn("error", json.loads(content))
+            self.assertEqual(self.request("GET", route)[0], 404)
+        before = sorted(self.app.iterdir())
+        for route in ("/api/branch/save", "/api/branch/preview"):
+            self.assertEqual(
+                self.request("POST", route, "{}", {"Content-Type": "application/json"})[
+                    0
+                ],
+                501,
+            )
+        self.assertEqual(sorted(self.app.iterdir()), before)
 
 
 if __name__ == "__main__":

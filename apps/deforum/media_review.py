@@ -94,8 +94,6 @@ def build(session, output, inline=None, width=480, crf=30, local=False):
         clip.update(details=item.get('details', ''), times=times, duration=duration,
                     roles=[row.get('provenance') for row in rows],
                     anchors=[i for i, row in enumerate(rows) if row.get('provenance', {}).get('kind') == 'anchor'])
-        if (source.parent.parent / 'retiming.json').is_file() and clip['anchors']:
-            clip['branch_source'] = item['source']
         if target is not None:
             compact.append({**clip, 'src': data_uri(target)})
         originals.append({**clip, 'src': data_uri(source)})

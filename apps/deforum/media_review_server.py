@@ -7,7 +7,6 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
-from deforum_lab.media.branching import BranchPlanner, under
 from media_review import APP, build
 
 SESSION = APP / "media_review/sessions/doorway.json"
@@ -142,50 +141,6 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 except (BrokenPipeError, ConnectionResetError):
                     pass
 
-    def send_content(self, content, kind, head=False):
-        self.send_response(200)
-        self.send_header("Content-Type", kind)
-        self.send_header("Content-Length", str(len(content)))
-        self.send_header("Cache-Control", "no-store")
-        self.send_header("X-Content-Type-Options", "nosniff")
-        self.end_headers()
-        if not head:
-            self.wfile.write(content)
-
-    def json_error(self, error, code=400):
-        content = json.dumps({"error": str(error)}).encode()
-        self.send_response(code)
-        self.send_header("Content-Type", "application/json")
-        self.send_header("Content-Length", str(len(content)))
-        self.end_headers()
-        self.wfile.write(content)
-
-    def do_POST(self):
-        try:
-            # Local page writes only; no cross-origin browser access or path inputs.
-            origin = self.headers.get("Origin")
-            if origin and urlsplit(origin).netloc != self.headers.get("Host"):
-                raise ValueError("Cross-origin writes are not allowed")
-            if self.headers.get("Content-Type") != "application/json":
-                raise ValueError("Expected application/json")
-            length = int(self.headers.get("Content-Length", "0"))
-            if not 0 < length <= 24000:
-                raise ValueError("Invalid request size")
-            data = json.loads(self.rfile.read(length))
-            if not isinstance(data, dict):
-                raise TypeError("Expected a JSON object")
-            route = urlsplit(self.path).path
-            if route == "/api/branch/preview":
-                result = self.server.planner.preview(data)
-            elif route == "/api/branch/save":
-                result = self.server.planner.save_draft(data["id"])
-            else:
-                self.send_error(404)
-                return
-            self.send_content(json.dumps(result).encode(), "application/json")
-        except (ValueError, KeyError, TypeError, OSError) as error:
-            self.json_error(error)
-
     def do_HEAD(self):
         self.respond(head=True)
 
@@ -198,54 +153,14 @@ class ReviewHandler(BaseHTTPRequestHandler):
         if route == "/review-media":
             try:
                 source = parse_qs(parsed.query)["source"][0]
-                if source not in self.server.planner.sources:
+                if source not in self.server.media_sources:
                     raise ValueError("Unknown review media")
-                self.send_video(under(APP / source, APP), head)
+                path = (APP / source).resolve()
+                if not path.is_relative_to(APP.resolve()):
+                    raise ValueError("Path outside workspace")
+                self.send_video(path, head)
             except (ValueError, KeyError, OSError) as error:
-                self.json_error(error)
-            return
-        if route in ("/branch", "/branch.js"):
-            path = (
-                APP
-                / "media_review"
-                / ("branch.html" if route == "/branch" else "branch.js")
-            )
-            self.send_content(
-                path.read_bytes(),
-                "text/html; charset=utf-8"
-                if route == "/branch"
-                else "text/javascript; charset=utf-8",
-                head,
-            )
-            return
-        if route in ("/api/branch/source", "/api/branch/painting"):
-            try:
-                args = parse_qs(parsed.query)
-                source = args["source"][0]
-                frame = int(args["frame"][0])
-                if route.endswith("/source"):
-                    self.send_content(
-                        json.dumps(
-                            self.server.planner.describe(source, frame)
-                        ).encode(),
-                        "application/json",
-                        head,
-                    )
-                else:
-                    selection = self.server.planner.selection(source, frame)
-                    self.send_content(
-                        selection["painting"].read_bytes(), "image/png", head
-                    )
-            except (ValueError, KeyError, TypeError, OSError) as error:
-                self.json_error(error)
-            return
-        match = re.fullmatch(r"/branch-assets/([a-f0-9]{32})/preview.mp4", route)
-        if match:
-            path = self.server.planner.work / match[1] / "preview.mp4"
-            if not path.is_file():
-                self.send_error(404)
-                return
-            self.send_video(path, head)
+                self.send_error(400, str(error))
             return
         path = (
             self.server.review_path
@@ -274,7 +189,7 @@ def main():
     for session in (APP / "media_review/sessions").glob("*.json"):
         for item in json.loads(session.read_text()).get("clips", []):
             sources[item["source"]] = item["label"]
-    server.planner = BranchPlanner(APP, sources)
+    server.media_sources = sources
     server.review_path = Path(result["local"])
     print(f"Media review ready at http://127.0.0.1:{port}", flush=True)
     server.serve_forever()

@@ -1,5 +1,7 @@
 import json
 import math
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -145,7 +147,7 @@ class BranchTests(unittest.TestCase):
             },
         )
         self.source = str(self.video.relative_to(self.app))
-        self.planner = BranchPlanner(self.app, {self.source: "Fixture"})
+        self.planner = BranchPlanner(self.app)
         self.request = {
             "source": self.source,
             "frame": 10,
@@ -177,7 +179,7 @@ class BranchTests(unittest.TestCase):
             json.loads((self.root / "config.json").read_text()), self.config
         )
 
-    def test_refuse_unknown_media_and_changed_anchor(self):
+    def test_refuse_outside_workspace_and_changed_anchor(self):
         with self.assertRaises(ValueError):
             self.planner.describe("../../secret", 0)
         (self.root / "anchors/0012.png").write_bytes(b"changed")
@@ -234,6 +236,74 @@ class BranchTests(unittest.TestCase):
         for change in ({"zoom": float("nan")}, {"duration": 99}, {"prompt": ""}):
             with self.assertRaises(ValueError):
                 self.planner.plan({**self.request, **change})
+
+    def cli(self, *args, success=True):
+        result = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "deforum_lab.media.motion_preview",
+                "--app",
+                str(self.app),
+                *args,
+            ],
+            cwd=self.tmp.name,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if success:
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return json.loads(result.stdout)
+        self.assertEqual(result.returncode, 2)
+        self.assertNotIn("Traceback", result.stderr)
+        return result.stderr
+
+    def test_cli_inspect_edit_preview_and_save_without_server(self):
+        info = self.cli("inspect", self.source, "--frame", "10")
+        self.assertEqual(info["source_frame"], 12)
+        self.assertTrue(Path(info["painting_path"]).is_file())
+        initialized = self.cli(
+            "init",
+            self.source,
+            "--frame",
+            "10",
+            "--intent",
+            "Reveal the forest",
+            "--out",
+            "plan.json",
+        )
+        plan_path = Path(initialized["plan_path"])
+        plan = json.loads(plan_path.read_text())
+        self.assertEqual(plan["prompt"], "A doorway")
+        plan.update(zoom=1.4, duration=1, prompt="A new forest")
+        plan_path.write_text(json.dumps(plan))
+        preview = self.cli("preview", str(plan_path))
+        self.assertTrue(Path(preview["preview_path"]).is_file())
+        self.assertTrue(Path(preview["summary_path"]).is_file())
+        self.assertNotIn("preview_url", preview)
+        saved = self.cli("save", preview["id"])
+        self.assertEqual(saved["paintings_preserved"], 2)
+        self.assertTrue((Path(saved["branch_path"]) / "config.json").is_file())
+        self.assertEqual(self.cli("save", preview["id"]), saved)
+
+    def test_cli_rejects_overwrite_and_bad_plan(self):
+        path = self.app / "plan.json"
+        path.write_text("retained")
+        error = self.cli(
+            "init",
+            self.source,
+            "--frame",
+            "10",
+            "--intent",
+            "Reveal",
+            "--out",
+            str(path),
+            success=False,
+        )
+        self.assertIn("already exists", error)
+        self.assertEqual(path.read_text(), "retained")
+        self.assertIn("motion-preview:", self.cli("preview", str(path), success=False))
 
 
 if __name__ == "__main__":

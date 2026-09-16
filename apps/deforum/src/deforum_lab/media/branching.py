@@ -59,15 +59,14 @@ def incoming_velocity(phrases, seconds, center):
 
 
 class BranchPlanner:
-    def __init__(self, app, sources):
+    def __init__(self, app):
         self.app = Path(app).resolve()
-        self.sources = dict(sources)
         self.work = self.app / "work/motion-planner"
         self.lock = threading.Lock()
 
     def resolve(self, source):
-        require(source in self.sources, "Video is not in a saved review session")
         video = under(self.app / source, self.app)
+        require(video.suffix.lower() == ".mp4", "Expected a local MP4 delivery")
         manifest = read(video.parent / "manifest.json")
         timing = read(video.parent.parent / "retiming.json")
         root = video.parent.parent.parent
@@ -114,7 +113,7 @@ class BranchPlanner:
         inherited = owner_at(self.app, root, source_frame)
         scene, sigmas = recipe(config, source_frame / FPS)
         return {
-            "source": source,
+            "source": str(video.relative_to(self.app)),
             "requested_frame": frame,
             "display_frame": display,
             "source_frame": source_frame,
@@ -154,7 +153,11 @@ class BranchPlanner:
         velocity, residual = incoming_velocity(
             s["incoming_phrases"], s["source_seconds"], [0.75, 0.5]
         )
-        public.update(incoming_velocity=velocity, incoming_residual=residual)
+        public.update(
+            incoming_velocity=velocity,
+            incoming_residual=residual,
+            painting_path=str(s["painting"]),
+        )
         return public
 
     def plan(self, request):
@@ -194,7 +197,7 @@ class BranchPlanner:
             s["incoming_phrases"], s["source_seconds"], center
         )
         v0 = fitted if request["match_speed"] else [0, 0, 0, 0]
-        # UI directions describe the viewpoint; image translation has the opposite sign.
+        # Plan directions describe the viewpoint; image translation has the opposite sign.
         end = [
             -values["pan_x"] * 1.5,
             -values["pan_y"],
@@ -376,7 +379,9 @@ class BranchPlanner:
                 lead_seconds=lead / FPS,
                 frame_count=count,
                 fps=FPS,
-                preview_url=f"/branch-assets/{identifier}/preview.mp4",
+                preview_path=str(folder / "preview.mp4"),
+                summary_path=str(folder / "summary.json"),
+                request_path=str(folder / "request.json"),
             )
             save(folder / "config.json", config)
             save(folder / "request.json", request)
