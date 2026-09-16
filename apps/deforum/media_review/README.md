@@ -10,7 +10,7 @@ The default human review path is a dedicated browser window. Olof primarily uses
 
 Devrun service `media-review` runs `uv run python media_review_server.py` from `apps/deforum/`. The last recorded URL is `http://localhost:3028/`; inspect Devrun's `effectiveUrl` before handoff. Use Devrun/shared terminal for routine delivery and verification; Olof prefers this over Chrome integration. The server binds only to loopback and serves the generated review document at `/` or `/full-quality.html`, with no repository directory listing or arbitrary file routes. It rebuilds the default saved session on startup. Restart through Devrun after source/session edits; the service remains running for Olof's review until stopped.
 
-The full-quality local version has no 1 MB chat limit and does not need preview transcoding. The inline version remains optional for compact demonstrations, not the default close-comparison surface.
+The root page streams the original MP4s through allowlisted local URLs, with range requests for seeking. It avoids embedding large base64 videos in the live page. The standalone `full-quality.html` remains self-contained for offline use. The inline version remains optional for compact demonstrations, not the default close-comparison surface.
 
 The allowlisted `/state-replay` route serves the separately built `media-review-state-replay-v001/full-quality.html`. It leaves the default session available for concurrent experiment reviews. Rebuild that output from `sessions/state-replay.json` when its data changes; missing named outputs return 404.
 
@@ -44,11 +44,29 @@ Present the inline file with the visualization content reference, alongside a no
 
 The first version accepts zero-start MP4s. It deliberately rejects nonzero start timestamps rather than giving uncertain seek labels. Source files are read-only; the full-quality page embeds their original bytes. The receipt records source and preview hashes, frame counts, dimensions and provenance verification.
 
+## Plan a continuation
+
+On the local review page, pause at a useful moment and click **Branch from here** below that video. An interpolated frame snaps backward to the preceding saved painting; the page shows both delivery and source frame numbers. This first planner supports the current 3:2, 24 fps retimed movies with cadence 12 and complete delivery manifests. Older unrelated export formats are rejected explicitly.
+
+1. State the story purpose. Set the move's duration, final enlargement, horizontal/vertical pan, rotation and zoom center. Timing is in playback seconds; duration rounds to a whole painting interval.
+2. Keep **Carry incoming speed** selected to fit the previous planned movement's pan, zoom and rotation at the join. The move eases toward the chosen destination with zero final zoom/roll speed; the selected sideways drift continues. Regional warps only admit an approximate fit. An overshoot warning means the path grows or shrinks beyond the requested endpoint before settling; inspect it and change the plan.
+3. Open **Next description and repaint strength** to set the next prompt and starting noise. They take effect at the first new painting, not on the retained branch painting. The preview labels that event but does not run diffusion.
+4. Click **Preview motion**. It includes up to one second of the actual previous film, followed by a deformation of the selected painting. Play, scrub and step frames across the join. Changing settings invalidates the preview for saving.
+5. Click **Save branch** to preserve a separate draft in `projects/<project>/branches/branch-<id>/`. It contains the config, parent hashes, retained painting prefix, intent and motion preview. Saved originals are verified and cloned where the filesystem supports it. Source material is unchanged, and repeated saves of one preview return the same draft.
+
+This is a small planning surface: pan, zoom and roll with one next prompt/noise level. It does not yet provide visual handles, regional-warp editing, a multi-event prompt timeline or a generation button. A motion preview cannot predict repainting or RIFE's perceptual motion. Matching the planned velocity is useful but does not prove the final diffusion join will look smooth.
+
+For agent execution, use the saved config with `render_paintings`, `output=branch_root.parent`, `first_frame=prefix_through+cadence`, and `last_frame=painting_frames[-1]`. Use the owning project's Pod/finishing runbook, preserve the prefix, and generate a short continuation for review. This renderer compatibility is covered by local configuration/preservation tests; a paid generation from a UI-created draft has not been attempted yet.
+
+Preview scratch lives in `work/motion-planner/`. Only small MP4s and JSON are written there, with no new PNG sequence. Saved branch PNGs and preview MP4s are ignored by Git; config/provenance JSON can be versioned. These are local retained copies, not an external backup.
+
 ## Validation
+
+Continuation planner checked on 2026-09-16: 81 Python tests and two timeline tests passed; syntax and scoped Ruff checks passed. Coverage includes the new curve's incoming/outgoing velocity and inverse, parent-motion lookup, frame snapping, source-hash refusal, preserved prefixes, idempotent draft saving, MP4 range serving and blocked cross-origin writes. Browser checks at 1280×720 and 390×844 covered layout; the desktop flow covered preview playback, scrubbing, prompt details, stale-preview invalidation, saving a 41-painting doorway branch and reviewer arrow/painting shortcuts. Original movie/config and all 41 retained paintings were reverified afterward. A preview uses no GPU inference.
 
 ```bash
 node --test media_review/timeline.test.cjs
-uv run --with pillow python -m unittest test_media_review test_video_review
+uv run --locked python -m unittest test_media_review test_video_review test_branching test_media_review_server
 ```
 
 The initial three clips each have 156 frames, 13 certified paintings and 6.5 seconds at 24 fps. Preview decoding, timestamp preservation and source hashes are checked during every build. The pure timeline tests include fractional/variable timing and irregular painting intervals.

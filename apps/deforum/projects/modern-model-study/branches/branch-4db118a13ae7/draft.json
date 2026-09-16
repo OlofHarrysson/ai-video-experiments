@@ -1,0 +1,74 @@
+{
+  "status": "draft-not-generated",
+  "intent": "Approach the doorway smoothly, then release forward movement into a gentle sideways drift.",
+  "source": {
+    "source": "projects/modern-model-study/exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4",
+    "frame": 320,
+    "painting_sha256": "7a768872e0b964fe7566b8ba2ed3cfb167176692954a732a653d05b880e37a04",
+    "config_sha256": "361de4ec2b61f7fae10a9be018528d9ec45458cb5148bb107d67c47aeeb2b78f",
+    "video_sha256": "65b7ec65728c67e856fbdc67c4affe4ea5789e2fdd55c14e99ca8475c7ce936c"
+  },
+  "motion_preview": {
+    "display_start": 13.333333333333334,
+    "source_frame": 480,
+    "duration": 2.0,
+    "source_duration": 3.0,
+    "speed": 1.5,
+    "zoom_min": 1.0,
+    "zoom_max": 1.8012337117311144,
+    "zoom_end": 1.8,
+    "incoming_velocity": [
+      -0.10931019158919025,
+      0.056131465526264135,
+      0.6324813747815942,
+      1.960398360696325e-16
+    ],
+    "outgoing_start_velocity": [
+      -0.10931019158919025,
+      0.056131465526264135,
+      0.6324813747815942,
+      1.960398360696325e-16
+    ],
+    "incoming_residual": 3.6768352122510707e-13,
+    "warnings": [],
+    "timeline": [
+      {
+        "after": 0.333,
+        "noise": 0.56,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.667,
+        "noise": 0.56,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.0,
+        "noise": 0.56,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.333,
+        "noise": 0.56,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.667,
+        "noise": 0.56,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.0,
+        "noise": 0.56,
+        "prompt": "New description"
+      }
+    ],
+    "intent": "Approach the doorway smoothly, then release forward movement into a gentle sideways drift.",
+    "prompt": "A tall open ivory doorway fills most of the view. Its straight pale jambs frame a sunlit emerald forest with a monumental golden harp standing among the trees. Curving golden railway rails cross the near threshold and continue into the forest. The crimson wall is confined to the outer sides. The scene inside the doorway has deep layered foliage and warm sunlight. A luminous surrealist oil painting, dimensional carved ivory and polished golden instruments, deep emerald foliage, warm sunbeams, rich shadows and crisp reflected details. Readable near and far forms.",
+    "id": "4db118a13ae7442ba256ecac523cdd14",
+    "lead_seconds": 1.0,
+    "frame_count": 73,
+    "fps": 24,
+    "preview_url": "/branch-assets/4db118a13ae7442ba256ecac523cdd14/preview.mp4"
+  }
+}

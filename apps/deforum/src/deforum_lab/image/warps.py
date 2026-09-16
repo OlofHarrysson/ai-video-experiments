@@ -37,8 +37,42 @@ def transform(points, seconds, motion, inverse=False):
 def mapping(points, seconds, phrases, inverse=False):
     selected = reversed(phrases) if inverse else phrases
     for phrase in selected:
-        if phrase.get("kind") not in (None, "cruise", "plane", "shear", "wave"):
+        if phrase.get("kind") not in (
+            None,
+            "cruise",
+            "plane",
+            "shear",
+            "wave",
+            "continuation",
+        ):
             raise ValueError(f"Unknown spatial effect: {phrase['kind']}")
+        if phrase.get("kind") == "continuation":
+            # Hermite path in translation, log scale and radians. Its first
+            # derivative is explicit so a branch can retain the incoming speed.
+            duration = phrase["duration"]
+            if duration <= 0:
+                raise ValueError("Continuation duration must be positive")
+            elapsed = max(0.0, seconds - phrase["start"])
+            u = min(1.0, elapsed / duration)
+            end = np.asarray(phrase["end"], dtype=float)
+            v0 = np.asarray(phrase["velocity_start"], dtype=float)
+            v1 = np.asarray(phrase["velocity_end"], dtype=float)
+            state = (
+                (-2 * u**3 + 3 * u * u) * end
+                + (u**3 - 2 * u * u + u) * duration * v0
+                + (u**3 - u * u) * duration * v1
+                + max(0.0, elapsed - duration) * v1
+            )
+            center = np.asarray(phrase["center"])
+            scale = np.exp(state[2])
+            q = (points - center - state[:2]) / scale if inverse else points - center
+            angle = -state[3] if inverse else state[3]
+            c, s = np.cos(angle), np.sin(angle)
+            q = np.stack(
+                [c * q[..., 0] - s * q[..., 1], s * q[..., 0] + c * q[..., 1]], -1
+            )
+            points = center + q if inverse else center + scale * q + state[:2]
+            continue
         if phrase.get("kind") == "cruise":
             # A constant underlying velocity can carry motion through phrase joins.
             t = max(0.0, seconds - phrase.get("start", 0.0))

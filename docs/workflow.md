@@ -21,6 +21,7 @@ apps/deforum/
       runs/<run-id>/            frozen settings, frames, receipts, preview
       cuts/v001.md              ordered source ranges and editorial intent
       exports/v001/             assembled previews, when available
+      branches/branch-<id>/     continuation drafts, retained paintings and lineage
   work/                         private temporary infrastructure receipts
 ```
 
@@ -62,6 +63,8 @@ The first session follows this structure too: six attempts in the botanical proj
 8. Verify local originals and exports before deleting experiment-owned cloud resources. Keep rejected takes. Never use cleanup to prune creative assets.
 
 For a new experiment, copy the short headings from `experiments/baseline.md` into a descriptively named Markdown file. Use lowercase hyphenated IDs. The runner requires that note to exist, so every render has a question to return to.
+
+For current Krea movies, the [reviewer's continuation planner](../apps/deforum/media_review/README.md#plan-a-continuation) provides a local branch workflow: select a saved painting, record story purpose, preview the incoming film and proposed movement together, then save a separate draft. Inspect motion, framing, next prompt and noise timing together before running diffusion. The first controls cover pan, zoom and roll with an incoming-speed fit; regional choreography remains available through the shared renderer. Saving a draft does not generate paintings. Keep the original prefix and generate only the future portion; if the resulting artwork changes the route, branch again from an earlier painting.
 
 ## Cuts and frame numbers
 

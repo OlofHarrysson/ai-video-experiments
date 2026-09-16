@@ -14,6 +14,7 @@ Each move has a direction, amount, interval, speed profile and, where applicable
 | --- | --- | --- | --- |
 | Travel sideways or diagonally | `travel: [x,y]` | Follow a bridge, open space, distant light or horizon | Moving artwork left reads as the viewpoint travelling right |
 | Keep drifting through a transition | `kind: cruise`, `velocity`, `roll_rate`, `log_zoom_rate` per source second | Carry movement across another effect's slowdown or reversal | Other transforms can cancel this; inspect net motion |
+| Replace a future move while carrying its incoming speed | `kind: continuation`, endpoint pan/log-scale/roll, `velocity_start`, `velocity_end` | Branch from a painting and ease toward a new framing; release forward zoom into lateral drift | Cubic curve can overshoot; regional incoming motion only admits an approximate pan/zoom/roll fit |
 | Push into / pull away from a feature | `zoom` positive / negative, `center` | Enter a window or reveal a surrounding world | Negative zoom must stay above -1; prolonged push crowds objects |
 | Roll the entire image | `turn`, large `radius` (e.g. 6) | Bank through an arch or tilt a horizon | Large radius is approximately global roll; cruise roll is exactly global |
 | Form a local spiral | `turn`, smaller `radius`, chosen `center`, optionally `zoom` | Coil a ribbon, garden or cloud around a visible opening | Prolonged twisting can destroy a useful silhouette |
@@ -22,6 +23,8 @@ Each move has a direction, amount, interval, speed profile and, where applicable
 | Send a bend across the scene | `kind: wave`, `axis`, `amplitude`, `wavelength`, `cycles` | Flowing water, cloth, clouds or a less rigid transition | Short wavelengths visibly wobble straight architecture |
 
 A standard phrase also needs `start` and `duration`. Its amount eases from zero to its final value; the resulting transform persists after the phrase finishes. A wave instead fades in/out during its interval. Cruise continues at its specified rates. Phrase order matters; all inverse transforms are applied in reverse order for correct image resampling.
+
+The [continuation planner](../apps/deforum/media_review/README.md#plan-a-continuation) exposes the continuation curve on a selected painting and includes the original lead-in. Its four curve components are image translation x/y, natural-log enlargement and roll in radians; velocities use source seconds. The UI converts playback seconds and viewpoint directions. After its endpoint, the curve continues at its specified ending velocity. Check the complete path, not just its destination or velocity fit; RIFE and repainting can still affect the perceived join.
 
 The renderer already supports these controls individually and in combination. Set unused standard controls explicitly to zero: `zoom` and `turn` have nonzero historical defaults. For example, a translation-only phrase needs `zoom: 0`, `turn: 0` and its chosen `travel`. Pure scaling needs `turn: 0`, and a twist without scaling needs `zoom: 0`. A waveform is a deformation field, not an instruction to alternate whole-shot pans.
 

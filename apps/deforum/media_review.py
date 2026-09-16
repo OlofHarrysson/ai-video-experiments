@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import subprocess
+from urllib.parse import urlencode
 
 from video_review import attach_provenance, probe, sha256
 
@@ -50,13 +51,13 @@ def check_inline_size(text):
         raise ValueError('Inline review exceeds 1 MB. Choose fewer/shorter clips or a smaller --width; full-quality sources are unchanged.')
 
 
-def build(session, output, inline=None, width=480, crf=30):
+def build(session, output, inline=None, width=480, crf=30, local=False):
     data = json.loads(session.read_text())
     selected = validate_session(data)
     output.mkdir(parents=True, exist_ok=True)
     cache = APP / 'work/media-review/cache'
     cache.mkdir(parents=True, exist_ok=True)
-    compact, originals, receipts = [], [], []
+    compact, originals, receipts, served = [], [], [], []
     for item in data['clips']:
         source = (APP / item['source']).resolve()
         if source.suffix.lower() != '.mp4':
@@ -93,9 +94,12 @@ def build(session, output, inline=None, width=480, crf=30):
         clip.update(details=item.get('details', ''), times=times, duration=duration,
                     roles=[row.get('provenance') for row in rows],
                     anchors=[i for i, row in enumerate(rows) if row.get('provenance', {}).get('kind') == 'anchor'])
+        if (source.parent.parent / 'retiming.json').is_file() and clip['anchors']:
+            clip['branch_source'] = item['source']
         if target is not None:
             compact.append({**clip, 'src': data_uri(target)})
         originals.append({**clip, 'src': data_uri(source)})
+        served.append({**clip, 'src': '/review-media?'+urlencode({'source':item['source']})})
         if sha256(source) != digest:
             raise ValueError('Source changed during review build')
         receipts.append({'id': item['id'], 'source': str(source), 'source_sha256': digest,
@@ -113,6 +117,10 @@ def build(session, output, inline=None, width=480, crf=30):
     page = ASSETS.joinpath('standalone.html').read_text().replace('__TITLE__', html.escape(data['title'])).replace('__FRAGMENT__', full)
     full_path = output / 'full-quality.html'
     full_path.write_text(page)
+    local_path = output / 'local.html'
+    if local:
+        content=fragment({**common,'clips':served,'quality':'Original video files · full resolution'})
+        local_path.write_text(ASSETS.joinpath('standalone.html').read_text().replace('__TITLE__',html.escape(data['title'])).replace('__FRAGMENT__',content))
     if inline is not None:
         inline.parent.mkdir(parents=True, exist_ok=True)
         inline.write_text(small)
@@ -120,7 +128,7 @@ def build(session, output, inline=None, width=480, crf=30):
                'inline': str(inline) if inline else None, 'inline_bytes': len(small.encode()) if small else None, 'inline_sha256': sha256(inline) if inline else None,
                'full_quality': str(full_path), 'full_quality_sha256': sha256(full_path)}
     (output / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
-    return {'inline': str(inline) if inline else None, 'inline_bytes': len(small.encode()) if small else None, 'full_quality': str(full_path)}
+    return {'inline': str(inline) if inline else None, 'inline_bytes': len(small.encode()) if small else None, 'full_quality': str(full_path), 'local':str(local_path) if local else None}
 
 
 def main():

@@ -38,6 +38,7 @@ The latest [doorway configs](../apps/deforum/projects/modern-model-study/experim
 
 ## Execution and review
 
+- The local reviewer now has **Branch from here** and a [continuation planner](../apps/deforum/media_review/README.md#plan-a-continuation): selected painting, original lead-in, replacement pan/zoom/roll, incoming-speed fit, next prompt/noise and separately saved drafts. A local doorway trial preserved 41 paintings and greatly reduced a zoom overshoot before inference. [Saved draft](../apps/deforum/projects/modern-model-study/branches/branch-4db118a13ae7/README.md). This is a tooling check, not a new diffusion film; the doorway correction still needs generation and review.
 - Heavy inference uses short-lived ComfyUI Pods. Planning, frame inspection and current RIFE finishing run locally on the Mac; the recurrent Python runner can perform spatial warps locally or on the Pod. Start with [POD.md](../apps/deforum/POD.md), [workflow](workflow.md) and the repository-scoped RunPod skills.
 - Use `uv sync --locked` and `uv run --locked` in `apps/deforum/`. Shared mechanics live in `src/deforum_lab/`; some historical experiment runners still wrap earlier scripts. The [refactor plan](refactor-plan.md) records migration scope and remaining boundaries.
 - Use Devrun/shared terminal for the local `media-review` service. Check its `effectiveUrl`; do not assume the historical port is free. Saved sessions and allowlisted routes are configured by [the reviewer](../apps/deforum/media_review/README.md).
