@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-16 — let arrival change the movement:** Olof finds the doorway revision's zoom jerky and staged. He asks why it continues zooming much farther immediately after entering, saying this breaks the magic of the doorway. For this shot, the approach should flow smoothly and the new world should register after the crossing. This qualifies earlier requests for continuous movement: movement can continue without another strong inward push. See [feedback and motion audit](../apps/deforum/projects/modern-model-study/experiments/doorway-revision/README.md#human-feedback-and-motion-audit--2026-09-16).
+
 - **2026-09-15 — reuse reference motion recipes:** Olof calls the continuous-motion results “very good” and likes the spatial palette. He asks to revisit the saved GitHub presets, recalling 2D/3D categories, to improve it. This endorses the direction without selecting C3, C4, C5 or the alternative finishing method individually.
 
 - **2026-09-15 — continuous movement and a usable effect palette:** Olof finds the content good but the spatial transformations repetitive, with unwanted stops. He wants movement to vary from slow to quick while combining pans, inward/outward zoom, rolls, regional warps, other-plane turns and spirals. He requests an easy effect lookup for choosing the next scene's movement. Storage work is parked until disk pressure returns. See the [motion palette](motion-palette.md) and [continuous-motion experiment](../apps/deforum/projects/modern-model-study/experiments/continuous-motion-hour/README.md). New results have not yet received his feedback.

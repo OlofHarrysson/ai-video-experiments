@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-16",
+  "scope": "Finite differences of local area scale from configured maps, sampled just inside joins. Confirms prescribed speed discontinuity; not measured optical flow or a causal decomposition of visible jerkiness. No new inference or rendering.",
+  "segments": [
+    {
+      "case": "d1-doorway-approach",
+      "source_start": 13.5,
+      "source_end": 19.5,
+      "delivery_start": 9.0,
+      "delivery_end": 13.0,
+      "geometric_scale_ratio": 5.2507288630060645,
+      "start_log_scale_rate_per_display_second": 0.0008264220340166501,
+      "end_log_scale_rate_per_display_second": 0.13504970491240442
+    },
+    {
+      "case": "d2-through-the-door",
+      "source_start": 19.5,
+      "source_end": 22,
+      "delivery_start": 13.0,
+      "delivery_end": 14.666666666666666,
+      "geometric_scale_ratio": 4.127230676589126,
+      "start_log_scale_rate_per_display_second": 0.5369086957646152,
+      "end_log_scale_rate_per_display_second": 0.652749817631193
+    },
+    {
+      "case": "d4-the-open-glade",
+      "source_start": 22,
+      "source_end": 24,
+      "delivery_start": 14.666666666666666,
+      "delivery_end": 16.0,
+      "geometric_scale_ratio": 1.2214027581558615,
+      "start_log_scale_rate_per_display_second": 0.14999999967030125,
+      "end_log_scale_rate_per_display_second": 0.15000011350102538
+    },
+    {
+      "case": "d5-beyond-the-threshold",
+      "source_start": 24,
+      "source_end": 29.5,
+      "delivery_start": 16.0,
+      "delivery_end": 19.666666666666668,
+      "geometric_scale_ratio": 6.237616925816247,
+      "start_log_scale_rate_per_display_second": 0.335891203448865,
+      "end_log_scale_rate_per_display_second": 0.018226797091625002
+    }
+  ]
+}

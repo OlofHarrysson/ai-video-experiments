@@ -6,7 +6,7 @@
 
 ![Beyond the Threshold — 20 seconds](../../exports/doorway-revision-v001/d5-beyond-the-threshold/faster/rife-moving-tail/preview.mp4)
 
-The assistant selects D5 for the clearer new-world reveal. Human preference is pending. This is an artistic revision with several coupled decisions, not a controlled comparison isolating one parameter.
+The assistant selected D5 for the clearer new-world reveal. Olof subsequently criticizes its staged, jerky zoom and the continued push after entering the doorway; see the feedback below. This is an artistic revision with several coupled decisions, not a controlled comparison isolating one parameter.
 
 ## Branches and decisions
 
@@ -55,3 +55,13 @@ uv run --locked python projects/modern-model-study/experiments/doorway-revision/
 ```
 
 Generation and delivery scripts intentionally refuse to overwrite existing outputs. Branch under a new case/export when making another revision. Use the shared-terminal `media-review` service for serving the generated review pages.
+
+## Human feedback and motion audit — 2026-09-16
+
+Olof wants a smooth approach and crossing. He reports that this version advances in jerky stages, then immediately zooms much farther into the destination, breaking the magic of entering the doorway. Continuous movement should serve the reveal; it does not require continued inward zoom.
+
+The [motion audit](motion-audit.json) confirms a choreography problem. Individual phrases use smoothstep curves, but the selected branches do not match zoom speed at their joins. In delivered time, the prescribed logarithmic scale rate jumps from about 0.135 to 0.537 at 13s, drops from 0.653 to 0.150 at 14.667s, then rises from 0.150 to 0.336 at 16s before another acceleration. These are geometric map measurements, not measured optical flow or percentages of perceived jerkiness.
+
+D5 adds roughly 6.24× geometric enlargement from delivered 16s to 19.667s. This was the assistant's attempt to remove foreground obstruction, not a requirement of the pipeline. It weakens the intended arrival. Separately, current RIFE finishing sees pairs of repainted images rather than the planned continuous trajectory; repainting and inferred intermediate motion may contribute to smaller pulses. Their contributions have not been isolated here.
+
+Proposed correction: design approach and crossing as one speed-continuous trajectory, then taper forward enlargement into a gentle lateral reveal or drift so the new world can register. Inspect the complete motion-only passage, including joins, before new inference. The existing motion-aware finishing candidate can be evaluated separately; it would not repair poor choreography by itself. No new render was made in this diagnostic follow-up. Central review/process record: AF-20260916-133509.

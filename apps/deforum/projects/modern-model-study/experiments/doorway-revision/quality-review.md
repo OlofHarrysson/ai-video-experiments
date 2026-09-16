@@ -1,6 +1,6 @@
 # Doorway revision: frame review
 
-2026-09-16. Assistant review from selected full paintings, motion-only previews and dense delivery-frame windows. This is not an exhaustive real-time viewing claim. Olof's playback preference is pending.
+2026-09-16. Assistant review from selected full paintings, motion-only previews and dense delivery-frame windows. This is not an exhaustive real-time viewing claim. Olof's subsequent playback feedback reports staged zoom and an excessive post-crossing push; this exposes a limitation of the frame-only screening below.
 
 ## Selected result
 
@@ -31,4 +31,4 @@ D1 ends before crossing. D2 shows the new world but remains dominated by the nea
 
 The final train changes design and acquires passengers; this is motif continuity, not exact object identity or a demonstrated literal train journey. The ending becomes more illustrative, with flatter shading than the earlier forest. Transparent string-like remnants persist after the harp leaves the center. Close objects remain sticky across repaints and can still obstruct the intended travel.
 
-The improvement is scene-specific directing: inspect a painting, choose a visible route, and coordinate framing with the destination descriptions. It does not validate a new diffusion default. Before extending this film, get Olof's reaction to the doorway timing and new destination; a future continuation should begin from a strong composition and avoid simply enlarging the train until it fills the screen.
+The improvement is scene-specific directing: inspect a painting, choose a visible route, and coordinate framing with the destination descriptions. It does not validate a new diffusion default. Olof's subsequent feedback identifies the zoom rhythm and extended push as problems. The configuration audit confirms unmatched speed at branch joins; see the report's feedback section before another continuation.
