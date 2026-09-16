@@ -358,3 +358,7 @@ Explicit feedback on [the storytelling shortlist](../apps/deforum/projects/moder
 He finds the spatial movements too simplistic and repetitive, and wants them handcrafted for the artwork. Reusable effects should be individual moves that can be mixed and combined: left/right/left/right is four moves, not one primitive. His earlier preference for fluent, continuous motion still applies.
 
 He likes the railway doorway approach in The Open Dream but wants an earlier push, a downward viewpoint pan to center the opening, and preservation of its doorway identity instead of becoming a clock. Passing through should invite anticipation and reveal a new, exciting environment; repeating the whale/train scene is boring. Recurring motifs should provide continuity without repeating the whole scene. The revised shot remains unrendered; this records creative preferences, not a claim about model controllability.
+
+### 2026-09-16 — production tooling is for the assistant
+
+Olof clarifies that his suggestion about additional motion-planning and backtracking tools was intended to help the assistant create better videos. He did not request more tooling for himself. The assistant incorrectly delivered a user-operated continuation planner. Keep the useful mechanics available for assistant-led production; Olof supplies direction and judges the resulting films. This clarification does not withdraw his earlier request for the media reviewer or imply that the new code should be deleted.
