@@ -28,6 +28,12 @@ The wider mountain pass reveals a huge ivory-and-blue paper fold above the river
 
 Source cadence remains 12 at 24 fps. Nominal delivery maps each painting to round(source_frame/4.5) at 24 fps, retaining all originals with 2/3-frame interpolation intervals. This is three times the original Storm delivery clock; individual source camera phrases provide rhythmic acceleration toward the 4× reference. A sixty-second delivery requires 540 paintings. A full-minute film is not yet complete.
 
+## Branching delta and final reveal
+
+After the paper arch, the blue route develops into a branching network across raised ivory surfaces. An independent screen finds this a distinct event by 43–46 seconds. The next seven-second sweep passes curled islands; its first camera-only draft was too restrained around the direction change, so enlargement increased from 2.5× to 4.5× while preserving the continuous incoming velocity. Source 5724 shows a broad blue network around dimensional paper folds, with coarse edges and quiet pale expanses. Both draft previews remain preserved.
+
+The final plan begins from that painting and widens approximately 4.5× over 6.89 delivery seconds, translating right 1.15/up .45 image heights with a gentle bank. It ends with nonzero lateral and retreat velocity. The camera-only preview shows a clear scale change; its reflected edges represent areas that the recurrent generator must repaint, so they cannot establish final border quality. Inspect the generated wide reveal and its interpolation before selection.
+
 ## Storage recovery
 
 Before p08 generation, the shared 50 GB model volume hit its quota. Uploads failed and a direct write returned `errno 122: Disk quota exceeded`; `df` misleadingly showed aggregate backing-filesystem capacity. All completed passages were already collected locally. With generation and collection paused, the owned worktree moved to the Pod's 150 GB container disk after all 10,988 inventory entries and file hashes matched. The original path became a symlink. One zero-byte interrupted prefix copy was removed; the preserved original was recopied and verified during resume. No new p08 painting had been generated before failure. Inference then resumed successfully. Private migration evidence is in `work/cartographers-dream-session/storage-migration.json`; incident **AF-20260917-153602** records the workflow failure. Shared models and other projects were retained.
