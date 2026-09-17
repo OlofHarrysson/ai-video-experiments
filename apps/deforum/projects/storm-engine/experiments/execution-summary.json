@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-17",
+  "timezone": "Europe/Stockholm",
+  "selected_case": "p05c-the-red-kite",
+  "source_last_painting": 2148,
+  "selected_paintings": 180,
+  "new_generation_jobs": 211,
+  "preserved_unselected_paintings": 31,
+  "frames": 1440,
+  "fps": 24,
+  "duration_seconds": 60,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "video": "exports/v001/p05c-the-red-kite/through-2148/rife/preview.mp4",
+  "video_sha256": "170305b984d9d37c85e57b347deb508002a3d50f9c47c7847b2b9da56014da21",
+  "delivery_verified": true,
+  "final_spatial_warps": 0,
+  "final_hold_frames": 7,
+  "all_remote_files_preserved": 3413,
+  "preserved_remote_bytes": 2219396776,
+  "verified_comfy_duplicates_removed": 421,
+  "pod_deleted": true,
+  "retained_model_volume_preserved": true,
+  "estimated_compute_usd": 1.0298719777777778,
+  "cost_basis": "Elapsed wall time from owned Pod creation to deletion at $0.74/hour; estimate excludes retained storage.",
+  "motion_diagnostic": {
+    "meaning": "Displacement of fixed7x5 coordinate grid in image heights per delivery second. Planned settings diagnostic, not perceived speed or rendered optical flow.",
+    "night_orchard_116_seconds": {
+      "mean": 0.04979569510980206,
+      "median": 0.0421108656821786,
+      "peak": 0.16677243070578018,
+      "intervals": 347
+    },
+    "storm_engine_60_seconds": {
+      "mean": 0.08939311595418147,
+      "median": 0.08060786856455376,
+      "peak": 0.17199432711692142,
+      "intervals": 179
+    },
+    "mean_ratio": 1.7951976723502918
+  },
+  "review_limits": "Source paintings, camera-only previews and selected dense delivered-frame windows were inspected. These do not establish a continuous subjective playback verdict. Human feedback is pending.",
+  "selected_finish": "RIFE with seven final hold frames (0.292 seconds), avoiding the right-edge seam in the preserved moving-tail alternative.",
+  "reviewer_check": {
+    "url": "http://localhost:3028/storm-engine",
+    "run_id": "d2284dec-e1f3-43ea-9c5c-5f50f6f2729f",
+    "html_matches_build": true,
+    "duration_seconds": 60,
+    "frames": 1440,
+    "paintings": 180,
+    "video_sha256": "170305b984d9d37c85e57b347deb508002a3d50f9c47c7847b2b9da56014da21",
+    "byte_range_verified": true,
+    "head_verified": true,
+    "preserved_routes": {
+      "": 200,
+      "night-orchard": 200,
+      "seed-for-sea-long": 200
+    },
+    "ui_changes": "Named route and film data only; existing player layout and controls unchanged. Browser interactions were not re-tested."
+  },
+  "identical_prefix_frames_between_finishes": 1433
+}

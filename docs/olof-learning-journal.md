@@ -374,3 +374,7 @@ Olof calls the sixteen-second Night Orchard “pretty good” and asks for rough
 ### 2026-09-17 — A Seed for the Sea, longer form
 
 Olof says he quite likes A Seed for the Sea and requests roughly 1.5–3 minutes. This supports continuing its overall visual direction, without establishing a separate preference between the 24-second garden ending and the 16-second sea ending. The extension keeps the original cut and develops new scenes at the established pace.
+
+### 2026-09-17 — More motion in the next directed film
+
+Olof calls the extended Night Orchard very pretty but finds its movement too slow. He requests larger, more aggressive pans and zooms that create more visible change, and a completely new theme around one minute long. He still expects prompts, transitions and storytelling to be planned together. This is a request for stronger spatial movement, not simply a faster export or a change to the accepted diffusion mechanism.

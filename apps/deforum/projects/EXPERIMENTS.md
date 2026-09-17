@@ -6,6 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
+| Stronger sustained movement in a new one-minute story | [The Storm Engine](storm-engine/README.md) |
 | A directed film made from the retrospective lessons | [The Night Orchard](night-orchard/README.md) |
 | A two-minute recurrent journey through connected worlds | [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md) |
 | A new surreal piece with recurring cargo and an unfolding world | [A Seed for the Sea](modern-model-study/experiments/seed-for-sea/README.md) |
@@ -32,6 +33,10 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 ## All notes
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
+
+### storm-engine — 2 notes
+
+- [The Storm Engine: motion, material and a new story](storm-engine/experiments/baseline.md) — [brief](storm-engine/BRIEF.md), [first-pass screening](storm-engine/experiments/quality-review.md).
 
 ### night-orchard — 2 notes
 

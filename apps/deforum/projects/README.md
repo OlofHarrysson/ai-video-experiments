@@ -2,7 +2,9 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Night Orchard](night-orchard/README.md): a directed 116-second film through floating orchards, a dark sea, a glass garden and dawn. The liked sixteen-second opening is preserved; long-cut feedback is pending.
+- [The Storm Engine](storm-engine/README.md): a sixty-second journey from a copper wind city through a storm to a red kite, with stronger sustained pans and zooms following Night Orchard feedback.
+
+- [The Night Orchard](night-orchard/README.md): a directed 116-second film through floating orchards, a dark sea, a glass garden and dawn. The liked sixteen-second opening is preserved; Olof finds the longer film very pretty but wants stronger movement in the next project.
 
 - [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md): a two-minute continuation through underwater worlds, lanterns, rain and a flowering return; original short preserved.
 

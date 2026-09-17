@@ -13,6 +13,8 @@ SESSION = APP / "media_review/sessions/seed-for-sea-long.json"
 OUTPUT = APP / "projects/modern-model-study/exports/media-review-seed-for-sea-long-v001"
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    "/storm-engine": APP
+    / "projects/storm-engine/exports/media-review-v001/local.html",
     "/seed-for-sea-long": APP
     / "projects/modern-model-study/exports/media-review-seed-for-sea-long-v001/local.html",
     "/night-orchard": APP

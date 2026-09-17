@@ -1,0 +1,109 @@
+{
+  "case": "p01-across-the-city",
+  "seed": 9184000,
+  "duration": 12.0,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/storm-engine/exports/v001/o1-the-red-thread",
+  "prefix_through": 0,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-red-thread",
+      "prompt": "A monumental city of weathered copper wind towers rises from a pale salt desert beneath a dark petrol blue storm. A long vermilion silk ribbon is caught on one slender ivory street lamp in the near left foreground; its loose end streams diagonally toward a huge circular turbine opening in a copper tower at the right third. The opening is dark and clear, surrounded by a small number of broad curved blades. A low empty elevated causeway leads from the foreground toward that tower. The city has only three immense distinct towers, with broad gaps of sky between them. Sunlight catches copper edges and the brilliant red fabric, with deep dimensional shadows. Viewpoint above the causeway, clear unobstructed route across the image from ribbon to turbine. Surreal cinematic oil painting with sculptural dimensional forms, weathered copper and ivory porcelain, vermilion silk, petrol blue shadows, hard slanting cream sunlight, selective etched detail and broad empty atmospheric space. Strong diagonals, asymmetry, dramatic scale, distinct foreground and distant silhouettes. No lettering, no people."
+    },
+    {
+      "at": 0.5,
+      "name": "follow-the-silk",
+      "prompt": "Crossing the elevated causeway of a vast copper wind city. A single long vermilion silk ribbon curves from the near left toward the huge dark circular turbine in the main copper tower. The foreground ivory lamp is passing out of the left edge. The principal turbine occupies the upper right, with broad sculpted ivory blades, black gaps and a copper hub. A few low ivory buildings remain far below. Maintain one dominant turbine and an unobstructed approach to its dark gaps. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 6.0,
+      "name": "the-machine-draws-near",
+      "prompt": "The enormous circular turbine on the copper tower grows in front of us. Its dark opening approaches the center, its ivory blades separated by deep black curved channels. A vermilion ribbon streams from the lower left into the lower right gap between two blades. The street lamp has passed behind the viewpoint. Sunlit copper casing frames the turbine and the low ivory city is receding below the image. Keep the blades monumental, the dark interior legible and the ribbon a clean red diagonal. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 10.0,
+      "name": "at-the-turbine",
+      "prompt": "Close to a colossal copper turbine, with its dark circular opening centered in the view. Broad curved ivory vanes frame clear black spaces inside the machine. One narrow vermilion silk ribbon sweeps from the lower left toward a dark gap just right of the center. The weathered copper casing has deep dimensional shadows. Only hints of the distant ivory city remain near the lower edge. The scene is still the exterior of the same wind machine. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0.0,
+      "noise": 0.6
+    },
+    {
+      "at": 5.0,
+      "noise": 0.61
+    },
+    {
+      "at": 9.0,
+      "noise": 0.64
+    },
+    {
+      "at": 11.5,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0.0,
+      "duration": 11.5,
+      "center": [
+        1.04,
+        0.27
+      ],
+      "end": [
+        -0.29,
+        0.23,
+        0.8329091229351039,
+        -0.08
+      ],
+      "velocity_start": [
+        -0.055,
+        0.026,
+        0.055,
+        -0.008
+      ],
+      "velocity_end": [
+        -0.013,
+        0.003,
+        0.07,
+        0.002
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 0,
+    "incoming_fit_residual": 0.0,
+    "target": "Pass the foreground lamp and traverse toward the observed turbine [1.04,.27]; enlarge2.3x and center its aperture before the next push."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "case": "o1-the-red-thread",
+  "seed": 9172301,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "A monumental city of weathered copper wind towers rises from a pale salt desert beneath a dark petrol blue storm. A long vermilion silk ribbon is caught on one slender ivory street lamp in the near left foreground; its loose end streams diagonally toward a huge circular turbine opening in a copper tower at the right third. The opening is dark and clear, surrounded by a small number of broad curved blades. A low empty elevated causeway leads from the foreground toward that tower. The city has only three immense distinct towers, with broad gaps of sky between them. Sunlight catches copper edges and the brilliant red fabric, with deep dimensional shadows. Viewpoint above the causeway, clear unobstructed route across the image from ribbon to turbine. Surreal cinematic oil painting with sculptural dimensional forms, weathered copper and ivory porcelain, vermilion silk, petrol blue shadows, hard slanting cream sunlight, selective etched detail and broad empty atmospheric space. Strong diagonals, asymmetry, dramatic scale, distinct foreground and distant silhouettes. No lettering, no people.",
+    "seed": 9172301,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-red-thread",
+      "prompt": "A monumental city of weathered copper wind towers rises from a pale salt desert beneath a dark petrol blue storm. A long vermilion silk ribbon is caught on one slender ivory street lamp in the near left foreground; its loose end streams diagonally toward a huge circular turbine opening in a copper tower at the right third. The opening is dark and clear, surrounded by a small number of broad curved blades. A low empty elevated causeway leads from the foreground toward that tower. The city has only three immense distinct towers, with broad gaps of sky between them. Sunlight catches copper edges and the brilliant red fabric, with deep dimensional shadows. Viewpoint above the causeway, clear unobstructed route across the image from ribbon to turbine. Surreal cinematic oil painting with sculptural dimensional forms, weathered copper and ivory porcelain, vermilion silk, petrol blue shadows, hard slanting cream sunlight, selective etched detail and broad empty atmospheric space. Strong diagonals, asymmetry, dramatic scale, distinct foreground and distant silhouettes. No lettering, no people."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.61
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

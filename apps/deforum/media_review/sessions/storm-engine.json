@@ -1,0 +1,15 @@
+{
+  "title": "The Storm Engine",
+  "selected": [
+    "storm-engine"
+  ],
+  "clips": [
+    {
+      "id": "storm-engine",
+      "label": "The Storm Engine \u00b7 1 minute",
+      "note": "A red ribbon leads into a copper wind machine, through a storm and out above a white salt desert.",
+      "details": "A new theme with stronger sustained pans, zooms and a turning passage through the clouds. Ivory turbine blades become storm ridges; red silk becomes a kite above the salt plain. The final travelling pullback branches from the earlier single-kite painting. Fine details and the kite's cloth and spars redraw; recurring color and shape connect the scenes without establishing literal object identity.\n\nSilent 60-second cut. Native 1536\u00d71024 paintings, 24 fps. Recurrent Krea repaints retain previous-painting initialization, CFG 1, three Euler intervals and recorded independent seeds. All 180 selected paintings survive at three paintings per displayed second. RIFE 4.25 scale 1 fills the intervals outside recurrence; the final seven frames briefly hold the last painting to avoid a peripheral edge seam.",
+      "source": "projects/storm-engine/exports/v001/p05c-the-red-kite/through-2148/rife/preview.mp4"
+    }
+  ]
+}

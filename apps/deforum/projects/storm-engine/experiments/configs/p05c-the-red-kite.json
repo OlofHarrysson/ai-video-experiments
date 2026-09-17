@@ -1,0 +1,363 @@
+{
+  "case": "p05c-the-red-kite",
+  "seed": 9194000,
+  "duration": 90.0,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/storm-engine/exports/v001/p04c-under-the-storm",
+  "prefix_through": 1560,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828,
+    840,
+    852,
+    864,
+    876,
+    888,
+    900,
+    912,
+    924,
+    936,
+    948,
+    960,
+    972,
+    984,
+    996,
+    1008,
+    1020,
+    1032,
+    1044,
+    1056,
+    1068,
+    1080,
+    1092,
+    1104,
+    1116,
+    1128,
+    1140,
+    1152,
+    1164,
+    1176,
+    1188,
+    1200,
+    1212,
+    1224,
+    1236,
+    1248,
+    1260,
+    1272,
+    1284,
+    1296,
+    1308,
+    1320,
+    1332,
+    1344,
+    1356,
+    1368,
+    1380,
+    1392,
+    1404,
+    1416,
+    1428,
+    1440,
+    1452,
+    1464,
+    1476,
+    1488,
+    1500,
+    1512,
+    1524,
+    1536,
+    1548,
+    1560,
+    1572,
+    1584,
+    1596,
+    1608,
+    1620,
+    1632,
+    1644,
+    1656,
+    1668,
+    1680,
+    1692,
+    1704,
+    1716,
+    1728,
+    1740,
+    1752,
+    1764,
+    1776,
+    1788,
+    1800,
+    1812,
+    1824,
+    1836,
+    1848,
+    1860,
+    1872,
+    1884,
+    1896,
+    1908,
+    1920,
+    1932,
+    1944,
+    1956,
+    1968,
+    1980,
+    1992,
+    2004,
+    2016,
+    2028,
+    2040,
+    2052,
+    2064,
+    2076,
+    2088,
+    2100,
+    2112,
+    2124,
+    2136,
+    2148
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-red-thread",
+      "prompt": "A monumental city of weathered copper wind towers rises from a pale salt desert beneath a dark petrol blue storm. A long vermilion silk ribbon is caught on one slender ivory street lamp in the near left foreground; its loose end streams diagonally toward a huge circular turbine opening in a copper tower at the right third. The opening is dark and clear, surrounded by a small number of broad curved blades. A low empty elevated causeway leads from the foreground toward that tower. The city has only three immense distinct towers, with broad gaps of sky between them. Sunlight catches copper edges and the brilliant red fabric, with deep dimensional shadows. Viewpoint above the causeway, clear unobstructed route across the image from ribbon to turbine. Surreal cinematic oil painting with sculptural dimensional forms, weathered copper and ivory porcelain, vermilion silk, petrol blue shadows, hard slanting cream sunlight, selective etched detail and broad empty atmospheric space. Strong diagonals, asymmetry, dramatic scale, distinct foreground and distant silhouettes. No lettering, no people."
+    },
+    {
+      "at": 0.5,
+      "name": "follow-the-silk",
+      "prompt": "Crossing the elevated causeway of a vast copper wind city. A single long vermilion silk ribbon curves from the near left toward the huge dark circular turbine in the main copper tower. The foreground ivory lamp is passing out of the left edge. The principal turbine occupies the upper right, with broad sculpted ivory blades, black gaps and a copper hub. A few low ivory buildings remain far below. Maintain one dominant turbine and an unobstructed approach to its dark gaps. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 6.0,
+      "name": "the-machine-draws-near",
+      "prompt": "The enormous circular turbine on the copper tower grows in front of us. Its dark opening approaches the center, its ivory blades separated by deep black curved channels. A vermilion ribbon streams from the lower left into the lower right gap between two blades. The street lamp has passed behind the viewpoint. Sunlit copper casing frames the turbine and the low ivory city is receding below the image. Keep the blades monumental, the dark interior legible and the ribbon a clean red diagonal. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 10.0,
+      "name": "at-the-turbine",
+      "prompt": "Close to a colossal copper turbine, with its dark circular opening centered in the view. Broad curved ivory vanes frame clear black spaces inside the machine. One narrow vermilion silk ribbon sweeps from the lower left toward a dark gap just right of the center. The weathered copper casing has deep dimensional shadows. Only hints of the distant ivory city remain near the lower edge. The scene is still the exterior of the same wind machine. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 12.0,
+      "name": "choose-the-gap",
+      "prompt": "Very close to the enormous copper turbine. The viewpoint approaches the deep black curved passage immediately beneath its solid copper hub, following a thin vermilion ribbon into the darkness between two broad ivory blades. The hub moves upward out of view as the dark lower channel grows. Preserve the copper rim and broad blade contours while the gap expands. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 14.5,
+      "name": "through-the-vanes",
+      "prompt": "Entering a deep dark channel between two enormous ivory turbine vanes. The copper hub has passed above the image. A thin red ribbon recedes through the curved black space ahead. The near ivory blades are cropped by the outer edges, with weathered copper ribs receding into the machine. A distant petrol blue glow appears inside the passage. The center is an unobstructed dark route, not a wall or hub. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 18.5,
+      "name": "the-wind-chamber",
+      "prompt": "Inside an immense wind engine, sweeping ivory turbine vanes curve away at the edges like monumental sails. The central passage opens into deep petrol blue vapor, crossed by one loose red silk ribbon spiraling toward a small cream light in the distance. Copper ribs thin into curved copper filaments. Strong depth, dark open center, blades and nearby ribs passing out of the frame. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 22.5,
+      "name": "metal-becomes-weather",
+      "prompt": "The wind engine opens into a vast storm chamber. Ivory vanes stretch into broad luminous storm bands and copper ribs dissolve into warm curved streaks. One vermilion ribbon floats freely through the dark blue central air. Near cloud forms sweep past the edges while a pale diagonal opening appears beyond them. Rich dimensional vapor with strong light and shade, few large shapes, no remaining turbine hub. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 26.5,
+      "name": "the-storm-eye",
+      "prompt": "Inside a colossal spiral of dark petrol blue storm clouds, with broad ivory-lit cloud ridges and sparse copper glints. A single vermilion silk curve hangs across the opening like a path through the weather. The center remains deep and spacious, with a distant sharp cream light above and to the right. The machinery is now weather, the red thread is loose, and huge cloud contours carry the eye onward. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 27.0,
+      "name": "leave-the-machine",
+      "prompt": "The viewpoint moves diagonally across the wind engine and into its open blue air. The last copper hub recedes above the top edge; ivory vanes soften into vast billowing cream storm ridges at the sides. A single loose vermilion silk ribbon curves diagonally across the deep blue space. Copper wires thin and vanish. The center opens into weather with large separated cloud masses, not another turbine. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 31.5,
+      "name": "the-ribbon-is-free",
+      "prompt": "A free vermilion ribbon twists across an immense aerial chasm between dark petrol blue storm clouds. Luminous ivory cloud ridges sweep past the near left and lower edges; the cloud walls are broad and sculptural, with real shaded volume. The last bronze machine fragments have vanished above and behind. Farther ahead a slanted streak of cream sunlight opens near the upper right. One red curve, large quiet blue-black spaces, immense depth. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 37.5,
+      "name": "cross-the-storm",
+      "prompt": "Travelling sideways through a vast high-altitude storm canyon. Large dark blue cloud mountains fall away to the left while a slender red silk ribbon stretches across the mid-distance, carried toward a diagonal break in the clouds. A few curved white cloud ridges retain the rhythm of the old turbine blades but have become soft vapor. Strong open space ahead, monumental asymmetric masses, a brighter region high to the right. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 44.5,
+      "name": "a-cut-in-the-weather",
+      "prompt": "A great diagonal crack of warm white daylight opens high on the right side of a towering blue storm. One long red ribbon curves upward toward this bright gap, its loose folds luminous against the deep blue. The near cloud wall slides left and downward out of the image, revealing more space and distinct distant cloud peaks. Keep a broad luminous opening rather than a small circular portal. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 50.5,
+      "name": "toward-the-break",
+      "prompt": "At the edge of a colossal blue storm, a broad diagonal opening reveals pale gold sky beyond. A loose red silk ribbon leads upward into the light from the lower left. Dark sculptural cloud walls frame the left and lower edges, with clear dimensional ridges, spacious air and a long ray of warm light. The image has escaped the mechanical pattern and anticipates open sky. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 51.0,
+      "name": "under-the-cloud-arch",
+      "prompt": "Skimming diagonally beneath the immense curved underside of a dark blue storm. The broad cloud arch moves upward and left out of the view, opening a clear pale blue route beneath it. A long vermilion ribbon follows the lower edge of the cloud toward a pointed free end. Warm cream light breaks through the open air ahead. The storm remains a dramatic dark frame overhead, with spacious air below. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 56.5,
+      "name": "the-world-below",
+      "prompt": "Emerging beneath a colossal blue storm into bright spacious air. A distant white salt plain appears below, smooth and immense, with a low hazy horizon and one broad curved blue shadow from the retreating storm. The red ribbon streams freely toward the sunlit open air, its pointed tip clearly separate from the clouds. The cloud ceiling is passing above and behind. Warm white and pale blue space replace the dark interior. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 62.5,
+      "name": "unfurling-in-daylight",
+      "prompt": "Over an immense sunlit white salt desert beneath pale blue sky. The enormous storm retreats toward the upper left, its curling dark shadow sweeping across the ground. In clear air, one vermilion silk shape unfurls into a simple pointed diamond with a long loose red tail, like a kite forming from the ribbon. The red form is distinct against the pale sky, with a visible pointed tip and open space all around it. Low distant horizon, broad quiet white ground. Surreal cinematic oil painting, sculptural weathered copper and ivory porcelain, vermilion silk, petrol blue shadows and slanting cream light. Dimensional shading, broad atmospheric space, strong asymmetry, selective etched detail and clear near and far silhouettes. No people, no text."
+    },
+    {
+      "at": 65.5,
+      "name": "a-red-kite-in-daylight",
+      "prompt": "The existing single diamond kite is made from one broad uninterrupted sheet of brilliant vermilion red silk over two thin crossed wooden spars, with one long loose red silk tail. It is a simple hand-made flying object with clean solid red cloth. A monumental curling dark blue storm hangs above a vast white salt plain. The ground is rough mineral salt with broken irregular white ridges, small angular rocks, granular crust and scattered cracks. Warm slanting sunlight gives the ridges thick shaded volume. Tactile cinematic oil painting with dimensional light, visible fine brush texture and natural irregular forms. Vermilion red silk, petrol blue and ivory white. Rich depth, soft distant atmosphere, strong single focal silhouette. No people, no text."
+    },
+    {
+      "at": 70.0,
+      "name": "the-land-opens",
+      "prompt": "A lone bright scarlet diamond kite with a long red silk tail flies in clear air beneath the receding curved rim of a huge blue storm. Its surface is simple uninterrupted scarlet cloth stretched over crossed wooden spars. The camera widens and travels sideways across an immense ivory salt basin. Low irregular chalky ridges, crumbling edges and scattered small mineral stones fill the near ground. Farther away the salt becomes a broad smooth white plain crossed by one enormous curved blue cloud shadow. Soft blue sky opens around the kite. Tactile cinematic oil painting with dimensional light, visible fine brush texture and natural irregular forms. Vermilion red silk, petrol blue and ivory white. Rich depth, soft distant atmosphere, strong single focal silhouette. No people, no text."
+    },
+    {
+      "at": 76.0,
+      "name": "beyond-the-storm",
+      "prompt": "One small but vivid vermilion diamond kite, its clean red silk silhouette and long red tail clearly visible against pale blue sky. The single kite has a plain unmarked cloth surface stretched over fine crossed spars. An immense curling blue cloud bank recedes high to the right. Its crescent shadow curves across the wide sunlit salt desert below. The foreground contains a few irregular sculptural chalk-white ridges with rough chipped surfaces and granular salt, their near faces warmly lit and their sides cool and shaded. Distant ridges diminish into atmospheric haze. Tactile cinematic oil painting with dimensional light, visible fine brush texture and natural irregular forms. Vermilion red silk, petrol blue and ivory white. Rich depth, soft distant atmosphere, strong single focal silhouette. No people, no text."
+    },
+    {
+      "at": 83.0,
+      "name": "a-wide-white-world",
+      "prompt": "One lone vermilion diamond kite with a long silk tail suspended in bright open blue air, tiny beside the immense storm. Brilliant solid red cloth makes a simple recognizable diamond silhouette. The storm has become a receding dark curved cloud bank on the right, throwing one broad crescent shadow across a huge white salt basin. Irregular low mineral ridges pass across the near ground, with rough crumbly edges, small stones and thick dimensional shadows. Beyond them is an immense quiet sunlit plain and a low distant horizon. Tactile painterly depth. Tactile cinematic oil painting with dimensional light, visible fine brush texture and natural irregular forms. Vermilion red silk, petrol blue and ivory white. Rich depth, soft distant atmosphere, strong single focal silhouette. No people, no text."
+    },
+    {
+      "at": 89.5,
+      "name": "free-sky",
+      "prompt": "A single bright vermilion diamond kite with a long red silk tail rides freely in an enormous pale blue sky over a sunlit white salt desert. Its simple solid red silhouette stays clear and legible. Far behind, the last colossal blue storm curve casts a wide crescent shadow on the plain. A few irregular white mineral ridges near the lower edge give scale to the vast open landscape. Fine grainy salt and softly lit broken rocks, broad atmospheric distance, an open spacious ending. Tactile cinematic oil painting with dimensional light, visible fine brush texture and natural irregular forms. Vermilion red silk, petrol blue and ivory white. Rich depth, soft distant atmosphere, strong single focal silhouette. No people, no text."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 65.0,
+      "noise": 0.7
+    },
+    {
+      "at": 67.0,
+      "noise": 0.74
+    },
+    {
+      "at": 71.0,
+      "noise": 0.75
+    },
+    {
+      "at": 76.0,
+      "noise": 0.73
+    },
+    {
+      "at": 82.0,
+      "noise": 0.7
+    },
+    {
+      "at": 89.5,
+      "noise": 0.67
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 65.0,
+      "duration": 3,
+      "center": [
+        0.98,
+        0.29
+      ],
+      "end": [
+        0.106930894504072,
+        -0.08603144242962,
+        0.06680660992359243,
+        -0.0010258590601627748
+      ],
+      "velocity_start": [
+        0.10028726300271466,
+        -0.06935429495308,
+        0.08453773994906162,
+        -0.0026839060401085166
+      ],
+      "velocity_end": [
+        -0.029,
+        0.012,
+        -0.04,
+        0.002
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 1560,
+    "incoming_fit_residual": 1.1202814995941743e-13,
+    "target": "Branch from the single kite at1560. Match incoming velocity, reverse the push over three source seconds, then sustain a travelling pullback. A longer Hermite reversal in p05 drove the kite close to the upper edge; this shorter release protects it. Repainting must fill newly exposed borders; the camera-only preview reflects one source plate. Repaint revision: p05b grew striped ground and a brown bird-like kite; restore tactile irregular salt and simple brilliant red fabric with a stronger scene-specific repaint schedule."
+  }
+}
