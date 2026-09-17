@@ -6,6 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
+| A new film at the selected faster floating pace | [The Cartographer’s Dream](cartographers-dream/README.md) |
 | Stronger sustained movement in a new one-minute story | [The Storm Engine](storm-engine/README.md) |
 | A directed film made from the retrospective lessons | [The Night Orchard](night-orchard/README.md) |
 | A two-minute recurrent journey through connected worlds | [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md) |
@@ -33,6 +34,10 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 ## All notes
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
+
+### cartographers-dream — production in progress
+
+- [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md).
 
 ### storm-engine — 2 notes
 

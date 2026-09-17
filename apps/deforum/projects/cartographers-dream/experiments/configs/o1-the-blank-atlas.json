@@ -1,0 +1,30 @@
+{
+  "case": "o1-the-blank-atlas",
+  "seed": 9191701,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "An enormous open ivory atlas rests at an oblique angle on a saffron stone table. The book fills the lower two thirds of the view. One sinuous ultramarine ink river crosses the otherwise blank right page from the near lower left toward the upper right, where its engraved contour lines begin to lift into tiny dimensional sandstone ridges. Broad clean white paper surrounds the blue route, with sparse deeply embossed topographic lines and the dramatic scale of a miniature landscape. A single dark blue pool of ink at the near left edge is the source of the route. The distant edge of the page rises like a low mountain against a deep violet background. View from low overhead, a clear diagonal route along the ink, strong beautiful paper folds and one dominant blue curve. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people.",
+    "seed": 9191701,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-blank-atlas",
+      "prompt": "An enormous open ivory atlas rests at an oblique angle on a saffron stone table. The book fills the lower two thirds of the view. One sinuous ultramarine ink river crosses the otherwise blank right page from the near lower left toward the upper right, where its engraved contour lines begin to lift into tiny dimensional sandstone ridges. Broad clean white paper surrounds the blue route, with sparse deeply embossed topographic lines and the dramatic scale of a miniature landscape. A single dark blue pool of ink at the near left edge is the source of the route. The distant edge of the page rises like a low mountain against a deep violet background. View from low overhead, a clear diagonal route along the ink, strong beautiful paper folds and one dominant blue curve. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.61
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

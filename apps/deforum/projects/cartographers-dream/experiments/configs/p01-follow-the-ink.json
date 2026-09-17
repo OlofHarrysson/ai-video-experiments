@@ -1,0 +1,113 @@
+{
+  "case": "p01-follow-the-ink",
+  "seed": 9201000,
+  "duration": 14.0,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/cartographers-dream/exports/v001/o1-the-blank-atlas",
+  "prefix_through": 0,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-blank-atlas",
+      "prompt": "An enormous open ivory atlas rests at an oblique angle on a saffron stone table. The book fills the lower two thirds of the view. One sinuous ultramarine ink river crosses the otherwise blank right page from the near lower left toward the upper right, where its engraved contour lines begin to lift into tiny dimensional sandstone ridges. Broad clean white paper surrounds the blue route, with sparse deeply embossed topographic lines and the dramatic scale of a miniature landscape. A single dark blue pool of ink at the near left edge is the source of the route. The distant edge of the page rises like a low mountain against a deep violet background. View from low overhead, a clear diagonal route along the ink, strong beautiful paper folds and one dominant blue curve. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 0.5,
+      "name": "the-ink-has-a-destination",
+      "prompt": "A broad ultramarine ink river curves across an immense ivory atlas page toward small raised mountain folds in the upper right. We are travelling low along the blue line. Paper grain and engraved contours enlarge, the near book edge slips below the frame, and the blank page remains spacious around the river. Keep one dominant blue channel and small shaded relief ridges at its far end. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 7.0,
+      "name": "the-contours-rise",
+      "prompt": "Close to the ultramarine river on ivory paper. The embossed contour lines rise into layered pale stone ledges, creating a shallow dimensional valley around the blue line. The near edge of the book has left the image. The river curves toward a group of ridges ahead, with the left bank broad and open, and warm saffron light catching the upper edges. The dark blue ink is beginning to have the shine and depth of water. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 12.0,
+      "name": "inside-the-map",
+      "prompt": "An ultramarine river curves through a dimensional valley of ivory folded paper and warm sandstone. The walls rise like enormous contour layers, with richly shaded folds and violet crevices. We are approaching the first bend at river level. Broad clear water and open passage ahead, the atlas surface is becoming real landscape, while paper grain remains in the pale banks. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0.0,
+      "noise": 0.61
+    },
+    {
+      "at": 5.0,
+      "noise": 0.63
+    },
+    {
+      "at": 10.0,
+      "noise": 0.66
+    },
+    {
+      "at": 13.5,
+      "noise": 0.64
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0.0,
+      "duration": 13.5,
+      "center": [
+        1.05,
+        0.34
+      ],
+      "end": [
+        -0.29,
+        0.15,
+        0.8754687373538999,
+        -0.06
+      ],
+      "velocity_start": [
+        -0.026,
+        0.018,
+        0.065,
+        -0.006
+      ],
+      "velocity_end": [
+        -0.018,
+        0.012,
+        0.065,
+        0.002
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 0,
+    "incoming_fit_residual": 0.0,
+    "target": "Rapid floating push along the actual blue channel at [1.05,.34]; 2.4x enlargement in3 seconds of delivery, recenter while banking slightly. Preserve the clear blue route."
+  }
+}
