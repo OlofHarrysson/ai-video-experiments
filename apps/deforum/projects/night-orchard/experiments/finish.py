@@ -3,6 +3,7 @@
 Run pair, inspect its preview, then full and tail. Check verifies an existing full
 delivery and its moving tail if present. --through-frame selects a source painting
 boundary; omission includes all paintings. Existing render outputs are immutable.
+--version selects the source export version, defaulting to v001.
 """
 
 import argparse
@@ -21,7 +22,7 @@ from deforum_lab.records import copy_verified, read, require, save, sha
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
 APP = HERE.parents[2]
-OUT = PROJECT / "exports/v001"
+EXPORTS = PROJECT / "exports"
 FPS = 24
 SOURCE_INTERVAL = 12
 DELIVERY_INTERVAL = 8
@@ -44,11 +45,46 @@ def inventory(path):
     return {"sha256": sha(path), "size": size, "mtime_ns": path.stat().st_mtime_ns}
 
 
-def prepare(case, through, create):
+def verify_lineage(source, config, last, seen=None):
+    """Verify inherited paintings and resolve the motion following the last one."""
+    source = source.resolve()
+    seen = set() if seen is None else seen
+    require(source not in seen, "Cyclic painting prefix")
+    seen.add(source)
+    if "prefix_root" not in config:
+        return source, config
+    prefix = (APP / config["prefix_root"]).resolve()
+    require(prefix.is_relative_to(EXPORTS.resolve()), "Prefix must belong to this project")
+    through = config["prefix_through"]
+    require(through in config["painting_frames"], "Prefix boundary differs")
+    rows = read(source / "prefix.json")
+    require(
+        [row["frame"] for row in rows]
+        == [frame for frame in config["painting_frames"] if frame <= through],
+        "Prefix inventory differs",
+    )
+    for row in rows:
+        if row["frame"] > last:
+            break
+        original = prefix / f"anchors/{row['frame']:04d}.png"
+        require(
+            (APP / row["source"]).resolve() == original
+            and sha(source / f"anchors/{row['frame']:04d}.png")
+            == row["sha256"]
+            == sha(original),
+            "Inherited painting differs",
+        )
+    parent = read(prefix / "config.json")
+    owner, motion = verify_lineage(prefix, parent, min(last, through), seen)
+    return (owner, motion) if last < through else (source, config)
+
+
+def prepare(case, through, create, version="v001"):
     require(
         case not in ("", ".", "..") and Path(case).name == case, "Expected case name"
     )
-    source = OUT / case
+    require(version in ("v001", "v002"), "Expected export version v001 or v002")
+    source = EXPORTS / version / case
     config = read(source / "config.json")
     require(config["case"] == case, "Frozen config case differs")
     positions = config["painting_frames"]
@@ -68,6 +104,7 @@ def prepare(case, through, create):
     require(last in positions, "--through-frame must be a source painting boundary")
     selected = [frame for frame in positions if frame <= last]
     require(len(selected) >= 2, "Finishing requires at least two paintings")
+    motion_source, motion_config = verify_lineage(source, config, last)
     root = source / ("faster" if through is None else f"through-{through:04d}")
     delivery = [frame * DELIVERY_INTERVAL // SOURCE_INTERVAL for frame in selected]
     rows = []
@@ -99,6 +136,12 @@ def prepare(case, through, create):
         "interpolator_sha256": sha(RIFE_SCRIPT),
         "warp_sha256": sha(Path(warps.__file__)),
     }
+    if motion_source != source.resolve():
+        timing["tail_config_file"] = str((motion_source / "config.json").relative_to(APP))
+        timing["tail_config_sha256"] = sha(motion_source / "config.json")
+    if not create:
+        # Producer identity is immutable provenance, not the current verifier version.
+        timing["finisher_sha256"] = read(root / "retiming.json")["finisher_sha256"]
     if create:
         save(root / "anchor-frames.json", delivery)
     require(read(root / "anchor-frames.json") == delivery, "Anchor timing differs")
@@ -115,7 +158,7 @@ def prepare(case, through, create):
     )
     for row in rows:
         require(sha(root / row["copy"]) == row["sha256"], "Copied painting differs")
-    return source, root, config, timing
+    return source, root, motion_config, timing
 
 
 def verify_video(target, count, size):
@@ -200,7 +243,9 @@ def verify(root, timing, config, mode, manifest=None):
             == {
                 "source_frame": timing["source_anchor_frames"][-1],
                 "speed_multiplier": SPEED,
-                "config_sha256": timing["source_config_sha256"],
+                "config_sha256": timing.get(
+                    "tail_config_sha256", timing["source_config_sha256"]
+                ),
                 "warp_sha256": timing["warp_sha256"],
             },
             "Tail recipe differs",
@@ -344,7 +389,9 @@ def tail(root, timing, config):
         tail_recipe={
             "source_frame": last_source,
             "speed_multiplier": SPEED,
-            "config_sha256": timing["source_config_sha256"],
+            "config_sha256": timing.get(
+                "tail_config_sha256", timing["source_config_sha256"]
+            ),
             "warp_sha256": timing["warp_sha256"],
         },
     )
@@ -405,6 +452,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("case")
     parser.add_argument("stage", choices=["pair", "full", "check", "tail"])
+    parser.add_argument("--version", choices=["v001", "v002"], default="v001")
     parser.add_argument(
         "--through-frame",
         type=int,
@@ -412,7 +460,7 @@ def main():
     )
     args = parser.parse_args()
     _, root, config, timing = prepare(
-        args.case, args.through_frame, args.stage in ("pair", "full")
+        args.case, args.through_frame, args.stage in ("pair", "full"), args.version
     )
     if args.stage in ("pair", "full"):
         interpolate(root, timing, config, args.stage)
@@ -422,7 +470,7 @@ def main():
         verify(root, timing, config, "rife")
         if (root / "rife-moving-tail").exists():
             verify(root, timing, config, "rife-moving-tail")
-    prepare(args.case, args.through_frame, False)
+    prepare(args.case, args.through_frame, False, args.version)
     print(f"Verified {args.stage}: {root}", flush=True)
 
 

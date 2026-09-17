@@ -33,3 +33,17 @@ The first ending, `p4-lights-in-the-dark`, adds a 0.8× widening and vertical mo
 ## Selected cut
 
 Select p5 through source painting 564: 48 original paintings in 384 delivered frames, sixteen seconds. The longer ending loses shading and becomes repetitive. The shorter edit retains the island arrival and a moving final tail. All original attempts remain preserved. Assistant visual selection is complete; Olof feedback is pending.
+
+## Longer second cut
+
+Olof likes the first cut overall and requests 1.5–3 minutes. Target 120 seconds by adding a journey through the world. Preserve the selected first 48 paintings, continue from source painting 564, and retain the original v001 delivery. The new cut uses v002 and the same recurrent technique. Its provisional route follows the roots into water, finds a submerged glass garden, then ascends toward dawn. Each actual checkpoint determines the next composition and movement. A second opinion supports a simpler focal hierarchy and stronger changes in visual density through the longer middle.
+
+### Long-cut route follows its paintings
+
+The descent produces a lantern at the waterline, which becomes a seed in front of a glasshouse. The glasshouse later reads as a night garden rather than staying convincingly underwater. Retain the motif-led transformation and describe it honestly. Its architecture becomes dense, so rise into the visible dark gap above the roof. The resulting suspended seed composition has the quiet space needed before the ending.
+
+The next passage makes a rooted silver sapling, but leaves remain around the edges and its trunk lands right of center. Direct the final widening from that actual trunk position. Move it toward the left and use restrained horizon light for dawn; avoid a competing sun disk. Independent feedback supports establishing the tree early enough for the final light change to register.
+
+### Select the stronger dawn frame
+
+Deliver 116 seconds, ending at source painting 4164. The 120-second generation is complete and remains preserved, but its last four seconds lose the pears' glow and some dimensional shading. The shorter ending allows roughly four seconds after the 112-second dawn composition, keeps the roots and crown readable, and remains comfortably within the requested 1.5–3 minutes.

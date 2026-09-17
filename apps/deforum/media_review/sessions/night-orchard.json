@@ -1,12 +1,19 @@
 {
   "title": "The Night Orchard",
   "selected": [
-    "night-orchard"
+    "night-orchard-long"
   ],
   "clips": [
     {
-      "id": "night-orchard",
-      "label": "The Night Orchard",
+      "id": "night-orchard-long",
+      "label": "The Night Orchard · 1 minute 56 seconds",
+      "note": "An amber pear leads through floating orchards, a dark sea and a glass garden, returning to silver trees at dawn.",
+      "details": "The liked opening continues into hanging roots, water, a glass garden, suspended seeds and a rooted silver tree. Amber light and branching forms connect the scenes. Fine details redraw; the passage beneath the water is a visual morph, and the glass garden later reads as a night landscape. Silver boughs frame the final tree as morning light arrives.\n\nSilent 116-second cut. Native 1536×1024 paintings, 24 fps. The original 48 paintings are preserved with 300 new paintings; the complete 120-second generation remains archived. Krea recurrent repaints use CFG 1, three Euler intervals and recorded independent seeds. RIFE 4.25 scale 1 fills the intervals outside generation; the last seven frames continue the actual camera warp.",
+      "source": "projects/night-orchard/exports/v002/x06-the-first-light/through-4164/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "night-orchard-original",
+      "label": "Original short · 16 seconds",
       "note": "One amber pear becomes an orchard among the stars.",
       "details": "A midnight greenhouse, a silver branch and one amber pear lead into a suspended orchard. The final drift reveals the islands and their roots. The transition is a visual transformation; the fruit does not perform a literal hinged opening. Fine leaves, bark and architecture redraw along the way.\n\nSilent first cut. Native 1536×1024 paintings. Same-model Krea opening and recurrent repainting, CFG 1, three Euler intervals, recorded fresh seeds. Forty-eight paintings retained at three paintings per displayed second. RIFE 4.25 scale 1 fills the intervals outside generation; the final seven frames continue the camera warp. Sixteen seconds at 24 fps.",
       "source": "projects/night-orchard/exports/v001/p5-the-final-glide/through-0564/rife-moving-tail/preview.mp4"

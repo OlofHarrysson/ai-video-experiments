@@ -16,7 +16,7 @@ NAMED_REVIEWS = {
     "/seed-for-sea-long": APP
     / "projects/modern-model-study/exports/media-review-seed-for-sea-long-v001/local.html",
     "/night-orchard": APP
-    / "projects/night-orchard/exports/media-review-v001/full-quality.html",
+    / "projects/night-orchard/exports/media-review-v002/local.html",
     "/seed-for-sea": APP
     / "projects/modern-model-study/exports/media-review-seed-for-sea-v001/full-quality.html",
     "/doorway-cli": APP

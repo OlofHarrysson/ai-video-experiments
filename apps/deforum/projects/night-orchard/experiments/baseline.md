@@ -45,3 +45,7 @@ See [execution summary](execution-summary.json) for hashes and cost. The owned R
 Configurations and project runners are tracked in this directory. Original paintings, native graphs and ComfyUI histories live under `exports/v001/` in this project; delivery records are adjacent to the selected video. Private infrastructure/preservation receipts live in `../../../work/night-orchard-session/`. Preserve completed outputs and use a new case for creative changes.
 
 A delegated finishing-code handoff overlapped the first pair run. The initial verification receipt was preserved, then revalidated after the adapter stopped changing. No paintings were lost. The working-process incident is recorded as AF-20260917-004801 in the central agent-friction log.
+
+## Human feedback — 2026-09-17
+
+Olof calls the sixteen-second film “pretty good” and asks for approximately 1.5–3 minutes. The direction is retained for a [longer second cut](long-cut.md); this feedback does not rank the preserved alternative endings.

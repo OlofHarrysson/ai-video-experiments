@@ -10,7 +10,7 @@ The emotional passage is curiosity → intimacy → wonder. The recognizable amb
 
 ## Look and movement
 
-Aim for about 20 seconds, with no dialogue or added audio in the first cut. Rich oil-painted shading and enamel highlights; deep indigo, silver, restrained sea green and amber. A few monumental forms and ample dark space. Avoid a wall of ornamental detail, repeated portals and a uniformly busy star field.
+The first cut aimed for about 20 seconds and selected sixteen. Olof finds it pretty good and requests 1.5–3 minutes; the second cut targets two minutes, with no dialogue or added audio in this visual pass. Extend the journey through distinct spaces while preserving the amber light and silver branching motifs. See [long-cut direction](experiments/long-cut.md). Rich oil-painted shading and enamel highlights; deep indigo, silver, restrained sea green and amber. A few monumental forms and ample dark space. Avoid a wall of ornamental detail, repeated portals and a uniformly busy star field.
 
 First move follows the actual branch with a slight bank and noticeable lateral travel. Approach the lit fruit only after its position and unobstructed route are known. Within the fruit, translucent veins become the silver branches of the new world. Let the arrival widen mainly through revealed space and sideways motion; do not append another aggressive forward push. Keep motion connected across passages.
 

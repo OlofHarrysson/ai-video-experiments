@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-17",
+  "timezone": "Europe/Stockholm",
+  "selected_case": "x06-the-first-light",
+  "source_last_painting": 4164,
+  "selected_paintings": 348,
+  "preserved_v001_paintings": 48,
+  "new_generation_jobs": 312,
+  "frames": 2784,
+  "fps": 24,
+  "duration_seconds": 116,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "video": "exports/v002/x06-the-first-light/through-4164/rife-moving-tail/preview.mp4",
+  "video_sha256": "1ba61e873d205c74e6dd578246a9ee6a24b9da9135c6e2a22e7ce9fa6be7a763",
+  "delivery_verified": true,
+  "browser_check": "Normal-speed 1x playback reached frame 2783 at 115.958 seconds. The uncropped video and playback controls were visible in the narrow in-app reviewer, which was reset to frame 0 for handoff.",
+  "final_spatial_warps": 7,
+  "all_remote_files_preserved": 5430,
+  "pod_deleted": true,
+  "retained_model_volume_preserved": true,
+  "estimated_compute_usd": 1.1621095666666668,
+  "cost_basis": "Elapsed wall time from owned Pod creation to deletion at $0.74/hour; estimate excludes retained storage.",
+  "visual_evidence": [
+    "actual-painting motion previews for all six new movements",
+    "generated checkpoints and scene overview",
+    "first interpolation pair",
+    "dense delivered transition and ending samples"
+  ],
+  "review_limits": "Sampled visual inspection and browser playback checks do not establish a continuous subjective playback review. Olof feedback on the long cut is pending."
+}

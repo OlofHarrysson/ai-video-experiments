@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Night Orchard](night-orchard/README.md): a 16-second directed short; an amber pear becomes an orchard among stars. Selected cut delivered, human feedback pending.
+- [The Night Orchard](night-orchard/README.md): a directed 116-second film through floating orchards, a dark sea, a glass garden and dawn. The liked sixteen-second opening is preserved; long-cut feedback is pending.
 
 - [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md): a two-minute continuation through underwater worlds, lanterns, rain and a flowering return; original short preserved.
 

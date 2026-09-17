@@ -1,21 +1,19 @@
 # The Night Orchard
 
-One amber pear hangs from a silver branch in a midnight greenhouse. Its branching veins become trees, and the scene opens into an orchard of floating islands among the stars.
+An amber pear in a midnight greenhouse opens into an orchard of floating islands. Following its roots leads through a dark sea and a glass garden, then into hanging seeds and a rooted silver tree at dawn.
 
-**Selected cut: 16 seconds, silent, 1536 × 1024, 24 fps.** [Play in the local reviewer](http://localhost:3028/night-orchard) · [MP4](exports/v001/p5-the-final-glide/through-0564/rife-moving-tail/preview.mp4) · [cut record](cuts/v001.md).
+**Selected cut: 1 minute 56 seconds, silent, 1536 × 1024, 24 fps.** [Play in the local reviewer](http://localhost:3028/night-orchard) · [MP4](exports/v002/x06-the-first-light/through-4164/rife-moving-tail/preview.mp4) · [cut record](cuts/v002.md). The original [16-second cut](cuts/v001.md) remains available in the reviewer.
 
-Olof delegated direction after our [retrospective](../../../../docs/lessons-learned.md). The assistant selected the opening, planned each move from actual paintings, screened checkpoints and revised the ending. The [brief](BRIEF.md) records the intended film; [decisions](DECISIONS.md) and the [production report](experiments/baseline.md) explain what the material actually became. Human feedback is pending.
+Olof delegated direction after our [retrospective](../../../../docs/lessons-learned.md), called the first film “pretty good” and requested 1.5–3 minutes. The assistant preserved that opening and directed six additional movements from actual paintings, using independent composition and transition reviews. The [brief](BRIEF.md), [decisions](DECISIONS.md) and [long-cut report](experiments/long-cut.md) separate intended scenes from observed results. Human feedback on the long cut is pending.
 
-The world transformation reads more clearly than a literal journey into the fruit. Small leaves and architecture redraw, and later paintings flatten. The selected edit ends before the weakest extended ending. Both openings, all continuation paintings, the rejected pullback and the complete 20-second source sequence remain preserved locally.
+The film connects its worlds through amber light and silver branching forms. It supports poetic transformation rather than literal object transport. Fine details redraw; the water-to-glasshouse transition has a brief translucent overlap, and the glass garden becomes less distinctly underwater. The new middle alternates intricate architecture with quieter botanical compositions. All unique generations and both versions remain preserved locally.
 
 ## Production and verification
 
-Krea generated the opening and recurrent paintings. The selected film retains 48 original paintings; RIFE supplies the intervals and the final seven frames continue the camera warp. The complete session produced 76 unique paintings across both openings and two ending attempts. Generation provenance, preserved prefixes, delivery timing, all frame hashes and full video decode passed. The reviewer played through to its final frame.
-
-The [execution summary](experiments/execution-summary.json) records exact output hashes, checks, review limits and estimated cost. The owned Pod and its session copies were removed after verifying local preservation; the retained model volume remains. Olof's [standing spending authorization](../../../../docs/runpod.md#spending-authorization) replaces the earlier session caps.
+Krea generated the opening and recurrent paintings. The long film retains 348 paintings: 48 from the first cut plus 300 new paintings. The complete generated sequence has 360 paintings; its last four seconds remain preserved because their shading and amber light weaken. RIFE fills the intervals; the final seven frames continue the camera warp. Source lineage, anchor retention, delivery timing, frame hashes and full video decode passed. The [execution summary](experiments/execution-summary-v002.json) records exact output hashes, review limits, preservation and compute cost.
 
 ## Project tools
 
-From `apps/deforum/`, `experiments/film.py` provides `plan`, `opening`, `prepare`, `render` and `check`, with an explicit case name. Inference requires an owned deployment receipt. `experiments/preview.py CASE --until SOURCE_SECONDS` previews a move on its source painting. `experiments/finish.py CASE pair|full|tail|check` delivers it; `--through-frame 564` selects this cut. Existing outputs are immutable. Inspect the first pair before full interpolation.
+From `apps/deforum/`, `experiments/film.py` provides `plan`, `opening`, `prepare`, `render` and `check`, with an explicit case name. Inference requires an owned deployment receipt. Config `export_version` selects v001 or v002. `experiments/preview.py CASE --until SOURCE_SECONDS` previews a move on its source painting. `experiments/finish.py CASE pair|full|tail|check --version v002` delivers the long cut; `--through-frame 4164` selects this cut. Existing outputs are immutable. Inspect the first pair before full interpolation.
 
-[Configurations](experiments/configs) · [exports and frame meaning](exports/README.md) · [working convention](../../../../docs/workflow.md)
+[Configurations](experiments/configs) · [exports and frame meaning](exports/README.md) · [first production report](experiments/baseline.md) · [working convention](../../../../docs/workflow.md)

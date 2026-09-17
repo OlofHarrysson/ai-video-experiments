@@ -20,9 +20,15 @@ from deforum_lab.rendering.verification import validate_execution
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
 APP = HERE.parents[2]
-OUT = PROJECT / "exports/v001"
+VERSIONS = ("v001", "v002")
 FPS = 24
 PREFIX = "night-orchard"
+
+
+def output_root(config):
+    version = config.get("export_version", "v001")
+    require(version in VERSIONS, "Unknown export version")
+    return PROJECT / "exports" / version
 
 
 def pixels(path):
@@ -69,7 +75,7 @@ def preflight(config):
 
 
 def prepare(config):
-    root = OUT / config["case"]
+    root = output_root(config) / config["case"]
     save(root / "config.json", config)
     if "prefix_root" not in config:
         return
@@ -91,6 +97,7 @@ def prepare(config):
 
 
 def opening(config, deployment):
+    OUT = output_root(config)
     prepare(config)
     root = OUT / config["case"]
     run = PodClient.from_path(deployment).submit_once(
@@ -105,6 +112,7 @@ def opening(config, deployment):
 
 
 def render(config, deployment, through):
+    OUT = output_root(config)
     prepare(config)
     first = config.get("prefix_through", 0) + 12
     render_paintings(
@@ -119,6 +127,7 @@ def render(config, deployment, through):
 
 
 def check(config, through):
+    OUT = output_root(config)
     root = OUT / config["case"]
     require(read(root / "config.json") == config, "Frozen config differs")
     positions = [f for f in config["painting_frames"] if f <= through]

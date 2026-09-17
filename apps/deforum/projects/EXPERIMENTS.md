@@ -33,7 +33,9 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### night-orchard — 1 note
+### night-orchard — 2 notes
+
+- [The Night Orchard: a longer journey](night-orchard/experiments/long-cut.md) — 116-second selected cut, [delivery record](night-orchard/cuts/v002.md), independent critique and preserved two-minute source.
 
 - [The Night Orchard: opening, transformation and arrival](night-orchard/experiments/baseline.md) — [director decisions](night-orchard/DECISIONS.md), [selected cut](night-orchard/cuts/v001.md).
 
