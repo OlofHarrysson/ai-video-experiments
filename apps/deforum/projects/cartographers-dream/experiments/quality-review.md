@@ -1,6 +1,6 @@
 # First-pass screening
 
-Director and independent-agent observations. Source paintings, camera-only previews and delivered-frame samples are distinct evidence. They cannot establish the full rhythm or fine-pattern shimmer of normal-speed playback. Olof’s response to this film is pending.
+Director and independent-agent observations, followed by Olof’s playback feedback below. Source paintings, camera-only previews and delivered-frame samples are distinct evidence. They cannot independently establish the full rhythm or fine-pattern shimmer of normal-speed playback.
 
 ## Observed progression
 
@@ -43,4 +43,10 @@ The independent p10 screen includes every delivered frame at 45.750–46.375 and
 
 The richest network panorama occurs around 56.8–58.1 seconds. The last portion opens a quiet ivory center and shifts the main channel right. The director selects that as a release back into paper; the independent final-second screen supports this reading rather than an accidental blank exit. Small rocks, folds and fine branches still redraw. The ending is an evolving painted landscape, not a fixed map or a return to a closed book.
 
-The last original painting is frame 1437 at 59.875 seconds, followed by two verified holds at 59.917 and 59.958. The original-video reviewer verifies the file hash, 1,440 timestamps and 540 painting markers. Its served HTML, byte-range media and earlier-film routes pass checks through Devrun. Only the named route and film data changed; browser controls were not re-tested. The next human judgment is whether the faster floating motion matches Olof’s vision.
+The last original painting is frame 1437 at 59.875 seconds, followed by two verified holds at 59.917 and 59.958. The original-video reviewer verifies the file hash, 1,440 timestamps and 540 painting markers. Its served HTML, byte-range media and earlier-film routes pass checks through Devrun. Only the named route and film data changed; browser controls were not re-tested.
+
+## Human feedback — 2026-09-17
+
+Olof calls this our best piece yet and strongly praises its fluidity, dynamicness, abundant motion and variety beyond zooming or rotating. He especially notices panning and apparent 3D turns. This confirms the motion direction through playback. It does not isolate individual controls or dismiss every small artifact.
+
+He identifies the prompts as the weakest part and asks for more surreal, mind-bending imagery. He finds the ending lackluster and wants a high note with an actual story conclusion. The director’s and independent reviewer’s earlier acceptance of a quiet release did not establish a satisfying narrative ending for him. Keep v001 as a strong motion reference and develop a culminating transformation; see the [ending proposal](ending-proposal.md).
