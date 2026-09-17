@@ -4,6 +4,8 @@ Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questio
 
 - [The Night Orchard](night-orchard/README.md): a 16-second directed short; an amber pear becomes an orchard among stars. Selected cut delivered, human feedback pending.
 
+- [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md): a two-minute continuation through underwater worlds, lanterns, rain and a flowering return; original short preserved.
+
 - [Modern-model feedback study](modern-model-study/README.md): Klein 4B and Krea 2, same-model openings and feedback with model-specific prompting.
 
 One folder per film or coherent creative study. Each project owns its references, experiment notes, render attempts and cut versions. Follow the [working convention](../../../docs/workflow.md).

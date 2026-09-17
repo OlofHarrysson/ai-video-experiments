@@ -1,0 +1,148 @@
+{
+  "title": "A Seed for the Sea \u2014 long journey",
+  "session_started_utc": "2026-09-17T07:00:46Z",
+  "generation_complete": true,
+  "new_image_jobs": 288,
+  "unique_new_paintings": 288,
+  "preserved_original_paintings": 72,
+  "generation_checks": [
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l1b-descending-arch-generation.json",
+      "jobs": 48,
+      "sha256": "e381b5ccbb14f7e3c86e194fa4c8c7d4307ebe51c33751abc05f20f8f26447ed"
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l2-the-living-bell-generation.json",
+      "jobs": 48,
+      "sha256": "5f87afdce9eda622a469bcfb2ec425db5b906ea3c09ec05a39ef4f761866d8c3"
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l3-the-light-current-generation.json",
+      "jobs": 48,
+      "sha256": "dd85c665c8d14013ebc23d71e76bf6ce4c355f5e7e4afebf7608daae881cb064"
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l4-lanterns-above-the-sea-generation.json",
+      "jobs": 48,
+      "sha256": "0a1d4f061ac601495576572d5c2ad31a4912b845238315281077d78283a32b12"
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l5-the-rain-returns-generation.json",
+      "jobs": 48,
+      "sha256": "28d5cbc1527822bec122b9a9e1ddaf1852c9b1d57d0e3200e56097c0919d4348"
+    },
+    {
+      "path": "projects/modern-model-study/exports/seed-for-sea-long-v001/checks/l6b-the-world-in-bloom-generation.json",
+      "jobs": 48,
+      "sha256": "52b2543e9f507fbf901ce15857cee8941bc9fb0a5c648ecdbe54b181a8a2dee4"
+    }
+  ],
+  "archive": {
+    "verified": true,
+    "archive_sha256": "befe5c656476e3897827e9760286fea1236cec88a2bcb66fc20b279d88377d51",
+    "files": 5905,
+    "restored_exports": "projects/modern-model-study/exports/seed-for-sea-long-v001"
+  },
+  "archive_local_path": "work/seed-for-sea-long-session/final.tar.gz",
+  "delivery": {
+    "verified": true,
+    "frames": 2880,
+    "paintings": 360,
+    "fps": 24,
+    "seconds": 120.0,
+    "final_warps": 7,
+    "shared_boundary_paintings_verified": true,
+    "video_sha256": "5ba708a1dd98548f417663d11c46cfc5bec8c5cb21ce6bbb592b4e913d6dd354"
+  },
+  "frame_kinds": {
+    "anchor": 360,
+    "interpolation": 2513,
+    "warp": 7
+  },
+  "edit": "projects/modern-model-study/experiments/seed-for-sea-long/edit.json",
+  "human_feedback": "Olof likes the original short and requests 1.5\u20133 minutes; feedback on this long cut is pending.",
+  "runtime": {
+    "model": "Krea Turbo",
+    "comfyui_version": "0.34.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "pod_id": "54p6b4qbi72e02",
+    "pod_created_utc": "2026-09-17T07:06:46.568000+00:00",
+    "deletion_receipt_utc": "2026-09-17T08:32:26.636249+00:00",
+    "absence_verified": true,
+    "retained_volume": {
+      "id": "vd3jnbwko1",
+      "name": "deforum-models",
+      "size": 50,
+      "dataCenterId": "EU-RO-1"
+    },
+    "pinned_image": "runpod/comfyui:cuda12.8@sha256:498e3c4ac7ef5071214badb1681d82ab3a8f922b1055742ae692fa02cd3b59ff"
+  },
+  "cost": {
+    "additional_session_limit_usd": 10,
+    "gpu_usd_per_hour": 0.74,
+    "owned_pod_hours": 1.427797,
+    "estimated_gpu_usd": 1.057,
+    "conservative_compute_and_disk_usd": 1.09,
+    "account_balance_start": 23.6601330358,
+    "account_balance_at_cleanup": 21.5315306803,
+    "note": "Estimate uses this owned Pod interval. Account balance changes include a concurrent Night Orchard Pod and billing lag; do not attribute the whole debit to this film. Existing shared model-volume storage remains authorized."
+  },
+  "other_pods_at_cleanup": [
+    {
+      "id": "mmsf4kh4012wnn",
+      "name": "night-orchard-long-20260917",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 0.74,
+      "owned_by_this_session": false
+    }
+  ],
+  "reviewer": {
+    "url": "http://localhost:3028/seed-for-sea-long",
+    "default_url": "http://localhost:3028/",
+    "devrun_run_id": "3a94df22-ebc8-4e28-93d3-5b0214942f10",
+    "http_verification": {
+      "verified": true,
+      "checks": [
+        {
+          "route": "/",
+          "status": 200,
+          "bytes": 244840
+        },
+        {
+          "route": "/seed-for-sea-long",
+          "status": 200,
+          "bytes": 244840
+        },
+        {
+          "route": "/seed-for-sea",
+          "status": 200,
+          "bytes": 45281027
+        },
+        {
+          "route": "/night-orchard",
+          "status": 200,
+          "bytes": 20627484
+        },
+        {
+          "clip": "long-journey",
+          "status": 206,
+          "content_range": "bytes 0-63/121462671"
+        }
+      ],
+      "paintings": 360,
+      "frame_count": 2880
+    },
+    "left_running_for_human_review": true
+  },
+  "validation": {
+    "scoped_lint": "passed",
+    "server_tests": 3,
+    "opening_painting_hashes": "72/72 match the preserved original",
+    "screening": "24 overview samples, every shared passage join, chapter overviews and selected dense transformation/tail windows; see quality-review.md",
+    "browser_layout_changed": false
+  },
+  "local_drafts_without_gpu_jobs": [
+    "l1-below-the-surface: rejected slower descent preview",
+    "drafts/l6-unsupported-effect.json: schema typo caught by motion preview"
+  ]
+}

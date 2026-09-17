@@ -7,6 +7,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 | Interest | Start here |
 | --- | --- |
 | A directed film made from the retrospective lessons | [The Night Orchard](night-orchard/README.md) |
+| A two-minute recurrent journey through connected worlds | [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md) |
 | A new surreal piece with recurring cargo and an unfolding world | [A Seed for the Sea](modern-model-study/experiments/seed-for-sea/README.md) |
 | Assistant tooling and a continuous doorway crossing | [Doorway CLI dogfood](modern-model-study/experiments/doorway-cli/README.md) |
 | Tailored doorway approach and a different world beyond it | [Through the railway doorway](modern-model-study/experiments/doorway-revision/README.md) |
@@ -36,7 +37,9 @@ Grouped by project, alphabetically within each project. New notes should be link
 
 - [The Night Orchard: opening, transformation and arrival](night-orchard/experiments/baseline.md) — [director decisions](night-orchard/DECISIONS.md), [selected cut](night-orchard/cuts/v001.md).
 
-### modern-model-study — 59 notes
+### modern-model-study — 60 notes
+
+- [A Seed for the Sea — long journey](modern-model-study/experiments/seed-for-sea-long/README.md) — [direction decisions](modern-model-study/experiments/seed-for-sea-long/DECISIONS.md), [frame screening](modern-model-study/experiments/seed-for-sea-long/quality-review.md).
 
 - [A Seed for the Sea](modern-model-study/experiments/seed-for-sea/README.md) — [creative decisions](modern-model-study/experiments/seed-for-sea/DECISIONS.md), [assistant screening](modern-model-study/experiments/seed-for-sea/quality-review.md).
 

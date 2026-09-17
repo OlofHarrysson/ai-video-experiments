@@ -1,0 +1,14 @@
+{
+  "title": "A Seed for the Sea \u2014 first 40 seconds",
+  "expected_frames": 960,
+  "segments": [
+    {
+      "label": "The gift",
+      "root": "projects/modern-model-study/exports/seed-for-sea-v001/s4-the-floating-garden/faster/rife-moving-tail"
+    },
+    {
+      "label": "Below the surface",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l1b-descending-arch/excerpt-0852/rife-moving-tail"
+    }
+  ]
+}

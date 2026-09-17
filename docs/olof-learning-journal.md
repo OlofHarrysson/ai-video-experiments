@@ -366,3 +366,7 @@ He likes the railway doorway approach in The Open Dream but wants an earlier pus
 ### 2026-09-16 — production tooling is for the assistant
 
 Olof clarifies that his suggestion about additional motion-planning and backtracking tools was intended to help the assistant create better videos. He did not request more tooling for himself. The assistant incorrectly delivered a user-operated continuation planner. Keep the useful mechanics available for assistant-led production; Olof supplies direction and judges the resulting films. This clarification does not withdraw his earlier request for the media reviewer or imply that the new code should be deleted.
+
+### 2026-09-17 — A Seed for the Sea, longer form
+
+Olof says he quite likes A Seed for the Sea and requests roughly 1.5–3 minutes. This supports continuing its overall visual direction, without establishing a separate preference between the 24-second garden ending and the 16-second sea ending. The extension keeps the original cut and develops new scenes at the established pace.

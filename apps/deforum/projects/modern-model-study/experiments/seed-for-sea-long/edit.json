@@ -1,0 +1,34 @@
+{
+  "title": "A Seed for the Sea \u2014 long journey",
+  "expected_frames": 2880,
+  "segments": [
+    {
+      "label": "The gift",
+      "root": "projects/modern-model-study/exports/seed-for-sea-v001/s4-the-floating-garden/faster/rife-moving-tail"
+    },
+    {
+      "label": "Below the surface",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l1b-descending-arch/excerpt-0852/rife-moving-tail"
+    },
+    {
+      "label": "The living bell",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l2-the-living-bell/excerpt-1428/rife-moving-tail"
+    },
+    {
+      "label": "Stone becomes current",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l3-the-light-current/excerpt-2004/rife-moving-tail"
+    },
+    {
+      "label": "Lanterns above the sea",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l4-lanterns-above-the-sea/excerpt-2580/rife-moving-tail"
+    },
+    {
+      "label": "The rain returns",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l5-the-rain-returns/excerpt-3156/rife-moving-tail"
+    },
+    {
+      "label": "The world in bloom",
+      "root": "projects/modern-model-study/exports/seed-for-sea-long-v001/l6b-the-world-in-bloom/excerpt-3732/rife-moving-tail"
+    }
+  ]
+}

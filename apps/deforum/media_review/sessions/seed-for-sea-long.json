@@ -1,0 +1,15 @@
+{
+  "title": "A Seed for the Sea \u2014 long journey",
+  "selected": [
+    "long-journey"
+  ],
+  "clips": [
+    {
+      "id": "long-journey",
+      "label": "A Seed for the Sea \u2014 two-minute journey",
+      "note": "Desert \u2192 submerged city \u2192 living lights \u2192 lantern sky \u2192 rain \u2192 a renewed world",
+      "details": "The original pearl and red boat lead into a longer journey through underwater arches, living bells, lanterns and rain. The recurring forms change their role as the world changes around them. The return develops the opening world rather than replaying it. Object identity is symbolic, and a few scene transformations remain brisk.\n\nSame-model Krea Turbo recurrent animation: every repaint begins with the spatially warped previous painting. CFG 1, three Euler intervals, independent recorded seeds, staged prompts and noise ramps. All 72 original paintings are retained, followed by 288 new paintings. Delivery is 24 fps with three paintings per second and RIFE 4.25 between them; the final seven frames continue warping. The original short is preserved separately.",
+      "source": "projects/modern-model-study/exports/seed-for-sea-long-v001/film-v001/preview.mp4"
+    }
+  ]
+}

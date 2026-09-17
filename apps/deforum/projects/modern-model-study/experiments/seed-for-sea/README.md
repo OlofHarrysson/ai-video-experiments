@@ -1,5 +1,7 @@
 # A Seed for the Sea
 
+Olof subsequently said he quite likes the film and requested 1.5–3 minutes. The [long journey](../seed-for-sea-long/README.md) continues its paintings into new worlds; both short endings below remain preserved. This feedback does not establish a separate preference between the two short endings.
+
 2026-09-16 UTC. A new surreal piece built over one hour with the established Krea feedback loop. [Starting vision](BRIEF.md) · [Creative decisions](DECISIONS.md) · [Frozen configurations](configs/).
 
 A red boat and a luminous pearl connect an empty desert, a dormant flower and a sea that grows between its petals. The story follows a theme and recurring shapes while adapting to what the model actually paints. It does not establish a physically tracked journey of one boat: the boat remained in the opening shell, then returned in the later world.
