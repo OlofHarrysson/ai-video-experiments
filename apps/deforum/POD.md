@@ -31,6 +31,12 @@ The first fresh container may still need a multi-minute image pull. Mounted weig
 
 S3 access is verified at `https://s3api-eu-ro-1.runpod.io/` (region `EU-RO-1`, bucket = the volume ID). This permits reading receipts and recovering archived outputs even when GPU capacity is unavailable. Resolve credentials using the existing ignored `.env`; never copy credentials into scripts or documentation.
 
+## Working storage
+
+Keep cumulative generation work in an owned directory on the adequately sized container disk, and keep the reusable model cache on the network volume. Download and hash-check completed passages promptly; container files disappear with the Pod. ComfyUI inputs and outputs may still consume the network-volume quota and require verified, session-owned duplicate cleanup.
+
+During The Cartographer’s Dream, a 50 GB network-volume quota caused `Disk quota exceeded` while `df` reported hundreds of terabytes free for the shared backing filesystem. Aggregate `df` capacity did not describe the account quota. The quiescent owned worktree was copied to the 150 GB container disk, every file and symlink was verified, and the original path was retained as a symlink before generation resumed. The project's [production notebook](projects/cartographers-dream/experiments/baseline.md#storage-recovery) records this recovery.
+
 ## End a session
 
 Download and hash-check every generated output and experiment receipt. Confirm an empty queue, then delete only the experiment's owned Pod. Verify deletion and **retain deforum-models**. Model files and runtime remain on the volume; source media and final renders also remain local under the project. Clear only verified, owned scratch/output files when space is needed; preserve the reusable models/runtime.

@@ -28,6 +28,10 @@ The wider mountain pass reveals a huge ivory-and-blue paper fold above the river
 
 Source cadence remains 12 at 24 fps. Nominal delivery maps each painting to round(source_frame/4.5) at 24 fps, retaining all originals with 2/3-frame interpolation intervals. This is three times the original Storm delivery clock; individual source camera phrases provide rhythmic acceleration toward the 4× reference. A sixty-second delivery requires 540 paintings. A full-minute film is not yet complete.
 
+## Storage recovery
+
+Before p08 generation, the shared 50 GB model volume hit its quota. Uploads failed and a direct write returned `errno 122: Disk quota exceeded`; `df` misleadingly showed aggregate backing-filesystem capacity. All completed passages were already collected locally. With generation and collection paused, the owned worktree moved to the Pod's 150 GB container disk after all 10,988 inventory entries and file hashes matched. The original path became a symlink. One zero-byte interrupted prefix copy was removed; the preserved original was recopied and verified during resume. No new p08 painting had been generated before failure. Inference then resumed successfully. Private migration evidence is in `work/cartographers-dream-session/storage-migration.json`; incident **AF-20260917-153602** records the workflow failure. Shared models and other projects were retained.
+
 ## Independent story review
 
 Keep one event—ink creating geography—and carry the ultramarine route through transitions. Use contour ledges to motivate canyon and mineral shelves to motivate mountain folds. The camera may rise beside falling water; do not imply the river flows uphill. The ending should be a distinctive delta between monumental ivory strata, paying off the opening’s blank space. These are planning judgments, not findings about generated footage.
