@@ -26,13 +26,13 @@ The wider mountain pass reveals a huge ivory-and-blue paper fold above the river
 
 ## Timing
 
-Source cadence remains 12 at 24 fps. Nominal delivery maps each painting to round(source_frame/4.5) at 24 fps, retaining all originals with 2/3-frame interpolation intervals. This is three times the original Storm delivery clock; individual source camera phrases provide rhythmic acceleration toward the 4× reference. A sixty-second delivery requires 540 paintings. A full-minute film is not yet complete.
+Source cadence remains 12 at 24 fps. Nominal delivery maps each painting to round(source_frame/4.5) at 24 fps, retaining all originals with 2/3-frame interpolation intervals. This is three times the original Storm delivery clock; individual source camera phrases provide rhythmic acceleration toward the 4× reference. The verified sixty-second delivery retains 540 paintings in 1,440 frames. Two additional final holds complete the last interval.
 
 ## Branching delta and final reveal
 
 After the paper arch, the blue route develops into a branching network across raised ivory surfaces. An independent screen finds this a distinct event by 43–46 seconds. The next seven-second sweep passes curled islands; its first camera-only draft was too restrained around the direction change, so enlargement increased from 2.5× to 4.5× while preserving the continuous incoming velocity. Source 5724 shows a broad blue network around dimensional paper folds, with coarse edges and quiet pale expanses. Both draft previews remain preserved.
 
-The final plan begins from that painting and widens approximately 4.5× over 6.89 delivery seconds, translating right 1.15/up .45 image heights with a gentle bank. It ends with nonzero lateral and retreat velocity. The camera-only preview shows a clear scale change; its reflected edges represent areas that the recurrent generator must repaint, so they cannot establish final border quality. Inspect the generated wide reveal and its interpolation before selection.
+The final plan begins from that painting and widens approximately 4.5× over 6.89 delivery seconds, translating right 1.15/up .45 image heights with a gentle bank. It ends with nonzero lateral and retreat velocity. The camera-only preview shows a clear scale change; its reflected edges represent areas that the recurrent generator must repaint, so they cannot establish final border quality. The generated pullback reveals broader blue branches between paper folds. Fine tributaries and the balance of blank space continue to change; it is an evolving painted network rather than a fixed map held throughout. The final frame and dense ending windows were screened before selection; see the first-pass critique.
 
 ## Storage recovery
 
@@ -41,3 +41,7 @@ Before p08 generation, the shared 50 GB model volume hit its quota. Uploads fail
 ## Independent story review
 
 Keep one event—ink creating geography—and carry the ultramarine route through transitions. Use contour ledges to motivate canyon and mineral shelves to motivate mountain folds. The camera may rise beside falling water; do not imply the river flows uphill. The ending should be a distinctive delta between monumental ivory strata, paying off the opening’s blank space. These are planning judgments, not findings about generated footage.
+
+## Delivery and preservation
+
+The selected cut verifies 60 seconds, 1,440 frames and all 540 original paintings. Every one of the 552 unique generation jobs passes provenance checks; 12 unused paper-ridge paintings remain preserved. All 10,159 remote files match their canonical local copies. The owned Pod and 1,103 verified ComfyUI duplicates were removed; the shared model volume remains. Estimated compute was $2.01, excluding storage. See the [cut record](../cuts/v001.md), [first-pass critique](quality-review.md) and [execution summary](execution-summary.json).

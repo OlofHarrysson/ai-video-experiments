@@ -37,7 +37,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 
 ### cartographers-dream — production in progress
 
-- [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md).
+- [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md), [selected cut](cartographers-dream/cuts/v001.md), [first-pass critique](cartographers-dream/experiments/quality-review.md).
 
 ### storm-engine — 2 notes
 

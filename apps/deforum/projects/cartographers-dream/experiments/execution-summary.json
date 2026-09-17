@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-17",
+  "timezone": "Europe/Stockholm",
+  "selected_case": "p11-the-living-atlas",
+  "source_last_painting": 6468,
+  "selected_paintings": 540,
+  "new_generation_jobs": 552,
+  "preserved_unselected_paintings": 12,
+  "frames": 1440,
+  "fps": 24,
+  "duration_seconds": 60,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "video": "exports/v001/p11-the-living-atlas/through-6468/rife/preview.mp4",
+  "video_sha256": "c650fb33bc74e719ff8e917aa457c72c03b22c67dd0a524121be079719e84650",
+  "delivery_verified": true,
+  "all_generation_jobs_verified": 552,
+  "source_speed_multiplier": 4.5,
+  "clock_ratio_to_original_storm_delivery": 3,
+  "final_spatial_warps": 0,
+  "final_hold_frames": 2,
+  "all_remote_files_preserved": 10159,
+  "preserved_remote_bytes": 9248334641,
+  "verified_comfy_duplicates_removed": 1103,
+  "pod_deleted": true,
+  "retained_model_volume_preserved": true,
+  "estimated_compute_usd": 2.0071784666666668,
+  "cost_basis": "Elapsed wall time from owned Pod creation to deletion at $0.74/hour; estimate excludes storage.",
+  "storage_recovery": "Shared model-volume quota interrupted p08 preparation before any p08 generation. The owned worktree moved to container disk after all 10,988 inventory entries and hashes matched. Shared models remained in place.",
+  "motion_diagnostic": {
+    "meaning": "Planned geometric displacement, not rendered optical flow or taste.",
+    "case": "p11-the-living-atlas",
+    "new_passage": {
+      "mean": 0.3637197074217773,
+      "median": 0.351380347170002,
+      "peak": 0.6473456744106751,
+      "minimum": 0.11108254655495545,
+      "intervals": 62
+    },
+    "cumulative": {
+      "mean": 0.28373062238112473,
+      "median": 0.27257196152916974,
+      "peak": 0.6473456744106751,
+      "minimum": 0.05433680722279858,
+      "intervals": 539
+    },
+    "original_storm": {
+      "mean": 0.08939311595418147,
+      "median": 0.08060786856455376,
+      "peak": 0.17199432711692142,
+      "minimum": 0.019808494859353827,
+      "intervals": 179
+    },
+    "mean_ratio_to_original_storm": 3.1739650123232215
+  },
+  "review_limits": "Source paintings, camera-only previews, overview sheets and selected dense delivered-frame windows were inspected by the director and an independent agent. This does not establish continuous subjective playback quality. Human feedback is pending.",
+  "accepted_visual_limitations": [
+    "Incidental human silhouettes appear near the waterfall.",
+    "Fine ink patterns and paper details redraw; normal playback must establish whether their shimmer is acceptable."
+  ],
+  "reviewer_check": {
+    "url": "http://localhost:3028/cartographers-dream",
+    "run_id": "f873b0cf-348f-4ae2-b3cc-3f6fe86b170b",
+    "html_matches_build": true,
+    "duration_seconds": 60,
+    "frames": 1440,
+    "paintings": 540,
+    "video_sha256": "c650fb33bc74e719ff8e917aa457c72c03b22c67dd0a524121be079719e84650",
+    "byte_range_verified": true,
+    "head_verified": true,
+    "preserved_routes": {
+      "": 200,
+      "night-orchard": 200,
+      "seed-for-sea-long": 200,
+      "storm-engine": 200,
+      "storm-engine-timing": 200
+    },
+    "ui_changes": "Named route and film data only; existing player layout and controls unchanged. Browser interactions were not re-tested."
+  }
+}
