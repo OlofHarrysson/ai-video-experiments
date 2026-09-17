@@ -1,12 +1,19 @@
 {
   "title": "The Cartographer’s Dream",
   "selected": [
-    "cartographers-dream"
+    "cartographers-dream-v002"
   ],
   "clips": [
     {
+      "id": "cartographers-dream-v002",
+      "label": "The Cartographer’s Dream · new ending · 1:15",
+      "note": "The inked landscape curls into a world of its own, then opens into an intricate paper form encircled by a blue ribbon. The new ending begins at 1:00.",
+      "details": "The approved first minute continues into a new fifteen-second ending. A curling paper landscape becomes a globe; its blue river leaves the surface and forms an orbit. The final world becomes a deeply pleated paper sculpture, with a short gentler closing movement. Two later branches that drifted toward literal Earth/map imagery are preserved outside this cut.\n\nSilent 75-second cut, 1536×1024, 24 fps. All 675 selected paintings are retained, including the unchanged original 540. The delivery clock remains 4.5× source speed, equivalent to 3× the original Storm Engine delivery clock. RIFE fills two- and three-frame painting intervals outside recurrence. Two additional final frames hold the last painting (0.083 seconds).\n\nThe imagery is a continuous painted transformation; small geography and folds redraw. The globe briefly resembles Earth during its reveal, and the crater repaints rapidly around 66.2 seconds. Human feedback on this new ending is pending.",
+      "source": "projects/cartographers-dream/exports/v001/p15-the-completed-orbit/through-8088/rife/preview.mp4"
+    },
+    {
       "id": "cartographers-dream",
-      "label": "The Cartographer’s Dream · 1 minute",
+      "label": "The Cartographer’s Dream · original 1 minute",
       "note": "Follow a blue ink river from an ivory atlas through waterfalls, amethyst caverns and enormous paper folds into a branching delta.",
       "details": "A new story directed around faster floating camera movement. Close banks and mineral formations pass the camera, the river opens a route through a giant paper arch, and a travelling pullback reveals the blue ink network. The blue route, pale sculptural landforms and warm light connect the changing worlds. Small incidental figures appear briefly around the waterfall; individual details continue to redraw.\n\nSilent 60-second cut, 1536×1024, 24 fps. All 540 selected paintings are retained. Delivery runs at 4.5× the source clock, equivalent to 3× the original Storm Engine delivery clock, with varied camera paths and acceleration. RIFE fills the two- and three-frame painting intervals outside recurrence. Two additional frames hold the last painting (0.083 seconds).",
       "source": "projects/cartographers-dream/exports/v001/p11-the-living-atlas/through-6468/rife/preview.mp4"

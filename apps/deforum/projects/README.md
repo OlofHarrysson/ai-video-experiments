@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Cartographer’s Dream](cartographers-dream/README.md): a completed one-minute atlas-to-landscape film with 540 paintings, following the selected faster floating pace.
+- [The Cartographer’s Dream](cartographers-dream/README.md): a 75-second atlas-to-landscape film with 675 paintings, following the selected faster floating pace and concluding with a folded paper world inside a blue orbit. The original minute remains preserved.
 
 - [The Storm Engine](storm-engine/README.md): a sixty-second journey from a copper wind city through a storm to a red kite, with stronger sustained pans and zooms following Night Orchard feedback.
 

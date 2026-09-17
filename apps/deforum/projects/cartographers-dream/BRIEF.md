@@ -2,6 +2,8 @@
 
 A silent one-minute surreal film in the established recurrent Krea painting workflow. One ultramarine ink river gives an unmapped ivory landscape its geography. Olof delegates direction and selects smooth floating motion at roughly 3–4× the original sixty-second Storm Engine delivery pace.
 
+The authorized ending continuation preserves that original minute and adds a concluding transformation. The landscape curls around the viewpoint, becomes a separate paper world, and the blue river forms an enclosing orbit. Select the earliest convincing completion and allow a short quieter coda. The revised cut is 75 seconds; the [ending production](experiments/ending-production.md) records the actual paintings, branches and selection.
+
 ## Story and camera
 
 | Delivery | Event | Camera purpose |
@@ -13,6 +15,10 @@ A silent one-minute surreal film in the established recurrent Krea painting work
 | 35–40 s | A giant paper arch spans the river | Approach the opening beneath the fold, keeping the onward channel in view |
 | 40–53 s | Blue distributaries fill the formerly blank paper basin | Pass beneath the clearing roof, follow a new fork and sweep around sculptural ivory islands |
 | 53–60 s | The branching network becomes visible together | Rise and pull back while continuing to travel across the delta |
+| 60–64 s | The paper landscape curls overhead | Continue into the right-hand channel, then bank beneath the rising paper |
+| 64–70 s | The landscape becomes a separate floating globe | Retreat through the curved opening and reveal the outer silhouette |
+| 70–72.5 s | The blue river leaves the paper and forms an orbit | Recenter and retain the full folded form and blue band |
+| 72.5–75 s | The paper becomes a deeply pleated sculpture inside the orbit | Give the completed image a short gentle closing drift |
 
 Ivory, ultramarine, saffron sandstone and deep violet shade; tactile paper grain, oil-painted light, dimensional rock and mineral. One blue route and contour-like ridges connect the worlds. No labels, lettering, people or dependence on literal character identity. The final delta should remain an extraordinary painted place, not an ordinary landscape or a return to the desk.
 

@@ -1,6 +1,6 @@
 # A world of its own
 
-Director proposal, 2026-09-17. No continuation has been generated. Preserve the complete v001 film and its now-approved motion language. Olof wants stronger surreal transformations and a high note that concludes the story.
+Director proposal, 2026-09-17. Olof authorized production: “Okay try creating an ending.” Preserve the complete v001 film and its now-approved motion language. Olof wants stronger surreal transformations and a high note that concludes the story. Production findings belong in [ending production](ending-production.md).
 
 ## Story payoff
 

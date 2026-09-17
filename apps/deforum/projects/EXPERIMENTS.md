@@ -35,9 +35,9 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
-### cartographers-dream — production in progress
+### cartographers-dream — film and ending
 
-- [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md), [selected cut](cartographers-dream/cuts/v001.md), [first-pass critique](cartographers-dream/experiments/quality-review.md).
+- [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md), [paper-world ending](cartographers-dream/experiments/ending-production.md), [revised cut](cartographers-dream/cuts/v002.md), [original cut](cartographers-dream/cuts/v001.md), [first-pass critique](cartographers-dream/experiments/quality-review.md).
 
 ### storm-engine — 2 notes
 

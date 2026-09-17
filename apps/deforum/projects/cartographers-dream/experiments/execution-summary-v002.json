@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-17",
+  "timezone": "Europe/Stockholm",
+  "cut": "v002",
+  "selected_case": "p15-the-completed-orbit",
+  "source_last_painting": 8088,
+  "selected_paintings": 675,
+  "preserved_original_paintings": 540,
+  "new_generation_jobs": 210,
+  "selected_new_paintings": 135,
+  "preserved_unselected_new_paintings": 75,
+  "generation_cases": [
+    {
+      "case": "p12-gravity-changes",
+      "new_paintings": 36,
+      "selected": 36,
+      "selected_through": 6900
+    },
+    {
+      "case": "p13-a-world-of-its-own",
+      "new_paintings": 54,
+      "selected": 54,
+      "selected_through": 7548
+    },
+    {
+      "case": "p14-the-river-leaves-the-map",
+      "new_paintings": 54,
+      "selected": 10,
+      "selected_through": 7668
+    },
+    {
+      "case": "p14b-the-ink-orbit",
+      "new_paintings": 44,
+      "selected": 13,
+      "selected_through": 7824
+    },
+    {
+      "case": "p15-the-completed-orbit",
+      "new_paintings": 22,
+      "selected": 22,
+      "selected_through": 8088
+    }
+  ],
+  "frames": 1800,
+  "fps": 24,
+  "duration_seconds": 75,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "video": "exports/v001/p15-the-completed-orbit/through-8088/rife/preview.mp4",
+  "video_sha256": "f5be9f633b691a9fc97b7db1783c97684bc9be401876de33d23dc4df259ac8c6",
+  "delivery_verified": true,
+  "all_new_generation_jobs_verified": 210,
+  "source_speed_multiplier": 4.5,
+  "clock_ratio_to_original_storm_delivery": 3,
+  "final_spatial_warps": 0,
+  "final_hold_frames": 2,
+  "all_remote_files_preserved": 6530,
+  "preserved_remote_bytes": 8680216803,
+  "preservation_verified_at": "2026-09-17T18:10:32.601556+00:00",
+  "verified_comfy_duplicates_removed": 420,
+  "owned_worktree_removed": true,
+  "queue_empty_before_cleanup": true,
+  "pod_deleted": true,
+  "pod_absence_verified": true,
+  "pod_created_at": "2026-09-17T16:53:23.204Z",
+  "pod_deleted_at": "2026-09-17T18:22:05.286Z",
+  "retained_model_volume_preserved": true,
+  "estimated_compute_usd": 1.0939835222222223,
+  "cost_basis": "Elapsed wall time from owned Pod creation to deletion at $0.74/hour; estimate excludes storage.",
+  "review_limits": "Source paintings, motion previews, overview sheets and selected dense delivered-frame windows were inspected by the director and an independent agent. This is frame-based screening, not continuous normal-speed playback or human approval of the new ending.",
+  "accepted_visual_limitations": [
+    "Crater repainting and a soft smear around 66.21-66.46 seconds.",
+    "The globe briefly resembles Earth before recovering folded paper relief.",
+    "The blue orbit appears rapidly around 70.875-71.0 seconds.",
+    "Mountain-like folds become a pleated rosette around 72.458-72.542 seconds.",
+    "Original incidental waterfall figures and fine-detail redraw remain."
+  ],
+  "human_feedback": "Original sixty-second film praised; new ending feedback pending.",
+  "reviewer_check": {
+    "url": "http://localhost:3028/cartographers-dream",
+    "run_id": "cde87496-ead2-4443-a362-300e44b5c609",
+    "html_matches_build": true,
+    "clips": [
+      {
+        "id": "cartographers-dream-v002",
+        "duration_seconds": 75,
+        "frames": 1800,
+        "paintings": 675,
+        "video_sha256": "f5be9f633b691a9fc97b7db1783c97684bc9be401876de33d23dc4df259ac8c6",
+        "byte_range_verified": true,
+        "head_verified": true
+      },
+      {
+        "id": "cartographers-dream",
+        "duration_seconds": 60,
+        "frames": 1440,
+        "paintings": 540,
+        "video_sha256": "c650fb33bc74e719ff8e917aa457c72c03b22c67dd0a524121be079719e84650",
+        "byte_range_verified": true,
+        "head_verified": true
+      }
+    ],
+    "preserved_routes": {
+      "": 200,
+      "cartographers-dream-v001": 200,
+      "night-orchard": 200,
+      "seed-for-sea-long": 200,
+      "storm-engine": 200,
+      "storm-engine-timing": 200
+    },
+    "ui_changes": "Film data and named routes only. Existing player layout and controls unchanged; browser interactions were not re-tested."
+  },
+  "canonical_frame_comparison": {
+    "canonical_video_sha256": "f5be9f633b691a9fc97b7db1783c97684bc9be401876de33d23dc4df259ac8c6",
+    "original_video_sha256": "c650fb33bc74e719ff8e917aa457c72c03b22c67dd0a524121be079719e84650",
+    "checkpoint_video_sha256": "e6ede23fba5accbed14468101cd829db653a0542189b9c31dead620386f63360",
+    "canonical_manifest_sha256": "9c3c2827ff2df90451d65d3d792bb2483efe8b13bf72c7dc0cee4d128bf1893a",
+    "original_prefix_frames_compared": 1438,
+    "original_prefix_mismatches": [],
+    "checkpoint_frame_offset": 1424,
+    "checkpoint_frames_compared": 376,
+    "checkpoint_mismatches": [],
+    "elapsed_seconds": 398.8218082911335,
+    "final_holds": 2
+  }
+}
