@@ -14,4 +14,10 @@ Both copies select from the existing lossless RIFE frame sequence, preserving ea
 
 This compares timing, including the faster passage of painting transformations and story. Existing redraws become quicker; fewer intermediate frames remain at 24 fps. It does not measure how increased geometric displacement per repaint would affect a newly generated film. A new one-minute film at the selected pace would need more journey, with transitions planned around that timing.
 
-Reproduce from `apps/deforum` with `uv run --locked python projects/storm-engine/timing_audition.py`. Versioned local outputs and provenance manifests are under `exports/timing-v001/2x` and `exports/timing-v001/4x`. Human preference between the speeds is pending.
+Reproduce from `apps/deforum` with `uv run --locked python projects/storm-engine/timing_audition.py`. Versioned local outputs and provenance manifests are under `exports/timing-v001/2x` and `exports/timing-v001/4x`.
+
+## Human feedback — 2026-09-17
+
+Olof selects roughly **3–4× the original sixty-second Storm Engine pace**, with approximately **3× as the usual target** and movement rising toward **4× when the movie's rhythm supports it**. He says 4× is sometimes too quick and sometimes perfect. Preserve the smooth floating style while shortening the time taken to complete each movement. A move that took eight seconds would take about 2.7 seconds at 3× or two seconds at 4×.
+
+The reference is the original delivered film at reviewer speed 1×, not the generation clock or the 2× comparison. Three times speed is Olof's stated target inferred between the displayed alternatives; a separate 3× render has not been screened. This selects a direction for shot timing, without requiring one fixed speed across a film or establishing faster-generation artifact limits. Existing exports remain unchanged.

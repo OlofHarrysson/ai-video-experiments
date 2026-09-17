@@ -20,6 +20,8 @@ Each actual painting determines the next target and timing. Preserve alternative
 
 ## Motion and production
 
+Olof's timing direction after screening: retain smooth floating movement at roughly 3–4× the pace of the original sixty-second Storm Engine delivery. Use approximately 3× as the usual target and approach 4× where the rhythm calls for it; 4× is not suitable everywhere. Shorten the duration of the same camera path and coordinate prompts and reveals with the faster arrival. The route and production settings below describe the preserved original; the [timing comparison and feedback](experiments/timing-audition.md) guide subsequent work.
+
 Use the established recurrent Krea loop: warped previous painting initializes diffusion, text prompt supplies the scene, no additional reference conditioning. Keep CFG 1, three Euler repaint intervals, recorded independent seeds, source cadence 12 at 24 fps and 1.5× delivery. RIFE 4.25 scale 1 remains outside recurrence. The selected finish holds the last painting for seven frames (0.292 seconds), avoiding a peripheral seam in the preserved moving-tail version.
 
 Increase spatial displacement in generation. Starting calibration: roughly 0.10–0.18 image heights per delivered second for purposeful travel, or a two-to-fourfold scale change over a major approach, with overlapping translation and roll. These are initial targets to assess on the actual painting, not quality scores or requirements everywhere. Compare the first short delivery with The Night Orchard before extending. Preserve recognizable focal silhouettes and avoid reflected borders, route-blocking objects and abrupt stops.
