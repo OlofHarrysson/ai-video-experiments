@@ -377,4 +377,10 @@ Olof says he quite likes A Seed for the Sea and requests roughly 1.5–3 minutes
 
 ### 2026-09-17 — More motion in the next directed film
 
-Olof calls the extended Night Orchard very pretty but finds its movement too slow. He requests larger, more aggressive pans and zooms that create more visible change, and a completely new theme around one minute long. He still expects prompts, transitions and storytelling to be planned together. This is a request for stronger spatial movement, not simply a faster export or a change to the accepted diffusion mechanism.
+Olof calls the extended Night Orchard very pretty but finds its movement too slow. He requests larger, more aggressive pans and zooms that create more visible change, and a completely new theme around one minute long. He still expects prompts, transitions and storytelling to be planned together.
+
+### 2026-09-17 — Shorter camera movement durations
+
+Olof likes The Storm Engine but says its movement still does not meet his vision. He explicitly confirms larger, faster camera movement through the painting while retaining the smooth floating style. His analogy is changing a website animation from 500 ms to 300 ms: the same movement completes sooner. Smoothness and gradual change remain desirable; their duration is too long. He is open to demonstrated artifact limits, but asks why timing was not shortened further already.
+
+The assistant had chosen conservative passage durations and had not demonstrated that the requested pace was technically blocked. Relative motion metrics did not establish satisfaction of the brief. The [timing comparison](../apps/deforum/projects/storm-engine/experiments/timing-audition.md) uses the same footage at 2× and 4× to make this dimension directly reviewable. These are assistant-selected test speeds, not established user preferences. Export retiming also accelerates painting transformations; it does not independently test faster camera movement with unchanged repaint timing.

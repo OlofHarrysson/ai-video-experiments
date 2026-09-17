@@ -1,0 +1,27 @@
+{
+  "title": "The Storm Engine · quicker movement",
+  "selected": ["original", "twice"],
+  "clips": [
+    {
+      "id": "original",
+      "label": "Original · 60 seconds",
+      "note": "The current film, for comparison.",
+      "details": "Olof likes the imagery but finds the movement too gradual. These comparisons keep the same camera route and shorten its duration. The faster versions also accelerate the painting transformations and story. Each version retains all 180 paintings at 24 fps.",
+      "source": "projects/storm-engine/exports/v001/p05c-the-red-kite/through-2148/rife/preview.mp4"
+    },
+    {
+      "id": "twice",
+      "label": "2× speed · 30 seconds",
+      "note": "An eight-second move now takes four seconds.",
+      "details": "Same route and easing, half the duration. All 180 paintings survive; every second frame of the existing lossless sequence is used. No new diffusion or interpolation. Painting changes accelerate along with the camera. This is a timing comparison, not a new one-minute film.",
+      "source": "projects/storm-engine/exports/timing-v001/2x/preview.mp4"
+    },
+    {
+      "id": "fourfold",
+      "label": "4× speed · 15 seconds",
+      "note": "An eight-second move now takes two seconds.",
+      "details": "Same route and easing, one quarter of the duration. All 180 paintings survive; every fourth frame of the existing lossless sequence is used. No new diffusion or interpolation. Painting changes accelerate along with the camera. This is a wider timing comparison; a preferred pace has not been selected.",
+      "source": "projects/storm-engine/exports/timing-v001/4x/preview.mp4"
+    }
+  ]
+}
