@@ -6,11 +6,12 @@ A silent one-minute surreal film in the established recurrent Krea painting work
 
 | Delivery | Event | Camera purpose |
 | --- | --- | --- |
-| 0–10 s | A blue route crosses a blank ivory atlas; engraving becomes relief | Follow the ink with a fast travelling push and bank, entering the carved landscape |
-| 10–25 s | One river cuts deep sandstone bends, approaching a precipice | Trace two distinct bends, overlap lateral travel and approach, reveal the drop |
-| 25–39 s | Water descends through luminous mineral caverns | Accelerate toward 4× pace for the descent, then follow the blue channel beneath tall crystalline shelves |
-| 39–48 s | Mineral shelves become enormous snowy paper folds | Rise beside the falling river and crest the folded ridge; the camera rises, not the water |
-| 48–60 s | A branching delta animates the formerly blank landscape | Sweep into blue distributaries between sculptural ivory strata, widen while still travelling |
+| 0–3 s | A blue route crosses a blank ivory atlas; engraving becomes relief | Follow the ink with a travelling push and bank, entering the carved landscape |
+| 3–12 s | One river cuts a deep sandstone bend and breaks over a precipice | Follow the observed channel, bank toward the rim and reveal the drop |
+| 12–23 s | Water descends into luminous mineral caverns | Descend beside the falls, then follow the blue channel beneath crystalline shelves |
+| 23–35 s | Mineral chambers open around the river | Sweep around asymmetric formations and rise toward a shaft of daylight |
+| 35–46 s | Mineral shelves become enormous snowy paper folds | Climb and crest the folded ridge; the camera rises, not the water |
+| 46–60 s | A branching delta animates the formerly blank landscape | Sweep into blue distributaries between sculptural ivory strata, widen while still travelling |
 
 Ivory, ultramarine, saffron sandstone and deep violet shade; tactile paper grain, oil-painted light, dimensional rock and mineral. One blue route and contour-like ridges connect the worlds. No labels, lettering, people or dependence on literal character identity. The final delta should remain an extraordinary painted place, not an ordinary landscape or a return to the desk.
 

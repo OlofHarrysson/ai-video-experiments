@@ -1,0 +1,308 @@
+{
+  "case": "p04-below-the-falls",
+  "seed": 9204000,
+  "duration": 77.0,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/cartographers-dream/exports/v001/p03-the-river-falls",
+  "prefix_through": 1296,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828,
+    840,
+    852,
+    864,
+    876,
+    888,
+    900,
+    912,
+    924,
+    936,
+    948,
+    960,
+    972,
+    984,
+    996,
+    1008,
+    1020,
+    1032,
+    1044,
+    1056,
+    1068,
+    1080,
+    1092,
+    1104,
+    1116,
+    1128,
+    1140,
+    1152,
+    1164,
+    1176,
+    1188,
+    1200,
+    1212,
+    1224,
+    1236,
+    1248,
+    1260,
+    1272,
+    1284,
+    1296,
+    1308,
+    1320,
+    1332,
+    1344,
+    1356,
+    1368,
+    1380,
+    1392,
+    1404,
+    1416,
+    1428,
+    1440,
+    1452,
+    1464,
+    1476,
+    1488,
+    1500,
+    1512,
+    1524,
+    1536,
+    1548,
+    1560,
+    1572,
+    1584,
+    1596,
+    1608,
+    1620,
+    1632,
+    1644,
+    1656,
+    1668,
+    1680,
+    1692,
+    1704,
+    1716,
+    1728,
+    1740,
+    1752,
+    1764,
+    1776,
+    1788,
+    1800,
+    1812,
+    1824,
+    1836
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-blank-atlas",
+      "prompt": "An enormous open ivory atlas rests at an oblique angle on a saffron stone table. The book fills the lower two thirds of the view. One sinuous ultramarine ink river crosses the otherwise blank right page from the near lower left toward the upper right, where its engraved contour lines begin to lift into tiny dimensional sandstone ridges. Broad clean white paper surrounds the blue route, with sparse deeply embossed topographic lines and the dramatic scale of a miniature landscape. A single dark blue pool of ink at the near left edge is the source of the route. The distant edge of the page rises like a low mountain against a deep violet background. View from low overhead, a clear diagonal route along the ink, strong beautiful paper folds and one dominant blue curve. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 0.5,
+      "name": "the-ink-has-a-destination",
+      "prompt": "A broad ultramarine ink river curves across an immense ivory atlas page toward small raised mountain folds in the upper right. We are travelling low along the blue line. Paper grain and engraved contours enlarge, the near book edge slips below the frame, and the blank page remains spacious around the river. Keep one dominant blue channel and small shaded relief ridges at its far end. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 7.0,
+      "name": "the-contours-rise",
+      "prompt": "Close to the ultramarine river on ivory paper. The embossed contour lines rise into layered pale stone ledges, creating a shallow dimensional valley around the blue line. The near edge of the book has left the image. The river curves toward a group of ridges ahead, with the left bank broad and open, and warm saffron light catching the upper edges. The dark blue ink is beginning to have the shine and depth of water. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 12.0,
+      "name": "inside-the-map",
+      "prompt": "An ultramarine river curves through a dimensional valley of ivory folded paper and warm sandstone. The walls rise like enormous contour layers, with richly shaded folds and violet crevices. We are approaching the first bend at river level. Broad clear water and open passage ahead, the atlas surface is becoming real landscape, while paper grain remains in the pale banks. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 14.0,
+      "name": "the-paper-has-become-stone",
+      "prompt": "Following one broad ultramarine river into a monumental canyon of ivory paper strata and saffron sandstone. Near layered banks move past the lower edges. The water curves into the center distance, carrying a narrow strip of bright blue reflection. The land has dimensional shading and tactile layered grain, with tall asymmetric mesas and violet crevices. No book edge remains. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 20.5,
+      "name": "around-the-first-bend",
+      "prompt": "Close to a broad blue river bend between immense ochre sandstone walls. The left bank curves around the viewpoint and begins to pass out of frame; a sculptural ivory buttress stands to the near right with horizontal paper-like strata and deep shaded folds. The clear ultramarine channel curves gently to the left ahead. Strong foreground parallax-like scale separation, large calm shadows and warm mineral detail. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 26.5,
+      "name": "the-canyon-opens",
+      "prompt": "Travelling along a vivid ultramarine water channel around a tall saffron rock buttress. The near ivory strata have passed to the right, revealing a deep canyon stretching sideways to the left beneath a violet sky. A broad opening between asymmetric rock walls provides the route. Water remains a continuous blue ribbon, its surface alive with restrained pale reflections. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 31.5,
+      "name": "follow-the-open-river",
+      "prompt": "An open sandstone river canyon, with a blue ribbon of water curving to the left between tall layered ivory and ochre walls. Fine mineral veins and paper-like edges enrich the foreground but the water passage remains uncluttered. A distant brighter bend invites further travel. Dramatic monumental scale and slanting warm sunlight. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 32.0,
+      "name": "follow-the-lower-bend",
+      "prompt": "The viewpoint banks and follows the broad ultramarine river around its near lower-left bend. Immense ivory and saffron canyon terraces pass along the right edge. Rough chipped sandstone ledges, fine gritty mineral crust, deep violet crevices, and subtle fibrous paper strata give the surfaces tactile detail. The blue channel stays open and luminous. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 37.5,
+      "name": "the-rim-appears",
+      "prompt": "The ultramarine river curves toward the lower left and reaches a vast broken stone rim. Beyond the rim an enormous shaded chasm opens, with mist rising from far below. The near bank is an immense ivory and saffron terrace with rough chipped layers, loose angular fragments and fine mineral veins. Blue water approaches the visible ledge, a clear route through the image. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 43.5,
+      "name": "the-map-opens-downward",
+      "prompt": "A monumental ultramarine river pours over a broad jagged ivory sandstone ledge into an immense violet canyon. One wide blue waterfall drops diagonally from the upper right toward the lower left, its bright white spray catching slanting sunlight. The nearest warm stone terrace moves out of the right edge, revealing the depth below. Chipped mineral layers, thin paper-like strata, rough crystalline glints and spacious shadow. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 49.5,
+      "name": "a-blue-fall-into-the-earth",
+      "prompt": "Looking diagonally down beside a colossal blue waterfall falling between asymmetrical ivory and ochre canyon walls. The waterfall occupies the left-center, with delicate pale spray and a dark ultramarine core. Far below, a luminous turquoise river continues into a deep mineral ravine. The near rock has coarse granular texture, chipped horizontal layers and scattered violet crystals, with warm light above and cool light below. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 54.0,
+      "name": "the-descent-is-open",
+      "prompt": "A great ultramarine waterfall drops into a wide open ravine, a continuous blue route from the sunlit ivory sandstone rim to a glowing turquoise channel far below. The cliff faces are monumental irregular sheets of stone with thin paper-like strata and rough mineral veins. Clear open air beside the falling water allows the viewpoint to descend; no bridge or structure blocks the way. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 54.5,
+      "name": "descend-beside-the-water",
+      "prompt": "The viewpoint descends closely beside a monumental ultramarine waterfall. Bright falling water passes upward along the left, while rough ivory and violet cliff faces slip upward through the right edge. The distant plateau has left the picture. Below, pale spray reveals a deep turquoise pool and a continuing blue channel. Huge empty natural landforms, coarse mineral grain, chipped paper-thin stone strata. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 61.0,
+      "name": "the-basin-opens",
+      "prompt": "Looking steeply down into the luminous blue basin beneath a gigantic waterfall. The camera floats beside the water, following the turquoise channel into the earth. Ivory cliff layers stretch vertically along the sides, becoming violet in the shaded depths. Fine spray, scattered angular mineral glints, wet stone catching blue reflected light. Spacious open central water. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 68.0,
+      "name": "water-enters-the-mineral-earth",
+      "prompt": "An ultramarine river flows out of the waterfall basin into an immense shaded mineral ravine. The viewpoint is low and close to the flowing water. Broken ivory shelves overhead turn into irregular violet crystalline rock, warm sunlight receding high above. Sparse large amethyst facets emerge along the banks. The open blue channel leads diagonally into the distance beneath a natural overhanging cliff. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    },
+    {
+      "at": 76.5,
+      "name": "an-open-mineral-passage",
+      "prompt": "A luminous blue river enters a vast open cavern of violet mineral walls and broken ivory stone shelves. Scattered large angular amethyst crystals catch pale reflected light. The passage is broad and asymmetrical, with a clear winding channel and deep space ahead. Coarse crystalline grain, rough chipped edges, wet dark stone and a faint shaft of warm sunlight far above. Surreal cinematic oil painting with dimensional sculptural landforms, ivory handmade paper, deep ultramarine ink, saffron sandstone and violet shaded depths. Strong directional warm light, tactile grain, selective intricate detail, broad quiet surfaces, clear foreground and distant silhouettes, spacious asymmetrical composition. No lettering, no numbers, no people."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 54.0,
+      "noise": 0.71
+    },
+    {
+      "at": 60.0,
+      "noise": 0.74
+    },
+    {
+      "at": 66.0,
+      "noise": 0.76
+    },
+    {
+      "at": 72.0,
+      "noise": 0.74
+    },
+    {
+      "at": 76.5,
+      "noise": 0.7
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 54.0,
+      "duration": 22.5,
+      "center": [
+        0.84,
+        0.7
+      ],
+      "end": [
+        0.45,
+        -1.4,
+        0.9932517730102834,
+        0.16
+      ],
+      "velocity_start": [
+        0.05115716608528348,
+        -0.005250850877962964,
+        0.024999189243785087,
+        -0.010001972104689057
+      ],
+      "velocity_end": [
+        0.01,
+        -0.085,
+        0.045,
+        0.018
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 1296,
+    "incoming_fit_residual": 1.3992139668564177e-13,
+    "target": "Descend beside the actual waterfall, moving artwork upward1.4imageheights and enlarging2.7x over5deliveryseconds. Preserve incoming rightward motion before straightening downward, then expose the channel under mineral shelves."
+  }
+}
