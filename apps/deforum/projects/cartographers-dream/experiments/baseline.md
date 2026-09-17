@@ -16,6 +16,14 @@ The first bend reaches a broad blue channel between sunlit ivory and ochre cliff
 
 The descent moves artwork upward 1.4 image heights, enlarging 2.7× over five delivery seconds. Actual paintings show the waterfall rim leaving the frame, the basin opening below, and amethyst facets developing beside the water. At source 1680 a lone distant silhouette appears beneath an arch. By 1836 the channel occupies the left half and a large amethyst crystal the right foreground; that composition directs the next lateral pass. Subsequent prompts describe empty uninhabited terrain and name distant landforms instead of silhouettes. This is a prompt refinement, not evidence that figures can be excluded reliably at CFG 1.
 
+## Mineral river and climb
+
+The seven-second lateral pass reaches a deep violet cavern by about 20 seconds. The blue channel stays open between large amethyst formations and leads toward a tall opening at the upper right of the 24-second painting. The first climb preview translated too far and ended against the right wall. Its preserved replacement brings that actual opening toward the center with a 7.5× enlargement over six delivery seconds, using only left .42/down .26 image-height translation. This deeper approach keeps a visible destination in the camera-only screen. Inference proceeds from the preserved 24-second painting with the same recurrent recipe.
+
+## Paper ridge and arch
+
+The wider mountain pass reveals a huge ivory-and-blue paper fold above the river. Source 3744 retains a distinct arch and a clear onward channel; the final 12 paintings through 3888 flatten toward a less distinctive open valley. The director preserves the complete attempt and continues from 3744. A camera-only preview of the new approach matches the incoming widening and lateral motion, then enlarges eightfold over 5.333 delivery seconds while keeping the blue route beneath the arch. The unused 12 paintings remain part of the generation archive.
+
 ## Timing
 
 Source cadence remains 12 at 24 fps. Nominal delivery maps each painting to round(source_frame/4.5) at 24 fps, retaining all originals with 2/3-frame interpolation intervals. This is three times the original Storm delivery clock; individual source camera phrases provide rhythmic acceleration toward the 4× reference. A sixty-second delivery requires 540 paintings. A full-minute film is not yet complete.
