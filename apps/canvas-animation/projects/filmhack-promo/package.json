@@ -1,0 +1,19 @@
+{
+  "name": "filmhack-promo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/fetch-assets.mjs",
+    "dev": "vite --port 5190",
+    "typecheck": "tsc --noEmit",
+    "stills": "node scripts/render.mjs --stills",
+    "render": "node scripts/render.mjs"
+  },
+  "devDependencies": {
+    "dseg": "^0.46.0",
+    "geist": "^1.7.2",
+    "playwright-core": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}

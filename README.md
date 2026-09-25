@@ -17,6 +17,7 @@ Start with [AGENTS.md](AGENTS.md): the project brief, working guidance and canon
 - [Deforum](apps/deforum/README.md): recurrent image diffusion, spatial controls and film experiments using ComfyUI on RunPod.
 - [ComfyUI](apps/comfyui/README.md): still-image composition, regional prompts and layered painting on RunPod.
 - [Blender animation](apps/blender-animation/README.md) and [stop-motion](apps/stop-motion/README.md): separate studies with their own project briefs.
+- [Canvas animation](apps/canvas-animation/README.md): TypeScript motion graphics with synthesized scores, starting with a promo Reel for AI Filmhack.
 
 ## Status
 

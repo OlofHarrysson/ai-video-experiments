@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-25 — Filmhack promo made entirely in code:** After approving the planned 30-second Reel, Olof asks for the complete film and audio in JavaScript: “You don't have to generate anything with AI. Just do it with JavaScript.” He wants “some audio that gets the energy flowing” and leaves creating or finding the music to the assistant. This scopes the promo, not the diffusion work. See [AI Filmhack promo](../apps/canvas-animation/projects/filmhack-promo/README.md).
+
 - **2026-09-17 — Cartographer motion is the new positive reference:** Olof calls [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) “your best piece yet” and strongly praises its fluidity, dynamic movement, pans and apparent 3D turns. Preserve this motion language. He identifies the prompts as the weakest part, requests more surreal and mind-bending transformations, and finds the ending lackluster. He wants a high note with an actual story conclusion and asks for a proposed continuation. His description of apparent depth does not identify the rendering method; the selected configs combine 2D pan, off-center zoom and roll with continuous velocity and recurrent repainting.
 
 - **2026-09-16 — doorway motion approved:** After receiving the continuous-passage take, Olof says “perfect! Good motion controls”. Keep this shot as a positive motion reference: continuous approach, crossing, then gentle drift. This does not establish a preference between the two noise schedules. See [the doorway trial](../apps/deforum/projects/modern-model-study/experiments/doorway-cli/README.md).
