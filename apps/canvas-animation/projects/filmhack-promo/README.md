@@ -39,13 +39,13 @@ From this directory:
 ```sh
 npm ci
 npm run assets    # downloads the MangoGrotesque display face from filmhack.ai into assets/
-npm run dev       # preview at http://localhost:5190: play, scrub, chapter jumps, safe-zone overlay
+npm run dev       # preview on $PORT (5190 standalone): play, scrub, chapter jumps, safe-zone overlay
 npm run stills    # key moments and a contact sheet → renders/stills/
 npm run render    # film, mastered WAV and cover → renders/filmhack-reel-v1.*
 node scripts/render.mjs --audio   # soundtrack only, for mix iteration
 ```
 
-A full render takes about four minutes on the production Mac. Pass `--out renders/filmhack-reel-v2.mp4` for a revision so earlier versions stay intact.
+In the shared Devrun hub the preview is the `filmhack-promo` service of this repository; the page synthesizes the soundtrack on load (about 15 s) before Play is enabled. A full render takes about four minutes on the production Mac. Pass `--out renders/filmhack-reel-v2.mp4` for a revision so earlier versions stay intact.
 
 ## Code map
 

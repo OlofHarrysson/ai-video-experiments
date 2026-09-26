@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "assets": "node scripts/fetch-assets.mjs",
-    "dev": "vite --port 5190",
+    "dev": "vite --port ${PORT:-5190} --strictPort",
     "typecheck": "tsc --noEmit",
     "stills": "node scripts/render.mjs --stills",
     "render": "node scripts/render.mjs"
