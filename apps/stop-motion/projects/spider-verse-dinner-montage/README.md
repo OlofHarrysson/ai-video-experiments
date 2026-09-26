@@ -2,7 +2,7 @@
 
 A study of the dinner-table time-lapse in *Spider-Man: Across the Spider-Verse* (2023), and a plan to make our own version from AI-generated paintings. Olof chose the scene on 2026-09-27 and describes it as stop-motion.
 
-**Status:** reference extracted and measured. The recreation approach awaits Olof's choice; see the [proposed first experiment](#proposed-first-experiment).
+**Status:** reference extracted and measured. The [swap test](experiments/swap-test.md) is ready; generation waits for a fal API key.
 
 ## The reference
 
@@ -52,27 +52,17 @@ Assistant reading, not tested:
 4. The Earth-65 look: wet watercolor washes, vertical brush striations, a cyan, orange and violet palette.
 5. Timing: images on twos, camera motion on ones, and no interpolation between images.
 
-## Proposed first experiment
+## Experiments
 
-**Question:** do generated variations of one composition, swapped twelve times per second under a slow pull-back, read as time passing?
+- [Swap test](experiments/swap-test.md): do generated variations of one composition, swapped twelve times per second under a slow pull-back, read as time passing? Two seconds, 24 images of an original character, approved by Olof on 2026-09-27.
 
-**Shortest useful test:**
+If the swaps read as time passing, extend to five seconds with a close, medium and wide framing path, generated per band or guided by a simple Blender blockout. Whether to go beyond the montage to the whole dinner memory, 3:44 to 4:10, is still open.
 
-1. Generate one base painting at the widest framing and high resolution: a character at the head of a dinner table, eyes closed, holding hands, window behind, watercolor style.
-2. Derive 24 variations with an image-editing model, changing only hair, clothes, table dressing, time of day and palette.
-3. Assemble two seconds: each image held for two frames under a digital pull-back that moves every frame. No RIFE.
-4. Screen the clip, then show it to Olof beside the reference.
-
-If the swaps read as time passing, extend to five seconds with a close, medium and wide framing path, generated per band or guided by a simple Blender blockout.
-
-**Open decisions for Olof:**
-
-- **Character:** a faithful Gwen study, or an original character in the same technique. This repository is public; the assistant recommends an original character.
-- **Image model:** to be proposed from current options before any generation.
-- **Scope:** the montage alone, or the whole dinner memory from 3:44 to 4:10.
+The study uses an original character rather than Gwen, as chosen by Olof: the technique is the subject, and this repository is public.
 
 ## Files
 
 - [References and provenance](references/README.md): film clips and stills stay local and ignored by Git.
 - [Measured cadence](references/montage-cadence.json) and its [extraction script](scripts/extract_reference.py).
+- [generate.py](scripts/generate.py) creates base paintings and variations through fal, with a cost cap; [assemble.py](scripts/assemble.py) holds images on twos under a pull-back on ones. Runs stay local in the ignored `runs/`; the fal key goes in `.env` (see `.env.example`).
 - [How the Spider-Verse films were made](../../../../docs/research/spider-verse-making-of.md): people, techniques, interviews and related films.

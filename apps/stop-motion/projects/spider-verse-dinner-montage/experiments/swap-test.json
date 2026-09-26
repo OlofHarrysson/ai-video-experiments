@@ -1,0 +1,42 @@
+{
+ "experiment": "swap-test",
+ "provider": "fal",
+ "base_endpoint": "fal-ai/nano-banana-2",
+ "edit_endpoint": "fal-ai/nano-banana-2/edit",
+ "aspect_ratio": "21:9",
+ "resolution": "2K",
+ "output_format": "png",
+ "price_per_image_usd": 0.12,
+ "cost_cap_usd": 6.0,
+ "seed": 2709,
+ "base": {
+  "candidates": 4,
+  "prompt": "A still from a stylized animated feature film, painted like a living watercolor. Medium shot at the head of a family dinner table. A girl of about thirteen sits centred, facing the camera: warm brown skin, a round face, freckles across her nose and dark curly shoulder-length hair. Her head is gently bowed and her eyes are closed in a quiet moment of saying grace; she smiles slightly. Both arms reach out to the sides, holding hands with family members whose hands enter from the edges of the frame; their faces are out of frame. The edge of a wooden table with plates and a jug runs along the bottom of the frame. Behind her is a tall window with sheer curtains, and a potted plant with long leaves stands on the left. Soft backlight from the window. Style: an expressive 3D character painted over with wet-on-wet watercolor washes, loose sketchy ink accents, and vertical brush striations that dissolve the background into abstract colour; a cyan, orange and violet palette. Symmetrical composition with her face in the upper centre. No text."
+ },
+ "edit_prompt": "Edit this painting into the same moment on a different day. Keep exactly: the camera framing and composition, the girl's face and identity, her bowed head position, closed eyes and gentle smile, her outstretched arms holding hands at both edges of the frame, the table, the window, the curtains, the plant and the watercolor painting style. Change only: her hair to {hair}; her clothes to {outfit}; the light and colour palette to {light}. No text.",
+ "variations": [
+  {"id": "02", "hair": "two high puff buns tied with yellow ribbons", "outfit": "a mint-green hoodie", "light": "bright noon light in cyan and lemon yellow"},
+  {"id": "03", "hair": "long box braids with small gold beads", "outfit": "a red knit winter sweater", "light": "a snowy evening outside, violet dusk with a warm orange lamp glow"},
+  {"id": "04", "hair": "a short curly bob with a bright yellow hair clip", "outfit": "a blue-and-white striped T-shirt", "light": "early morning sun in pastel pink and peach"},
+  {"id": "05", "hair": "curls tucked under a mustard beanie", "outfit": "a plaid flannel shirt", "light": "a rainy afternoon in grey-violet with teal accents"},
+  {"id": "06", "hair": "curls under a colourful paper birthday hat", "outfit": "a sparkly party dress", "light": "warm candlelight in orange and magenta"},
+  {"id": "07", "hair": "curls pulled back with a wide orange headband", "outfit": "a denim jacket", "light": "golden hour in deep orange and violet"},
+  {"id": "08", "hair": "a high curly ponytail", "outfit": "a soccer jersey with the number 7", "light": "a hot summer noon in saturated cyan and yellow"},
+  {"id": "09", "hair": "curls with teal-dyed tips", "outfit": "a black band T-shirt", "light": "night, a deep blue palette lit by a single warm lamp"},
+  {"id": "10", "hair": "two French braids", "outfit": "a lavender cardigan", "light": "a spring morning with blossom outside, soft pink and cyan"},
+  {"id": "11", "hair": "hair wrapped in a patterned orange silk scarf", "outfit": "a yellow raincoat", "light": "stormy blue light with rain streaks on the window"},
+  {"id": "12", "hair": "a short cropped curly cut", "outfit": "a white school shirt with a loose tie", "light": "pale morning light in cool cyan and white"},
+  {"id": "13", "hair": "curls crowned with small wildflowers", "outfit": "a floral sundress", "light": "a late summer evening in peach and violet"},
+  {"id": "14", "hair": "a messy top-knot with a pencil through it", "outfit": "an oversized grey sweatshirt", "light": "an overcast afternoon in muted teal and lilac"},
+  {"id": "15", "hair": "curls with a cat-ear headband", "outfit": "a black cat costume", "light": "Halloween night, orange pumpkin glow against deep violet"},
+  {"id": "16", "hair": "long loose curls", "outfit": "a burgundy velvet top", "light": "an autumn evening in amber and rust"},
+  {"id": "17", "hair": "curls under a red Santa hat", "outfit": "a green Christmas sweater with reindeer", "light": "Christmas night, deep blue with warm fairy-light sparkles"},
+  {"id": "18", "hair": "two low pigtails", "outfit": "a yellow puffer vest over a turtleneck", "light": "a bright winter noon in icy cyan and white"},
+  {"id": "19", "hair": "curls with bright coral streaks", "outfit": "a leather jacket over a graphic tee", "light": "a neon evening glow in magenta and cyan"},
+  {"id": "20", "hair": "curls pinned back with a side part", "outfit": "a crisp white blouse", "light": "a soft morning in cream and pale orange"},
+  {"id": "21", "hair": "curls under a bucket hat", "outfit": "a striped sailor top", "light": "beach-summer light in turquoise and coral"},
+  {"id": "22", "hair": "space buns with orange tips", "outfit": "a purple graphic hoodie", "light": "twilight in violet and cyan"},
+  {"id": "23", "hair": "curls under a knitted earflap hat", "outfit": "a chunky cream knit sweater", "light": "snowfall at dusk, blue-violet with orange lamplight"},
+  {"id": "24", "hair": "short curls with a small silver barrette", "outfit": "a green corduroy pinafore", "light": "a rainy morning in soft green and grey-blue"}
+ ]
+}
