@@ -34,7 +34,7 @@
     "assets": "node scripts/fetch-assets.mjs",
     "score": "node scripts/score.mjs",
     "dev": "remotion studio --no-open --port ${PORT:-3000}",
-    "render": "remotion render FilmhackFrenzy renders/filmhack-frenzy-v1.mp4 --codec=h264 --crf=17 --x264-preset=slow --pixel-format=yuv420p --color-space=bt709 --jpeg-quality=95 --audio-codec=aac --audio-bitrate=320k",
+    "render": "node scripts/render.mjs",
     "lint": "eslint src && tsc"
   }
 }

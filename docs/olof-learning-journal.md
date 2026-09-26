@@ -14,6 +14,8 @@ Living notes about creative preferences and learning in this project. Started 20
 
 ## Current preferences — explicit
 
+- **2026-09-26 — Filmhack frenzy score: annoying, no good melody:** Olof replies to the frenzy cut: “Great. The audio is quite annoying and doesnt have a good melody. Can you make a better one?” He criticizes only the score. The v1 score was an arpeggiated chord-tone hook under dense synthesized effects: a siren, air horns, zaps, coins, a boing, typing and a crowd. His feedback does not say which element annoyed him most. The [v2 score](../apps/remotion/projects/filmhack-frenzy/README.md#the-score) is a composed tune with sparse effects; his playback verdict on it is pending.
+
 - **2026-09-26 — Filmhack promo: higher energy, made with Remotion:** Olof calls the canvas promo [v1](../apps/canvas-animation/projects/filmhack-promo/README.md) “a decent video”, asks which framework would replace hand-written canvas and JavaScript, and then requests a Remotion version: “Higher energy, chaotic, fun and frenzy style.” The [frenzy cut](../apps/remotion/projects/filmhack-frenzy/README.md) answers this; his playback verdict on it is pending. “Decent” is a moderate verdict on v1 and does not identify which parts he would keep.
 
 - **2026-09-25 — Filmhack promo made entirely in code:** After approving the planned 30-second Reel, Olof asks for the complete film and audio in JavaScript: “You don't have to generate anything with AI. Just do it with JavaScript.” He wants “some audio that gets the energy flowing” and leaves creating or finding the music to the assistant. This scopes the promo, not the diffusion work. See [AI Filmhack promo](../apps/canvas-animation/projects/filmhack-promo/README.md).
