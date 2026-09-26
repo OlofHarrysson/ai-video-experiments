@@ -10,6 +10,7 @@ Return to the [project documentation index](../../AGENTS.md#documentation-index)
 - [The BonsAi Effect: Deforum workflow study](bonsai-effect-workflow.md)
 - [The BonsAi Effect: external platforms and workflow evidence](bonsai-effect-external-sources.md)
 - [Spatial image control: learning from Safety Marc's presets](bonsai-spatial-motion.md)
+- [How the Spider-Verse films were made](spider-verse-making-of.md)
 
 ## Motion, structure and editing
 
