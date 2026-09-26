@@ -18,6 +18,7 @@ Start with [AGENTS.md](AGENTS.md): the project brief, working guidance and canon
 - [ComfyUI](apps/comfyui/README.md): still-image composition, regional prompts and layered painting on RunPod.
 - [Blender animation](apps/blender-animation/README.md) and [stop-motion](apps/stop-motion/README.md): separate studies with their own project briefs.
 - [Canvas animation](apps/canvas-animation/README.md): TypeScript motion graphics with synthesized scores, starting with a promo Reel for AI Filmhack.
+- [Remotion](apps/remotion/README.md): React-based programmatic video with Tone.js scores, starting with a high-energy cut of the same promo.
 
 ## Status
 

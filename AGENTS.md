@@ -50,7 +50,7 @@ Start here for repository documentation. Add shared explanations as separate `do
 - [RunPod setup](docs/runpod.md): repository-scoped tools and authentication; [serverless runbook](apps/deforum/serverless/README.md) for serverless operation.
 - [Media storage](docs/storage.md): preservation, shared copies and verified duplicate cleanup.
 - [Refactor plan](docs/refactor-plan.md): package migration, legacy boundaries and remaining work.
-- [ComfyUI studies](apps/comfyui/README.md), [Blender animation](apps/blender-animation/README.md), [stop-motion](apps/stop-motion/README.md), [canvas animation](apps/canvas-animation/README.md): other areas of this workspace, each with its own brief.
+- [ComfyUI studies](apps/comfyui/README.md), [Blender animation](apps/blender-animation/README.md), [stop-motion](apps/stop-motion/README.md), [canvas animation](apps/canvas-animation/README.md), [Remotion](apps/remotion/README.md): other areas of this workspace, each with its own brief.
 - [Archived agent context](docs/archive/agent-context-2026-09-15.md): historical summaries removed from this entry point; not current instructions.
 
 ## Keeping this entry point useful

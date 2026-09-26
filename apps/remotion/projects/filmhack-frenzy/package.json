@@ -1,0 +1,40 @@
+{
+  "name": "filmhack-frenzy",
+  "version": "1.0.0",
+  "description": "AI Filmhack promo Reel, frenzy cut",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.529",
+    "@remotion/effects": "4.0.529",
+    "@remotion/fonts": "4.0.529",
+    "@remotion/layout-utils": "4.0.529",
+    "@remotion/media": "4.0.529",
+    "@remotion/media-utils": "4.0.529",
+    "@remotion/noise": "4.0.529",
+    "@remotion/shapes": "4.0.529",
+    "@remotion/transitions": "4.0.529",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.529",
+    "tone": "^15.1.22"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.529",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "esbuild": "^0.28.2",
+    "eslint": "9.19.0",
+    "playwright-core": "^1.63.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "assets": "node scripts/fetch-assets.mjs",
+    "score": "node scripts/score.mjs",
+    "dev": "remotion studio --no-open --port ${PORT:-3000}",
+    "render": "remotion render FilmhackFrenzy renders/filmhack-frenzy-v1.mp4 --codec=h264 --crf=17 --x264-preset=slow --pixel-format=yuv420p --color-space=bt709 --jpeg-quality=95 --audio-codec=aac --audio-bitrate=320k",
+    "lint": "eslint src && tsc"
+  }
+}

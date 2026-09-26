@@ -62,4 +62,4 @@ MangoGrotesque is the event site's self-hosted display font; it is downloaded lo
 
 ## Status
 
-v1 is rendered and screened by the assistant: stills across every section, the decoded MP4 at one frame per second, loudness and spectral balance. It is awaiting Olof's playback feedback.
+v1 is rendered and screened by the assistant: stills across every section, the decoded MP4 at one frame per second, loudness and spectral balance. Olof called it “a decent video” (2026-09-26) and asked for a higher-energy follow-up, the [frenzy cut in Remotion](../../../remotion/projects/filmhack-frenzy/README.md).
