@@ -1,6 +1,6 @@
 # Swap test
 
-Status: ready to run; generation waits for a fal API key in this project's `.env`.
+Status: v002 screened by the assistant; Olof's playback judgment pending.
 
 ## Question
 
@@ -30,4 +30,12 @@ Do generated variations of one composition, swapped twelve times per second unde
 
 ## Runs and findings
 
-No runs yet.
+### Run `swap-test-20260927-144926`
+
+Local and ignored: `runs/swap-test-20260927-144926/`. `records.jsonl` holds every call's prompt, seed, output hash and cost; `swap-test-v002-order.txt` lists the assembled images.
+
+- **Cost and time:** 28 calls and 31 images for $1.24 of the $3.00 cap. Four base candidates took 85 seconds; the 23 variations about four minutes with four parallel calls. Seedream returned 4096×1920 JPEGs.
+- **Base:** base-2, the largest and most symmetrical figure. Rejected: base-3 holds hands and also presses a second pair of hands together; base-1 raises her arms like a cheer; base-4 is sound but smaller in frame.
+- **Composition lock:** measured by phase correlation of edges in the table, hands and jug region, against base-2, then checked by 50/50 blends. 21 of 23 first-pass variations stayed within 8 px at 4096 wide. Variations 21 and 23 moved the girl and table down while the background stayed, by up to 180 px, which shows as doubled arms in a blend. A plain retry fixed 23. Variation 21 drifted with the original bucket hat and again with sunglasses; it held once the striped sailor top and "beach-summer" light became a coral linen shirt and "a bright summer afternoon". Assistant hypothesis, not tested: the beach cue, which put an ocean in the window, invited the model to re-stage the scene. The config now holds the working prompt; the drifted attempts remain in the run.
+- **Delivered:** `swap-test-v002.mp4`: base-2 and the 23 screened variations, 48 frames, 2.00 seconds, every image within 8 px of the base. `swap-test-v002-vs-film-loop3.mp4` stacks it above the film's first two seconds, looped three times; both change image on the same frames. `swap-test-v001.mp4` is the first assembly, which still contains the drifted 21 and 23.
+- **Assistant screening:** the swaps read as one held moment on changing days. Pose, hands and set stay put while hair, clothes, window and palette change on every image. Unlike the film, her age, the people at the table and the table dressing never change, so it may read as changing outfits rather than passing years. Some shirts carry invented lettering, visible only on single frames.
