@@ -1,13 +1,16 @@
 {
  "experiment": "swap-test",
  "provider": "fal",
- "base_endpoint": "fal-ai/nano-banana-2",
- "edit_endpoint": "fal-ai/nano-banana-2/edit",
- "aspect_ratio": "21:9",
- "resolution": "2K",
- "output_format": "png",
- "price_per_image_usd": 0.12,
- "cost_cap_usd": 6.0,
+ "base_endpoint": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+ "edit_endpoint": "fal-ai/bytedance/seedream/v4.5/edit",
+ "parameters": {
+  "image_size": {
+   "width": 4096,
+   "height": 1920
+  }
+ },
+ "price_per_image_usd": 0.04,
+ "cost_cap_usd": 3.0,
  "seed": 2709,
  "base": {
   "candidates": 4,

@@ -15,9 +15,10 @@ Do generated variations of one composition, swapped twelve times per second unde
 
 ## Model and cost boundary
 
-- Nano Banana 2 (Gemini 3.1 Flash Image) through fal: text-to-image for four base candidates, then edits of the chosen one, at 21:9 and 2K. Verify the delivered size before assembly; the pull-back crops a 2.4:1 window.
-- $0.12 per image at 2K ([fal pricing](https://fal.ai/models/fal-ai/nano-banana-2/edit), checked 2026-09-27). Plan: 4 base candidates, 23 variations and up to 8 retries, about 35 images or $4.20. [generate.py](../scripts/generate.py) refuses any batch that would pass the $6.00 cap in the config.
-- Alternatives considered: Seedream 4.5 edit at $0.04 and up to 4 MP, the cheaper model to compare if Nano Banana drifts; FLUX.2 Klein on the existing RunPod volume, which avoids a new account but needs a 16 GB download, a new edit graph and weaker editing; Vertex AI through the logged-in Google Cloud account, which would bill an unrelated project.
+- Seedream 4.5 through fal, chosen by Olof on 2026-09-27 as three times cheaper than Nano Banana 2, leaving room for several iterations: text-to-image for four base candidates, then edits of the chosen one.
+- Size 4096×1920, the widest Seedream allows: each side must be 1920–4096 px. The assembler crops the 2.4:1 frame from it.
+- $0.04 per image for [generation](https://fal.ai/models/fal-ai/bytedance/seedream/v4.5/text-to-image) and [editing](https://fal.ai/models/fal-ai/bytedance/seedream/v4.5/edit), checked 2026-09-27. Plan: 4 base candidates, 23 variations and up to 8 retries, about 35 images or $1.40. [generate.py](../scripts/generate.py) refuses any batch that would pass the run's $3.00 cap in the config.
+- Alternatives considered: Nano Banana 2 edit at $0.12 per 2K image, the model to compare if Seedream drifts (its $0.06 half-resolution option is too small for the crop); FLUX.2 Klein on the existing RunPod volume, which avoids a new account but needs a 16 GB download, a new edit graph and weaker editing; Vertex AI through the logged-in Google Cloud account, which would bill an unrelated project.
 
 ## Procedure
 

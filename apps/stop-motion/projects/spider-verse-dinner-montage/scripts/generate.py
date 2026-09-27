@@ -27,6 +27,7 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[1]
 FAL_RUN = "https://fal.run/"
 PARALLEL_CALLS = 4
+EXTENSIONS = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
 _record_lock = threading.Lock()
 
 
@@ -76,9 +77,9 @@ def check_budget(run: Path, config: dict, images: int) -> None:
         )
 
 
-def free_path(directory: Path, stem: str) -> Path:
+def free_path(directory: Path, stem: str, extension: str) -> Path:
     for suffix in ["", *(f"-{letter}" for letter in "bcdefghijklmnopqrstuvwxyz")]:
-        path = directory / f"{stem}{suffix}.png"
+        path = directory / f"{stem}{suffix}{extension}"
         if not path.exists():
             return path
     raise RuntimeError(f"too many versions of {stem}")
@@ -88,7 +89,8 @@ def save(run: Path, directory: Path, stem: str, image: dict) -> dict:
     directory.mkdir(parents=True, exist_ok=True)
     with urllib.request.urlopen(image["url"], timeout=300) as response:
         data = response.read()
-    path = free_path(directory, stem)
+    content_type = image.get("content_type") or response.headers.get_content_type()
+    path = free_path(directory, stem, EXTENSIONS[content_type])
     path.write_bytes(data)
     return {
         "file": str(path.relative_to(run)),
@@ -99,21 +101,13 @@ def save(run: Path, directory: Path, stem: str, image: dict) -> dict:
     }
 
 
-def common(config: dict) -> dict:
-    return {
-        "aspect_ratio": config["aspect_ratio"],
-        "resolution": config["resolution"],
-        "output_format": config["output_format"],
-    }
-
-
 def generate_base(config: dict, key: str) -> Path:
     run = PROJECT / "runs" / f"{config['experiment']}-{now():%Y%m%d-%H%M%S}"
     run.mkdir(parents=True)
     count = config["base"]["candidates"]
     check_budget(run, config, count)
     payload = {
-        **common(config),
+        **config["parameters"],
         "prompt": config["base"]["prompt"],
         "num_images": count,
         "seed": config["seed"],
@@ -133,7 +127,7 @@ def generate_base(config: dict, key: str) -> Path:
 
 def generate_variation(run: Path, config: dict, key: str, base: dict, variation: dict) -> str:
     payload = {
-        **common(config),
+        **config["parameters"],
         "prompt": config["edit_prompt"].format(**variation),
         "image_urls": [base["url"]],
         "num_images": 1,
