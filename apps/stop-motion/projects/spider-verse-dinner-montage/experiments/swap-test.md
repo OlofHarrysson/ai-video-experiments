@@ -1,6 +1,6 @@
 # Swap test
 
-Status: v002 screened by the assistant; Olof's playback judgment pending.
+Status: v002 approved by Olof on playback: "Looks great." (2026-09-27). Shareable loop: [renders/swap-test-v002-loop3.mp4](../renders/swap-test-v002-loop3.mp4).
 
 ## Question
 

@@ -2,7 +2,7 @@
 
 A study of the dinner-table time-lapse in *Spider-Man: Across the Spider-Verse* (2023), and a plan to make our own version from AI-generated paintings. Olof chose the scene on 2026-09-27 and describes it as stop-motion.
 
-**Status:** the [swap test](experiments/swap-test.md) produced a two-second clip from 24 Seedream 4.5 paintings for $1.24; Olof's playback judgment is pending.
+**Status:** the [swap test](experiments/swap-test.md) produced a two-second clip from 24 Seedream 4.5 paintings for $1.24, and Olof approved it: [watch the loop](renders/swap-test-v002-loop3.mp4).
 
 ## The reference
 

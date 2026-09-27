@@ -1,3 +1,4 @@
 references/assets/
 runs/
-renders/
+renders/*
+!renders/swap-test-v002-loop3.mp4
