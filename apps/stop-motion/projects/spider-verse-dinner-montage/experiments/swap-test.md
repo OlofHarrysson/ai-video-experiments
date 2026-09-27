@@ -43,3 +43,5 @@ Local and ignored: `runs/swap-test-20260927-144926/`. `records.jsonl` holds ever
 ### Three-speed cut
 
 Olof's request after approving v002, 2026-09-27: the same 24 paintings played three times, slowing down each pass, starting at a quarter second because two frames felt too quick. `swap-test-v002-three-speeds.mp4` (local, 42 seconds) holds each painting for 6, 12 and then 24 frames, 0.25, 0.5 and 1 second at 24 fps, and restarts the pull-back in each pass. Every hold was verified on the decoded file. `swap-test-v002-three-speeds-share.mp4` is the same cut at CRF 23, 14.2 MB, for messaging apps.
+
+Olof then found all three passes a little slow and asked for 4, 8 and 16 seconds. `swap-test-v002-speeds-4-8-16.mp4` (local, 28 seconds) holds each painting for 4, 8 and then 16 frames, a sixth, a third and two thirds of a second; timing verified on the decoded file. Its share copy is 11.6 MB.
