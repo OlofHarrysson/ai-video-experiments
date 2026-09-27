@@ -1,0 +1,1352 @@
+{
+  "round1": {
+    "method": "Approximate green foreground, largest connected component and hole fill; normalized to 1024 canvas. Requires visual contour validation. Not ground-truth segmentation.",
+    "results": [
+      {
+        "label": "nano-shape-left",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          253.96,
+          510.82
+        ],
+        "centre_error_px": 2.36,
+        "equivalent_diameter": 361.3,
+        "diameter_error_percent": 0.36,
+        "silhouette_iou": 0.9774,
+        "estimated_bbox": [
+          74,
+          332,
+          437,
+          691
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "qwen21-depth-left-43",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          255.8,
+          509.65
+        ],
+        "centre_error_px": 2.36,
+        "equivalent_diameter": 360.01,
+        "diameter_error_percent": 0.0,
+        "silhouette_iou": 0.9828,
+        "estimated_bbox": [
+          76,
+          327,
+          437,
+          690
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "qwen21-edge-left-43-v2",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          255.68,
+          511.28
+        ],
+        "centre_error_px": 0.79,
+        "equivalent_diameter": 359.94,
+        "diameter_error_percent": -0.02,
+        "silhouette_iou": 0.9911,
+        "estimated_bbox": [
+          75,
+          332,
+          437,
+          690
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "qwen3-shape-left",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          268.25,
+          512.57
+        ],
+        "centre_error_px": 12.26,
+        "equivalent_diameter": 367.23,
+        "diameter_error_percent": 2.01,
+        "silhouette_iou": 0.9141,
+        "estimated_bbox": [
+          86,
+          329,
+          453,
+          696
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "seedream-shape-left",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          255.0,
+          510.58
+        ],
+        "centre_error_px": 1.74,
+        "equivalent_diameter": 365.51,
+        "diameter_error_percent": 1.53,
+        "silhouette_iou": 0.9641,
+        "estimated_bbox": [
+          73,
+          327,
+          440,
+          694
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-mask-left",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          509.7,
+          505.47
+        ],
+        "centre_error_px": 253.78,
+        "equivalent_diameter": 951.86,
+        "diameter_error_percent": 164.41,
+        "silhouette_iou": 0.143,
+        "estimated_bbox": [
+          33,
+          32,
+          988,
+          980
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-shape-left",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          255.43,
+          511.31
+        ],
+        "centre_error_px": 0.9,
+        "equivalent_diameter": 361.23,
+        "diameter_error_percent": 0.34,
+        "silhouette_iou": 0.9918,
+        "estimated_bbox": [
+          75,
+          331,
+          437,
+          693
+        ],
+        "alpha_extrema": null
+      }
+    ]
+  },
+  "round2": {
+    "method": "Approximate green foreground, largest connected component and hole fill; normalized to 1024 canvas. Requires visual contour validation. Not ground-truth segmentation.",
+    "results": [
+      {
+        "label": "00-qwen21-inpaint-left-43",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          253.88,
+          512.78
+        ],
+        "centre_error_px": 2.26,
+        "equivalent_diameter": 352.7,
+        "diameter_error_percent": -2.03,
+        "silhouette_iou": 0.9601,
+        "estimated_bbox": [
+          79,
+          335,
+          430,
+          691
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "01-qwen21-edge-inpaint-left-43",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          254.08,
+          512.76
+        ],
+        "centre_error_px": 2.07,
+        "equivalent_diameter": 353.02,
+        "diameter_error_percent": -1.94,
+        "silhouette_iou": 0.9618,
+        "estimated_bbox": [
+          78,
+          335,
+          430,
+          691
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "02-qwen21-edge-left-43",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          514.32,
+          513.58
+        ],
+        "centre_error_px": 258.33,
+        "equivalent_diameter": 804.11,
+        "diameter_error_percent": 123.36,
+        "silhouette_iou": 0.1916,
+        "estimated_bbox": [
+          96,
+          117,
+          920,
+          910
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "03-qwen21-edge-right-43",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          509.02,
+          515.68
+        ],
+        "centre_error_px": 259.01,
+        "equivalent_diameter": 796.04,
+        "diameter_error_percent": 121.12,
+        "silhouette_iou": 0.1844,
+        "estimated_bbox": [
+          112,
+          121,
+          906,
+          910
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "04-qwen21-edge-small-43",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          512.52,
+          518.52
+        ],
+        "centre_error_px": 287.16,
+        "equivalent_diameter": 770.02,
+        "diameter_error_percent": 285.01,
+        "silhouette_iou": 0.0675,
+        "estimated_bbox": [
+          135,
+          135,
+          894,
+          908
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "05-qwen21-depth-right-43",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          767.46,
+          510.11
+        ],
+        "centre_error_px": 1.97,
+        "equivalent_diameter": 359.34,
+        "diameter_error_percent": -0.18,
+        "silhouette_iou": 0.9834,
+        "estimated_bbox": [
+          590,
+          329,
+          947,
+          690
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "06-qwen21-depth-small-43",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          513.05,
+          520.24
+        ],
+        "centre_error_px": 287.96,
+        "equivalent_diameter": 768.56,
+        "diameter_error_percent": 284.28,
+        "silhouette_iou": 0.0676,
+        "estimated_bbox": [
+          136,
+          136,
+          893,
+          906
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "07-qwen21-baseline-left-43",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          516.29,
+          518.22
+        ],
+        "centre_error_px": 260.36,
+        "equivalent_diameter": 778.89,
+        "diameter_error_percent": 116.36,
+        "silhouette_iou": 0.1822,
+        "estimated_bbox": [
+          133,
+          133,
+          901,
+          906
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "08-qwen21-edge-left-21101",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          497.17,
+          502.0
+        ],
+        "centre_error_px": 241.38,
+        "equivalent_diameter": 772.91,
+        "diameter_error_percent": 114.7,
+        "silhouette_iou": 0.2166,
+        "estimated_bbox": [
+          77,
+          128,
+          896,
+          868
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "09-qwen21-edge-right-21101",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          502.95,
+          501.85
+        ],
+        "centre_error_px": 265.25,
+        "equivalent_diameter": 770.75,
+        "diameter_error_percent": 114.1,
+        "silhouette_iou": 0.1886,
+        "estimated_bbox": [
+          113,
+          128,
+          896,
+          870
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "10-qwen21-edge-small-21101",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          509.77,
+          500.73
+        ],
+        "centre_error_px": 277.23,
+        "equivalent_diameter": 752.13,
+        "diameter_error_percent": 276.06,
+        "silhouette_iou": 0.0707,
+        "estimated_bbox": [
+          133,
+          134,
+          889,
+          869
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "11-qwen21-depth-small-21101",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          510.8,
+          501.98
+        ],
+        "centre_error_px": 277.28,
+        "equivalent_diameter": 749.5,
+        "diameter_error_percent": 274.75,
+        "silhouette_iou": 0.0712,
+        "estimated_bbox": [
+          136,
+          136,
+          889,
+          868
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "12-qwen21-inpaint-right-43",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          766.2,
+          512.53
+        ],
+        "centre_error_px": 1.88,
+        "equivalent_diameter": 351.63,
+        "diameter_error_percent": -2.33,
+        "silhouette_iou": 0.9542,
+        "estimated_bbox": [
+          591,
+          334,
+          944,
+          690
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "13-qwen21-inpaint-small-43",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          719.01,
+          318.9
+        ],
+        "centre_error_px": 1.48,
+        "equivalent_diameter": 194.87,
+        "diameter_error_percent": -2.57,
+        "silhouette_iou": 0.9493,
+        "estimated_bbox": [
+          622,
+          221,
+          817,
+          417
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "14-qwen21-inpaint-left-21101",
+        "case": "left",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          252.76,
+          514.98
+        ],
+        "centre_error_px": 4.41,
+        "equivalent_diameter": 341.22,
+        "diameter_error_percent": -5.22,
+        "silhouette_iou": 0.8986,
+        "estimated_bbox": [
+          84,
+          344,
+          423,
+          687
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "15-qwen21-inpaint-right-21101",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          766.07,
+          510.37
+        ],
+        "centre_error_px": 2.53,
+        "equivalent_diameter": 340.28,
+        "diameter_error_percent": -5.48,
+        "silhouette_iou": 0.8936,
+        "estimated_bbox": [
+          599,
+          340,
+          933,
+          685
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "16-qwen21-inpaint-small-21101",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          720.28,
+          317.99
+        ],
+        "centre_error_px": 2.03,
+        "equivalent_diameter": 193.53,
+        "diameter_error_percent": -3.24,
+        "silhouette_iou": 0.9363,
+        "estimated_bbox": [
+          624,
+          223,
+          818,
+          416
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "nano-shape-right",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          766.78,
+          510.52
+        ],
+        "centre_error_px": 1.92,
+        "equivalent_diameter": 362.63,
+        "diameter_error_percent": 0.73,
+        "silhouette_iou": 0.9782,
+        "estimated_bbox": [
+          586,
+          330,
+          949,
+          692
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "nano-shape-small",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          718.67,
+          319.43
+        ],
+        "centre_error_px": 1.45,
+        "equivalent_diameter": 201.3,
+        "diameter_error_percent": 0.65,
+        "silhouette_iou": 0.972,
+        "estimated_bbox": [
+          619,
+          219,
+          819,
+          420
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "qwen3-shape-right",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          765.55,
+          511.79
+        ],
+        "centre_error_px": 2.46,
+        "equivalent_diameter": 364.15,
+        "diameter_error_percent": 1.15,
+        "silhouette_iou": 0.9734,
+        "estimated_bbox": [
+          585,
+          329,
+          948,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "qwen3-shape-small",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          535.35,
+          511.66
+        ],
+        "centre_error_px": 266.13,
+        "equivalent_diameter": 629.74,
+        "diameter_error_percent": 214.87,
+        "silhouette_iou": 0.0768,
+        "estimated_bbox": [
+          221,
+          200,
+          849,
+          820
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "seedream-shape-right",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          767.68,
+          512.64
+        ],
+        "centre_error_px": 0.72,
+        "equivalent_diameter": 362.44,
+        "diameter_error_percent": 0.68,
+        "silhouette_iou": 0.9818,
+        "estimated_bbox": [
+          587,
+          334,
+          950,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "seedream-shape-small",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          719.21,
+          318.89
+        ],
+        "centre_error_px": 1.36,
+        "equivalent_diameter": 199.92,
+        "diameter_error_percent": -0.04,
+        "silhouette_iou": 0.9754,
+        "estimated_bbox": [
+          619,
+          220,
+          820,
+          419
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-shape-right",
+        "case": "right",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          767.41,
+          511.49
+        ],
+        "centre_error_px": 0.78,
+        "equivalent_diameter": 361.6,
+        "diameter_error_percent": 0.45,
+        "silhouette_iou": 0.9906,
+        "estimated_bbox": [
+          587,
+          331,
+          949,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-shape-small",
+        "case": "small",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          719.94,
+          319.28
+        ],
+        "centre_error_px": 0.72,
+        "equivalent_diameter": 201.88,
+        "diameter_error_percent": 0.94,
+        "silhouette_iou": 0.9807,
+        "estimated_bbox": [
+          619,
+          219,
+          822,
+          421
+        ],
+        "alpha_extrema": null
+      }
+    ]
+  },
+  "round3": {
+    "method": "Approximate green foreground, largest connected component and hole fill; normalized to 1024 canvas. Requires visual contour validation. Not ground-truth segmentation.",
+    "results": [
+      {
+        "label": "17-qwen21-inpaint-motion0-43",
+        "case": "motion0",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          253.88,
+          512.78
+        ],
+        "centre_error_px": 2.26,
+        "equivalent_diameter": 352.7,
+        "diameter_error_percent": -2.03,
+        "silhouette_iou": 0.9601,
+        "estimated_bbox": [
+          79,
+          335,
+          430,
+          691
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "18-qwen21-inpaint-motion1-43",
+        "case": "motion1",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          339.85,
+          512.2
+        ],
+        "centre_error_px": 1.49,
+        "equivalent_diameter": 353.84,
+        "diameter_error_percent": -1.71,
+        "silhouette_iou": 0.9663,
+        "estimated_bbox": [
+          165,
+          334,
+          516,
+          691
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "19-qwen21-inpaint-motion2-43",
+        "case": "motion2",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          425.86,
+          513.02
+        ],
+        "centre_error_px": 1.3,
+        "equivalent_diameter": 354.05,
+        "diameter_error_percent": -1.65,
+        "silhouette_iou": 0.9674,
+        "estimated_bbox": [
+          250,
+          338,
+          603,
+          691
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "20-qwen21-inpaint-motion3-43",
+        "case": "motion3",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          511.77,
+          512.34
+        ],
+        "centre_error_px": 0.41,
+        "equivalent_diameter": 355.39,
+        "diameter_error_percent": -1.28,
+        "silhouette_iou": 0.9748,
+        "estimated_bbox": [
+          335,
+          335,
+          689,
+          691
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "21-qwen21-inpaint-motion4-43",
+        "case": "motion4",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          595.73,
+          512.45
+        ],
+        "centre_error_px": 1.66,
+        "equivalent_diameter": 355.23,
+        "diameter_error_percent": -1.33,
+        "silhouette_iou": 0.9739,
+        "estimated_bbox": [
+          419,
+          334,
+          776,
+          690
+        ],
+        "alpha_extrema": [
+          254,
+          255
+        ]
+      },
+      {
+        "label": "22-qwen21-inpaint-motion5-43",
+        "case": "motion5",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          680.25,
+          511.92
+        ],
+        "centre_error_px": 2.42,
+        "equivalent_diameter": 352.84,
+        "diameter_error_percent": -1.99,
+        "silhouette_iou": 0.9609,
+        "estimated_bbox": [
+          504,
+          336,
+          855,
+          689
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "23-qwen21-inpaint-motion6-43",
+        "case": "motion6",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          766.2,
+          512.53
+        ],
+        "centre_error_px": 1.88,
+        "equivalent_diameter": 351.63,
+        "diameter_error_percent": -2.33,
+        "silhouette_iou": 0.9542,
+        "estimated_bbox": [
+          591,
+          334,
+          944,
+          690
+        ],
+        "alpha_extrema": [
+          253,
+          255
+        ]
+      },
+      {
+        "label": "sunburst-independent-motion0",
+        "case": "motion0",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          255.78,
+          510.92
+        ],
+        "centre_error_px": 1.1,
+        "equivalent_diameter": 362.04,
+        "diameter_error_percent": 0.57,
+        "silhouette_iou": 0.9882,
+        "estimated_bbox": [
+          75,
+          330,
+          437,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion1",
+        "case": "motion1",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          341.07,
+          511.24
+        ],
+        "centre_error_px": 0.8,
+        "equivalent_diameter": 361.09,
+        "diameter_error_percent": 0.3,
+        "silhouette_iou": 0.9926,
+        "estimated_bbox": [
+          161,
+          331,
+          522,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion2",
+        "case": "motion2",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          426.2,
+          511.24
+        ],
+        "centre_error_px": 0.89,
+        "equivalent_diameter": 361.83,
+        "diameter_error_percent": 0.51,
+        "silhouette_iou": 0.9894,
+        "estimated_bbox": [
+          246,
+          331,
+          608,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion3",
+        "case": "motion3",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          511.37,
+          511.48
+        ],
+        "centre_error_px": 0.82,
+        "equivalent_diameter": 361.12,
+        "diameter_error_percent": 0.31,
+        "silhouette_iou": 0.9919,
+        "estimated_bbox": [
+          332,
+          331,
+          692,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion4",
+        "case": "motion4",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          596.54,
+          511.19
+        ],
+        "centre_error_px": 1.13,
+        "equivalent_diameter": 361.16,
+        "diameter_error_percent": 0.32,
+        "silhouette_iou": 0.9901,
+        "estimated_bbox": [
+          417,
+          331,
+          777,
+          693
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion5",
+        "case": "motion5",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          682.36,
+          510.99
+        ],
+        "centre_error_px": 1.05,
+        "equivalent_diameter": 360.66,
+        "diameter_error_percent": 0.18,
+        "silhouette_iou": 0.9915,
+        "estimated_bbox": [
+          502,
+          331,
+          864,
+          692
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-independent-motion6",
+        "case": "motion6",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          767.23,
+          510.54
+        ],
+        "centre_error_px": 1.65,
+        "equivalent_diameter": 360.88,
+        "diameter_error_percent": 0.24,
+        "silhouette_iou": 0.9873,
+        "estimated_bbox": [
+          587,
+          331,
+          949,
+          691
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion0",
+        "case": "motion0",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          254.91,
+          510.56
+        ],
+        "centre_error_px": 1.81,
+        "equivalent_diameter": 360.27,
+        "diameter_error_percent": 0.07,
+        "silhouette_iou": 0.9866,
+        "estimated_bbox": [
+          75,
+          330,
+          435,
+          692
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion1",
+        "case": "motion1",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          340.29,
+          509.42
+        ],
+        "centre_error_px": 2.79,
+        "equivalent_diameter": 358.63,
+        "diameter_error_percent": -0.38,
+        "silhouette_iou": 0.9795,
+        "estimated_bbox": [
+          161,
+          330,
+          520,
+          689
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion2",
+        "case": "motion2",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          426.13,
+          509.5
+        ],
+        "centre_error_px": 2.56,
+        "equivalent_diameter": 360.79,
+        "diameter_error_percent": 0.22,
+        "silhouette_iou": 0.9813,
+        "estimated_bbox": [
+          246,
+          330,
+          607,
+          691
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion3",
+        "case": "motion3",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          511.49,
+          510.8
+        ],
+        "centre_error_px": 1.3,
+        "equivalent_diameter": 360.35,
+        "diameter_error_percent": 0.1,
+        "silhouette_iou": 0.9905,
+        "estimated_bbox": [
+          332,
+          331,
+          692,
+          692
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion4",
+        "case": "motion4",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          596.05,
+          510.23
+        ],
+        "centre_error_px": 2.19,
+        "equivalent_diameter": 360.15,
+        "diameter_error_percent": 0.04,
+        "silhouette_iou": 0.9842,
+        "estimated_bbox": [
+          416,
+          330,
+          776,
+          691
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion5",
+        "case": "motion5",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          681.81,
+          510.73
+        ],
+        "centre_error_px": 1.53,
+        "equivalent_diameter": 360.6,
+        "diameter_error_percent": 0.17,
+        "silhouette_iou": 0.9888,
+        "estimated_bbox": [
+          502,
+          331,
+          862,
+          692
+        ],
+        "alpha_extrema": null
+      },
+      {
+        "label": "sunburst-reference-motion6",
+        "case": "motion6",
+        "image_size": [
+          1024,
+          1024
+        ],
+        "estimated_centre": [
+          766.88,
+          509.81
+        ],
+        "centre_error_px": 2.46,
+        "equivalent_diameter": 359.15,
+        "diameter_error_percent": -0.24,
+        "silhouette_iou": 0.9822,
+        "estimated_bbox": [
+          588,
+          330,
+          947,
+          690
+        ],
+        "alpha_extrema": null
+      }
+    ]
+  },
+  "continuity": {
+    "method": "Target-centred 360px crops; mean absolute RGB difference within inner radius 150, range 0-1. Lighting and small misalignment also contribute. No optical flow or texture matching.",
+    "results": {
+      "independent": {
+        "adjacent_mean_absolute_rgb_change": [
+          0.14648869827056982,
+          0.16185443283326548,
+          0.11223001326502967,
+          0.14016538322116653,
+          0.12577961995287634,
+          0.1516393702676676
+        ],
+        "mean": 0.13969291963509592
+      },
+      "reference": {
+        "adjacent_mean_absolute_rgb_change": [
+          0.08302400867698141,
+          0.05800614977172142,
+          0.08382631126635848,
+          0.03039807206145739,
+          0.030902829518423276,
+          0.04194169103275299
+        ],
+        "mean": 0.05468317705461582
+      },
+      "inpaint": {
+        "adjacent_mean_absolute_rgb_change": [
+          0.12811110546877927,
+          0.19803617252696828,
+          0.15599643441626332,
+          0.15357705801972835,
+          0.11568014194256974,
+          0.12715348150836733
+        ],
+        "mean": 0.1464257323137794
+      }
+    }
+  }
+}

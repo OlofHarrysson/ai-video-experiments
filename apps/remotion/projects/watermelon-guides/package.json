@@ -1,0 +1,1 @@
+{"name":"watermelon-guides","private":true,"type":"module","scripts":{"guides":"node scripts/render-guides.mjs"},"dependencies":{"@remotion/bundler":"4.0.529","@remotion/renderer":"4.0.529","remotion":"4.0.529","react":"19.2.3","react-dom":"19.2.3"}}

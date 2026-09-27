@@ -1,0 +1,897 @@
+[
+  {
+    "run": "runs/round1/nano-shape-left",
+    "endpoint_id": "fal-ai/nano-banana-pro/edit",
+    "parameters": {
+      "aspect_ratio": "1:1",
+      "resolution": "1K",
+      "seed": 43,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "4f1503527db2f0351370ac0fb87ddb895e77a1c878e14e2c35f6273a21682a21"
+    },
+    "request_id": "01a0e40f-a22d-7f11-ba10-a212bd8c7f2a",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round1/qwen21-depth-left-43",
+    "endpoint_id": "qwen21-public-space",
+    "parameters": {
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects.",
+      "preprocessor": "None (already a control map)",
+      "control_context_scale": 1.0,
+      "resolution": 1024,
+      "num_inference_steps": 40,
+      "seed": 43,
+      "randomize_seed": false,
+      "guidance_scale": 1.0
+    },
+    "outputs": {
+      "output.png": "4db1b69f0e666ca096d398f54e1f637729cecf892c14f4938e410237082b9383"
+    }
+  },
+  {
+    "run": "runs/round1/qwen21-edge-left-43-v2",
+    "endpoint_id": "qwen21-public-space",
+    "parameters": {
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects.",
+      "preprocessor": "None (already a control map)",
+      "control_context_scale": 1.0,
+      "resolution": 1024,
+      "num_inference_steps": 40,
+      "seed": 43,
+      "randomize_seed": false,
+      "guidance_scale": 1.0
+    },
+    "outputs": {
+      "output.png": "6cf567790d9f2c7236f1d43eb6adecb3339ce2c2cc61ef5e2c7a963aad4b41e6"
+    }
+  },
+  {
+    "run": "runs/round1/qwen3-shape-left",
+    "endpoint_id": "alibaba/qwen-image-3/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "seed": 43,
+      "enable_prompt_expansion": false,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "ab39c3854bf8f70af9153991710ae4c1bbca2ab3b680100aa267753eee09a7ba"
+    },
+    "request_id": "01a0e40f-e2e0-72a3-9b04-4d0249ad983d",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round1/seedream-shape-left",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "1212730a96f8d4f755d4b466d933fb91c4eafcbbe1d56585005ae5f5355b0110"
+    },
+    "request_id": "01a0e40e-ee20-7d91-86d9-dc7a7fbbaa88",
+    "status": "processing"
+  },
+  {
+    "run": "runs/round1/sunburst-mask-left",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "prompt": "Insert one photorealistic whole round watermelon into the transparent circular edit region. Its full spherical silhouette must fill that circular region exactly. Natural dark green winding stripes on lighter green rind with fine realistic texture. Soft studio light from upper left. Preserve the plain dark charcoal background outside the editable circle. Only one watermelon, no text, no other objects.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "502cf4e953ed5e37bba33093907d5be1ef9a5fe4f228a539fa05d8f571c3af9a"
+    },
+    "request_id": "01a0e411-6f62-7b10-9a83-cdcf24f48f08",
+    "status": "processing"
+  },
+  {
+    "run": "runs/round1/sunburst-shape-left",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+    },
+    "request_id": "01a0e40e-6de4-7270-8fe4-782035fe2ac8",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/00-qwen21-inpaint-left-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "00-qwen21-inpaint-left-43",
+      "mode": "inpaint",
+      "case": "left",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "c04e48c1f364dd3cc2604196faab549c6c6e3bfd39f0900c65efa5512112126e"
+    }
+  },
+  {
+    "run": "runs/round2/01-qwen21-edge-inpaint-left-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "01-qwen21-edge-inpaint-left-43",
+      "mode": "edge-inpaint",
+      "case": "left",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "03a60d912f5a6b7117b7d39a47a507c7b65babf726d14fb6c58604e1a05f0533"
+    }
+  },
+  {
+    "run": "runs/round2/02-qwen21-edge-left-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "02-qwen21-edge-left-43",
+      "mode": "edge",
+      "case": "left",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "c128ee62459660a0decac15c529c900d385c532fca833a60007a5e372483035b"
+    }
+  },
+  {
+    "run": "runs/round2/03-qwen21-edge-right-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "03-qwen21-edge-right-43",
+      "mode": "edge",
+      "case": "right",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "1faa6403615ca90d9503e38dc668689f83e11eda6062be93fef04c010d00f524"
+    }
+  },
+  {
+    "run": "runs/round2/04-qwen21-edge-small-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "04-qwen21-edge-small-43",
+      "mode": "edge",
+      "case": "small",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "819f7558fcd1895ebd88b7ba59aae969d0dd9f5332b0a02561e888bb8a0497c6"
+    }
+  },
+  {
+    "run": "runs/round2/05-qwen21-depth-right-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "05-qwen21-depth-right-43",
+      "mode": "depth",
+      "case": "right",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "1fc259449a224d6f8a8cbf4c288eabee3c8ceafdae774cbc573c588ff9d26c7b"
+    }
+  },
+  {
+    "run": "runs/round2/06-qwen21-depth-small-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "06-qwen21-depth-small-43",
+      "mode": "depth",
+      "case": "small",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "288ef88b4258b23094eab220b224fe91f37a76c73a19a1c110b6f181a5da30d0"
+    }
+  },
+  {
+    "run": "runs/round2/07-qwen21-baseline-left-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "07-qwen21-baseline-left-43",
+      "mode": "baseline",
+      "case": "left",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "ab124fbda5e294c0dad35fe32104d31f220edc97c9c5f46cb28cbde411afdff4"
+    }
+  },
+  {
+    "run": "runs/round2/08-qwen21-edge-left-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "08-qwen21-edge-left-21101",
+      "mode": "edge",
+      "case": "left",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "64cb94f3974656a9fbf80179e5a57183ff0164ee18a29522403dbc20525b1199"
+    }
+  },
+  {
+    "run": "runs/round2/09-qwen21-edge-right-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "09-qwen21-edge-right-21101",
+      "mode": "edge",
+      "case": "right",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "ddc9b0e27c3ba40f5e6c28579fd9e877137e3be6d5b9dee4d2ac2eff1c7fff8a"
+    }
+  },
+  {
+    "run": "runs/round2/10-qwen21-edge-small-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "10-qwen21-edge-small-21101",
+      "mode": "edge",
+      "case": "small",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "f68a9152ced51f14b7a7ae78314a1cb4ecbadf521f1ed3fb3d131298d34f8994"
+    }
+  },
+  {
+    "run": "runs/round2/11-qwen21-depth-small-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "11-qwen21-depth-small-21101",
+      "mode": "depth",
+      "case": "small",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "e15edb256d7a853f5c8903ec4312f6eb2f5120f099db23289f849111000b829d"
+    }
+  },
+  {
+    "run": "runs/round2/12-qwen21-inpaint-right-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "12-qwen21-inpaint-right-43",
+      "mode": "inpaint",
+      "case": "right",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "6b3893b305e29dd3fc3485c40c7014f3917bd45113995263482447f5f0dccd69"
+    }
+  },
+  {
+    "run": "runs/round2/13-qwen21-inpaint-small-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "13-qwen21-inpaint-small-43",
+      "mode": "inpaint",
+      "case": "small",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "94fcdc10da37d50aaeb18890dc828660156f687869f5ecb9ef8f8c63459ec12f"
+    }
+  },
+  {
+    "run": "runs/round2/14-qwen21-inpaint-left-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "14-qwen21-inpaint-left-21101",
+      "mode": "inpaint",
+      "case": "left",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "e608916af250a5c47d2a11706b732f48efe330c4892783a315f5db388f78642a"
+    }
+  },
+  {
+    "run": "runs/round2/15-qwen21-inpaint-right-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "15-qwen21-inpaint-right-21101",
+      "mode": "inpaint",
+      "case": "right",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "026414c7bb162d391fc19c63e84787bf5f66152f2b2091d5ccb3d3eb255de90b"
+    }
+  },
+  {
+    "run": "runs/round2/16-qwen21-inpaint-small-21101",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "16-qwen21-inpaint-small-21101",
+      "mode": "inpaint",
+      "case": "small",
+      "seed": 21101,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "1b1e8731defbac2d8a2f9a7f3bdd4b37dd62612afe2dacfc480feb81dbd160d2"
+    }
+  },
+  {
+    "run": "runs/round2/nano-shape-right",
+    "endpoint_id": "fal-ai/nano-banana-pro/edit",
+    "parameters": {
+      "aspect_ratio": "1:1",
+      "resolution": "1K",
+      "seed": 43,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "562ebcc6b2c74a05af7344fac513d3a2373932f09ba2c26068de693574054a75"
+    },
+    "request_id": "01a0e415-3848-72c0-bf20-6e96f1804f6b",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/nano-shape-small",
+    "endpoint_id": "fal-ai/nano-banana-pro/edit",
+    "parameters": {
+      "aspect_ratio": "1:1",
+      "resolution": "1K",
+      "seed": 43,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "1e7c2fc4aca7c3f0991a959d8f4bf2bbf7e0dc63406824388ae7987fdb8afa4c"
+    },
+    "request_id": "01a0e418-46c2-7883-9fbb-af844842db53",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/qwen3-shape-right",
+    "endpoint_id": "alibaba/qwen-image-3/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "seed": 43,
+      "enable_prompt_expansion": false,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "9d1fb2be154fc1a8a05f1ef64a7fc86e26cccf8c562bce98d9fb178afc2cfc72"
+    },
+    "request_id": "01a0e416-bfcf-70a0-b309-91cce6fc2e97",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/qwen3-shape-small",
+    "endpoint_id": "alibaba/qwen-image-3/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "seed": 43,
+      "enable_prompt_expansion": false,
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "832cf603274bbe2b8ef8d963f6fb60659c731ad4cfbe36f97b5974268c3a515c"
+    },
+    "request_id": "01a0e418-9403-7151-94e0-204492f463f3",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/seedream-shape-right",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "a7038a22f76f1fca96cc2962e9f75e434d918311342519e14cf071f46888ce17"
+    },
+    "request_id": "01a0e415-7ef7-7ac3-8ff3-99914158f63f",
+    "status": "processing"
+  },
+  {
+    "run": "runs/round2/seedream-shape-small",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "bb750e123fb652736b2fd960b75aad302f6354e28adffeba9721ecc850d51b33"
+    },
+    "request_id": "01a0e417-24cb-7da0-9a52-e828395d5a2e",
+    "status": "processing"
+  },
+  {
+    "run": "runs/round2/sunburst-shape-right",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "49f3d572fd2d73b1a2413b7c6b2167c59e0cd512db154d2c2cf87baef215b5d6"
+    },
+    "request_id": "01a0e416-3820-7af2-94a8-a024e17060f8",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round2/sunburst-shape-small",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame.",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "outputs": {
+      "output-0.png": "71af6dd9c072047f5b39d4423034be82334defcb79117c56ae328c4feed26907"
+    },
+    "request_id": "01a0e417-d8ec-7121-9322-eedef65e2367",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/17-qwen21-inpaint-motion0-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "17-qwen21-inpaint-motion0-43",
+      "mode": "inpaint",
+      "case": "motion0",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "c04e48c1f364dd3cc2604196faab549c6c6e3bfd39f0900c65efa5512112126e"
+    }
+  },
+  {
+    "run": "runs/round3/18-qwen21-inpaint-motion1-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "18-qwen21-inpaint-motion1-43",
+      "mode": "inpaint",
+      "case": "motion1",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "abdf714bd2b316e2592446db81b131d2c198659cac19ad8b80a6de27bfbcf61a"
+    }
+  },
+  {
+    "run": "runs/round3/19-qwen21-inpaint-motion2-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "19-qwen21-inpaint-motion2-43",
+      "mode": "inpaint",
+      "case": "motion2",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "515fb1c1b56c58285ff00e31538ded77e4ca37a6924bf82d4fee29cf16ba8719"
+    }
+  },
+  {
+    "run": "runs/round3/20-qwen21-inpaint-motion3-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "20-qwen21-inpaint-motion3-43",
+      "mode": "inpaint",
+      "case": "motion3",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "f25ee636d62c0f8f0887247ac325239807a7058a1198949829f536a525b00dbf"
+    }
+  },
+  {
+    "run": "runs/round3/21-qwen21-inpaint-motion4-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "21-qwen21-inpaint-motion4-43",
+      "mode": "inpaint",
+      "case": "motion4",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "1aadaab1ad5c431afb3f61c6f9ee806a90747aa4e26a81e67d697379143d2020"
+    }
+  },
+  {
+    "run": "runs/round3/22-qwen21-inpaint-motion5-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "22-qwen21-inpaint-motion5-43",
+      "mode": "inpaint",
+      "case": "motion5",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "a0420cf56da0393ca5408e4c3dbb0a4b75bc3333f72ec077acad6ac52847b923"
+    }
+  },
+  {
+    "run": "runs/round3/23-qwen21-inpaint-motion6-43",
+    "endpoint_id": "qwen21-runpod",
+    "parameters": {
+      "label": "23-qwen21-inpaint-motion6-43",
+      "mode": "inpaint",
+      "case": "motion6",
+      "seed": 43,
+      "prompt": "A photorealistic studio photograph of one whole round watermelon. Natural dark green winding stripes on a lighter green rind, realistic fine rind texture. The entire watermelon is visible as a sphere. Plain uniform dark charcoal background. Soft studio light from the upper left reveals its rounded volume. Only one watermelon, no cut fruit, no text, no other objects."
+    },
+    "outputs": {
+      "output.png": "6b3893b305e29dd3fc3485c40c7014f3917bd45113995263482447f5f0dccd69"
+    }
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion0",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "f41cad86e27cadeb8f617bc0e96c2bf6f6043f9ab716e20409b9bb4f235eddc8"
+    },
+    "request_id": "01a0e420-c7e4-7780-8764-670697e1516f",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion1",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "959dc769a361ad11c7455f5732fcd27bf6c7ab8452bc2ec287d8d04395bf9414"
+    },
+    "request_id": "01a0e421-4812-7f62-9d93-d5ab0805cbde",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion2",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "8df0513620b79fded7d9efee131eb5912401bc28c41811fc1df4395afb942d64"
+    },
+    "request_id": "01a0e421-c31b-7803-b986-25744cf946c6",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "cd87f9c59e9c55f2107ffc5edf4fc1ec9f603c48119b04874db7f2997329741a"
+    },
+    "request_id": "01a0e422-4a4e-76b3-8de4-6c6ae35e01d2",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion4",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "e4421e33377b98747a3be077561390110f565d0777e904613830dd36d8f35a1b"
+    },
+    "request_id": "01a0e423-4597-75b1-b0bf-e30cb3af09cc",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion5",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "96bdbb6ef53d8e1d4edc883f037af8c52380a68eb527ecff5dae23f9e793a9d6"
+    },
+    "request_id": "01a0e422-c1ec-71b1-a4fd-1046a2a7cd60",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-independent-motion6",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame."
+    },
+    "outputs": {
+      "output-0.png": "5e4df6a5b758e0c09a9b5217ad4134f9205d0d1333b72f940c7b6ae1ca16d466"
+    },
+    "request_id": "01a0e423-c93f-7fb1-a6ac-5b09ad5c6060",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion0",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "395088b538f0df6263c426602205a91762dd436e381b936a63173a0feef8014b"
+    },
+    "request_id": "01a0e424-4f84-7341-a0ea-afafb21397fd",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion1",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "4a4b7cf0e5c8d960762c930790c82cf47b22e7c6d26b73b5aaa786c43bb19b2c"
+    },
+    "request_id": "01a0e424-e8b1-7270-a10e-d24762ffc8e3",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion2",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "7a5472296c19d43066c1a330c509b060985fc1215e28f20aefb5341fcb999776"
+    },
+    "request_id": "01a0e425-68e7-7730-a34d-a3c8fb868d5d",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "c1b2f9f2ee84d0ab59544c0ea907b3b41956799eecbd264caed59919ee31691d"
+    },
+    "request_id": "01a0e426-130f-7a11-9944-c1ff1cc18a41",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion4",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "33cf5cadd3a0461155827eba055b1588a0f3f98811e752951a3436eef6c446aa"
+    },
+    "request_id": "01a0e426-957c-7d33-890e-d8e160ebe8e2",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion5",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "a35b6110d0a0e02706647d80feefc8a4e2d935b7cd1643f0ae63c86968eeebc5"
+    },
+    "request_id": "01a0e427-1137-7132-963b-643f568e46f6",
+    "status": "completed"
+  },
+  {
+    "run": "runs/round3/sunburst-reference-motion6",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png",
+      "prompt": "Replace the flat green circle in image 1 with a photorealistic whole round watermelon. The circle is a strict placement and silhouette guide: keep the watermelon at exactly the same position and diameter as that circle. Preserve the full canvas and the plain dark charcoal background. Render natural dark green winding stripes over lighter green rind, subtle realistic rind texture, and soft studio light from the upper left to show spherical volume. Exactly one whole watermelon. The fruit must fill the circle, with its outer edge matching the circle; do not enlarge, move or recenter it. Remove the flat green placeholder completely. No text, cut fruit, other objects, or added frame. Image 2 shows the exact watermelon to use. Preserve that fruit's particular rind stripe pattern, visible side, orientation, lighting and texture. Translate it to match the circle in image 1 without rotating it. Image 1 alone controls position and size."
+    },
+    "outputs": {
+      "output-0.png": "5a948111b781d0b4634b0b2e0af1d4e017c3625e8ffad522aadbb23be6f3f333"
+    },
+    "request_id": "01a0e427-892c-7f02-8bf6-1ddf54237a90",
+    "status": "completed"
+  }
+]

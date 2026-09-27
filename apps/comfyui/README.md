@@ -4,6 +4,8 @@ Still-image experiments using ComfyUI on RunPod, with explicit control over comp
 
 ## Projects
 
+- [Spatial control lab](projects/spatial-control-lab/report.md) — 53 outputs compare recent image editors, structural controls and masks; a Remotion circle plus fixed reference gives the strongest tested watermelon translation. Outputs are local and the owned GPU is deleted.
+
 - [Watermelon placement from authored depth](projects/watermelon-depth/README.md) — eight Krea Turbo images test a community depth adapter; generation works, but the tested recipe fails to follow the guide's position and size.
 - [Regional composition](projects/regional-composition/README.md) — three SDXL methods executed on RunPod, with two seeds per final recipe. Regional prompting is the initial recommendation; noisy composition and staged inpainting expose useful integration failures. [Results and comparisons](projects/regional-composition/experiments/results.md).
 - [Regional composition followed by global refinement](projects/regional-composition/experiments/refinement.md) — the selected method now has a two-stage comparison based on Olof's tutorial reference. All media is local; the experiment's Pod is deleted.
