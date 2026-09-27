@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-27",
+  "result": "Generated correctly, placement test failed",
+  "generated_images": 8,
+  "controlled_images": 6,
+  "baseline_images": 2,
+  "width": 1024,
+  "height": 1024,
+  "all_output_hashes_verified": true,
+  "pod_deleted": true,
+  "pod_absence_verified": true,
+  "retained_volume_preserved": true,
+  "pod_lifetime_seconds": 819.087251,
+  "estimated_compute_usd": 0.1683679349277778,
+  "cost_basis": "Owned Pod lifetime at $0.74/hour, excluding storage; billing not yet posted",
+  "outputs": {
+    "21001-baseline": "759bc96c32e4948d3799a8f6d2696cc00f58afbfbd7033e5b6814d0759ef6a4d",
+    "21001-centre": "9d86055bd91d7cddbb5e932c3f6c19ceb3c752788567be787a74810fa40993d6",
+    "21001-left": "ba160fc8384b853e03047ff6f2a7291af7afd05a9d1d31053f91203fe7e550c9",
+    "21001-right": "7819f566e6c57b5f778ed1a7c95cc9ad222f3e9a0717a719dcc9d4bd0f49e905",
+    "21101-baseline": "85505c02a4f9b7c358b74c87dd7a31fdbe8ac8a2f12ae2d7beb706029aa8e54d",
+    "21101-centre": "885573e5db9db7af49d0d8361e63ce5bdd07ab68350b59df785b0c3222ae1edc",
+    "21101-left": "72a6980cf0bd478ff1713410b5eeec79355ddbed390dfa329525579669307fcd",
+    "21101-right": "adaf7cf1dabbb747da9696dbda54ec6d107697ab3a7c85e0d9e0627168195aa4"
+  }
+}
