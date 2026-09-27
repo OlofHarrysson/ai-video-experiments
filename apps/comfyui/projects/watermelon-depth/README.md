@@ -4,6 +4,8 @@ Approved 2026-09-27: test whether Krea 2 Turbo turns a simple sphere-depth guide
 
 **Result:** all eight images completed, but this recipe failed to follow the guide's position and size. The owned GPU is removed and all outputs are preserved. [Comparison, evidence and next diagnostic](results.md).
 
+**Author-example follow-up:** the original dog-to-lion example completed through the author's hosted pipeline. Broad placement survives; head pose changes substantially. Our ComfyUI integration remains unvalidated. [Reproduction and comparison](author-reproduction.md).
+
 ## First experiment
 
 - Six controlled images: left, centre and right sphere positions, each with seeds 21001 and 21101.
