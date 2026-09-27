@@ -6,9 +6,9 @@
 
 Usage, from this project folder:
 
-    uv run --script scripts/assemble.py OUTPUT.mp4 IMAGE [IMAGE ...] [--anchor X Y] [--start 0.62] [--end 1.0]
+    uv run --script scripts/assemble.py OUTPUT.mp4 IMAGE [IMAGE ...] [--hold 2] [--anchor X Y] [--start 0.62] [--end 1.0]
 
-Each image is held for FRAMES_PER_IMAGE frames with no interpolation. The crop is the largest
+Each image is held for --hold frames with no interpolation. The crop is the largest
 2.4:1 window scaled from --start to --end with an ease-in-out, and its centre travels from the
 anchor (fractions of image width and height) to the image centre.
 """
@@ -43,12 +43,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("output", type=Path)
     parser.add_argument("images", type=Path, nargs="+")
+    parser.add_argument("--hold", type=int, default=FRAMES_PER_IMAGE, help="frames each image is held")
     parser.add_argument("--anchor", type=float, nargs=2, default=(0.5, 0.5), metavar=("X", "Y"))
     parser.add_argument("--start", type=float, default=0.62, help="crop scale on the first frame")
     parser.add_argument("--end", type=float, default=1.0, help="crop scale on the last frame")
     args = parser.parse_args()
 
-    frames = len(args.images) * FRAMES_PER_IMAGE
+    frames = len(args.images) * args.hold
     encoder = subprocess.Popen(
         [
             "ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
@@ -60,7 +61,7 @@ def main() -> None:
     )
     current, image = None, None
     for frame in range(frames):
-        path = args.images[frame // FRAMES_PER_IMAGE]
+        path = args.images[frame // args.hold]
         if path != current:
             current, image = path, Image.open(path).convert("RGB")
         t = smoothstep(frame / max(frames - 1, 1))
