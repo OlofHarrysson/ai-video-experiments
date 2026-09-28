@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-28",
+  "pod_id": "9cs6dqzu67ml2g",
+  "gpu": "NVIDIA A100 SXM4 80GB",
+  "hourly_compute_usd": 1.59,
+  "created_at": "2026-09-28T19:48:28.156000+00:00",
+  "deletion_confirmed_at": "2026-09-28T20:13:07+00:00",
+  "elapsed_seconds": 1478.844,
+  "compute_estimate_usd": 0.6532,
+  "account_spend_per_hour_after_usd": 0.005,
+  "cleanup": "Delete returned HTTP 204; subsequent list_pods returned zero Pods. Existing retained model volume was not modified.",
+  "budget_limit_usd": 3,
+  "completed_paintings": 131,
+  "still_probes": 18,
+  "opening_paintings": 1,
+  "sequences": 7,
+  "sequence_paintings": 16,
+  "warm_execution_median_seconds": 3.683,
+  "warm_median_compute_usd": 0.001627,
+  "cost_scope": "Elapsed-rate compute estimate includes startup, downloads, inspection and network idle time; storage is additional. This is not a settled invoice. Account receipts stay in private ignored work storage.",
+  "models": [
+    {
+      "destination": "diffusion_models/krea2_turbo_fp8_scaled.safetensors",
+      "sha256": "eb4dd8c612cfd10f64f25b057e6e6bbcb5737c94a7372177e456dbf7579502f1",
+      "bytes": 13141730784,
+      "downloaded": true,
+      "seconds": 190.225
+    },
+    {
+      "destination": "text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+      "sha256": "54bd5144df0bbc25dd6ccadfcb826b521445a1b06ae5a42570bdd2974ca87094",
+      "bytes": 5242467968,
+      "downloaded": true,
+      "seconds": 124.611
+    },
+    {
+      "destination": "vae/qwen_image_vae.safetensors",
+      "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+      "bytes": 253806246,
+      "downloaded": true,
+      "seconds": 17.595
+    }
+  ],
+  "comfy_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "video_checks": "14 exports fully decode; each is 16 frames and 4 seconds, no interpolation.",
+  "first_painting_control": "circle-strong, circle-with-flow and circle-flow-gentle have identical decoded pixels at painting 0.",
+  "verification": "131 remote output PNG SHA256 values match all local originals and saved local hashes."
+}

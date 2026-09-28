@@ -35,6 +35,10 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
+### shape-injection — spatial guide study
+
+- [Blended shapes in the Krea feedback loop](shape-injection/report.md): flat/shaded circles, rings and triangles; paired still controls, recurrent moving guides and authored local movement. [Project brief](shape-injection/README.md).
+
 ### cartographers-dream — film and ending
 
 - [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md), [paper-world ending](cartographers-dream/experiments/ending-production.md), [revised cut](cartographers-dream/cuts/v002.md), [original cut](cartographers-dream/cuts/v001.md), [first-pass critique](cartographers-dream/experiments/quality-review.md).

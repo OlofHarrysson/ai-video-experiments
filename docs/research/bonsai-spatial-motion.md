@@ -4,6 +4,8 @@ Execution update: the accepted [Move-Warp-inspired experiment](../../apps/deforu
 
 Current Krea comparison: see [the September 15 palette review](#current-palette-comparison--2026-09-15). The older gap analysis describes the original investigation; current direct spatial controls are documented in the [motion palette](../motion-palette.md).
 
+September 28 follow-up: the [shape-injection study](../../apps/deforum/projects/shape-injection/report.md) tests guide appearance blended into recurrent Krea initialization. The saved `Shapes-Circles` and `Shapes-Circles-30s` presets both enable Normal compositing at alpha 0.8 and optical-flow motion at 0.8. Five reviewed frames from the [19:12 circle chapter](https://www.youtube.com/watch?v=vmKePs6iHs4&t=1152s) show rings interpreted as eyes/mechanical forms. This is a plausible match to Olof's spinning-ring recollection, not confirmed identification; it differs from the non-composited Evolve Zoom Slow ring below.
+
 2026-09-07. Olof wants the expressive movement in The BonsAi Effect's references. He found our latest 3D repaint nearly motionless and the guide too restrained. Literal camera realism is one possible technique; the current creative question is how to direct different regions of an evolving image.
 
 ## What the repository tells us
