@@ -1,0 +1,719 @@
+[
+  {
+    "run": "runs/stills/background",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/text-to-image",
+    "parameters": {
+      "prompt": "Photorealistic interior photograph of an empty pale honey-coloured wooden kitchen worktable in a quiet contemporary country kitchen. Square 1024x1024 composition, fixed camera looking slightly downward at the tabletop, natural 50mm lens perspective. The broad table surface occupies the lower two thirds of the frame, its rear edge at about y=370; the front edge is below the image. Distinct natural wood grain, a few subtle knots and seams remain visible for tracking. The entire middle and foreground tabletop is completely empty, clear from left to right. Soft directional daylight from a window at the upper left creates gentle shadows toward the right. In the distant background only, a small matte blue ceramic cup on a rear shelf on the right and a folded cream linen cloth near the far left edge. Warm off-white plaster wall. Realistic materials, restrained colours, enough depth of field that the tabletop grain is sharp. No fruit, no watermelon, no people, no food, no plants, no text, no cutting board. A believable photographed scene, not a studio product backdrop.",
+      "quality": "high",
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "background": "opaque",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "329099a5f9ce5503dd39175b132773d23f06d8ee05c524043cd91922165fda5b",
+    "request_id": "01a0e7c2-62f4-7601-8fb3-a04665e3167c",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "6b04851d7c553761a9fd68030ff7c70c081db849575d797eb05acd3fb52d9ee7"
+    }
+  },
+  {
+    "run": "runs/stills/seedream-guide-0",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-0.png",
+          "sha256": "081bd66aaec5c79255edbe6147e2ab923e21c3849ba66df2e187ed7c476ff22d"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "c02c876c93436e8f2b70aa29dba18673e7b46b15b4755700437cc6ddb4822d78",
+    "request_id": "01a0e7c8-4068-7340-9903-69bf59e6269c",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.072,
+    "outputs": {
+      "output-0.png": "9ca7f073950785ae03bc3ff467c3e05effc414e2051b94a6cf19660f8bd0c9e6"
+    }
+  },
+  {
+    "run": "runs/stills/seedream-guide-3",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-3.png",
+          "sha256": "015c9408bc86474afa7ecf220433b370aad637cb7a49408fd29f21045ea10b22"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "1fdfcf0825fa891253961c09a26c914e448779b667ed6b6b5c395978ba5b53f9",
+    "request_id": "01a0e7c8-f49c-74a1-ad16-f8a0a8e4cff6",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.072,
+    "outputs": {
+      "output-0.png": "8bba9e7efd294f9fecfa4d50c5caa87e170d529d6bbb60ba982512e532ca411b"
+    }
+  },
+  {
+    "run": "runs/stills/seedream-guide-6",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-6.png",
+          "sha256": "8b9ff8591bd08a6d17ff1a72d7c1e3446e0790106103136443175851c92f7d09"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "18a284abde4b37f64563a89cfc521e5e339722ef2a3e6a295873a74a93738983",
+    "request_id": "01a0e7c9-8696-79d3-9d27-6b27ff60315d",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.072,
+    "outputs": {
+      "output-0.png": "c029a75d65f9ae467bf241e7527d9c1cb5ff6bb5cb6801d4853c8f3350c8e5cd"
+    }
+  },
+  {
+    "run": "runs/stills/seedream-layout-3",
+    "endpoint_id": "bytedance/seedream/v5/pro/edit",
+    "parameters": {
+      "prompt": "Turn the schematic layout in image 1 into a photorealistic country kitchen scene. Brown region is a wooden worktable, light upper region is an off-white wall and the blue rectangle is a sunlit window. Replace the green circle with the exact watermelon from image 2, matching the circle's centre and 260 pixel diameter precisely. The watermelon rests naturally on the wood, with a contact shadow and directional daylight from the left. Realistic wood grain, warm neutral kitchen, fixed camera, no other fruit, no text. Preserve the layout and object placement rather than recentering the fruit.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/layout-3.png",
+          "sha256": "bbbcfbad904731694357415e2e424b0c2607b5911f41d251e59cfb55da66369c"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "d0b73a4e49cf3c914f5b946697399bf3a3938154cd50c616c1d0282adf22f1cc",
+    "request_id": "01a0e7cc-4525-7003-8949-783c11ff674f",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.072,
+    "outputs": {
+      "output-0.png": "5888094c68326019ee8a78840e4d3d8ec25a9691046fd47b1fdfad5fccc365c2"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-0",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-0.png",
+          "sha256": "081bd66aaec5c79255edbe6147e2ab923e21c3849ba66df2e187ed7c476ff22d"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "e05bd952a74826c3629597b229a85e01ecc96c7000a9db48754f116601c37172",
+    "request_id": "01a0e7c6-243d-7703-82fb-555a9afc053f",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-1",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-1.png",
+          "sha256": "ded69bf474cdd4f48d5bf224a028a2181db22e4b3d4b9c78fa9562969f05cc34"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "e173226fb2000bdcc3dbecfa011f0bc3bb56e9bb05cca740375bc3cfd38fa794",
+    "request_id": "01a0e7d3-5089-7c72-a97d-263df82c80f1",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "967722127af1eae7ce4ffe5fdb69d61320b24146a0abb0e2268d4a17c3fd6d71"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-2",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-2.png",
+          "sha256": "416c137c7044e4bfb69bd61529a72238f117e20cdead0f1198c25e226da723ff"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "006cbf79bafd93930f9f2c57e60962b7e5858166fbfaa1d1fc71a6a323683c4a",
+    "request_id": "01a0e7d3-57da-7700-a6ec-d6bc3d27a7fe",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "8c5f40563b4a8b7249e9b408b74ad5085e7d3edbbe5643617f66a7234d5354e9"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-3.png",
+          "sha256": "015c9408bc86474afa7ecf220433b370aad637cb7a49408fd29f21045ea10b22"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "876affd36148b20e4ef69aa2e9bc74c89e372ecfd856fee3f6e4f0690d123a77",
+    "request_id": "01a0e7c6-d82b-70c1-a0df-8d10ad27aec9",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "dbfc02677dccb2bff043794b74e744526cd374a0117469746d4de4d5799cdebb"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-4",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-4.png",
+          "sha256": "00be064b24f97bdf5c2110d8b18c762b103f806a162fcc07942027797cb1a026"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "6ea296bbfa54eb7ecbe114d4cc706f3bd821c7fd8e7517dd05922cec9dec230e",
+    "request_id": "01a0e7d3-5cae-7c60-bd4b-a0889ce55a3c",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "ba4a6528c8f773ef2491029d0eb48c1a352a79bdc09f1f00e49abe88ac57ffbc"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-5",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-5.png",
+          "sha256": "68fc288b86191c25ebe2d82b8e0b25af0b36190b6e2756fc3ec0f8db31a1a3b0"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "98346783597205c9da944fb27f38a0a4201f57fcce87381af822a715db503e92",
+    "request_id": "01a0e7d3-60f2-7ae1-bed7-b170aea883a8",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "107de7bad4baeb16e26ebcf477ca20e13dc29a5bd86b1a7da217ac09213d4d27"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-guide-6",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-6.png",
+          "sha256": "8b9ff8591bd08a6d17ff1a72d7c1e3446e0790106103136443175851c92f7d09"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "26250c2b78e984828dbadfab45910f7c377b2dbb112abedc5ca27fba3b24b2ec",
+    "request_id": "01a0e7c7-8f47-7ab1-b268-5edc48b06044",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "be908f34361b0451aca794e957ead968a97b6ad844f42949d1c75f789ea607bd"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-layout-3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Turn the schematic layout in image 1 into a photorealistic country kitchen scene. Brown region is a wooden worktable, light upper region is an off-white wall and the blue rectangle is a sunlit window. Replace the green circle with the exact watermelon from image 2, matching the circle's centre and 260 pixel diameter precisely. The watermelon rests naturally on the wood, with a contact shadow and directional daylight from the left. Realistic wood grain, warm neutral kitchen, fixed camera, no other fruit, no text. Preserve the layout and object placement rather than recentering the fruit.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/layout-3.png",
+          "sha256": "bbbcfbad904731694357415e2e424b0c2607b5911f41d251e59cfb55da66369c"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "7a97e8ef32e109149ab6011c364605be9092fae4572acaddfc7638028f9a0363",
+    "request_id": "01a0e7cb-8b20-7e21-9336-6dd0a03b4419",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "ca09f1536cb4ee100b66f72d4005a9c735a097338f3d0d2bc9bd7450a0bbd47a"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-mask-alpha-3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-3.png",
+          "sha256": "015c9408bc86474afa7ecf220433b370aad637cb7a49408fd29f21045ea10b22"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "mask_url": {
+        "local_path": "watermelon-scene/references/assets/alpha-mask-3.png",
+        "sha256": "51aa55e0d621b2ae5afe4c6c5cacac71e6de9a2e6fc71161c532bb4c3a63cd01"
+      },
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "82fbdaa7af85d5abd0a081fcfbcd3293ce220a9647fa4e8db8eb3ae6663ef968",
+    "request_id": "01a0e7ca-2053-7623-9dd3-8c62fb6cd9fc",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "b2e03580a7b711690c3500e36560bdd557266dbe8010f144b1cc476558fbd6af"
+    }
+  },
+  {
+    "run": "runs/stills/sunburst-mask-bw-3",
+    "endpoint_id": "openai/gpt-image-2.5/sunburst/edit",
+    "parameters": {
+      "quality": "high",
+      "background": "opaque",
+      "prompt": "Image 1 is a photograph of a kitchen table with a flat green circle marking exact object placement. Replace ONLY that green circle with the same whole watermelon shown in image 2. Preserve its distinctive rind stripe pattern and visible orientation, but relight it to match the daylight from the window on the left. The fruit's silhouette must match the circle's exact position and 260-pixel diameter; do not recenter, resize, rotate or add fruit. It rests on the tabletop at the bottom of the circle. Add a physically plausible soft contact shadow on the wood beneath it and toward the right. Preserve the original room, camera, wood grain, knots, furniture and all background details. The background must remain aligned pixel for pixel except where the watermelon and its local shadow occupy it. Photorealistic integration, natural reflected light from wood, no floating, no halo, no residual green marker, no text.",
+      "image_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-3.png",
+          "sha256": "015c9408bc86474afa7ecf220433b370aad637cb7a49408fd29f21045ea10b22"
+        },
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "mask_url": {
+        "local_path": "watermelon-scene/references/assets/mask-3.png",
+        "sha256": "c27efd8d2ec8868ae682c2bcc50601302af4ea1b60b89a07077432c986eb3227"
+      },
+      "image_size": {
+        "width": 1024,
+        "height": 1024
+      },
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "input_receipt_sha256": "2907fd9bb566cdc23c530956614ee58265a22d0cefb5a3faec901647eb0500ba",
+    "request_id": "01a0e7ca-d793-7261-87cb-0d1922ca69a1",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.25,
+    "outputs": {
+      "output-0.png": "da749a63883977d8c580f301833434ea0dc4408754b985530071d1cb0a5928ba"
+    }
+  },
+  {
+    "run": "runs/video/h3-guide-reference",
+    "endpoint_id": "minimax/h3-max/reference-to-video",
+    "parameters": {
+      "prompt": "Image 1 is the exact desired first-frame appearance: a whole watermelon sitting on a wooden kitchen table. Video 1 is a precise animation guide for this same shot: its green circle marks the watermelon silhouette at every moment. Replace that green circle with the watermelon from Image 1 throughout the entire video. Match Video 1's exact left-to-right trajectory, speed, screen position and diameter. It slides smoothly without rolling or rotating; keep the visible rind stripe pattern unchanged. Keep the kitchen and wood grain stationary, lighting steady and camera completely locked. Generate a realistic contact shadow that travels with the fruit and matches the window light. No floating, added objects, people, hands, cuts, zooms or camera movement. Do not show any flat green marker. Quiet room ambience only.",
+      "reference_image_urls": [
+        {
+          "local_path": "watermelon-scene/runs/stills/sunburst-guide-0/output-0.png",
+          "sha256": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+        }
+      ],
+      "reference_video_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide.mp4",
+          "sha256": "af9f772e825cb2f2ee95a700762d970b215d502e9685b209d2530c8bbca458ef"
+        }
+      ],
+      "duration": 5,
+      "resolution": "768P",
+      "aspect_ratio": "1:1",
+      "seed": 43,
+      "prompt_expansion_mode": "disabled"
+    },
+    "input_receipt_sha256": "6eeaf27beed7239db824444bffe0e53699df60950a09040b589dff204f6d5e2a",
+    "request_id": "01a0e7cc-f8ce-7d72-a046-ce2342852adb",
+    "status": "error",
+    "error": "Result fetch failed (422)",
+    "field_errors": [
+      {
+        "path": [
+          "body",
+          "reference_video_urls",
+          0
+        ],
+        "message": "Video frame rate is not within the allowed range. Minimum is 23.898999999999997 fps, maximum is 60.1925 fps. Found 16.0 fps.",
+        "type": "video_frame_rate_error"
+      }
+    ],
+    "allowance_usd": 1.25,
+    "outputs": {}
+  },
+  {
+    "run": "runs/video/h3-guide-reference-24fps",
+    "endpoint_id": "minimax/h3-max/reference-to-video",
+    "parameters": {
+      "prompt": "Image 1 is the exact desired first-frame appearance: a whole watermelon sitting on a wooden kitchen table. Video 1 is a precise animation guide for this same shot: its green circle marks the watermelon silhouette at every moment. Replace that green circle with the watermelon from Image 1 throughout the entire video. Match Video 1's exact left-to-right trajectory, speed, screen position and diameter. It slides smoothly without rolling or rotating; keep the visible rind stripe pattern unchanged. Keep the kitchen and wood grain stationary, lighting steady and camera completely locked. Generate a realistic contact shadow that travels with the fruit and matches the window light. No floating, added objects, people, hands, cuts, zooms or camera movement. Do not show any flat green marker. Quiet room ambience only.",
+      "reference_image_urls": [
+        {
+          "local_path": "watermelon-scene/runs/stills/sunburst-guide-0/output-0.png",
+          "sha256": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+        }
+      ],
+      "reference_video_urls": [
+        {
+          "local_path": "watermelon-scene/references/assets/guide-24fps.mp4",
+          "sha256": "24f340ce09af20ade589a655ccfbf804ed914080dc7e2145fc1309636d08f2d4"
+        }
+      ],
+      "duration": 5,
+      "resolution": "768P",
+      "aspect_ratio": "1:1",
+      "seed": 43,
+      "prompt_expansion_mode": "disabled"
+    },
+    "input_receipt_sha256": "6c6fe75c78ebf5430161c7c04a8f29ad2ac4c1babeb83bd97b2ac26d936e00b7",
+    "request_id": "01a0e7d4-317a-7d70-a39e-40e38108632f",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 1.25,
+    "outputs": {
+      "output.mp4": "48d771d74d5ed9608b83eb8850f3f4fcd4e60d7bce226eaad7462a84f035d00b"
+    }
+  },
+  {
+    "run": "runs/video/ltx-guide-three-anchors",
+    "endpoint_id": "fal-ai/ltx-2.3-quality/reference-video-to-video",
+    "parameters": {
+      "prompt": "Locked-off photorealistic kitchen shot. One whole watermelon glides smoothly from left to right on the wooden tabletop, following exactly the moving circle in the reference video. The first, middle and last keyframe images define its exact position and unchanged appearance. Its centre moves horizontally at constant speed; its diameter stays constant. It slides without rolling or rotating; preserve the rind stripe pattern and orientation. Natural daylight from the left window, soft grounded contact shadow. Preserve the static background and wood grain. No extra fruit, no green graphic, no camera movement.",
+      "video_url": {
+        "local_path": "watermelon-scene/references/assets/guide.mp4",
+        "sha256": "af9f772e825cb2f2ee95a700762d970b215d502e9685b209d2530c8bbca458ef"
+      },
+      "image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-0/output-0.png",
+        "sha256": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+      },
+      "mid_image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-3/output-0.png",
+        "sha256": "dbfc02677dccb2bff043794b74e744526cd374a0117469746d4de4d5799cdebb"
+      },
+      "end_image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-6/output-0.png",
+        "sha256": "be908f34361b0451aca794e957ead968a97b6ad844f42949d1c75f789ea607bd"
+      },
+      "resolution": {
+        "width": 768,
+        "height": 768
+      },
+      "num_frames": 81,
+      "frames_per_second": 16,
+      "num_inference_steps": 30,
+      "video_strength": 0.8,
+      "strength": 1,
+      "preserve_original_video": false,
+      "skip_control_preprocess": false,
+      "generate_audio": false,
+      "enable_prompt_expansion": false,
+      "seed": 43,
+      "negative_prompt": "rotating, rolling, camera motion, flicker, green circle, multiple fruits, floating, changing rind, resizing",
+      "video_quality": "high"
+    },
+    "input_receipt_sha256": "4d568ef58e5f05165a487e46b65bcfbbb52fc88e29ea510dcc8ccd395dfea3ca",
+    "request_id": "01a0e7d3-0d9a-70c3-b70b-29a9ae4a3eaa",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.2,
+    "outputs": {
+      "output.mp4": "97f7ef5c50e02eecca1bf7b358722f12ba55dea1409db686b96fe28878a66c10"
+    }
+  },
+  {
+    "run": "runs/video/ltx-zero-guide-three-anchors",
+    "endpoint_id": "fal-ai/ltx-2.3-quality/reference-video-to-video",
+    "parameters": {
+      "prompt": "Locked-off photorealistic kitchen shot. One whole watermelon glides smoothly from left to right on the wooden tabletop, following exactly the moving circle in the reference video. The first, middle and last keyframe images define its exact position and unchanged appearance. Its centre moves horizontally at constant speed; its diameter stays constant. It slides without rolling or rotating; preserve the rind stripe pattern and orientation. Natural daylight from the left window, soft grounded contact shadow. Preserve the static background and wood grain. No extra fruit, no green graphic, no camera movement.",
+      "video_url": {
+        "local_path": "watermelon-scene/references/assets/guide.mp4",
+        "sha256": "af9f772e825cb2f2ee95a700762d970b215d502e9685b209d2530c8bbca458ef"
+      },
+      "image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-0/output-0.png",
+        "sha256": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+      },
+      "mid_image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-3/output-0.png",
+        "sha256": "dbfc02677dccb2bff043794b74e744526cd374a0117469746d4de4d5799cdebb"
+      },
+      "end_image_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-6/output-0.png",
+        "sha256": "be908f34361b0451aca794e957ead968a97b6ad844f42949d1c75f789ea607bd"
+      },
+      "resolution": {
+        "width": 768,
+        "height": 768
+      },
+      "num_frames": 81,
+      "frames_per_second": 16,
+      "num_inference_steps": 30,
+      "video_strength": 0,
+      "strength": 1,
+      "preserve_original_video": false,
+      "skip_control_preprocess": false,
+      "generate_audio": false,
+      "enable_prompt_expansion": false,
+      "seed": 43,
+      "negative_prompt": "rotating, rolling, camera motion, flicker, green circle, multiple fruits, floating, changing rind, resizing",
+      "video_quality": "high"
+    },
+    "input_receipt_sha256": "342a5296c5ec74b2c8859cd0ee28ab86c7def46828385a60b55d700b216bff8b",
+    "request_id": "01a0e7d6-6bff-7c02-af4f-c08651e8fea9",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.2,
+    "outputs": {
+      "output.mp4": "0310c482a14af13a2394002864133e78eae0b9549c32f65a00bac116817c6d02"
+    }
+  },
+  {
+    "run": "runs/video/vace-mask-anchor",
+    "endpoint_id": "fal-ai/wan-22-vace-fun-a14b/inpainting",
+    "parameters": {
+      "prompt": "Locked-off photograph-like kitchen scene. Exactly one whole round watermelon with the rind appearance of the reference sits on the wooden table and glides smoothly from left to right, following the moving white masked region at constant speed. It keeps the same size and visible side without rolling, rotating or wobbling. The fruit stays grounded on the wood with a soft contact shadow cast to the right by the window light. Preserve the entire kitchen, table wood grain, camera, exposure and background. Only the watermelon and its local shadow move. No people, hands, cuts, zoom, additional fruit, text or camera movement.",
+      "video_url": {
+        "local_path": "watermelon-scene/references/assets/background.mp4",
+        "sha256": "ed9475b8ab743b2755903bb673a9efb6054d89f832e103fbea801eddf7bef98c"
+      },
+      "mask_video_url": {
+        "local_path": "watermelon-scene/references/assets/mask.mp4",
+        "sha256": "e3d0d248749b779b9ad90d70bd9be269b1eb225a5239ce7a9a9296ed9e83b18d"
+      },
+      "ref_image_urls": [
+        {
+          "local_path": "spatial-control-lab/runs/round1/sunburst-shape-left/output-0.png",
+          "sha256": "46d175e1646c57fc76a9cbe7003b4515a6244ef7dd0e715574c2fe4d2eb6f8ad"
+        }
+      ],
+      "first_frame_url": {
+        "local_path": "watermelon-scene/runs/stills/sunburst-guide-0/output-0.png",
+        "sha256": "c969dedd5595ee0659c369bd290de2ce31f023971c7e7e6732034398548a9675"
+      },
+      "num_frames": 81,
+      "frames_per_second": 16,
+      "resolution": "720p",
+      "aspect_ratio": "1:1",
+      "seed": 43,
+      "num_inference_steps": 40,
+      "guidance_scale": 5,
+      "acceleration": "none",
+      "preprocess": false,
+      "enable_prompt_expansion": false,
+      "num_interpolated_frames": 0,
+      "enable_auto_downsample": false,
+      "return_frames_zip": true
+    },
+    "input_receipt_sha256": "b467248296366be93307677413a735bbc129e37b550dfc0e5663aecab832afd7",
+    "request_id": "01a0e7cc-4022-7c72-9c33-081d3b451fcd",
+    "status": "completed",
+    "error": null,
+    "field_errors": null,
+    "allowance_usd": 0.51,
+    "outputs": {
+      "output.mp4": "ff67d655154438aacbeef32ba9a49ce82b5e5cda886fb0e5f90d842e81dd1fe6"
+    }
+  }
+]

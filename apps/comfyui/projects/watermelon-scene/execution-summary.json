@@ -1,0 +1,33 @@
+{
+  "authorization": {"budget_usd": 10, "started_at_utc": "2026-09-28 11:23:36", "deadline_utc": "2026-09-28 12:23:36"},
+  "generation_and_review_finished_at_utc": "2026-09-28 11:57:21",
+  "provider": "fal.ai",
+  "submitted_requests": 20,
+  "completed_image_outputs": 15,
+  "completed_video_outputs": 4,
+  "validation_rejections": 1,
+  "pending_jobs": [],
+  "new_runpod_resources": [],
+  "new_development_servers": [],
+  "cost": {
+    "invoice_verified": false,
+    "working_estimate_usd": 3.35,
+    "sum_of_conservative_request_allowances_usd": 6.448,
+    "sunburst_outputs": 11,
+    "sunburst_working_allowance_per_output_usd": 0.10,
+    "sunburst_conservative_allowance_per_output_usd": 0.25,
+    "seedream_outputs": 4,
+    "seedream_per_output_with_two_inputs_usd": 0.072,
+    "ltx_actual_output_megapixels_each": 40.144896,
+    "ltx_rounded_megapixels_each": 41,
+    "ltx_published_price_per_megapixel_usd": 0.0024075,
+    "ltx_output_count": 2,
+    "vace_published_price_for_81_frames_16fps_usd": 0.50625,
+    "h3_allowance_each_request_usd": 1.25,
+    "h3_success_count": 1,
+    "h3_validation_rejection_count": 1,
+    "note": "Working estimate uses successful H3 allowance and does not count the rejected request as charged. Conservative request allowances include the rejected H3 request in full. Sunburst token usage, H3 reference-token billing and validation-failure billing are not exposed by this connector. Prior experiment spending is excluded."
+  },
+  "preservation": "All returned media saved locally with SHA256 and decoded format checks. Exact API input/result receipts remain in ignored run folders; run-index.json maps input assets to local paths and hashes. Media is not included in Git or independently backed up.",
+  "review": "All stills and all native videos screened through overview frames. Selected dense temporal windows, aligned rind crops, contour overlays, comparison-render preview, encoded metadata and exact compositor background pixels were checked. Human playback/taste review remains pending."
+}

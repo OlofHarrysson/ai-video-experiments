@@ -1,0 +1,278 @@
+[
+  {
+    "label": "seedream-guide-0",
+    "target": {
+      "index": 0,
+      "frame": 0,
+      "cx": 250,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      241.95361739449692,
+      649.0693903359373
+    ],
+    "centre_error_px": 8.100018974112928,
+    "diameter_error_percent": -3.9053142307220234,
+    "silhouette_iou": 0.8605634316119392,
+    "background_mae_255": 6.348874115003038,
+    "background_pixels_changed_over_10_percent": 20.477128040150617
+  },
+  {
+    "label": "seedream-guide-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      510.07301433552885,
+      646.6929872142581
+    ],
+    "centre_error_px": 3.3078187160503743,
+    "diameter_error_percent": -1.3968676613843378,
+    "silhouette_iou": 0.9218569304477119,
+    "background_mae_255": 7.295304097751363,
+    "background_pixels_changed_over_10_percent": 23.63141649998172
+  },
+  {
+    "label": "seedream-guide-6",
+    "target": {
+      "index": 6,
+      "frame": 80,
+      "cx": 770,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      765.4093857832988,
+      644.8944296559204
+    ],
+    "centre_error_px": 6.865900336075697,
+    "diameter_error_percent": -2.265042992847699,
+    "silhouette_iou": 0.9220384807688746,
+    "background_mae_255": 6.418394358302129,
+    "background_pixels_changed_over_10_percent": 25.036479196152055
+  },
+  {
+    "label": "seedream-layout-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      511.62052974062874,
+      644.4428924938136
+    ],
+    "centre_error_px": 5.788571540162185,
+    "diameter_error_percent": 1.3675596741576257,
+    "silhouette_iou": 0.924680805407532
+  },
+  {
+    "label": "sunburst-guide-0",
+    "target": {
+      "index": 0,
+      "frame": 0,
+      "cx": 250,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      248.83794319985887,
+      655.1756923619686
+    ],
+    "centre_error_px": 5.304542151071481,
+    "diameter_error_percent": 3.3320248787273243,
+    "silhouette_iou": 0.9123837067493641,
+    "background_mae_255": 3.791882138511273,
+    "background_pixels_changed_over_10_percent": 8.888180949346927
+  },
+  {
+    "label": "sunburst-guide-1",
+    "target": {
+      "index": 1,
+      "frame": 13,
+      "cx": 334.5,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      331.20527976280977,
+      645.7559487608332
+    ],
+    "centre_error_px": 5.37281605510777,
+    "diameter_error_percent": -0.4501463793873617,
+    "silhouette_iou": 0.939133784601838,
+    "background_mae_255": 4.452984828829055,
+    "background_pixels_changed_over_10_percent": 11.028780450100587
+  },
+  {
+    "label": "sunburst-guide-2",
+    "target": {
+      "index": 2,
+      "frame": 27,
+      "cx": 425.5,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      421.0516223604453,
+      645.0377758408938
+    ],
+    "centre_error_px": 6.664212798921361,
+    "diameter_error_percent": -2.489813385029027,
+    "silhouette_iou": 0.9276036626219013,
+    "background_mae_255": 3.69502966062452,
+    "background_pixels_changed_over_10_percent": 7.369232472586814
+  },
+  {
+    "label": "sunburst-guide-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      506.28898389341816,
+      645.8449393517598
+    ],
+    "centre_error_px": 5.571011535965834,
+    "diameter_error_percent": -2.675422030037744,
+    "silhouette_iou": 0.9381070236622042,
+    "background_mae_255": 4.042669953363032,
+    "background_pixels_changed_over_10_percent": 9.860715796510322
+  },
+  {
+    "label": "sunburst-guide-4",
+    "target": {
+      "index": 4,
+      "frame": 53,
+      "cx": 594.5,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      590.6945006184595,
+      645.4353366186951
+    ],
+    "centre_error_px": 5.942893009934671,
+    "diameter_error_percent": -2.0552098730250656,
+    "silhouette_iou": 0.9363575443952198,
+    "background_mae_255": 3.5094204427472304,
+    "background_pixels_changed_over_10_percent": 8.190949105167613
+  },
+  {
+    "label": "sunburst-guide-5",
+    "target": {
+      "index": 5,
+      "frame": 67,
+      "cx": 685.5,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      678.35415303509,
+      650.4007403114542
+    ],
+    "centre_error_px": 7.1570749362527835,
+    "diameter_error_percent": 0.3741937468474621,
+    "silhouette_iou": 0.9344259319757523,
+    "background_mae_255": 3.744376876202493,
+    "background_pixels_changed_over_10_percent": 8.432962253469341
+  },
+  {
+    "label": "sunburst-guide-6",
+    "target": {
+      "index": 6,
+      "frame": 80,
+      "cx": 770,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      764.1805879270782,
+      644.4421016495926
+    ],
+    "centre_error_px": 8.04709829366641,
+    "diameter_error_percent": 2.1007081170184794,
+    "silhouette_iou": 0.9159907402498719,
+    "background_mae_255": 3.4058777550888957,
+    "background_pixels_changed_over_10_percent": 6.711963191786044
+  },
+  {
+    "label": "sunburst-layout-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      507.4233200239246,
+      628.0098931475404
+    ],
+    "centre_error_px": 22.14055281788821,
+    "diameter_error_percent": 7.941930118199614,
+    "silhouette_iou": 0.7837821059982929
+  },
+  {
+    "label": "sunburst-mask-alpha-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      247.24695801199658,
+      541.997243644673
+    ],
+    "centre_error_px": 284.084065822597,
+    "diameter_error_percent": 14.83988913458254,
+    "silhouette_iou": 0.002230852527621048,
+    "background_mae_255": 49.03675250723752,
+    "background_pixels_changed_over_10_percent": 94.62875824502947
+  },
+  {
+    "label": "sunburst-mask-bw-3",
+    "target": {
+      "index": 3,
+      "frame": 40,
+      "cx": 510,
+      "cy": 650,
+      "radius": 130
+    },
+    "method": "Colour-based fruit estimate below y=430, largest component, hole-fill; inspect contours. Background difference excludes intended fruit and shadow region.",
+    "centre": [
+      509.07559728265016,
+      650.4449584001221
+    ],
+    "centre_error_px": 1.0259183016610018,
+    "diameter_error_percent": 11.075668793443572,
+    "silhouette_iou": 0.8102740248835967,
+    "background_mae_255": 4.216192898437948,
+    "background_pixels_changed_over_10_percent": 10.051232772262232
+  }
+]

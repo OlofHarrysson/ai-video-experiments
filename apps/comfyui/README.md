@@ -4,6 +4,7 @@ Still-image experiments using ComfyUI on RunPod, with explicit control over comp
 
 ## Projects
 
+- [Watermelon in a scene](projects/watermelon-scene/report.md) — compares photo insertion, layout-to-scene generation, native guided video and deterministic background compositing. Scene placement works; native video still changes orientation.
 - [Spatial control lab](projects/spatial-control-lab/report.md) — 53 outputs compare recent image editors, structural controls and masks; a Remotion circle plus fixed reference gives the strongest tested watermelon translation. Outputs are local and the owned GPU is deleted.
 
 - [Watermelon placement from authored depth](projects/watermelon-depth/README.md) — eight Krea Turbo images test a community depth adapter; generation works, but the tested recipe fails to follow the guide's position and size.

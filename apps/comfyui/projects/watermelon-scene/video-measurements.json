@@ -1,0 +1,144 @@
+[
+  {
+    "name": "h3-guide-reference-24fps",
+    "frames": 124,
+    "detected_frames": 124,
+    "fps": 24.0,
+    "source_size": [
+      768,
+      768
+    ],
+    "mean_centre_error_px_1024": 53.14492521625896,
+    "max_centre_error_px_1024": 70.30792065502833,
+    "first": {
+      "frame": 0,
+      "time": 0.0,
+      "target_cx_1024": 250.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        238.91970361409346,
+        648.4616664146379
+      ],
+      "centre_error_px_1024": 11.186574016176111,
+      "diameter_error_percent": -0.17806913874985897
+    },
+    "last": {
+      "frame": 123,
+      "time": 5.125,
+      "target_cx_1024": 770.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        701.0464369412377,
+        636.2664699244857
+      ],
+      "centre_error_px_1024": 70.30792065502833,
+      "diameter_error_percent": -6.834140408472111
+    },
+    "method": "Approximate colour-based largest fruit contour, excluding saturated synthetic green. Missing or tiny fruit detections invalidate whole-clip error statistics. Values at 1024 scale, expected uniform horizontal motion over returned clip. Visual checks required; does not measure identity or physical correctness."
+  },
+  {
+    "name": "ltx-guide-three-anchors",
+    "frames": 81,
+    "detected_frames": 81,
+    "fps": 16.0,
+    "source_size": [
+      704,
+      704
+    ],
+    "mean_centre_error_px_1024": 14.239791827164758,
+    "max_centre_error_px_1024": 27.724250981462344,
+    "first": {
+      "frame": 0,
+      "time": 0.0,
+      "target_cx_1024": 250.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        248.18641887062188,
+        653.6942101501072
+      ],
+      "centre_error_px_1024": 4.115369381476171,
+      "diameter_error_percent": 2.664563324596747
+    },
+    "last": {
+      "frame": 80,
+      "time": 5.0,
+      "target_cx_1024": 770.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        782.607116432367,
+        641.301943902603
+      ],
+      "centre_error_px_1024": 15.316512808492723,
+      "diameter_error_percent": 5.833553340931763
+    },
+    "method": "Approximate colour-based largest fruit contour, excluding saturated synthetic green. Missing or tiny fruit detections invalidate whole-clip error statistics. Values at 1024 scale, expected uniform horizontal motion over returned clip. Visual checks required; does not measure identity or physical correctness."
+  },
+  {
+    "name": "ltx-zero-guide-three-anchors",
+    "frames": 81,
+    "detected_frames": 81,
+    "fps": 16.0,
+    "source_size": [
+      704,
+      704
+    ],
+    "mean_centre_error_px_1024": 32.88464712589439,
+    "max_centre_error_px_1024": 66.02053670245401,
+    "first": {
+      "frame": 0,
+      "time": 0.0,
+      "target_cx_1024": 250.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        247.97539037202273,
+        652.6427286464705
+      ],
+      "centre_error_px_1024": 3.3291228341071837,
+      "diameter_error_percent": 2.322757575530021
+    },
+    "last": {
+      "frame": 80,
+      "time": 5.0,
+      "target_cx_1024": 770.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        757.3434650455927,
+        640.2711246200608
+      ],
+      "centre_error_px_1024": 15.963674176408164,
+      "diameter_error_percent": 5.612643417292684
+    },
+    "method": "Approximate colour-based largest fruit contour, excluding saturated synthetic green. Missing or tiny fruit detections invalidate whole-clip error statistics. Values at 1024 scale, expected uniform horizontal motion over returned clip. Visual checks required; does not measure identity or physical correctness."
+  },
+  {
+    "name": "vace-mask-anchor",
+    "frames": 81,
+    "detected_frames": 1,
+    "fps": 16.0,
+    "source_size": [
+      960,
+      960
+    ],
+    "mean_centre_error_px_1024": null,
+    "max_centre_error_px_1024": null,
+    "first": {
+      "frame": 0,
+      "time": 0.0,
+      "target_cx_1024": 250.0,
+      "fruit_detected": true,
+      "centre_1024": [
+        246.61781737193763,
+        650.1747587230883
+      ],
+      "centre_error_px_1024": 3.3866945449600725,
+      "diameter_error_percent": 0.7385057903156911
+    },
+    "last": {
+      "frame": 80,
+      "time": 5.0,
+      "target_cx_1024": 770.0,
+      "fruit_detected": false
+    },
+    "method": "Approximate colour-based largest fruit contour, excluding saturated synthetic green. Missing or tiny fruit detections invalidate whole-clip error statistics. Values at 1024 scale, expected uniform horizontal motion over returned clip. Visual checks required; does not measure identity or physical correctness."
+  }
+]
