@@ -4,7 +4,7 @@ import { PALETTE_RGB } from "../src/pixel/palette";
 import { encodePng } from "./png";
 
 const out = process.argv[2] ?? "renders/palette.png";
-const W = 2160;
+const W = Number(process.argv[3] ?? 1080);
 const H = 90;
 const rgba = new Uint8ClampedArray(W * H * 4);
 const sw = W / PALETTE_RGB.length;

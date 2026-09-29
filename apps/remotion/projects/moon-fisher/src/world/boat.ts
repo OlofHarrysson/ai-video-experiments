@@ -1,3 +1,4 @@
+import { random } from "remotion";
 import type { Part } from "../pixel/lit";
 import { Pix } from "../pixel/pix";
 import { covers, poly, type Shape, type Vec2 } from "../pixel/shapes";
@@ -89,14 +90,42 @@ export const boatHull = (b: BoatProps): Part[] => {
   ];
 };
 
-// Clinker planks: each plank's lower edge catches a little light.
+const PLANKS = [9, 17, 24];
+
+// Clinker planks: each plank's lower edge catches a little light, copper
+// rivets dot the seams, and short dark streaks of grain run along the wood.
 export const drawPlankSeams = (pix: Pix, b: BoatProps): void => {
   const hull = hullShape(b);
-  for (const offset of [9, 17, 24]) {
+  const onHull = (x: number, py: number) => covers(hull, x, pix.wy(py));
+  for (const offset of PLANKS) {
     for (let px = pix.px(b.stern); px <= pix.px(b.bow); px++) {
       const x = pix.wx(px);
       const py = pix.py(gunwaleY(b, x) + offset);
-      if (covers(hull, x, pix.wy(py))) pix.brighten(px, py, 1);
+      if (onHull(x, py)) pix.brighten(px, py, 1);
+    }
+    for (let x = b.stern + 6; x < b.bow - 6; x += 9) {
+      const py = pix.py(gunwaleY(b, x) + offset) - 1;
+      if (onHull(x, py)) pix.brighten(pix.px(x), py, 2);
+    }
+  }
+  for (let i = 0; i < 70; i++) {
+    const x = b.stern + random(`grain-x-${i}`) * (b.bow - b.stern);
+    const depth = 3 + random(`grain-y-${i}`) * 26;
+    const len = 3 + random(`grain-l-${i}`) * 7;
+    for (let dx = 0; dx < len; dx += 1 / pix.s) {
+      const py = pix.py(gunwaleY(b, x + dx) + depth);
+      if (onHull(x + dx, py)) pix.darken(pix.px(x + dx), py, 1);
+    }
+  }
+};
+
+// The boat's ribs, seen on the inside of the far side.
+export const drawRibs = (pix: Pix, b: BoatProps): void => {
+  for (let x = b.stern + 10; x < b.bow - 8; x += 11) {
+    const top = pix.py(farGunwaleY(b, x)) + 1;
+    const bottom = pix.py(gunwaleY(b, x));
+    for (let py = top; py < bottom; py++) {
+      if (pix.isSolid(pix.px(x), py)) pix.darken(pix.px(x), py, 1);
     }
   }
 };

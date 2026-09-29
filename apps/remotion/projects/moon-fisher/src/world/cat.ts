@@ -1,13 +1,14 @@
-import type { Part } from "../pixel/lit";
+import { flipStrokes, type Stroke } from "../pixel/detail";
+import type { Mark, Part } from "../pixel/lit";
 import { flipParts } from "../pixel/lit";
 import { C } from "../pixel/palette";
-import { capsule, ellipse, poly, type Vec2 } from "../pixel/shapes";
+import { blend, capsule, ellipse, poly, type Vec2 } from "../pixel/shapes";
 import type { Feature } from "./fisherman";
 
 export type CatPose = "peer";
 
 export type CatProps = {
-  // Where the cat sits, in design units.
+  // Where the cat sits, in world units.
   x: number;
   y: number;
   pose: CatPose;
@@ -17,21 +18,33 @@ export type CatProps = {
 export type CatFigure = {
   body: Part[];
   features: Feature[];
+  strokes: Stroke[];
   // Fine lines drawn after lighting, in the moon's color.
   whiskers: (readonly [Vec2, Vec2])[];
 };
 
+type Oval = [x: number, y: number, rx: number, ry: number, rot?: number];
+type Limb = [Vec2, Vec2, number];
+
 type Pose = {
-  haunch: Vec2;
-  chest: [Vec2, number];
-  head: Vec2;
-  ears: [Vec2[], Vec2[]];
-  muzzle: Vec2;
-  legs: [Vec2, Vec2][];
+  haunch: Oval;
+  chest: Oval;
+  neck: Oval;
+  legs: Limb[];
   tail: Vec2[];
+  head: Oval;
+  muzzle: Oval;
+  cheek: Oval;
+  ears: [Vec2[], Vec2[]];
+  innerEar: Vec2[];
+  chestPatch: Oval;
+  muzzlePatch: Oval;
+  bodyStripes: Limb[];
+  headStripes: Limb[];
   eye: Vec2;
   nose: Vec2;
   whiskers: [Vec2, Vec2][];
+  legGap: Vec2[];
 };
 
 // Positions relative to where the cat sits, facing left.
@@ -39,9 +52,23 @@ const POSES: Record<CatPose, Pose> = {
   // Sitting up, leaning toward something interesting, tail curled in a
   // question mark.
   peer: {
-    haunch: [5, -7],
-    chest: [[-3, -13], 0.25],
-    head: [-9, -24],
+    haunch: [5, -7, 8.5, 7.5],
+    chest: [-3, -13, 6, 8.5, 0.25],
+    neck: [-6, -19, 4.2, 4],
+    legs: [
+      [[-3.5, -9], [-3.5, 0], 1.9],
+      [[-6, -10], [-6.5, 0], 1.8],
+    ],
+    tail: [
+      [11, -4],
+      [15, -9],
+      [16, -16],
+      [14, -21],
+      [11, -22],
+    ],
+    head: [-9, -24, 6.5, 6],
+    muzzle: [-14.2, -22.5, 2.4, 1.9],
+    cheek: [-10.5, -20.8, 4, 2.6],
     ears: [
       [
         [-6, -28.5],
@@ -54,23 +81,22 @@ const POSES: Record<CatPose, Pose> = {
         [-8, -29.5],
       ],
     ],
-    muzzle: [-14.2, -22.5],
-    legs: [
-      [
-        [-3.5, -9],
-        [-3.5, 0],
-      ],
-      [
-        [-6, -10],
-        [-6.5, 0],
-      ],
+    innerEar: [
+      [-12.6, -28.8],
+      [-11.8, -32.8],
+      [-9.6, -29.6],
     ],
-    tail: [
-      [11, -4],
-      [15, -9],
-      [16, -16],
-      [14, -21],
-      [11, -22],
+    chestPatch: [-6.8, -11.5, 2.6, 6, 0.2],
+    muzzlePatch: [-14.3, -21.6, 2.7, 2.1],
+    bodyStripes: [
+      [[1.5, -13.5], [3.5, -6], 0.75],
+      [[6, -14.5], [8.5, -7], 0.75],
+      [[10.5, -11.5], [12.5, -5], 0.65],
+    ],
+    headStripes: [
+      [[-9.5, -29.6], [-9.6, -27], 0.55],
+      [[-7.2, -29.4], [-7.5, -27.2], 0.55],
+      [[-4.8, -28.4], [-5.4, -26.4], 0.5],
     ],
     eye: [-12.6, -25.4],
     nose: [-16.2, -23.4],
@@ -84,51 +110,111 @@ const POSES: Record<CatPose, Pose> = {
         [-21, -19.8],
       ],
     ],
+    legGap: [
+      [-4.9, -8],
+      [-5, 0],
+    ],
   },
 };
 
-// The fisherman's ginger cat.
+// Short stripes across the tail, one per segment.
+const tailStripes = (tail: Vec2[]): Mark[] =>
+  tail.slice(0, -1).map((a, i) => {
+    const b = tail[i + 1];
+    const len = Math.hypot(b[0] - a[0], b[1] - a[1]);
+    const [nx, ny] = [-(b[1] - a[1]) / len, (b[0] - a[0]) / len];
+    const [cx, cy] = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+    return {
+      shape: capsule(
+        [cx - nx * 2.2, cy - ny * 2.2],
+        [cx + nx * 2.2, cy + ny * 2.2],
+        0.6,
+      ),
+      mat: "catStripe",
+    };
+  });
+
+// The fisherman's ginger tabby with a white chest. Body, legs and neck are
+// grown as one piece, and so are the head, muzzle and ears.
 export const cat = ({ x, y, pose, facing }: CatProps): CatFigure => {
   const p = POSES[pose];
   const at = ([dx, dy]: Vec2): Vec2 => [x + dx, y + dy];
-  const tail: Part[] = [];
-  for (let i = 0; i < p.tail.length - 1; i++) {
-    const r = 1.8 - (0.5 * i) / (p.tail.length - 2);
-    tail.push({
-      shape: capsule(at(p.tail[i]), at(p.tail[i + 1]), r, r - 0.15),
-      mat: "cat",
-    });
-  }
+  const oval = ([ox, oy, rx, ry, rot]: Oval) =>
+    ellipse(...at([ox, oy]), rx, ry, rot ?? 0);
+  const limb = ([a, b, r]: Limb) => capsule(at(a), at(b), r, r * 0.92);
+  const stripe = (l: Limb): Mark => ({ shape: limb(l), mat: "catStripe" });
+  const tail = p.tail.map(at);
+  const tailShapes = tail
+    .slice(0, -1)
+    .map((a, i) => capsule(a, tail[i + 1], 1.8 - 0.12 * i, 1.7 - 0.12 * i));
   const body: Part[] = [
-    ...tail,
-    { shape: ellipse(...at(p.haunch), 8.5, 7.5), mat: "cat" },
     {
-      shape: ellipse(...at(p.chest[0]), 6, 8.5, p.chest[1]),
+      shape: blend(tailShapes, 1.5),
       mat: "cat",
-      bevel: 5,
+      bevel: 1.8,
+      marks: tailStripes(tail),
     },
-    ...p.legs.map(
-      ([a, b]): Part => ({
-        shape: capsule(at(a), at(b), 1.8, 1.7),
-        mat: "cat",
-        shadow: true,
-      }),
-    ),
-    { shape: poly(p.ears[0].map(at)), mat: "cat", bevel: 1 },
-    { shape: ellipse(...at(p.head), 6.5, 6), mat: "cat", shadow: true },
-    { shape: poly(p.ears[1].map(at)), mat: "cat", bevel: 1.2, shadow: true },
-    { shape: ellipse(...at(p.muzzle), 2.4, 1.9), mat: "cat", lift: 0.1 },
+    {
+      shape: blend(
+        [
+          oval(p.haunch),
+          oval(p.chest),
+          oval(p.neck),
+          ...p.legs.map(limb),
+          capsule(at([9, -3]), at([12, -4]), 2),
+        ],
+        3,
+        0.35,
+        11,
+      ),
+      mat: "cat",
+      bevel: 4.5,
+      marks: [
+        { shape: oval(p.chestPatch), mat: "catWhite" },
+        ...p.bodyStripes.map(stripe),
+      ],
+    },
+    {
+      shape: blend(
+        [
+          oval(p.head),
+          oval(p.muzzle),
+          oval(p.cheek),
+          poly(p.ears[0].map(at)),
+          poly(p.ears[1].map(at)),
+        ],
+        1.5,
+        0.2,
+        12,
+      ),
+      mat: "cat",
+      bevel: 3.8,
+      shadow: true,
+      marks: [
+        { shape: poly(p.innerEar.map(at)), mat: "skin" },
+        { shape: oval(p.muzzlePatch), mat: "catWhite" },
+        ...p.headStripes.map(stripe),
+      ],
+    },
   ];
+  const [ex, ey] = at(p.eye);
   const features: Feature[] = [
-    { x: at(p.eye)[0], y: at(p.eye)[1], c: C.ochre3 },
+    { x: ex, y: ey, c: C.ochre3 },
+    { x: ex, y: ey, c: C.ink, dx: -1 },
     { x: at(p.nose)[0], y: at(p.nose)[1], c: C.skin1 },
   ];
+  const strokes: Stroke[] = [{ pts: p.legGap.map(at), steps: -1 }];
   const lines = p.whiskers.map(([a, b]) => [at(a), at(b)] as const);
-  if (facing === "left") return { body, features, whiskers: lines };
+  if (facing === "left") return { body, features, strokes, whiskers: lines };
   const fx = (v: Vec2): Vec2 => [2 * x - v[0], v[1]];
   return {
     body: flipParts(body, x),
-    features: features.map((f) => ({ ...f, x: 2 * x - f.x })),
+    features: features.map((f) => ({
+      ...f,
+      x: 2 * x - f.x,
+      dx: -(f.dx ?? 0),
+    })),
+    strokes: flipStrokes(strokes, x),
     whiskers: lines.map(([a, b]) => [fx(a), fx(b)] as const),
   };
 };

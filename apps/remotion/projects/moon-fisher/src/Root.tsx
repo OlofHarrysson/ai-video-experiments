@@ -5,28 +5,14 @@ export const FPS = 24;
 
 export const RemotionRoot: React.FC = () => (
   <Folder name="Style-frame">
-    <Still
-      id="StyleFrameA"
-      component={StyleFrame}
-      width={1080}
-      height={1920}
-      defaultProps={{ density: "A" as const }}
-    />
-    <Still
-      id="StyleFrameB"
-      component={StyleFrame}
-      width={1080}
-      height={1920}
-      defaultProps={{ density: "B" as const }}
-    />
+    <Still id="StyleFrame" component={StyleFrame} width={1080} height={1920} />
     <Composition
-      id="StyleLoopB"
+      id="StyleLoop"
       component={StyleFrame}
       width={1080}
       height={1920}
       fps={FPS}
       durationInFrames={FPS * 4}
-      defaultProps={{ density: "B" as const }}
     />
   </Folder>
 );

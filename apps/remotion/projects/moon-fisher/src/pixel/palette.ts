@@ -81,6 +81,10 @@ export const RAMPS = {
     C.silver4,
   ],
   cat: [C.umber0, C.umber1, C.umber2, C.ginger1, C.ginger2, C.skin3],
+  // Fur markings keep the cat's lighting: stripes one step darker, the
+  // white chest and muzzle toward cream.
+  catStripe: [C.umber0, C.umber0, C.umber1, C.umber2, C.ginger1, C.ginger2],
+  catWhite: [C.umber0, C.umber2, C.skin2, C.skin3, C.moon],
   moon: [C.silver2, C.silver3, C.silver4, C.moon],
 } as const;
 

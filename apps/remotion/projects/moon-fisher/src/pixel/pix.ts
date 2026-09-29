@@ -101,6 +101,17 @@ export class Pix {
 
   // A one-pixel line between two world points (Bresenham).
   line(x0: number, y0: number, x1: number, y1: number, c: number): void {
+    this.trace(x0, y0, x1, y1, (x, y) => this.set(x, y, c));
+  }
+
+  // Visit every pixel on the line between two world points.
+  trace(
+    x0: number,
+    y0: number,
+    x1: number,
+    y1: number,
+    visit: (x: number, y: number) => void,
+  ): void {
     let ax = this.px(x0);
     let ay = this.py(y0);
     const bx = this.px(x1);
@@ -111,7 +122,7 @@ export class Pix {
     const sy = ay < by ? 1 : -1;
     let err = dx + dy;
     for (;;) {
-      this.set(ax, ay, c);
+      visit(ax, ay);
       if (ax === bx && ay === by) break;
       const e2 = 2 * err;
       if (e2 >= dy) {

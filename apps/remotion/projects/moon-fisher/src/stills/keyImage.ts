@@ -1,13 +1,20 @@
+import { drawStrokes } from "../pixel/detail";
 import { drawLit, type LitScene, type LitStyle } from "../pixel/lit";
 import { C } from "../pixel/palette";
 import { Pix, type Camera } from "../pixel/pix";
-import { BOAT, boatHull, boatInterior, drawPlankSeams } from "../world/boat";
+import {
+  BOAT,
+  boatHull,
+  boatInterior,
+  drawPlankSeams,
+  drawRibs,
+} from "../world/boat";
 import { bucket, moonCenter } from "../world/bucket";
 import { cat } from "../world/cat";
 import { fisherman, type Feature } from "../world/fisherman";
 import { drawHalo, drawShaft, reflectWater } from "../world/glow";
 import { drawSea } from "../world/sea";
-import { drawSky, drawStars } from "../world/sky";
+import { drawMilkyWay, drawSky, drawStars } from "../world/sky";
 
 const HORIZON = 320;
 const BUCKET = { x: 148, rimY: 326, moon: true };
@@ -68,6 +75,7 @@ export const drawKeyImage = (pix: Pix, frame = 0): void => {
     ],
     seam: 0.5,
   });
+  drawMilkyWay(pix, { seed: 7, horizon, strength: 1.3 });
   drawStars(pix, { seed: "key-stars", count: 150, horizon, strength: 1, step });
   drawSea(pix, {
     horizon,
@@ -101,6 +109,7 @@ export const drawKeyImage = (pix: Pix, frame = 0): void => {
   pix.line(84, 352, 20, 236, C.umber2);
 
   drawLit(pix, boatInterior(BOAT), SCENE, STYLE);
+  drawRibs(pix, BOAT);
   const man = fisherman({
     x: 100,
     y: 358,
@@ -109,16 +118,20 @@ export const drawKeyImage = (pix: Pix, frame = 0): void => {
   });
   const kitty = cat({ x: 198, y: 344, pose: "peer", facing: "left" });
   drawLit(pix, man.body, SCENE, STYLE);
+  drawStrokes(pix, man.strokes);
   drawLit(pix, kitty.body, SCENE, STYLE);
+  drawStrokes(pix, kitty.strokes);
   drawLit(pix, bucket(BUCKET), SCENE, STYLE);
   drawLit(pix, man.front, SCENE, STYLE);
   drawLit(pix, boatHull(BOAT), SCENE, STYLE);
   drawPlankSeams(pix, BOAT);
-  // The cat blinks once in the loop.
+  // The cat blinks once in the loop: its eye closes to a line of fur.
+  const [eye, pupil, nose] = kitty.features;
   const blinking = step === 21 || step === 22;
   drawFeatures(pix, [
     ...man.features,
-    ...(blinking ? kitty.features.slice(1) : kitty.features),
+    ...(blinking ? [{ ...eye, c: C.umber1 }] : [eye, pupil]),
+    nose,
   ]);
   for (const [a, b] of kitty.whiskers)
     pix.line(a[0], a[1], b[0], b[1], C.silver2);

@@ -27,20 +27,27 @@ export type Light =
       soft?: number;
     };
 
+// A color marking on a part, such as a fur patch or stripe. It takes the
+// part's light and shape, and only swaps the color ramp.
+export type Mark = { shape: Shape; mat: Material };
+
 // One piece of a drawn object. Later parts sit in front of earlier ones.
 export type Part = {
   shape: Shape;
   mat: Material;
   // A fixed normal instead of a rounded surface.
   flat?: Vec3;
-  // Width of the rounded edge on polygons, in world units.
+  // Width of the rounded edge, in world units: on polygons the bevel, on
+  // blends how far the surface rises from the outline.
   bevel?: number;
   // Shade as an upright cylinder around x = cx with radius rx.
   cylinder?: { cx: number; rx: number };
   // Depth toward the viewer, in design units.
   z?: number;
-  // Darkens the parts behind it along its edge.
+  // Shades the parts behind it along its edge, on the side away from the
+  // light.
   shadow?: boolean;
+  marks?: readonly Mark[];
   // Self-lit parts return a ramp position from 0 to 1 instead of being lit.
   emit?: (x: number, y: number, n: Vec3) => number;
   // Brightness added to the light this part receives.
@@ -52,13 +59,40 @@ export type LitScene = { lights: readonly Light[]; ambient: number };
 export type LitStyle = {
   // 0 draws clean bands; higher values mix neighboring steps.
   dither: number;
-  // Darken the silhouette edge by one step (selective outline).
+  // Darken the silhouette edge by one step where it faces away from the
+  // light (selective outline); edges facing the light keep their color.
   outline: boolean;
   // Remove single pixels that differ from all four neighbors.
   cleanup: boolean;
 };
 
 const SURFACE_DEPTH = 4;
+
+const MATERIALS = Object.keys(RAMPS) as Material[];
+const MATERIAL_INDEX = Object.fromEntries(
+  MATERIALS.map((m, i) => [m, i]),
+) as Record<Material, number>;
+
+// Direction toward the strongest light in the picture plane, if any.
+const lightDir2D = (
+  scene: LitScene,
+  x: number,
+  y: number,
+): [number, number] | null => {
+  for (const light of scene.lights) {
+    if (light.kind !== "point") continue;
+    const dx = light.x - x;
+    const dy = light.y - y;
+    const d = Math.hypot(dx, dy) || 1;
+    return [dx / d, dy / d];
+  }
+  for (const light of scene.lights) {
+    if (light.kind !== "dir") continue;
+    const d = Math.hypot(light.dir[0], light.dir[1]) || 1;
+    return [light.dir[0] / d, light.dir[1] / d];
+  }
+  return null;
+};
 
 const cylinderNormal = (c: { cx: number; rx: number }, x: number): Vec3 => {
   const u = clamp((x - c.cx) / c.rx, -1, 1);
@@ -135,6 +169,7 @@ export const drawLit = (
 
   const owner = new Int16Array(W * H).fill(-1);
   const level = new Int8Array(W * H);
+  const matOf = new Int8Array(W * H);
 
   for (let j = 0; j < H; j++) {
     for (let i = 0; i < W; i++) {
@@ -145,7 +180,9 @@ export const drawLit = (
       for (let pi = parts.length - 1; pi >= 0; pi--) {
         const p = parts[pi];
         if (!covers(p.shape, x, y)) continue;
-        const steps = RAMPS[p.mat].length - 1;
+        let mat = p.mat;
+        for (const m of p.marks ?? []) if (covers(m.shape, x, y)) mat = m.mat;
+        const steps = RAMPS[mat].length - 1;
         const n = p.flat
           ? normalize(p.flat)
           : p.cylinder
@@ -162,6 +199,7 @@ export const drawLit = (
           steps,
         );
         owner[j * W + i] = pi;
+        matOf[j * W + i] = MATERIAL_INDEX[mat];
         break;
       }
     }
@@ -208,16 +246,21 @@ export const drawLit = (
     for (let i = 0; i < W; i++) {
       const o = owner[j * W + i];
       if (o < 0 || parts[o].emit) continue;
-      let edge = false;
+      const toLight = lightDir2D(scene, pix.wx(bx0 + i), pix.wy(by0 + j));
+      let litEdge = false;
+      let darkEdge = false;
       let shadowed = false;
       for (const [di, dj] of N4) {
         const n = at(i + di, j + dj);
-        if (n < 0) edge = true;
-        else if (n > o && parts[n].shadow) shadowed = true;
+        const toward = toLight ? di * toLight[0] + dj * toLight[1] : 0;
+        if (n < 0) {
+          if (toward > 0.35) litEdge = true;
+          else darkEdge = true;
+        } else if (n > o && parts[n].shadow && toward > 0.2) shadowed = true;
       }
       let l = level[j * W + i];
       if (shadowed) l -= 1;
-      if (edge && style.outline) l = l <= 1 ? 0 : l - 1;
+      if (style.outline && darkEdge && !litEdge) l = l <= 1 ? 0 : l - 1;
       shaded[j * W + i] = Math.max(0, l);
     }
   }
@@ -226,7 +269,12 @@ export const drawLit = (
     for (let i = 0; i < W; i++) {
       const o = owner[j * W + i];
       if (o < 0) continue;
-      pix.set(bx0 + i, by0 + j, RAMPS[parts[o].mat][shaded[j * W + i]]);
+      const ramp = RAMPS[MATERIALS[matOf[j * W + i]]];
+      pix.set(
+        bx0 + i,
+        by0 + j,
+        ramp[Math.min(ramp.length - 1, shaded[j * W + i])],
+      );
     }
   }
 };
@@ -239,5 +287,6 @@ export const flipParts = (parts: readonly Part[], axis: number): Part[] =>
       ...p,
       shape: mirror(p.shape, axis),
       flat: flat ? ([-flat[0], flat[1], flat[2]] as const) : undefined,
+      marks: p.marks?.map((m) => ({ ...m, shape: mirror(m.shape, axis) })),
     };
   });

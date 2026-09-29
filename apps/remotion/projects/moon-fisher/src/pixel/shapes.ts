@@ -15,7 +15,16 @@ export type Shape =
       rot: number;
     }
   | { kind: "capsule"; a: Vec2; b: Vec2; ra: number; rb: number }
-  | { kind: "poly"; pts: readonly Vec2[] };
+  | { kind: "poly"; pts: readonly Vec2[] }
+  // Several shapes grown together like clay, with fillets about `k` wide.
+  // `wobble` roughens the outline, for cloth and fur.
+  | {
+      kind: "blend";
+      shapes: readonly Shape[];
+      k: number;
+      wobble: number;
+      seed: number;
+    };
 
 export const ellipse = (
   cx: number,
@@ -35,6 +44,13 @@ export const capsule = (a: Vec2, b: Vec2, ra: number, rb = ra): Shape => ({
 });
 
 export const poly = (pts: readonly Vec2[]): Shape => ({ kind: "poly", pts });
+
+export const blend = (
+  shapes: readonly Shape[],
+  k: number,
+  wobble = 0,
+  seed = 0,
+): Shape => ({ kind: "blend", shapes, k, wobble, seed });
 
 // A smooth closed outline through control points (Catmull-Rom).
 export const blob = (pts: readonly Vec2[], samples = 6): Shape => {
@@ -88,6 +104,21 @@ export const bounds = (s: Shape): [number, number, number, number] => {
         y1 = Math.max(y1, y);
       }
       return [x0, y0, x1, y1];
+    }
+    case "blend": {
+      const grow = s.k / 4 + s.wobble;
+      let x0 = Infinity;
+      let y0 = Infinity;
+      let x1 = -Infinity;
+      let y1 = -Infinity;
+      for (const c of s.shapes) {
+        const b = bounds(c);
+        x0 = Math.min(x0, b[0]);
+        y0 = Math.min(y0, b[1]);
+        x1 = Math.max(x1, b[2]);
+        y1 = Math.max(y1, b[3]);
+      }
+      return [x0 - grow, y0 - grow, x1 + grow, y1 + grow];
     }
   }
 };
@@ -147,7 +178,94 @@ export const covers = (s: Shape, x: number, y: number): boolean => {
     }
     case "poly":
       return insidePoly(s.pts, x, y);
+    case "blend":
+      return sdf(s, x, y) < 0;
   }
+};
+
+// Polynomial smooth minimum: joins two distance fields with a fillet.
+const smin = (a: number, b: number, k: number): number => {
+  const h = Math.max(k - Math.abs(a - b), 0) / k;
+  return Math.min(a, b) - h * h * k * 0.25;
+};
+
+const hash = (x: number, y: number, seed: number): number => {
+  let h =
+    Math.imul(x | 0, 374761393) ^
+    Math.imul(y | 0, 668265263) ^
+    Math.imul(seed | 0, 1442695041);
+  h = Math.imul(h ^ (h >>> 13), 1274126177);
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967295;
+};
+
+// Smooth value noise between -1 and 1, fixed by its seed.
+export const noise = (x: number, y: number, seed: number): number => {
+  const xi = Math.floor(x);
+  const yi = Math.floor(y);
+  const fx = x - xi;
+  const fy = y - yi;
+  const sx = fx * fx * (3 - 2 * fx);
+  const sy = fy * fy * (3 - 2 * fy);
+  const a = hash(xi, yi, seed);
+  const b = hash(xi + 1, yi, seed);
+  const c = hash(xi, yi + 1, seed);
+  const d = hash(xi + 1, yi + 1, seed);
+  return 2 * (a + (b - a) * sx + (c - a) * sy + (a - b - c + d) * sx * sy) - 1;
+};
+
+// Signed distance to the outline: negative inside, in world units.
+export const sdf = (s: Shape, x: number, y: number): number => {
+  switch (s.kind) {
+    case "ellipse": {
+      const { u, v } = ellipseLocal(s, x, y);
+      const k0 = Math.hypot(u, v);
+      const k1 = Math.hypot(u / s.rx, v / s.ry);
+      return k1 < 1e-9 ? -Math.min(s.rx, s.ry) : (k0 * (k0 - 1)) / k1;
+    }
+    case "capsule": {
+      const { d, r } = capsuleLocal(s, x, y);
+      return d - r;
+    }
+    case "poly": {
+      let best = Infinity;
+      const pts = s.pts;
+      for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+        const [ax, ay] = pts[j];
+        const [bx, by] = pts[i];
+        const ex = bx - ax;
+        const ey = by - ay;
+        const len2 = ex * ex + ey * ey || 1e-9;
+        const t = clamp(((x - ax) * ex + (y - ay) * ey) / len2, 0, 1);
+        best = Math.min(best, Math.hypot(x - ax - ex * t, y - ay - ey * t));
+      }
+      return insidePoly(pts, x, y) ? -best : best;
+    }
+    case "blend": {
+      let d = sdf(s.shapes[0], x, y);
+      for (let i = 1; i < s.shapes.length; i++) {
+        d = smin(d, sdf(s.shapes[i], x, y), s.k);
+      }
+      return s.wobble ? d + s.wobble * noise(x * 0.4, y * 0.4, s.seed) : d;
+    }
+  }
+};
+
+// A surface inflated from the outline: rising over `radius` from the edge,
+// flat beyond it. Joins in a blend shade as one continuous surface.
+const inflateNormal = (
+  s: Shape,
+  x: number,
+  y: number,
+  radius: number,
+): Vec3 => {
+  const e = 0.35;
+  const inside = -sdf(s, x, y);
+  if (inside >= radius) return [0, 0, 1];
+  const gx = (sdf(s, x + e, y) - sdf(s, x - e, y)) / (2 * e);
+  const gy = (sdf(s, x, y + e) - sdf(s, x, y - e)) / (2 * e);
+  const g = Math.hypot(gx, gy) || 1;
+  const k = clamp((radius - inside) / radius, 0, 1);
+  return [(gx / g) * k, (gy / g) * k, Math.sqrt(1 - k * k)];
 };
 
 // The outward-rounded surface normal at a point inside the shape: a dome for
@@ -196,6 +314,8 @@ export const roundNormal = (
       const k = (bevel - best) / bevel;
       return [(-gx / best) * k, (-gy / best) * k, Math.sqrt(1 - k * k)];
     }
+    case "blend":
+      return inflateNormal(s, x, y, bevel);
   }
 };
 
@@ -213,5 +333,7 @@ export const mirror = (s: Shape, axis: number): Shape => {
       return { ...s, a: [fx(s.a[0]), s.a[1]], b: [fx(s.b[0]), s.b[1]] };
     case "poly":
       return { ...s, pts: s.pts.map(([x, y]) => [fx(x), y] as const) };
+    case "blend":
+      return { ...s, shapes: s.shapes.map((c) => mirror(c, axis)) };
   }
 };

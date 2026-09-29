@@ -1,6 +1,7 @@
 import { random } from "remotion";
 import { C } from "../pixel/palette";
-import { bayer, Pix, smoothstep } from "../pixel/pix";
+import { bayer, Pix, quantize, smoothstep } from "../pixel/pix";
+import { noise } from "../pixel/shapes";
 
 // A color and the height where it is purest: 0 at the top of the region,
 // 1 at its bottom.
@@ -90,5 +91,46 @@ export const drawStars = (
         pix.set(px + dx, py + dy, C.night6);
       }
     }
+  }
+};
+
+export type MilkyWayProps = {
+  seed: number;
+  horizon: number;
+  // 0 hides the band; 1 shows it at full strength.
+  strength: number;
+};
+
+// A faint river of stars across the sky, which only shows once the moon is
+// gone. It runs from upper left to lower right, clumpy and fading toward the
+// horizon.
+export const drawMilkyWay = (
+  pix: Pix,
+  { seed, horizon, strength }: MilkyWayProps,
+): void => {
+  const [ax, ay, bx, by] = [-20, 10, 290, 190];
+  const len = Math.hypot(bx - ax, by - ay);
+  const [ux, uy] = [(bx - ax) / len, (by - ay) / len];
+  const density = (x: number, y: number) => {
+    const along = (x - ax) * ux + (y - ay) * uy;
+    const across = -(x - ax) * uy + (y - ay) * ux;
+    const drift = 12 * noise(along * 0.015, 0.5, seed);
+    const band = Math.exp(-2 * ((across + drift) / 34) ** 2);
+    const clump = 0.5 + 0.5 * noise(x * 0.06, y * 0.06, seed + 1);
+    return band * clump * (1 - 0.7 * (y / horizon)) * strength;
+  };
+  for (let py = 0; py < Math.floor(horizon * pix.k); py++) {
+    for (let px = 0; px < pix.w; px++) {
+      const g = density((px + 0.5) / pix.k, (py + 0.5) / pix.k);
+      pix.brighten(px, py, Math.max(0, quantize(g * 0.9, px, py, 1)));
+    }
+  }
+  for (let i = 0; i < 220; i++) {
+    const x = random(`mw-${seed}-x-${i}`) * 270;
+    const y = random(`mw-${seed}-y-${i}`) * (horizon - 10);
+    const g = density(x, y);
+    if (random(`mw-${seed}-k-${i}`) > g) continue;
+    const c = random(`mw-${seed}-c-${i}`) < 0.3 ? C.silver1 : C.night6;
+    pix.set(Math.floor(x * pix.k), Math.floor(y * pix.k), c);
   }
 };

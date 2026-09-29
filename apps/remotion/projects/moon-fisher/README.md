@@ -44,17 +44,19 @@ Hooking the moon out of the water is an old folk motif; in one version, Nasreddi
 
 ## Style frame
 
-Proposed 2026-09-29; Olof's choice between the two pixel densities is pending. The key image shows the moon in the bucket lighting the fisherman and the cat from below while the sky stands empty. `renders/style-frame/v002/` holds both stills, a comparison sheet with the palette, and a four-second loop of the ambient motion.
+The key image shows the moon in the bucket lighting the fisherman and the cat from below while the sky stands empty. v002 compared two pixel densities. Olof chose the coarser one on 2026-09-29 because it “looks less like simple shapes”. He found the limbs too detached from each other, asked for more detail, and liked the sea and the reflection. v003 answers that; his verdict on it is pending. `renders/style-frame/v003/` holds the still, a before/after sheet against v002 and a four-second loop of the ambient motion.
 
-- **Pixel grid:** scenes are authored on a 270×480 design frame and drawn at one of two densities, both enlarged to 1080×1920: A at 180×320, six times, or B at 270×480, four times. B is recommended, because the fisherman's wonder and the cat's curiosity live in a few facial pixels and read better there. Shapes and light are computed, so both densities cost about the same to make; the choice is about the look.
+- **Pixel grid:** scenes are authored on a 270×480 design frame and drawn at 180×320, enlarged six times to 1080×1920. The finer 270×480 grid (four times) was the alternative; its smooth curves exposed the geometric shapes underneath.
 - **Palette:** 24 colors in `src/pixel/palette.ts`. There are seven night blues for sky, sea and shadow, five moonlight colors from silver to the moon's cream, and twelve warm colors for the oilskins, wood, skin and the cat. Nothing is drawn outside it: glows brighten a pixel by climbing its own color family.
-- **Light:** the moon is the only light. Every part of an object has a surface (a dome, tube, bevelled edge or upright cylinder), so the scene can be relit from wherever the moon is. The light picks a step on each material's ramp of four to seven colors.
-- **Outlines and shading:** there are no black lines. A silhouette's edge is one step darker than its fill, and lit edges keep their color. Overlapping parts cast a one-step contact shadow. Characters and props are shaded in clean bands, with stray single pixels removed.
-- **Dithering:** only in the air and sky, with an ordered 4×4 pattern: the seams between sky colors, the moon's halo and the light shaft.
+- **Light:** the moon is the only light. Every part of an object has a surface, so the scene can be relit from wherever the moon is. The light picks a step on each material's ramp of four to seven colors.
+- **Forms:** a body, a limb chain or a head is grown as one piece with rounded joins, so it shades as a single surface instead of separate tubes and balls. A part in front shades what is behind it only on the side away from the moon.
+- **Outlines and shading:** there are no black lines. A silhouette's edge is one step darker where it faces away from the light, and edges facing the light keep their color. Characters and props are shaded in clean bands, with stray single pixels removed.
+- **Detail:** fur markings such as tabby stripes and the white chest take the same light as the form beneath them. Folds, seams, strands, rivets and grain shift the finished shade by a step, so they follow the light too.
+- **Dithering:** only in the air and sky, with an ordered 4×4 pattern: the seams between sky colors, the Milky Way, the moon's halo and the light shaft.
 - **Water:** still water mirrors whatever floats on it, one or two steps darker, broken into ripples about two world units tall.
 - **Frame rate and cadence:** 24 fps. Poses and ambient motion hold for three frames, eight drawings a second; quick actions such as the haul hold for two. Everything moves in whole pixels, like the boat's one-pixel bob on a two-second swell.
 
-Weak spots for the upgrade passes: the near-black hull, the broad flat back of the coat, the cat's stiff legs and the dark tin of the bucket.
+Weak spots for the upgrade passes: the near-black hull, the broad back of the coat and the dark tin of the bucket.
 
 ## Plan
 
@@ -62,7 +64,7 @@ Weak spots for the upgrade passes: the near-black hull, the broad flat back of t
 | --- | --- |
 | Premise | The Moon Fisher, chosen 2026-09-29 |
 | Brief | Approved 2026-09-29 |
-| Style frame | Proposed: the key image at two densities and an ambient loop (v002); awaiting Olof's choice |
+| Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
 | Sound decision | Before the storyboard's timing is locked |
 | Storyboard contact sheet | Not started |
 | Asset register | Not started |
@@ -75,8 +77,8 @@ From this directory:
 
 ```sh
 npm ci
-npm run preview          # fast PNG previews of the style frame, without Remotion → renders/preview
-npm run stills -- v003   # Remotion stills, the ambient loop and a comparison sheet → renders/style-frame/v003
+npm run preview          # fast PNG preview of the style frame, without Remotion → renders/preview
+npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)
 npm run lint             # ESLint with Remotion's rules, then tsc
 ```
@@ -85,7 +87,7 @@ npm run lint             # ESLint with Remotion's rules, then tsc
 
 ## Code map
 
-- `src/pixel/`: the palette, the low-resolution indexed image and its camera, lit shapes, the two densities and the Remotion canvas that enlarges them.
+- `src/pixel/`: the palette, the low-resolution indexed image and its camera, lit and blended shapes, detail strokes, the film's density and the Remotion canvas that enlarges it.
 - `src/world/`: the film's assets behind fixed interfaces, such as `fisherman({ x, y, pose, facing })`, `cat({ x, y, pose, facing })` and `bucket({ x, rimY, moon })`, plus the boat, the moon, sky, sea and light in the air. A better version of an asset replaces its drawing without touching the scenes.
 - `src/stills/`: the key image and its Remotion component.
 - `scripts/`: previews without Remotion, versioned renders, the palette strip and a small PNG encoder.
