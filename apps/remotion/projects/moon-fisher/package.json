@@ -1,0 +1,28 @@
+{
+  "name": "moon-fisher",
+  "version": "0.1.0",
+  "description": "The Moon Fisher: a calm pixel-art short drawn in code",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio --no-open --port ${PORT:-3000}",
+    "preview": "tsx scripts/preview.ts",
+    "stills": "node scripts/stills.mjs",
+    "lint": "eslint src && tsc"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.530",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.530"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.530",
+    "@types/node": "^22.15.0",
+    "@types/react": "19.2.7",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "tsx": "^4.20.0",
+    "typescript": "5.9.3"
+  }
+}
