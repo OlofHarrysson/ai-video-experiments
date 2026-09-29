@@ -1,4 +1,5 @@
 import type { Part } from "../pixel/lit";
+import { moveShape, toLocal, toWorld, type Frame } from "../pixel/rig";
 import { ellipse, poly, type Vec2 } from "../pixel/shapes";
 import { moonParts } from "./moon";
 
@@ -8,13 +9,25 @@ export type BucketProps = {
   rimY: number;
   // The caught moon floats in the opening, most of it above the rim.
   moon: boolean;
+  // Degrees the bucket is tipped, clockwise, about its middle.
+  tilt?: number;
 };
 
 export const MOON_RADIUS = 12;
-export const moonCenter = ({ x, rimY }: BucketProps): [number, number] => [
-  x,
-  rimY - 3,
-];
+
+// Upright bucket, then the tipped one: the same pivot, turned by the tilt.
+const pivots = ({ x, rimY, tilt = 0 }: BucketProps): [Frame, Frame] => {
+  const at = { x, y: rimY + HEIGHT / 2 };
+  return [
+    { ...at, a: 0 },
+    { ...at, a: (tilt * Math.PI) / 180 },
+  ];
+};
+
+export const moonCenter = (b: BucketProps): Vec2 => {
+  const [upright, tipped] = pivots(b);
+  return toWorld(tipped, toLocal(upright, [b.x, b.rimY - 3]));
+};
 
 const RX = 15;
 const RY = 3.5;
@@ -40,18 +53,18 @@ const band = (x: number, y: number, rx: number, width: number): Vec2[] => [
 
 // A tin pail seen from the side and a little above. With the moon inside,
 // its opening is the scene's light source.
-export const bucket = ({ x, rimY, moon }: BucketProps): Part[] => {
+export const bucket = (props: BucketProps): Part[] => {
+  const { x, rimY, moon, tilt = 0 } = props;
   const lit = moon ? 1 : 0;
   const bottom = rimY + HEIGHT;
   const tin = { cx: x, rx: RX };
-  const [mx, my] = moonCenter({ x, rimY, moon });
-  return [
-    {
-      shape: ellipse(x, rimY, RX, RY),
-      mat: "tin",
-      emit: () => 0.3 + 0.5 * lit,
-    },
-    ...(moon ? moonParts({ x: mx, y: my, radius: MOON_RADIUS }) : []),
+  const [mx, my] = moonCenter(props);
+  const opening: Part = {
+    shape: ellipse(x, rimY, RX, RY),
+    mat: "tin",
+    emit: () => 0.3 + 0.5 * lit,
+  };
+  const pail: Part[] = [
     {
       shape: poly([
         ...front(x, rimY, RX, RY),
@@ -92,5 +105,21 @@ export const bucket = ({ x, rimY, moon }: BucketProps): Part[] => {
       mat: "tin",
       emit: () => 0.3 + 0.62 * lit,
     },
+  ];
+  const [upright, tipped] = pivots(props);
+  const tip = (part: Part): Part =>
+    tilt === 0
+      ? part
+      : {
+          ...part,
+          shape: moveShape(part.shape, upright, tipped),
+          // A tipped pail is shaded from its own outline.
+          cylinder: undefined,
+          bevel: part.cylinder ? 6 : part.bevel,
+        };
+  return [
+    tip(opening),
+    ...(moon ? moonParts({ x: mx, y: my, radius: MOON_RADIUS }) : []),
+    ...pail.map(tip),
   ];
 };

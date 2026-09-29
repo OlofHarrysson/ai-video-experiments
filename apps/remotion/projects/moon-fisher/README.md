@@ -58,6 +58,19 @@ The key image shows the moon in the bucket lighting the fisherman and the cat fr
 
 Weak spots for the upgrade passes: the near-black hull, the broad back of the coat and the dark tin of the bucket.
 
+## Skeleton and poses
+
+The fisherman has a skeleton: spine, chest, head, both arms and legs. His style-frame drawing is the rest pose, and every part rides on one bone, so a pose is just a set of bone directions. In-betweens are computed per bone, so a movement can lead with the head and let the arms follow.
+
+`renders/poses/v001/` holds three key poses and a motion test:
+
+- **Doze:** slumped asleep, hat over his eyes, his float bobbing in the moon's reflection below the boat.
+- **Haul:** thrown back against a bent rod, the line taut to the reflection glowing on the hook.
+- **Tip:** leaning out to tip the bucket while the moon spills from it and the cat watches.
+- **Motion test (3 s):** a tug, his head snaps up, the body and arms follow into the haul, and he settles into a pulling rhythm while the catch brightens. Action poses hold for two frames; the water and stars keep their three.
+
+Each shot is a scene spec: the camera, where the moon is, the fisherman's pose, props and the cat. Specs can change with the frame, which is how the motion test works; the storyboard will be built the same way. Olof's verdict on the poses is pending.
+
 ## Plan
 
 | Step | Status |
@@ -66,6 +79,7 @@ Weak spots for the upgrade passes: the near-black hull, the broad back of the co
 | Brief | Approved 2026-09-29 |
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
 | Sound decision | Before the storyboard's timing is locked |
+| Pose skeleton | Three key poses and a haul motion test (v001); awaiting Olof's verdict |
 | Storyboard contact sheet | Not started |
 | Asset register | Not started |
 | Animatic | Not started |
@@ -77,8 +91,9 @@ From this directory:
 
 ```sh
 npm ci
-npm run preview          # fast PNG preview of the style frame, without Remotion → renders/preview
+npm run preview          # fast PNG previews of every scene, without Remotion → renders/preview
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
+npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)
 npm run lint             # ESLint with Remotion's rules, then tsc
 ```
@@ -87,7 +102,7 @@ npm run lint             # ESLint with Remotion's rules, then tsc
 
 ## Code map
 
-- `src/pixel/`: the palette, the low-resolution indexed image and its camera, lit and blended shapes, detail strokes, the film's density and the Remotion canvas that enlarges it.
+- `src/pixel/`: the palette, the low-resolution indexed image and its camera, lit and blended shapes, detail strokes, the skeleton (`rig.ts`), the film's density and the Remotion canvas that enlarges it.
 - `src/world/`: the film's assets behind fixed interfaces, such as `fisherman({ x, y, pose, facing })`, `cat({ x, y, pose, facing })` and `bucket({ x, rimY, moon })`, plus the boat, the moon, sky, sea and light in the air. A better version of an asset replaces its drawing without touching the scenes.
-- `src/stills/`: the key image and its Remotion component.
+- `src/stills/`: the boat scene every shot is drawn from (`boatScene.ts`), the key image, the poses, the motion test and the Remotion component.
 - `scripts/`: previews without Remotion, versioned renders, the palette strip and a small PNG encoder.
