@@ -4,6 +4,7 @@ Programmatic video with [Remotion](https://www.remotion.dev/): React components 
 
 - [AI Filmhack: frenzy cut](projects/filmhack-frenzy/README.md): a 25.6-second high-energy Reel with a synthesized 150 BPM score.
 - [Watermelon shape guides](projects/watermelon-guides/README.md): SVG placement guides and a seven-frame comparison of independent, reference-conditioned and masked image generation.
+- [The Moon Fisher](projects/moon-fisher/README.md): a calm pixel-art short with no dialogue, drawn in code. In planning.
 
 Remotion's own AAC track keeps the encoder's priming as audio: 43 ms of delay, enough to put hits visibly late. Mux the mastered soundtrack with ffmpeg instead, as the frenzy cut's `scripts/render.mjs` does, and check sync on the decoded file.
 
