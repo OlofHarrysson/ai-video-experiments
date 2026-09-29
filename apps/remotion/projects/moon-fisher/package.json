@@ -9,19 +9,25 @@
     "preview": "tsx scripts/preview.ts",
     "stills": "node scripts/stills.mjs",
     "lint": "eslint src && tsc",
-    "poses": "node scripts/poses.mjs"
+    "poses": "node scripts/poses.mjs",
+    "samples": "node scripts/fetch-samples.mjs",
+    "score": "node scripts/score.mjs",
+    "score:review": "node scripts/score-review.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.530"
+    "remotion": "4.0.530",
+    "tone": "^15.1.22"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.530",
     "@types/node": "^22.15.0",
     "@types/react": "19.2.7",
+    "esbuild": "^0.28.2",
     "eslint": "9.19.0",
+    "playwright-core": "^1.63.0",
     "prettier": "3.8.1",
     "tsx": "^4.20.0",
     "typescript": "5.9.3"

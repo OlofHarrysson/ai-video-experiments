@@ -1,6 +1,8 @@
 node_modules
 .DS_Store
 
-# Renders and previews stay local.
+# Renders, previews, the rendered score and downloaded samples stay local.
 renders/
 out/
+public/
+samples/

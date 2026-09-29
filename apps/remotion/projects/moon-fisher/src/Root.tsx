@@ -1,12 +1,21 @@
 import { Composition, Folder, Still } from "remotion";
+import { ScoreMap } from "./ScoreMap";
 import { SceneFrame } from "./stills/StyleFrame";
+import { DURATION_FRAMES } from "./timing";
 
-export const FPS = 24;
+import { FPS } from "./timing";
 
 const SIZE = { width: 1080, height: 1920 };
 
 export const RemotionRoot: React.FC = () => (
   <>
+    <Composition
+      id="ScoreMap"
+      component={ScoreMap}
+      {...SIZE}
+      fps={FPS}
+      durationInFrames={DURATION_FRAMES}
+    />
     <Folder name="Style-frame">
       <Still
         id="StyleFrame"

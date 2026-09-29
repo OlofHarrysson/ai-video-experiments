@@ -1,0 +1,47 @@
+{
+  "harp": {
+    "source": "Strings/Harp/KSHarp_{note}_mf.wav",
+    "notes": "B1 D2 F2 A2 C3 E3 G3 B3 D4 F4 A4 C5 E5 G5 B5 D6 F6 A6",
+    "octaveShift": 0,
+    "recordedRms": -38.2
+  },
+  "clarinet": {
+    "source": "Woodwinds/Clarinet/susLong/DCClar_susLong_{note}_v2_rr1_sum.wav",
+    "notes": "D2 F2 A#2 D3 F3 A#3 D4 F4 A#4 D5 F#5",
+    "octaveShift": 1,
+    "sounds": {
+      "F#5": "F6"
+    },
+    "recordedRms": -24.3
+  },
+  "glock": {
+    "source": "Percussion/Glock/glock_medium_{note}.wav",
+    "notes": "G4 C5 G5 C6 G6 C7",
+    "octaveShift": 1,
+    "recordedRms": -43.4
+  },
+  "cello": {
+    "source": "Strings/Cello Section/susvib/susvib_{note}_v1_1.wav",
+    "notes": "C1 E1 G1 B1 D2 F2 A2 C3 E3 G3 B3 D4 F4",
+    "octaveShift": 1,
+    "recordedRms": -31.3
+  },
+  "celloPizz": {
+    "source": "Strings/Cello Section/pizzT/pizzT_{note}_v1_RR1.wav",
+    "notes": "C1 E1 B1 D2 F2 A2 C3 E3 B3 D4",
+    "octaveShift": 1,
+    "recordedRms": -35.3
+  },
+  "violins": {
+    "source": "Strings/Violin Section/susVib/VlnEns_susVib_{note}_v1.wav",
+    "notes": "G2 A2 B2 D3 F#3 A3 C4 E4 G4 B4 D5",
+    "octaveShift": 1,
+    "recordedRms": -35.7
+  },
+  "bassPizz": {
+    "source": "Strings/Solo Contrabass/Pizz/BKCtbss_Pizz_{note}_v1_rr1.wav",
+    "notes": "E0 F#0 G0 A#0 C1 D1 E1 F#1 G#1 A1 C#2 E2 G#2 B2",
+    "octaveShift": 1,
+    "recordedRms": -42.5
+  }
+}

@@ -6,12 +6,20 @@
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
-    "lib": ["ES2022", "DOM"],
-    "types": ["node"],
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [
+      "node"
+    ],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "resolveJsonModule": true
   },
-  "exclude": ["remotion.config.ts"]
+  "exclude": [
+    "remotion.config.ts"
+  ]
 }
