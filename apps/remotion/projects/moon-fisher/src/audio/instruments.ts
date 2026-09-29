@@ -46,15 +46,20 @@ const VOICING: Record<
   InstrumentName,
   { attack: number; release: number; volume: number; pan: number; hall: number }
 > = {
+  // Only for the two magic sweeps.
   harp: { attack: 0, release: 1.6, volume: -12, pan: -0.25, hall: 0.35 },
-  // One note at a time, like a real clarinet: each stops as the next begins.
-  clarinet: { attack: 0.03, release: 0.09, volume: -4, pan: 0.08, hall: 0.3 },
-  // Rings about as long as a music box, so the tune stays clear.
-  glock: { attack: 0, release: 1.1, volume: -9, pan: 0.3, hall: 0.5 },
-  cello: { attack: 0.3, release: 1.2, volume: -13, pan: -0.12, hall: 0.3 },
+  // The tune. One note at a time, like a real clarinet: each stops as the
+  // next begins.
+  clarinet: { attack: 0.03, release: 0.09, volume: -4, pan: -0.1, hall: 0.3 },
+  // The solo violin trades the tune with the clarinet, also one note at a
+  // time.
+  violin: { attack: 0.06, release: 0.08, volume: -5, pan: 0.18, hall: 0.35 },
+  // The piano keeps the lilt going underneath.
+  piano: { attack: 0, release: 0.35, volume: -9, pan: -0.12, hall: 0.3 },
+  cello: { attack: 0.3, release: 1.2, volume: -14, pan: -0.12, hall: 0.3 },
   celloPizz: { attack: 0, release: 0.9, volume: -11, pan: -0.15, hall: 0.25 },
   violins: { attack: 0.45, release: 1.6, volume: -13, pan: 0.22, hall: 0.4 },
-  bassPizz: { attack: 0, release: 1.2, volume: -12, pan: 0, hall: 0.2 },
+  bassPizz: { attack: 0, release: 1, volume: -13, pan: 0, hall: 0.2 },
 };
 
 // A stereo hall: noise with an exponential tail, darkened as it decays.

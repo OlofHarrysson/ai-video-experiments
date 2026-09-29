@@ -5,11 +5,12 @@ import { at, BAR_SECONDS, BARS, FPS, SECTIONS, type Section } from "./timing";
 // What happens in the story during each passage of the score.
 const STORY: Record<Section, string> = {
   intro: "Night sea. The float bobs in the moon's reflection.",
-  lullaby: "The clarinet's lullaby. Nothing bites; he dozes off.",
+  tune: "The clarinet's tune over the piano. Nothing bites.",
+  doze: "He dozes off.",
   tug: "A tug on the line.",
   haul: "He hauls. The line has snagged the reflection.",
   catch: "The moon comes out of the water. The sky goes dark.",
-  wonder: "The moon in his bucket, a music box, lights his face.",
+  wonder: "The moon in his bucket lights his face.",
   dimming: "It starts to fade, like a fish out of water.",
   release: "He tips it back into the sea.",
   darkness: "A held beat of darkness.",

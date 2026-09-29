@@ -73,35 +73,36 @@ Each shot is a scene spec: the camera, where the moon is, the fisherman's pose, 
 
 ## Sound
 
-On 2026-09-29 Olof asked for the film's music and sound to be made for it, rather than found or licensed. Score v001 awaits his listen. `renders/score/v001/` holds the score as WAV and MP3, and a review video that lights up each passage of the story as it plays.
+On 2026-09-29 Olof asked for the film's music and sound to be made for it, rather than found or licensed. He found score v001, a slow lullaby, “not bad” but “a bit slow/boring… a little bit sleepy”, and disliked the glockenspiel. He liked what he heard as piano (most likely the harp), the violin, and a “soft trumpet or saxophone” (the clarinet). Score v002 answers that and awaits his listen. `renders/score/v002/` holds the score as WAV and MP3 and a review video that lights up each passage of the story as it plays; v001 stays in `renders/score/v001/`.
 
-- **Form:** a lullaby in 6/8 with a dotted-quarter pulse of 60: a bar every 2 s and an eighth every 8 frames at 24 fps. 30 bars make 60 s. `src/timing.ts` holds the grid and the story's passages; the storyboard is cut to them.
-- **The tune:** one melody in D that reaches up a sixth, like a hand toward the moon, and settles back by step. The clarinet sings it as a lullaby. The glockenspiel plays it like a music box once the moon is in the bucket. It turns minor as the moon dims, and comes home a step higher, in E, when the moon rises.
-- **Instruments:** recorded samples from Versilian Studios' [VSCO 2 Community Edition](https://github.com/sgossner/VSCO-2-CE) (CC0): clarinet, harp, glockenspiel, cello and violin sections, plucked cellos and double bass, over a soft sea of filtered noise. No drums and no effects in the score.
+- **Form:** a lilting folk tune in 6/8 with a dotted-quarter pulse of 80, a third faster than v001: a bar every 1.5 s and an eighth every 6 frames at 24 fps. 40 bars make 60 s. `src/timing.ts` holds the grid and the story's passages; the storyboard is cut to them.
+- **The tune:** one melody in D that reaches up a sixth, like a hand toward the moon, and settles back by step. The clarinet sings it over the piano's bounce while the solo violin weaves a second line. High piano plays it like a music box once the moon is in the bucket. The violin mourns it in minor as the moon dims, and it comes home a step higher, in E, when the moon rises, with the violin soaring an octave above the clarinet.
+- **Instruments:** recorded samples from Versilian Studios' [VSCO 2 Community Edition](https://github.com/sgossner/VSCO-2-CE) (CC0): clarinet, solo violin, upright piano, violin and cello sections, plucked cellos and double bass, and a harp for the two magic sweeps. A soft sea of filtered noise runs underneath. No glockenspiel, drums or effects.
 - **Sound effects** (the reel, the splash, drips, the fish, the cat) come with the animatic, timed to picture.
 
 | Bars | Time | Passage | Story | Music |
 | --- | --- | --- | --- | --- |
-| 1 | 0:00 | intro | Night sea, the float in the moon's reflection | Harp rocking figure, sea, one glockenspiel twinkle |
-| 2–9 | 0:02 | lullaby | Nothing bites; he dozes off | Clarinet sings the tune over the harp; cellos join |
-| 10 | 0:18 | tug | A tug on the line | The harp stops; two double-bass plucks |
-| 11–12 | 0:20 | haul | He hauls on the snagged reflection | Plucked cellos climb in D minor |
-| 13 | 0:24 | catch | The moon comes out; the sky goes dark | Harp sweep through G Lydian to a shimmering chord |
-| 14–17 | 0:26 | wonder | The moon in the bucket lights his face | The tune on glockenspiel, high harp, soft strings |
-| 18–20 | 0:34 | dimming | It fades like a fish out of water | The tune in minor on clarinet, thinning to a suspension |
-| 21 | 0:40 | release | He tips it back | The harp sinks through A7 |
-| 22 | 0:42 | darkness | A held beat of darkness | Only the sea |
-| 23–24 | 0:44 | rise | The moon rises | C to D, the clarinet reaching up the opening sixth |
-| 25–28 | 0:48 | finale | Silver light, a fish, the cat | The tune's second half in E, clarinet and violins |
-| 29–30 | 0:56 | coda | The last shot mirrors the first | The rocking figure in E; the tune reaches up and settles |
+| 1 | 0:00 | intro | Night sea, the float in the moon's reflection | The piano's bounce and a plucked bass |
+| 2–9 | 0:01.5 | tune | Nothing bites | Clarinet tune over the piano; the violin weaves below |
+| 10–11 | 0:13.5 | doze | He dozes off | A lazy falling clarinet line over slower piano |
+| 12 | 0:16.5 | tug | A tug on the line | Everything stops for two plucks and a low piano jolt |
+| 13–15 | 0:18 | haul | He hauls on the snagged reflection | Driving plucked strings, piano stabs, a climbing violin |
+| 16 | 0:22.5 | catch | The moon comes out; the sky goes dark | Harp sweep through G Lydian to a shimmering chord |
+| 17–21 | 0:24 | wonder | The moon in the bucket lights his face | The tune in octaves on high piano over soft strings |
+| 22–25 | 0:31.5 | dimming | It fades like a fish out of water | The violin sings the tune in minor, ending unresolved |
+| 26 | 0:37.5 | release | He tips it back | The harp sinks through A7 |
+| 27 | 0:39 | darkness | A held beat of darkness | Only the sea |
+| 28–30 | 0:40.5 | rise | The moon rises | C, D and B lead to E; the clarinet reaches up the opening sixth |
+| 31–36 | 0:45 | finale | Silver light, a fish, the cat | The tune's second half in E, violin above clarinet; a leaping piano run and a plucked ta-dum |
+| 37–40 | 0:54 | coda | The last shot mirrors the first | The piano's lilt in E; the tune reaches up and settles |
 
-The assistant cannot listen, so v001 was checked by measurement; Olof's listen is the verdict:
+The assistant cannot listen, so v002 was checked by measurement; Olof's listen is the verdict:
 
-- **The tune:** pitch tracking of the dry clarinet recording matches all 52 written notes within 7 cents. Where the glockenspiel's ringing confused the tracker, a spectrum at each note confirmed it.
-- **The shape:** loudness per passage follows the story (momentary LUFS): intro −22.5, lullaby −17.1, tug −17.5, haul −16.4, catch −13.0, wonder −16.6, dimming −20.9, release −19.4, darkness −27.4, rise −15.1, finale −14.7, coda −21.6.
-- **Master:** −16 LUFS integrated, −1.5 dB peak, loudness range 6.9 LU. That is quieter than the usual −14 for Reels, suiting a calm film.
+- **The tune:** pitch tracking of the dry clarinet matches all 53 of its notes. The solo violin matches 34 of 37; at the other three, high in the finale, the tracker hears an octave low, and a spectrum shows the written note as the strongest pitch.
+- **The shape:** integrated loudness per passage (LUFS): intro −18.5, tune −15.2, doze −18.7, tug −17.5, haul −14.5, catch −14.1, wonder −20.0, dimming −19.2, release −19.8, darkness −28.7, rise −14.5, finale −14.2, coda −19.8.
+- **Master:** −16 LUFS integrated with a −2 dBFS sample peak: one fixed gain and a fast limiter for rare transients, so each passage keeps its level relative to the others. That is quieter than the usual −14 for Reels, suiting a calm film.
 
-The library's file names number octaves one lower than scientific pitch, except the harp's, so samples are mapped by sounding pitch, checked by spectrum analysis; one clarinet file sounds a semitone off its name. Its instruments are recorded at levels up to 19 dB apart and are calibrated to a common level before mixing.
+The library's file names number octaves one lower than scientific pitch, except the harp's and the solo violin's, so samples are mapped by sounding pitch, checked by spectrum analysis; one clarinet file sounds a semitone off its name. Its instruments are recorded at levels up to 19 dB apart and are calibrated to a common level before mixing.
 
 ## Plan
 
@@ -110,7 +111,7 @@ The library's file names number octaves one lower than scientific pitch, except 
 | Premise | The Moon Fisher, chosen 2026-09-29 |
 | Brief | Approved 2026-09-29 |
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
-| Sound | A score composed for the film (v001); awaiting Olof's listen |
+| Sound | A score composed for the film: v001 too slow and sleepy; v002 livelier, awaiting Olof's listen |
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
 | Storyboard contact sheet | Not started |
 | Asset register | Not started |
@@ -124,8 +125,9 @@ From this directory:
 ```sh
 npm ci
 npm run samples          # the recorded instruments → samples/ (about 120 MB, ignored by Git)
-npm run score            # the score → public/score.wav, about 10 s; --stem clarinet for a dry check
-npm run score:review -- v002   # a versioned copy of the score and its review video → renders/score/v002
+npm run score            # the score → public/score.wav, about 10 s; --stem clarinet renders one instrument dry
+uv run --script scripts/check-tune.py clarinet   # pitch-track a dry stem against the notes the score scheduled
+npm run score:review -- v003   # a versioned copy of the score and its review video → renders/score/v003
 npm run preview          # fast PNG previews of every scene, without Remotion → renders/preview
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
