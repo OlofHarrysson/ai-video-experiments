@@ -475,51 +475,75 @@ function payoff(s: Score) {
     );
   });
 
-  // Bar 35, a fish leaps and lands in the boat; bar 36, the cat has it.
+  // Bars 35–36, the tune's last phrase once more, a little softer. A fish
+  // leaps up the B chord and lands on the home note; the cat has it.
+  s.tune("clarinet", 35, 6, 8, { transpose: 2, velocity: 0.82 });
+  s.tune("violin", 35, 6, 8, { transpose: 14, velocity: 0.56 });
+  s.bounce(35, "A", 0.6, 0, 3);
+  s.bounce(35, "B", 0.6, 3, 3);
+  s.bounce(36, "E", 0.52);
+  s.play("bassPizz", 35, [
+    [0, "A1", 3, 0.64],
+    [3, "B1", 3, 0.62],
+  ]);
+  s.pulse(36, "E", 0.56);
+  s.root(35, "A", 0.4, 3);
+  s.root(35, "B", 0.4, 3, 3);
+  s.root(36, "E", 0.38);
+  s.play("violins", 35, [
+    [0, "C#5", 3, 0.3],
+    [0, "E5", 3, 0.3],
+    [3, "D#5", 3, 0.3],
+    [3, "F#5", 3, 0.3],
+  ]);
+  s.play("violins", 36, [
+    [0, "B4", 6, 0.28],
+    [0, "E5", 6, 0.28],
+  ]);
   s.play("piano", 35, [
-    [0, "E5", 0.5, 0.5],
-    [0.5, "G#5", 0.5, 0.52],
-    [1, "B5", 0.5, 0.54],
-    [1.5, "E6", 1.5, 0.56],
+    [3, "B5", 0.5, 0.5],
+    [3.5, "D#6", 0.5, 0.52],
+    [4, "F#6", 0.5, 0.54],
+    [4.5, "B6", 1.5, 0.56],
   ]);
-  s.play("celloPizz", 35, [[4, "E3", 1, 0.66]]);
-  s.bounce(35, "E", 0.44);
-  s.pulse(35, "E", 0.5);
-  s.play("clarinet", 36, [
-    [0, "G#5", 1, 0.6],
-    [1, "E5", 2, 0.58],
-  ]);
-  s.play("celloPizz", 36, [
-    [4, "B2", 1, 0.55],
-    [5, "E3", 1, 0.6],
-  ]);
-  s.bounce(36, "E", 0.4);
+  s.play("celloPizz", 36, [[0, "E3", 1, 0.6]]);
 
-  // Bars 37–40, the coda: the boat's lilt, the tune reaching up once more,
-  // and a last high note like a star.
-  s.flow(37, "E", 0.34);
-  s.flow(38, "A", 0.3);
-  s.flow(39, "E", 0.26);
+  // Bars 37–40, the coda: the piano's lilt carries on, quieter; the tune
+  // reaches up once more and settles; a plucked ta-dum and a last high note
+  // like a star.
+  s.bounce(37, "E", 0.42);
+  s.bounce(38, "A", 0.36);
   s.pulse(37, "E", 0.45);
   s.pulse(38, "A", 0.4);
+  s.root(37, "E", 0.3);
+  s.root(38, "A", 0.26);
   s.play("clarinet", 37, [
-    [0, "B4", 3, 0.54],
-    [3, "G#5", 3, 0.52],
+    [0, "B4", 3, 0.56],
+    [3, "G#5", 3, 0.54],
   ]);
   s.play("clarinet", 38, [
-    [0, "F#5", 2, 0.46],
-    [2, "E5", 4, 0.44],
+    [0, "F#5", 2, 0.48],
+    [2, "E5", 4, 0.46],
   ]);
-  s.play("violin", 39, [[0, "B5", 6, 0.3]]);
-  s.root(39, "E", 0.22, 12);
-  s.play("piano", 40, [
-    [0, "E2", 6, 0.3],
-    [0.25, "B2", 6, 0.26],
-    [0.5, "E3", 6, 0.26],
-    [0.75, "G#3", 6, 0.24],
-    [1, "B3", 6, 0.24],
-    [3, "E6", 3, 0.3],
+  s.play(
+    "piano",
+    39,
+    CHORDS.B.chord.map((n): Note => [0, n, 2, 0.24]),
+  );
+  s.play("celloPizz", 39, [
+    [0, "B2", 1, 0.5],
+    [3, "E3", 1, 0.56],
   ]);
+  s.play("piano", 39, [
+    [3, "E2", 9, 0.32],
+    [3.2, "B2", 9, 0.28],
+    [3.4, "E3", 9, 0.28],
+    [3.6, "G#3", 9, 0.26],
+    [3.8, "B3", 9, 0.26],
+  ]);
+  s.play("violin", 39, [[3, "B5", 9, 0.3]]);
+  s.play("cello", 39, [[3, "E2", 9, 0.24]]);
+  s.play("piano", 40, [[1, "E6", 5, 0.28]]);
 }
 
 // The sea: quiet under the music, alone in the silent bar, gone at the end.
