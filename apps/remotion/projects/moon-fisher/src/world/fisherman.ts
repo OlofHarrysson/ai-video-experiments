@@ -110,6 +110,28 @@ export const POSES = {
     },
     eyes: "open",
   },
+  // Awake and fishing: sitting up, rod held out in both hands, watching the
+  // float.
+  fish: {
+    angles: {
+      spine: -80,
+      chest: -68,
+      head: -48,
+      upperArm: 75,
+      forearm: -5,
+      hand: -15,
+      farUpperArm: 72,
+      farForearm: -8,
+      farHand: -15,
+    },
+    eyes: "open",
+  },
+  // Still holding the bucket, looking up at the empty sky.
+  lookUp: {
+    angles: { head: -100 },
+    eyes: "open",
+    farHandOnProp: [64, -29.5],
+  },
 } satisfies Record<string, PoseDef>;
 
 export type FishermanPose = keyof typeof POSES;

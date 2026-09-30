@@ -104,6 +104,35 @@ The assistant cannot listen, so v003 was checked by measurement before Olof's li
 
 The library's file names number octaves one lower than scientific pitch, except the harp's and the solo violin's, so samples are mapped by sounding pitch, checked by spectrum analysis; one clarinet file sounds a semitone off its name. Its instruments are recorded at levels up to 19 dB apart and are calibrated to a common level before mixing.
 
+## Storyboard
+
+v001, 2026-09-30, awaits Olof's review. Eighteen shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v001/storyboard.png` shows one panel per shot. Panels use the placeholder assets drawn so far. Where a pose does not exist yet (the cat's reaching paw and pounce, his smile), the caption carries the action.
+
+| Shot | Bars | Time | Framing | What happens | Sound |
+| --- | --- | --- | --- | --- | --- |
+| 01 | 1–4 | 0:00 | Wide | **The boat under the moon.** A tiny boat in the moon's silver path. The float bobs in the moon's reflection. | Intro, then the tune. The sea. |
+| 02 | 5–7 | 0:06 | Medium | **Nothing bites.** He waits with the rod out; the cat watches the float. | The tune. A creak of the boat. |
+| 03 | 8–9 | 0:10.5 | Close | **The float in the moon.** The float rides the moon's wobbling reflection. | The tune ends. Water lapping. |
+| 04 | 10–11 | 0:13.5 | Medium | **He dozes off.** His head sinks; the hat slides over his eyes. | The doze: a lazy clarinet. |
+| 05 | 12 | 0:16.5 | Close | **A tug.** The float plunges under; the reflection shatters. | The tug: two plucks. A plop, the reel clicks. |
+| 06 | 13–15 | 0:18 | Medium | **He hauls.** He jolts awake and hauls; the rod bends double. The cat startles. | The haul: driving plucks. The reel whirs. |
+| 07 | 16 | 0:22.5 | Wide | **The moon comes out of the water.** A glowing moon bursts from the sea on his line. The one in the sky is gone. | The catch: the harp sweeps up. A great splash. |
+| 08 | 17–18 | 0:24 | Medium | **The moon in his bucket.** The moon glows in the bucket, lighting his face from below. | Wonder: the tune on high piano. Drips. |
+| 09 | 19–20 | 0:27 | Close | **Wonder.** His face in the moonlight; a slow smile. | Wonder. |
+| 10 | 21 | 0:30 | Close | **The cat reaches.** The cat stretches a paw toward the glow. | The violin answers. A curious chirp. |
+| 11 | 22–23 | 0:31.5 | Close | **It dims.** The moon's glow flickers and fades, like a fish out of water. | The dimming: the tune in minor on the violin. |
+| 12 | 24–25 | 0:34.5 | Medium | **The empty sky.** He looks up at the black, moonless sky, then back at the fading moon. | The dimming ends, unresolved. |
+| 13 | 26 | 0:37.5 | Medium | **He lets it go.** He tips the bucket over the side; the moon slides into the sea. | The release: the harp sinks. A soft plop. |
+| 14 | 27 | 0:39 | Wide | **Darkness.** Only the stars and the boat's faint outline. | Only the sea. |
+| 15 | 28–30 | 0:40.5 | Wide | **The moon rises.** The sea glows from below; the moon rises out of the water beside the boat and climbs into the sky. | The rise: the clarinet reaches up. A swelling shimmer. |
+| 16 | 31–34 | 0:45 | Wide | **Silver light.** The moon rides high again. Fish leap through its silver path. | The finale: home in E. Splashes. |
+| 17 | 35–36 | 0:51 | Medium | **A gift.** One fish leaps into the boat; the cat is on it at once. | The last phrase again. A flop, a happy mew. |
+| 18 | 37–40 | 0:54 | Wide | **Like the beginning.** The first shot again: the moon high, its reflection by his float. He smiles; the cat has its fish. | The coda, the plucked ta-dum and a last high note. The sea. |
+
+- **Framing:** four setups do most of the work. The wide shot holds the moon high over a small boat; the medium shot is the style frame's; close-ups frame his face, the cat, the bucket or the float in the water. Most shots are locked off; the camera stays still and the story moves.
+- **Mirror:** shot 18 repeats shot 01's framing, so the ending visibly returns to the beginning.
+- **Motion:** each shot is a scene spec over time in `src/storyboard/shots.ts`, so the animatic plays the same shots. A few already move: the moon rises out of the water in 07 and 15, the glow fades in 11, and the bucket tips in 13.
+
 ## Plan
 
 | Step | Status |
@@ -113,7 +142,7 @@ The library's file names number octaves one lower than scientific pitch, except 
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
 | Sound | Score v003 approved 2026-09-30, after v001 (too sleepy) and v002 (an odd ending) |
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
-| Storyboard contact sheet | Not started |
+| Storyboard contact sheet | v001: 18 shots cut to the score; awaiting Olof's review |
 | Asset register | Not started |
 | Animatic | Not started |
 | Asset upgrade passes | Later phase |
@@ -129,6 +158,8 @@ npm run score            # the score → public/score.wav, about 10 s; --stem cl
 uv run --script scripts/check-tune.py clarinet   # pitch-track a dry stem against the notes the score scheduled
 npm run score:review -- v004   # a versioned copy of the score and its review video → renders/score/v004
 npm run preview          # fast PNG previews of every scene, without Remotion → renders/preview
+npx tsx scripts/storyboard-preview.ts   # fast storyboard panels and a tiled sheet → renders/preview/storyboard
+npm run storyboard -- v002   # the captioned storyboard sheet through Remotion → renders/storyboard/v002
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)
@@ -142,6 +173,7 @@ npm run lint             # ESLint with Remotion's rules, then tsc
 - `src/pixel/`: the palette, the low-resolution indexed image and its camera, lit and blended shapes, detail strokes, the skeleton (`rig.ts`), the film's density and the Remotion canvas that enlarges it.
 - `src/world/`: the film's assets behind fixed interfaces, such as `fisherman({ x, y, pose, facing })`, `cat({ x, y, pose, facing })` and `bucket({ x, rimY, moon })`, plus the boat, the moon, sky, sea and light in the air. A better version of an asset replaces its drawing without touching the scenes.
 - `src/stills/`: the boat scene every shot is drawn from (`boatScene.ts`), the key image, the poses, the motion test and the Remotion component.
+- `src/storyboard/`: the film's shots on the score's bars (`shots.ts`) and the storyboard sheet.
 - `src/audio/`: the score (`score.ts`), its instruments and their calibration (`instruments.ts`, `samples.json`), and the browser entry that renders it offline.
 - `src/timing.ts`: the beat grid and the story's passages, shared by the score and the picture. `src/ScoreMap.tsx` is the score's review video.
 - `scripts/`: previews without Remotion, versioned renders, sample download and pitch measurement, the score renderer and its tune check, the palette strip and a small PNG encoder.

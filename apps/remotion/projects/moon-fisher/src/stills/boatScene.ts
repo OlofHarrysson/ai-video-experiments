@@ -4,10 +4,11 @@ import {
   type Light,
   type LitScene,
   type LitStyle,
+  type Part,
 } from "../pixel/lit";
 import { C } from "../pixel/palette";
 import { IDENTITY, Pix, type Camera } from "../pixel/pix";
-import type { Vec2 } from "../pixel/shapes";
+import { ellipse, type Vec2 } from "../pixel/shapes";
 import {
   BOAT,
   boatHull,
@@ -17,6 +18,7 @@ import {
 } from "../world/boat";
 import { bucket, moonCenter, type BucketProps } from "../world/bucket";
 import { cat, type CatProps } from "../world/cat";
+import { drawSplash, fishParts, type FishProps } from "../world/fish";
 import {
   fisherman,
   type Feature,
@@ -39,8 +41,18 @@ export const STYLE: LitStyle = { dither: 0, outline: true, cleanup: true };
 
 export type SceneSpec = {
   camera: Camera;
-  // The moon in the sky, in design-frame units, or caught in the bucket.
-  moon: { in: "sky"; x: number; y: number; r: number } | { in: "bucket" };
+  // Where the moon is: in the sky (in design-frame units), caught in the
+  // bucket, loose in the world (world units; `waterline` hides the part
+  // still under the sea), or gone.
+  moon:
+    | { in: "sky"; x: number; y: number; r: number }
+    | { in: "bucket" }
+    | { in: "world"; x: number; y: number; r: number; waterline?: number }
+    | { in: "gone" };
+  // How brightly a caught moon still shines, 0 to 1.
+  glow?: number;
+  // Where the moon's reflection lies on the water, in world units.
+  reflection?: Vec2;
   fisherman: FishermanPose | PoseDef;
   // A bucket standing on his knees, or held in his hands and tipped.
   bucket?:
@@ -60,6 +72,10 @@ export type SceneSpec = {
   // Something bright caught on the hook, glowing in the water; strength
   // from 0 to 1.
   catchGlow?: { at: Vec2; strength: number };
+  splash?: { at: Vec2; size: number };
+  fish?: FishProps[];
+  // Light spreading under the sea, from 0 to 1.
+  seaGlow?: { at: Vec2; radius: number; strength: number };
 };
 
 const DARK_SKY: Band[] = [
@@ -89,6 +105,12 @@ const drawFeatures = (pix: Pix, features: Feature[]) => {
   }
 };
 
+// A red-and-white float, a little over two world units tall.
+const floatParts = ([x, y]: Vec2): Part[] => [
+  { shape: ellipse(x, y, 1.1, 1.3), mat: "beard", lift: 0.5 },
+  { shape: ellipse(x, y - 1.4, 1, 1.1), mat: "cat", lift: 0.45 },
+];
+
 // The boat on the night sea, with the fisherman, the cat and whatever the
 // moon is doing. Every shot of the film is one of these with its own spec;
 // `frame` animates the ambient life, and frame 0 is the still.
@@ -100,6 +122,8 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   pix.cam = camera;
   const horizon = pix.screenY(HORIZON);
   const skyMoon = spec.moon.in === "sky" ? spec.moon : null;
+  const looseMoon = spec.moon.in === "world" ? spec.moon : null;
+  const glow = spec.glow ?? 1;
 
   const man = fisherman({
     x: SEAT[0],
@@ -107,20 +131,25 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     pose: spec.fisherman,
     facing: "right",
   });
+  const inBucket = spec.moon.in === "bucket";
   const pail: BucketProps | null = !spec.bucket
     ? null
     : spec.bucket.at === "knees"
-      ? { x: spec.bucket.x, rimY: spec.bucket.rimY, moon: !skyMoon }
+      ? { x: spec.bucket.x, rimY: spec.bucket.rimY, moon: inBucket }
       : {
           x: man.grip[0] + spec.bucket.offset[0],
           rimY: man.grip[1] + spec.bucket.offset[1],
-          moon: !skyMoon,
+          moon: inBucket,
           tilt: spec.bucket.tilt,
         };
-  const caught = pail?.moon ? moonCenter(pail) : null;
+  const caught = pail?.moon
+    ? moonCenter(pail)
+    : looseMoon
+      ? ([looseMoon.x, looseMoon.y] as const)
+      : null;
 
   // Moonlight from the sky comes from behind the boat and rims everything;
-  // the caught moon lights the boat from inside.
+  // a caught or loose moon lights the boat from where it is.
   const lights: Light[] = [];
   if (skyMoon) {
     const fx = (SEAT[0] + 20 - camera.x) * camera.zoom + camera.sx;
@@ -142,15 +171,17 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
         x: caught[0],
         y: caught[1],
         z: 3,
-        strength: 1.8,
+        strength: 1.8 * glow,
         radius: 120,
         falloff: 1.1,
         wrap: 0.3,
-        minElev: -0.75,
+        minElev: inBucket ? -0.75 : -1.1,
         soft: 0.2,
       },
       { kind: "dir", dir: [0, -1, 0.7], strength: 0.1 },
     );
+  } else {
+    lights.push({ kind: "dir", dir: [0, -1, 0.6], strength: 0.14 });
   }
   const scene: LitScene = { lights, ambient: skyMoon ? 0.07 : 0.04 };
 
@@ -170,6 +201,17 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     seed: "key-sea",
     swell: skyMoon ? 0.45 : 0.25,
   });
+  const seaRow = Math.max(0, Math.floor(horizon * pix.k) + 1);
+  if (spec.seaGlow) {
+    const { at, radius, strength } = spec.seaGlow;
+    drawHalo(pix, {
+      x: at[0],
+      y: at[1],
+      radius,
+      steps: 4 * strength,
+      fromRow: seaRow,
+    });
+  }
 
   if (skyMoon) {
     pix.cam = IDENTITY;
@@ -192,29 +234,32 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       seed: "moon-path",
       step,
     });
-    // Mirrored as far below the horizon as the moon stands above it.
-    drawMoonReflection(pix, {
-      x: skyMoon.x,
-      y: 2 * horizon - skyMoon.y,
-      r: skyMoon.r,
-      seed: "moon-reflection",
-      step,
-    });
     pix.cam = camera;
+    if (spec.reflection) {
+      drawMoonReflection(pix, {
+        x: spec.reflection[0],
+        y: spec.reflection[1],
+        r: 7.5,
+        seed: "moon-reflection",
+        step,
+      });
+    }
   } else if (caught) {
-    drawShaft(pix, {
-      x: caught[0],
-      y: caught[1] - 6,
-      spread: 0.3,
-      length: 200,
-      steps: 2.2,
-    });
+    if (inBucket) {
+      drawShaft(pix, {
+        x: caught[0],
+        y: caught[1] - 6,
+        spread: 0.3,
+        length: 200,
+        steps: 2.2 * glow,
+      });
+    }
     const breath = Math.sin((2 * Math.PI * step) / 16);
     drawHalo(pix, {
       x: caught[0],
       y: caught[1],
-      radius: 46 + 2 * breath,
-      steps: 3.2 + 0.25 * breath,
+      radius: (46 + 2 * breath) * (0.5 + 0.5 * glow),
+      steps: (3.2 + 0.25 * breath) * glow,
     });
   }
 
@@ -232,7 +277,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     drawLit(pix, kitty.body, scene, STYLE);
     drawStrokes(pix, kitty.strokes);
   }
-  if (pail) drawLit(pix, bucket(pail), scene, STYLE);
+  if (pail) drawLit(pix, bucket({ ...pail, glow }), scene, STYLE);
   const tip = spec.rod
     ? drawRod(pix, {
         grip: man.grip,
@@ -261,13 +306,39 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   pix.drawingObjects = false;
 
   reflectWater(pix, { waterline: BOAT.waterline, seed: "key-water", step });
+  // Things out on the water in front of the boat are drawn over the
+  // reflections.
+  if (looseMoon) {
+    drawLit(
+      pix,
+      moonParts({
+        x: looseMoon.x,
+        y: looseMoon.y,
+        radius: looseMoon.r,
+        glow,
+        waterline: looseMoon.waterline,
+      }),
+      scene,
+      STYLE,
+    );
+  }
+  for (const f of spec.fish ?? []) drawLit(pix, fishParts(f), scene, STYLE);
   if (spec.float) {
-    // A red-and-white float, rising and dipping a pixel with the ripples.
-    const fx = pix.px(spec.float[0]);
-    const fy = pix.py(spec.float[1]) - (step % 6 < 3 ? 1 : 0);
-    pix.set(fx, fy - 2, C.ginger2);
-    pix.set(fx, fy - 1, C.ginger1);
-    pix.set(fx, fy, C.silver4);
+    // The float rises and dips a little with the ripples.
+    const dip = step % 6 < 3 ? 0 : 0.8;
+    drawLit(
+      pix,
+      floatParts([spec.float[0], spec.float[1] + dip]),
+      scene,
+      STYLE,
+    );
+  }
+  if (spec.splash) {
+    drawSplash(pix, {
+      at: spec.splash.at,
+      size: spec.splash.size,
+      seed: `splash-${step}`,
+    });
   }
   if (spec.catchGlow) {
     const { at, strength } = spec.catchGlow;

@@ -3,14 +3,15 @@ import { KEY_IMAGE } from "./keyImage";
 
 // The moon high in the sky over the bow. Its reflection lies below the boat,
 // right where his line goes in.
-export const SKY_MOON = { in: "sky", x: 195, y: 55, r: 11 } as const;
-export const REFLECTION = [187, 443] as const;
+export const SKY_MOON = { in: "sky", x: 173, y: 55, r: 11 } as const;
+export const REFLECTION = [172, 443] as const;
 
 // Setup: he has dozed off; the float bobs in the moon's reflection.
 export const DOZE: SceneSpec = {
   camera: KEY_IMAGE.camera,
   moon: SKY_MOON,
   fisherman: "doze",
+  reflection: REFLECTION,
   rod: { angle: -35, length: 70, bend: 3, line: { to: REFLECTION, slack: 8 } },
   float: REFLECTION,
 };
@@ -20,6 +21,7 @@ export const HAUL: SceneSpec = {
   camera: KEY_IMAGE.camera,
   moon: SKY_MOON,
   fisherman: "haul",
+  reflection: REFLECTION,
   rod: { angle: -52, length: 72, bend: 18, line: { to: REFLECTION, slack: 0 } },
   catchGlow: { at: REFLECTION, strength: 1 },
 };

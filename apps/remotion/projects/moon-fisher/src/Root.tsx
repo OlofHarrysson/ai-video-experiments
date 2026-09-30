@@ -1,5 +1,6 @@
 import { Composition, Folder, Still } from "remotion";
 import { ScoreMap } from "./ScoreMap";
+import { Storyboard, STORYBOARD_SIZE } from "./storyboard/Storyboard";
 import { SceneFrame } from "./stills/StyleFrame";
 import { DURATION_FRAMES } from "./timing";
 
@@ -16,6 +17,7 @@ export const RemotionRoot: React.FC = () => (
       fps={FPS}
       durationInFrames={DURATION_FRAMES}
     />
+    <Still id="Storyboard" component={Storyboard} {...STORYBOARD_SIZE} />
     <Folder name="Style-frame">
       <Still
         id="StyleFrame"

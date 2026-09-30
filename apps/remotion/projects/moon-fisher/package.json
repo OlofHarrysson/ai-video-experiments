@@ -12,7 +12,8 @@
     "poses": "node scripts/poses.mjs",
     "samples": "node scripts/fetch-samples.mjs",
     "score": "node scripts/score.mjs",
-    "score:review": "node scripts/score-review.mjs"
+    "score:review": "node scripts/score-review.mjs",
+    "storyboard": "node scripts/storyboard.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",

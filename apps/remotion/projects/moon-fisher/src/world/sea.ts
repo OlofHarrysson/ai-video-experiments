@@ -84,7 +84,7 @@ export const drawMoonPath = (
 };
 
 export type MoonReflectionProps = {
-  // Center and radius, in design-frame units.
+  // Center and radius, in world units.
   x: number;
   y: number;
   r: number;
@@ -99,19 +99,20 @@ export const drawMoonReflection = (
   { x, y, r, seed, step = 0 }: MoonReflectionProps,
 ): void => {
   const ry = r * 0.75;
-  for (let py = Math.floor((y - ry) * pix.k); py <= (y + ry) * pix.k; py++) {
-    const v = ((py + 0.5) / pix.k - y) / ry;
+  const ripple = Math.max(2, Math.round(1.5 * pix.s));
+  for (let py = pix.py(y - ry); py <= pix.py(y + ry); py++) {
+    const v = (pix.wy(py) - y) / ry;
     if (Math.abs(v) >= 1) continue;
-    const band = Math.floor(py / 2);
-    if (random(`${seed}-gap-${band}-${Math.floor(step / 3)}`) < 0.2) continue;
+    const band = Math.floor(py / ripple);
+    if (
+      py % ripple === ripple - 1 &&
+      random(`${seed}-gap-${band}-${Math.floor(step / 3)}`) < 0.35
+    )
+      continue;
     const half = r * Math.sqrt(1 - v * v);
-    const shift = Math.round(Math.sin(band * 1.7 + step * 0.6) * 1.3 * pix.k);
-    for (
-      let px = Math.floor((x - half) * pix.k);
-      px <= (x + half) * pix.k;
-      px++
-    ) {
-      const u = ((px + 0.5) / pix.k - x) / half;
+    const shift = Math.round(Math.sin(band * 1.7 + step * 0.6) * 0.9 * pix.s);
+    for (let px = pix.px(x - half); px <= pix.px(x + half); px++) {
+      const u = (pix.wx(px) - x) / half;
       pix.set(px + shift, py, Math.abs(u) > 0.8 ? C.silver1 : C.silver3);
     }
   }

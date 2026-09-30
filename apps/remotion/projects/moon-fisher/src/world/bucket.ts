@@ -11,6 +11,8 @@ export type BucketProps = {
   moon: boolean;
   // Degrees the bucket is tipped, clockwise, about its middle.
   tilt?: number;
+  // How brightly the moon inside still shines, 0 to 1.
+  glow?: number;
 };
 
 export const MOON_RADIUS = 12;
@@ -54,7 +56,7 @@ const band = (x: number, y: number, rx: number, width: number): Vec2[] => [
 // A tin pail seen from the side and a little above. With the moon inside,
 // its opening is the scene's light source.
 export const bucket = (props: BucketProps): Part[] => {
-  const { x, rimY, moon, tilt = 0 } = props;
+  const { x, rimY, moon, tilt = 0, glow = 1 } = props;
   const lit = moon ? 1 : 0;
   const bottom = rimY + HEIGHT;
   const tin = { cx: x, rx: RX };
@@ -62,7 +64,7 @@ export const bucket = (props: BucketProps): Part[] => {
   const opening: Part = {
     shape: ellipse(x, rimY, RX, RY),
     mat: "tin",
-    emit: () => 0.3 + 0.5 * lit,
+    emit: () => 0.3 + 0.5 * lit * glow,
   };
   const pail: Part[] = [
     {
@@ -103,7 +105,7 @@ export const bucket = (props: BucketProps): Part[] => {
     {
       shape: poly(band(x, rimY - 0.6, RX + 0.4, 1.2)),
       mat: "tin",
-      emit: () => 0.3 + 0.62 * lit,
+      emit: () => 0.3 + 0.62 * lit * glow,
     },
   ];
   const [upright, tipped] = pivots(props);
@@ -119,7 +121,7 @@ export const bucket = (props: BucketProps): Part[] => {
         };
   return [
     tip(opening),
-    ...(moon ? moonParts({ x: mx, y: my, radius: MOON_RADIUS }) : []),
+    ...(moon ? moonParts({ x: mx, y: my, radius: MOON_RADIUS, glow }) : []),
     ...pail.map(tip),
   ];
 };

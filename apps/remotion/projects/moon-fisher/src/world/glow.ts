@@ -5,13 +5,25 @@ import { Pix, quantize } from "../pixel/pix";
 // palette ladder, so glows stay inside the palette and dither naturally.
 // Positions and sizes are in world units.
 
-export type HaloProps = { x: number; y: number; radius: number; steps: number };
+export type HaloProps = {
+  x: number;
+  y: number;
+  radius: number;
+  steps: number;
+  // Only brighten pixel rows from this one down, such as the sea below the
+  // horizon.
+  fromRow?: number;
+};
 
 export const drawHalo = (
   pix: Pix,
-  { x, y, radius, steps }: HaloProps,
+  { x, y, radius, steps, fromRow = 0 }: HaloProps,
 ): void => {
-  for (let py = pix.py(y - radius); py <= pix.py(y + radius); py++) {
+  for (
+    let py = Math.max(fromRow, pix.py(y - radius));
+    py <= pix.py(y + radius);
+    py++
+  ) {
     for (let px = pix.px(x - radius); px <= pix.px(x + radius); px++) {
       const d = Math.hypot(pix.wx(px) - x, pix.wy(py) - y) / radius;
       if (d >= 1) continue;
