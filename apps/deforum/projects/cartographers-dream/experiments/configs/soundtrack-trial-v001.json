@@ -1,0 +1,319 @@
+{
+  "date": "2026-09-30",
+  "estimated_usd": 1.554,
+  "jobs": [
+    {
+      "id": "acoustic",
+      "endpoint_id": "elevenlabs/music/v2.5",
+      "input": {
+        "composition_plan": {
+          "chunks": [
+            {
+              "text": "[Opening ink]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental chamber score",
+                "felt piano repeating four-note motif",
+                "soft pizzicato strings",
+                "delicate celesta",
+                "flowing 6/8 at 96 bpm",
+                "curious and intimate",
+                "gentle forward motion",
+                "no percussion"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Mineral cavern]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental",
+                "same piano motif",
+                "low bowed cello",
+                "glassy celesta echoes",
+                "deeper harmony",
+                "mysterious but inviting",
+                "continuous flowing 6/8"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Paper unfolding]\n{instrumental}",
+              "duration_ms": 16000,
+              "positive_styles": [
+                "instrumental",
+                "legato strings gradually opening",
+                "piano arpeggios",
+                "woodwind breath",
+                "luminous harmony",
+                "growing sense of space",
+                "same motif and pulse"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[River delta]\n{instrumental}",
+              "duration_ms": 20000,
+              "positive_styles": [
+                "instrumental",
+                "flowing piano arpeggios",
+                "warm strings",
+                "celesta accents",
+                "broad lyrical version of opening motif",
+                "increasing wonder",
+                "continuous gentle momentum"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Floating world]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental",
+                "cello rising into luminous string swell",
+                "piano motif in wider register",
+                "suspended harmony resolving",
+                "largest emotional swell around middle of this passage",
+                "ease intensity toward end"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Quiet coda]\n{instrumental}",
+              "duration_ms": 3000,
+              "positive_styles": [
+                "instrumental",
+                "final soft piano and celesta chord",
+                "warm consonant resolution",
+                "strings release",
+                "natural ringing decay",
+                "clear complete ending"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            }
+          ]
+        },
+        "seed": 9302026,
+        "output_format": "mp3_48000_320"
+      }
+    },
+    {
+      "id": "electronic",
+      "endpoint_id": "elevenlabs/music/v2.5",
+      "input": {
+        "composition_plan": {
+          "chunks": [
+            {
+              "text": "[Opening ink]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental cinematic electronica",
+                "warm analog synthesizer",
+                "soft rounded arpeggiator",
+                "slow pulsing bass",
+                "flowing 6/8 at 96 bpm",
+                "curious and intimate",
+                "subtle brushed electronic percussion",
+                "no dance drop"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Mineral cavern]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental",
+                "same synth motif",
+                "deep warm bass drone",
+                "glasslike plucked synth echoes",
+                "wide spacious reverb",
+                "mysterious but inviting",
+                "continuous soft pulse"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Paper unfolding]\n{instrumental}",
+              "duration_ms": 16000,
+              "positive_styles": [
+                "instrumental",
+                "warm synth pads gradually opening",
+                "gently brighter arpeggios",
+                "luminous suspended harmony",
+                "growing space",
+                "same motif and pulse"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[River delta]\n{instrumental}",
+              "duration_ms": 20000,
+              "positive_styles": [
+                "instrumental",
+                "interweaving soft synth arpeggios",
+                "warm sustained bass",
+                "subtle ticking percussion",
+                "expansive melodic version of opening motif",
+                "increasing wonder",
+                "no heavy drums"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Floating world]\n{instrumental}",
+              "duration_ms": 12000,
+              "positive_styles": [
+                "instrumental",
+                "slow rising analog synth swell",
+                "opening motif in a higher register",
+                "soft sub bass",
+                "weightless spacious harmony resolving",
+                "largest emotional swell around middle of this passage",
+                "pulse gradually recedes"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            },
+            {
+              "text": "[Quiet coda]\n{instrumental}",
+              "duration_ms": 3000,
+              "positive_styles": [
+                "instrumental",
+                "final warm resolving synth chord",
+                "arpeggiator comes to rest",
+                "soft shimmering natural decay",
+                "clear complete ending"
+              ],
+              "negative_styles": [
+                "vocals",
+                "singing",
+                "spoken words"
+              ],
+              "context_adherence": "high"
+            }
+          ]
+        },
+        "seed": 9302026,
+        "output_format": "mp3_48000_320"
+      }
+    },
+    {
+      "id": "water",
+      "endpoint_id": "fal-ai/elevenlabs/sound-effects/v2",
+      "input": {
+        "text": "A gentle stream gradually widening into a distant soft waterfall inside a spacious stone cavern. Water only, smooth airy flowing texture with subtle echoes. Quiet cinematic ambience, no music, no voices, no birds, no sudden splashes or impacts.",
+        "duration_seconds": 14,
+        "prompt_influence": 0.65,
+        "output_format": "mp3_44100_192",
+        "loop": false
+      }
+    },
+    {
+      "id": "paper",
+      "endpoint_id": "fal-ai/elevenlabs/sound-effects/v2",
+      "input": {
+        "text": "A huge sheet of thick handmade paper slowly bending and unfurling in the air. Delicate close paper fibers creaking and brushing, mixed with a soft airy movement. Gentle magical texture, no tearing, no harsh crackling, no impacts, no music, no voices.",
+        "duration_seconds": 8,
+        "prompt_influence": 0.65,
+        "output_format": "mp3_44100_192",
+        "loop": false
+      }
+    },
+    {
+      "id": "orbit",
+      "endpoint_id": "fal-ai/elevenlabs/sound-effects/v2",
+      "input": {
+        "text": "A single delicate glassy shimmer sweeps slowly around a floating object and settles into a soft airy sparkling decay. Subtle and weightless cinematic magic, smooth onset, gentle finish. No impact, no loud whoosh, no melody, no voices.",
+        "duration_seconds": 5,
+        "prompt_influence": 0.65,
+        "output_format": "mp3_44100_192",
+        "loop": false
+      }
+    }
+  ],
+  "mix": {
+    "music_target_lufs": -20,
+    "effects": [
+      {
+        "id": "water",
+        "start": 9,
+        "duration": 14,
+        "target_lufs": -31,
+        "fade_in": 2,
+        "fade_out": 3
+      },
+      {
+        "id": "paper",
+        "start": 60,
+        "duration": 8,
+        "target_lufs": -32,
+        "fade_in": 1.5,
+        "fade_out": 2
+      },
+      {
+        "id": "orbit",
+        "start": 70,
+        "duration": 5,
+        "target_lufs": -31,
+        "fade_in": 0.5,
+        "fade_out": 1.5
+      }
+    ],
+    "master_target_lufs": -18,
+    "master_target_dbtp": -2
+  }
+}

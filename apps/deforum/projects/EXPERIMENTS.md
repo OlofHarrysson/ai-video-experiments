@@ -41,6 +41,8 @@ Grouped by project, alphabetically within each project. New notes should be link
 
 ### cartographers-dream — film and ending
 
+- [Music and sound effects through Fal](cartographers-dream/experiments/soundtrack-trial.md): acoustic and electronic score directions with matched effects; preserved picture, reusable mixing and skill, human listening review pending.
+
 - [The Cartographer’s Dream: production notebook](cartographers-dream/experiments/baseline.md) — [brief](cartographers-dream/BRIEF.md), [paper-world ending](cartographers-dream/experiments/ending-production.md), [revised cut](cartographers-dream/cuts/v002.md), [original cut](cartographers-dream/cuts/v001.md), [first-pass critique](cartographers-dream/experiments/quality-review.md).
 
 ### storm-engine — 2 notes

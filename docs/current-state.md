@@ -1,6 +1,6 @@
 # Current creative and technical state
 
-Snapshot: 2026-09-28 (Europe/Stockholm), after the shape-injection mechanism study. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
+Snapshot: 2026-09-30 (Europe/Stockholm), after the first soundtrack trial. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
 
 ## What we are working toward
 
@@ -9,6 +9,8 @@ Make surreal films with rich imagery, recognizable focal forms and intentional t
 The working method keeps a plan, theme and recurring motifs while adapting the route to each actual painting. Generate a short passage, inspect it, keep what works, and handcraft the next movement from individual controls. Backtracking and branching from a preserved frame are expected. Olof supplies taste and direction; the assistant does the first review and presents a small, understandable shortlist. See the [vision](vision.md) and [review agreement](review-and-feedback.md).
 
 ## Where we are
+
+- **Soundtrack trial (2026-09-30):** [Two 75-second score directions](../apps/deforum/projects/cartographers-dream/experiments/soundtrack-trial.md) add Eleven Music v2.5 music and three sparse ElevenLabs effects through Fal to separate Cartographer previews. Picture packets are unchanged; audio level, duration and decode checks pass. Direct listening and human preference are pending. Estimated generation cost $1.554. The reusable `add-video-soundtrack` skill and local mixer preserve prompts, original tracks and mix receipts; the selected silent v002 stays current.
 
 - **Shape injection in Krea feedback (2026-09-28):** [18 still probes and seven short recurrent clips](../apps/deforum/projects/shape-injection/report.md) test Remotion circles, rings and triangles blended into the previous painting. Shapes become balls, fabric and stone-like arches; blend-only movement can leave old forms behind. The strongest movement result adds an authored local deformation field and reduces blend strength after the first painting. This needs no object detector, regional prompt, depth map or sampler mask. All 131 paintings are verified locally; the owned GPU is deleted, estimated compute $0.65. Human review pending; production film settings remain unchanged.
 
