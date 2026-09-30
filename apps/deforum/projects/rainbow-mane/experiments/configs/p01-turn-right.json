@@ -1,0 +1,111 @@
+{
+  "case": "p01-turn-right",
+  "seed": 9302700,
+  "duration": 12,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/rainbow-mane/exports/v001/o3-comic-volume",
+  "prefix_through": 0,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "three-quarter",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. Close-up, head facing slightly to screen right, both eyes still visible, the far eye narrower. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    },
+    {
+      "at": 2.5,
+      "name": "turning-right",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. The face is now turned farther to screen right, a strong three-quarter view; the near left cheek and left ear are prominent, the far eye is mostly hidden behind the nose, the nose points right. The rainbow crest follows the curve of the top of the skull. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    },
+    {
+      "at": 6,
+      "name": "near-profile",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. The head is almost in RIGHT-FACING SIDE PROFILE. We see the left side of the face, one near eye and a sliver of the far eye beside the nose. The white nose protrudes right, the left ear is toward screen left and the mouth forms a clean profile. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    },
+    {
+      "at": 9,
+      "name": "right-profile",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. Strict right-facing side-profile portrait. A single visible left eye, a single left ear toward screen left, forehead and small nose pointing screen right. The far eye is completely occluded. The rainbow mohawk forms a narrow colored serrated arc over the white skull and down the back of the head. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    },
+    {
+      "at": 2.5,
+      "noise": 0.64
+    },
+    {
+      "at": 6,
+      "noise": 0.7
+    },
+    {
+      "at": 9,
+      "noise": 0.69
+    },
+    {
+      "at": 11.5,
+      "noise": 0.64
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 11.5,
+      "center": [
+        0.9,
+        0.52
+      ],
+      "end": [
+        -0.1,
+        0.03,
+        -0.13926206733350766,
+        0.018
+      ],
+      "velocity_start": [
+        -0.007,
+        0.002,
+        -0.014,
+        0
+      ],
+      "velocity_end": [
+        -0.01,
+        0.002,
+        -0.005,
+        0.002
+      ]
+    }
+  ],
+  "motion_note": {
+    "intent": "Keep facial action readable; ease back slightly and drift the portrait left to make room for the right-facing profile. The physical head turn is a prompt-driven hypothesis, not a claimed 3D warp."
+  }
+}

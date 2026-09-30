@@ -1,0 +1,167 @@
+{
+  "case": "p03-reveal-the-horse",
+  "seed": 9302900,
+  "duration": 33,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/rainbow-mane/exports/v001/p02-becoming-horse",
+  "prefix_through": 240,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "white-horse-head",
+      "prompt": "A beautiful stylized WHITE HORSE in right-facing profile, close on the head and upper neck. One large kind dark eye, long straight equine face, rounded white muzzle and dark nostril, two tall pointed ears and a long muscular arched white neck. A vivid RAINBOW MANE runs from between the ears down the back of the neck, bright colored bristles flowing into short colored ribbons. A recognizable horse, white coat and strong black ink outline. Cinematic punk comic-book animation, white forms with violet Ben-Day dot shadows, cyan rim light, thick black brush-ink contours, textured screen-printed paper and offset color edges. Magenta industrial tunnel behind, acid yellow shards and cyan paint, dark purple shadows. A single coherent head in the center-left, facing screen right. Preserve the rainbow hair crest as the visual connection. No text or lettering."
+    },
+    {
+      "at": 10.5,
+      "name": "reveal-the-neck",
+      "prompt": "A WHITE HORSE with a short rainbow mane, head and long arched neck in right-facing side profile. One dark eye and a long elegant muzzle. The head moves toward the upper right as the view widens. The white neck broadens down toward the left, revealing the muscular shoulder and the beginning of the white chest at the bottom. Red orange yellow green cyan blue violet mane follows the back of the neck. Cinematic punk comic-book animation, dimensional chalk-white forms, violet Ben-Day halftone shadows, cyan rim light, thick rough black brush-ink outlines, textured screen-printed paper and offset color edges. Magenta industrial tunnel and yellow paint shards, cyan accents, a dark violet floor. One single horse with a crisp readable outline and vibrant RAINBOW MANE, no tack, no rider, no lettering."
+    },
+    {
+      "at": 15,
+      "name": "shoulder-and-body",
+      "prompt": "A medium-wide side view of ONE WHITE HORSE facing RIGHT, with a vivid rainbow mane. Its long head is in the upper right, neck slopes down and left into a solid muscular shoulder and a broad long white torso extending toward screen left. The chest and upper front legs are visible below the neck. The body is white like the head. A strong coherent horse silhouette in a magenta tunnel, with dark violet space behind. Cinematic punk comic-book animation, dimensional chalk-white forms, violet Ben-Day halftone shadows, cyan rim light, thick rough black brush-ink outlines, textured screen-printed paper and offset color edges. Magenta industrial tunnel and yellow paint shards, cyan accents, a dark violet floor. One single horse with a crisp readable outline and vibrant RAINBOW MANE, no tack, no rider, no lettering."
+    },
+    {
+      "at": 20,
+      "name": "reveal-the-whole-horse",
+      "prompt": "Wide cinematic side view of a FULL-BODY WHITE HORSE standing on four long white legs, facing RIGHT. Its white head with a long muzzle is upper right, a long arched neck has a vivid rainbow mane, the broad muscular white torso extends toward the left, and the white hindquarters with a rainbow tail are at the left. Four legs and dark small hooves are visible, standing on a violet ground plane. The entire horse from ears to hooves fits inside the frame, with ample space around it. No other animals or people. Cinematic punk comic-book animation, dimensional chalk-white forms, violet Ben-Day halftone shadows, cyan rim light, thick rough black brush-ink outlines, textured screen-printed paper and offset color edges. Magenta industrial tunnel and yellow paint shards, cyan accents, a dark violet floor. One single horse with a crisp readable outline and vibrant RAINBOW MANE, no tack, no rider, no lettering."
+    },
+    {
+      "at": 27,
+      "name": "a-horse-ready-to-move",
+      "prompt": "Wide cinematic shot of one complete WHITE HORSE facing screen right, standing on four grounded legs. A bright rainbow mane and rainbow tail connect its white head and body. Full horse visible from the ear tips to all four hooves with generous space around the silhouette. The horse stands inside a huge magenta industrial archway, a yellow opening ahead on the right. Powerful clear white silhouette, long equine face, quiet alert expression. Cinematic punk comic-book animation, dimensional chalk-white forms, violet Ben-Day halftone shadows, cyan rim light, thick rough black brush-ink outlines, textured screen-printed paper and offset color edges. Magenta industrial tunnel and yellow paint shards, cyan accents, a dark violet floor. One single horse with a crisp readable outline and vibrant RAINBOW MANE, no tack, no rider, no lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.7
+    },
+    {
+      "at": 10,
+      "noise": 0.75
+    },
+    {
+      "at": 12,
+      "noise": 0.7
+    },
+    {
+      "at": 16,
+      "noise": 0.76
+    },
+    {
+      "at": 22,
+      "noise": 0.79
+    },
+    {
+      "at": 27,
+      "noise": 0.73
+    },
+    {
+      "at": 32.5,
+      "noise": 0.66
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 10,
+      "duration": 22.5,
+      "center": [
+        1.25,
+        0.17
+      ],
+      "end": [
+        0,
+        0,
+        -1.3862943611198906,
+        -0.025
+      ],
+      "velocity_start": [
+        -0.006,
+        0.002,
+        -0.006,
+        0.002
+      ],
+      "velocity_end": [
+        0,
+        0,
+        -0.035,
+        0
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 240,
+    "intent": "Pull back fourfold over five delivery seconds, anchoring near the upper right so the head moves up and right while the body is revealed below and to the left. Newly revealed anatomy remains a generation hypothesis."
+  }
+}

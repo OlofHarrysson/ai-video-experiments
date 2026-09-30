@@ -1,6 +1,6 @@
 # Current creative and technical state
 
-Snapshot: 2026-09-30 (Europe/Stockholm), after the first soundtrack trial. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
+Snapshot: 2026-09-30 (Europe/Stockholm), after the first soundtrack trial and Rainbow Mane feasibility passage. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
 
 ## What we are working toward
 
@@ -9,6 +9,8 @@ Make surreal films with rich imagery, recognizable focal forms and intentional t
 The working method keeps a plan, theme and recurring motifs while adapting the route to each actual painting. Generate a short passage, inspect it, keep what works, and handcraft the next movement from individual controls. Backtracking and branching from a preserved frame are expected. Olof supplies taste and direction; the assistant does the first review and presents a small, understandable shortlist. See the [vision](vision.md) and [review agreement](review-and-feedback.md).
 
 ## Where we are
+
+- **Rainbow Mane (2026-09-30):** [A 7.333-second character-to-horse test](../apps/deforum/projects/rainbow-mane/README.md) interprets Olof’s supplied comic-print screenshots. The white face/rainbow crest becomes a complete white horse, but the separate head turn fails and semantic changes near 0.9, 1.5 and 5.4 seconds are abrupt, with visible interpolation ghosts. This is an opening feasibility study for an eventual 30–60 second story, not a finished plot. All 118 generations are verified locally; the selected cut retains 66 paintings. Owned GPU deleted, retained model volume preserved, estimated compute $0.274 excluding storage. Human style/playback review pending. [Review](http://localhost:3028/rainbow-mane) · [Evidence and next decision](../apps/deforum/projects/rainbow-mane/experiments/baseline.md).
 
 - **Soundtrack trial (2026-09-30):** [Two 75-second score directions](../apps/deforum/projects/cartographers-dream/experiments/soundtrack-trial.md) add Eleven Music v2.5 music and three sparse ElevenLabs effects through Fal to separate Cartographer previews. Picture packets are unchanged; audio level, duration and decode checks pass. Direct listening and human preference are pending. Estimated generation cost $1.554. The reusable `add-video-soundtrack` skill and local mixer preserve prompts, original tracks and mix receipts; the selected silent v002 stays current.
 

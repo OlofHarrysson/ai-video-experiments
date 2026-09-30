@@ -1,0 +1,42 @@
+{
+  "user_timecodes": [
+    "01:08:15",
+    "01:08:31",
+    "01:08:29"
+  ],
+  "timecode_mapping": "Not mapped to individual screenshots; film file not inspected",
+  "references": [
+    {
+      "file": "assets/spiderverse-reference-01.png",
+      "original_filename": "Screenshot 2026-09-30 at 22.31.48.png",
+      "sha256": "95a2cb1e072af40e4d2e684b4cb109f62b8ce38f6186dc534095a79e4588c0d7",
+      "source": "User-supplied film screenshot, 2026-09-30",
+      "purpose": "Visual style reference only; no reference-image conditioning",
+      "rights": "Copyrighted film still, retained locally and not committed to Git"
+    },
+    {
+      "file": "assets/spiderverse-reference-02.png",
+      "original_filename": "Screenshot 2026-09-30 at 22.33.09.png",
+      "sha256": "e0baf54cddd6d0c0093b0fc8b6684acdce325f1892acafc83d913e6fe298b036",
+      "source": "User-supplied film screenshot, 2026-09-30",
+      "purpose": "Visual style reference only; no reference-image conditioning",
+      "rights": "Copyrighted film still, retained locally and not committed to Git"
+    },
+    {
+      "file": "assets/spiderverse-reference-03.png",
+      "original_filename": "Screenshot 2026-09-30 at 22.33.19.png",
+      "sha256": "5c3a5ecefc83895a763eac109d7d09682193d44359e20a144113a7f7ed841dec",
+      "source": "User-supplied film screenshot, 2026-09-30",
+      "purpose": "Visual style reference only; no reference-image conditioning",
+      "rights": "Copyrighted film still, retained locally and not committed to Git"
+    },
+    {
+      "file": "assets/spiderverse-reference-04.png",
+      "original_filename": "Screenshot 2026-09-30 at 22.33.37.png",
+      "sha256": "d068425a1eab805d12f1a4f1628eee8fca94f4894a18c106bad1fa9abbd7794d",
+      "source": "User-supplied film screenshot, 2026-09-30",
+      "purpose": "Visual style reference only; no reference-image conditioning",
+      "rights": "Copyrighted film still, retained locally and not committed to Git"
+    }
+  ]
+}

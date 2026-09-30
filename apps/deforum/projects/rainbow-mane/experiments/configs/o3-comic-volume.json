@@ -1,0 +1,30 @@
+{
+  "case": "o3-comic-volume",
+  "seed": 9302603,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "A cinematic close-up from an experimental punk comic-book animated film, widescreen. A single original character with a ROUND WHITE FACE and a short upright RAINBOW MOHAWK, seen from a very slight three-quarter angle, looking right. Their head and all of their hair fit fully inside the image, surrounded by generous space; the head occupies half the picture height. The face is chalk white with enormous expressive ink-black eyes, sharply drawn eyebrows, a tiny nose and a mischievous determined expression. A narrow crest of stiff triangular hair spikes runs over the center of the head: crimson, orange, yellow, green, cyan, blue, violet. Clean shaved white sides. Strong sculpted three-dimensional face and a small visible white neck, with graphic dark violet halftone-dot shadows across the left cheek, cyan offset rim light and gritty brush-hatched outlines. This is a detailed mixed-media film frame: luminous screen-printed layers, thick rough black ink, Ben-Day dot shading, color misregistration and visible paper grain over dimensional forms. Behind the character: an abstract magenta industrial tunnel with acid-yellow geometric shards, large cyan brush marks and deep violet dimensional recesses; its busy detail is pushed toward the edges to keep the white head and rainbow silhouette clear. Off-center composition, dramatic perspective, high contrast, anarchic printmaking texture and energetic diagonals. No writing, no letters, no logos. Only one head and one face.",
+    "seed": 9302603,
+    "width": 1280,
+    "height": 720
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "comic-volume",
+      "prompt": "A cinematic close-up from an experimental punk comic-book animated film, widescreen. A single original character with a ROUND WHITE FACE and a short upright RAINBOW MOHAWK, seen from a very slight three-quarter angle, looking right. Their head and all of their hair fit fully inside the image, surrounded by generous space; the head occupies half the picture height. The face is chalk white with enormous expressive ink-black eyes, sharply drawn eyebrows, a tiny nose and a mischievous determined expression. A narrow crest of stiff triangular hair spikes runs over the center of the head: crimson, orange, yellow, green, cyan, blue, violet. Clean shaved white sides. Strong sculpted three-dimensional face and a small visible white neck, with graphic dark violet halftone-dot shadows across the left cheek, cyan offset rim light and gritty brush-hatched outlines. This is a detailed mixed-media film frame: luminous screen-printed layers, thick rough black ink, Ben-Day dot shading, color misregistration and visible paper grain over dimensional forms. Behind the character: an abstract magenta industrial tunnel with acid-yellow geometric shards, large cyan brush marks and deep violet dimensional recesses; its busy detail is pushed toward the edges to keep the white head and rainbow silhouette clear. Off-center composition, dramatic perspective, high contrast, anarchic printmaking texture and energetic diagonals. No writing, no letters, no logos. Only one head and one face."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.61
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

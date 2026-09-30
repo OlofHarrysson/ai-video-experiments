@@ -1,0 +1,30 @@
+{
+  "case": "o2-ink-punk",
+  "seed": 9302602,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "Close-up portrait of a single original androgynous cartoon punk character with a perfectly round chalk-white face, small black oval eyes, a tiny simple nose, an expressive closed mouth and clean white cheeks. A tall narrow fan of spiky rainbow mohawk hair rises along the center of the scalp, vivid red orange yellow green cyan blue violet arranged as distinct colored tufts. The sides of the head are smooth white. The full head and entire rainbow mohawk are visible, with shoulders barely visible at the bottom. Head occupies the center-left of a wide composition, empty space to the right for a later turn. Looking almost toward us, quietly curious and alert. Loose magenta brush shapes and a yellow offset circular burst behind the head, violet floor of color at the bottom. The face is a simple circular paper-cut shape with expressive asymmetric black eyebrows and a cheeky half smile. Coarse woodcut-like ink contours and grainy dry-brush shadows; a restrained cinematic composition with clear empty space around the silhouette. Bold mixed-media animated comic-book film frame. Chalk white shapes, deep black brush-ink contours, fluorescent magenta and acid yellow backdrop, selective electric cyan and violet shadows. Visible irregular halftone dots, screen-printed paper texture, slight cyan-magenta color-registration offsets and gestural ink hatching. Dimensional illustrated volume with graphic flat shadow shapes. Crisp expressive silhouette and uncluttered facial features, playful punk energy. A single subject, no text, no lettering, no logos, no panel borders.",
+    "seed": 9302602,
+    "width": 1280,
+    "height": 720
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "white-punk",
+      "prompt": "Close-up portrait of a single original androgynous cartoon punk character with a perfectly round chalk-white face, small black oval eyes, a tiny simple nose, an expressive closed mouth and clean white cheeks. A tall narrow fan of spiky rainbow mohawk hair rises along the center of the scalp, vivid red orange yellow green cyan blue violet arranged as distinct colored tufts. The sides of the head are smooth white. The full head and entire rainbow mohawk are visible, with shoulders barely visible at the bottom. Head occupies the center-left of a wide composition, empty space to the right for a later turn. Looking almost toward us, quietly curious and alert. Loose magenta brush shapes and a yellow offset circular burst behind the head, violet floor of color at the bottom. The face is a simple circular paper-cut shape with expressive asymmetric black eyebrows and a cheeky half smile. Coarse woodcut-like ink contours and grainy dry-brush shadows; a restrained cinematic composition with clear empty space around the silhouette. Bold mixed-media animated comic-book film frame. Chalk white shapes, deep black brush-ink contours, fluorescent magenta and acid yellow backdrop, selective electric cyan and violet shadows. Visible irregular halftone dots, screen-printed paper texture, slight cyan-magenta color-registration offsets and gestural ink hatching. Dimensional illustrated volume with graphic flat shadow shapes. Crisp expressive silhouette and uncluttered facial features, playful punk energy. A single subject, no text, no lettering, no logos, no panel borders."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.61
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

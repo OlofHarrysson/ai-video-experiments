@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-30",
+  "model": "Krea 2 Turbo",
+  "unique_generation_jobs": 118,
+  "selected_paintings": 66,
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 176,
+  "duration_seconds": 7.333333333333333,
+  "selected_video": "exports/v001/p03b-full-body/through-0780/rife/preview.mp4",
+  "video_sha256": "1ad956cec6b38a4ba26ac6ef9747ace308d4ffd48020164774232739abce7c98",
+  "generation_checks": {
+    "o1-white-punk": 0,
+    "o2-ink-punk": 0,
+    "o3-comic-volume": 0,
+    "p01-turn-right": 276,
+    "p01b-stronger-turn": 276,
+    "p02-becoming-horse": 240,
+    "p03-reveal-the-horse": 780,
+    "p03b-full-body": 780
+  },
+  "delivery_verified": true,
+  "remote_files_verified_and_retired": 233,
+  "owned_pod_deleted": true,
+  "retained_model_volume_preserved": true,
+  "compute_estimate_usd": 0.274,
+  "hourly_compute_rate_usd": 0.74,
+  "estimate_basis": "Pod creation to successful deletion at listed hourly rate; excludes storage and is not settled billing.",
+  "reference_screenshots_preserved": 4,
+  "human_review": "pending"
+}

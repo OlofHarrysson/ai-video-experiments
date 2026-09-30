@@ -35,6 +35,10 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
+### rainbow-mane — character transformation
+
+- [Opening, turn and horse transformation](rainbow-mane/experiments/baseline.md): comic-print style from Olof's supplied film screenshots, a round white face and rainbow mohawk, and the limits of prompt-directed pose and morphing. [Creative brief](rainbow-mane/BRIEF.md).
+
 ### shape-injection — spatial guide study
 
 - [Blended shapes in the Krea feedback loop](shape-injection/report.md): flat/shaded circles, rings and triangles; paired still controls, recurrent moving guides and authored local movement. [Project brief](shape-injection/README.md).

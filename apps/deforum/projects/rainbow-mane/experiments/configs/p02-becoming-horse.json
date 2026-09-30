@@ -1,0 +1,134 @@
+{
+  "case": "p02-becoming-horse",
+  "seed": 9302800,
+  "duration": 17,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/rainbow-mane/exports/v001/p01-turn-right",
+  "prefix_through": 96,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "three-quarter",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. Close-up, head facing slightly to screen right, both eyes still visible, the far eye narrower. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    },
+    {
+      "at": 2.5,
+      "name": "turning-right",
+      "prompt": "One original cartoon punk character, round chalk-white head with shaved white sides, a narrow upright rainbow mohawk running along the CENTER of the scalp from forehead to nape. The stiff hair tufts are red orange yellow green cyan blue violet. Large expressive black eyes, a small white nose and a confident closed mouth, white neck. The face is now turned farther to screen right, a strong three-quarter view; the near left cheek and left ear are prominent, the far eye is mostly hidden behind the nose, the nose points right. The rainbow crest follows the curve of the top of the skull. A cinematic punk comic-book animated film frame, dimensional white forms with dark violet Ben-Day halftone shadows, cyan rim light, rough black brush-ink outlines, visible paper grain and slight color misregistration. Fluorescent magenta industrial tunnel, acid yellow painted shards and cyan brush strokes at the edges, deep violet recesses, strong graphic perspective. Keep one clear subject, a single rainbow crest, white cheeks and a readable silhouette. No writing, no lettering, no logos."
+    },
+    {
+      "at": 4.5,
+      "name": "the-face-lengthens",
+      "prompt": "Close-up of a white cartoon PONY FOAL head with a rainbow mohawk. The face is halfway between a round cartoon face and an equine face: a longer white nose projecting toward screen right, a broad rounded horse muzzle, one large expressive near eye, and white pointed horse ears emerging above the head. The rainbow crest continues from forehead along the back of the skull. The long cheek and muzzle make a clear equine silhouette. Cinematic punk comic-book animation, white forms with violet Ben-Day dot shadows, cyan rim light, thick black brush-ink contours, textured screen-printed paper and offset color edges. Magenta industrial tunnel behind, acid yellow shards and cyan paint, dark purple shadows. A single coherent head in the center-left, facing screen right. Preserve the rainbow hair crest as the visual connection. No text or lettering."
+    },
+    {
+      "at": 7,
+      "name": "mohawk-becomes-mane",
+      "prompt": "Close-up of the LEFT SIDE OF A WHITE HORSE HEAD, facing right, with a thick short rainbow mane. A long elegant white muzzle extends to the right, one visible dark eye, a nostril near the end of the muzzle, pointed ears atop the head, and the beginning of a long white horse neck. The upright red orange yellow green blue violet hair runs from the poll down the back of the neck as a serrated mane. Clear horse anatomy and side profile. Cinematic punk comic-book animation, white forms with violet Ben-Day dot shadows, cyan rim light, thick black brush-ink contours, textured screen-printed paper and offset color edges. Magenta industrial tunnel behind, acid yellow shards and cyan paint, dark purple shadows. A single coherent head in the center-left, facing screen right. Preserve the rainbow hair crest as the visual connection. No text or lettering."
+    },
+    {
+      "at": 12,
+      "name": "the-white-horse",
+      "prompt": "A beautiful stylized WHITE HORSE in right-facing profile, close on the head and upper neck. One large kind dark eye, long straight equine face, rounded white muzzle and dark nostril, two tall pointed ears and a long muscular arched white neck. A vivid RAINBOW MANE runs from between the ears down the back of the neck, bright colored bristles flowing into short colored ribbons. A recognizable horse, white coat and strong black ink outline. Cinematic punk comic-book animation, white forms with violet Ben-Day dot shadows, cyan rim light, thick black brush-ink contours, textured screen-printed paper and offset color edges. Magenta industrial tunnel behind, acid yellow shards and cyan paint, dark purple shadows. A single coherent head in the center-left, facing screen right. Preserve the rainbow hair crest as the visual connection. No text or lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    },
+    {
+      "at": 4,
+      "noise": 0.67
+    },
+    {
+      "at": 4.5,
+      "noise": 0.88
+    },
+    {
+      "at": 6,
+      "noise": 0.94
+    },
+    {
+      "at": 9,
+      "noise": 0.95
+    },
+    {
+      "at": 12,
+      "noise": 0.94
+    },
+    {
+      "at": 16.5,
+      "noise": 0.76
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 11.5,
+      "center": [
+        0.9,
+        0.52
+      ],
+      "end": [
+        -0.1,
+        0.03,
+        -0.13926206733350766,
+        0.018
+      ],
+      "velocity_start": [
+        -0.007,
+        0.002,
+        -0.014,
+        0
+      ],
+      "velocity_end": [
+        -0.01,
+        0.002,
+        -0.005,
+        0.002
+      ]
+    }
+  ],
+  "motion_note": {
+    "intent": "Begin the equine morph from the stronger early portrait. Preserve the white head and rainbow crest. Profile pose is still a hypothesis, not achieved by the first turn attempt."
+  }
+}

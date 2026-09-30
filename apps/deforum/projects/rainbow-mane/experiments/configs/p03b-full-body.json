@@ -1,0 +1,147 @@
+{
+  "case": "p03b-full-body",
+  "seed": 9302900,
+  "duration": 33,
+  "cadence": 12,
+  "cfg": 1,
+  "prefix_root": "projects/rainbow-mane/exports/v001/p03-reveal-the-horse",
+  "prefix_through": 576,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780
+  ],
+  "scenes": [
+    {
+      "at": 0,
+      "name": "the-whole-horse",
+      "prompt": "A wide full-body side view of ONE WHITE HORSE, facing screen right. The whole animal fits inside the image, including all four long legs and four small black hooves on the ground. Its white equine head is small in the upper right of its silhouette, connected by an arched white neck to a broad HORIZONTAL white torso that extends left across the center of the picture. White hindquarters at screen left and a rainbow tail. A short rainbow mane runs along the back of its neck. The horse stands sideways across a wide open magenta industrial archway, with a violet ground plane beneath all four hooves. Wide environmental composition: the whole horse occupies only the central half of the frame, surrounded by visible space. Strong black ink contours, bright white coat, violet halftone-dot shadows, cyan rim light, gritty printed-paper texture and pink yellow cyan brushwork on the surrounding tunnel walls. One horse, no rider, no bridle, no people, no lettering."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.7
+    },
+    {
+      "at": 24,
+      "noise": 0.77
+    },
+    {
+      "at": 24.5,
+      "noise": 0.93
+    },
+    {
+      "at": 26,
+      "noise": 0.95
+    },
+    {
+      "at": 28,
+      "noise": 0.9
+    },
+    {
+      "at": 30,
+      "noise": 0.8
+    },
+    {
+      "at": 32.5,
+      "noise": 0.7
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 10,
+      "duration": 22.5,
+      "center": [
+        1.25,
+        0.17
+      ],
+      "end": [
+        0,
+        0,
+        -1.3862943611198906,
+        -0.025
+      ],
+      "velocity_start": [
+        -0.006,
+        0.002,
+        -0.006,
+        0.002
+      ],
+      "velocity_end": [
+        0,
+        0,
+        -0.035,
+        0
+      ]
+    }
+  ],
+  "motion_note": {
+    "source_frame": 240,
+    "intent": "Preserve the complete first pullback through frame 576. Stronger repainting and explicit horizontal full-body anatomy test whether the neck/chest composition can open into the whole horse. Same spatial path continues."
+  }
+}

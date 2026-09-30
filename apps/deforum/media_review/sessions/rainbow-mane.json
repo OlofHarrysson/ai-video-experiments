@@ -1,0 +1,33 @@
+{
+  "title": "Rainbow Mane \u00b7 first transformation test",
+  "selected": [
+    "rainbow-mane-prototype"
+  ],
+  "clips": [
+    {
+      "id": "rainbow-mane-prototype",
+      "label": "Rainbow Mane \u00b7 transformation and pullback",
+      "note": "A white cartoon face becomes a rainbow-maned horse. This is an opening feasibility test; the separate head turn remains unresolved.",
+      "details": "Original character developed from Olof's round white face and rainbow mohawk idea, using the supplied comic-print visual references. Krea generates the opening and repaints its own previous image after spatial warping. The first quiet turn attempt did not achieve a side profile; stronger repainting altered the face more than the pose. This cut keeps an early portrait, changes to a horse, then tests the widening view. The transformation is abrupt and passes through two different horse designs. A stronger final repaint reveals the full body but also changes the composition quickly around 5.4 seconds.\n\n1280\u00d7720, 24 fps; 66 selected paintings from four preserved passages, source cadence 12, delivery 4.5\u00d7 source speed. RIFE fills the two- and three-frame painting intervals outside recurrence. Human playback and style judgment pending. No final story ending has been selected.",
+      "source": "projects/rainbow-mane/exports/v001/p03b-full-body/through-0780/rife/preview.mp4"
+    },
+    {
+      "id": "pullback-baseline",
+      "label": "Earlier pullback \u00b7 horse partly concealed",
+      "note": "Same opening and transformation, with a gentler continuation that leaves much of the horse behind the doorway.",
+      "source": "projects/rainbow-mane/exports/v001/p03-reveal-the-horse/through-0780/rife/preview.mp4"
+    },
+    {
+      "id": "turn-baseline",
+      "label": "Turn attempt \u00b7 gentler repaint",
+      "note": "The character stays recognizable, but the requested side profile does not emerge.",
+      "source": "projects/rainbow-mane/exports/v001/p01-turn-right/through-0276/rife/preview.mp4"
+    },
+    {
+      "id": "turn-stronger",
+      "label": "Turn attempt \u00b7 stronger repaint",
+      "note": "Same prompts, seeds and movement after the shared opening. Stronger repainting changes the drawing more than its orientation.",
+      "source": "projects/rainbow-mane/exports/v001/p01b-stronger-turn/through-0276/rife/preview.mp4"
+    }
+  ]
+}
