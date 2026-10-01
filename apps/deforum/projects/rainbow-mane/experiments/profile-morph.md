@@ -1,6 +1,6 @@
 # Profile-to-horse drawing
 
-2026-10-01. Steps 1 and 2 complete; human motion review pending. This is an authored geometry preview, with no diffusion, generated head turn, camera movement or RIFE.
+2026-10-01. Steps 1 and 2 complete. Olof approves the drawing: “Yeah that is good! Lets continue with the next step.” The [guided Krea test](guided-repaint.md) follows this approved motion. This drawing itself uses no diffusion, generated head turn, camera movement or RIFE.
 
 ## Question and authorized scope
 
@@ -25,11 +25,11 @@ The project-specific Python script samples its cubic curves for supersampled Pil
 
 `profile-morph-v002` uses matching contour direction for the ear. The six-frame overview and every decoded frame from 1.25 through 1.667 seconds show the ear keeping visible area while it rises. The muzzle grows and the rainbow crest extends continuously in these inspected frames; the eye remains recognizable. The mane is deliberately a broad colored shape, and the endpoint is a stylized horse bust. Detailed hair, print texture and a full body are outside this guide.
 
-Screened: six selected poses across each attempt, then all eleven decoded frames in the repaired window for v002. This supports the observed shape progression and ear repair; Olof's judgment of normal-speed timing is pending. The selected MP4 fully decodes to 96 frames at 24 fps, exactly four seconds. All 196 assets listed in its manifest match their SHA-256 hashes. Scoped Ruff checks pass.
+Screened: six selected poses across each attempt, then all eleven decoded frames in the repaired window for v002. This supports the observed shape progression and ear repair. Olof subsequently approves the drawing and asks to continue with the painted test. The selected MP4 fully decodes to 96 frames at 24 fps, exactly four seconds. All 196 assets listed in its manifest match their SHA-256 hashes. Scoped Ruff checks pass.
 
 ## Next boundary
 
-Review this drawing's silhouette and timing first. Recurrent Krea repainting has not been run on it. The source drawing and point correspondences provide a motion plan, not a tested deformation field for the generated character. The next experiment must explicitly retain previous painting → spatial deformation → partial-noise repaint, with text conditioning throughout; any guide blending or extra conditioning must be specified separately.
+Olof has approved this drawing's motion and authorized the [guided repaint experiment](guided-repaint.md). The source drawing and point correspondences provide a motion plan; the drawing alone is not evidence of successful diffusion control. The painted experiment retains previous painting → spatial deformation → partial-noise repaint, with text conditioning throughout; guide blending is specified separately in its report.
 
 Reproduce in a new, unused output directory from `apps/deforum/`:
 

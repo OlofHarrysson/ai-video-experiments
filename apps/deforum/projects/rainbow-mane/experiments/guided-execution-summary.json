@@ -1,0 +1,56 @@
+{
+  "experiment": "guided-profile-morph",
+  "date": "2026-10-01",
+  "selected_case": "guided-n040-a012",
+  "alternative_case": "guided-n055-a012",
+  "guide": "projects/rainbow-mane/exports/profile-morph-v002",
+  "unique_generation_jobs": 65,
+  "delivery": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 96,
+    "seconds": 4,
+    "paintings": 32,
+    "interpolated_frames": 62,
+    "final_holds": 2
+  },
+  "verification_sha256": "e7f9a88e6ec07f8562f865b03f91fe1c6562c6e743bddcee89ee72d60981b4b5",
+  "remote_files_verified_and_retired": 130,
+  "cleanup": {
+    "pod_id": "gg1zzozyabslfh",
+    "deleted_verified_at": "2026-10-01T09:30:01.872951+00:00",
+    "elapsed_seconds_upper_bound": 1154.872951,
+    "gpu_rate_per_hour": 1.59,
+    "estimated_compute_usd": 0.5101,
+    "excludes_storage": true,
+    "not_final_invoice": true,
+    "retained_volume_id": "vd3jnbwko1"
+  },
+  "reviewer": {
+    "url": "http://localhost:3028/rainbow-mane-guided",
+    "run_id": "de191829-333b-4927-9b08-68dccea108a3",
+    "html_sha256": "9c5f434928b5691a06c0f5fcf5e9beaf8fda5cf2502e12a948bc2c87d895a56c",
+    "video_ranges_verified": 4,
+    "browser_layout_changed": false
+  },
+  "source_files": [
+    {
+      "path": "projects/rainbow-mane/experiments/guided_morph.py",
+      "sha256": "2eb7540627745f726aa3e8463c5f03e6cea6d8e32d4f8365c12980332292ea05"
+    },
+    {
+      "path": "projects/rainbow-mane/experiments/finish_guided.py",
+      "sha256": "9fec1d383f901737dbbd98cf5071ab50d9238fac2eeeccd47d04fd15511d7837"
+    },
+    {
+      "path": "projects/rainbow-mane/experiments/verify_guided.py",
+      "sha256": "2ba3b6aba25743dd5134d1bb081bb4cf399b0ced0f7268b3163514fc0657e3d4"
+    },
+    {
+      "path": "src/deforum_lab/image/landmarks.py",
+      "sha256": "3eb60d4e99dc49915e5989932a253f0104c0add1f908aeb1cbd2280af8b80067"
+    }
+  ],
+  "assessment": "Connected shape progression; doubled guide contours and style loss remain; human painted-result review pending."
+}

@@ -6,13 +6,14 @@ Current cut: [v001 — 7.333-second feasibility passage](cuts/v001.md). [Watch i
 
 The white/rainbow motif reaches a complete horse, but the separate head turn does not happen and the three semantic transitions are abrupt. Olof finds the style pretty good and the transformations too abrupt. This is a first test, not a finished story.
 
-Latest motion study: [four-second authored profile-to-horse drawing](experiments/profile-morph.md), with the camera fixed and continuous muzzle, ear and mane changes. [Watch the drawing](exports/profile-morph-v002/preview.mp4). Human motion review is pending; Krea has not repainted this guide.
+Latest study: [four-second guided Krea morph](experiments/guided-repaint.md), following the profile-to-horse drawing Olof approved. [Watch the recommended painted test](exports/guided-morph-v001/guided-n040-a012/rife/preview.mp4) · [compare it with the drawing](http://localhost:3028/rainbow-mane-guided). Shape progression is more intentional, but doubled sketch contours and a flatter visual treatment remain. Human painted-motion review is pending.
 
 ## Experiments
 
 - [Brief](BRIEF.md): character, visual references, story requirement and first test.
 - [Baseline](experiments/baseline.md): opening and recurrent transformation test.
 - [Profile morph](experiments/profile-morph.md): a drawn transformation plan, before diffusion.
+- [Guided repaint](experiments/guided-repaint.md): approved drawing motion applied to recurrent Krea, with gentler and stronger repaint comparisons.
 
 [References](references/README.md) · [runs](runs/README.md) · [cuts](cuts/README.md) · [exports](exports/README.md)
 

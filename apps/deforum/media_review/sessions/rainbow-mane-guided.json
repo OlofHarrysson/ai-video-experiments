@@ -1,0 +1,33 @@
+{
+  "title": "Rainbow Mane · guided transformation",
+  "selected": ["guided-gentle", "approved-guide"],
+  "clips": [
+    {
+      "id": "guided-gentle",
+      "label": "Gentler repaint · guided morph",
+      "note": "The painted face follows the drawing toward a horse, with a quieter background. Inspect the ear, eye and muzzle for doubled outlines.",
+      "details": "Four-second experiment from the approved profile drawing. Krea paints the opening at noise 0.80, then repaints its own previous image at noise 0.40 after an authored landmark warp and a 12% feathered foreground sketch blend. Text describes the comic-print look and staged anatomy. No additional reference-image conditioning. Fixed camera; 32 paintings at 8 per second; RIFE 4.25 supplies two intermediate frames per painting interval at 24 fps and never feeds back into generation. The flat guide is a motion plan, not evidence that the stronger original film style has been preserved. Human playback judgment pending.",
+      "source": "projects/rainbow-mane/exports/guided-morph-v001/guided-n040-a012/rife/preview.mp4"
+    },
+    {
+      "id": "approved-guide",
+      "label": "Approved drawing · motion target",
+      "note": "The exact four-second geometry and timing Olof approved, before diffusion.",
+      "details": "Authored vector drawing with 96 frames, a fixed camera and persistent outline, ear, eye and mane correspondences. No diffusion or optical-flow interpolation. The painted clips use this same delivery timeline.",
+      "source": "projects/rainbow-mane/exports/profile-morph-v002/preview.mp4"
+    },
+    {
+      "id": "guided-stronger",
+      "label": "Stronger repaint · background faces",
+      "note": "Same opening, geometry, seeds and prompts; stronger repainting adds print detail and unwanted oversized faces behind the character.",
+      "details": "Noise 0.55 instead of 0.40. Other generation settings match the gentler run. This version provides a comparison of the repaint-strength tradeoff; it is not the recommended clean-background result.",
+      "source": "projects/rainbow-mane/exports/guided-morph-v001/guided-n055-a012/rife/preview.mp4"
+    },
+    {
+      "id": "guided-raw",
+      "label": "Gentler repaint · original paintings",
+      "note": "The 32 original paintings held for three frames each, without RIFE. Use this to distinguish repaint changes from interpolation artifacts.",
+      "source": "projects/rainbow-mane/exports/guided-morph-v001/guided-n040-a012/through-0093-raw.mp4"
+    }
+  ]
+}
