@@ -10,13 +10,15 @@ export type SeaProps = {
   seed: string;
   // 0 is a flat, glassy sea; 1 a gentle swell.
   swell: number;
+  // Animation step: each row of swell sways slowly from side to side.
+  step?: number;
 };
 
 // The sea from the horizon down: darker toward the viewer, crossed by thin
 // swell lines that grow longer and farther apart as they come closer.
 export const drawSea = (
   pix: Pix,
-  { horizon, bands, seam, seed, swell }: SeaProps,
+  { horizon, bands, seam, seed, swell, step = 0 }: SeaProps,
 ): void => {
   fillBands(pix, horizon, 480, bands, seam);
   const hy = Math.floor(horizon * pix.k);
@@ -28,14 +30,15 @@ export const drawSea = (
     const depth = (y - horizon) / (480 - horizon);
     const py = Math.floor(y * pix.k);
     const dash = 2 + depth * 14;
+    const sway = (1 + 2 * depth) * Math.sin(step * 0.07 + row * 1.9);
     for (let x = random(`${seed}-o-${row}`) * 20 - 20; x < 270; ) {
       const len = dash * (0.5 + random(`${seed}-l-${row}-${x.toFixed(1)}`));
       const gap = dash * (1.5 + 3 * random(`${seed}-g-${row}-${x.toFixed(1)}`));
       if (random(`${seed}-s-${row}-${x.toFixed(1)}`) < swell) {
         const up = random(`${seed}-u-${row}-${x.toFixed(1)}`) < 0.5;
         for (
-          let p = Math.floor(x * pix.k);
-          p < Math.floor((x + len) * pix.k);
+          let p = Math.floor((x + sway) * pix.k);
+          p < Math.floor((x + len + sway) * pix.k);
           p++
         ) {
           if (up) pix.brighten(p, py, 1);

@@ -19,7 +19,8 @@ export type AssetName =
   | "water"
   | "glow"
   | "splash"
-  | "ripple";
+  | "ripple"
+  | "zzz";
 
 // Placeholder: stands in for the real thing. Rough: the intended design,
 // still to be refined. Final: done.
@@ -41,28 +42,28 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Character",
     api: "fisherman({ x, y, pose, facing })",
     status: "rough",
-    next: "Poses: fish, doze, haul, holdBucket, lookUp, tip, with tweens for nodding off (05), the waking jolt and his heaves (07) and looking up and back down (13). Needs a smile (10, 19), face detail for his close-up (10) and a fuller heave than a lean of the chest and arms.",
+    next: "Poses: fish, doze, haul, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and his heaves (07), the last heave at the catch (08) and looking up (13, 16); he blinks. Needs a smile (10, 19), face detail for his close-ups (04, 10) and a fuller heave than a lean of the chest and arms.",
   },
   cat: {
     name: "Cat",
     kind: "Character",
-    api: "cat({ x, y, pose, facing, look })",
+    api: "cat({ x, y, pose, facing, look, paw })",
     status: "rough",
-    next: "One pose, peer, with a head tilt. Needs a paw reaching toward the glow (11), a pounce and a fish in its mouth (18, 19), a startle, and a tail that moves.",
+    next: "One pose, peer, with a head tilt and a front paw that reaches out (11, 18). Needs a pounce and a fish in its mouth (18, 19), a startle, and a tail that moves.",
   },
   moon: {
     name: "Moon",
     kind: "Prop",
     api: 'moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" | "world" }',
     status: "rough",
-    next: "The style frame's moon; it already shivers, sets and rises. Needs a brighter burst as it leaves the sea (08) and water streaming off it.",
+    next: "The style frame's moon; it drifts, sets and rises. Needs a brighter burst as it leaves the sea (08) and water streaming off it.",
   },
   bucket: {
     name: "Bucket, with the moon in it",
     kind: "Prop",
     api: "bucket({ x, rimY, moon, tilt, glow })",
     status: "rough",
-    next: "The style frame's hero. The moon now drops out as he tips it (14); it needs water spilling with it, and an uneven, flickering fade as it dims (12).",
+    next: "The style frame's hero. The moon drops out as he tips it (14) and flickers as it dims (12); it needs water spilling with it.",
   },
   float: {
     name: "Float",
@@ -97,14 +98,14 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Set",
     api: "drawSky, drawStars, drawMilkyWay",
     status: "rough",
-    next: "Near final. Needs to darken as the moon sets (08) and brighten as it rises (16), instead of switching at the cut.",
+    next: "Near final. It dissolves between moonlit and dark as the moon sets (08) and rises (16); its stars could twinkle more.",
   },
   sea: {
     name: "Sea",
     kind: "Set",
     api: "drawSea({ horizon, bands, swell })",
     status: "rough",
-    next: "Near final. Its swell lines hold still; they should drift slowly in the animatic.",
+    next: "Near final. Its swell lines sway slowly.",
   },
   water: {
     name: "Water reflections",
@@ -132,7 +133,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Light",
     api: "drawHalo, drawShaft; spec.seaGlow",
     status: "rough",
-    next: "Halo and shaft around the caught moon, and the glow under the sea (16). Needs to flicker as the moon dims (12).",
+    next: "Halo and shaft around the caught moon, and the glow under the sea (16).",
   },
   splash: {
     name: "Splash",
@@ -140,6 +141,13 @@ export const ASSETS: Record<AssetName, Asset> = {
     api: "spec.splash = { at, size }; drawSplash",
     status: "placeholder",
     next: "Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 08, 14, 17, 18). Needs a crown that rises and falls over a few frames, sized to each.",
+  },
+  zzz: {
+    name: "Sleep Z's",
+    kind: "Effect",
+    api: "spec.zzz = seconds asleep",
+    status: "rough",
+    next: "Pixel Z's drifting up from his head (04, 05). Could take a hand-drawn letterform.",
   },
   ripple: {
     name: "Ripple",

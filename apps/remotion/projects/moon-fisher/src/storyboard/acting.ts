@@ -1,7 +1,13 @@
 import type { Vec2 } from "../pixel/shapes";
 import { clamp01, ease } from "../stills/motion";
 import type { FishProps } from "../world/fish";
-import { POSES, tweenPose, type Bone, type PoseDef } from "../world/fisherman";
+import {
+  POSES,
+  tweenPose,
+  type Bone,
+  type Eyes,
+  type PoseDef,
+} from "../world/fisherman";
 
 // Movements within a shot, as functions of the seconds since it began.
 
@@ -9,29 +15,55 @@ import { POSES, tweenPose, type Bone, type PoseDef } from "../world/fisherman";
 export const move = (t: number, from: number, to: number) =>
   ease(clamp01((t - from) / (to - from)));
 
-// Nodding off: the head sinks first, then the body slumps and the hands
-// settle in his lap. His eyes close on the way down.
-const DOZING: Partial<Record<Bone, readonly [number, number]>> = {
-  head: [0.2, 1.3],
-  chest: [0.5, 1.7],
-  spine: [0.6, 1.9],
+// Nodding off over the float: a heavy blink, a nod and a jerk back awake,
+// then his eyes close and his head starts to sink. Each bone moves from
+// fishing (0) toward the doze (1).
+const NODDING: Partial<Record<Bone, (t: number) => number>> = {
+  head: (t) =>
+    0.5 * move(t, 0.7, 0.95) -
+    0.4 * move(t, 0.95, 1.05) +
+    0.5 * move(t, 1.1, 1.5),
+  chest: (t) => 0.15 * move(t, 1.1, 1.5),
 };
-export const DOZING_ARMS = [0.7, 2] as const;
+const noddingEyes = (t: number): Eyes =>
+  (t >= 0.3 && t < 0.55) || t >= 1.1 ? "closed" : "open";
+export const noddingOff = (t: number): PoseDef =>
+  tweenPose(
+    POSES.fish,
+    POSES.doze,
+    (bone) => NODDING[bone]?.(t) ?? 0,
+    noddingEyes(t),
+  );
+
+// Falling asleep, carrying on from the nod: the head drops the rest of the
+// way, the body slumps and the hands settle in his lap.
+export const DOZING_ARMS = [0.4, 1.6] as const;
+const DOZING: Partial<Record<Bone, (t: number) => number>> = {
+  head: (t) => 0.6 + 0.4 * move(t, 0, 0.8),
+  chest: (t) => 0.15 + 0.85 * move(t, 0.2, 1.2),
+  spine: (t) => move(t, 0.3, 1.4),
+};
 export const dozingOff = (t: number): PoseDef =>
   tweenPose(
     POSES.fish,
     POSES.doze,
-    (bone) => move(t, ...(DOZING[bone] ?? DOZING_ARMS)),
-    t < 0.9 ? "open" : "closed",
+    (bone) => DOZING[bone]?.(t) ?? move(t, ...DOZING_ARMS),
+    "closed",
   );
 
-// Holding the bucket, he looks up at the sky and back down.
+// A dying light: a few quick dips, on twos, as it fades.
+const FLICKERS = [0.5, 1.25, 1.42, 2.2, 2.62];
+export const flicker = (t: number) =>
+  FLICKERS.some((f) => t >= f && t < f + 0.09) ? 0.7 : 1;
+
+// Holding the bucket, he looks up at the sky, and back down if `down` says
+// when.
 export const lookingUp = (
   t: number,
   up: readonly [number, number],
-  down: readonly [number, number],
+  down?: readonly [number, number],
 ): PoseDef => {
-  const k = move(t, ...up) - move(t, ...down);
+  const k = move(t, ...up) - (down ? move(t, ...down) : 0);
   return {
     ...tweenPose(POSES.holdBucket, POSES.lookUp, () => k, "open"),
     farHandOnProp: POSES.lookUp.farHandOnProp,

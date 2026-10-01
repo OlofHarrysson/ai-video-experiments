@@ -50,27 +50,12 @@ const arrowPaths = ([[ax, ay], [bx, by]]: readonly [Vec2, Vec2]) => {
   };
 };
 
-// Two short arcs on each side of something round, as if it trembles.
-const shakePath = ({ at: [x, y], r }: { at: Vec2; r: number }) =>
-  [r + 4, r + 9]
-    .flatMap((R) =>
-      [0, Math.PI].map((mid) => {
-        const [a0, a1] = [mid - 0.5, mid + 0.5];
-        return `M ${x + R * Math.cos(a0)} ${y + R * Math.sin(a0)} A ${R} ${R} 0 0 1 ${x + R * Math.cos(a1)} ${y + R * Math.sin(a1)}`;
-      }),
-    )
-    .join(" ");
-
-// Arrows and shake lines over a panel, in design-frame units.
+// Arrows over a panel, in design-frame units.
 const Notation: React.FC<{ shot: Shot }> = ({ shot }) => {
-  const notes = panelNotation(shot);
-  const arrows = (notes.arrows ?? []).map(arrowPaths);
-  const lines = [
-    ...arrows.map((a) => a.shaft),
-    ...(notes.shakes ?? []).map(shakePath),
-  ].join(" ");
+  const arrows = (panelNotation(shot).arrows ?? []).map(arrowPaths);
+  if (!arrows.length) return null;
+  const lines = arrows.map((a) => a.shaft).join(" ");
   const heads = arrows.map((a) => a.head).join(" ");
-  if (!lines) return null;
   return (
     <svg
       viewBox={`0 0 ${DESIGN_WIDTH} ${DESIGN_HEIGHT}`}

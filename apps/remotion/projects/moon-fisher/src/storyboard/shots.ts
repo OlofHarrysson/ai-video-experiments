@@ -14,22 +14,23 @@ import {
 } from "../stills/poses";
 import { at, BAR_SECONDS, FPS, SECTIONS } from "../timing";
 import { moonCenter, MOON_RADIUS } from "../world/bucket";
-import { fisherman } from "../world/fisherman";
+import { fisherman, POSES } from "../world/fisherman";
 import {
   dozingOff,
   DOZING_ARMS,
+  flicker,
   leapSplashes,
   leaping,
   lookingUp,
   move,
+  noddingOff,
   type Leap,
 } from "./acting";
 
 // Storyboard notation over a panel, in design-frame units: arrows for what
-// travels during the shot, and shake lines around what shivers.
+// travels during the shot.
 export type Notation = {
   arrows?: (readonly [Vec2, Vec2])[];
-  shakes?: { at: Vec2; r: number }[];
 };
 
 // The film, shot by shot, cut on the score's bars. Each shot is a scene spec
@@ -59,16 +60,18 @@ const MEDIUM = KEY_IMAGE.camera;
 const MEDIUM_WIDE: Camera = { x: 150, y: 330, zoom: 1.2, sx: 140, sy: 285 };
 const FACE: Camera = { x: 128, y: 298, zoom: 3.2, sx: 150, sy: 230 };
 const CAT: Camera = { x: 192, y: 322, zoom: 3.4, sx: 130, sy: 250 };
-// The cat low in the frame, with the sky above it.
-const CAT_SKY: Camera = { x: 210, y: 333, zoom: 2.6, sx: 175, sy: 345 };
+// His face over the rod, with room above for the Z's.
+const NOD: Camera = { x: 132, y: 300, zoom: 2.9, sx: 128, sy: 290 };
+// The bow and the open horizon past it, with the water in front where the
+// moon comes out; he is off to the left, his line running into the frame.
+const CATCH: Camera = { x: 205, y: 370, zoom: 1.9, sx: 135, sy: 300 };
 const PAIL: Camera = { x: 148, y: 322, zoom: 3, sx: 135, sy: 240 };
 // Looking down at the float, in the middle of the moon's glitter.
 const WATER: Camera = { x: 172, y: 440, zoom: 3.5, sx: 135, sy: 260 };
 
 // How high the moon stands in each frame. Above the water close-ups it is
-// out of frame but still lights them; in the cat's close-up it hangs up and
-// to the left of the cat, which looks up at it.
-const MOON_HEIGHT = { wide: 70, medium: 55, water: -140, cat: 135 };
+// out of frame but still lights them.
+const MOON_HEIGHT = { wide: 70, medium: 55, water: -140 };
 
 // The haul brings the hooked reflection in beside the boat while the moon
 // comes down the sky to the horizon.
@@ -84,6 +87,7 @@ const ROD = {
 // Out on the foredeck, clear of the fishing line.
 const PEER_LEFT = { x: 208, y: 342, pose: "peer", facing: "left" } as const;
 const PEER_RIGHT = { ...PEER_LEFT, facing: "right" } as const;
+const KEY_CAT = { x: 198, y: 344, pose: "peer", facing: "left" } as const;
 const EMPTY_BUCKET = { at: "knees", x: 148, rimY: 326 } as const;
 
 const ramp = (t: number, from: number, to: number, a: number, b: number) =>
@@ -173,9 +177,11 @@ const hauledReflection = (t: number) => mix(HOOKED, LANDED, heaves(t, 6));
 
 // In the catch the moon sinks below that stretch of horizon as it bursts
 // out of the sea where the reflection was landed.
-const SETTING_X = onScreen(WIDE, [SETS_OVER, 0])[0];
+const SETTING_X = onScreen(CATCH, [SETS_OVER, 0])[0];
 const settingY = (t: number) =>
-  ramp(t, 0, 0.4, horizonIn(WIDE) - 11, horizonIn(WIDE) + 11);
+  ramp(t, 0, 0.4, horizonIn(CATCH) - 11, horizonIn(CATCH) + 11);
+// He nods off at the end of the tune; the first Z rises a little after.
+const NOD_ZZZ = 1.2;
 const caughtY = (t: number) => ramp(t, 0, 1.2, LANDED[1] + 9, LANDED[1] - 30);
 
 // He tips the moon out of the bucket over the side. Times in seconds into
@@ -216,12 +222,14 @@ const finaleLeap = (
   size: 2.2,
 });
 const FINALE_LEAPS: Leap[] = [
-  finaleLeap([30, 400], [70, 404], 24, 0.4),
-  finaleLeap([200, 398], [245, 402], 26, 1.3),
-  finaleLeap([100, 415], [135, 418], 30, 2.2),
-  finaleLeap([235, 400], [205, 404], 22, 2.8),
-  finaleLeap([60, 410], [25, 412], 26, 3.6),
-  finaleLeap([150, 420], [190, 422], 34, 4.5),
+  finaleLeap([60, 440], [100, 446], 30, 0.3),
+  finaleLeap([200, 430], [240, 436], 32, 1),
+  finaleLeap([120, 455], [160, 460], 40, 1.6),
+  finaleLeap([235, 440], [195, 444], 30, 2.3),
+  finaleLeap([155, 450], [118, 455], 38, 3),
+  finaleLeap([50, 445], [85, 450], 28, 3.6),
+  finaleLeap([170, 440], [210, 446], 36, 4.3),
+  finaleLeap([100, 450], [136, 456], 34, 5),
 ];
 
 // The gift: a fish clears the gunwale and lands on the foredeck by the cat.
@@ -241,9 +249,12 @@ export const SHOTS: Shot[] = [
     framing: "Wide",
     title: "The boat under the moon",
     action:
-      "A tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection.",
+      "Out of the dark, a tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection.",
     sound: "Intro, then the tune. The sea.",
-    spec: (_, film) => fishing(WIDE, wander(film), MOON_HEIGHT.wide),
+    spec: (t, film) => ({
+      ...fishing(WIDE, wander(film), MOON_HEIGHT.wide),
+      fade: 1 - move(t, 0, 1.4),
+    }),
     panel: 2,
   },
   {
@@ -260,57 +271,38 @@ export const SHOTS: Shot[] = [
     id: "03",
     bars: [8, 9],
     framing: "Close",
-    title: "A ripple",
-    action:
-      "The float bobs beside the reflection. Its ripple runs into it, and the reflection wobbles.",
-    sound: "The tune's last phrase. A plip, water lapping.",
+    title: "The float beside the moon",
+    action: "His float bobs beside the moon's reflection, never on it.",
+    sound: "The tune's last phrase. Water lapping.",
     spec: (t, film) => ({
       ...fishing(WATER, wander(film), MOON_HEIGHT.water),
       cat: undefined,
-      ripple: { at: FLOAT, radius: 18 * (t - 0.1) },
-      wobble: ramp(t, 0.78, 0.92, 0, 1) * ramp(t, 0.92, 1.5, 1, 0.5),
+      // Each bob of the float sends out a ring.
+      ripple: { at: FLOAT, radius: 16 * ((t + 0.3) % 0.9) },
     }),
-    panel: 1.05,
-    notation: (film) => ({
-      shakes: [
-        {
-          at: onScreen(WATER, reflectionAt(wander(film))),
-          r: 7.5 * WATER.zoom,
-        },
-      ],
-    }),
+    panel: 1,
   },
   {
     id: "04",
     bars: [9, 10],
     framing: "Close",
-    title: "The moon shivers",
-    action: "Up in the sky the moon shivers too. Only the cat looks up.",
-    sound: "The tune ends. A faint, glassy shiver.",
-    spec: (t, film) => {
-      const scene = fishing(CAT_SKY, wander(film), MOON_HEIGHT.cat);
-      return {
-        ...scene,
-        moon: {
-          ...skyMoon(CAT_SKY, wander(film), MOON_HEIGHT.cat),
-          shiver: t < 1 ? 2 : 0,
-        },
-        cat: { ...PEER_LEFT, look: ramp(t, 0.2, 0.4, 0, 50) },
-      };
-    },
-    panel: 0.75,
-    notation: (film) => {
-      const moon = skyMoon(CAT_SKY, wander(film), MOON_HEIGHT.cat);
-      return { shakes: [{ at: [moon.x, moon.y], r: moon.r }] };
-    },
+    title: "He nods off",
+    action: "His eyelids droop. He nods, jerks awake, then nods off for good.",
+    sound: "The tune ends. A long, sleepy breath.",
+    spec: (t, film) => ({
+      ...fishing(NOD, wander(film), MOON_HEIGHT.medium),
+      fisherman: noddingOff(t),
+      zzz: t >= NOD_ZZZ ? t - NOD_ZZZ : undefined,
+    }),
+    panel: 1.4,
   },
   {
     id: "05",
     bars: [10, 12],
     framing: "Medium",
-    title: "He dozes off",
+    title: "Asleep",
     action:
-      "His head sinks; the hat slides over his eyes. Meanwhile the moon drifts on, and its reflection reaches his float.",
+      "He sleeps. The moon drifts on across the sky, and its reflection wanders into his hook.",
     sound: "The doze: a lazy clarinet.",
     spec: (t, film) => {
       // As his hands sink to his lap the rod droops, its tip still over the
@@ -328,6 +320,7 @@ export const SHOTS: Shot[] = [
         moon: skyMoon(MEDIUM, wander(film), MOON_HEIGHT.medium),
         reflection: reflectionAt(wander(film)),
         cat: PEER_LEFT,
+        zzz: 1.5 - NOD_ZZZ + t,
       };
     },
     panel: 2,
@@ -356,22 +349,34 @@ export const SHOTS: Shot[] = [
     framing: "Close",
     title: "A tug",
     action:
-      "The reflection has wandered into his hook. The float plunges under: it is hooked.",
+      "The reflection has wandered into his hook. The float twitches, then plunges under: it is hooked.",
     sound: "The tug: two plucks. A plop, the reel clicks.",
     spec: (t) => {
-      // A jolt on each of the two plucks.
-      const jolt = Math.max(ramp(t, 0, 0.4, 1, 0), ramp(t, 0.75, 1.15, 1, 0));
+      // A twitch on the first pluck, the plunge on the second.
+      const twitch = t < 0.15 ? 1.5 : 0;
+      const plunged = t >= BEAT;
+      const jolt = Math.max(
+        ramp(t, 0, 0.3, 0.5, 0),
+        ramp(t, BEAT, BEAT + 0.4, 1, 0),
+      );
       return {
         ...fishing(WATER, HOOKED[0], MOON_HEIGHT.water),
         cat: undefined,
-        float: undefined,
-        wobble: 0.3 + 0.7 * jolt,
-        rod: { ...ROD, bend: 4, line: { to: FLOAT, slack: 0 } },
-        splashes: t < 0.6 ? [{ at: FLOAT, size: 6 }] : [],
-        catchGlow: { at: HOOKED, strength: ramp(t, 0, 1.5, 0.3, 0.7) },
+        float: plunged ? undefined : [FLOAT[0], FLOAT[1] + twitch],
+        ripple: plunged ? undefined : { at: FLOAT, radius: 3 + 14 * t },
+        wobble: 0.2 + 0.8 * jolt,
+        rod: {
+          ...ROD,
+          bend: plunged ? 6 : ROD.bend + twitch,
+          line: { to: FLOAT, slack: 0 },
+        },
+        splashes: plunged && t < BEAT + 0.5 ? [{ at: FLOAT, size: 6 }] : [],
+        catchGlow: plunged
+          ? { at: HOOKED, strength: ramp(t, BEAT, 1.5, 0.3, 0.7) }
+          : undefined,
       };
     },
-    panel: 0.25,
+    panel: 0.85,
   },
   {
     id: "07",
@@ -419,15 +424,16 @@ export const SHOTS: Shot[] = [
   {
     id: "08",
     bars: [16, 17],
-    framing: "Wide",
+    framing: "Medium",
     title: "The moon comes out of the water",
     action:
       "As the moon sinks below the horizon, it bursts out of the sea on his line.",
     sound: "The catch: the harp sweeps up. A great splash.",
     spec: (t) => {
       const ball: Vec2 = [LANDED[0], caughtY(t)];
+      const lean = 1.5 * move(t, 0, 0.2);
       return {
-        camera: WIDE,
+        camera: CATCH,
         moon: {
           in: "world",
           x: ball[0],
@@ -436,9 +442,16 @@ export const SHOTS: Shot[] = [
           waterline: LANDED[1],
         },
         setting: { x: SETTING_X, y: settingY(t), r: 11 },
-        fisherman: "haul",
-        rod: { angle: -52, length: 72, bend: 18, line: { to: ball, slack: 0 } },
-        splashes: [{ at: LANDED, size: 7 }],
+        moonlight: ramp(t, 0, 0.4, 1, 0),
+        // One last heave lands it.
+        fisherman: leanBack(POSES.haul, lean),
+        rod: {
+          angle: -52,
+          length: 72,
+          bend: 18 + 3 * lean,
+          line: { to: ball, slack: 0 },
+        },
+        splashes: t < 1 ? [{ at: LANDED, size: 7 }] : [],
         cat: { ...PEER_RIGHT, look: 5 },
       };
     },
@@ -446,14 +459,14 @@ export const SHOTS: Shot[] = [
     notation: () => ({
       arrows: [
         alongside(
-          [SETTING_X, horizonIn(WIDE) - 30],
-          [SETTING_X, horizonIn(WIDE) + 2],
-          -18,
+          [SETTING_X, horizonIn(CATCH) - 30],
+          [SETTING_X, horizonIn(CATCH) + 2],
+          -20,
         ),
         alongside(
-          onScreen(WIDE, [LANDED[0], LANDED[1] + 12]),
-          onScreen(WIDE, [LANDED[0], LANDED[1] - 30]),
-          -18,
+          onScreen(CATCH, [LANDED[0], LANDED[1] + 10]),
+          onScreen(CATCH, [LANDED[0], LANDED[1] - 24]),
+          -34,
         ),
       ],
     }),
@@ -485,8 +498,12 @@ export const SHOTS: Shot[] = [
     title: "The cat reaches",
     action: "The cat stretches a paw toward the glow.",
     sound: "The violin answers. A curious chirp.",
-    spec: () => ({ ...KEY_IMAGE, camera: CAT }),
-    panel: 0.75,
+    spec: (t) => ({
+      ...KEY_IMAGE,
+      camera: CAT,
+      cat: { ...KEY_CAT, paw: move(t, 0.2, 0.7) - 0.4 * move(t, 1.1, 1.4) },
+    }),
+    panel: 0.9,
   },
   {
     id: "12",
@@ -495,7 +512,11 @@ export const SHOTS: Shot[] = [
     title: "It dims",
     action: "The moon's glow flickers and fades, like a fish out of water.",
     sound: "The dimming: the tune in minor on the violin.",
-    spec: (t) => ({ ...KEY_IMAGE, camera: PAIL, glow: ramp(t, 0, 3, 1, 0.35) }),
+    spec: (t) => ({
+      ...KEY_IMAGE,
+      camera: PAIL,
+      glow: ramp(t, 0, 3, 1, 0.35) * flicker(t),
+    }),
     panel: 2.6,
   },
   {
@@ -574,21 +595,22 @@ export const SHOTS: Shot[] = [
     framing: "Wide",
     title: "The moon rises",
     action:
-      "The sea glows from below; the moon rises out of the water beside the boat and climbs into the sky.",
+      "The sea glows from below; the moon rises out of the water past the bow, where it set, and climbs into the sky. He and the cat watch it go.",
     sound: "The rise: the clarinet reaches up. A swelling shimmer.",
     spec: (t) => {
       const y = ramp(t, 0.5, 4.5, 450, 250);
       return {
         camera: WIDE,
-        moon: { in: "world", x: 214, y, r: 12, waterline: 440 },
+        moon: { in: "world", x: SETS_OVER, y, r: 12, waterline: 440 },
+        moonlight: ramp(t, 2, 4.5, 0, 0.8),
         seaGlow: {
-          at: [214, 440],
+          at: [SETS_OVER, 440],
           radius: 70,
           strength: ramp(t, 0, 1.5, 0.2, 1),
         },
-        fisherman: "holdBucket",
+        fisherman: lookingUp(t, [1.5, 3.5]),
         bucket: EMPTY_BUCKET,
-        cat: PEER_RIGHT,
+        cat: { ...PEER_RIGHT, look: 45 * move(t, 1.5, 4) },
       };
     },
     panel: 1.8,
@@ -596,15 +618,15 @@ export const SHOTS: Shot[] = [
   {
     id: "17",
     bars: [31, 35],
-    framing: "Wide",
+    framing: "Medium",
     title: "Silver light",
     action: "The moon rides high again. Fish leap through its silver path.",
     sound: "The finale: home in E. Splashes.",
     spec: (t) => ({
-      ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
-      cat: PEER_RIGHT,
+      ...fishing(MEDIUM_WIDE, REFLECTION[0], MOON_HEIGHT.medium),
+      cat: { ...PEER_RIGHT, look: 15 },
       fish: FINALE_LEAPS.flatMap((l) => leaping(l, t) ?? []),
-      splashes: FINALE_LEAPS.flatMap((l) => leapSplashes(l, t, 3)),
+      splashes: FINALE_LEAPS.flatMap((l) => leapSplashes(l, t, 3.5)),
     }),
     panel: 3,
   },
@@ -626,10 +648,11 @@ export const SHOTS: Shot[] = [
             ? [GIFT].flatMap((l) => leaping(l, t) ?? [])
             : [{ at: GIFT.to, angle: 180 + flop, size: GIFT.size }],
         splashes: leapSplashes(GIFT, t, 3, false),
-        // The cat watches it fly in, then looks down at its prize.
+        // The cat watches it fly in, then puts a paw on its prize.
         cat: {
           ...PEER_LEFT,
           look: 25 * move(t, 0.6, 0.9) - 40 * move(t, 1.4, 1.7),
+          paw: 0.7 * move(t, lands + 0.1, lands + 0.4),
         },
       };
     },
@@ -641,11 +664,13 @@ export const SHOTS: Shot[] = [
     framing: "Wide",
     title: "Like the beginning",
     action:
-      "The first shot again: the moon high, his float beside its reflection. He smiles; the cat has its fish.",
+      "The first shot again: the moon high, his float beside its reflection. The cat has its fish. Fade to black.",
     sound: "The coda, the plucked ta-dum and a last high note. The sea.",
-    spec: () => ({
+    spec: (t) => ({
       ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
-      fish: [{ at: [198, 341], angle: 180, size: 1.6 }],
+      fish: [{ at: GIFT.to, angle: 180, size: 1.6 }],
+      cat: { ...PEER_LEFT, look: -15, paw: 0.7 },
+      fade: move(t, 4.6, 6),
     }),
     panel: 3,
   },

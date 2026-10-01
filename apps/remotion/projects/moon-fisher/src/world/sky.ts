@@ -8,13 +8,16 @@ import { noise } from "../pixel/shapes";
 export type Band = readonly [color: number, at: number];
 
 // Solid bands of color joined by short ordered-dither seams. `seam` is the
-// share of each interval given to the seam.
+// share of each interval given to the seam. `cover` below 1 lays the bands
+// over what is there through an ordered-dither mask, so one sky can dissolve
+// into another.
 export const fillBands = (
   pix: Pix,
   top: number,
   bottom: number,
   bands: readonly Band[],
   seam: number,
+  cover = 1,
 ): void => {
   const y0 = Math.max(0, Math.floor(top * pix.k));
   const y1 = Math.min(pix.h, Math.floor(bottom * pix.k));
@@ -33,6 +36,7 @@ export const fillBands = (
     const f = b === a ? 0 : (t - a[1]) / (b[1] - a[1]);
     const m = smoothstep(0.5 - seam / 2, 0.5 + seam / 2, f);
     for (let px = 0; px < pix.w; px++) {
+      if (cover < 1 && bayer(px, py) >= cover) continue;
       pix.set(px, py, m > bayer(px, py) ? b[0] : a[0]);
     }
   }
@@ -40,12 +44,21 @@ export const fillBands = (
 
 export type SkyProps = {
   horizon: number;
-  bands: readonly Band[];
+  // The moonless sky, and the moonlit one dissolved over it by `moonlight`
+  // from 0 to 1.
+  dark: readonly Band[];
+  lit: readonly Band[];
+  moonlight: number;
   seam: number;
 };
 
-export const drawSky = (pix: Pix, { horizon, bands, seam }: SkyProps): void =>
-  fillBands(pix, 0, horizon, bands, seam);
+export const drawSky = (
+  pix: Pix,
+  { horizon, dark, lit, moonlight, seam }: SkyProps,
+): void => {
+  fillBands(pix, 0, horizon, dark, seam);
+  if (moonlight > 0) fillBands(pix, 0, horizon, lit, seam, moonlight);
+};
 
 export type StarsProps = {
   seed: string;

@@ -8,7 +8,7 @@ import {
 } from "../pixel/lit";
 import { C } from "../pixel/palette";
 import type { AssetName } from "../assets";
-import { IDENTITY, Pix, type Camera } from "../pixel/pix";
+import { IDENTITY, onScreen, Pix, type Camera } from "../pixel/pix";
 import { ellipse, type Vec2 } from "../pixel/shapes";
 import {
   BOAT,
@@ -22,6 +22,7 @@ import { cat, type CatProps } from "../world/cat";
 import { drawSplash, fishParts, type FishProps } from "../world/fish";
 import {
   fisherman,
+  POSES,
   type Feature,
   type FishermanPose,
   type PoseDef,
@@ -44,20 +45,19 @@ export const SEAT: Vec2 = [100, 358];
 // 24 fps.
 export const HOLD = 3;
 export const STYLE: LitStyle = { dither: 0, outline: true, cleanup: true };
-// A shivering moon jumps sideways every two frames, by these fractions of
-// its shiver.
-const SHIVER = [1, -1, 0.5, -1, 1, -0.5];
+// Darkening steps that take the brightest color down to ink.
+const FADE_STEPS = 11;
 
 type SkyMoon = { x: number; y: number; r: number };
 
 export type SceneSpec = {
   camera: Camera;
-  // Where the moon is: in the sky (in design-frame units, shivering by
-  // `shiver` of them), caught in the bucket, loose in the world (world
-  // units; `waterline` hides the part still under the sea), or gone. A sky
-  // moon below the horizon is hidden by the sea.
+  // Where the moon is: in the sky (in design-frame units), caught in the
+  // bucket, loose in the world (world units; `waterline` hides the part
+  // still under the sea), or gone. A sky moon below the horizon is hidden by
+  // the sea.
   moon:
-    | (SkyMoon & { in: "sky"; shiver?: number })
+    | (SkyMoon & { in: "sky" })
     | { in: "bucket" }
     | { in: "world"; x: number; y: number; r: number; waterline?: number }
     | { in: "gone" };
@@ -95,6 +95,13 @@ export type SceneSpec = {
   fish?: FishProps[];
   // Light spreading under the sea, from 0 to 1.
   seaGlow?: { at: Vec2; radius: number; strength: number };
+  // How much the moon lights the sky, 0 to 1: by default full while it is in
+  // the sky and none otherwise.
+  moonlight?: number;
+  // Seconds he has been asleep: Z's drift up from his head.
+  zzz?: number;
+  // How far the whole picture has faded to black, 0 to 1.
+  fade?: number;
 };
 
 const DARK_SKY: Band[] = [
@@ -144,10 +151,14 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   const looseMoon = spec.moon.in === "world" ? spec.moon : null;
   const glow = spec.glow ?? 1;
 
+  // He blinks every five seconds or so while his eyes are open.
+  const pose =
+    typeof spec.fisherman === "string" ? POSES[spec.fisherman] : spec.fisherman;
+  const blinks = pose.eyes === "open" && step % 41 >= 19 && step % 41 < 21;
   const man = fisherman({
     x: SEAT[0],
     y: SEAT[1],
-    pose: spec.fisherman,
+    pose: blinks ? { ...pose, eyes: "closed" } : pose,
     facing: "right",
   });
   const inBucket = spec.moon.in === "bucket";
@@ -202,17 +213,26 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   } else {
     lights.push({ kind: "dir", dir: [0, -1, 0.6], strength: 0.14 });
   }
-  const scene: LitScene = { lights, ambient: skyMoon ? 0.07 : 0.04 };
+  const moonlight = spec.moonlight ?? (skyMoon ? 1 : 0);
+  const scene: LitScene = { lights, ambient: 0.04 + 0.03 * moonlight };
 
   const as = (asset: AssetName) => pix.drawAs(asset);
   as("sky");
-  drawSky(pix, { horizon, bands: skyMoon ? MOONLIT_SKY : DARK_SKY, seam: 0.5 });
-  if (!skyMoon) drawMilkyWay(pix, { seed: 7, horizon, strength: 1.3 });
+  drawSky(pix, {
+    horizon,
+    dark: DARK_SKY,
+    lit: MOONLIT_SKY,
+    moonlight,
+    seam: 0.5,
+  });
+  if (moonlight < 1) {
+    drawMilkyWay(pix, { seed: 7, horizon, strength: 1.3 * (1 - moonlight) });
+  }
   drawStars(pix, {
     seed: "key-stars",
     count: 150,
     horizon,
-    strength: skyMoon ? 0.6 : 1,
+    strength: 1 - 0.4 * moonlight,
     step,
   });
   as("sea");
@@ -221,7 +241,8 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     bands: SEA,
     seam: 0.35,
     seed: "key-sea",
-    swell: skyMoon ? 0.45 : 0.25,
+    swell: 0.25 + 0.2 * moonlight,
+    step,
   });
   const seaRow = Math.max(0, Math.floor(horizon * pix.k) + 1);
   if (spec.seaGlow) {
@@ -252,9 +273,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   };
   if (spec.setting) drawSkyMoon(spec.setting);
   if (skyMoon) {
-    const shiver =
-      (skyMoon.shiver ?? 0) * SHIVER[Math.floor(frame / 2) % SHIVER.length];
-    drawSkyMoon({ ...skyMoon, x: skyMoon.x + shiver });
+    drawSkyMoon(skyMoon);
     as("glitter");
     pix.cam = IDENTITY;
     drawMoonPath(pix, {
@@ -404,5 +423,40 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       steps: 1 + 2.5 * strength,
     });
   }
+  if (spec.zzz !== undefined) {
+    as("zzz");
+    // They rise from just above the crown of his hat.
+    const [eye] = man.features;
+    const from = onScreen(camera, [eye.x + 4, eye.y - 15]);
+    drawZzz(pix, from, spec.zzz, camera.zoom);
+  }
   pix.drawAs(null);
+  if (spec.fade) {
+    const steps = Math.round(spec.fade * FADE_STEPS);
+    for (let py = 0; py < pix.h; py++)
+      for (let px = 0; px < pix.w; px++) pix.darken(px, py, steps);
+  }
+};
+
+// Sleep: a Z rises from above his head every half second, drifting up and
+// to the right, growing and dimming as it goes. Placed in the design frame,
+// and bigger in close-ups.
+const ZZZ_EVERY = 0.55;
+const ZZZ_LIFE = 1.7;
+const drawZzz = (pix: Pix, [hx, hy]: Vec2, asleep: number, zoom: number) => {
+  const scale = Math.min(2.2, 0.6 + zoom / 2.5);
+  pix.cam = IDENTITY;
+  for (let i = Math.floor((asleep - ZZZ_LIFE) / ZZZ_EVERY); ; i++) {
+    const age = asleep - i * ZZZ_EVERY;
+    if (age < 0) break;
+    if (i < 0 || age > ZZZ_LIFE) continue;
+    const u = age / ZZZ_LIFE;
+    const size = (5 + 6 * u + (i % 2 ? 0 : 2)) * scale;
+    const x = hx + (18 * u + 3 * Math.sin(i * 2.1 + u * 5)) * scale;
+    const y = hy - size - 40 * u * scale;
+    const c = u < 0.55 ? C.silver4 : u < 0.8 ? C.silver2 : C.silver1;
+    pix.line(x, y, x + size, y, c);
+    pix.line(x + size, y, x, y + size, c);
+    pix.line(x, y + size, x + size, y + size, c);
+  }
 };

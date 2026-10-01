@@ -15,6 +15,8 @@ export type CatProps = {
   facing: "left" | "right";
   // Degrees the head tilts up, toward the side the cat faces.
   look?: number;
+  // How far the front paw reaches out, 0 to 1.
+  paw?: number;
 };
 
 export type CatFigure = {
@@ -153,6 +155,22 @@ const tiltHead = (p: Pose, degrees: number): Pose => {
   };
 };
 
+// The front leg lifts and stretches out toward the side the cat faces.
+const PAW_REACH: Limb = [[-7, -11], [-15, -9], 1.8];
+
+const reachPaw = (p: Pose, paw: number): Pose => {
+  if (!paw) return p;
+  const [a, b, r] = p.legs[1];
+  const mix = (u: Vec2, v: Vec2): Vec2 => [
+    u[0] + (v[0] - u[0]) * paw,
+    u[1] + (v[1] - u[1]) * paw,
+  ];
+  return {
+    ...p,
+    legs: [p.legs[0], [mix(a, PAW_REACH[0]), mix(b, PAW_REACH[1]), r]],
+  };
+};
+
 // Short stripes across the tail, one per segment.
 const tailStripes = (tail: Vec2[]): Mark[] =>
   tail.slice(0, -1).map((a, i) => {
@@ -172,8 +190,15 @@ const tailStripes = (tail: Vec2[]): Mark[] =>
 
 // The fisherman's ginger tabby with a white chest. Body, legs and neck are
 // grown as one piece, and so are the head, muzzle and ears.
-export const cat = ({ x, y, pose, facing, look = 0 }: CatProps): CatFigure => {
-  const p = tiltHead(POSES[pose], look);
+export const cat = ({
+  x,
+  y,
+  pose,
+  facing,
+  look = 0,
+  paw = 0,
+}: CatProps): CatFigure => {
+  const p = reachPaw(tiltHead(POSES[pose], look), paw);
   const at = ([dx, dy]: Vec2): Vec2 => [x + dx, y + dy];
   const oval = ([ox, oy, rx, ry, rot]: Oval) =>
     ellipse(...at([ox, oy]), rx, ry, rot ?? 0);
@@ -239,7 +264,9 @@ export const cat = ({ x, y, pose, facing, look = 0 }: CatProps): CatFigure => {
     { x: ex, y: ey, c: C.ink, dx: -1 },
     { x: at(p.nose)[0], y: at(p.nose)[1], c: C.skin1 },
   ];
-  const strokes: Stroke[] = [{ pts: p.legGap.map(at), steps: -1 }];
+  // The shadow between the front legs goes once a paw is lifted.
+  const strokes: Stroke[] =
+    paw < 0.3 ? [{ pts: p.legGap.map(at), steps: -1 }] : [];
   const lines = p.whiskers.map(([a, b]) => [at(a), at(b)] as const);
   if (facing === "left") return { body, features, strokes, whiskers: lines };
   const fx = (v: Vec2): Vec2 => [2 * x - v[0], v[1]];

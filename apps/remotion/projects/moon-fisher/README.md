@@ -106,21 +106,21 @@ The library's file names number octaves one lower than scientific pitch, except 
 
 ## Storyboard
 
-v003, approved by Olof on 2026-10-01. Nineteen shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v003/storyboard.png` shows one panel per shot. Panels use the placeholder assets drawn so far. Red arrows mark what travels during a shot, and shake lines mark a shiver. Where a pose does not exist yet (the cat's reaching paw and pounce, his smile), the caption carries the action.
+v004, 2026-10-01: the storyboard Olof approved as v003, carrying the animatic's changes. Nineteen shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v004/storyboard.png` shows one panel per shot, each the animatic's frame at that moment. Panels use the placeholder assets drawn so far, and red arrows mark what travels during a shot. Where a pose does not exist yet (the cat's pounce, his smile), the caption carries the action.
 
-**How the catch works.** The moon and its reflection are one thing: what happens to the reflection happens to the moon. The film plants this rule before it is needed. His line hangs straight down from the rod tip to the float, and the reflection lies beside it, never on it; the float's ripple makes the reflection wobble, and up in the sky the moon shivers, which only the cat notices (03–04). As the night wears on, the moon crosses the sky and its reflection the water: slowly while he fishes, faster while he dozes, until it wanders into his hook and the float plunges on the tug's first pluck (05–06). Hauling on the hooked reflection drags it toward the boat and the moon down the sky, in step (07). The moon sinks below the horizon at the moment it bursts out of the sea on his line (08), so the sky stays empty while he has it. It sets just past the bow, the one stretch of horizon the boat does not hide.
+**How the catch works.** The moon and its reflection are one thing: what happens to the reflection happens to the moon. His line hangs straight down from the rod tip to the float, and the reflection lies beside it, never on it (01–03). He nods off (04). As the night wears on, the moon crosses the sky and its reflection the water: slowly while he fishes, faster while he sleeps, until it wanders into his hook (05). The float twitches on the tug's first pluck and plunges on the second (06). Hauling on the hooked reflection drags it toward the boat and the moon down the sky, in step (07). The moon sinks below the horizon at the moment it bursts out of the sea on his line, and the sky goes dark (08); it stays empty while he has the moon. It sets just past the bow, the one stretch of horizon the boat does not hide, and rises there again (16).
 
 <!-- generated:storyboard -->
 | Shot | Bars | Time | Framing | What happens | Sound |
 | --- | --- | --- | --- | --- | --- |
-| 01 | 1–4 | 0:00 | Wide | **The boat under the moon.** A tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection. | Intro, then the tune. The sea. |
+| 01 | 1–4 | 0:00 | Wide | **The boat under the moon.** Out of the dark, a tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection. | Intro, then the tune. The sea. |
 | 02 | 5–7 | 0:06 | Medium | **Nothing bites.** He waits with the rod out; the cat watches the float. | The tune. A creak of the boat. |
-| 03 | 8 | 0:10.5 | Close | **A ripple.** The float bobs beside the reflection. Its ripple runs into it, and the reflection wobbles. | The tune's last phrase. A plip, water lapping. |
-| 04 | 9 | 0:12 | Close | **The moon shivers.** Up in the sky the moon shivers too. Only the cat looks up. | The tune ends. A faint, glassy shiver. |
-| 05 | 10–11 | 0:13.5 | Medium | **He dozes off.** His head sinks; the hat slides over his eyes. Meanwhile the moon drifts on, and its reflection reaches his float. | The doze: a lazy clarinet. |
-| 06 | 12 | 0:16.5 | Close | **A tug.** The reflection has wandered into his hook. The float plunges under: it is hooked. | The tug: two plucks. A plop, the reel clicks. |
+| 03 | 8 | 0:10.5 | Close | **The float beside the moon.** His float bobs beside the moon's reflection, never on it. | The tune's last phrase. Water lapping. |
+| 04 | 9 | 0:12 | Close | **He nods off.** His eyelids droop. He nods, jerks awake, then nods off for good. | The tune ends. A long, sleepy breath. |
+| 05 | 10–11 | 0:13.5 | Medium | **Asleep.** He sleeps. The moon drifts on across the sky, and its reflection wanders into his hook. | The doze: a lazy clarinet. |
+| 06 | 12 | 0:16.5 | Close | **A tug.** The reflection has wandered into his hook. The float twitches, then plunges under: it is hooked. | The tug: two plucks. A plop, the reel clicks. |
 | 07 | 13–15 | 0:18 | Medium | **He hauls the moon down.** He jolts awake and hauls. Each pull drags the reflection toward the boat and the moon down the sky. The cat stares. | The haul: driving plucks. The reel whirs. |
-| 08 | 16 | 0:22.5 | Wide | **The moon comes out of the water.** As the moon sinks below the horizon, it bursts out of the sea on his line. | The catch: the harp sweeps up. A great splash. |
+| 08 | 16 | 0:22.5 | Medium | **The moon comes out of the water.** As the moon sinks below the horizon, it bursts out of the sea on his line. | The catch: the harp sweeps up. A great splash. |
 | 09 | 17–18 | 0:24 | Medium | **The moon in his bucket.** The moon glows in the bucket, lighting his face from below. | Wonder: the tune on high piano. Drips. |
 | 10 | 19–20 | 0:27 | Close | **Wonder.** His face in the moonlight; a slow smile. | Wonder. |
 | 11 | 21 | 0:30 | Close | **The cat reaches.** The cat stretches a paw toward the glow. | The violin answers. A curious chirp. |
@@ -128,25 +128,37 @@ v003, approved by Olof on 2026-10-01. Nineteen shots are cut on the score's bars
 | 13 | 24–25 | 0:34.5 | Medium | **The empty sky.** He looks up at the black, moonless sky, then back at the fading moon. | The dimming ends, unresolved. |
 | 14 | 26 | 0:37.5 | Medium | **He lets it go.** He tips the bucket over the side; the moon slides into the sea. | The release: the harp sinks. A soft plop. |
 | 15 | 27 | 0:39 | Wide | **Darkness.** Only the stars and the boat's faint outline. | Only the sea. |
-| 16 | 28–30 | 0:40.5 | Wide | **The moon rises.** The sea glows from below; the moon rises out of the water beside the boat and climbs into the sky. | The rise: the clarinet reaches up. A swelling shimmer. |
-| 17 | 31–34 | 0:45 | Wide | **Silver light.** The moon rides high again. Fish leap through its silver path. | The finale: home in E. Splashes. |
+| 16 | 28–30 | 0:40.5 | Wide | **The moon rises.** The sea glows from below; the moon rises out of the water past the bow, where it set, and climbs into the sky. He and the cat watch it go. | The rise: the clarinet reaches up. A swelling shimmer. |
+| 17 | 31–34 | 0:45 | Medium | **Silver light.** The moon rides high again. Fish leap through its silver path. | The finale: home in E. Splashes. |
 | 18 | 35–36 | 0:51 | Medium | **A gift.** One fish leaps into the boat; the cat is on it at once. | The last phrase again. A flop, a happy mew. |
-| 19 | 37–40 | 0:54 | Wide | **Like the beginning.** The first shot again: the moon high, his float beside its reflection. He smiles; the cat has its fish. | The coda, the plucked ta-dum and a last high note. The sea. |
+| 19 | 37–40 | 0:54 | Wide | **Like the beginning.** The first shot again: the moon high, his float beside its reflection. The cat has its fish. Fade to black. | The coda, the plucked ta-dum and a last high note. The sea. |
 <!-- /generated:storyboard -->
 
 - **Framing:** four setups do most of the work. The wide shot holds the moon high over a small boat; the medium shot is the style frame's; close-ups frame his face, the cat, the bucket or the float in the water. Most shots are locked off; the camera stays still and the story moves.
 - **Mirror:** shot 19 repeats shot 01's framing, so the ending visibly returns to the beginning, with the reflection back beside his float.
 - **Motion:** each shot is a scene spec over time in `src/storyboard/shots.ts`, and the animatic plays them through. The moon's drift is one function of film time shared by shots 01–06.
-- **Earlier versions:** v001 (2026-09-30, 18 shots) put the float on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch. v002 (2026-10-01) added the rule, but the line slanted out to the float and the tug pulled the reflection toward the hook.
+- **Earlier versions:** v001 (2026-09-30, 18 shots) put the float on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch. v002 (2026-10-01) added the rule, but the line slanted out to the float and the tug pulled the reflection toward the hook. v003, approved, planted the rule with the moon shivering in the sky, which Olof cut after the first animatic.
 
 ## Animatic
 
-v001, 2026-10-01, awaits Olof's review. `renders/animatic/v001/animatic.mp4` plays the approved storyboard's 19 shots at final timing over score v003: 60 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
+v002, 2026-10-01, awaits Olof's review. `renders/animatic/v002/animatic.mp4` plays the 19 shots at final timing over score v003: 60 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
+
+v001 was “roughly there but still very rough”. The length was right, but the story did not read: Olof could not tell that he falls asleep, and he did not want the moon to shudder in the sky. He left the other rough edges to the assistant. v002:
+
+- **Sleep:** a close-up of him nodding off replaces the shiver: a heavy blink, a nod, a jerk awake, then his eyes close (04). Z's rise from his hat while he sleeps (04–05).
+- **The tug:** the float twitches on the first pluck and plunges on the second, instead of vanishing at the cut (06).
+- **The catch:** framed closer, so the setting moon, the cat watching it and the moon bursting out of the sea on his line are big enough to read. He heaves once more as it comes out (08).
+- **The sky:** it dissolves to dark as the moon sets (08) and back to moonlit as it rises (16), instead of switching at a cut.
+- **The rise:** the moon comes up past the bow, where it set, instead of through the cat; he and the cat watch it climb (16).
+- **The finale:** framed closer, with eight fish leaping through the moon's path (17).
+- **Holds:** he blinks, the cat reaches a paw toward the glow (11) and keeps one on its fish (18–19), and the dying moon flickers (12). His smile (10, 19) and the cat's pounce (18) are still missing.
+- **The frame:** the film fades up from black over the first bar and down to black over the last, and the sea's swell lines sway.
+
+How it is made:
 
 - **One timeline:** the animatic, the storyboard and the asset register all draw the film through `filmAt(frame)`, so a storyboard panel is the animatic's frame at that moment.
-- **Cadence:** action moves on twos and ambient life on threes, as for the style frame. The boat's bob, the stars, the water and the cat's blink run on across the cuts.
-- **What moves:** the moon drifting into the hook (01–06), the ripple and the shiver (03–04), his nodding off (05), the tug (06), the jolt and the heaves that bring the moon down (07), the catch (08), the fading glow (12), his look up and back (13), the moon dropping out of the bucket and sinking (14), its rise (16) and the leaping fish (17–18). The movements are in `src/storyboard/acting.ts`.
-- **Holds:** where a pose does not exist yet, the shot holds: his smile (10, 19), the cat's reach (11) and its pounce (18). The asset register lists them.
+- **Cadence:** action moves on twos and ambient life on threes, as for the style frame. The boat's bob, the stars, the water and the blinks run on across the cuts.
+- **Acting:** the movements within shots are in `src/storyboard/acting.ts`: nodding off, falling asleep, the startle and heaves, looking up, the leaping fish and the flicker.
 
 ## Asset register
 
@@ -157,22 +169,23 @@ The screen columns are measured, not estimated. `npm run tables` draws every sho
 <!-- generated:assets -->
 | Asset | Status | On screen | Share of the picture | Largest | Still needs |
 | --- | --- | --- | --- | --- | --- |
-| **Fisherman** (character)<br>`fisherman({ x, y, pose, facing })` | rough | 56 s in 01–02, 05, 07–19 | 4% | 24% in 10 | Poses: fish, doze, haul, holdBucket, lookUp, tip, with tweens for nodding off (05), the waking jolt and his heaves (07) and looking up and back down (13). Needs a smile (10, 19), face detail for his close-up (10) and a fuller heave than a lean of the chest and arms. |
-| **Cat** (character)<br>`cat({ x, y, pose, facing, look })` | rough | 54 s in 01–02, 04–05, 07–09, 11–19 | 0.8% | 5% in 11 | One pose, peer, with a head tilt. Needs a paw reaching toward the glow (11), a pounce and a fish in its mouth (18, 19), a startle, and a tail that moves. |
-| **Moon** (prop)<br>`moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" \| "world" }` | rough | 41 s in 01–02, 04–05, 07–08, 14, 16–19 | 2% | 3% in 07 | The style frame's moon; it already shivers, sets and rises. Needs a brighter burst as it leaves the sea (08) and water streaming off it. |
-| **Bucket, with the moon in it** (prop)<br>`bucket({ x, rimY, moon, tilt, glow })` | rough | 21 s in 09–16 | 1.0% | 7% in 10 | The style frame's hero. The moon now drops out as he tips it (14); it needs water spilling with it, and an uneven, flickering fade as it dims (12). |
-| **Float** (prop)<br>`spec.float = [x, y]` | placeholder | 12 s in 02–03, 05, 18 | <0.1% | <0.1% in 03 | Two ovals. Needs a drawn red-and-white float, its bob and its plunge (06). |
-| **Rod and line** (prop)<br>`drawRod({ grip, angle, length, bend }); drawLine(from, to, slack)` | rough | 45 s in 01–09, 13, 17–19 | 0.1% | 0.4% in 04 | Needs a reel for the clicks and the whir (06, 07), and a bend that follows each heave (07). |
-| **Fish** (prop)<br>`fishParts({ at, angle, size })` | placeholder | 13 s in 17–19 | <0.1% | <0.1% in 17 | A body and a tail, now leaping in arcs (17, 18) and flopping on the deck (18). Needs fins, an eye and a silver sheen, and the one the cat holds (19). |
+| **Fisherman** (character)<br>`fisherman({ x, y, pose, facing })` | rough | 55 s in 01–02, 04–05, 07–19 | 5% | 24% in 10 | Poses: fish, doze, haul, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and his heaves (07), the last heave at the catch (08) and looking up (13, 16); he blinks. Needs a smile (10, 19), face detail for his close-ups (04, 10) and a fuller heave than a lean of the chest and arms. |
+| **Cat** (character)<br>`cat({ x, y, pose, facing, look, paw })` | rough | 50 s in 01–02, 05, 07–09, 11–19 | 0.8% | 6% in 11 | One pose, peer, with a head tilt and a front paw that reaches out (11, 18). Needs a pounce and a fish in its mouth (18, 19), a startle, and a tail that moves. |
+| **Moon** (prop)<br>`moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" \| "world" }` | rough | 39 s in 01–02, 04–05, 07–08, 14, 16–19 | 2% | 4% in 08 | The style frame's moon; it drifts, sets and rises. Needs a brighter burst as it leaves the sea (08) and water streaming off it. |
+| **Bucket, with the moon in it** (prop)<br>`bucket({ x, rimY, moon, tilt, glow })` | rough | 21 s in 09–16 | 1.0% | 7% in 10 | The style frame's hero. The moon drops out as he tips it (14) and flickers as it dims (12); it needs water spilling with it. |
+| **Float** (prop)<br>`spec.float = [x, y]` | placeholder | 13 s in 02–03, 05–06, 18 | <0.1% | <0.1% in 03 | Two ovals. Needs a drawn red-and-white float, its bob and its plunge (06). |
+| **Rod and line** (prop)<br>`drawRod({ grip, angle, length, bend }); drawLine(from, to, slack)` | rough | 43 s in 01–09, 13, 17–19 | 0.1% | 0.4% in 04 | Needs a reel for the clicks and the whir (06, 07), and a bend that follows each heave (07). |
+| **Fish** (prop)<br>`fishParts({ at, angle, size })` | placeholder | 13 s in 17–19 | <0.1% | 0.3% in 17 | A body and a tail, now leaping in arcs (17, 18) and flopping on the deck (18). Needs fins, an eye and a silver sheen, and the one the cat holds (19). |
 | **Boat** (set)<br>`boatInterior(BOAT), boatHull(BOAT)` | rough | 60 s in 01–19 | 8% | 23% in 11 | Planks, ribs and rivets from the style frame. Needs a check of the bow where the cat's close-ups frame it (04, 11), and a gentle rock beyond the one-pixel bob. |
-| **Sky** (set)<br>`drawSky, drawStars, drawMilkyWay` | rough | 57 s in 01–02, 04–05, 07–19 | 51% | 68% in 15 | Near final. Needs to darken as the moon sets (08) and brighten as it rises (16), instead of switching at the cut. |
-| **Sea** (set)<br>`drawSea({ horizon, bands, swell })` | rough | 60 s in 01–19 | 21% | 67% in 03 | Near final. Its swell lines hold still; they should drift slowly in the animatic. |
-| **Water reflections** (effect)<br>`reflectWater({ waterline, step })` | rough | 57 s in 01–09, 11–19 | 8% | 16% in 09 | Near final; Olof likes it. Needs to break up around splashes and the plunging float (06, 08). |
-| **Moon's reflection** (effect)<br>`spec.reflection = [x, y], spec.wobble; drawMoonReflection` | rough | 36 s in 01–03, 05–07, 17–19 | 0.2% | 3% in 06 | Drifts and wobbles. Once hooked it only gains a halo; it should stretch and tear as he hauls it in (07). |
-| **Moon's glitter path** (light)<br>`drawMoonPath({ x, horizon, halfWidth })` | rough | 38 s in 01–07, 17–19 | 1% | 7% in 03 | Near final. Should change shape with the moon's height as it comes down (07). |
-| **Moonlight glow** (light)<br>`drawHalo, drawShaft; spec.seaGlow` | rough | 21 s in 08–14, 16 | 3% | 21% in 10 | Halo and shaft around the caught moon, and the glow under the sea (16). Needs to flicker as the moon dims (12). |
-| **Splash** (effect)<br>`spec.splash = { at, size }; drawSplash` | placeholder | 7 s in 06, 08, 14, 17–18 | <0.1% | <0.1% in 06 | Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 08, 14, 17, 18). Needs a crown that rises and falls over a few frames, sized to each. |
-| **Ripple** (effect)<br>`spec.ripple = { at, radius }; drawRipple` | placeholder | 1 s in 03 | <0.1% | 0.8% in 03 | Broken rings at one radius. Needs rings that fade as they spread (03). |
+| **Sky** (set)<br>`drawSky, drawStars, drawMilkyWay` | rough | 55 s in 01–02, 04–05, 07–19 | 46% | 68% in 15 | Near final. It dissolves between moonlit and dark as the moon sets (08) and rises (16); its stars could twinkle more. |
+| **Sea** (set)<br>`drawSea({ horizon, bands, swell })` | rough | 60 s in 01–19 | 20% | 66% in 03 | Near final. Its swell lines sway slowly. |
+| **Water reflections** (effect)<br>`reflectWater({ waterline, step })` | rough | 56 s in 01–03, 05–09, 11–19 | 9% | 16% in 09 | Near final; Olof likes it. Needs to break up around splashes and the plunging float (06, 08). |
+| **Moon's reflection** (effect)<br>`spec.reflection = [x, y], spec.wobble; drawMoonReflection` | rough | 34 s in 01–03, 05–07, 17–19 | 0.2% | 2% in 06 | Drifts and wobbles. Once hooked it only gains a halo; it should stretch and tear as he hauls it in (07). |
+| **Moon's glitter path** (light)<br>`drawMoonPath({ x, horizon, halfWidth })` | rough | 35 s in 01–07, 17–19 | 1% | 7% in 03 | Near final. Should change shape with the moon's height as it comes down (07). |
+| **Moonlight glow** (light)<br>`drawHalo, drawShaft; spec.seaGlow` | rough | 21 s in 08–14, 16 | 3% | 21% in 10 | Halo and shaft around the caught moon, and the glow under the sea (16). |
+| **Splash** (effect)<br>`spec.splash = { at, size }; drawSplash` | placeholder | 7 s in 06, 08, 14, 17–18 | <0.1% | 0.1% in 08 | Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 08, 14, 17, 18). Needs a crown that rises and falls over a few frames, sized to each. |
+| **Sleep Z's** (effect)<br>`spec.zzz = seconds asleep` | rough | 3 s in 04–05 | <0.1% | 0.1% in 05 | Pixel Z's drifting up from his head (04, 05). Could take a hand-drawn letterform. |
+| **Ripple** (effect)<br>`spec.ripple = { at, radius }; drawRipple` | placeholder | 2 s in 03, 06 | <0.1% | 0.4% in 03 | Broken rings at one radius. Needs rings that fade as they spread (03). |
 <!-- /generated:assets -->
 
 **Where upgrades pay off,** in the assistant's judgment:
@@ -210,9 +223,9 @@ Sound effects come after the animatic. The storyboard's cues:
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
 | Sound | Score v003 approved 2026-09-30, after v001 (too sleepy) and v002 (an odd ending) |
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
-| Storyboard contact sheet | v003 approved 2026-10-01: 19 shots, in which the moon wanders into his hook. v001's catch was unclear; v002 needed a straight line and the drift |
+| Storyboard contact sheet | v003 approved 2026-10-01: 19 shots, in which the moon wanders into his hook; v004 carries the animatic's changes. v001's catch was unclear; v002 needed a straight line and the drift |
 | Asset register | v001: 16 assets measured on screen across the storyboard, and 13 sound cues (2026-10-01) |
-| Animatic | v001: the 19 shots at final timing over score v003; awaiting Olof's review (2026-10-01) |
+| Animatic | v002: the sleep reads, the shiver is gone and the rough edges are worked over; awaiting Olof's review. v001 was “roughly there but still very rough” (2026-10-01) |
 | Asset upgrade passes | Later phase |
 
 ## Rebuild
