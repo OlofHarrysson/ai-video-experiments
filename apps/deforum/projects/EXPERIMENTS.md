@@ -37,6 +37,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 
 ### rainbow-mane — character transformation
 
+- [Authored profile morph](rainbow-mane/experiments/profile-morph.md): four-second drawing with continuous muzzle, ear and mane motion. Steps 1 and 2 only; motion review pending before guided repainting.
 - [Opening, turn and horse transformation](rainbow-mane/experiments/baseline.md): comic-print style from Olof's supplied film screenshots, a round white face and rainbow mohawk, and the limits of prompt-directed pose and morphing. [Creative brief](rainbow-mane/BRIEF.md).
 
 ### shape-injection — spatial guide study

@@ -24,3 +24,7 @@ The eventual story needs motivation and a payoff. The initial transformation is 
 Retain the current recurrent Krea loop: previous painting → spatial warp → partial-noise initialization → text-conditioned repaint → next painting. The screenshots inform descriptive prompts, not additional image conditioning. Generate the opening with Krea too. Use the existing three-interval Euler/CFG 1 repaint recipe and recorded independent seeds. Preview camera motion separately; a flat-image warp does not establish a character's 3D head turn. RIFE is finishing only and never feeds back into generation.
 
 Main unknown: whether a staged description produces a readable turn and connected human-to-horse morph while retaining the white/rainbow identity. Multiple faces, abrupt replacement, disappearing eyes, loss of the crest and missing body anatomy count against success. Olof decides the style and playback quality after assistant screening.
+
+## Current experiment — 2026-10-01
+
+After the first passage, Olof says the style is pretty good but the transformations are too abrupt. He agrees to begin with steps 1 and 2 of a guided-morph experiment: a character already in profile and a simple authored animation of the face becoming a horse. The camera stays fixed. This drawing is a geometry study; the supplied comic-print direction remains the eventual treatment. Review the [four-second motion plan](experiments/profile-morph.md) before testing it with recurrent Krea repainting. The head turn, full-body reveal and story ending remain unresolved.

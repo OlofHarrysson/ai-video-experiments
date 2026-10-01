@@ -1,6 +1,6 @@
 # Rainbow Mane: opening and transformation
 
-Status: first feasibility passage complete and screened, 2026-09-30; human playback review pending.
+Status: first feasibility passage complete and screened, 2026-09-30. Olof's subsequent playback feedback: the style is pretty good, but the transformations are too abrupt. The [next study](profile-morph.md) authors a profile-to-horse drawing before testing guided repainting.
 
 ## Question
 
@@ -46,4 +46,4 @@ Recommendation: use this to judge the comic-print direction and the recurring wh
 
 All 118 unique generation jobs pass their configured graph, parent/input/output hashes and completion checks. All 233 owned ComfyUI input/output copies match local originals before retirement; the queue is empty, the owned Pod is deleted and its absence verified. The existing model volume remains. The selected film and both turn comparisons fully decode; source paintings and frame-role manifests are preserved. Estimated compute is recorded in [the execution summary](execution-summary.json), excluding storage and not presented as a final bill.
 
-[Selected cut](../cuts/v001.md) · [Review](http://localhost:3028/rainbow-mane). The reviewer exposes the selected film first, with the earlier pullback and turn comparisons available in its clip selector. No human playback verdict has been recorded.
+[Selected cut](../cuts/v001.md) · [Review](http://localhost:3028/rainbow-mane). The reviewer exposes the selected film first, with the earlier pullback and turn comparisons available in its clip selector. Olof's feedback supports keeping the visual style and improving transformation control; it does not approve the failed head turn or choose a story ending.
