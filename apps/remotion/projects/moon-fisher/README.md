@@ -73,9 +73,9 @@ Each shot is a scene spec: the camera, where the moon is, the fisherman's pose, 
 
 ## Sound
 
-On 2026-09-29 Olof asked for the film's music and sound to be made for it, rather than found or licensed. He found score v001, a slow lullaby, “not bad” but “a bit slow/boring… a little bit sleepy”, and disliked the glockenspiel. He liked what he heard as piano (most likely the harp), the violin, and a “soft trumpet or saxophone” (the clarinet). He called v002, livelier and with a real piano, “good”, but found the end of the finale and the start of the coda “a bit weird”: the tune stopped for a stray piano run and a plucked cadence that sounded like the end, then restarted. v003 makes that ending one continuous close; Olof approved it on 2026-09-30 (“ending works now”). v004 (2026-10-01) is v003 with one held bar after the tug, for the dramatic pause Olof asked for when the moon is hooked; every other note is unchanged, one bar later from the haul on. It is the film's score. `renders/score/v004/` holds the score as WAV and MP3 and a review video that lights up each passage of the story as it plays; earlier versions stay beside it.
+On 2026-09-29 Olof asked for the film's music and sound to be made for it, rather than found or licensed. He found score v001, a slow lullaby, “not bad” but “a bit slow/boring… a little bit sleepy”, and disliked the glockenspiel. He liked what he heard as piano (most likely the harp), the violin, and a “soft trumpet or saxophone” (the clarinet). He called v002, livelier and with a real piano, “good”, but found the end of the finale and the start of the coda “a bit weird”: the tune stopped for a stray piano run and a plucked cadence that sounded like the end, then restarted. v003 makes that ending one continuous close; Olof approved it on 2026-09-30 (“ending works now”). v004 (2026-10-01) is v003 with one held bar after the tug, for the dramatic pause Olof asked for when the moon is hooked; every other note is unchanged, one bar later from the haul on. v005 (2026-10-01) ends the film when the cat gets its fish: the coda keeps only its plucked ta-dum and the last high note. It is the film's score. `renders/score/v005/` holds the score as WAV and MP3 and a review video that lights up each passage of the story as it plays; earlier versions stay beside it.
 
-- **Form:** a lilting folk tune in 6/8 with a dotted-quarter pulse of 80, a third faster than v001: a bar every 1.5 s and an eighth every 6 frames at 24 fps. 41 bars make 61.5 s. `src/timing.ts` holds the grid and the story's passages; the storyboard is cut to them, and the score places each passage from where its section starts.
+- **Form:** a lilting folk tune in 6/8 with a dotted-quarter pulse of 80, a third faster than v001: a bar every 1.5 s and an eighth every 6 frames at 24 fps. 39 bars make 58.5 s. `src/timing.ts` holds the grid and the story's passages; the storyboard is cut to them, and the score places each passage from where its section starts.
 - **The tune:** one melody in D that reaches up a sixth, like a hand toward the moon, and settles back by step. The clarinet sings it over the piano's bounce while the solo violin weaves a second line. High piano plays it like a music box once the moon is in the bucket. The violin mourns it in minor as the moon dims, and it comes home a step higher, in E, when the moon rises, with the violin soaring an octave above the clarinet.
 - **Instruments:** recorded samples from Versilian Studios' [VSCO 2 Community Edition](https://github.com/sgossner/VSCO-2-CE) (CC0): clarinet, solo violin, upright piano, violin and cello sections, plucked cellos and double bass, and a harp for the two magic sweeps. A soft sea of filtered noise runs underneath. No glockenspiel, drums or effects.
 - **Sound effects** (the reel, the splash, drips, the fish, the cat) come with the animatic, timed to picture.
@@ -95,19 +95,19 @@ On 2026-09-29 Olof asked for the film's music and sound to be made for it, rathe
 | 28 | 0:40.5 | darkness | A held beat of darkness | Only the sea |
 | 29–31 | 0:42 | rise | The moon rises | C, D and B lead to E; the clarinet reaches up the opening sixth |
 | 32–37 | 0:46.5 | finale | Silver light, a fish, the cat | The tune's second half in E, violin above clarinet, then its last phrase again; a fish leaps up the B chord in the piano and lands on the home note |
-| 38–41 | 0:55.5 | coda | The last shot mirrors the first | The piano's lilt carries on, quieter; the tune reaches up and settles; a plucked ta-dum and a last high note |
+| 38–39 | 0:55.5 | coda | The cat has its fish; an iris closes on it | A plucked ta-dum, B to E, under a rolled E chord, and a last high note |
 
-The assistant cannot listen, so the score is checked by measurement before Olof's listen. v004 keeps all 652 of v003's notes, at the same times before the haul and exactly one bar later after it, and adds the cello's held note.
+The assistant cannot listen, so the score is checked by measurement before Olof's listen. v004 keeps all 652 of v003's notes, at the same times before the haul and exactly one bar later after it, and adds the cello's held note. v005 keeps v004's 602 notes before the coda unchanged and its 13 notes of the ta-dum and the last high note, two bars earlier; the coda's lilt and the clarinet's last reach are gone.
 
 - **The tune:** pitch tracking of the dry clarinet matches all 56 of its notes. The solo violin matches 36 of 42; at the other six, high in the finale, the tracker hears an octave low, and a spectrum shows the written note as the strongest pitch.
-- **The shape:** integrated loudness per passage in v004 (LUFS): intro −18.8, tune −15.5, doze −19.0, tug −17.8, hooked −31.1, haul −14.7, catch −14.4, wonder −20.3, dimming −19.6, release −20.2, darkness −28.7, rise −14.8, finale −13.7, coda −19.8. The held bar is the quietest moment of the film, between the tug's plucks and the haul. The coda fades steadily, with no gap between the finale and its last notes.
+- **The shape:** integrated loudness per passage in v005 (LUFS): intro −18.9, tune −15.6, doze −19.1, tug −17.9, hooked −31.2, haul −14.8, catch −14.5, wonder −20.4, dimming −19.7, release −20.3, darkness −28.8, rise −14.9, finale −13.8, coda −23.8. The held bar is the quietest moment of the film, between the tug's plucks and the haul. The coda's two notes ring out as the picture closes.
 - **Master:** −16 LUFS integrated with a −2 dBFS sample peak: one fixed gain and a fast limiter for rare transients, so each passage keeps its level relative to the others. That is quieter than the usual −14 for Reels, suiting a calm film.
 
 The library's file names number octaves one lower than scientific pitch, except the harp's and the solo violin's, so samples are mapped by sounding pitch, checked by spectrum analysis; one clarinet file sounds a semitone off its name. Its instruments are recorded at levels up to 19 dB apart and are calibrated to a common level before mixing.
 
 ## Storyboard
 
-v005, 2026-10-01: the storyboard Olof approved as v003, carrying the animatics' changes. Twenty shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v005/storyboard.png` shows one panel per shot, each the animatic's frame at that moment. Panels use the placeholder assets drawn so far, and red arrows mark what travels during a shot. Where a pose does not exist yet (the cat's pounce, his smile), the caption carries the action.
+v006, 2026-10-01: the storyboard Olof approved as v003, carrying the animatics' changes. Twenty shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v006/storyboard.png` shows one panel per shot, each the animatic's frame at that moment. Panels use the placeholder assets drawn so far, and red arrows mark what travels during a shot. Where a pose does not exist yet (the cat's pounce, his smile), the caption carries the action.
 
 **How the catch works.** The moon and its reflection are one thing: what happens to the reflection happens to the moon. His line hangs straight down from the rod tip to the float, and the reflection lies beside it, never on it (01–03). He nods off (04). As the night wears on, the moon crosses the sky and its reflection the water: slowly while he fishes, faster while he sleeps, until it wanders into his hook (05). The float twitches on the tug's first pluck and plunges on the second (06). Then everything holds still for a bar: the line taut, the rod bending, while he sleeps on (07). He jolts awake, and hauling on the hooked reflection drags it toward the boat and the moon down the sky, in step (08). The moon sinks below the horizon at the moment it bursts out of the sea on his line, and the sky goes dark (09); it stays empty while he has the moon. It sets just past the bow, the one stretch of horizon the boat does not hide, and rises there again (17).
 
@@ -133,28 +133,26 @@ v005, 2026-10-01: the storyboard Olof approved as v003, carrying the animatics' 
 | 17 | 29–31 | 0:42 | Wide | **The moon rises.** The sea glows from below; the moon rises out of the water past the bow, where it set, and climbs into the sky. He and the cat watch it go. | The rise: the clarinet reaches up. A swelling shimmer. |
 | 18 | 32–35 | 0:46.5 | Medium | **Silver light.** The moon rides high again. Fish leap through its silver path. | The finale: home in E. Splashes. |
 | 19 | 36–37 | 0:52.5 | Medium | **A gift.** One fish leaps into the boat; the cat is on it at once. | The last phrase again. A flop, a happy mew. |
-| 20 | 38–41 | 0:55.5 | Wide | **Like the beginning.** The first shot again: the moon high, his float beside its reflection. The cat has its fish. Fade to black. | The coda, the plucked ta-dum and a last high note. The sea. |
+| 20 | 38–39 | 0:55.5 | Close | **The cat's prize.** The cat holds its fish down and looks up, pleased with itself. An iris closes on it. | The coda: a plucked ta-dum and a last high note. |
 <!-- /generated:storyboard -->
 
 - **Framing:** four setups do most of the work. The wide shot holds the moon high over a small boat; the medium shot is the style frame's; close-ups frame his face, the cat, the bucket or the float in the water. Most shots are locked off; the camera stays still and the story moves.
-- **Mirror:** shot 20 repeats shot 01's framing, so the ending visibly returns to the beginning, with the reflection back beside his float.
+- **Ending:** the film ends when the cat gets its fish: a close-up of the cat with its prize, and an iris closing on it (20).
 - **Motion:** each shot is a scene spec over time in `src/storyboard/shots.ts`, and the animatic plays them through. The moon's drift is one function of film time shared by shots 01–06.
-- **Earlier versions:** v001 (2026-09-30, 18 shots) put the float on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch. v002 (2026-10-01) added the rule, but the line slanted out to the float and the tug pulled the reflection toward the hook. v003, approved, planted the rule with the moon shivering in the sky, which Olof cut after the first animatic. v004 followed animatic v002.
+- **Earlier versions:** v001 (2026-09-30, 18 shots) put the float on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch. v002 (2026-10-01) added the rule, but the line slanted out to the float and the tug pulled the reflection toward the hook. v003, approved, planted the rule with the moon shivering in the sky, which Olof cut after the first animatic. v004 and v005 followed animatics v002 and v003; v005 still ended on a wide shot mirroring the first.
 
 ## Animatic
 
-v003, 2026-10-01, awaits Olof's review. `renders/animatic/v003/animatic.mp4` plays the 20 shots at final timing over score v004: 61.5 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
+v004, 2026-10-01, awaits Olof's review. `renders/animatic/v004/animatic.mp4` plays the 20 shots at final timing over score v005: 58.5 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
 
-Olof found v001 “roughly there but still very rough”: he could not tell the fisherman falls asleep, and did not want the moon to shudder in the sky. v002 added a close-up of him nodding off with Z's, and the assistant's pass over the rough edges: the float twitching before it plunges, a closer catch, a sky that darkens and brightens with the moon, the moon rising past the bow instead of through the cat, a closer finale, blinks and the cat's paw, a flickering moon, fades at both ends and a swaying sea. Of v002 he said the hooking lacked a dramatic pause, the man and rod did not haul convincingly, and the transitions were abrupt and the pacing not good enough. v003:
+How it got here: v001 was “roughly there but still very rough”: Olof could not tell the fisherman falls asleep, and did not want the moon to shudder in the sky. v002 added a close-up of him nodding off with Z's, plus the assistant's pass over the rough edges (the float's twitch and plunge, a closer catch, a sky that darkens and brightens with the moon, the moon rising past the bow, a closer finale, blinks, the cat's paw, a flickering moon, fades at both ends and a swaying sea). v003 answered Olof's next notes with a held bar for the hooked moon, a pumping haul, dissolves and a slower nod-off. Of v003 he said the dissolve “doesnt work for pixel art”, and that the ending was boring: perhaps it should end when the cat gets the fish. v004:
 
-- **The pause:** a held bar after the tug, with score v004 holding its breath: the line taut, the rod bending slowly down, he sleeps on and only the cat looks at the line (07).
-- **The haul:** a pump on every beat. He heaves the rod up and is thrown back as it bends double, then leans in and lowers it to take up the line. The first heave is his jolt awake, and the moon steps down with each heave, landing on the beat (08). The catch begins at the top of the last heave, and the rod springs back as the moon comes free (09).
-- **Transitions:** pixel dissolves where time passes: into sleep (05), into the bucket and the wonder (10–11), into the darkness, the rise and the finale (16–18), and into the ending (20). The tug, the jolt and the catch stay hard cuts.
-- **Pacing:** the nod-off has twice the time, taken from the shot where nothing bites (02, 04).
+- **Transitions:** fades through black, stepping down and back up the palette the way pixel-art games fade, replace the dither dissolves, and only where time passes: his eyes close into sleep (04–05), the catch gives way to the moon in the bucket (09–10), and the darkness after the release fades up (16). Everything else cuts.
+- **The ending:** the film ends when the cat gets its fish. On the coda's ta-dum it cuts to the cat holding its fish down; the cat looks up, pleased, and an iris closes on it over the last high note (20). Score v005 keeps only the coda's ta-dum and last note.
 
 How it is made:
 
-- **One timeline:** the animatic, the storyboard and the asset register all draw the film through `filmAt(frame)`, so a storyboard panel is the animatic's frame at that moment. A dissolve draws the shot before as well and shows it through an ordered-dither mask that clears over the dissolve (`src/storyboard/film.ts`).
+- **One timeline:** the animatic, the storyboard and the asset register all draw the film through `filmAt(frame)`, so a storyboard panel is the animatic's frame at that moment. A shot's fade in or out darkens the frame along the palette, and the iris blacks out all but a circle.
 - **Cadence:** action moves on twos and ambient life on threes, as for the style frame. The boat's bob, the stars, the water and the blinks run on across the cuts.
 - **Acting:** the movements within shots are in `src/storyboard/acting.ts`: nodding off, falling asleep, the startle and the haul's pumps, looking up, the leaping fish and the flicker.
 
@@ -167,22 +165,22 @@ The screen columns are measured, not estimated. `npm run tables` draws every sho
 <!-- generated:assets -->
 | Asset | Status | On screen | Share of the picture | Largest | Still needs |
 | --- | --- | --- | --- | --- | --- |
-| **Fisherman** (character)<br>`fisherman({ x, y, pose, facing })` | rough | 56 s in 01–02, 04–05, 07–20 | 5% | 24% in 11 | Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17); he blinks. Needs a smile (11, 20), face detail for his close-ups (04, 11), and a reel his hand can wind. |
-| **Cat** (character)<br>`cat({ x, y, pose, facing, look, paw })` | rough | 50 s in 01–02, 05, 07–10, 12–20 | 0.8% | 6% in 12 | One pose, peer, with a head tilt and a front paw that reaches out (12, 19). Needs a pounce and a fish in its mouth (19, 20), a startle, and a tail that moves. |
-| **Moon** (prop)<br>`moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" \| "world" }` | rough | 40 s in 01–02, 04–05, 07–09, 15, 17–20 | 2% | 4% in 09 | The style frame's moon; it drifts, sets and rises. Needs a brighter burst as it leaves the sea (09) and water streaming off it. |
-| **Bucket, with the moon in it** (prop)<br>`bucket({ x, rimY, moon, tilt, glow })` | rough | 21 s in 10–17 | 0.9% | 7% in 11 | The style frame's hero. The moon drops out as he tips it (15) and flickers as it dims (13); it needs water spilling with it. |
+| **Fisherman** (character)<br>`fisherman({ x, y, pose, facing })` | rough | 50 s in 01–02, 04–05, 07–19 | 5% | 24% in 11 | Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17); he blinks. Needs a smile (11), face detail for his close-ups (04, 11), and a reel his hand can wind. |
+| **Cat** (character)<br>`cat({ x, y, pose, facing, look, paw })` | rough | 46 s in 01–02, 05, 07–10, 12–20 | 0.9% | 6% in 12 | One pose, peer, with a head tilt and a front paw that reaches out (12, 19). Needs a pounce and a fish in its mouth (19, 20), a startle, and a tail that moves. |
+| **Moon** (prop)<br>`moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" \| "world" }` | rough | 36 s in 01–02, 04–05, 07–09, 15, 17–20 | 2% | 4% in 09 | The style frame's moon; it drifts, sets and rises. Needs a brighter burst as it leaves the sea (09) and water streaming off it. |
+| **Bucket, with the moon in it** (prop)<br>`bucket({ x, rimY, moon, tilt, glow })` | rough | 20 s in 10–17 | 1.0% | 7% in 11 | The style frame's hero. The moon drops out as he tips it (15) and flickers as it dims (13); it needs water spilling with it. |
 | **Float** (prop)<br>`spec.float = [x, y]` | placeholder | 11 s in 02–03, 05–06, 19 | <0.1% | <0.1% in 03 | Two ovals. Needs a drawn red-and-white float, its bob and its plunge (06). |
-| **Rod and line** (prop)<br>`drawRod({ grip, angle, length, bend }); drawLine(from, to, slack)` | rough | 44 s in 01–10, 14, 18–20 | 0.2% | 0.4% in 04 | Its bend follows each heave. Needs a reel for the clicks and the whir (06, 08). |
-| **Fish** (prop)<br>`fishParts({ at, angle, size })` | placeholder | 13 s in 18–20 | <0.1% | 0.3% in 18 | A body and a tail, now leaping in arcs (18, 19) and flopping on the deck (19). Needs fins, an eye and a silver sheen, and the one the cat holds (20). |
-| **Boat** (set)<br>`boatInterior(BOAT), boatHull(BOAT)` | rough | 62 s in 01–20 | 8% | 23% in 12 | Planks, ribs and rivets from the style frame. Needs a check of the bow where the cat's close-up frames it (12), and a gentle rock beyond the one-pixel bob. |
-| **Sky** (set)<br>`drawSky, drawStars, drawMilkyWay` | rough | 56 s in 01–02, 04–05, 07–20 | 47% | 68% in 16 | Near final. It dissolves between moonlit and dark as the moon sets (09) and rises (17); its stars could twinkle more. |
-| **Sea** (set)<br>`drawSea({ horizon, bands, swell })` | rough | 62 s in 01–20 | 20% | 66% in 03 | Near final. Its swell lines sway slowly. |
-| **Water reflections** (effect)<br>`reflectWater({ waterline, step })` | rough | 56 s in 01–03, 05–10, 12–20 | 9% | 16% in 10 | Near final; Olof likes it. Needs to break up around splashes and the plunging float (06, 09). |
-| **Moon's reflection** (effect)<br>`spec.reflection = [x, y], spec.wobble; drawMoonReflection` | rough | 34 s in 01–03, 05–08, 18–20 | 0.2% | 2% in 06 | Drifts and wobbles. Once hooked it only gains a halo; it should stretch and tear as he hauls it in (08). |
-| **Moon's glitter path** (light)<br>`drawMoonPath({ x, horizon, halfWidth })` | rough | 37 s in 01–08, 18–20 | 1% | 7% in 06 | Near final. Should change shape with the moon's height as it comes down (08). |
-| **Moonlight glow** (light)<br>`drawHalo, drawShaft; spec.seaGlow` | rough | 21 s in 09–15, 17 | 3% | 21% in 11 | Halo and shaft around the caught moon, and the glow under the sea (17). |
+| **Rod and line** (prop)<br>`drawRod({ grip, angle, length, bend }); drawLine(from, to, slack)` | rough | 40 s in 01–10, 14, 18–20 | 0.2% | 0.4% in 20 | Its bend follows each heave. Needs a reel for the clicks and the whir (06, 08). |
+| **Fish** (prop)<br>`fishParts({ at, angle, size })` | placeholder | 10 s in 18–20 | <0.1% | 0.4% in 20 | A body and a tail, now leaping in arcs (18, 19) and flopping on the deck (19). Needs fins, an eye and a silver sheen, and the one the cat holds (20). |
+| **Boat** (set)<br>`boatInterior(BOAT), boatHull(BOAT)` | rough | 57 s in 01–20 | 9% | 23% in 12 | Planks, ribs and rivets from the style frame. Needs a check of the bow where the cat's close-up frames it (12), and a gentle rock beyond the one-pixel bob. |
+| **Sky** (set)<br>`drawSky, drawStars, drawMilkyWay` | rough | 53 s in 01–02, 04–05, 07–20 | 43% | 68% in 16 | Near final. It dissolves between moonlit and dark as the moon sets (09) and rises (17); its stars could twinkle more. |
+| **Sea** (set)<br>`drawSea({ horizon, bands, swell })` | rough | 58 s in 01–20 | 19% | 66% in 03 | Near final. Its swell lines sway slowly. |
+| **Water reflections** (effect)<br>`reflectWater({ waterline, step })` | rough | 51 s in 01–03, 05–10, 12–20 | 9% | 16% in 10 | Near final; Olof likes it. Needs to break up around splashes and the plunging float (06, 09). |
+| **Moon's reflection** (effect)<br>`spec.reflection = [x, y], spec.wobble; drawMoonReflection` | rough | 28 s in 01–03, 05–08, 18–19 | 0.2% | 2% in 06 | Drifts and wobbles. Once hooked it only gains a halo; it should stretch and tear as he hauls it in (08). |
+| **Moon's glitter path** (light)<br>`drawMoonPath({ x, horizon, halfWidth })` | rough | 33 s in 01–08, 18–20 | 1% | 7% in 06 | Near final. Should change shape with the moon's height as it comes down (08). |
+| **Moonlight glow** (light)<br>`drawHalo, drawShaft; spec.seaGlow` | rough | 20 s in 09–15, 17 | 3% | 21% in 11 | Halo and shaft around the caught moon, and the glow under the sea (17). |
 | **Splash** (effect)<br>`spec.splash = { at, size }; drawSplash` | placeholder | 7 s in 06, 09, 15, 18–19 | <0.1% | 0.1% in 09 | Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 09, 15, 18, 19). Needs a crown that rises and falls over a few frames, sized to each. |
-| **Sleep Z's** (effect)<br>`spec.zzz = seconds asleep` | rough | 5 s in 04–05, 07 | <0.1% | 0.2% in 07 | Pixel Z's drifting up from his head (04, 05). Could take a hand-drawn letterform. |
+| **Sleep Z's** (effect)<br>`spec.zzz = seconds asleep` | rough | 4 s in 04–05, 07 | <0.1% | 0.2% in 07 | Pixel Z's drifting up from his head (04, 05). Could take a hand-drawn letterform. |
 | **Ripple** (effect)<br>`spec.ripple = { at, radius }; drawRipple` | placeholder | 2 s in 03, 06 | <0.1% | 0.4% in 03 | Broken rings at one radius. Needs rings that fade as they spread (03). |
 <!-- /generated:assets -->
 
@@ -219,11 +217,11 @@ Sound effects come after the animatic. The storyboard's cues:
 | Premise | The Moon Fisher, chosen 2026-09-29 |
 | Brief | Approved 2026-09-29 |
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
-| Sound | Score v003 approved 2026-09-30, after v001 (too sleepy) and v002 (an odd ending); v004 adds a held bar for the hooked moon (2026-10-01) |
+| Sound | Score v003 approved 2026-09-30, after v001 (too sleepy) and v002 (an odd ending); v004 adds a held bar for the hooked moon, and v005 ends on the cat's fish (2026-10-01) |
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
-| Storyboard contact sheet | v003 approved 2026-10-01, in which the moon wanders into his hook; v005 carries the animatics' changes in 20 shots. v001's catch was unclear; v002 needed a straight line and the drift |
+| Storyboard contact sheet | v003 approved 2026-10-01, in which the moon wanders into his hook; v006 carries the animatics' changes in 20 shots. v001's catch was unclear; v002 needed a straight line and the drift |
 | Asset register | v001: 16 assets measured on screen across the storyboard, and 13 sound cues (2026-10-01) |
-| Animatic | v003: a held bar for the hooked moon, a pumping haul, dissolves and a slower nod-off; awaiting Olof's review. v001 was “roughly there but still very rough”; v002 lacked the pause and its haul was stiff (2026-10-01) |
+| Animatic | v004: palette fades instead of dissolves, and it ends on the cat's fish; awaiting Olof's review. v001 was “roughly there but still very rough”; v002 lacked the pause and its haul was stiff; v003's dissolves did not suit pixel art (2026-10-01) |
 | Asset upgrade passes | Later phase |
 
 ## Rebuild
@@ -235,12 +233,12 @@ npm ci
 npm run samples          # the recorded instruments → samples/ (about 120 MB, ignored by Git)
 npm run score            # the score → public/score.wav, about 10 s; --stem clarinet renders one instrument dry
 uv run --script scripts/check-tune.py clarinet   # pitch-track a dry stem against the notes the score scheduled
-npm run score:review -- v005   # a versioned copy of the score and its review video → renders/score/v005
+npm run score:review -- v006   # a versioned copy of the score and its review video → renders/score/v006
 npm run preview          # fast PNG previews of every scene, without Remotion → renders/preview
 npx tsx scripts/storyboard-preview.ts   # fast storyboard panels and a tiled sheet → renders/preview/storyboard
-npm run storyboard -- v006   # the captioned storyboard sheet through Remotion → renders/storyboard/v006
+npm run storyboard -- v007   # the captioned storyboard sheet through Remotion → renders/storyboard/v007
 npm run tables           # regenerate this README's shot list and asset register from the code, about 40 s
-npm run animatic -- v004     # the film at final timing with the locked score → renders/animatic/v004, about 2 min
+npm run animatic -- v005     # the film at final timing with the locked score → renders/animatic/v005, about 2 min
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)

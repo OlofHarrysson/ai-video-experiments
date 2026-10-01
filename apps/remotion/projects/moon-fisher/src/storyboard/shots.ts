@@ -53,9 +53,10 @@ export type Shot = {
   // moment of the film.
   panel: number;
   notation?: (film: number) => Notation;
-  // Seconds over which it dissolves in from the shot before, where time
-  // passes between them; otherwise it cuts.
-  dissolve?: number;
+  // Seconds over which it fades up from black or down to black, where time
+  // passes; otherwise it cuts.
+  fadeIn?: number;
+  fadeOut?: number;
 };
 
 // Panels per row on the contact sheets.
@@ -66,6 +67,9 @@ const MEDIUM = KEY_IMAGE.camera;
 const MEDIUM_WIDE: Camera = { x: 150, y: 330, zoom: 1.2, sx: 140, sy: 285 };
 const FACE: Camera = { x: 128, y: 298, zoom: 3.2, sx: 150, sy: 230 };
 const CAT: Camera = { x: 192, y: 322, zoom: 3.4, sx: 130, sy: 250 };
+// The cat on the foredeck with its fish.
+const PRIZE: Camera = { x: 200, y: 330, zoom: 3.2, sx: 140, sy: 280 };
+const CAT_FACE: Vec2 = [197, 320];
 // His face over the rod, with room above for the Z's.
 const NOD: Camera = { x: 132, y: 300, zoom: 2.9, sx: 128, sy: 290 };
 // The bow and the open horizon past it, with the water in front where the
@@ -268,11 +272,9 @@ export const SHOTS: Shot[] = [
     action:
       "Out of the dark, a tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection.",
     sound: "Intro, then the tune. The sea.",
-    spec: (t, film) => ({
-      ...fishing(WIDE, wander(film), MOON_HEIGHT.wide),
-      fade: 1 - move(t, 0, 1.4),
-    }),
+    spec: (_, film) => fishing(WIDE, wander(film), MOON_HEIGHT.wide),
     panel: 2,
+    fadeIn: 1.4,
   },
   {
     id: "02",
@@ -312,7 +314,8 @@ export const SHOTS: Shot[] = [
       fisherman: noddingOff(t),
       zzz: t >= NODDED_OFF ? t - NODDED_OFF : undefined,
     }),
-    panel: 2.8,
+    panel: 2.6,
+    fadeOut: 0.5,
   },
   {
     id: "05",
@@ -342,7 +345,7 @@ export const SHOTS: Shot[] = [
       };
     },
     panel: 2,
-    dissolve: 0.75,
+    fadeIn: 0.6,
     // The drift is short, so its arrows start further back to stay legible.
     notation: () => {
       const [from, to] = [wander(DOZING) - 16, HOOKED[0]];
@@ -496,6 +499,7 @@ export const SHOTS: Shot[] = [
       };
     },
     panel: 0.3,
+    fadeOut: 0.5,
     notation: () => ({
       arrows: [
         alongside(
@@ -520,7 +524,7 @@ export const SHOTS: Shot[] = [
     sound: "Wonder: the tune on high piano. Drips.",
     spec: () => KEY_IMAGE,
     panel: 1.5,
-    dissolve: 1,
+    fadeIn: 0.75,
   },
   {
     id: "11",
@@ -531,7 +535,6 @@ export const SHOTS: Shot[] = [
     sound: "Wonder.",
     spec: () => ({ ...KEY_IMAGE, camera: FACE }),
     panel: 1.5,
-    dissolve: 0.75,
   },
   {
     id: "12",
@@ -630,7 +633,7 @@ export const SHOTS: Shot[] = [
       cat: PEER_LEFT,
     }),
     panel: 1,
-    dissolve: 0.75,
+    fadeIn: 1,
   },
   {
     id: "17",
@@ -657,7 +660,6 @@ export const SHOTS: Shot[] = [
       };
     },
     panel: 1.8,
-    dissolve: 0.75,
   },
   {
     id: "18",
@@ -673,7 +675,6 @@ export const SHOTS: Shot[] = [
       splashes: FINALE_LEAPS.flatMap((l) => leapSplashes(l, t, 3.5)),
     }),
     panel: 3,
-    dissolve: 1,
   },
   {
     id: "19",
@@ -705,46 +706,53 @@ export const SHOTS: Shot[] = [
   },
   {
     id: "20",
-    bars: [38, 42],
-    framing: "Wide",
-    title: "Like the beginning",
+    bars: [38, 40],
+    framing: "Close",
+    title: "The cat's prize",
     action:
-      "The first shot again: the moon high, his float beside its reflection. The cat has its fish. Fade to black.",
-    sound: "The coda, the plucked ta-dum and a last high note. The sea.",
+      "The cat holds its fish down and looks up, pleased with itself. An iris closes on it.",
+    sound: "The coda: a plucked ta-dum and a last high note.",
     spec: (t) => ({
-      ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
-      fish: [{ at: GIFT.to, angle: 180, size: 1.6 }],
-      cat: { ...PEER_LEFT, look: -15, paw: 0.7 },
-      fade: move(t, 4.6, 6),
+      ...fishing(PRIZE, REFLECTION[0], MOON_HEIGHT.medium),
+      fish: [{ at: GIFT.to, angle: 180, size: GIFT.size }],
+      cat: {
+        ...PEER_LEFT,
+        look: -15 + 30 * move(t, 0.75, 1),
+        paw: 0.7,
+      },
+      // The iris pauses on its face before it shuts.
+      iris: {
+        at: CAT_FACE,
+        radius:
+          t < 2.2
+            ? lerp(300, 42, move(t, 1.4, 2))
+            : lerp(42, 0, move(t, 2.2, 2.6)),
+      },
     }),
-    panel: 3,
-    dissolve: 1,
+    panel: 1.2,
   },
 ];
 
 export const shotStart = (s: Shot) => (s.bars[0] - 1) * BAR_SECONDS;
 export const shotSeconds = (s: Shot) => (s.bars[1] - s.bars[0]) * BAR_SECONDS;
 
-// The film at a frame: the shot playing and its scene, and while a shot
-// dissolves in, the shot before it carrying on and how far the dissolve has
-// gone. Action moves on twos; ambient life follows the frame itself.
+// The film at a frame: the shot playing and its scene, faded toward black
+// where the shot fades in or out. Action moves on twos; ambient life follows
+// the frame itself.
 export const filmAt = (frame: number) => {
   const action = (Math.floor(frame / 2) * 2) / FPS;
-  const found = SHOTS.findIndex((s) => action < shotStart(s) + shotSeconds(s));
-  const i = found < 0 ? SHOTS.length - 1 : found;
-  const shot = SHOTS[i];
+  const shot =
+    SHOTS.find((s) => action < shotStart(s) + shotSeconds(s)) ??
+    SHOTS[SHOTS.length - 1];
   const t = action - shotStart(shot);
+  const length = shotSeconds(shot);
   const spec = shot.spec(t, action);
-  const before = SHOTS[i - 1];
-  if (!shot.dissolve || !before || t >= shot.dissolve) return { shot, spec };
-  return {
-    shot,
-    spec,
-    from: {
-      spec: before.spec(t + shotSeconds(before), action),
-      mix: t / shot.dissolve,
-    },
-  };
+  const fade = Math.max(
+    spec.fade ?? 0,
+    shot.fadeIn ? 1 - move(t, 0, shot.fadeIn) : 0,
+    shot.fadeOut ? move(t, length - shot.fadeOut, length) : 0,
+  );
+  return { shot, spec: fade ? { ...spec, fade } : spec };
 };
 
 // The storyboard's frame of a shot, and its notation.

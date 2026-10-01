@@ -17,7 +17,7 @@ const STORY: Record<Section, string> = {
   darkness: "A held beat of darkness.",
   rise: "The sea brightens from below; the moon rises.",
   finale: "Home in a new key. Fish leap; one lands; the cat gets it.",
-  coda: "The last shot mirrors the first.",
+  coda: "The cat has its fish; an iris closes on it.",
 };
 
 const mmss = (s: number) =>

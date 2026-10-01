@@ -527,41 +527,27 @@ function payoff(s: Score) {
   ]);
   s.play("celloPizz", GIFT + 1, [[0, "E3", 1, 0.6]]);
 
-  // The coda: the piano's lilt carries on, quieter; the tune reaches up once
-  // more and settles; a plucked ta-dum and a last high note like a star.
-  s.bounce(CODA, "E", 0.42);
-  s.bounce(CODA + 1, "A", 0.36);
-  s.pulse(CODA, "E", 0.45);
-  s.pulse(CODA + 1, "A", 0.4);
-  s.root(CODA, "E", 0.3);
-  s.root(CODA + 1, "A", 0.26);
-  s.play("clarinet", CODA, [
-    [0, "B4", 3, 0.56],
-    [3, "G#5", 3, 0.54],
-  ]);
-  s.play("clarinet", CODA + 1, [
-    [0, "F#5", 2, 0.48],
-    [2, "E5", 4, 0.46],
-  ]);
+  // The coda: the cat has its fish. A plucked ta-dum lands under it, and a
+  // last high note rings like a star as the picture closes.
   s.play(
     "piano",
-    CODA + 2,
+    CODA,
     CHORDS.B.chord.map((n): Note => [0, n, 2, 0.24]),
   );
-  s.play("celloPizz", CODA + 2, [
+  s.play("celloPizz", CODA, [
     [0, "B2", 1, 0.5],
     [3, "E3", 1, 0.56],
   ]);
-  s.play("piano", CODA + 2, [
+  s.play("piano", CODA, [
     [3, "E2", 9, 0.32],
     [3.2, "B2", 9, 0.28],
     [3.4, "E3", 9, 0.28],
     [3.6, "G#3", 9, 0.26],
     [3.8, "B3", 9, 0.26],
   ]);
-  s.play("violin", CODA + 2, [[3, "B5", 9, 0.3]]);
-  s.play("cello", CODA + 2, [[3, "E2", 9, 0.24]]);
-  s.play("piano", CODA + 3, [[1, "E6", 5, 0.28]]);
+  s.play("violin", CODA, [[3, "B5", 9, 0.3]]);
+  s.play("cello", CODA, [[3, "E2", 9, 0.24]]);
+  s.play("piano", CODA + 1, [[1, "E6", 5, 0.28]]);
 }
 
 // The sea: quiet under the music, rising while the hooked moon holds its
@@ -585,8 +571,8 @@ function sea(band: Band) {
   level.linearRampToValueAtTime(alone, at(DARKNESS));
   level.setValueAtTime(alone, at(RISE));
   level.linearRampToValueAtTime(quiet, at(RISE + 1));
-  level.setValueAtTime(quiet, at(CODA + 1));
-  level.linearRampToValueAtTime(alone * 0.8, at(CODA + 2));
+  level.setValueAtTime(quiet, at(CODA));
+  level.linearRampToValueAtTime(alone * 0.8, at(CODA + 1));
   level.linearRampToValueAtTime(0, DURATION_SECONDS);
 }
 

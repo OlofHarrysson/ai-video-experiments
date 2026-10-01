@@ -102,6 +102,9 @@ export type SceneSpec = {
   zzz?: number;
   // How far the whole picture has faded to black, 0 to 1.
   fade?: number;
+  // A closing iris: only a circle of the picture around a world point shows,
+  // its radius in design-frame units.
+  iris?: { at: Vec2; radius: number };
 };
 
 const DARK_SKY: Band[] = [
@@ -431,6 +434,14 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     drawZzz(pix, from, spec.zzz, camera.zoom);
   }
   pix.drawAs(null);
+  if (spec.iris) {
+    const [cx, cy] = onScreen(camera, spec.iris.at);
+    const r = spec.iris.radius * pix.k;
+    for (let py = 0; py < pix.h; py++)
+      for (let px = 0; px < pix.w; px++)
+        if (Math.hypot(px + 0.5 - cx * pix.k, py + 0.5 - cy * pix.k) > r)
+          pix.set(px, py, C.ink);
+  }
   if (spec.fade) {
     const steps = Math.round(spec.fade * FADE_STEPS);
     for (let py = 0; py < pix.h; py++)

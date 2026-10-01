@@ -19,7 +19,7 @@ import {
 
 const COLS = SHEET_COLUMNS;
 // The score the shots are cut to.
-const SCORE_VERSION = "v004";
+const SCORE_VERSION = "v005";
 const SCALE = 2;
 const GAP = 36;
 const MARGIN = 60;

@@ -42,7 +42,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Character",
     api: "fisherman({ x, y, pose, facing })",
     status: "rough",
-    next: "Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17); he blinks. Needs a smile (11, 20), face detail for his close-ups (04, 11), and a reel his hand can wind.",
+    next: "Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17); he blinks. Needs a smile (11), face detail for his close-ups (04, 11), and a reel his hand can wind.",
   },
   cat: {
     name: "Cat",

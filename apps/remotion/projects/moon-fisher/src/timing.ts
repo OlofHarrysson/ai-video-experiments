@@ -4,7 +4,7 @@
 export const FPS = 24;
 export const BAR_SECONDS = 1.5;
 export const EIGHTH_SECONDS = BAR_SECONDS / 6;
-export const BARS = 41;
+export const BARS = 39;
 export const DURATION_SECONDS = BARS * BAR_SECONDS;
 export const DURATION_FRAMES = DURATION_SECONDS * FPS;
 
@@ -33,7 +33,7 @@ export const SECTIONS = {
   darkness: [28, 29],
   rise: [29, 32],
   finale: [32, 38],
-  coda: [38, 42],
+  coda: [38, 40],
 } as const satisfies Record<string, readonly [number, number]>;
 
 export type Section = keyof typeof SECTIONS;
