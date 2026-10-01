@@ -22,7 +22,7 @@ Use the existing cached Krea model and pinned ComfyUI image. RTX 4090 is unavail
 
 ## Results and recommendation
 
-Completed: three opening probes and two four-second recurrent clips, 65 unique Krea jobs. [Review beside the approved sketch](http://localhost:3028/rainbow-mane-guided). The assistant recommends [the gentler repaint](../exports/guided-morph-v001/guided-n040-a012/rife/preview.mp4) for judging motion, with [the stronger repaint](../exports/guided-morph-v001/guided-n055-a012/rife/preview.mp4) as the meaningful alternative. Human judgment of these painted results is pending.
+Completed: three opening probes and two four-second recurrent clips, 65 unique Krea jobs. [Review beside the approved sketch](http://localhost:3028/rainbow-mane-guided). The assistant recommends [the gentler repaint](../exports/guided-morph-v001/guided-n040-a012/rife/preview.mp4) for judging motion, with [the stronger repaint](../exports/guided-morph-v001/guided-n055-a012/rife/preview.mp4) as the meaningful alternative. Olof subsequently calls the result pretty good; see human feedback below.
 
 Opening probes use the same guide, text and seed with initial noise 0.65, 0.80 and 0.90. The 0.65 result stays close to the flat sketch. The selected 0.80 opening has a clear profile, hatched rainbow crest, violet dotted cheek shadow and cyan edge. At 0.90, a large duplicate face appears behind the character. All probes remain preserved. This opening is less visually rich than the original generated film frame; control has not yet recovered the full liked treatment.
 
@@ -35,9 +35,11 @@ This supports continued testing of explicit geometry for this morph. It does not
 
 ## Screening and geometry checks
 
+Human feedback, 2026-10-01: Olof says the result "looks pretty good" and is "restyling the input image pretty well." He asks how it works, then requests that the sketch act more like a graybox. He approves [neutral structural video plus a separate appearance reference](graybox-video.md) as the next comparison. This is positive feedback on this test, not approval of a head turn, full-body reveal or the final film.
+
 The first deformation fit folded a small area at guide frame 27. Increasing thin-plate regularization from 0.00001 to 0.001 produced nonfolding fields across all 31 planned steps: minimum sampled Jacobian 0.600. The fit is deliberately approximate: median landmark error 0.24 pixels, worst sampled error 19.92 pixels. It can transport nearby background detail and does not lock actual generated features to the guide.
 
-Screened all three full-size opening images, early and midpoint source-painting sheets, both complete eight-frame overviews, and every decoded displayed frame in 1.625–1.875 and 2.875–3.125 seconds for both finished clips. The selected endpoint was also inspected at full resolution. These samples show the connected shape changes and the specific artifacts above; Olof's normal-speed motion and taste judgment remains pending.
+Screened all three full-size opening images, early and midpoint source-painting sheets, both complete eight-frame overviews, and every decoded displayed frame in 1.625–1.875 and 2.875–3.125 seconds for both finished clips. The selected endpoint was also inspected at full resolution. These samples show the connected shape changes and the specific artifacts above; Olof's subsequent positive playback feedback is recorded above.
 
 ## Verification and preservation
 

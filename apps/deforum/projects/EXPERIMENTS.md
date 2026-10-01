@@ -37,6 +37,7 @@ Grouped by project, alphabetically within each project. New notes should be link
 
 ### rainbow-mane — character transformation
 
+- [Graybox video](rainbow-mane/experiments/graybox-video.md): neutral motion and depth guides plus a separate painted reference; inputs verified, Seedance render awaiting Fal credit.
 - [Guided repaint](rainbow-mane/experiments/guided-repaint.md): 65 Krea jobs, two four-second clips following the approved drawing. Gentler repaint keeps a quieter background but leaves doubled sketch contours; stronger repaint introduces oversized faces.
 - [Authored profile morph](rainbow-mane/experiments/profile-morph.md): four-second drawing with continuous muzzle, ear and mane motion. Steps 1 and 2 only; motion review pending before guided repainting.
 - [Opening, turn and horse transformation](rainbow-mane/experiments/baseline.md): comic-print style from Olof's supplied film screenshots, a round white face and rainbow mohawk, and the limits of prompt-directed pose and morphing. [Creative brief](rainbow-mane/BRIEF.md).
