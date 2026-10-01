@@ -86,6 +86,8 @@ export const RAMPS = {
   catStripe: [C.umber0, C.umber0, C.umber1, C.umber2, C.ginger1, C.ginger2],
   catWhite: [C.umber0, C.umber2, C.skin2, C.skin3, C.moon],
   moon: [C.silver2, C.silver3, C.silver4, C.moon],
+  // A fish's dark back, blue-grey against its silver flank.
+  fishBack: [C.ink, C.night1, C.night2, C.night4, C.night6, C.silver1],
 } as const;
 
 export type Material = keyof typeof RAMPS;

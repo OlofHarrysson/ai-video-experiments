@@ -69,8 +69,8 @@ export const ASSETS: Record<AssetName, Asset> = {
     name: "Float",
     kind: "Prop",
     api: "spec.float = [x, y]",
-    status: "placeholder",
-    next: "Two ovals. Needs a drawn red-and-white float, its bob and its plunge (06).",
+    status: "rough",
+    next: "A pencil float: a white body, red tip and antenna. Needs its plunge to pull it under rather than vanish (06).",
   },
   rod: {
     name: "Rod and line",
@@ -82,9 +82,9 @@ export const ASSETS: Record<AssetName, Asset> = {
   fish: {
     name: "Fish",
     kind: "Prop",
-    api: "fishParts({ at, angle, size })",
-    status: "placeholder",
-    next: "A body and a tail, now leaping in arcs (18, 19) and flopping on the deck (19). Needs fins, an eye and a silver sheen, and the one the cat holds (20).",
+    api: "fish({ at, angle, size })",
+    status: "rough",
+    next: "A tapering silver body with a dark back, forked tail, dorsal and belly fins, a gill line and an eye; it leaps in arcs (18, 19) and flops on the deck (19). Needs a sheen that catches the moon as it leaps, and to sit in the cat's mouth (20).",
   },
   boat: {
     name: "Boat",
@@ -138,9 +138,9 @@ export const ASSETS: Record<AssetName, Asset> = {
   splash: {
     name: "Splash",
     kind: "Effect",
-    api: "spec.splash = { at, size }; drawSplash",
-    status: "placeholder",
-    next: "Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 09, 15, 18, 19). Needs a crown that rises and falls over a few frames, sized to each.",
+    api: "spec.splashes = [{ at, size, age }]; drawSplash",
+    status: "rough",
+    next: "A white burst, jets of spray that rise and collapse, droplets and a fading ring, sized to each: the float (06), the catch (09), the release (15) and the fish (18, 19). Needs foam that lingers on the water.",
   },
   zzz: {
     name: "Sleep Z's",
@@ -153,8 +153,8 @@ export const ASSETS: Record<AssetName, Asset> = {
     name: "Ripple",
     kind: "Effect",
     api: "spec.ripple = { at, radius }; drawRipple",
-    status: "placeholder",
-    next: "Broken rings at one radius. Needs rings that fade as they spread (03).",
+    status: "rough",
+    next: "Broken rings that fade as they widen (03, 06).",
   },
 };
 

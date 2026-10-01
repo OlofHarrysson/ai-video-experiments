@@ -9,7 +9,7 @@ import {
 import { C } from "../pixel/palette";
 import type { AssetName } from "../assets";
 import { IDENTITY, onScreen, Pix, type Camera } from "../pixel/pix";
-import { ellipse, type Vec2 } from "../pixel/shapes";
+import { capsule, type Vec2 } from "../pixel/shapes";
 import {
   BOAT,
   boatHull,
@@ -19,7 +19,7 @@ import {
 } from "../world/boat";
 import { bucket, moonCenter, type BucketProps } from "../world/bucket";
 import { cat, type CatProps } from "../world/cat";
-import { drawSplash, fishParts, type FishProps } from "../world/fish";
+import { drawSplash, fish, type FishProps } from "../world/fish";
 import {
   fisherman,
   POSES,
@@ -91,7 +91,8 @@ export type SceneSpec = {
   // Something bright caught on the hook, glowing in the water; strength
   // from 0 to 1.
   catchGlow?: { at: Vec2; strength: number };
-  splashes?: { at: Vec2; size: number }[];
+  // Each splash with the seconds since it broke the surface.
+  splashes?: { at: Vec2; size: number; age: number }[];
   fish?: FishProps[];
   // Light spreading under the sea, from 0 to 1.
   seaGlow?: { at: Vec2; radius: number; strength: number };
@@ -134,10 +135,16 @@ const drawFeatures = (pix: Pix, features: Feature[]) => {
   }
 };
 
-// A red-and-white float, a little over two world units tall.
+// A pencil float standing in the water: a white body with a red tip and a
+// thin antenna, the part below the surface hidden.
 const floatParts = ([x, y]: Vec2): Part[] => [
-  { shape: ellipse(x, y, 1.1, 1.3), mat: "beard", lift: 0.5 },
-  { shape: ellipse(x, y - 1.4, 1, 1.1), mat: "cat", lift: 0.45 },
+  {
+    shape: capsule([x, y - 2.4], [x, y + 0.2], 0.75, 0.65),
+    mat: "beard",
+    lift: 0.5,
+  },
+  { shape: capsule([x, y - 3.2], [x, y - 2.2], 0.7), mat: "cat", lift: 0.5 },
+  { shape: capsule([x, y - 4.2], [x, y - 3.2], 0.22), mat: "cat", lift: 0.4 },
 ];
 
 // The boat on the night sea, with the fisherman, the cat and whatever the
@@ -374,7 +381,11 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   as("water");
   reflectWater(pix, { waterline: BOAT.waterline, seed: "key-water", step });
   // Things out on the water in front of the boat are drawn over the
-  // reflections.
+  // reflections, and anything coming out of the water over its own spray.
+  as("splash");
+  for (const { at, size, age } of spec.splashes ?? []) {
+    drawSplash(pix, { at, size, age, seed: `splash-${at[0]}-${at[1]}` });
+  }
   if (looseMoon) {
     as("moon");
     drawLit(
@@ -391,7 +402,14 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     );
   }
   as("fish");
-  for (const f of spec.fish ?? []) drawLit(pix, fishParts(f), scene, STYLE);
+  pix.drawingObjects = true;
+  for (const f of spec.fish ?? []) {
+    const figure = fish(f);
+    drawLit(pix, figure.body, scene, STYLE);
+    drawStrokes(pix, figure.strokes);
+    drawFeatures(pix, [figure.eye]);
+  }
+  pix.drawingObjects = false;
   if (spec.ripple) {
     as("ripple");
     drawRipple(pix, {
@@ -412,10 +430,6 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       STYLE,
     );
   }
-  as("splash");
-  spec.splashes?.forEach(({ at, size }, i) =>
-    drawSplash(pix, { at, size, seed: `splash-${i}-${step}` }),
-  );
   if (spec.catchGlow) {
     as("reflection");
     const { at, strength } = spec.catchGlow;

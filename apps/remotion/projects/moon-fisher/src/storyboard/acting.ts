@@ -118,8 +118,6 @@ export const leapSplashes = (
   size: number,
   backIn = true,
 ) => [
-  ...(Math.abs(t - l.start) < 0.2 ? [{ at: l.from, size }] : []),
-  ...(backIn && Math.abs(t - l.start - l.duration) < 0.25
-    ? [{ at: l.to, size }]
-    : []),
+  { at: l.from, size, age: t - l.start },
+  ...(backIn ? [{ at: l.to, size, age: t - l.start - l.duration }] : []),
 ];

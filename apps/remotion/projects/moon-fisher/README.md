@@ -143,7 +143,7 @@ v006, 2026-10-01: the storyboard Olof approved as v003, carrying the animatics' 
 
 ## Animatic
 
-v004, 2026-10-01, awaits Olof's review. `renders/animatic/v004/animatic.mp4` plays the 20 shots at final timing over score v005: 58.5 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
+v004, accepted by Olof on 2026-10-01 (“its ok. Lets continue”). `renders/animatic/v004/animatic.mp4` plays the 20 shots at final timing over score v005: 58.5 s, 1080×1920 at 24 fps. The sound is the score alone; the effects come later.
 
 How it got here: v001 was “roughly there but still very rough”: Olof could not tell the fisherman falls asleep, and did not want the moon to shudder in the sky. v002 added a close-up of him nodding off with Z's, plus the assistant's pass over the rough edges (the float's twitch and plunge, a closer catch, a sky that darkens and brightens with the moon, the moon rising past the bow, a closer finale, blinks, the cat's paw, a flickering moon, fades at both ends and a swaying sea). v003 answered Olof's next notes with a held bar for the hooked moon, a pumping haul, dissolves and a slower nod-off. Of v003 he said the dissolve “doesnt work for pixel art”, and that the ending was boring: perhaps it should end when the cat gets the fish. v004:
 
@@ -155,6 +155,14 @@ How it is made:
 - **One timeline:** the animatic, the storyboard and the asset register all draw the film through `filmAt(frame)`, so a storyboard panel is the animatic's frame at that moment. A shot's fade in or out darkens the frame along the palette, and the iris blacks out all but a circle.
 - **Cadence:** action moves on twos and ambient life on threes, as for the style frame. The boat's bob, the stars, the water and the blinks run on across the cuts.
 - **Acting:** the movements within shots are in `src/storyboard/acting.ts`: nodding off, falling asleep, the startle and the haul's pumps, looking up, the leaping fish and the flicker.
+
+## Upgrade passes
+
+With the animatic accepted, the assets get better in passes, each rendered as a new animatic over the same cut. The order is the assistant's, from the asset register: the props at the story's turning points first, because they are quick and the fish became the film's last image; then the acting; then the sound effects.
+
+1. **Props** (2026-10-01, animatic v005): the fish gets a tapering silver body with a dark back, a forked tail, fins, a gill line and an eye. Splashes play out over time: a white burst, jets of spray that rise and collapse, droplets and a spreading ring, sized from the float's plunge up to the catch, where the moon bursts out through its own spray. The float becomes a pencil float with a red tip, and ripples fade as they widen.
+2. **Acting:** his smile and the detail of his face in close-up, the cat's pounce and the fish in its mouth.
+3. **Sound effects:** the storyboard's cues, timed to the picture.
 
 ## Asset register
 
@@ -169,9 +177,9 @@ The screen columns are measured, not estimated. `npm run tables` draws every sho
 | **Cat** (character)<br>`cat({ x, y, pose, facing, look, paw })` | rough | 46 s in 01–02, 05, 07–10, 12–20 | 0.9% | 6% in 12 | One pose, peer, with a head tilt and a front paw that reaches out (12, 19). Needs a pounce and a fish in its mouth (19, 20), a startle, and a tail that moves. |
 | **Moon** (prop)<br>`moonParts({ x, y, radius, glow, waterline }); spec.moon = { in: "sky" \| "world" }` | rough | 36 s in 01–02, 04–05, 07–09, 15, 17–20 | 2% | 4% in 09 | The style frame's moon; it drifts, sets and rises. Needs a brighter burst as it leaves the sea (09) and water streaming off it. |
 | **Bucket, with the moon in it** (prop)<br>`bucket({ x, rimY, moon, tilt, glow })` | rough | 20 s in 10–17 | 1.0% | 7% in 11 | The style frame's hero. The moon drops out as he tips it (15) and flickers as it dims (13); it needs water spilling with it. |
-| **Float** (prop)<br>`spec.float = [x, y]` | placeholder | 11 s in 02–03, 05–06, 19 | <0.1% | <0.1% in 03 | Two ovals. Needs a drawn red-and-white float, its bob and its plunge (06). |
+| **Float** (prop)<br>`spec.float = [x, y]` | rough | 8 s in 02–03, 05–06, 19 | <0.1% | <0.1% in 03 | A pencil float: a white body, red tip and antenna. Needs its plunge to pull it under rather than vanish (06). |
 | **Rod and line** (prop)<br>`drawRod({ grip, angle, length, bend }); drawLine(from, to, slack)` | rough | 40 s in 01–10, 14, 18–20 | 0.2% | 0.4% in 20 | Its bend follows each heave. Needs a reel for the clicks and the whir (06, 08). |
-| **Fish** (prop)<br>`fishParts({ at, angle, size })` | placeholder | 10 s in 18–20 | <0.1% | 0.4% in 20 | A body and a tail, now leaping in arcs (18, 19) and flopping on the deck (19). Needs fins, an eye and a silver sheen, and the one the cat holds (20). |
+| **Fish** (prop)<br>`fish({ at, angle, size })` | rough | 10 s in 18–20 | <0.1% | 0.5% in 20 | A tapering silver body with a dark back, forked tail, dorsal and belly fins, a gill line and an eye; it leaps in arcs (18, 19) and flops on the deck (19). Needs a sheen that catches the moon as it leaps, and to sit in the cat's mouth (20). |
 | **Boat** (set)<br>`boatInterior(BOAT), boatHull(BOAT)` | rough | 57 s in 01–20 | 9% | 23% in 12 | Planks, ribs and rivets from the style frame. Needs a check of the bow where the cat's close-up frames it (12), and a gentle rock beyond the one-pixel bob. |
 | **Sky** (set)<br>`drawSky, drawStars, drawMilkyWay` | rough | 53 s in 01–02, 04–05, 07–20 | 43% | 68% in 16 | Near final. It dissolves between moonlit and dark as the moon sets (09) and rises (17); its stars could twinkle more. |
 | **Sea** (set)<br>`drawSea({ horizon, bands, swell })` | rough | 58 s in 01–20 | 19% | 66% in 03 | Near final. Its swell lines sway slowly. |
@@ -179,9 +187,9 @@ The screen columns are measured, not estimated. `npm run tables` draws every sho
 | **Moon's reflection** (effect)<br>`spec.reflection = [x, y], spec.wobble; drawMoonReflection` | rough | 28 s in 01–03, 05–08, 18–19 | 0.2% | 2% in 06 | Drifts and wobbles. Once hooked it only gains a halo; it should stretch and tear as he hauls it in (08). |
 | **Moon's glitter path** (light)<br>`drawMoonPath({ x, horizon, halfWidth })` | rough | 33 s in 01–08, 18–20 | 1% | 7% in 06 | Near final. Should change shape with the moon's height as it comes down (08). |
 | **Moonlight glow** (light)<br>`drawHalo, drawShaft; spec.seaGlow` | rough | 20 s in 09–15, 17 | 3% | 21% in 11 | Halo and shaft around the caught moon, and the glow under the sea (17). |
-| **Splash** (effect)<br>`spec.splash = { at, size }; drawSplash` | placeholder | 7 s in 06, 09, 15, 18–19 | <0.1% | 0.1% in 09 | Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 09, 15, 18, 19). Needs a crown that rises and falls over a few frames, sized to each. |
+| **Splash** (effect)<br>`spec.splashes = [{ at, size, age }]; drawSplash` | rough | 8 s in 06, 09, 15, 18–19 | <0.1% | 0.2% in 09 | A white burst, jets of spray that rise and collapse, droplets and a fading ring, sized to each: the float (06), the catch (09), the release (15) and the fish (18, 19). Needs foam that lingers on the water. |
 | **Sleep Z's** (effect)<br>`spec.zzz = seconds asleep` | rough | 4 s in 04–05, 07 | <0.1% | 0.2% in 07 | Pixel Z's drifting up from his head (04, 05). Could take a hand-drawn letterform. |
-| **Ripple** (effect)<br>`spec.ripple = { at, radius }; drawRipple` | placeholder | 2 s in 03, 06 | <0.1% | 0.4% in 03 | Broken rings at one radius. Needs rings that fade as they spread (03). |
+| **Ripple** (effect)<br>`spec.ripple = { at, radius }; drawRipple` | rough | 2 s in 03, 06 | <0.1% | 0.4% in 03 | Broken rings that fade as they widen (03, 06). |
 <!-- /generated:assets -->
 
 **Where upgrades pay off,** in the assistant's judgment:
@@ -221,8 +229,8 @@ Sound effects come after the animatic. The storyboard's cues:
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
 | Storyboard contact sheet | v003 approved 2026-10-01, in which the moon wanders into his hook; v006 carries the animatics' changes in 20 shots. v001's catch was unclear; v002 needed a straight line and the drift |
 | Asset register | v001: 16 assets measured on screen across the storyboard, and 13 sound cues (2026-10-01) |
-| Animatic | v004: palette fades instead of dissolves, and it ends on the cat's fish; awaiting Olof's review. v001 was “roughly there but still very rough”; v002 lacked the pause and its haul was stiff; v003's dissolves did not suit pixel art (2026-10-01) |
-| Asset upgrade passes | Later phase |
+| Animatic | v004 accepted 2026-10-01: palette fades instead of dissolves, ending on the cat's fish. v001 was “roughly there but still very rough”; v002 lacked the pause and its haul was stiff; v003's dissolves did not suit pixel art |
+| Asset upgrade passes | Pass 1, the props: animatic v005, awaiting Olof's review (2026-10-01) |
 
 ## Rebuild
 
@@ -238,7 +246,7 @@ npm run preview          # fast PNG previews of every scene, without Remotion �
 npx tsx scripts/storyboard-preview.ts   # fast storyboard panels and a tiled sheet → renders/preview/storyboard
 npm run storyboard -- v007   # the captioned storyboard sheet through Remotion → renders/storyboard/v007
 npm run tables           # regenerate this README's shot list and asset register from the code, about 40 s
-npm run animatic -- v005     # the film at final timing with the locked score → renders/animatic/v005, about 2 min
+npm run animatic -- v006     # the film at final timing with the locked score → renders/animatic/v006, about 2 min
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)

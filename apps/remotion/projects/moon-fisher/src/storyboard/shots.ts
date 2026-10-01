@@ -256,7 +256,7 @@ const FINALE_LEAPS: Leap[] = [
 // The gift: a fish clears the gunwale and lands on the foredeck by the cat.
 const GIFT: Leap = {
   from: [216, 425],
-  to: [192, 341],
+  to: [192, 343],
   height: 50,
   start: 0.6,
   duration: 0.9,
@@ -392,7 +392,7 @@ export const SHOTS: Shot[] = [
           bend: plunged ? 6 : ROD.bend + twitch,
           line: { to: FLOAT, slack: 0 },
         },
-        splashes: plunged && t < BEAT + 0.5 ? [{ at: FLOAT, size: 6 }] : [],
+        splashes: [{ at: FLOAT, size: 6, age: t - BEAT }],
         catchGlow: plunged
           ? { at: HOOKED, strength: ramp(t, BEAT, 1.5, 0.3, 0.7) }
           : undefined,
@@ -494,7 +494,7 @@ export const SHOTS: Shot[] = [
           bend: lerp(top.bend, 10, move(t, 0, 0.5)),
           line: { to: ball, slack: 0 },
         },
-        splashes: t < 1 ? [{ at: LANDED, size: 7 }] : [],
+        splashes: [{ at: LANDED, size: 15, age: t }],
         cat: { ...PEER_RIGHT, look: 5 },
       };
     },
@@ -610,10 +610,7 @@ export const SHOTS: Shot[] = [
         moon: { in: "world", x, y, r: MOON_RADIUS, waterline: RELEASE.water },
         glow: ramp(t, RELEASE.lands, 1.5, 0.4, 0.12),
         bucket,
-        splashes:
-          t >= RELEASE.lands && t < RELEASE.lands + 0.35
-            ? [{ at: [x, RELEASE.water], size: 4 }]
-            : [],
+        splashes: [{ at: [x, RELEASE.water], size: 4, age: t - RELEASE.lands }],
       };
     },
     panel: 0.8,

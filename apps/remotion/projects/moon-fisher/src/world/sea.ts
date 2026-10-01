@@ -135,8 +135,7 @@ export type RippleProps = {
 };
 
 // Rings spreading over still water from something bobbing in it, flattened
-// by perspective and broken in places. The newest, innermost ring is the
-// brightest.
+// by perspective and broken in places. Each ring fades as it widens.
 export const drawRipple = (
   pix: Pix,
   { x, y, radius, seed }: RippleProps,
@@ -154,7 +153,7 @@ export const drawRipple = (
       const py = pix.py(y + Math.sin(a) * r * 0.3);
       if (lit.has(py * pix.w + px)) continue;
       lit.add(py * pix.w + px);
-      pix.brighten(px, py, ring === 0 ? 2 : 3);
+      pix.brighten(px, py, r < 7 ? 3 : r < 13 ? 2 : 1);
     }
   }
 };
