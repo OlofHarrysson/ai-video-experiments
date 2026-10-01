@@ -14,6 +14,12 @@ export type Camera = {
 
 export const IDENTITY: Camera = { x: 0, y: 0, zoom: 1, sx: 0, sy: 0 };
 
+// Where a world point lands in the design frame.
+export const onScreen = (
+  c: Camera,
+  [x, y]: readonly [number, number],
+): [number, number] => [(x - c.x) * c.zoom + c.sx, (y - c.y) * c.zoom + c.sy];
+
 // A low-resolution image of palette indices. The design frame is 270×480;
 // `k` converts design units to this image's pixels, so the same scene can be
 // drawn at any pixel density. World objects go through the camera; skies and

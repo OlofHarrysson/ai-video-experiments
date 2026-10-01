@@ -1,13 +1,29 @@
-import type { Camera } from "../pixel/pix";
+import { onScreen, type Camera } from "../pixel/pix";
 import type { Vec2 } from "../pixel/shapes";
 import { HORIZON, type SceneSpec } from "../stills/boatScene";
 import { KEY_IMAGE } from "../stills/keyImage";
-import { DOZE, FLOAT, HAUL, REFLECTION, SKY_MOON, TIP } from "../stills/poses";
-import { BAR_SECONDS } from "../timing";
+import {
+  DOZE,
+  FLOAT,
+  HAUL,
+  HOOKED,
+  REFLECTION,
+  skyMoon,
+  TIP,
+} from "../stills/poses";
+import { at, BAR_SECONDS, SECTIONS } from "../timing";
+
+// Storyboard notation over a panel, in design-frame units: arrows for what
+// travels during the shot, and shake lines around what shivers.
+export type Notation = {
+  arrows?: (readonly [Vec2, Vec2])[];
+  shakes?: { at: Vec2; r: number }[];
+};
 
 // The film, shot by shot, cut on the score's bars. Each shot is a scene spec
-// as a function of the seconds since the shot began; the storyboard shows
-// one moment of it, and the animatic plays it through.
+// as a function of the seconds since the shot began and since the film
+// began; the storyboard shows one moment of it, and the animatic plays it
+// through.
 export type Shot = {
   id: string;
   // [first bar, bar after the last]
@@ -16,13 +32,11 @@ export type Shot = {
   title: string;
   action: string;
   sound: string;
-  spec: (t: number) => SceneSpec;
-  // Seconds into the shot shown on the storyboard.
+  spec: (t: number, film: number) => SceneSpec;
+  // Seconds into the shot shown on the storyboard, and its notation at that
+  // moment of the film.
   panel: number;
-  // Storyboard notation over the panel, in design-frame units: arrows for
-  // what travels during the shot, and shake lines around what shivers.
-  arrows?: (readonly [Vec2, Vec2])[];
-  shakes?: { at: Vec2; r: number }[];
+  notation?: (film: number) => Notation;
 };
 
 // Panels per row on the contact sheets.
@@ -39,20 +53,18 @@ const PAIL: Camera = { x: 148, y: 322, zoom: 3, sx: 135, sy: 240 };
 // Looking down at the float, in the middle of the moon's glitter.
 const WATER: Camera = { x: 172, y: 440, zoom: 3.5, sx: 135, sy: 260 };
 
-// In the wide frame the moon stands right above its reflection.
-const WIDE_MOON = { in: "sky", x: 152, y: 70, r: 11 } as const;
-// Out of frame above the water close-ups; it still lights them.
-const HIGH_MOON = { in: "sky", x: 135, y: -140, r: 11 } as const;
-// Up and to the left of the cat, which looks up at it.
-const CAT_MOON = { in: "sky", x: 50, y: 135, r: 11 } as const;
+// How high the moon stands in each frame. Above the water close-ups it is
+// out of frame but still lights them; in the cat's close-up it hangs up and
+// to the left of the cat, which looks up at it.
+const MOON_HEIGHT = { wide: 70, medium: 55, water: -140, cat: 135 };
 
-// The tug drags the reflection toward the float; the haul brings it in
-// beside the boat while the moon comes down the sky to the horizon.
-const HOOKED: Vec2 = [166, 443];
-const LANDED: Vec2 = [166, 420];
+// The haul brings the hooked reflection in beside the boat while the moon
+// comes down the sky to the horizon.
+const LANDED: Vec2 = [176, 420];
 
+// The rod's tip right above the float, so the line hangs straight down.
 const ROD = {
-  angle: -28,
+  angle: -37.6,
   length: 64,
   bend: 2,
   line: { to: FLOAT, slack: 6 },
@@ -62,30 +74,39 @@ const PEER_LEFT = { x: 208, y: 342, pose: "peer", facing: "left" } as const;
 const PEER_RIGHT = { ...PEER_LEFT, facing: "right" } as const;
 const EMPTY_BUCKET = { at: "knees", x: 148, rimY: 326 } as const;
 
-// Fishing under the moon: the setup, and the ending that mirrors it.
-const fishing = (camera: Camera, moon: SceneSpec["moon"]): SceneSpec => ({
+const ramp = (t: number, from: number, to: number, a: number, b: number) =>
+  a + (b - a) * Math.min(1, Math.max(0, (t - from) / (to - from)));
+
+// The night wears on: the moon crosses the sky, and its reflection the
+// water. It drifts slowly while he fishes, faster while he dozes, and
+// wanders into his hook on the tug's downbeat. World x of the reflection,
+// from seconds into the film.
+const DOZING = at(SECTIONS.doze[0]);
+const TUG = at(SECTIONS.tug[0]);
+const wander = (film: number) =>
+  film < DOZING
+    ? ramp(film, 0, DOZING, REFLECTION[0], 161)
+    : ramp(film, DOZING, TUG, 161, HOOKED[0]);
+const reflectionAt = (x: number): Vec2 => [x, REFLECTION[1]];
+
+// Fishing under the moon, its reflection at world column `x` and the moon
+// standing over it at height `y` in the frame: the setup, and the ending
+// that mirrors it.
+const fishing = (camera: Camera, x: number, y: number): SceneSpec => ({
   camera,
-  moon,
-  reflection: REFLECTION,
+  moon: skyMoon(camera, x, y),
+  reflection: reflectionAt(x),
   fisherman: "fish",
   rod: ROD,
   float: FLOAT,
   cat: PEER_LEFT,
 });
 
-const ramp = (t: number, from: number, to: number, a: number, b: number) =>
-  a + (b - a) * Math.min(1, Math.max(0, (t - from) / (to - from)));
-
 const mix = (a: Vec2, b: Vec2, p: number): Vec2 => [
   a[0] + (b[0] - a[0]) * p,
   a[1] + (b[1] - a[1]) * p,
 ];
 
-// Where a world point lands in the design frame.
-const onScreen = (c: Camera, [x, y]: Vec2): Vec2 => [
-  (x - c.x) * c.zoom + c.sx,
-  (y - c.y) * c.zoom + c.sy,
-];
 const horizonIn = (c: Camera) => onScreen(c, [0, HORIZON])[1];
 
 // An arrow running alongside a path, `side` units off it (to the screen
@@ -121,7 +142,10 @@ const heaves = (t: number, beats: number) => {
 // horizon just past the bow, the stretch the boat does not hide. Sky moons
 // are placed in the design frame, over these world columns.
 const SETS_OVER = 243;
-const HAUL_MOON_FROM: Vec2 = [onScreen(MEDIUM_WIDE, [172, 0])[0], 55];
+const HAUL_MOON_FROM: Vec2 = [
+  onScreen(MEDIUM_WIDE, [HOOKED[0], 0])[0],
+  MOON_HEIGHT.medium,
+];
 const HAUL_MOON_TO: Vec2 = [
   onScreen(MEDIUM_WIDE, [SETS_OVER, 0])[0],
   horizonIn(MEDIUM_WIDE) - 11,
@@ -143,9 +167,9 @@ export const SHOTS: Shot[] = [
     framing: "Wide",
     title: "The boat under the moon",
     action:
-      "A tiny boat in the moon's silver path. His float bobs beside the moon's reflection.",
+      "A tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection.",
     sound: "Intro, then the tune. The sea.",
-    spec: () => fishing(WIDE, WIDE_MOON),
+    spec: (_, film) => fishing(WIDE, wander(film), MOON_HEIGHT.wide),
     panel: 2,
   },
   {
@@ -155,7 +179,7 @@ export const SHOTS: Shot[] = [
     title: "Nothing bites",
     action: "He waits with the rod out; the cat watches the float.",
     sound: "The tune. A creak of the boat.",
-    spec: () => fishing(MEDIUM, SKY_MOON),
+    spec: (_, film) => fishing(MEDIUM, wander(film), MOON_HEIGHT.medium),
     panel: 2,
   },
   {
@@ -166,14 +190,21 @@ export const SHOTS: Shot[] = [
     action:
       "The float bobs beside the reflection. Its ripple runs into it, and the reflection wobbles.",
     sound: "The tune's last phrase. A plip, water lapping.",
-    spec: (t) => ({
-      ...fishing(WATER, HIGH_MOON),
+    spec: (t, film) => ({
+      ...fishing(WATER, wander(film), MOON_HEIGHT.water),
       cat: undefined,
-      ripple: { at: FLOAT, radius: 16 * (t - 0.1) },
-      wobble: ramp(t, 0.75, 0.9, 0, 1) * ramp(t, 0.9, 1.5, 1, 0.5),
+      ripple: { at: FLOAT, radius: 18 * (t - 0.1) },
+      wobble: ramp(t, 0.78, 0.92, 0, 1) * ramp(t, 0.92, 1.5, 1, 0.5),
     }),
-    panel: 1,
-    shakes: [{ at: onScreen(WATER, REFLECTION), r: 7.5 * WATER.zoom }],
+    panel: 1.05,
+    notation: (film) => ({
+      shakes: [
+        {
+          at: onScreen(WATER, reflectionAt(wander(film))),
+          r: 7.5 * WATER.zoom,
+        },
+      ],
+    }),
   },
   {
     id: "04",
@@ -182,22 +213,56 @@ export const SHOTS: Shot[] = [
     title: "The moon shivers",
     action: "Up in the sky the moon shivers too. Only the cat looks up.",
     sound: "The tune ends. A faint, glassy shiver.",
-    spec: (t) => ({
-      ...fishing(CAT_SKY, { ...CAT_MOON, shiver: t < 1 ? 2 : 0 }),
-      cat: { ...PEER_LEFT, look: ramp(t, 0.2, 0.4, 0, 50) },
-    }),
+    spec: (t, film) => {
+      const scene = fishing(CAT_SKY, wander(film), MOON_HEIGHT.cat);
+      return {
+        ...scene,
+        moon: {
+          ...skyMoon(CAT_SKY, wander(film), MOON_HEIGHT.cat),
+          shiver: t < 1 ? 2 : 0,
+        },
+        cat: { ...PEER_LEFT, look: ramp(t, 0.2, 0.4, 0, 50) },
+      };
+    },
     panel: 0.75,
-    shakes: [{ at: [CAT_MOON.x, CAT_MOON.y], r: CAT_MOON.r }],
+    notation: (film) => {
+      const moon = skyMoon(CAT_SKY, wander(film), MOON_HEIGHT.cat);
+      return { shakes: [{ at: [moon.x, moon.y], r: moon.r }] };
+    },
   },
   {
     id: "05",
     bars: [10, 12],
     framing: "Medium",
     title: "He dozes off",
-    action: "His head sinks; the hat slides over his eyes.",
+    action:
+      "His head sinks; the hat slides over his eyes. Meanwhile the moon drifts on, and its reflection reaches his float.",
     sound: "The doze: a lazy clarinet.",
-    spec: () => ({ ...DOZE, cat: PEER_LEFT }),
+    spec: (_, film) => ({
+      ...DOZE,
+      moon: skyMoon(MEDIUM, wander(film), MOON_HEIGHT.medium),
+      reflection: reflectionAt(wander(film)),
+      cat: PEER_LEFT,
+    }),
     panel: 1.5,
+    // The drift is short, so its arrows start further back to stay legible.
+    notation: () => {
+      const [from, to] = [wander(DOZING) - 16, HOOKED[0]];
+      const sky = (x: number): Vec2 => [
+        skyMoon(MEDIUM, x).x,
+        MOON_HEIGHT.medium,
+      ];
+      return {
+        arrows: [
+          alongside(sky(from), sky(to), -20),
+          alongside(
+            onScreen(MEDIUM, reflectionAt(from)),
+            onScreen(MEDIUM, reflectionAt(to)),
+            18,
+          ),
+        ],
+      };
+    },
   },
   {
     id: "06",
@@ -205,26 +270,22 @@ export const SHOTS: Shot[] = [
     framing: "Close",
     title: "A tug",
     action:
-      "The float plunges under, and the reflection jerks after it: it is hooked.",
+      "The reflection has wandered into his hook. The float plunges under: it is hooked.",
     sound: "The tug: two plucks. A plop, the reel clicks.",
     spec: (t) => {
-      const jerk = ramp(t, 0.15, 0.3, 0, 1);
-      const at = mix(REFLECTION, HOOKED, jerk);
+      // A jolt on each of the two plucks.
+      const jolt = Math.max(ramp(t, 0, 0.4, 1, 0), ramp(t, 0.75, 1.15, 1, 0));
       return {
-        ...fishing(WATER, HIGH_MOON),
+        ...fishing(WATER, HOOKED[0], MOON_HEIGHT.water),
         cat: undefined,
         float: undefined,
-        reflection: at,
-        wobble: jerk,
-        rod: { ...ROD, line: { to: FLOAT, slack: 0 } },
-        splash: { at: FLOAT, size: 6 },
-        catchGlow: { at, strength: 0.5 * jerk },
+        wobble: 0.3 + 0.7 * jolt,
+        rod: { ...ROD, bend: 4, line: { to: FLOAT, slack: 0 } },
+        splash: t < 0.6 ? { at: FLOAT, size: 6 } : undefined,
+        catchGlow: { at: HOOKED, strength: ramp(t, 0, 1.5, 0.3, 0.7) },
       };
     },
-    panel: 0.4,
-    arrows: [
-      alongside(onScreen(WATER, REFLECTION), onScreen(WATER, FLOAT), -34, 0.05),
-    ],
+    panel: 0.25,
   },
   {
     id: "07",
@@ -249,14 +310,16 @@ export const SHOTS: Shot[] = [
       };
     },
     panel: 2,
-    arrows: [
-      alongside(HAUL_MOON_FROM, HAUL_MOON_TO, 22, 0.15),
-      alongside(
-        onScreen(MEDIUM_WIDE, HOOKED),
-        onScreen(MEDIUM_WIDE, LANDED),
-        20,
-      ),
-    ],
+    notation: () => ({
+      arrows: [
+        alongside(HAUL_MOON_FROM, HAUL_MOON_TO, 22, 0.15),
+        alongside(
+          onScreen(MEDIUM_WIDE, HOOKED),
+          onScreen(MEDIUM_WIDE, LANDED),
+          20,
+        ),
+      ],
+    }),
   },
   {
     id: "08",
@@ -285,18 +348,20 @@ export const SHOTS: Shot[] = [
       };
     },
     panel: 0.3,
-    arrows: [
-      alongside(
-        [SETTING_X, horizonIn(WIDE) - 30],
-        [SETTING_X, horizonIn(WIDE) + 2],
-        -18,
-      ),
-      alongside(
-        onScreen(WIDE, [LANDED[0], LANDED[1] + 12]),
-        onScreen(WIDE, [LANDED[0], LANDED[1] - 30]),
-        -18,
-      ),
-    ],
+    notation: () => ({
+      arrows: [
+        alongside(
+          [SETTING_X, horizonIn(WIDE) - 30],
+          [SETTING_X, horizonIn(WIDE) + 2],
+          -18,
+        ),
+        alongside(
+          onScreen(WIDE, [LANDED[0], LANDED[1] + 12]),
+          onScreen(WIDE, [LANDED[0], LANDED[1] - 30]),
+          -18,
+        ),
+      ],
+    }),
   },
   {
     id: "09",
@@ -412,7 +477,7 @@ export const SHOTS: Shot[] = [
     action: "The moon rides high again. Fish leap through its silver path.",
     sound: "The finale: home in E. Splashes.",
     spec: () => ({
-      ...fishing(WIDE, WIDE_MOON),
+      ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
       cat: PEER_RIGHT,
       fish: [
         { at: [52, 392], angle: -40, size: 2.2 },
@@ -430,8 +495,8 @@ export const SHOTS: Shot[] = [
     action: "One fish leaps into the boat; the cat is on it at once.",
     sound: "The last phrase again. A flop, a happy mew.",
     spec: () => ({
-      ...fishing(MEDIUM, SKY_MOON),
-      fish: [{ at: [186, 316], angle: 35, size: 1.3 }],
+      ...fishing(MEDIUM, REFLECTION[0], MOON_HEIGHT.medium),
+      fish: [{ at: [190, 316], angle: 35, size: 1.3 }],
     }),
     panel: 1.5,
   },
@@ -444,7 +509,7 @@ export const SHOTS: Shot[] = [
       "The first shot again: the moon high, his float beside its reflection. He smiles; the cat has its fish.",
     sound: "The coda, the plucked ta-dum and a last high note. The sea.",
     spec: () => ({
-      ...fishing(WIDE, WIDE_MOON),
+      ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
       fish: [{ at: [198, 341], angle: 180, size: 1.6 }],
     }),
     panel: 3,
@@ -453,3 +518,8 @@ export const SHOTS: Shot[] = [
 
 export const shotStart = (s: Shot) => (s.bars[0] - 1) * BAR_SECONDS;
 export const shotSeconds = (s: Shot) => (s.bars[1] - s.bars[0]) * BAR_SECONDS;
+
+// The storyboard's moment of a shot, and its notation.
+export const panelSpec = (s: Shot) => s.spec(s.panel, shotStart(s) + s.panel);
+export const panelNotation = (s: Shot): Notation =>
+  s.notation?.(shotStart(s) + s.panel) ?? {};

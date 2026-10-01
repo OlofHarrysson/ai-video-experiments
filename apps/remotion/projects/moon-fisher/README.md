@@ -106,18 +106,18 @@ The library's file names number octaves one lower than scientific pitch, except 
 
 ## Storyboard
 
-v002, 2026-10-01, awaits Olof's review. Nineteen shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v002/storyboard.png` shows one panel per shot. Panels use the placeholder assets drawn so far. Red arrows mark what travels during a shot, and shake lines mark a shiver. Where a pose does not exist yet (the cat's reaching paw and pounce, his smile), the caption carries the action.
+v003, 2026-10-01, awaits Olof's review. Nineteen shots are cut on the score's bars, so every cut lands on the music; `renders/storyboard/v003/storyboard.png` shows one panel per shot. Panels use the placeholder assets drawn so far. Red arrows mark what travels during a shot, and shake lines mark a shiver. Where a pose does not exist yet (the cat's reaching paw and pounce, his smile), the caption carries the action.
 
-**How the catch works.** The moon and its reflection are one thing: what happens to the reflection happens to the moon. The film plants this rule before it is needed. The float bobs beside the reflection, never on it; its ripple makes the reflection wobble, and up in the sky the moon shivers, which only the cat notices (03–04). Hauling on the hooked reflection drags it toward the boat and the moon down the sky, in step (07). The moon sinks below the horizon at the moment it bursts out of the sea on his line (08), so the sky stays empty while he has it. It sets just past the bow, the one stretch of horizon the boat does not hide.
+**How the catch works.** The moon and its reflection are one thing: what happens to the reflection happens to the moon. The film plants this rule before it is needed. His line hangs straight down from the rod tip to the float, and the reflection lies beside it, never on it; the float's ripple makes the reflection wobble, and up in the sky the moon shivers, which only the cat notices (03–04). As the night wears on, the moon crosses the sky and its reflection the water: slowly while he fishes, faster while he dozes, until it wanders into his hook and the float plunges on the tug's first pluck (05–06). Hauling on the hooked reflection drags it toward the boat and the moon down the sky, in step (07). The moon sinks below the horizon at the moment it bursts out of the sea on his line (08), so the sky stays empty while he has it. It sets just past the bow, the one stretch of horizon the boat does not hide.
 
 | Shot | Bars | Time | Framing | What happens | Sound |
 | --- | --- | --- | --- | --- | --- |
-| 01 | 1–4 | 0:00 | Wide | **The boat under the moon.** A tiny boat in the moon's silver path. His float bobs beside the moon's reflection. | Intro, then the tune. The sea. |
+| 01 | 1–4 | 0:00 | Wide | **The boat under the moon.** A tiny boat in the moon's silver path. His line hangs straight down to the float, beside the moon's reflection. | Intro, then the tune. The sea. |
 | 02 | 5–7 | 0:06 | Medium | **Nothing bites.** He waits with the rod out; the cat watches the float. | The tune. A creak of the boat. |
 | 03 | 8 | 0:10.5 | Close | **A ripple.** The float bobs beside the reflection. Its ripple runs into it, and the reflection wobbles. | The tune's last phrase. A plip, water lapping. |
 | 04 | 9 | 0:12 | Close | **The moon shivers.** Up in the sky the moon shivers too. Only the cat looks up. | The tune ends. A faint, glassy shiver. |
-| 05 | 10–11 | 0:13.5 | Medium | **He dozes off.** His head sinks; the hat slides over his eyes. | The doze: a lazy clarinet. |
-| 06 | 12 | 0:16.5 | Close | **A tug.** The float plunges under, and the reflection jerks after it: it is hooked. | The tug: two plucks. A plop, the reel clicks. |
+| 05 | 10–11 | 0:13.5 | Medium | **He dozes off.** His head sinks; the hat slides over his eyes. Meanwhile the moon drifts on, and its reflection reaches his float. | The doze: a lazy clarinet. |
+| 06 | 12 | 0:16.5 | Close | **A tug.** The reflection has wandered into his hook. The float plunges under: it is hooked. | The tug: two plucks. A plop, the reel clicks. |
 | 07 | 13–15 | 0:18 | Medium | **He hauls the moon down.** He jolts awake and hauls. Each pull drags the reflection toward the boat and the moon down the sky. The cat stares. | The haul: driving plucks. The reel whirs. |
 | 08 | 16 | 0:22.5 | Wide | **The moon comes out of the water.** As the moon sinks below the horizon, it bursts out of the sea on his line. | The catch: the harp sweeps up. A great splash. |
 | 09 | 17–18 | 0:24 | Medium | **The moon in his bucket.** The moon glows in the bucket, lighting his face from below. | Wonder: the tune on high piano. Drips. |
@@ -133,9 +133,9 @@ v002, 2026-10-01, awaits Olof's review. Nineteen shots are cut on the score's ba
 | 19 | 37–40 | 0:54 | Wide | **Like the beginning.** The first shot again: the moon high, his float beside its reflection. He smiles; the cat has its fish. | The coda, the plucked ta-dum and a last high note. The sea. |
 
 - **Framing:** four setups do most of the work. The wide shot holds the moon high over a small boat; the medium shot is the style frame's; close-ups frame his face, the cat, the bucket or the float in the water. Most shots are locked off; the camera stays still and the story moves.
-- **Mirror:** shot 19 repeats shot 01's framing, so the ending visibly returns to the beginning.
-- **Motion:** each shot is a scene spec over time in `src/storyboard/shots.ts`, so the animatic plays the same shots. Many already move: the ripple and the wobble in 03, the shiver and the cat's look in 04, the tug in 06, the haul in 07, which brings the moon down in six heaves on the beat, the catch in 08, the fading glow in 12, the tipping bucket in 14 and the rising moon in 16.
-- **v001** (2026-09-30) had 18 shots. The float rode on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch, so the film never showed what became of it.
+- **Mirror:** shot 19 repeats shot 01's framing, so the ending visibly returns to the beginning, with the reflection back beside his float.
+- **Motion:** each shot is a scene spec over time in `src/storyboard/shots.ts`, so the animatic plays the same shots. The moon's drift is one function of film time shared by shots 01–06. Many shots already move: the ripple and the wobble in 03, the shiver and the cat's look in 04, the drift into the hook in 05, the tug's two jolts in 06, the haul in 07, which brings the moon down in six heaves on the beat, the catch in 08, the fading glow in 12, the tipping bucket in 14 and the rising moon in 16.
+- **Earlier versions:** v001 (2026-09-30, 18 shots) put the float on the reflection, which looked as if the moon were already caught, and the moon simply vanished from the sky at the catch. v002 (2026-10-01) added the rule, but the line slanted out to the float and the tug pulled the reflection toward the hook.
 
 ## Plan
 
@@ -146,7 +146,7 @@ v002, 2026-10-01, awaits Olof's review. Nineteen shots are cut on the score's ba
 | Style frame | v003: density A with connected forms and more detail; awaiting Olof's verdict |
 | Sound | Score v003 approved 2026-09-30, after v001 (too sleepy) and v002 (an odd ending) |
 | Pose skeleton | Three key poses and a haul motion test (v001): good enough for the storyboard, polish later (2026-09-29) |
-| Storyboard contact sheet | v002: 19 shots, with the catch's logic on screen; awaiting Olof's review. v001's catch was unclear (2026-10-01) |
+| Storyboard contact sheet | v003: 19 shots; the moon wanders into his hook. Awaiting Olof's review. v001's catch was unclear; v002's logic was good, with a straighter line and the drift still to come (2026-10-01) |
 | Asset register | Not started |
 | Animatic | Not started |
 | Asset upgrade passes | Later phase |
@@ -163,7 +163,7 @@ uv run --script scripts/check-tune.py clarinet   # pitch-track a dry stem agains
 npm run score:review -- v004   # a versioned copy of the score and its review video → renders/score/v004
 npm run preview          # fast PNG previews of every scene, without Remotion → renders/preview
 npx tsx scripts/storyboard-preview.ts   # fast storyboard panels and a tiled sheet → renders/preview/storyboard
-npm run storyboard -- v002   # the captioned storyboard sheet through Remotion → renders/storyboard/v002
+npm run storyboard -- v004   # the captioned storyboard sheet through Remotion → renders/storyboard/v004
 npm run stills -- v004 renders/style-frame/v003/key.png   # Remotion still, ambient loop and before/after sheet → renders/style-frame/v004
 npm run poses -- v002    # the three key poses, the haul motion test and a sheet → renders/poses/v002
 npm run dev              # Remotion Studio (the port comes from $PORT under Devrun, else 3000)

@@ -7,6 +7,8 @@ import type { Vec2 } from "../pixel/shapes";
 import { drawBoatScene } from "../stills/boatScene";
 import { FPS } from "../timing";
 import {
+  panelNotation,
+  panelSpec,
   SHEET_COLUMNS,
   SHOTS,
   shotSeconds,
@@ -61,10 +63,11 @@ const shakePath = ({ at: [x, y], r }: { at: Vec2; r: number }) =>
 
 // Arrows and shake lines over a panel, in design-frame units.
 const Notation: React.FC<{ shot: Shot }> = ({ shot }) => {
-  const arrows = (shot.arrows ?? []).map(arrowPaths);
+  const notes = panelNotation(shot);
+  const arrows = (notes.arrows ?? []).map(arrowPaths);
   const lines = [
     ...arrows.map((a) => a.shaft),
-    ...(shot.shakes ?? []).map(shakePath),
+    ...(notes.shakes ?? []).map(shakePath),
   ].join(" ");
   const heads = arrows.map((a) => a.head).join(" ");
   if (!lines) return null;
@@ -87,7 +90,7 @@ const Notation: React.FC<{ shot: Shot }> = ({ shot }) => {
 
 const Panel: React.FC<{ shot: Shot }> = ({ shot }) => {
   const draw = (pix: Pix) =>
-    drawBoatScene(pix, shot.spec(shot.panel), Math.round(shot.panel * FPS));
+    drawBoatScene(pix, panelSpec(shot), Math.round(shot.panel * FPS));
   const start = shotStart(shot);
   return (
     <div style={{ width: PANEL_W }}>
