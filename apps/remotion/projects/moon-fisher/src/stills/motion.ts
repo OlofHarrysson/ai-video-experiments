@@ -1,6 +1,6 @@
 import { POSES, tweenPose, type Bone } from "../world/fisherman";
 import type { SceneSpec } from "./boatScene";
-import { DOZE, HAUL, REFLECTION } from "./poses";
+import { DOZE, FLOAT, HAUL, REFLECTION } from "./poses";
 
 const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
 const ease = (t: number) =>
@@ -42,9 +42,9 @@ export const haulTest = (frame: number): SceneSpec => {
       angle: lerp(-35, -52, k),
       length: lerp(70, 72, k),
       bend: tugged ? lerp(10, 18, k) + 2 * pulling : 3,
-      line: { to: REFLECTION, slack: tugged ? 0 : 8 },
+      line: tugged ? { to: REFLECTION, slack: 0 } : { to: FLOAT, slack: 8 },
     },
-    float: tugged ? undefined : REFLECTION,
+    float: tugged ? undefined : FLOAT,
     catchGlow: tugged
       ? { at: REFLECTION, strength: clamp01((f - TUG) / 36) }
       : undefined,

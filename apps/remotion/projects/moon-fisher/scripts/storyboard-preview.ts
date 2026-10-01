@@ -6,7 +6,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { DESIGN_WIDTH, FILM } from "../src/pixel/density";
 import { Pix } from "../src/pixel/pix";
 import { drawBoatScene } from "../src/stills/boatScene";
-import { SHOTS } from "../src/storyboard/shots";
+import { SHEET_COLUMNS, SHOTS } from "../src/storyboard/shots";
 import { encodePng } from "./png";
 
 const out = process.argv[2] ?? "renders/preview/storyboard";
@@ -20,9 +20,9 @@ for (const shot of SHOTS) {
   );
 }
 const inputs = SHOTS.flatMap((s) => ["-i", `${out}/${s.id}.png`]);
-const cols = 6;
 const layout = SHOTS.map(
-  (_, i) => `${(i % cols) * 372}_${Math.floor(i / cols) * 652}`,
+  (_, i) =>
+    `${(i % SHEET_COLUMNS) * 372}_${Math.floor(i / SHEET_COLUMNS) * 652}`,
 ).join("|");
 execFileSync("ffmpeg", [
   "-loglevel",

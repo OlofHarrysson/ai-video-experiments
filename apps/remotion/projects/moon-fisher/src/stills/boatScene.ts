@@ -28,7 +28,12 @@ import {
 import { drawHalo, drawShaft, reflectWater } from "../world/glow";
 import { moonParts } from "../world/moon";
 import { drawLine, drawRod } from "../world/rod";
-import { drawMoonPath, drawMoonReflection, drawSea } from "../world/sea";
+import {
+  drawMoonPath,
+  drawMoonReflection,
+  drawRipple,
+  drawSea,
+} from "../world/sea";
 import { drawMilkyWay, drawSky, drawStars, type Band } from "../world/sky";
 
 export const HORIZON = 320;
@@ -38,21 +43,32 @@ export const SEAT: Vec2 = [100, 358];
 // 24 fps.
 export const HOLD = 3;
 export const STYLE: LitStyle = { dither: 0, outline: true, cleanup: true };
+// A shivering moon jumps sideways every two frames, by these fractions of
+// its shiver.
+const SHIVER = [1, -1, 0.5, -1, 1, -0.5];
+
+type SkyMoon = { x: number; y: number; r: number };
 
 export type SceneSpec = {
   camera: Camera;
-  // Where the moon is: in the sky (in design-frame units), caught in the
-  // bucket, loose in the world (world units; `waterline` hides the part
-  // still under the sea), or gone.
+  // Where the moon is: in the sky (in design-frame units, shivering by
+  // `shiver` of them), caught in the bucket, loose in the world (world
+  // units; `waterline` hides the part still under the sea), or gone. A sky
+  // moon below the horizon is hidden by the sea.
   moon:
-    | { in: "sky"; x: number; y: number; r: number }
+    | (SkyMoon & { in: "sky"; shiver?: number })
     | { in: "bucket" }
     | { in: "world"; x: number; y: number; r: number; waterline?: number }
     | { in: "gone" };
   // How brightly a caught moon still shines, 0 to 1.
   glow?: number;
-  // Where the moon's reflection lies on the water, in world units.
+  // The moon in the sky sinking below the horizon as the caught one comes
+  // out of the water, in design-frame units.
+  setting?: SkyMoon;
+  // Where the moon's reflection lies on the water, in world units, and how
+  // hard it shakes, 0 to 1.
   reflection?: Vec2;
+  wobble?: number;
   fisherman: FishermanPose | PoseDef;
   // A bucket standing on his knees, or held in his hands and tipped.
   bucket?:
@@ -67,8 +83,10 @@ export type SceneSpec = {
   cat?: CatProps;
   // A rod set aside, as a straight line between two world points.
   leaningRod?: [Vec2, Vec2];
-  // The float, bobbing where the line meets the water.
+  // The float, bobbing where the line meets the water, and the rings
+  // spreading from it.
   float?: Vec2;
+  ripple?: { at: Vec2; radius: number };
   // Something bright caught on the hook, glowing in the water; strength
   // from 0 to 1.
   catchGlow?: { at: Vec2; strength: number };
@@ -213,20 +231,25 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     });
   }
 
-  if (skyMoon) {
+  // A moon in the sky and its halo; the sea hides whatever has sunk below
+  // the horizon.
+  const drawSkyMoon = ({ x, y, r }: SkyMoon) => {
     pix.cam = IDENTITY;
-    drawHalo(pix, {
-      x: skyMoon.x,
-      y: skyMoon.y,
-      radius: skyMoon.r * 5,
-      steps: 3,
-    });
+    drawHalo(pix, { x, y, radius: r * 5, steps: 3 });
     drawLit(
       pix,
-      moonParts({ x: skyMoon.x, y: skyMoon.y, radius: skyMoon.r }),
+      moonParts({ x, y, radius: r, waterline: horizon }),
       scene,
       STYLE,
     );
+    pix.cam = camera;
+  };
+  if (spec.setting) drawSkyMoon(spec.setting);
+  if (skyMoon) {
+    const shiver =
+      (skyMoon.shiver ?? 0) * SHIVER[Math.floor(frame / 2) % SHIVER.length];
+    drawSkyMoon({ ...skyMoon, x: skyMoon.x + shiver });
+    pix.cam = IDENTITY;
     drawMoonPath(pix, {
       x: skyMoon.x,
       horizon,
@@ -242,6 +265,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
         r: 7.5,
         seed: "moon-reflection",
         step,
+        wobble: spec.wobble,
       });
     }
   } else if (caught) {
@@ -323,6 +347,14 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     );
   }
   for (const f of spec.fish ?? []) drawLit(pix, fishParts(f), scene, STYLE);
+  if (spec.ripple) {
+    drawRipple(pix, {
+      x: spec.ripple.at[0],
+      y: spec.ripple.at[1],
+      radius: spec.ripple.radius,
+      seed: "ripple",
+    });
+  }
   if (spec.float) {
     // The float rises and dips a little with the ripples.
     const dip = step % 6 < 3 ? 0 : 0.8;

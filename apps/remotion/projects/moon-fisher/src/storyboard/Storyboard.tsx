@@ -1,13 +1,20 @@
 import { AbsoluteFill } from "remotion";
-import { FILM } from "../pixel/density";
+import { DESIGN_WIDTH, FILM } from "../pixel/density";
 import { PALETTE } from "../pixel/palette";
 import { PixelCanvas } from "../pixel/PixelFrame";
 import type { Pix } from "../pixel/pix";
+import type { Vec2 } from "../pixel/shapes";
 import { drawBoatScene } from "../stills/boatScene";
 import { FPS } from "../timing";
-import { SHOTS, shotSeconds, shotStart, type Shot } from "./shots";
+import {
+  SHEET_COLUMNS,
+  SHOTS,
+  shotSeconds,
+  shotStart,
+  type Shot,
+} from "./shots";
 
-const COLS = 6;
+const COLS = SHEET_COLUMNS;
 const SCALE = 2;
 const GAP = 36;
 const MARGIN = 60;
@@ -16,6 +23,10 @@ const CAPTION = 200;
 const PANEL_W = FILM.w * SCALE;
 const PANEL_H = FILM.h * SCALE;
 const ROWS = Math.ceil(SHOTS.length / COLS);
+const DESIGN_HEIGHT = (DESIGN_WIDTH * FILM.h) / FILM.w;
+// Notation is drawn in a warm red over the night scenes, edged in ink.
+const NOTE = "#ff7a55";
+const EDGE = PALETTE[0];
 
 export const STORYBOARD_SIZE = {
   width: 2 * MARGIN + COLS * PANEL_W + (COLS - 1) * GAP,
@@ -27,13 +38,63 @@ const clock = (s: number) => {
   return `${Math.floor(s / 60)}:${seconds}`;
 };
 
+const arrowPaths = ([[ax, ay], [bx, by]]: readonly [Vec2, Vec2]) => {
+  const len = Math.hypot(bx - ax, by - ay);
+  const [dx, dy] = [(bx - ax) / len, (by - ay) / len];
+  const [hx, hy] = [bx - dx * 7, by - dy * 7];
+  return {
+    shaft: `M ${ax} ${ay} L ${hx} ${hy}`,
+    head: `M ${bx} ${by} L ${hx - dy * 4.5} ${hy + dx * 4.5} L ${hx + dy * 4.5} ${hy - dx * 4.5} Z`,
+  };
+};
+
+// Two short arcs on each side of something round, as if it trembles.
+const shakePath = ({ at: [x, y], r }: { at: Vec2; r: number }) =>
+  [r + 4, r + 9]
+    .flatMap((R) =>
+      [0, Math.PI].map((mid) => {
+        const [a0, a1] = [mid - 0.5, mid + 0.5];
+        return `M ${x + R * Math.cos(a0)} ${y + R * Math.sin(a0)} A ${R} ${R} 0 0 1 ${x + R * Math.cos(a1)} ${y + R * Math.sin(a1)}`;
+      }),
+    )
+    .join(" ");
+
+// Arrows and shake lines over a panel, in design-frame units.
+const Notation: React.FC<{ shot: Shot }> = ({ shot }) => {
+  const arrows = (shot.arrows ?? []).map(arrowPaths);
+  const lines = [
+    ...arrows.map((a) => a.shaft),
+    ...(shot.shakes ?? []).map(shakePath),
+  ].join(" ");
+  const heads = arrows.map((a) => a.head).join(" ");
+  if (!lines) return null;
+  return (
+    <svg
+      viewBox={`0 0 ${DESIGN_WIDTH} ${DESIGN_HEIGHT}`}
+      width={PANEL_W}
+      height={PANEL_H}
+      style={{ position: "absolute", left: 0, top: 0 }}
+    >
+      <g strokeLinecap="round" strokeLinejoin="round">
+        <path d={lines} fill="none" stroke={EDGE} strokeWidth={4.2} />
+        <path d={heads} fill={EDGE} stroke={EDGE} strokeWidth={2.2} />
+        <path d={lines} fill="none" stroke={NOTE} strokeWidth={2} />
+        <path d={heads} fill={NOTE} stroke={NOTE} strokeWidth={0.6} />
+      </g>
+    </svg>
+  );
+};
+
 const Panel: React.FC<{ shot: Shot }> = ({ shot }) => {
   const draw = (pix: Pix) =>
     drawBoatScene(pix, shot.spec(shot.panel), Math.round(shot.panel * FPS));
   const start = shotStart(shot);
   return (
     <div style={{ width: PANEL_W }}>
-      <PixelCanvas density={FILM} scale={SCALE} frame={0} draw={draw} />
+      <div style={{ position: "relative" }}>
+        <PixelCanvas density={FILM} scale={SCALE} frame={0} draw={draw} />
+        <Notation shot={shot} />
+      </div>
       <div style={{ marginTop: 16, fontSize: 24, color: PALETTE[8] }}>
         {shot.id} · {clock(start)}–{clock(start + shotSeconds(shot))} ·{" "}
         {shot.framing}

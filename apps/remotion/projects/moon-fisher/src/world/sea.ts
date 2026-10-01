@@ -90,13 +90,15 @@ export type MoonReflectionProps = {
   r: number;
   seed: string;
   step?: number;
+  // 0 on calm water, up to 1 when a ripple or a tug shakes it.
+  wobble?: number;
 };
 
 // The moon mirrored in still water: a slightly flattened disc cut into
 // ripples that slide sideways as the water moves.
 export const drawMoonReflection = (
   pix: Pix,
-  { x, y, r, seed, step = 0 }: MoonReflectionProps,
+  { x, y, r, seed, step = 0, wobble = 0 }: MoonReflectionProps,
 ): void => {
   const ry = r * 0.75;
   const ripple = Math.max(2, Math.round(1.5 * pix.s));
@@ -106,14 +108,50 @@ export const drawMoonReflection = (
     const band = Math.floor(py / ripple);
     if (
       py % ripple === ripple - 1 &&
-      random(`${seed}-gap-${band}-${Math.floor(step / 3)}`) < 0.35
+      random(`${seed}-gap-${band}-${Math.floor(step / 3)}`) <
+        0.35 + 0.3 * wobble
     )
       continue;
     const half = r * Math.sqrt(1 - v * v);
-    const shift = Math.round(Math.sin(band * 1.7 + step * 0.6) * 0.9 * pix.s);
+    const shift = Math.round(
+      Math.sin(band * 1.7 + step * 0.6) * 0.9 * (1 + 2.5 * wobble) * pix.s,
+    );
     for (let px = pix.px(x - half); px <= pix.px(x + half); px++) {
       const u = (pix.wx(px) - x) / half;
       pix.set(px + shift, py, Math.abs(u) > 0.8 ? C.silver1 : C.silver3);
+    }
+  }
+};
+
+export type RippleProps = {
+  // Center and radius of the outermost ring, in world units.
+  x: number;
+  y: number;
+  radius: number;
+  seed: string;
+};
+
+// Rings spreading over still water from something bobbing in it, flattened
+// by perspective and broken in places. The newest, innermost ring is the
+// brightest.
+export const drawRipple = (
+  pix: Pix,
+  { x, y, radius, seed }: RippleProps,
+): void => {
+  for (let ring = 0; ring < 3; ring++) {
+    const r = radius - ring * 5;
+    if (r <= 1) break;
+    const lit = new Set<number>();
+    const n = Math.max(24, Math.round(4 * Math.PI * r * pix.s));
+    for (let i = 0; i < n; i++) {
+      if (random(`${seed}-${ring}-${Math.floor((i * 14) / n)}`) < 0.25)
+        continue;
+      const a = (2 * Math.PI * i) / n;
+      const px = pix.px(x + Math.cos(a) * r);
+      const py = pix.py(y + Math.sin(a) * r * 0.3);
+      if (lit.has(py * pix.w + px)) continue;
+      lit.add(py * pix.w + px);
+      pix.brighten(px, py, ring === 0 ? 2 : 3);
     }
   }
 };

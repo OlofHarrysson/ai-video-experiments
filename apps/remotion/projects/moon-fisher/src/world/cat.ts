@@ -13,6 +13,8 @@ export type CatProps = {
   y: number;
   pose: CatPose;
   facing: "left" | "right";
+  // Degrees the head tilts up, toward the side the cat faces.
+  look?: number;
 };
 
 export type CatFigure = {
@@ -117,6 +119,40 @@ const POSES: Record<CatPose, Pose> = {
   },
 };
 
+// The head turns about the top of the neck, carrying its face with it.
+const NECK_TOP: Vec2 = [-7, -20];
+
+const tiltHead = (p: Pose, degrees: number): Pose => {
+  if (!degrees) return p;
+  const a = (degrees * Math.PI) / 180;
+  const [cos, sin] = [Math.cos(a), Math.sin(a)];
+  const turn = ([x, y]: Vec2): Vec2 => {
+    const [dx, dy] = [x - NECK_TOP[0], y - NECK_TOP[1]];
+    return [
+      NECK_TOP[0] + dx * cos - dy * sin,
+      NECK_TOP[1] + dx * sin + dy * cos,
+    ];
+  };
+  const oval = ([x, y, rx, ry, rot = 0]: Oval): Oval => {
+    const [tx, ty] = turn([x, y]);
+    return [tx, ty, rx, ry, rot + a];
+  };
+  const limb = ([u, v, r]: Limb): Limb => [turn(u), turn(v), r];
+  return {
+    ...p,
+    head: oval(p.head),
+    muzzle: oval(p.muzzle),
+    cheek: oval(p.cheek),
+    ears: [p.ears[0].map(turn), p.ears[1].map(turn)],
+    innerEar: p.innerEar.map(turn),
+    muzzlePatch: oval(p.muzzlePatch),
+    headStripes: p.headStripes.map(limb),
+    eye: turn(p.eye),
+    nose: turn(p.nose),
+    whiskers: p.whiskers.map(([u, v]): [Vec2, Vec2] => [turn(u), turn(v)]),
+  };
+};
+
 // Short stripes across the tail, one per segment.
 const tailStripes = (tail: Vec2[]): Mark[] =>
   tail.slice(0, -1).map((a, i) => {
@@ -136,8 +172,8 @@ const tailStripes = (tail: Vec2[]): Mark[] =>
 
 // The fisherman's ginger tabby with a white chest. Body, legs and neck are
 // grown as one piece, and so are the head, muzzle and ears.
-export const cat = ({ x, y, pose, facing }: CatProps): CatFigure => {
-  const p = POSES[pose];
+export const cat = ({ x, y, pose, facing, look = 0 }: CatProps): CatFigure => {
+  const p = tiltHead(POSES[pose], look);
   const at = ([dx, dy]: Vec2): Vec2 => [x + dx, y + dy];
   const oval = ([ox, oy, rx, ry, rot]: Oval) =>
     ellipse(...at([ox, oy]), rx, ry, rot ?? 0);
