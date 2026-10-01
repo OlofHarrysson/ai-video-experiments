@@ -4,6 +4,7 @@ import { PALETTE } from "../pixel/palette";
 import { PixelCanvas } from "../pixel/PixelFrame";
 import type { Pix } from "../pixel/pix";
 import type { Vec2 } from "../pixel/shapes";
+import { DURATION_SECONDS } from "../timing";
 import { drawBoatScene } from "../stills/boatScene";
 import {
   filmAt,
@@ -17,6 +18,8 @@ import {
 } from "./shots";
 
 const COLS = SHEET_COLUMNS;
+// The score the shots are cut to.
+const SCORE_VERSION = "v004";
 const SCALE = 2;
 const GAP = 36;
 const MARGIN = 60;
@@ -114,8 +117,8 @@ export const Storyboard: React.FC = () => (
     }}
   >
     <div style={{ height: HEADER, fontSize: 44, color: PALETTE[10] }}>
-      The Moon Fisher · storyboard · {SHOTS.length} shots cut to score v003, 60
-      s
+      The Moon Fisher · storyboard · {SHOTS.length} shots cut to score{" "}
+      {SCORE_VERSION}, {DURATION_SECONDS} s
     </div>
     <div
       style={{

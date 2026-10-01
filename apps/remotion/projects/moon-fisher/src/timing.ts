@@ -4,7 +4,7 @@
 export const FPS = 24;
 export const BAR_SECONDS = 1.5;
 export const EIGHTH_SECONDS = BAR_SECONDS / 6;
-export const BARS = 40;
+export const BARS = 41;
 export const DURATION_SECONDS = BARS * BAR_SECONDS;
 export const DURATION_FRAMES = DURATION_SECONDS * FPS;
 
@@ -23,16 +23,17 @@ export const SECTIONS = {
   doze: [10, 12],
   // Turn
   tug: [12, 13],
-  haul: [13, 16],
-  catch: [16, 17],
-  wonder: [17, 22],
-  dimming: [22, 26],
+  hooked: [13, 14],
+  haul: [14, 17],
+  catch: [17, 18],
+  wonder: [18, 23],
+  dimming: [23, 27],
   // Payoff
-  release: [26, 27],
-  darkness: [27, 28],
-  rise: [28, 31],
-  finale: [31, 37],
-  coda: [37, 41],
+  release: [27, 28],
+  darkness: [28, 29],
+  rise: [29, 32],
+  finale: [32, 38],
+  coda: [38, 42],
 } as const satisfies Record<string, readonly [number, number]>;
 
 export type Section = keyof typeof SECTIONS;

@@ -4,11 +4,12 @@ import { at, BAR_SECONDS, BARS, FPS, SECTIONS, type Section } from "./timing";
 
 // What happens in the story during each passage of the score.
 const STORY: Record<Section, string> = {
-  intro: "Night sea. The float bobs in the moon's reflection.",
-  tune: "The clarinet's tune over the piano. Nothing bites.",
-  doze: "He dozes off.",
-  tug: "A tug on the line.",
-  haul: "He hauls. The line has snagged the reflection.",
+  intro: "Night sea. The float bobs beside the moon's reflection.",
+  tune: "The clarinet's tune over the piano. Nothing bites; he nods off.",
+  doze: "He sleeps, and the moon drifts into his hook.",
+  tug: "A tug on the line: the float twitches, then plunges.",
+  hooked: "The moon is hooked. A held breath; he sleeps on.",
+  haul: "He wakes and hauls the moon down the sky.",
   catch: "The moon comes out of the water. The sky goes dark.",
   wonder: "The moon in his bucket lights his face.",
   dimming: "It starts to fade, like a fish out of water.",
@@ -19,7 +20,8 @@ const STORY: Record<Section, string> = {
   coda: "The last shot mirrors the first.",
 };
 
-const mmss = (s: number) => `0:${String(Math.floor(s)).padStart(2, "0")}`;
+const mmss = (s: number) =>
+  `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
 // A review aid for the score: the passages of the story, with the one
 // playing now lit up.

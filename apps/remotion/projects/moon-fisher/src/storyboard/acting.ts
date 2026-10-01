@@ -15,18 +15,20 @@ import {
 export const move = (t: number, from: number, to: number) =>
   ease(clamp01((t - from) / (to - from)));
 
-// Nodding off over the float: a heavy blink, a nod and a jerk back awake,
-// then his eyes close and his head starts to sink. Each bone moves from
-// fishing (0) toward the doze (1).
+// Nodding off over the float, over three seconds: two heavy blinks, a nod
+// and a jerk back awake, then his eyes close and his head starts to sink.
+// Each bone moves from fishing (0) toward the doze (1).
 const NODDING: Partial<Record<Bone, (t: number) => number>> = {
   head: (t) =>
-    0.5 * move(t, 0.7, 0.95) -
-    0.4 * move(t, 0.95, 1.05) +
-    0.5 * move(t, 1.1, 1.5),
-  chest: (t) => 0.15 * move(t, 1.1, 1.5),
+    0.5 * move(t, 1.4, 1.8) - 0.4 * move(t, 1.8, 1.95) + 0.5 * move(t, 2.2, 3),
+  chest: (t) => 0.15 * move(t, 2.2, 3),
 };
 const noddingEyes = (t: number): Eyes =>
-  (t >= 0.3 && t < 0.55) || t >= 1.1 ? "closed" : "open";
+  (t >= 0.6 && t < 0.9) || (t >= 1.2 && t < 1.5) || t >= 2.1
+    ? "closed"
+    : "open";
+// When the first Z rises, in seconds since he began to nod off.
+export const NODDED_OFF = 2.5;
 export const noddingOff = (t: number): PoseDef =>
   tweenPose(
     POSES.fish,
@@ -50,6 +52,20 @@ export const dozingOff = (t: number): PoseDef =>
     (bone) => DOZING[bone]?.(t) ?? move(t, ...DOZING_ARMS),
     "closed",
   );
+
+// Hauling: thrown back with the rod raised as he heaves (1), leaning in
+// with it lowered to take up the line (0). The rod follows his hands.
+export const hauling = (heave: number) => {
+  const pose = tweenPose(POSES.reel, POSES.heave, () => heave, "wide");
+  return { pose, rod: (pose.angles.hand ?? 0) + 17, bend: 12 + 16 * heave };
+};
+
+// Over each beat he lowers the rod, then heaves it back up to arrive thrown
+// back on the next beat.
+export const heaveOn = (t: number, beat: number) => {
+  const p = (t % beat) / beat;
+  return p < 0.65 ? 1 - move(p, 0, 0.65) : move(p, 0.65, 1);
+};
 
 // A dying light: a few quick dips, on twos, as it fades.
 const FLICKERS = [0.5, 1.25, 1.42, 2.2, 2.62];

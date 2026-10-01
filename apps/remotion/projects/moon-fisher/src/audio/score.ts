@@ -1,5 +1,5 @@
 import * as Tone from "tone";
-import { at, DURATION_SECONDS, EIGHTH_SECONDS } from "../timing";
+import { at, DURATION_SECONDS, EIGHTH_SECONDS, SECTIONS } from "../timing";
 import { createBand, type Band, type InstrumentName } from "./instruments";
 
 // The Moon Fisher's score: a lilting folk tune in 6/8 for clarinet, solo
@@ -259,27 +259,39 @@ function setup(s: Score) {
   ]);
 }
 
-// Turn: the tug, the haul, the catch, the moon in the bucket, its dimming.
+// Turn: the tug, the hooked moon, the haul, the catch, the moon in the
+// bucket, its dimming. Each passage starts where its section does.
 function turn(s: Score) {
-  // Bar 12, the tug: everything stops for two plucks and a low piano jolt.
-  s.play("bassPizz", 12, [
+  const [TUG] = SECTIONS.tug;
+  const [HOOKED] = SECTIONS.hooked;
+  const [HAUL] = SECTIONS.haul;
+  const [CATCH] = SECTIONS.catch;
+  const [WONDER] = SECTIONS.wonder;
+  const [DIM] = SECTIONS.dimming;
+
+  // The tug: everything stops for two plucks and a low piano jolt.
+  s.play("bassPizz", TUG, [
     [0, "D2", 3, 0.95],
     [3, "A1", 3, 0.72],
   ]);
-  s.play("piano", 12, [
+  s.play("piano", TUG, [
     [0, "D2", 1, 0.55],
     [0, "D3", 1, 0.5],
   ]);
 
-  // Bars 13–15, the haul: plucked strings drive upward under a rising violin
-  // and short piano stabs, D minor to B flat to C.
+  // The hooked moon: the music holds its breath over the sea, with only a
+  // low cello note, until he wakes.
+  s.play("cello", HOOKED, [[0, "D2", 6, 0.2]]);
+
+  // The haul: plucked strings drive upward under a rising violin and short
+  // piano stabs, D minor to B flat to C.
   const haul: [string, string[], string][] = [
     ["Dm", ["D3", "F3", "A3", "D4", "A3", "F3"], "D5"],
     ["Bb", ["Bb2", "D3", "F3", "Bb3", "F3", "D3"], "F5"],
     ["C", ["C3", "E3", "G3", "C4", "E4", "G4"], "G5"],
   ];
   haul.forEach(([chord, plucks, high], i) => {
-    const bar = 13 + i;
+    const bar = HAUL + i;
     const v = 0.62 + 0.1 * i;
     s.play(
       "celloPizz",
@@ -304,27 +316,27 @@ function turn(s: Score) {
     );
   });
 
-  // Bar 16, the catch: a harp sweep up through G Lydian as the moon comes out
-  // of the water, and the wonder chord with its raised fourth.
-  s.gliss(at(16), scale("G3", [2, 2, 2, 1, 2, 2, 1], 19), 0.045, 0.3, 0.58);
-  s.play("violins", 16, [
+  // The catch: a harp sweep up through G Lydian as the moon comes out of the
+  // water, and the wonder chord with its raised fourth.
+  s.gliss(at(CATCH), scale("G3", [2, 2, 2, 1, 2, 2, 1], 19), 0.045, 0.3, 0.58);
+  s.play("violins", CATCH, [
     [2, "B4", 10, 0.4],
     [2, "D5", 10, 0.38],
     [2, "F#5", 10, 0.38],
     [2, "C#6", 10, 0.32],
   ]);
-  s.play("piano", 16, [
+  s.play("piano", CATCH, [
     [3, "D6", 1, 0.45],
     [4, "F#6", 1, 0.45],
     [5, "C#7", 2, 0.5],
   ]);
-  s.play("cello", 16, [[0, "G2", 10, 0.34]]);
-  s.play("bassPizz", 16, [[0, "G1", 3, 0.7]]);
+  s.play("cello", CATCH, [[0, "G2", 10, 0.34]]);
+  s.play("bassPizz", CATCH, [[0, "G1", 3, 0.7]]);
 
-  // Bars 17–21, the moon in the bucket: high piano plays the tune like a
-  // music box over soft strings; the violin answers.
-  s.tune("piano", 17, 0, 4, { transpose: 12, velocity: 0.95 });
-  s.tune("piano", 17, 0, 4, { velocity: 0.6 });
+  // The moon in the bucket: high piano plays the tune like a music box over
+  // soft strings; the violin answers.
+  s.tune("piano", WONDER, 0, 4, { transpose: 12, velocity: 0.95 });
+  s.tune("piano", WONDER, 0, 4, { velocity: 0.6 });
   const wonder = ["D", "Bm", "G", "A"];
   const pads: string[][] = [
     ["A4", "D5", "F#5"],
@@ -333,57 +345,62 @@ function turn(s: Score) {
     ["C#5", "E5", "A5"],
   ];
   wonder.forEach((chord, i) => {
-    s.flow(17 + i, chord, 0.36);
-    s.root(17 + i, chord, 0.32);
+    s.flow(WONDER + i, chord, 0.36);
+    s.root(WONDER + i, chord, 0.32);
     s.play(
       "violins",
-      17 + i,
+      WONDER + i,
       pads[i].map((n): Note => [0, n, 6.4, 0.46]),
     );
   });
-  s.play("violin", 21, [
+  s.play("violin", WONDER + 4, [
     [0, "E5", 2, 0.5],
     [2, "F#5", 1, 0.5],
     [3, "E5", 3, 0.48],
   ]);
-  s.flow(21, "A", 0.22);
-  s.root(21, "A", 0.22);
+  s.flow(WONDER + 4, "A", 0.22);
+  s.root(WONDER + 4, "A", 0.22);
 
-  // Bars 22–25, the moon dims: the violin sings the tune in minor while the
-  // piano thins out, ending on an unresolved A7.
-  s.play("violin", 22, [
+  // The moon dims: the violin sings the tune in minor while the piano thins
+  // out, ending on an unresolved A7.
+  s.play("violin", DIM, [
     [0, "A4", 3, 0.76],
     [3, "F5", 2, 0.76],
     [5, "E5", 1, 0.72],
   ]);
-  s.play("violin", 23, [
+  s.play("violin", DIM + 1, [
     [0, "D5", 2, 0.7],
     [2, "E5", 1, 0.68],
     [3, "F5", 3, 0.7],
   ]);
-  s.play("violin", 24, [
+  s.play("violin", DIM + 2, [
     [0, "E5", 3, 0.66],
     [3, "D5", 3, 0.62],
   ]);
-  s.play("violin", 25, [[0, "C#5", 6, 0.6]]);
-  s.flow(22, "Dm", 0.3);
-  s.flow(23, "Bb", 0.26, 4);
-  s.flow(24, "Gm", 0.22, 3);
+  s.play("violin", DIM + 3, [[0, "C#5", 6, 0.6]]);
+  s.flow(DIM, "Dm", 0.3);
+  s.flow(DIM + 1, "Bb", 0.26, 4);
+  s.flow(DIM + 2, "Gm", 0.22, 3);
   s.play(
     "piano",
-    25,
+    DIM + 3,
     CHORDS.A7.chord.map((n): Note => [0, n, 6, 0.18]),
   );
-  s.root(22, "Dm", 0.24);
-  s.root(23, "Bb", 0.22);
-  s.root(24, "Gm", 0.2);
-  s.root(25, "A", 0.18);
+  s.root(DIM, "Dm", 0.24);
+  s.root(DIM + 1, "Bb", 0.22);
+  s.root(DIM + 2, "Gm", 0.2);
+  s.root(DIM + 3, "A", 0.18);
 }
 
 // Payoff: the release, darkness, the moon rising, the tune come home in E,
 // the fish, the cat, and a last lilt of the boat.
 function payoff(s: Score) {
-  // Bar 26, he tips it back: the harp sinks through A7.
+  const [RELEASE] = SECTIONS.release;
+  const [RISE] = SECTIONS.rise;
+  const [FINALE] = SECTIONS.finale;
+  const [CODA] = SECTIONS.coda;
+
+  // He tips it back: the harp sinks through A7.
   const sinking = [
     "A5",
     "G5",
@@ -399,13 +416,13 @@ function payoff(s: Score) {
     "C#3",
     "A2",
   ];
-  s.gliss(at(26), sinking, 0.1, 0.42, 0.14);
-  s.play("cello", 26, [[0, "A2", 6, 0.22]]);
+  s.gliss(at(RELEASE), sinking, 0.1, 0.42, 0.14);
+  s.play("cello", RELEASE, [[0, "A2", 6, 0.22]]);
 
-  // Bar 27 is silent but for the sea.
+  // The darkness is silent but for the sea.
 
-  // Bars 28–30, the moon rises: C, D and B lead home to E; the clarinet
-  // reaches up the tune's opening sixth twice, then runs up into the key.
+  // The moon rises: C, D and B lead home to E; the clarinet reaches up the
+  // tune's opening sixth twice, then runs up into the key.
   const rise: [string, Note[], string][] = [
     [
       "C",
@@ -434,7 +451,7 @@ function payoff(s: Score) {
     ],
   ];
   rise.forEach(([chord, reach, held], i) => {
-    const bar = 28 + i;
+    const bar = RISE + i;
     s.play("clarinet", bar, reach, { velocity: 0.6 + 0.08 * i });
     s.play("violin", bar, [[0, held, 6, 0.42 + 0.07 * i]]);
     s.flow(bar, chord, 0.32 + 0.08 * i);
@@ -449,117 +466,127 @@ function payoff(s: Score) {
     );
   });
 
-  // Bars 31–34, home in E: the tune's second half, clarinet and the violin an
-  // octave above it, over the piano's bounce.
-  s.tune("clarinet", 31, 4, 8, { transpose: 2, velocity: 0.98 });
-  s.tune("violin", 31, 4, 8, { transpose: 14, velocity: 0.7 });
+  // Home in E: the tune's second half, clarinet and the violin an octave
+  // above it, over the piano's bounce.
+  s.tune("clarinet", FINALE, 4, 8, { transpose: 2, velocity: 0.98 });
+  s.tune("violin", FINALE, 4, 8, { transpose: 14, velocity: 0.7 });
   const home = ["E", "C#m", "A B", "E"];
   home.forEach((chord, i) => {
     const [first, second] = chord.split(" ");
     if (second) {
-      s.bounce(31 + i, first, 0.7, 0, 3);
-      s.bounce(31 + i, second, 0.7, 3, 3);
-      s.root(31 + i, first, 0.46, 3);
-      s.root(31 + i, second, 0.46, 3, 3);
+      s.bounce(FINALE + i, first, 0.7, 0, 3);
+      s.bounce(FINALE + i, second, 0.7, 3, 3);
+      s.root(FINALE + i, first, 0.46, 3);
+      s.root(FINALE + i, second, 0.46, 3, 3);
     } else {
-      s.bounce(31 + i, first, 0.7);
-      s.root(31 + i, first, 0.46);
+      s.bounce(FINALE + i, first, 0.7);
+      s.root(FINALE + i, first, 0.46);
     }
-    s.pulse(31 + i, first, 0.76, !second);
+    s.pulse(FINALE + i, first, 0.76, !second);
     s.play(
       "violins",
-      31 + i,
+      FINALE + i,
       CHORDS[first].chord
         .slice(1)
         .map((n): Note => [0, shift(n, 12), 6.2, 0.34]),
     );
   });
 
-  // Bars 35–36, the tune's last phrase once more, a little softer. A fish
-  // leaps up the B chord and lands on the home note; the cat has it.
-  s.tune("clarinet", 35, 6, 8, { transpose: 2, velocity: 0.82 });
-  s.tune("violin", 35, 6, 8, { transpose: 14, velocity: 0.56 });
-  s.bounce(35, "A", 0.6, 0, 3);
-  s.bounce(35, "B", 0.6, 3, 3);
-  s.bounce(36, "E", 0.52);
-  s.play("bassPizz", 35, [
+  // The finale's last two bars, the tune's last phrase once more, a little
+  // softer. A fish leaps up the B chord and lands on the home note; the cat
+  // has it.
+  const GIFT = FINALE + 4;
+  s.tune("clarinet", GIFT, 6, 8, { transpose: 2, velocity: 0.82 });
+  s.tune("violin", GIFT, 6, 8, { transpose: 14, velocity: 0.56 });
+  s.bounce(GIFT, "A", 0.6, 0, 3);
+  s.bounce(GIFT, "B", 0.6, 3, 3);
+  s.bounce(GIFT + 1, "E", 0.52);
+  s.play("bassPizz", GIFT, [
     [0, "A1", 3, 0.64],
     [3, "B1", 3, 0.62],
   ]);
-  s.pulse(36, "E", 0.56);
-  s.root(35, "A", 0.4, 3);
-  s.root(35, "B", 0.4, 3, 3);
-  s.root(36, "E", 0.38);
-  s.play("violins", 35, [
+  s.pulse(GIFT + 1, "E", 0.56);
+  s.root(GIFT, "A", 0.4, 3);
+  s.root(GIFT, "B", 0.4, 3, 3);
+  s.root(GIFT + 1, "E", 0.38);
+  s.play("violins", GIFT, [
     [0, "C#5", 3, 0.3],
     [0, "E5", 3, 0.3],
     [3, "D#5", 3, 0.3],
     [3, "F#5", 3, 0.3],
   ]);
-  s.play("violins", 36, [
+  s.play("violins", GIFT + 1, [
     [0, "B4", 6, 0.28],
     [0, "E5", 6, 0.28],
   ]);
-  s.play("piano", 35, [
+  s.play("piano", GIFT, [
     [3, "B5", 0.5, 0.5],
     [3.5, "D#6", 0.5, 0.52],
     [4, "F#6", 0.5, 0.54],
     [4.5, "B6", 1.5, 0.56],
   ]);
-  s.play("celloPizz", 36, [[0, "E3", 1, 0.6]]);
+  s.play("celloPizz", GIFT + 1, [[0, "E3", 1, 0.6]]);
 
-  // Bars 37–40, the coda: the piano's lilt carries on, quieter; the tune
-  // reaches up once more and settles; a plucked ta-dum and a last high note
-  // like a star.
-  s.bounce(37, "E", 0.42);
-  s.bounce(38, "A", 0.36);
-  s.pulse(37, "E", 0.45);
-  s.pulse(38, "A", 0.4);
-  s.root(37, "E", 0.3);
-  s.root(38, "A", 0.26);
-  s.play("clarinet", 37, [
+  // The coda: the piano's lilt carries on, quieter; the tune reaches up once
+  // more and settles; a plucked ta-dum and a last high note like a star.
+  s.bounce(CODA, "E", 0.42);
+  s.bounce(CODA + 1, "A", 0.36);
+  s.pulse(CODA, "E", 0.45);
+  s.pulse(CODA + 1, "A", 0.4);
+  s.root(CODA, "E", 0.3);
+  s.root(CODA + 1, "A", 0.26);
+  s.play("clarinet", CODA, [
     [0, "B4", 3, 0.56],
     [3, "G#5", 3, 0.54],
   ]);
-  s.play("clarinet", 38, [
+  s.play("clarinet", CODA + 1, [
     [0, "F#5", 2, 0.48],
     [2, "E5", 4, 0.46],
   ]);
   s.play(
     "piano",
-    39,
+    CODA + 2,
     CHORDS.B.chord.map((n): Note => [0, n, 2, 0.24]),
   );
-  s.play("celloPizz", 39, [
+  s.play("celloPizz", CODA + 2, [
     [0, "B2", 1, 0.5],
     [3, "E3", 1, 0.56],
   ]);
-  s.play("piano", 39, [
+  s.play("piano", CODA + 2, [
     [3, "E2", 9, 0.32],
     [3.2, "B2", 9, 0.28],
     [3.4, "E3", 9, 0.28],
     [3.6, "G#3", 9, 0.26],
     [3.8, "B3", 9, 0.26],
   ]);
-  s.play("violin", 39, [[3, "B5", 9, 0.3]]);
-  s.play("cello", 39, [[3, "E2", 9, 0.24]]);
-  s.play("piano", 40, [[1, "E6", 5, 0.28]]);
+  s.play("violin", CODA + 2, [[3, "B5", 9, 0.3]]);
+  s.play("cello", CODA + 2, [[3, "E2", 9, 0.24]]);
+  s.play("piano", CODA + 3, [[1, "E6", 5, 0.28]]);
 }
 
-// The sea: quiet under the music, alone in the silent bar, gone at the end.
+// The sea: quiet under the music, rising while the hooked moon holds its
+// breath, alone in the darkness, gone at the end.
 function sea(band: Band) {
   const level = band.sea.gain;
   const quiet = 0.007;
   const alone = 0.02;
+  const [HOOKED, HAUL] = SECTIONS.hooked;
+  const [RELEASE, DARKNESS] = SECTIONS.release;
+  const [RISE] = SECTIONS.rise;
+  const [CODA] = SECTIONS.coda;
   level.setValueAtTime(0, 0);
   level.linearRampToValueAtTime(alone, 1);
   level.linearRampToValueAtTime(quiet, at(3));
-  level.setValueAtTime(quiet, at(26));
-  level.linearRampToValueAtTime(alone, at(27));
-  level.setValueAtTime(alone, at(28));
-  level.linearRampToValueAtTime(quiet, at(29));
-  level.setValueAtTime(quiet, at(38));
-  level.linearRampToValueAtTime(alone * 0.8, at(39));
+  level.setValueAtTime(quiet, at(HOOKED));
+  level.linearRampToValueAtTime(alone, at(HOOKED, 2));
+  level.setValueAtTime(alone, at(HAUL) - 0.2);
+  level.linearRampToValueAtTime(quiet, at(HAUL));
+  level.setValueAtTime(quiet, at(RELEASE));
+  level.linearRampToValueAtTime(alone, at(DARKNESS));
+  level.setValueAtTime(alone, at(RISE));
+  level.linearRampToValueAtTime(quiet, at(RISE + 1));
+  level.setValueAtTime(quiet, at(CODA + 1));
+  level.linearRampToValueAtTime(alone * 0.8, at(CODA + 2));
   level.linearRampToValueAtTime(0, DURATION_SECONDS);
 }
 

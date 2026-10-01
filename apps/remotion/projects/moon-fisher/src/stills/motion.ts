@@ -20,11 +20,11 @@ const BODY = 12;
 export const startleProgress = (bone: Bone, f: number) =>
   ease(clamp01((f - (DELAY[bone] ?? ARMS)) / (DURATION[bone] ?? BODY)));
 
-// Jolting awake from the doze into the haul.
-export const startle = (f: number): PoseDef =>
+// Jolting awake from the doze into a pose of the haul.
+export const startle = (f: number, into: PoseDef = POSES.haul): PoseDef =>
   tweenPose(
     POSES.doze,
-    POSES.haul,
+    into,
     (bone) => startleProgress(bone, f),
     f >= 0 ? "wide" : "closed",
   );

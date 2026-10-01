@@ -5,7 +5,7 @@
 import { execFileSync } from "node:child_process";
 import { copyFileSync, existsSync, mkdirSync } from "node:fs";
 
-const SCORE = "renders/score/v003/score.wav";
+const SCORE = "renders/score/v004/score.wav";
 
 const version = process.argv[2];
 if (!version) throw new Error("Usage: npm run animatic -- v001");

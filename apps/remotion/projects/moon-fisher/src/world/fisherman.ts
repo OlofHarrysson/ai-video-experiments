@@ -95,6 +95,40 @@ export const POSES = {
     },
     eyes: "wide",
   },
+  // The haul's two extremes: thrown back with the rod raised high against
+  // the pull, and leaning in with it lowered to take up the line.
+  heave: {
+    angles: {
+      spine: -104,
+      chest: -132,
+      head: -80,
+      upperArm: 10,
+      forearm: -82,
+      hand: -92,
+      farUpperArm: 14,
+      farForearm: -78,
+      farHand: -92,
+      thigh: -22,
+      shin: 62,
+    },
+    eyes: "wide",
+  },
+  reel: {
+    angles: {
+      spine: -86,
+      chest: -102,
+      head: -58,
+      upperArm: 52,
+      forearm: -38,
+      hand: -48,
+      farUpperArm: 56,
+      farForearm: -34,
+      farHand: -48,
+      thigh: -16,
+      shin: 66,
+    },
+    eyes: "wide",
+  },
   // Leaning out over the gunwale, tipping the bucket.
   tip: {
     angles: {
