@@ -59,6 +59,9 @@ export type PoseDef = {
   // In the rest pose he holds the bucket by both rims: this hand is drawn on
   // the prop instead of at the end of the far arm, which stays hidden.
   farHandOnProp?: Vec2;
+  // How far he smiles, 0 to 1: his cheek rises, a laugh line creases above
+  // the mustache, and past two thirds his open eyes narrow to happy arcs.
+  smile?: number;
 };
 
 export const POSES = {
@@ -284,6 +287,18 @@ const MUSTACHE: Oval[] = [
   [36.5, -55.5, 2.2, 1.6],
 ];
 const EYE: Vec2 = [31, -63.8];
+// A smile's crease from the side of the nose back above the mustache.
+const SMILE_LINES: { bone: Bone; pts: Vec2[]; steps: number }[] = [
+  {
+    bone: "head",
+    pts: [
+      [35.2, -59.6],
+      [34, -58.7],
+      [32.6, -58.5],
+    ],
+    steps: -1,
+  },
+];
 const STROKES: { bone: Bone; pts: Vec2[]; steps: number }[] = [
   // Coat folds down the back, at the elbow, across the lap and the closure.
   {
@@ -338,7 +353,7 @@ const STROKES: { bone: Bone; pts: Vec2[]; steps: number }[] = [
   },
   { bone: "spine", pts: [[29, -31]], steps: 2 },
   { bone: "spine", pts: [[30.3, -21]], steps: 2 },
-  // The hat's seam, beard strands and the bag under the eye.
+  // The hat's seam and beard strands.
   {
     bone: "head",
     pts: [
@@ -372,21 +387,23 @@ const STROKES: { bone: Bone; pts: Vec2[]; steps: number }[] = [
     ],
     steps: -1,
   },
-  {
-    bone: "head",
-    pts: [
-      [29.3, -61.8],
-      [31.8, -61.6],
-    ],
-    steps: -1,
-  },
 ];
+// The bag under his eye, which a smile's cheek pushes away.
+const EYE_BAG: { bone: Bone; pts: Vec2[]; steps: number } = {
+  bone: "head",
+  pts: [
+    [29.3, -61.8],
+    [31.8, -61.6],
+  ],
+  steps: -1,
+};
 
 // The old fisherman: yellow oilskins and sou'wester, white beard. The coat,
 // each arm and each hand are grown as single pieces, so joints shade as one
 // surface, and the skeleton bends them into any pose.
 export const fisherman = ({ x, y, pose, facing }: FishermanProps): Figure => {
   const def: PoseDef = typeof pose === "string" ? POSES[pose] : pose;
+  const smile = def.smile ?? 0;
   const frames = poseRig(RIG, [x, y], def.angles as Angles);
   const restAt = (bone: Bone): Frame => RIG.rest[bone];
   const on = (bone: Bone, s: Shape): Shape =>
@@ -476,6 +493,24 @@ export const fisherman = ({ x, y, pose, facing }: FishermanProps): Figure => {
       mat: "skin",
       bevel: 6,
       lift: 0.08,
+      // A smile lifts the cheek under the eye.
+      marks:
+        smile > 0.15
+          ? [
+              {
+                shape: on(
+                  "head",
+                  ellipse(
+                    31.6,
+                    -60.2 - 0.6 * smile,
+                    1 + 1.5 * smile,
+                    0.8 + smile,
+                  ),
+                ),
+                mat: "cheek",
+              },
+            ]
+          : [],
     },
     { shape: on("head", poly(FLAP)), mat: "oilskin", bevel: 2, shadow: true },
     {
@@ -484,7 +519,10 @@ export const fisherman = ({ x, y, pose, facing }: FishermanProps): Figure => {
       shadow: true,
     },
     ...BEARD.map(puff),
-    ...MUSTACHE.map(puff),
+    // The mustache lifts at the back as he smiles.
+    ...MUSTACHE.map(([mx, my, rx, ry], i) =>
+      puff([mx, my - (i === 0 ? 0.7 : 0.3) * smile, rx, ry]),
+    ),
     {
       shape: on("head", ellipse(36.5, -60.5, 3.5, 3.2)),
       mat: "skin",
@@ -568,17 +606,27 @@ export const fisherman = ({ x, y, pose, facing }: FishermanProps): Figure => {
   const front: Part[] = [...propHand, nearHand];
 
   const [ex, ey] = point("head", EYE);
+  const happy = def.eyes === "open" && smile > 0.65;
   const features: Feature[] =
     def.eyes === "closed"
       ? [
           { x: ex, y: ey, c: C.umber1 },
           { x: ex, y: ey, c: C.umber1, dx: -1 },
         ]
-      : [
-          { x: ex, y: ey, c: C.ink },
-          { x: ex, y: ey, c: C.silver4, dx: 1 },
-        ];
-  const strokes: Stroke[] = STROKES.map((s) => ({
+      : happy
+        ? [
+            { x: ex, y: ey, c: C.umber1, dx: -1 },
+            { x: ex, y: ey, c: C.umber1, dy: -1 },
+            { x: ex, y: ey, c: C.umber1, dx: 1 },
+          ]
+        : [
+            { x: ex, y: ey, c: C.ink },
+            { x: ex, y: ey, c: C.silver4, dx: 1 },
+          ];
+  const strokes: Stroke[] = [
+    ...STROKES,
+    ...(smile > 0.35 ? SMILE_LINES : [EYE_BAG]),
+  ].map((s) => ({
     pts: s.pts.map((p) => point(s.bone, p)),
     steps: s.steps,
   }));

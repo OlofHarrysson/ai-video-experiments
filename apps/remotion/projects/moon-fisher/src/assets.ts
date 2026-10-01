@@ -40,16 +40,16 @@ export const ASSETS: Record<AssetName, Asset> = {
   fisherman: {
     name: "Fisherman",
     kind: "Character",
-    api: "fisherman({ x, y, pose, facing })",
+    api: "fisherman({ x, y, pose: { angles, eyes, smile }, facing })",
     status: "rough",
-    next: "Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17); he blinks. Needs a smile (11), face detail for his close-ups (04, 11), and a reel his hand can wind.",
+    next: "Poses: fish, doze, haul, heave, reel, holdBucket, lookUp, tip, with tweens for nodding off (04, 05), the waking jolt and the haul's pumps (08, 09) and looking up (14, 17). He blinks, and smiles: a rising cheek, a laugh line and happy eyes (11, 19). Needs a reel his hand can wind.",
   },
   cat: {
     name: "Cat",
     kind: "Character",
-    api: "cat({ x, y, pose, facing, look, paw })",
+    api: "cat({ x, y, pose, facing, look, paw, lean }); .mouth",
     status: "rough",
-    next: "One pose, peer, with a head tilt and a front paw that reaches out (12, 19). Needs a pounce and a fish in its mouth (19, 20), a startle, and a tail that moves.",
+    next: "One pose, peer, with a head tilt, a reaching paw (12, 19), a lean for the pounce (19) and a mouth that carries the fish (20). Needs a tail that moves and its own crouch, rather than the sitting pose tipped forward.",
   },
   moon: {
     name: "Moon",
@@ -84,7 +84,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Prop",
     api: "fish({ at, angle, size })",
     status: "rough",
-    next: "A tapering silver body with a dark back, forked tail, dorsal and belly fins, a gill line and an eye; it leaps in arcs (18, 19) and flops on the deck (19). Needs a sheen that catches the moon as it leaps, and to sit in the cat's mouth (20).",
+    next: "A tapering silver body with a dark back, forked tail, fins, a gill line and an eye; it leaps in arcs (18, 19), flops on the deck (19) and hangs from the cat's mouth (20). Needs a sheen that catches the moon as it leaps.",
   },
   boat: {
     name: "Boat",

@@ -162,9 +162,13 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   const glow = spec.glow ?? 1;
 
   // He blinks every five seconds or so while his eyes are open.
-  const pose =
+  const pose: PoseDef =
     typeof spec.fisherman === "string" ? POSES[spec.fisherman] : spec.fisherman;
-  const blinks = pose.eyes === "open" && step % 41 >= 19 && step % 41 < 21;
+  const blinks =
+    pose.eyes === "open" &&
+    (pose.smile ?? 0) < 0.65 &&
+    step % 41 >= 19 &&
+    step % 41 < 21;
   const man = fisherman({
     x: SEAT[0],
     y: SEAT[1],

@@ -14,6 +14,7 @@ import {
 } from "../stills/poses";
 import { at, BAR_SECONDS, FPS, SECTIONS } from "../timing";
 import { moonCenter, MOON_RADIUS } from "../world/bucket";
+import { cat as catFigure, type CatProps } from "../world/cat";
 import { fisherman, POSES } from "../world/fisherman";
 import {
   dozingOff,
@@ -69,7 +70,6 @@ const FACE: Camera = { x: 128, y: 298, zoom: 3.2, sx: 150, sy: 230 };
 const CAT: Camera = { x: 192, y: 322, zoom: 3.4, sx: 130, sy: 250 };
 // The cat on the foredeck with its fish.
 const PRIZE: Camera = { x: 200, y: 330, zoom: 3.2, sx: 140, sy: 280 };
-const CAT_FACE: Vec2 = [197, 320];
 // His face over the rod, with room above for the Z's.
 const NOD: Camera = { x: 132, y: 300, zoom: 2.9, sx: 128, sy: 290 };
 // The bow and the open horizon past it, with the water in front where the
@@ -252,6 +252,24 @@ const FINALE_LEAPS: Leap[] = [
   finaleLeap([170, 440], [210, 446], 36, 4.3),
   finaleLeap([100, 450], [136, 456], 34, 5),
 ];
+
+// The cat springs from its seat onto the fish: a crouch as the fish comes
+// down, a hop forward with a paw out, and a landing with the paw pinning it.
+// `t` is seconds into the shot; `since` seconds since the fish landed.
+const POUNCE = { from: 208, to: 199, hop: 0.25 };
+const pouncing = (t: number, since: number): CatProps => ({
+  ...PEER_LEFT,
+  x: lerp(POUNCE.from, POUNCE.to, move(since, 0, POUNCE.hop)),
+  y: PEER_LEFT.y - 4 * Math.sin(Math.PI * clamp01(since / POUNCE.hop)),
+  look: 25 * move(t, 0.6, 0.9) - 55 * move(since, -0.2, POUNCE.hop),
+  lean:
+    -8 * move(since, -0.2, 0) +
+    33 * move(since, 0, 0.15) -
+    13 * move(since, 0.15, 0.4),
+  paw: move(since, 0, 0.12) - 0.3 * move(since, POUNCE.hop, POUNCE.hop + 0.25),
+});
+// In the last shot the cat lifts its fish on the coda's second note.
+const LIFT = 0.75;
 
 // The gift: a fish clears the gunwale and lands on the foredeck by the cat.
 const GIFT: Leap = {
@@ -533,8 +551,12 @@ export const SHOTS: Shot[] = [
     title: "Wonder",
     action: "His face in the moonlight; a slow smile.",
     sound: "Wonder.",
-    spec: () => ({ ...KEY_IMAGE, camera: FACE }),
-    panel: 1.5,
+    spec: (t) => ({
+      ...KEY_IMAGE,
+      camera: FACE,
+      fisherman: { ...POSES.holdBucket, smile: move(t, 0.6, 2.2) },
+    }),
+    panel: 2.4,
   },
   {
     id: "12",
@@ -678,28 +700,30 @@ export const SHOTS: Shot[] = [
     bars: [36, 38],
     framing: "Medium",
     title: "A gift",
-    action: "One fish leaps into the boat; the cat is on it at once.",
+    action:
+      "One fish leaps into the boat. The cat crouches, pounces and pins it with a paw; he smiles.",
     sound: "The last phrase again. A flop, a happy mew.",
     spec: (t) => {
       const lands = GIFT.start + GIFT.duration;
-      // It flops on the deck for a moment, then lies still.
-      const flop = t < lands + 0.8 ? (Math.floor(t * 6) % 2 ? 20 : -20) : 0;
+      const pinned = lands + POUNCE.hop;
+      // It flops on the deck until the cat lands on it.
+      const flop = t < pinned ? (Math.floor(t * 6) % 2 ? 20 : -20) : 0;
       return {
         ...fishing(MEDIUM, REFLECTION[0], MOON_HEIGHT.medium),
+        // He smiles at the cat's luck.
+        fisherman: {
+          ...POSES.fish,
+          smile: move(t, pinned + 0.2, pinned + 0.9),
+        },
         fish:
           t < lands
             ? [GIFT].flatMap((l) => leaping(l, t) ?? [])
             : [{ at: GIFT.to, angle: 180 + flop, size: GIFT.size }],
         splashes: leapSplashes(GIFT, t, 3, false),
-        // The cat watches it fly in, then puts a paw on its prize.
-        cat: {
-          ...PEER_LEFT,
-          look: 25 * move(t, 0.6, 0.9) - 40 * move(t, 1.4, 1.7),
-          paw: 0.7 * move(t, lands + 0.1, lands + 0.4),
-        },
+        cat: pouncing(t, t - lands),
       };
     },
-    panel: 1.3,
+    panel: 1.7,
   },
   {
     id: "20",
@@ -707,26 +731,45 @@ export const SHOTS: Shot[] = [
     framing: "Close",
     title: "The cat's prize",
     action:
-      "The cat holds its fish down and looks up, pleased with itself. An iris closes on it.",
+      "On the ta-dum the cat bites its fish and lifts its head, the fish dangling from its mouth. An iris closes on it.",
     sound: "The coda: a plucked ta-dum and a last high note.",
-    spec: (t) => ({
-      ...fishing(PRIZE, REFLECTION[0], MOON_HEIGHT.medium),
-      fish: [{ at: GIFT.to, angle: 180, size: GIFT.size }],
-      cat: {
+    spec: (t) => {
+      const lifted = t >= LIFT;
+      const pose: CatProps = {
         ...PEER_LEFT,
-        look: -15 + 30 * move(t, 0.75, 1),
-        paw: 0.7,
-      },
-      // The iris pauses on its face before it shuts.
-      iris: {
-        at: CAT_FACE,
-        radius:
-          t < 2.2
-            ? lerp(300, 42, move(t, 1.4, 2))
-            : lerp(42, 0, move(t, 2.2, 2.6)),
-      },
-    }),
-    panel: 1.2,
+        x: POUNCE.to,
+        // It bends to bite, then snaps its head up on the beat.
+        look: lifted
+          ? lerp(-38, 20, move(t, LIFT, LIFT + 0.15))
+          : lerp(-30, -38, move(t, 0.3, 0.7)),
+        lean: lerp(12, 0, move(t, LIFT, LIFT + 0.2)),
+        paw: lifted ? 0 : 0.7,
+      };
+      const [mx, my] = catFigure(pose).mouth;
+      // The fish hangs by its head from the cat's mouth and swings to rest.
+      const settle = t - LIFT;
+      const swing = lifted
+        ? 16 * Math.sin(settle * 11) * Math.exp(-settle * 3)
+        : 0;
+      return {
+        ...fishing(PRIZE, REFLECTION[0], MOON_HEIGHT.medium),
+        fish: [
+          lifted
+            ? { at: [mx + 0.5, my + 5.5], angle: -95 + swing, size: GIFT.size }
+            : { at: GIFT.to, angle: 180, size: GIFT.size },
+        ],
+        cat: pose,
+        // The iris pauses on its face before it shuts.
+        iris: {
+          at: [mx + 3, my - 2],
+          radius:
+            t < 2.2
+              ? lerp(300, 46, move(t, 1.4, 2))
+              : lerp(46, 0, move(t, 2.2, 2.6)),
+        },
+      };
+    },
+    panel: 1.3,
   },
 ];
 

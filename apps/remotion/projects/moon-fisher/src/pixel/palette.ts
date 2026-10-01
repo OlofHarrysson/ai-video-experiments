@@ -62,6 +62,8 @@ export const RAMPS = {
   oilskin: [C.umber0, C.umber1, C.umber2, C.ochre1, C.ochre2, C.ochre3],
   wood: [C.ink, C.umber0, C.umber1, C.umber2, C.umber3],
   skin: [C.umber0, C.umber1, C.skin1, C.skin2, C.skin3],
+  // A smiling cheek: the face's own skin, one step brighter.
+  cheek: [C.umber1, C.skin1, C.skin2, C.skin3, C.skin3],
   beard: [
     C.night2,
     C.night4,

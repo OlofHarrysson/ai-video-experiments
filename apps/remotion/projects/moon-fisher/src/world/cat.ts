@@ -17,6 +17,8 @@ export type CatProps = {
   look?: number;
   // How far the front paw reaches out, 0 to 1.
   paw?: number;
+  // Degrees the whole cat leans forward over its front paws, as in a pounce.
+  lean?: number;
 };
 
 export type CatFigure = {
@@ -25,6 +27,8 @@ export type CatFigure = {
   strokes: Stroke[];
   // Fine lines drawn after lighting, in the moon's color.
   whiskers: (readonly [Vec2, Vec2])[];
+  // Where it would hold something in its mouth, in world units.
+  mouth: Vec2;
 };
 
 type Oval = [x: number, y: number, rx: number, ry: number, rot?: number];
@@ -47,6 +51,7 @@ type Pose = {
   headStripes: Limb[];
   eye: Vec2;
   nose: Vec2;
+  mouth: Vec2;
   whiskers: [Vec2, Vec2][];
   legGap: Vec2[];
 };
@@ -104,6 +109,7 @@ const POSES: Record<CatPose, Pose> = {
     ],
     eye: [-12.6, -25.4],
     nose: [-16.2, -23.4],
+    mouth: [-13.4, -20.6],
     whiskers: [
       [
         [-15.5, -22],
@@ -121,37 +127,55 @@ const POSES: Record<CatPose, Pose> = {
   },
 };
 
-// The head turns about the top of the neck, carrying its face with it.
+// Turning part of a pose about a pivot, by degrees that lift the front of
+// a left-facing cat. The head turns about the top of the neck, carrying its
+// face with it; the whole cat leans about its front paws.
 const NECK_TOP: Vec2 = [-7, -20];
+const FRONT_PAWS: Vec2 = [-5, 0];
 
-const tiltHead = (p: Pose, degrees: number): Pose => {
+const turnPose = (
+  p: Pose,
+  pivot: Vec2,
+  degrees: number,
+  whole: boolean,
+): Pose => {
   if (!degrees) return p;
   const a = (degrees * Math.PI) / 180;
   const [cos, sin] = [Math.cos(a), Math.sin(a)];
   const turn = ([x, y]: Vec2): Vec2 => {
-    const [dx, dy] = [x - NECK_TOP[0], y - NECK_TOP[1]];
-    return [
-      NECK_TOP[0] + dx * cos - dy * sin,
-      NECK_TOP[1] + dx * sin + dy * cos,
-    ];
+    const [dx, dy] = [x - pivot[0], y - pivot[1]];
+    return [pivot[0] + dx * cos - dy * sin, pivot[1] + dx * sin + dy * cos];
   };
   const oval = ([x, y, rx, ry, rot = 0]: Oval): Oval => {
     const [tx, ty] = turn([x, y]);
     return [tx, ty, rx, ry, rot + a];
   };
   const limb = ([u, v, r]: Limb): Limb => [turn(u), turn(v), r];
-  return {
-    ...p,
+  const head = {
     head: oval(p.head),
     muzzle: oval(p.muzzle),
     cheek: oval(p.cheek),
-    ears: [p.ears[0].map(turn), p.ears[1].map(turn)],
+    ears: [p.ears[0].map(turn), p.ears[1].map(turn)] as [Vec2[], Vec2[]],
     innerEar: p.innerEar.map(turn),
     muzzlePatch: oval(p.muzzlePatch),
     headStripes: p.headStripes.map(limb),
     eye: turn(p.eye),
     nose: turn(p.nose),
+    mouth: turn(p.mouth),
     whiskers: p.whiskers.map(([u, v]): [Vec2, Vec2] => [turn(u), turn(v)]),
+  };
+  if (!whole) return { ...p, ...head };
+  return {
+    ...p,
+    ...head,
+    haunch: oval(p.haunch),
+    chest: oval(p.chest),
+    neck: oval(p.neck),
+    legs: p.legs.map(limb),
+    tail: p.tail.map(turn),
+    chestPatch: oval(p.chestPatch),
+    bodyStripes: p.bodyStripes.map(limb),
+    legGap: p.legGap.map(turn),
   };
 };
 
@@ -197,8 +221,14 @@ export const cat = ({
   facing,
   look = 0,
   paw = 0,
+  lean = 0,
 }: CatProps): CatFigure => {
-  const p = reachPaw(tiltHead(POSES[pose], look), paw);
+  const p = turnPose(
+    reachPaw(turnPose(POSES[pose], NECK_TOP, look, false), paw),
+    FRONT_PAWS,
+    -lean,
+    true,
+  );
   const at = ([dx, dy]: Vec2): Vec2 => [x + dx, y + dy];
   const oval = ([ox, oy, rx, ry, rot]: Oval) =>
     ellipse(...at([ox, oy]), rx, ry, rot ?? 0);
@@ -268,7 +298,9 @@ export const cat = ({
   const strokes: Stroke[] =
     paw < 0.3 ? [{ pts: p.legGap.map(at), steps: -1 }] : [];
   const lines = p.whiskers.map(([a, b]) => [at(a), at(b)] as const);
-  if (facing === "left") return { body, features, strokes, whiskers: lines };
+  const mouth = at(p.mouth);
+  if (facing === "left")
+    return { body, features, strokes, whiskers: lines, mouth };
   const fx = (v: Vec2): Vec2 => [2 * x - v[0], v[1]];
   return {
     body: flipParts(body, x),
@@ -279,5 +311,6 @@ export const cat = ({
     })),
     strokes: flipStrokes(strokes, x),
     whiskers: lines.map(([a, b]) => [fx(a), fx(b)] as const),
+    mouth: fx(mouth),
   };
 };
