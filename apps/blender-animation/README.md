@@ -5,5 +5,8 @@ Scripted authoring in Blender, with persistent meshes, armatures, pose keys, and
 - [Playful puppy](projects/playful-puppy/README.md): first three-second bow and hop, created through Blender Python.
 - [Puppy in 2D](projects/puppy-2d/README.md): painted mesh rig, folded-leg and eye drawing replacements, shared paws, and the same three-second action.
 - [A Little Brave](projects/a-little-brave/README.md): two rigged 2D dogs, a 16-second park scene, reusable character assets, authored contacts and an original score.
+- [Side by Side](projects/clay-dance/README.md): two original clay puppets performing a groove, side step and robot routine, with reusable pose, contact-check and rendering tools.
+
+Shared assistant-operated mechanics for the clay study live in [tools/](tools/README.md).
 
 Blender 5.2.1 LTS was installed using `brew install --cask blender` on 2026-09-09. Local command: `/opt/homebrew/bin/blender`; app: `/Applications/Blender.app`. Rendering was tested on Apple M4 Metal.
