@@ -91,7 +91,7 @@ export type SceneSpec = {
   // Something bright caught on the hook, glowing in the water; strength
   // from 0 to 1.
   catchGlow?: { at: Vec2; strength: number };
-  splash?: { at: Vec2; size: number };
+  splashes?: { at: Vec2; size: number }[];
   fish?: FishProps[];
   // Light spreading under the sea, from 0 to 1.
   seaGlow?: { at: Vec2; radius: number; strength: number };
@@ -337,9 +337,9 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   drawFeatures(pix, man.features);
   if (kitty) {
     as("cat");
-    // The cat blinks once in the loop: its eye closes to a line of fur.
+    // The cat blinks every four seconds: its eye closes to a line of fur.
     const [eye, pupil, nose] = kitty.features;
-    const blinking = step === 21 || step === 22;
+    const blinking = step % 32 === 21 || step % 32 === 22;
     drawFeatures(pix, [
       ...(blinking ? [{ ...eye, c: C.umber1 }] : [eye, pupil]),
       nose,
@@ -390,14 +390,10 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       STYLE,
     );
   }
-  if (spec.splash) {
-    as("splash");
-    drawSplash(pix, {
-      at: spec.splash.at,
-      size: spec.splash.size,
-      seed: `splash-${step}`,
-    });
-  }
+  as("splash");
+  spec.splashes?.forEach(({ at, size }, i) =>
+    drawSplash(pix, { at, size, seed: `splash-${i}-${step}` }),
+  );
   if (spec.catchGlow) {
     as("reflection");
     const { at, strength } = spec.catchGlow;

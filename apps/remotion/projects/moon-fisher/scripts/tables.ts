@@ -8,7 +8,7 @@ import { ASSETS, SOUND_CUES, type AssetName } from "../src/assets";
 import { DESIGN_WIDTH, FILM } from "../src/pixel/density";
 import { Pix } from "../src/pixel/pix";
 import { drawBoatScene } from "../src/stills/boatScene";
-import { SHOTS, shotSeconds, shotStart } from "../src/storyboard/shots";
+import { filmAt, SHOTS, shotSeconds, shotStart } from "../src/storyboard/shots";
 import { FPS } from "../src/timing";
 
 const README = "README.md";
@@ -64,7 +64,8 @@ for (const shot of SHOTS) {
   for (let i = 0; i < samples; i++) {
     const t = (i + 0.5) / RATE;
     const pix = new Pix(FILM.w, FILM.h, FILM.w / DESIGN_WIDTH);
-    drawBoatScene(pix, shot.spec(t, shotStart(shot) + t), Math.round(t * FPS));
+    const at = Math.round((shotStart(shot) + t) * FPS);
+    drawBoatScene(pix, filmAt(at).spec, at);
     for (const [name, pixels] of pix.assetPixels()) {
       if (!(name in ASSETS)) throw new Error(`${name} is not in the register`);
       if (pixels < VISIBLE) continue;

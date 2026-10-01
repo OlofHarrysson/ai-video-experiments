@@ -1,9 +1,9 @@
-import { POSES, tweenPose, type Bone } from "../world/fisherman";
+import { POSES, tweenPose, type Bone, type PoseDef } from "../world/fisherman";
 import type { SceneSpec } from "./boatScene";
 import { DOZE, FLOAT, HAUL, HOOKED } from "./poses";
 
-const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
-const ease = (t: number) =>
+export const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
+export const ease = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
@@ -15,25 +15,38 @@ const ARMS = 4;
 const DURATION: Partial<Record<Bone, number>> = { head: 6 };
 const BODY = 12;
 
+// How far a bone has come out of the doze, 0 to 1, `f` frames after he
+// jolts awake.
+export const startleProgress = (bone: Bone, f: number) =>
+  ease(clamp01((f - (DELAY[bone] ?? ARMS)) / (DURATION[bone] ?? BODY)));
+
+// Jolting awake from the doze into the haul.
+export const startle = (f: number): PoseDef =>
+  tweenPose(
+    POSES.doze,
+    POSES.haul,
+    (bone) => startleProgress(bone, f),
+    f >= 0 ? "wide" : "closed",
+  );
+
+// Leaning back into a pull on the rod: 0 at rest, 1 fully back.
+export const leanBack = (pose: PoseDef, amount: number): PoseDef => ({
+  ...pose,
+  angles: {
+    ...pose.angles,
+    chest: (pose.angles.chest ?? 0) + 4 * amount,
+    forearm: (pose.angles.forearm ?? 0) - 5 * amount,
+  },
+});
+
 // Three seconds: dozing, a tug on the line, the startle, then hauling in a
 // slow pulling rhythm while the catch glows brighter. Action poses hold for
 // two frames.
 export const haulTest = (frame: number): SceneSpec => {
   const f = Math.floor(frame / 2) * 2;
-  const t = (bone: Bone) =>
-    ease(
-      clamp01((f - REACT - (DELAY[bone] ?? ARMS)) / (DURATION[bone] ?? BODY)),
-    );
-  const pose = tweenPose(
-    POSES.doze,
-    POSES.haul,
-    t,
-    f >= REACT ? "wide" : "closed",
-  );
   const pulling = f >= 40 ? Math.sin(((f - 40) / 24) * 2 * Math.PI) : 0;
-  pose.angles.chest = (pose.angles.chest ?? 0) + 4 * pulling;
-  pose.angles.forearm = (pose.angles.forearm ?? 0) - 5 * pulling;
-  const k = t("forearm");
+  const pose = leanBack(startle(f - REACT), pulling);
+  const k = startleProgress("forearm", f - REACT);
   const tugged = f >= TUG;
   return {
     ...DOZE,

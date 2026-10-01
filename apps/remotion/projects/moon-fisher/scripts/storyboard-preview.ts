@@ -6,14 +6,19 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { DESIGN_WIDTH, FILM } from "../src/pixel/density";
 import { Pix } from "../src/pixel/pix";
 import { drawBoatScene } from "../src/stills/boatScene";
-import { panelSpec, SHEET_COLUMNS, SHOTS } from "../src/storyboard/shots";
+import {
+  filmAt,
+  panelFrame,
+  SHEET_COLUMNS,
+  SHOTS,
+} from "../src/storyboard/shots";
 import { encodePng } from "./png";
 
 const out = process.argv[2] ?? "renders/preview/storyboard";
 mkdirSync(out, { recursive: true });
 for (const shot of SHOTS) {
   const pix = new Pix(FILM.w, FILM.h, FILM.w / DESIGN_WIDTH);
-  drawBoatScene(pix, panelSpec(shot), Math.round(shot.panel * 24));
+  drawBoatScene(pix, filmAt(panelFrame(shot)).spec, panelFrame(shot));
   writeFileSync(
     `${out}/${shot.id}.png`,
     encodePng(FILM.w, FILM.h, pix.toRGBA(), 2),

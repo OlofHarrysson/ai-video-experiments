@@ -1,7 +1,8 @@
 import { onScreen, type Camera } from "../pixel/pix";
 import type { Vec2 } from "../pixel/shapes";
-import { HORIZON, type SceneSpec } from "../stills/boatScene";
+import { HORIZON, SEAT, type SceneSpec } from "../stills/boatScene";
 import { KEY_IMAGE } from "../stills/keyImage";
+import { leanBack, startle, startleProgress } from "../stills/motion";
 import {
   DOZE,
   FLOAT,
@@ -11,7 +12,18 @@ import {
   skyMoon,
   TIP,
 } from "../stills/poses";
-import { at, BAR_SECONDS, SECTIONS } from "../timing";
+import { at, BAR_SECONDS, FPS, SECTIONS } from "../timing";
+import { moonCenter, MOON_RADIUS } from "../world/bucket";
+import { fisherman } from "../world/fisherman";
+import {
+  dozingOff,
+  DOZING_ARMS,
+  leapSplashes,
+  leaping,
+  lookingUp,
+  move,
+  type Leap,
+} from "./acting";
 
 // Storyboard notation over a panel, in design-frame units: arrows for what
 // travels during the shot, and shake lines around what shivers.
@@ -137,6 +149,12 @@ const heaves = (t: number, beats: number) => {
   const heave = Math.min(1, (t - i * BEAT) / (BEAT / 3));
   return Math.min(1, (i + heave) / beats);
 };
+// His lean into each heave: quickly back, then slowly forward again.
+const pullBack = (t: number) => {
+  const p = (t % BEAT) / BEAT;
+  return p < 1 / 3 ? move(p, 0, 1 / 3) : 1 - move(p, 1 / 3, 1);
+};
+const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 
 // He hauls the moon down the sky, from high above its reflection to the
 // horizon just past the bow, the stretch the boat does not hide. Sky moons
@@ -159,6 +177,62 @@ const SETTING_X = onScreen(WIDE, [SETS_OVER, 0])[0];
 const settingY = (t: number) =>
   ramp(t, 0, 0.4, horizonIn(WIDE) - 11, horizonIn(WIDE) + 11);
 const caughtY = (t: number) => ramp(t, 0, 1.2, LANDED[1] + 9, LANDED[1] - 30);
+
+// He tips the moon out of the bucket over the side. Times in seconds into
+// the shot; heights in world units.
+const TIP_OFFSET: Vec2 = [10, 4];
+const tipGrip = fisherman({
+  x: SEAT[0],
+  y: SEAT[1],
+  pose: "tip",
+  facing: "right",
+}).grip;
+const RELEASE = {
+  leaves: 0.55,
+  falls: 0.35,
+  lands: 0.9,
+  water: 400,
+  from: moonCenter({
+    x: tipGrip[0] + TIP_OFFSET[0],
+    rimY: tipGrip[1] + TIP_OFFSET[1],
+    moon: true,
+    tilt: 50,
+  }),
+};
+const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
+
+// The finale's fish, leaping through the moon's path in turn.
+const finaleLeap = (
+  from: Vec2,
+  to: Vec2,
+  height: number,
+  start: number,
+): Leap => ({
+  from,
+  to,
+  height,
+  start,
+  duration: 0.9,
+  size: 2.2,
+});
+const FINALE_LEAPS: Leap[] = [
+  finaleLeap([30, 400], [70, 404], 24, 0.4),
+  finaleLeap([200, 398], [245, 402], 26, 1.3),
+  finaleLeap([100, 415], [135, 418], 30, 2.2),
+  finaleLeap([235, 400], [205, 404], 22, 2.8),
+  finaleLeap([60, 410], [25, 412], 26, 3.6),
+  finaleLeap([150, 420], [190, 422], 34, 4.5),
+];
+
+// The gift: a fish clears the gunwale and lands on the foredeck by the cat.
+const GIFT: Leap = {
+  from: [216, 425],
+  to: [192, 341],
+  height: 50,
+  start: 0.6,
+  duration: 0.9,
+  size: 1.3,
+};
 
 export const SHOTS: Shot[] = [
   {
@@ -238,13 +312,25 @@ export const SHOTS: Shot[] = [
     action:
       "His head sinks; the hat slides over his eyes. Meanwhile the moon drifts on, and its reflection reaches his float.",
     sound: "The doze: a lazy clarinet.",
-    spec: (_, film) => ({
-      ...DOZE,
-      moon: skyMoon(MEDIUM, wander(film), MOON_HEIGHT.medium),
-      reflection: reflectionAt(wander(film)),
-      cat: PEER_LEFT,
-    }),
-    panel: 1.5,
+    spec: (t, film) => {
+      // As his hands sink to his lap the rod droops, its tip still over the
+      // float.
+      const k = move(t, ...DOZING_ARMS);
+      return {
+        ...DOZE,
+        fisherman: dozingOff(t),
+        rod: {
+          angle: lerp(ROD.angle, -37.7, k),
+          length: lerp(ROD.length, 70, k),
+          bend: lerp(ROD.bend, 3, k),
+          line: { to: FLOAT, slack: 8 },
+        },
+        moon: skyMoon(MEDIUM, wander(film), MOON_HEIGHT.medium),
+        reflection: reflectionAt(wander(film)),
+        cat: PEER_LEFT,
+      };
+    },
+    panel: 2,
     // The drift is short, so its arrows start further back to stay legible.
     notation: () => {
       const [from, to] = [wander(DOZING) - 16, HOOKED[0]];
@@ -281,7 +367,7 @@ export const SHOTS: Shot[] = [
         float: undefined,
         wobble: 0.3 + 0.7 * jolt,
         rod: { ...ROD, bend: 4, line: { to: FLOAT, slack: 0 } },
-        splash: t < 0.6 ? { at: FLOAT, size: 6 } : undefined,
+        splashes: t < 0.6 ? [{ at: FLOAT, size: 6 }] : [],
         catchGlow: { at: HOOKED, strength: ramp(t, 0, 1.5, 0.3, 0.7) },
       };
     },
@@ -296,17 +382,26 @@ export const SHOTS: Shot[] = [
       "He jolts awake and hauls. Each pull drags the reflection toward the boat and the moon down the sky. The cat stares.",
     sound: "The haul: driving plucks. The reel whirs.",
     spec: (t) => {
-      const at = hauledReflection(t);
+      const hooked = hauledReflection(t);
       const [x, y] = haulMoon(t);
+      const lean = t < BEAT ? 0 : pullBack(t);
+      const k = startleProgress("forearm", t * FPS);
       return {
         ...HAUL,
         camera: MEDIUM_WIDE,
+        fisherman: leanBack(startle(t * FPS), lean),
         moon: { in: "sky", x, y, r: 11 },
-        reflection: at,
+        reflection: hooked,
         wobble: 0.6,
-        rod: { angle: -52, length: 72, bend: 18, line: { to: at, slack: 0 } },
-        catchGlow: { at, strength: 1 },
-        cat: { ...PEER_LEFT, look: 30 },
+        rod: {
+          angle: lerp(-37.7, -52, k),
+          length: lerp(70, 72, k),
+          bend: lerp(10, 18, k) + 3 * lean,
+          line: { to: hooked, slack: 0 },
+        },
+        catchGlow: { at: hooked, strength: 1 },
+        // The cat follows the moon down to the horizon past the bow.
+        cat: { ...PEER_RIGHT, look: lerp(55, 5, heaves(t, 6)) },
       };
     },
     panel: 2,
@@ -343,8 +438,8 @@ export const SHOTS: Shot[] = [
         setting: { x: SETTING_X, y: settingY(t), r: 11 },
         fisherman: "haul",
         rod: { angle: -52, length: 72, bend: 18, line: { to: ball, slack: 0 } },
-        splash: { at: LANDED, size: 7 },
-        cat: { ...PEER_LEFT, look: 20 },
+        splashes: [{ at: LANDED, size: 7 }],
+        cat: { ...PEER_RIGHT, look: 5 },
       };
     },
     panel: 0.3,
@@ -411,7 +506,11 @@ export const SHOTS: Shot[] = [
     action:
       "He looks up at the black, moonless sky, then back at the fading moon.",
     sound: "The dimming ends, unresolved.",
-    spec: () => ({ ...KEY_IMAGE, fisherman: "lookUp", glow: 0.32 }),
+    spec: (t) => ({
+      ...KEY_IMAGE,
+      fisherman: lookingUp(t, [0.3, 1], [2, 2.6]),
+      glow: 0.32,
+    }),
     panel: 1.5,
   },
   {
@@ -421,12 +520,37 @@ export const SHOTS: Shot[] = [
     title: "He lets it go",
     action: "He tips the bucket over the side; the moon slides into the sea.",
     sound: "The release: the harp sinks. A soft plop.",
-    spec: (t) => ({
-      ...TIP,
-      glow: 0.4,
-      bucket: { at: "hands", tilt: ramp(t, 0, 1.2, 20, 60), offset: [10, 4] },
-    }),
-    panel: 1,
+    spec: (t) => {
+      const tilt = ramp(t, 0, 0.8, 20, 60);
+      const bucket = { at: "hands", tilt, offset: TIP_OFFSET } as const;
+      if (t < RELEASE.leaves) return { ...TIP, glow: 0.4, bucket };
+      // It drops from the bucket's mouth into the sea in front of the boat,
+      // then sinks and fades.
+      const fall = clamp01((t - RELEASE.leaves) / RELEASE.falls);
+      const x = RELEASE.from[0] + 8 * fall;
+      const y =
+        t < RELEASE.lands
+          ? RELEASE.from[1] +
+            (RELEASE.water - MOON_RADIUS - RELEASE.from[1]) * fall * fall
+          : ramp(
+              t,
+              RELEASE.lands,
+              1.5,
+              RELEASE.water - MOON_RADIUS,
+              RELEASE.water + MOON_RADIUS + 2,
+            );
+      return {
+        ...TIP,
+        moon: { in: "world", x, y, r: MOON_RADIUS, waterline: RELEASE.water },
+        glow: ramp(t, RELEASE.lands, 1.5, 0.4, 0.12),
+        bucket,
+        splashes:
+          t >= RELEASE.lands && t < RELEASE.lands + 0.35
+            ? [{ at: [x, RELEASE.water], size: 4 }]
+            : [],
+      };
+    },
+    panel: 0.8,
   },
   {
     id: "15",
@@ -476,14 +600,11 @@ export const SHOTS: Shot[] = [
     title: "Silver light",
     action: "The moon rides high again. Fish leap through its silver path.",
     sound: "The finale: home in E. Splashes.",
-    spec: () => ({
+    spec: (t) => ({
       ...fishing(WIDE, REFLECTION[0], MOON_HEIGHT.wide),
       cat: PEER_RIGHT,
-      fish: [
-        { at: [52, 392], angle: -40, size: 2.2 },
-        { at: [118, 412], angle: -75, size: 2.2 },
-        { at: [240, 396], angle: -130, size: 2.2 },
-      ],
+      fish: FINALE_LEAPS.flatMap((l) => leaping(l, t) ?? []),
+      splashes: FINALE_LEAPS.flatMap((l) => leapSplashes(l, t, 3)),
     }),
     panel: 3,
   },
@@ -494,11 +615,25 @@ export const SHOTS: Shot[] = [
     title: "A gift",
     action: "One fish leaps into the boat; the cat is on it at once.",
     sound: "The last phrase again. A flop, a happy mew.",
-    spec: () => ({
-      ...fishing(MEDIUM, REFLECTION[0], MOON_HEIGHT.medium),
-      fish: [{ at: [190, 316], angle: 35, size: 1.3 }],
-    }),
-    panel: 1.5,
+    spec: (t) => {
+      const lands = GIFT.start + GIFT.duration;
+      // It flops on the deck for a moment, then lies still.
+      const flop = t < lands + 0.8 ? (Math.floor(t * 6) % 2 ? 20 : -20) : 0;
+      return {
+        ...fishing(MEDIUM, REFLECTION[0], MOON_HEIGHT.medium),
+        fish:
+          t < lands
+            ? [GIFT].flatMap((l) => leaping(l, t) ?? [])
+            : [{ at: GIFT.to, angle: 180 + flop, size: GIFT.size }],
+        splashes: leapSplashes(GIFT, t, 3, false),
+        // The cat watches it fly in, then looks down at its prize.
+        cat: {
+          ...PEER_LEFT,
+          look: 25 * move(t, 0.6, 0.9) - 40 * move(t, 1.4, 1.7),
+        },
+      };
+    },
+    panel: 1.3,
   },
   {
     id: "19",
@@ -519,7 +654,18 @@ export const SHOTS: Shot[] = [
 export const shotStart = (s: Shot) => (s.bars[0] - 1) * BAR_SECONDS;
 export const shotSeconds = (s: Shot) => (s.bars[1] - s.bars[0]) * BAR_SECONDS;
 
-// The storyboard's moment of a shot, and its notation.
-export const panelSpec = (s: Shot) => s.spec(s.panel, shotStart(s) + s.panel);
+// The film at a frame: the shot playing and its scene. Action moves on twos;
+// ambient life follows the frame itself.
+export const filmAt = (frame: number) => {
+  const action = (Math.floor(frame / 2) * 2) / FPS;
+  const shot =
+    SHOTS.find((s) => action < shotStart(s) + shotSeconds(s)) ??
+    SHOTS[SHOTS.length - 1];
+  return { shot, spec: shot.spec(action - shotStart(shot), action) };
+};
+
+// The storyboard's frame of a shot, and its notation.
+export const panelFrame = (s: Shot) =>
+  Math.round((shotStart(s) + s.panel) * FPS);
 export const panelNotation = (s: Shot): Notation =>
   s.notation?.(shotStart(s) + s.panel) ?? {};

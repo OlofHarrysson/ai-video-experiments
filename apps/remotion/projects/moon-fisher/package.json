@@ -14,7 +14,8 @@
     "score": "node scripts/score.mjs",
     "score:review": "node scripts/score-review.mjs",
     "tables": "tsx scripts/tables.ts",
-    "storyboard": "node scripts/storyboard.mjs"
+    "storyboard": "node scripts/storyboard.mjs",
+    "animatic": "node scripts/animatic.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",

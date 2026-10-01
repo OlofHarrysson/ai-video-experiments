@@ -1,4 +1,5 @@
 import { Composition, Folder, Still } from "remotion";
+import { Animatic } from "./Animatic";
 import { ScoreMap } from "./ScoreMap";
 import { Storyboard, STORYBOARD_SIZE } from "./storyboard/Storyboard";
 import { SceneFrame } from "./stills/StyleFrame";
@@ -10,6 +11,13 @@ const SIZE = { width: 1080, height: 1920 };
 
 export const RemotionRoot: React.FC = () => (
   <>
+    <Composition
+      id="Animatic"
+      component={Animatic}
+      {...SIZE}
+      fps={FPS}
+      durationInFrames={DURATION_FRAMES}
+    />
     <Composition
       id="ScoreMap"
       component={ScoreMap}

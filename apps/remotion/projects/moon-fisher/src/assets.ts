@@ -41,7 +41,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Character",
     api: "fisherman({ x, y, pose, facing })",
     status: "rough",
-    next: "Poses: fish, doze, haul, holdBucket, lookUp, tip. Needs a waking jolt and a heave cycle for the haul (07), a smile (10, 19), looking up and back down (13), and face detail for his close-up (10).",
+    next: "Poses: fish, doze, haul, holdBucket, lookUp, tip, with tweens for nodding off (05), the waking jolt and his heaves (07) and looking up and back down (13). Needs a smile (10, 19), face detail for his close-up (10) and a fuller heave than a lean of the chest and arms.",
   },
   cat: {
     name: "Cat",
@@ -62,7 +62,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Prop",
     api: "bucket({ x, rimY, moon, tilt, glow })",
     status: "rough",
-    next: "The style frame's hero. Needs the moon to slide out as he tips it (14), with water spilling, and an uneven, flickering fade as it dims (12).",
+    next: "The style frame's hero. The moon now drops out as he tips it (14); it needs water spilling with it, and an uneven, flickering fade as it dims (12).",
   },
   float: {
     name: "Float",
@@ -83,7 +83,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Prop",
     api: "fishParts({ at, angle, size })",
     status: "placeholder",
-    next: "A body and a tail. Needs fins, an eye and a silver sheen, a leaping arc (17), a flop in the boat (18) and the one the cat holds (19).",
+    next: "A body and a tail, now leaping in arcs (17, 18) and flopping on the deck (18). Needs fins, an eye and a silver sheen, and the one the cat holds (19).",
   },
   boat: {
     name: "Boat",
@@ -139,7 +139,7 @@ export const ASSETS: Record<AssetName, Asset> = {
     kind: "Effect",
     api: "spec.splash = { at, size }; drawSplash",
     status: "placeholder",
-    next: "Scattered droplets and a ring. Needs a crown that rises and falls over a few frames: a small one for the float (06), a great one for the catch (08) and the leaping fish (17).",
+    next: "Scattered droplets and a ring, used for the float, the catch, the moon's release and the fish (06, 08, 14, 17, 18). Needs a crown that rises and falls over a few frames, sized to each.",
   },
   ripple: {
     name: "Ripple",

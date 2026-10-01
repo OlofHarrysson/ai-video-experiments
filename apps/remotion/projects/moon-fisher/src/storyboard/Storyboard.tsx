@@ -5,10 +5,10 @@ import { PixelCanvas } from "../pixel/PixelFrame";
 import type { Pix } from "../pixel/pix";
 import type { Vec2 } from "../pixel/shapes";
 import { drawBoatScene } from "../stills/boatScene";
-import { FPS } from "../timing";
 import {
+  filmAt,
+  panelFrame,
   panelNotation,
-  panelSpec,
   SHEET_COLUMNS,
   SHOTS,
   shotSeconds,
@@ -90,7 +90,7 @@ const Notation: React.FC<{ shot: Shot }> = ({ shot }) => {
 
 const Panel: React.FC<{ shot: Shot }> = ({ shot }) => {
   const draw = (pix: Pix) =>
-    drawBoatScene(pix, panelSpec(shot), Math.round(shot.panel * FPS));
+    drawBoatScene(pix, filmAt(panelFrame(shot)).spec, panelFrame(shot));
   const start = shotStart(shot);
   return (
     <div style={{ width: PANEL_W }}>
