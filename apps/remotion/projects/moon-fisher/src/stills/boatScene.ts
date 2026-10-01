@@ -7,6 +7,7 @@ import {
   type Part,
 } from "../pixel/lit";
 import { C } from "../pixel/palette";
+import type { AssetName } from "../assets";
 import { IDENTITY, Pix, type Camera } from "../pixel/pix";
 import { ellipse, type Vec2 } from "../pixel/shapes";
 import {
@@ -203,6 +204,8 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   }
   const scene: LitScene = { lights, ambient: skyMoon ? 0.07 : 0.04 };
 
+  const as = (asset: AssetName) => pix.drawAs(asset);
+  as("sky");
   drawSky(pix, { horizon, bands: skyMoon ? MOONLIT_SKY : DARK_SKY, seam: 0.5 });
   if (!skyMoon) drawMilkyWay(pix, { seed: 7, horizon, strength: 1.3 });
   drawStars(pix, {
@@ -212,6 +215,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     strength: skyMoon ? 0.6 : 1,
     step,
   });
+  as("sea");
   drawSea(pix, {
     horizon,
     bands: SEA,
@@ -221,6 +225,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   });
   const seaRow = Math.max(0, Math.floor(horizon * pix.k) + 1);
   if (spec.seaGlow) {
+    as("glow");
     const { at, radius, strength } = spec.seaGlow;
     drawHalo(pix, {
       x: at[0],
@@ -234,6 +239,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   // A moon in the sky and its halo; the sea hides whatever has sunk below
   // the horizon.
   const drawSkyMoon = ({ x, y, r }: SkyMoon) => {
+    as("moon");
     pix.cam = IDENTITY;
     drawHalo(pix, { x, y, radius: r * 5, steps: 3 });
     drawLit(
@@ -249,6 +255,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     const shiver =
       (skyMoon.shiver ?? 0) * SHIVER[Math.floor(frame / 2) % SHIVER.length];
     drawSkyMoon({ ...skyMoon, x: skyMoon.x + shiver });
+    as("glitter");
     pix.cam = IDENTITY;
     drawMoonPath(pix, {
       x: skyMoon.x,
@@ -259,6 +266,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     });
     pix.cam = camera;
     if (spec.reflection) {
+      as("reflection");
       drawMoonReflection(pix, {
         x: spec.reflection[0],
         y: spec.reflection[1],
@@ -269,6 +277,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       });
     }
   } else if (caught) {
+    as("glow");
     if (inBucket) {
       drawShaft(pix, {
         x: caught[0],
@@ -289,19 +298,25 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
 
   pix.drawingObjects = true;
   if (spec.leaningRod) {
+    as("rod");
     const [[ax, ay], [bx, by]] = spec.leaningRod;
     pix.line(ax, ay, bx, by, C.umber2);
   }
+  as("boat");
   drawLit(pix, boatInterior(BOAT), scene, STYLE);
   drawRibs(pix, BOAT);
+  as("fisherman");
   drawLit(pix, man.body, scene, STYLE);
   drawStrokes(pix, man.strokes);
   const kitty = spec.cat ? cat(spec.cat) : null;
   if (kitty) {
+    as("cat");
     drawLit(pix, kitty.body, scene, STYLE);
     drawStrokes(pix, kitty.strokes);
   }
+  as("bucket");
   if (pail) drawLit(pix, bucket({ ...pail, glow }), scene, STYLE);
+  as("rod");
   const tip = spec.rod
     ? drawRod(pix, {
         grip: man.grip,
@@ -310,13 +325,18 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
         bend: spec.rod.bend,
       })
     : null;
+  as("fisherman");
   drawLit(pix, man.front, scene, STYLE);
+  as("boat");
   drawLit(pix, boatHull(BOAT), scene, STYLE);
   drawPlankSeams(pix, BOAT);
+  as("rod");
   if (spec.rod && tip)
     drawLine(pix, tip, spec.rod.line.to, spec.rod.line.slack);
+  as("fisherman");
   drawFeatures(pix, man.features);
   if (kitty) {
+    as("cat");
     // The cat blinks once in the loop: its eye closes to a line of fur.
     const [eye, pupil, nose] = kitty.features;
     const blinking = step === 21 || step === 22;
@@ -329,10 +349,12 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
   }
   pix.drawingObjects = false;
 
+  as("water");
   reflectWater(pix, { waterline: BOAT.waterline, seed: "key-water", step });
   // Things out on the water in front of the boat are drawn over the
   // reflections.
   if (looseMoon) {
+    as("moon");
     drawLit(
       pix,
       moonParts({
@@ -346,8 +368,10 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       STYLE,
     );
   }
+  as("fish");
   for (const f of spec.fish ?? []) drawLit(pix, fishParts(f), scene, STYLE);
   if (spec.ripple) {
+    as("ripple");
     drawRipple(pix, {
       x: spec.ripple.at[0],
       y: spec.ripple.at[1],
@@ -356,6 +380,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     });
   }
   if (spec.float) {
+    as("float");
     // The float rises and dips a little with the ripples.
     const dip = step % 6 < 3 ? 0 : 0.8;
     drawLit(
@@ -366,6 +391,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     );
   }
   if (spec.splash) {
+    as("splash");
     drawSplash(pix, {
       at: spec.splash.at,
       size: spec.splash.size,
@@ -373,6 +399,7 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
     });
   }
   if (spec.catchGlow) {
+    as("reflection");
     const { at, strength } = spec.catchGlow;
     drawHalo(pix, {
       x: at[0],
@@ -381,4 +408,5 @@ export const drawBoatScene = (pix: Pix, spec: SceneSpec, frame = 0): void => {
       steps: 1 + 2.5 * strength,
     });
   }
+  pix.drawAs(null);
 };

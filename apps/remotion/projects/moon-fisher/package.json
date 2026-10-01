@@ -13,6 +13,7 @@
     "samples": "node scripts/fetch-samples.mjs",
     "score": "node scripts/score.mjs",
     "score:review": "node scripts/score-review.mjs",
+    "tables": "tsx scripts/tables.ts",
     "storyboard": "node scripts/storyboard.mjs"
   },
   "dependencies": {

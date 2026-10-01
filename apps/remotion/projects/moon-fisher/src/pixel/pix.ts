@@ -31,6 +31,11 @@ export class Pix {
   cam: Camera = IDENTITY;
   // While true, everything drawn counts as a solid object.
   drawingObjects = false;
+  // The asset that last changed each pixel, as an index into `assets` plus
+  // one (0 for none), so a frame can report what is on screen.
+  readonly owner: Uint8Array;
+  readonly assets: string[] = [];
+  private drawing = 0;
 
   constructor(
     readonly w: number,
@@ -39,6 +44,30 @@ export class Pix {
   ) {
     this.data = new Uint8Array(w * h).fill(EMPTY);
     this.solid = new Uint8Array(w * h);
+    this.owner = new Uint8Array(w * h);
+  }
+
+  // Attribute everything drawn from now on to an asset, or to none.
+  drawAs(asset: string | null): void {
+    if (asset === null) {
+      this.drawing = 0;
+      return;
+    }
+    const i = this.assets.indexOf(asset);
+    this.drawing = (i < 0 ? this.assets.push(asset) - 1 : i) + 1;
+  }
+
+  // How many pixels of the finished frame each asset shows.
+  assetPixels(): Map<string, number> {
+    const counts = new Map<string, number>();
+    for (const o of this.owner) {
+      if (o)
+        counts.set(
+          this.assets[o - 1],
+          (counts.get(this.assets[o - 1]) ?? 0) + 1,
+        );
+    }
+    return counts;
   }
 
   // Pixels per world unit.
@@ -83,26 +112,31 @@ export class Pix {
 
   set(x: number, y: number, c: number): void {
     if (!this.inside(x, y)) return;
-    this.data[y * this.w + x] = c;
-    if (this.drawingObjects) this.solid[y * this.w + x] = 1;
+    const i = y * this.w + x;
+    this.data[i] = c;
+    this.owner[i] = this.drawing;
+    if (this.drawingObjects) this.solid[i] = 1;
   }
 
   isSolid(x: number, y: number): boolean {
     return this.inside(x, y) && this.solid[y * this.w + x] === 1;
   }
 
+  // Light and shade change a pixel only when they move it along the ladder.
   brighten(x: number, y: number, steps: number): void {
-    let c = this.get(x, y);
-    if (c === EMPTY) return;
+    const was = this.get(x, y);
+    if (was === EMPTY) return;
+    let c = was;
     for (let i = 0; i < steps; i++) c = BRIGHTER[c];
-    this.set(x, y, c);
+    if (c !== was) this.set(x, y, c);
   }
 
   darken(x: number, y: number, steps: number): void {
-    let c = this.get(x, y);
-    if (c === EMPTY) return;
+    const was = this.get(x, y);
+    if (was === EMPTY) return;
+    let c = was;
     for (let i = 0; i < steps; i++) c = DARKER[c];
-    this.set(x, y, c);
+    if (c !== was) this.set(x, y, c);
   }
 
   // A one-pixel line between two world points (Bresenham).
