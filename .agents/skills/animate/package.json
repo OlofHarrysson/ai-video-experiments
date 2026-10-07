@@ -1,0 +1,11 @@
+{
+  "name": "ai-video-experiments-animate",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

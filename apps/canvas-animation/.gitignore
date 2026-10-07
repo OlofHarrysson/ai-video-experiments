@@ -1,0 +1,13 @@
+projects/*/frames/
+projects/*/frames-*/
+projects/*/renders/
+projects/*/review/
+projects/*/review-*/
+projects/*/index.html
+projects/*/assets/
+projects/*/audio/
+projects/*/voice/*.wav
+projects/*/voice/*.mp3
+projects/*/voice/*.m4a
+projects/*/references/
+references/

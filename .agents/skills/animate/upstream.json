@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/cth9191/animate",
+  "commit": "7e5eb56feb2dd573f890e1b7b34748af43d58263",
+  "path": "plugins/animate/skills/animate",
+  "local_changes": [
+    "Repo-local Playwright dependency and Claude skill symlink",
+    "Portable questions and canvas-animation project paths",
+    "Estimated narration timing only; Whisper removed",
+    "Reference shotlog uses uv script metadata and lockfile",
+    "Review labels drawn with browser canvas because installed ffmpeg lacks drawtext; optional subtitle previews disabled in local instructions"
+  ]
+}
