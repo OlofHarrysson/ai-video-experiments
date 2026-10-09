@@ -13,9 +13,18 @@ First understand the reference visually, then discuss what our project should be
 - Project initialized inside the existing canvas-animation workspace.
 - Reference source and intake recorded in [reference-source.json](reference-source.json).
 - Olof supplied the local video after YouTube access was blocked. A hash-verified independent copy is preserved at `references/original/enter-the-void-intro.mp4`.
-- [The first visual study](reference-study.md) is complete: overview, varied typographic samples and every-frame inspection of three short windows around 1:50 onward. Theme discussion is the next step.
+- [The first visual study](reference-study.md) is complete: overview, varied typographic samples and every-frame inspection of three short windows around 1:50 onward.
+- [Twelve typography feasibility studies](studies/typography-v001/README.md) test font-based effects, integrated graphics and custom letter geometry. Frames, reference comparisons and a silent motion proof have been screened by the assistant; Olof's assessment is pending.
 - Local reference media belongs in `references/original/`; derived clips, frames and contact sheets belong elsewhere under `references/`. The entire reference directory is ignored by Git.
-- No animation, visual reconstruction, theme, storyboard or original soundtrack has been created or approved.
+- No theme, film storyboard or original soundtrack has been selected. The typography and motion studies are tests, not an approved film treatment.
+
+## Olof's direction — 2026-10-09
+
+Olof likes the text-based visual chaos and the gradual escalation from a calm beginning: more motion, colors, layers and increasingly difficult reading, with sound building alongside it. Easy readability throughout is not the intended look. The audience should recognize the theme and relate to the story.
+
+AI progress, investment and hype accelerating toward loss of control is a candidate, not the selected theme. Possible material includes model names, money and headlines, but Olof questions whether historical model names such as BERT would resonate with a broad audience. His personal experience in AI informs the idea; this does not establish an insider-history format or verify on-screen claims.
+
+The immediate priority is visually compelling graphic identities. Olof explicitly requested these feasibility tests ahead of theme and story selection. Next: review the twelve studies and identify strong and weak families, then resume theme discussion.
 
 ## First milestone: inspect and discuss
 
@@ -30,6 +39,6 @@ Acceptance evidence is actual inspected reference imagery and a timestamped acco
 
 ## Workflow
 
-Use the repo-local [Animate skill](../../../../.agents/skills/animate/SKILL.md), the [canvas-animation guide](../../README.md), and the repository [review agreement](../../../../docs/review-and-feedback.md). This is a reference-study and discussion phase; no runtime or renderer has been selected specifically for this piece yet. Canvas is the current workspace, with implementation choices to follow the visual study.
+Use the repo-local [Animate skill](../../../../.agents/skills/animate/SKILL.md), the [canvas-animation guide](../../README.md), and the repository [review agreement](../../../../docs/review-and-feedback.md). The feasibility study uses Canvas 2D and Animate's Playwright dependency. Final film structure, delivery format and font packaging remain undecided.
 
 Preserve original reference media and keep all source-derived pixels local. Reference material informs the original work; it is not automatically an output asset. Record artistic decisions here as they are made; add a separate experiment note when there is an actual experiment to reproduce.

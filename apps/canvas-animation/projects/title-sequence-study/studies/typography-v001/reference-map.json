@@ -1,0 +1,14 @@
+[
+  {"id":1,"family":"Architectural neon","inspection":"identity-map","frame":3,"relationship":"Shared sign enclosure and green linework; original geometric letter paths."},
+  {"id":2,"family":"Perforated marquee","inspection":"type-range","frame":1,"relationship":"Circular perforations in large letters with contrasting script; different word and layout."},
+  {"id":3,"family":"Varsity × signature","inspection":"transitions","frame":5,"relationship":"Outlined slab hierarchy; combines a separate signature treatment."},
+  {"id":4,"family":"Illuminated blackletter","inspection":"type-range","frame":0,"relationship":"Blackletter and beveled edges; OFL font and original ornaments, not identical glyphs."},
+  {"id":5,"family":"Chromatic signature","inspection":"transitions","frame":7,"relationship":"Script, layered colored edging and stars; original word and flourish geometry."},
+  {"id":6,"family":"Emblem lettering","inspection":"transitions","frame":15,"relationship":"Graphic motif embedded in letter counter; original sunburst forms the O."},
+  {"id":7,"family":"Cut-metal stencil","inspection":"type-range","frame":5,"relationship":"Original angular cut letter geometry; incomplete match for the reference's beveled outlines."},
+  {"id":8,"family":"Contour turbulence","inspection":"type-range","frame":7,"relationship":"Multicolored repeated contours with displacement; simpler and less dense than the reference."},
+  {"id":9,"family":"Rainbow wordmark","inspection":"type-range","frame":8,"relationship":"Rounded outline lettering with an integrated rainbow; different composition."},
+  {"id":10,"family":"Editorial collision","inspection":"transitions","frame":30,"relationship":"Condensed capitals overlapped by thin serif text; different words and asymmetric placement."},
+  {"id":11,"family":"RGB print screen","inspection":"identity-map","frame":11,"relationship":"Colored dot screens and tilt; different glyph mask and screen distribution."},
+  {"id":12,"family":"Bubble insignia","inspection":"type-range","frame":2,"relationship":"Large rounded letterforms with multiple thick outlines and an overlay; Latin lettering replaces Japanese lettering."}
+]

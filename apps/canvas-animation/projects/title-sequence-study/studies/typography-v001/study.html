@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Typography study — twelve identities</title>
+<style>
+@font-face{font-family:StudyBlackletter;src:url("fonts/UnifrakturCook-Bold.ttf");font-weight:normal;font-style:normal;font-display:block}
+*{box-sizing:border-box}body{margin:0;background:#101010;color:#eee;font:15px/1.5 system-ui}main{max-width:1440px;margin:auto;padding:28px}h1{font-size:26px;margin:0 0 8px}p{color:#b5b5b5;max-width:820px;margin:0 0 24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px}figure{margin:0;min-width:0}canvas{width:100%;height:auto;display:block;background:black}figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:9px}h2{font-size:16px;margin:0}small{color:#aaa;display:block;margin-top:3px;font-size:12px}button{font:inherit;font-size:13px;color:#ddd;background:#242424;border:1px solid #454545;border-radius:5px;padding:5px 12px;cursor:pointer}button:focus-visible{outline:2px solid #fa78c9}footer{margin-top:30px;color:#aaa;font-size:13px}@media(max-width:760px){.grid{grid-template-columns:1fr}main{padding:18px}}
+</style><main>
+<h1>Typography study</h1>
+<p>Twelve original treatments, drawn in code. Sample words test the lettering; they do not select the film’s theme. Cards are still by default. Play shows restrained movement within one identity, not the final edit or escalation.</p>
+<div class="grid" id="grid"></div>
+<footer>Local system fonts, bundled OFL blackletter and custom geometry. No reference frames, borrowed logos or generated images appear in these treatments. This study is tuned for this Mac’s fonts.</footer>
+</main><script src="lettering.js"></script><script>
+const S=window.TypographyStudy;
+let active=null,start=0;
+S.identity.forEach(([id,name,method],i)=>{
+ const fig=document.createElement('figure'),c=document.createElement('canvas');c.width=S.W;c.height=S.H;c.id='style-'+id;
+ const cap=document.createElement('figcaption'),title=document.createElement('div'),h=document.createElement('h2'),sub=document.createElement('small'),b=document.createElement('button');
+ h.textContent=id+' · '+name;sub.textContent=method;title.append(h,sub);b.textContent='Play';b.setAttribute('aria-label','Play '+name);
+ b.onclick=()=>{if(active){active.b.textContent='Play';S.render(active.i,0,active.c)}if(active?.i===i){active=null;return}const wasRunning=Boolean(active);active={i,c,b};b.textContent='Pause';start=performance.now();if(!wasRunning)requestAnimationFrame(tick)};
+ cap.append(title,b);fig.append(c,cap);document.getElementById('grid').append(fig);S.render(i,0,c);
+});
+function tick(now){if(!active)return;S.render(active.i,(now-start)/1000,active.c);requestAnimationFrame(tick)}
+document.fonts.load('200px "StudyBlackletter"').then(()=>document.fonts.ready).then(()=>{document.querySelectorAll('canvas').forEach((c,i)=>S.render(i,0,c));window.studyReady=true});
+</script></html>
