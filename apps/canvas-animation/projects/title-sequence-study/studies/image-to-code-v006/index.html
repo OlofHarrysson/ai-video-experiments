@@ -23,7 +23,7 @@
   <label>Component <select id="glyph"><option value="">All components</option></select></label>
   <label><input id="glints" type="checkbox" checked>Glints</label>
   <button id="svg">Save SVG paths</button>
-</div><p class="help">The SVG contains the editable silhouettes. Enamel, reflections and depth are rendered in code. This is bespoke lettering; changing the words requires new letterforms.</p></details>
+</div><p class="help">The SVG contains the editable silhouettes. Enamel, reflections and depth are rendered in code. This is bespoke lettering; changing the words requires new letterforms. Playback uses a lighter preview; PNG export retains full detail.</p></details>
 <footer>The generated image is used only for comparison. The lettering is drawn from Bézier paths and procedural materials.</footer>
 <script>window.addEventListener('error',event=>{document.querySelector('#status').textContent='Unable to render: '+event.message;window.renderError=event.message;});</script>
 <script src="geometry.js"></script><script src="details.js"></script><script src="facets.js"></script><script src="../../node_modules/clipper-lib/clipper.js"></script><script src="vector-fields.js"></script><script src="renderer.js"></script><script src="viewer.js"></script>

@@ -84,6 +84,10 @@ window.WildRenderer = (() => {
         float streak=pow(.5+.5*sin(normal.x*4.+normal.y*2.+sin(phase*6.2831853)*1.2),42.);
         vec3 side=mix(vec3(.022,.006,.038),vec3(.19,.07,.245),light);
         side+=streak*vec3(.27,.15,.32);
+        float reflectedStrip=exp(-pow((sin(normal.x*2.+normal.y*1.2+(p.x+p.y*.3)*.003+sin(phase*6.2831853)*.18)-.5)/.13,2.));
+        side+=reflectedStrip*vec3(.16,.085,.18);
+        float copper=pow(max(0.,sin(normal.x*2.8-normal.y+.4+sin(phase*6.2831853)*.3)),10.)*(1.-z/max(depth,.01));
+        side+=copper*vec3(.16,.055,.025);
         side*=1.-.38*z/max(depth,.01);
         float lip=smoothstep(1.7,2.8,z)*(1.-smoothstep(5.,7.,z));
         side=mix(side,vec3(.45,.025,.085)*(.5+light*.65),lip);
@@ -110,12 +114,12 @@ window.WildRenderer = (() => {
         float goldEnd=11.;
         float goldT=clamp((s-goldStart)/(goldEnd-goldStart),0.,1.);
         float goldCore=pow(max(0.,sin(goldT*3.14159)),.6);
-        vec3 gold=mix(mix(vec3(.64,.30,.064),vec3(1.,.86,.48),goldCore),goldProfile(goldT),.58);
+        vec3 gold=mix(mix(vec3(.64,.30,.064),vec3(1.,.76,.33),goldCore),goldProfile(goldT),.58);
         float goldSpec=exp(-pow((goldT-.34)/.16,2.));
-        gold=mix(gold,vec3(1.,.985,.81),goldSpec*.9);
+        gold=mix(gold,vec3(1.,.985,.81),goldSpec*.80);
         vec3 goldNormal=normalize(vec3(-unit*cos(goldT*3.14159)*1.2,1.));
         vec3 goldEnv=environment(goldNormal,p,true);
-        gold*=.66+.34*goldEnv;gold+=goldSpec*vec3(.24,.22,.16);
+        gold*=.66+.34*goldEnv;gold+=goldSpec*vec3(.16,.14,.09);
         if(palette>.5)gold=mix(vec3(.08,.15,.22),vec3(.94,.99,1.),dot(gold,vec3(.4,.4,.2)));
         vec3 red=mix(vec3(.23,.003,.025),vec3(.69,.025,.095),pow(max(0.,sin(clamp(s/4.5,0.,1.)*3.14159)),.7));
         if(palette>.5)red=vec3(.025,.10,.23)*(1.+sin(s));
@@ -138,13 +142,16 @@ window.WildRenderer = (() => {
           vec3 n=normalize(vec3(-grad*pow(1.-shoulder,.8)*.90,1.));
           vec3 reflected=reflect(vec3(0.,0.,-1.),n);
           float modelling=clamp(.62+dot(n.xy,normalize(vec2(-.5,-.8)))*.62,0.,1.);
-          vec3 face=mix(vec3(.79,.035,.265),vec3(1.,.15,.42),modelling);
+          vec3 face=mix(vec3(.85,.045,.285),vec3(1.,.17,.445),modelling);
           float sheenPhase=sin(a)*.24;
           float sheen=pow(.5+.5*sin(p.x*.007+p.y*.005+sheenPhase),8.);
           face=mix(face,vec3(1.,.29,.51),sheen*.18);
           if(palette>.5)face=vec3(.03,.58,.80)*(.85+.15*n.z);
           float env=reflected.x*.65+reflected.y*.75;
           float primary=exp(-pow((env+.62+sin(a)*.27)/.15,2.));
+          // Taper the reflection through W's acute inner join instead of ending it as a square.
+          float joinMask=exp(-pow((p.x-467.)/24.,4.))*exp(-pow((p.y-278.)/33.,4.));
+          primary*=1.-joinMask*.94;
           float broad=exp(-pow((env+.53+sin(a)*.27)/.32,2.));
           face=mix(face,palette>.5?vec3(.34,.85,.96):vec3(1.,.43,.64),broad*.18);
           face=mix(face,vec3(1.,.97,.89),primary*.88);
@@ -166,7 +173,7 @@ window.WildRenderer = (() => {
           }
         }
         float grain=fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453)-.5;
-        rgb+=grain*.004;
+        rgb+=grain*(ivory?.003:.009);
       }
       color=vec4(rgb,smoothstep(-.5,.5,outer));
     }`;
@@ -298,12 +305,13 @@ window.WildRenderer = (() => {
     if(visible.some(s=>s.id==='diamond-base'))jewel(707,879,31,61,52);
     if(visible.some(s=>s.id==='H'))jewel(264,735,18,20,21,true);
     if(visible.some(s=>s.id==='R'))jewel(974,710,17,23,23,true);
-    if(glints){for(const [x,y,size,offset]of [[175,687,39,0],[809,38,35,1],[1373,111,35,2],[1060,385,23,3],[598,717,22,4],[707,879,24,5],...movingGlints(frame)]){
+    if(glints){for(const [x,y,size,offset]of [[175,687,39,0],[809,38,35,1],[1373,111,35,2],[1060,385,23,3],[598,717,22,4],[707,879,24,5],[1282,949,29,9],...movingGlints(frame)]){
       if(glyph)continue;
-      const gain=.12+.88*Math.pow(.5+.5*Math.cos(frame/144*Math.PI*2+offset*.8),3.);
+      const gain=.40+.60*Math.pow(.5+.5*Math.cos(frame/144*Math.PI*2+offset*.8),3.);
       g.save();g.translate(x,y);g.globalAlpha=gain;
-      const glow=g.createRadialGradient(0,0,0,0,0,size*1.6);glow.addColorStop(0,'#fff9e7');glow.addColorStop(.06,'#fff2cb');glow.addColorStop(.18,'#ffe9a83d');glow.addColorStop(.5,'#ffc3550c');glow.addColorStop(1,'#ff900000');g.fillStyle=glow;g.fillRect(-size*2,-size*2,size*4,size*4);
-      g.fillStyle='#fffbe7';g.beginPath();g.moveTo(0,-size);g.lineTo(.65,-2.5);g.lineTo(2.5,-.65);g.lineTo(size*1.3,0);g.lineTo(2.5,.65);g.lineTo(.65,2.5);g.lineTo(0,size);g.lineTo(-.65,2.5);g.lineTo(-2.5,.65);g.lineTo(-size*1.3,0);g.lineTo(-2.5,-.65);g.lineTo(-.65,-2.5);g.closePath();g.fill();g.restore();
+      const glow=g.createRadialGradient(0,0,0,0,0,size*2);glow.addColorStop(0,'#fff9e7');glow.addColorStop(.06,'#fff2cb');glow.addColorStop(.18,'#ffe1a060');glow.addColorStop(.5,'#ffc35514');glow.addColorStop(1,'#ff900000');g.fillStyle=glow;g.fillRect(-size*2,-size*2,size*4,size*4);
+      g.fillStyle='#fffbe7';g.beginPath();g.moveTo(0,-size);g.lineTo(.65,-2.5);g.lineTo(2.5,-.65);g.lineTo(size*1.3,0);g.lineTo(2.5,.65);g.lineTo(.65,2.5);g.lineTo(0,size);g.lineTo(-.65,2.5);g.lineTo(-2.5,.65);g.lineTo(-size*1.3,0);g.lineTo(-2.5,-.65);g.lineTo(-.65,-2.5);g.closePath();g.fill();
+      g.strokeStyle='#ffd979';g.lineWidth=.6;g.globalAlpha=gain*.55;g.beginPath();g.moveTo(-size*.43,-size*.43);g.lineTo(size*.43,size*.43);g.moveTo(-size*.43,size*.43);g.lineTo(size*.43,-size*.43);g.stroke();g.restore();
     }}
     g.restore();return target;
   }

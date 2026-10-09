@@ -11,7 +11,7 @@ for(const [name,options]of [['enamel',{}],['flat',{flat:true}],['blue',{palette:
 await page.evaluate(()=>{document.querySelector('#mode').value='enamel';document.querySelector('#mode').dispatchEvent(new Event('change'))});await page.screenshot({path:path.join(out,'comparison.png'),fullPage:true});
 await page.evaluate(src=>{document.querySelector('img').src=src},'data:image/png;base64,'+fs.readFileSync(path.join(here,'output/wild-hours-reference-01.png')).toString('base64'));
 await page.waitForFunction(()=>document.querySelector('img').complete&&document.querySelector('img').naturalWidth>0);
-for(const [name,crop]of [['W-head',[0,10,420,340]],['W-join',[340,100,280,500]],['serifs',[700,170,400,400]],['Hours',[190,560,1190,425]]]){
+for(const [name,crop]of [['W-head',[0,10,420,340]],['W-join',[340,100,280,500]],['serifs',[700,170,400,400]],['Hours',[190,560,1190,425]],['S',[1120,560,290,430]]]){
  const data=await page.evaluate(({crop})=>{const [x,y,w,h]=crop,c=document.createElement('canvas');c.width=w*2;c.height=h;const g=c.getContext('2d');g.drawImage(document.querySelector('img'),x,y,w,h,0,0,w,h);g.drawImage(document.querySelector('#art'),x,y,w,h,w,0,w,h);return c.toDataURL().split(',')[1]},{crop});fs.writeFileSync(path.join(out,name+'-compare.png'),Buffer.from(data,'base64'));
 }
 const overlay=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=1536;c.height=1024;const g=c.getContext('2d');g.drawImage(document.querySelector('img'),0,0);g.strokeStyle='#00ffe4';g.lineWidth=1.5;for(const shape of WildGeometry)g.stroke(new Path2D(shape.d));return c.toDataURL().split(',')[1]});fs.writeFileSync(path.join(out,'outline-overlay.png'),Buffer.from(overlay,'base64'));

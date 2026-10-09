@@ -18,8 +18,8 @@ try{
     if(frame%24===0)console.log(`Rendered ${frame}/144`);
   }
   if(errors.length)throw new Error(errors.join('\n'));
-  const encode=spawnSync('ffmpeg',['-hide_banner','-loglevel','error','-framerate','24','-i',path.join(out,'frame-%04d.png'),'-c:v','libx264','-crf','17','-pix_fmt','yuv420p','-movflags','+faststart',path.join(out,'wild-hours-material-loop.mp4')],{encoding:'utf8'});if(encode.status!==0)throw new Error(encode.stderr);
+  const encode=spawnSync('ffmpeg',['-hide_banner','-loglevel','error','-framerate','24','-i',path.join(out,'frame-%04d.png'),'-c:v','libx264','-crf','14','-g','1','-pix_fmt','yuv420p','-movflags','+faststart',path.join(out,'wild-hours-material-loop.mp4')],{encoding:'utf8'});if(encode.status!==0)throw new Error(encode.stderr);
   const probe=spawnSync('ffprobe',['-v','quiet','-show_streams','-show_format','-of','json',path.join(out,'wild-hours-material-loop.mp4')],{encoding:'utf8'});if(probe.status!==0)throw new Error(probe.stderr);
   const source=path.join(out,'source');fs.mkdirSync(source);const hashes={};for(const f of ['geometry.js','details.js','facets.js','vector-fields.js','renderer.js','motion.mjs']){const content=loadedSources[f]||fs.readFileSync(path.join(here,f),'utf8');fs.writeFileSync(path.join(source,f),content);hashes[f]=createHash('sha256').update(content).digest('hex')}
-  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({frames:144,fps:24,width:1536,height:1024,errors,sourceHashes:hashes,probe:JSON.parse(probe.stdout)},null,2));console.log(out);
+  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({frames:144,fps:24,width:1536,height:1024,errors,chromium:browser.version(),clipperVersion:'6.4.2',dependencyLockHash:createHash('sha256').update(fs.readFileSync(path.join(here,'../../package-lock.json'))).digest('hex'),sourceHashes:hashes,probe:JSON.parse(probe.stdout)},null,2));console.log(out);
 }finally{await browser.close()}
