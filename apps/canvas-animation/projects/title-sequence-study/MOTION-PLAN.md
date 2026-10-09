@@ -25,6 +25,6 @@ The first typography study is decent but less impressive than the reference. Olo
 
 ## Continuation
 
-The motion sprint is complete. Olof finds it better but sees plain graphic design as the primary risk. The next authorized experiment produced three focused identities in `studies/design-v003/`: interlocking script, custom chrome lettering and dense poster typography. Review its README and artifacts before further changes. It includes a short stepped-motion test, not a final film. Claude consultation is blocked by expired OAuth; its prompt and failure evidence are preserved. No critique was received.
+The first motion sprint is complete. Olof found it better but identified plain graphic design as the primary risk. Three focused identities followed in `studies/design-v003/`. He prefers Night Fever as a still and rejects its movement. Claude login was restored and an Opus 5.5 consultation completed; the saved critique informed `studies/motion-v004/`, a fixed-composition material cycle tested at three speeds. Read that study's README and artifacts before further changes. Preserve the Night Fever artwork, and wait for Olof's playback judgment before treating this new motion as successful. The final film still needs many different identities and a selected theme.
 
 Read this plan, the project README, and the latest study README for current evidence and remaining work. Keep reusable primitives in project-owned `tools/`; promote to workspace tooling only after a second project needs them.

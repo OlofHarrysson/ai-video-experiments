@@ -41,4 +41,6 @@ The renderer refuses to overwrite output. Preserve `output/` by renaming it, or 
 
 ## Consultation
 
+Follow-up: Olof restored the login. The next consultation completed successfully with `claude-opus-5-5`; see [the saved critique](claude-motion-review.md) and [the resulting timing/material experiment](../motion-v004/README.md). Olof prefers Night Fever among these stills and rejects the v003 movement. The failure below is the earlier attempt, retained as history.
+
 Claude CLI 2.1.280 was checked against current model documentation. The read-only `opus` / high-effort call failed before a model answered: `Failed to authenticate: OAuth session expired and could not be refreshed`. `claude auth status` reports logged out. No model identity or critique was returned; no advice is attributed to Claude. The prompt is saved in `consultation-prompt.txt`, and the failure receipt is local under `references/consultations/`. Restore the existing login with `claude auth login` to retry. No API-billed fallback was used.

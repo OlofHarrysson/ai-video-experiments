@@ -15,15 +15,16 @@ window.DesignStudy=(()=>{
  function star(g,x,y,r,color,rot=0){g.save();g.translate(x,y);g.rotate(rot);g.beginPath();for(let i=0;i<8;i++){const a=i*TAU/8,rr=i%2?r*.13:r;g.lineTo(Math.cos(a)*rr,Math.sin(a)*rr)}g.closePath();g.fillStyle=color;g.fill();g.restore()}
  const names=['Night Fever · lacquer script','Overload · engineered lettering','All at Once · optical overprint'];
  const plates=new Map();
- function script(g,variant=0){
-  // Both words and their connecting strokes form one diagonal silhouette.
-  const draw=(dx,dy,fill,stroke,lw)=>{g.save();g.translate(640+dx,272+dy);g.rotate(-.075);g.translate(-640,-272);
+ function nightLayer(g,dx,dy,fill,stroke,lw){g.save();g.translate(640+dx,272+dy);g.rotate(-.075);g.translate(-640,-272);
    text(g,'Night',60,28,856,284,'"Snell Roundhand"',{fill,stroke,lw});
    text(g,'Fever',393,244,799,237,'"Snell Roundhand"',{fill,stroke,lw});
    // The lead-in grows into the N; the terminal follows the r exit stroke.
    g.beginPath();g.moveTo(120,202);g.bezierCurveTo(-16,273,55,445,254,380);g.bezierCurveTo(350,349,311,279,216,335);g.bezierCurveTo(167,363,219,407,339,389);
    g.moveTo(1119,446);g.bezierCurveTo(1237,446,1260,335,1144,319);g.bezierCurveTo(1085,310,1082,346,1121,357);
-   g.strokeStyle=stroke||fill;g.lineWidth=lw?Math.max(3,lw*.8):7;g.lineCap='round';g.stroke();g.restore();};
+   g.strokeStyle=stroke||fill;g.lineWidth=lw?Math.max(3,lw*.8):7;g.lineCap='round';g.stroke();g.restore();}
+ function script(g,variant=0){
+  // Both words and their connecting strokes form one diagonal silhouette.
+  const draw=(dx,dy,fill,stroke,lw)=>nightLayer(g,dx,dy,fill,stroke,lw);
   // Offset mass, broad dark separator, pale bevel and colored lacquer face.
   for(let i=19;i>0;i--)draw(i*.7,i*.7,'#302758','#302758',7);
   draw(0,0,null,'#08060e',18);draw(0,0,null,'#eb94c6',12);draw(-2,-2,null,'#fae8cf',8);
@@ -91,5 +92,5 @@ window.DesignStudy=(()=>{
   if(id===1){const split=[0,36,-18,0,72,0][phase];const p=plate(id,phase===4?1:0);g.drawImage(p,0,0,W,272,split,0,W,272);g.drawImage(p,0,272,W,272,-split,272,W,272);if(phase===4){g.globalCompositeOperation='screen';g.globalAlpha=.45;g.drawImage(p,-24,0);g.globalAlpha=1;g.globalCompositeOperation='source-over'}}
   if(id===2){const p=plate(id,phase===3?1:0);const zoom=[1,1.05,1,1.12,1.35,1][phase];g.translate(640,272);g.scale(zoom,zoom);g.drawImage(p,-640,-272);if(phase===4){g.globalCompositeOperation='difference';g.fillStyle='#fff1a1';g.fillRect(-640,-272,W,H);g.globalCompositeOperation='source-over'}}
  }
- return {W,H,names,render};
+ return {W,H,names,render,nightLayer};
 })();

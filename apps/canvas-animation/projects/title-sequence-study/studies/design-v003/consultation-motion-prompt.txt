@@ -1,0 +1,17 @@
+Olof has reviewed our three title-graphic designs. He says Night Fever is the best, but the movement is pretty crap. He asks how the artwork is made (answer: hand-written Canvas code using Snell Roundhand, layered outlines, gradients, offset extrusion passes and custom Bezier flourishes; no image-generation model). He restored Claude login so we can get your second opinion.
+Please investigate visually and advise before I choose the next revision. Treat this as a read-only consultation; do not edit files, create files or execute mutating commands. Use the available evidence and be candid about what you can and cannot judge from frames versus real-time playback.
+Context: the style reference is the Enter the Void opening credits, approximately 1:50 onward. Olof likes escalating visual chaos, many different graphic identities, and increasingly difficult readability; he does not want one unified look. Theme is still open. Earlier GSAP/OpenType motion studies had more movement, but looked plain. v003 made better stills yet its motion simply switches cached whole-image crops/scales and horizontal offsets through six held states. That may have mistaken abrupt editing for choreography. I do not want another generic wobble, reveal, or zoom substituted for understanding the reference.
+Please examine Night Fever and the relevant original reference frames closely, compare our actual motion implementation/evidence, and give your own view of what is missing and a concrete direction for a small next motion experiment. You can challenge my diagnosis. Also assess what Night Fever gets right and where it is still simplistic. No need to agree or flatter. Preserve the successful artwork rather than recommending a wholesale visual redesign by default.
+Useful starting files, relative to this repository:
+apps/canvas-animation/projects/title-sequence-study/studies/design-v003/output/01.png
+apps/canvas-animation/projects/title-sequence-study/studies/design-v003/output/motion-test.mp4
+apps/canvas-animation/projects/title-sequence-study/studies/design-v003/output/encoded-review/v001/contact-sheet.jpg
+apps/canvas-animation/projects/title-sequence-study/studies/design-v003/art.js
+apps/canvas-animation/projects/title-sequence-study/references/inspection/design-v003/output/comparison-1.png
+apps/canvas-animation/projects/title-sequence-study/references/inspection/transitions/v001/review.json
+apps/canvas-animation/projects/title-sequence-study/references/inspection/transitions/v001/contact-sheet.jpg
+apps/canvas-animation/projects/title-sequence-study/references/inspection/transitions/v001/contact-sheet-002.jpg
+apps/canvas-animation/projects/title-sequence-study/references/inspection/transitions/v001/contact-sheet-003.jpg
+apps/canvas-animation/projects/title-sequence-study/reference-study.md
+apps/canvas-animation/projects/title-sequence-study/studies/motion-v002/output/motion-phases.png
+The original local reference is apps/canvas-animation/projects/title-sequence-study/references/original/enter-the-void-intro.mp4. Existing inspection frames and manifests carry exact source timestamps. Feel free to inspect further existing evidence as useful, without writing new artifacts.

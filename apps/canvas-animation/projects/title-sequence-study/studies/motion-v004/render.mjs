@@ -1,0 +1,16 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';import {createRequire} from 'node:module';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+const {chromium}=createRequire(new URL('../../../../../../.agents/skills/animate/package.json',import.meta.url))('playwright');
+const here=path.dirname(fileURLToPath(import.meta.url)),out=path.join(here,'output');if(fs.existsSync(out))throw new Error('Preserve output before rerendering');fs.mkdirSync(out,{recursive:true});
+const b=await chromium.launch();try{const page=await b.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(pathToFileURL(path.join(here,'index.html')).href);await page.waitForFunction(()=>window.cycleReady);
+ const hash=b=>createHash('sha256').update(b).digest('hex');
+ const source=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=1280;c.height=544;DesignStudy.render(0,0,c,true);return c.toDataURL().split(',')[1]});
+ const baseline=fs.readFileSync(path.resolve(here,'../design-v003/output/01.png'));if(hash(Buffer.from(source,'base64'))!==hash(baseline))throw new Error('Approved still changed during layer extraction');
+ const png=async(t,hold)=>Buffer.from(await page.evaluate(({t,hold})=>{const c=document.createElement('canvas');c.width=1280;c.height=588;RenderCycle.render(t,c,{hold,label:true});return c.toDataURL().split(',')[1]},{t,hold}),'base64');
+ const report={baselinePreserved:true,checks:[],duration:9,fps:24,frames:216,audio:false};
+ for(const hold of [6,4,2]){const a=await png(.6,hold);await png(2.7,hold);const repeat=await png(.6,hold);if(hash(a)!==hash(repeat))throw new Error('Seek mismatch');report.checks.push({hold,repeatable:true})}
+ const board=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=1280;c.height=912;const g=c.getContext('2d');g.fillStyle='#171717';g.fillRect(0,0,1280,912);for(let i=0;i<6;i++){const p=document.createElement('canvas');p.width=1280;p.height=544;RenderCycle.render(i*6/24,p,{hold:6,partner:false});const x=i%2*640,y=Math.floor(i/2)*304;g.drawImage(p,x,y,640,272);g.font='18px system-ui';g.fillStyle='#eee';g.fillText(RenderCycle.names[i],x+16,y+295)}return c.toDataURL().split(',')[1]});fs.writeFileSync(path.join(out,'materials.png'),Buffer.from(board,'base64'));
+ const dir=path.join(out,'frames');fs.mkdirSync(dir);for(let f=0;f<216;f++){const section=Math.floor(f/72),hold=[6,4,2][section];fs.writeFileSync(path.join(dir,`f${String(f).padStart(4,'0')}.png`),await png((f%72)/24,hold))}
+ const r=spawnSync('ffmpeg',['-v','error','-y','-framerate','24','-i',path.join(dir,'f%04d.png'),'-frames:v','216','-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',path.join(out,'cadence-comparison.mp4')],{stdio:'inherit'});if(r.status)throw new Error('ffmpeg failed');
+ await page.selectOption('#speed','2');await page.click('#play');await page.waitForTimeout(170);await page.click('#play');if(await page.locator('#play').textContent()!=='Play')throw new Error('Pause failed');if(errors.length)throw new Error(errors.join('\n'));
+ fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({out,...report}));
+}finally{await b.close()}

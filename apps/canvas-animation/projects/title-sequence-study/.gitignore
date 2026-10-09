@@ -1,4 +1,5 @@
 node_modules/
 studies/motion-v002/output*/
 studies/design-v003/output*/
+studies/motion-v004/output*/
 tools/font-data.js
