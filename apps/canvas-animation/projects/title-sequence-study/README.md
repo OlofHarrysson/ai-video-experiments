@@ -14,7 +14,9 @@ First understand the reference visually, then discuss what our project should be
 - Reference source and intake recorded in [reference-source.json](reference-source.json).
 - Olof supplied the local video after YouTube access was blocked. A hash-verified independent copy is preserved at `references/original/enter-the-void-intro.mp4`.
 - [The first visual study](reference-study.md) is complete: overview, varied typographic samples and every-frame inspection of three short windows around 1:50 onward.
-- [Twelve typography feasibility studies](studies/typography-v001/README.md) test font-based effects, integrated graphics and custom letter geometry. Frames, reference comparisons and a silent motion proof have been screened by the assistant; Olof's assessment is pending.
+- [Twelve typography feasibility studies](studies/typography-v001/README.md) test font-based effects, integrated graphics and custom letter geometry. Olof finds them decent but less impressive than the reference, with insufficient motion in several examples.
+- [Eight motion studies and an escalating edit](studies/motion-v002/README.md) use project-local GSAP timelines, OpenType outline extraction and reusable drawing primitives. Catalogue and montage await Olof's motion review.
+- [Motion plan](MOTION-PLAN.md) records the authorized scope and deferred GPU effects, font collection, custom lettering, sound and theme work.
 - Local reference media belongs in `references/original/`; derived clips, frames and contact sheets belong elsewhere under `references/`. The entire reference directory is ignored by Git.
 - No theme, film storyboard or original soundtrack has been selected. The typography and motion studies are tests, not an approved film treatment.
 
@@ -24,7 +26,7 @@ Olof likes the text-based visual chaos and the gradual escalation from a calm be
 
 AI progress, investment and hype accelerating toward loss of control is a candidate, not the selected theme. Possible material includes model names, money and headlines, but Olof questions whether historical model names such as BERT would resonate with a broad audience. His personal experience in AI informs the idea; this does not establish an insider-history format or verify on-screen claims.
 
-The immediate priority is visually compelling graphic identities. Olof explicitly requested these feasibility tests ahead of theme and story selection. Next: review the twelve studies and identify strong and weak families, then resume theme discussion.
+The immediate priority is a large variety of graphic identities and motion behaviors. Olof explicitly requested these feasibility tests ahead of theme and story selection. He likes the neon look but wants meaningful motion, finds the detached script flourish out of place, and likes the tangled outlines' activity. Simple treatments can coexist with complex ones. He authorized motion tooling and the next study, recommending GSAP from prior experience. Next: review the eight motion behaviors and their escalating combination, then expand selected treatments and resume theme discussion.
 
 ## First milestone: inspect and discuss
 

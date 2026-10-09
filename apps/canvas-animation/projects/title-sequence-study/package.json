@@ -1,0 +1,14 @@
+{
+  "name": "title-sequence-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:fonts": "node tools/prepare-fonts.mjs",
+    "prerender:motion": "npm run prepare:fonts",
+    "render:motion": "node studies/motion-v002/render.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "opentype.js": "2.0.0"
+  }
+}
