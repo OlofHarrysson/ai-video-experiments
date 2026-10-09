@@ -25,4 +25,6 @@ The first typography study is decent but less impressive than the reference. Olo
 
 ## Continuation
 
-Read this plan, the project README, and `studies/motion-v002/README.md` for current evidence and remaining work. Keep reusable primitives in project-owned `tools/`; promote to workspace tooling only after a second project needs them.
+The motion sprint is complete. Olof finds it better but sees plain graphic design as the primary risk. The next authorized experiment produced three focused identities in `studies/design-v003/`: interlocking script, custom chrome lettering and dense poster typography. Review its README and artifacts before further changes. It includes a short stepped-motion test, not a final film. Claude consultation is blocked by expired OAuth; its prompt and failure evidence are preserved. No critique was received.
+
+Read this plan, the project README, and the latest study README for current evidence and remaining work. Keep reusable primitives in project-owned `tools/`; promote to workspace tooling only after a second project needs them.

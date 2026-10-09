@@ -1,0 +1,10 @@
+Olof wants us to get beyond plain typography demos toward the graphic richness and variety of the Enter the Void opening credits. He liked some early simple studies and the new motion, but the biggest risk now is that the graphic design is not cool enough. He authorizes experiments and a second pair of eyes from you. The film theme is undecided; AI hype/progress is only a candidate. We are testing visual capability before story choice.
+Please visually inspect the local reference-versus-study comparison sheets and the motion study overview. Read any relevant source if useful. Help me diagnose the design gap and choose three concrete, ambitious original treatments for the next focused pass. I want your visual judgment and useful craft advice, not praise or a generic more-effects checklist. Consider what is achievable through custom paths, local font geometry, Canvas, GSAP and compositing. We have already agreed tooling alone won't solve it. Elaborate bespoke lettering, compound compositions and sharply different identities seem more valuable than another eight looping effects. The designs should carry a still frame before motion. Do not implement or change any files.
+Starting evidence, relative to this repository:
+apps/canvas-animation/projects/title-sequence-study/references/inspection/typography-v001-comparisons/comparison-1.png
+apps/canvas-animation/projects/title-sequence-study/references/inspection/typography-v001-comparisons/comparison-2.png
+apps/canvas-animation/projects/title-sequence-study/references/inspection/typography-v001-comparisons/comparison-3.png
+apps/canvas-animation/projects/title-sequence-study/studies/motion-v002/output/motion-overview.png
+apps/canvas-animation/projects/title-sequence-study/studies/typography-v001/lettering.js
+apps/canvas-animation/projects/title-sequence-study/studies/motion-v002/scenes.js
+apps/canvas-animation/projects/title-sequence-study/MOTION-PLAN.md
