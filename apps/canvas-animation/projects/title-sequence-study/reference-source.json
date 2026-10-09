@@ -1,0 +1,23 @@
+{
+  "recorded_on": "2026-10-09",
+  "work": "Enter the Void",
+  "sequence": "Opening / credit sequence, as identified by Olof",
+  "url": "https://www.youtube.com/watch?v=wNtxgxYY7sI",
+  "youtube_id": "wNtxgxYY7sI",
+  "focus_start_seconds": 110,
+  "focus_timestamp_status": "Approximate user cue; not verified",
+  "purpose": "Visual and temporal style study before choosing an original theme",
+  "status": "awaiting-local-reference",
+  "access_attempts": [
+    {"method": "web fetch", "result": "Failed to fetch"},
+    {"method": "yt-dlp metadata", "result": "HTTP 429 and sign-in-to-confirm-not-a-bot"},
+    {"method": "in-app browser", "result": "Anti-bot challenge; playback unavailable"}
+  ],
+  "local_original": null,
+  "sha256": null,
+  "duration_seconds": null,
+  "dimensions": null,
+  "frame_rate": null,
+  "visually_inspected": false,
+  "theme": null
+}
