@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-30",
+  "hypothesis": "AI video restyling can turn a crude 3D performance into a visually appealing character while preserving motion and speech timing.",
+  "source": {
+    "path": ".private/restyle/source.mp4",
+    "original": ".private/exports/demo.mp4",
+    "duration_seconds": 12.239,
+    "fps": 30,
+    "width": 1742,
+    "height": 1066,
+    "notes": "Existing procedural placeholder character; not a skeletal rig. CFR normalized from browser export. Stock Qwen Aiden speech; audio-energy mouth motion."
+  },
+  "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+  "runs": [
+    {
+      "style": "film",
+      "status": "completed",
+      "recipe": {
+        "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+        "input": {
+          "video_url": "https://v3b.fal.media/files/b/0aac8bc4/_y9gwGUOf2qIFM_fekRE4_rough-character-performance.mp4",
+          "keep_audio": true,
+          "prompt": "Restyle the entire @Video1 into a beautifully art-directed, high-end stylized 3D animated feature film. Transform the crude placeholder character into a charming adult male storyteller with a softly sculpted expressive face, natural eyelids and cheeks, appealing proportions, expressive brown eyes behind round dark glasses, layered swept auburn hair with fine strands, and a warm terracotta knit sweater with realistic fabric folds. Replace the primitive segmented shoulders and arms with a seamless, well-designed character in continuous clothing. Rich cinematic rendering, subtle skin translucency, tactile fabric, soft warm studio key light and cool fill, gentle contact shadows, quiet warm ivory studio background. Keep the recognizable overall character, hairstyle, glasses and clothing colors. Critically, preserve the exact source shot composition, locked camera, duration, every head tilt, blink, body and arm movement and the original timing of mouth opening and closing to the speech. This is visual restyling of the existing performance, with no new acting, no cuts, no camera motion, no captions or logos. Keep a single consistent character design throughout, and retain the source speech unchanged."
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "request_id": "01a0f413-ee2e-7652-997b-0abe94015409",
+      "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+      "status_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f413-ee2e-7652-997b-0abe94015409/status",
+      "response_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f413-ee2e-7652-997b-0abe94015409",
+      "cancel_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f413-ee2e-7652-997b-0abe94015409/cancel",
+      "poll_after_seconds": 20,
+      "polling_hint": "Wait poll_after_seconds before calling check_job with the same request_id and status_url. This interval is not an ETA. Report meaningful status changes rather than repeating unchanged progress. Do not submit another job to check progress.",
+      "hint": "Job submitted. Use check_job with status_url to check status, then get_job_result with response_url when it completes.",
+      "estimated_cost_usd": 1.7134600000000002,
+      "output": {
+        "video": {
+          "url": "https://v3b.fal.media/files/b/0aac8c03/1ygDN-O9_r7i4szvjHhW7_output.mp4",
+          "content_type": "video/mp4",
+          "file_name": "output.mp4",
+          "file_size": 9693602
+        }
+      },
+      "local_file": ".private/restyle/film.mp4"
+    },
+    {
+      "style": "clay",
+      "status": "completed",
+      "recipe": {
+        "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+        "input": {
+          "video_url": "https://v3b.fal.media/files/b/0aac8bc4/_y9gwGUOf2qIFM_fekRE4_rough-character-performance.mp4",
+          "keep_audio": true,
+          "prompt": "Restyle the entire @Video1 as a beautifully handcrafted clay puppet animation, photographed on a miniature studio set. The character becomes an appealing handmade clay adult male storyteller: soft sculpted terracotta-peach face, slightly irregular clay surface with subtle fingerprints, carefully sculpted eyebrows, expressive brown glass eyes behind round black wire glasses, rich auburn sculpted hair, and a burnt-orange sweater made of visibly woven wool. Seamlessly sculpted shoulders and sleeve-covered arms, warm friendly face, charming artisan puppet proportions. Soft warm practical lighting, delicate film grain, tangible physical materials, quiet warm ivory studio background. Keep the source hairstyle, glasses and color palette recognizable. Critically, preserve the exact source shot composition, locked camera, full duration, every head tilt, blink, arm and body movement and exact timing of mouth opening and closing to the original speech. Preserve smooth source motion; apply the handmade appearance without changing motion cadence. No new acting, no cuts, no camera motion, no captions or logos. Keep one coherent puppet design and stable texture throughout. Retain the original speech unchanged."
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "request_id": "01a0f414-2a66-7f63-afa7-8f2f5627c8e2",
+      "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+      "status_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f414-2a66-7f63-afa7-8f2f5627c8e2/status",
+      "response_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f414-2a66-7f63-afa7-8f2f5627c8e2",
+      "cancel_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a0f414-2a66-7f63-afa7-8f2f5627c8e2/cancel",
+      "poll_after_seconds": 20,
+      "polling_hint": "Wait poll_after_seconds before calling check_job with the same request_id and status_url. This interval is not an ETA. Report meaningful status changes rather than repeating unchanged progress. Do not submit another job to check progress.",
+      "hint": "Job submitted. Use check_job with status_url to check status, then get_job_result with response_url when it completes.",
+      "estimated_cost_usd": 1.7134600000000002,
+      "output": {
+        "video": {
+          "url": "https://v3b.fal.media/files/b/0aac8c2f/JyE-eFi4ORFVfafGpw8Ly_output.mp4",
+          "content_type": "video/mp4",
+          "file_name": "output.mp4",
+          "file_size": 11140590
+        }
+      },
+      "local_file": ".private/restyle/clay.mp4"
+    }
+  ],
+  "billing": {
+    "unit": "seconds",
+    "unit_price_usd": 0.14,
+    "estimated_video_cost_usd": 3.4269200000000004,
+    "previous_tts_cost_usd": 0.01557,
+    "estimated_project_cost_usd": 3.4424900000000003,
+    "project_budget_usd": 50,
+    "invoice_verified": false,
+    "note": "Rate-based estimate; duration rounding not reconciled against invoice."
+  },
+  "validation": {
+    "video": {
+      "source_duration_seconds": 12.2,
+      "output_duration_seconds": 12.041667,
+      "tail_lost_seconds": 0.158333,
+      "output_resolution": [
+        1840,
+        1124
+      ],
+      "output_fps": 24
+    },
+    "audio": {
+      "source_start_seconds": 0.017,
+      "output_start_seconds": 0,
+      "output_sample_lag_seconds": 0.016625,
+      "overlap_correlation": 0.9882637541653824,
+      "tail_truncated": true
+    },
+    "visual": "12 samples per clip and an 8 FPS sequence between 7 and 8 seconds. Both styles improve appearance. Framing changes in both. Film blink is shifted relative to source; clay blink not present in the sampled interval. Continuous playback not verified because browser control timed out."
+  }
+}

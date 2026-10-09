@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-30",
+  "endpoint_id": "fal-ai/qwen-3-tts/text-to-speech/1.7b",
+  "request_id": "01a0f3a7-f36d-7b03-a550-4c6877767acd",
+  "input": {
+    "text": "Hello Olof. I'm a real three dimensional character. You can change my look, move the camera, and direct my performance. This is a sample voice. Your own voice can come next.",
+    "voice": "Aiden",
+    "language": "English",
+    "prompt": "Warm, natural, conversational delivery. Speak clearly with a little curiosity, at a relaxed but engaging pace.",
+    "max_new_tokens": 2048
+  },
+  "result": {
+    "url": "https://v3b.fal.media/files/b/0aac8904/P0kODlpA5P7zhrRn32Hyt_pmfoKzEI.mp3",
+    "local_file": "public/audio/sample.mp3",
+    "duration_seconds": 12.216875
+  },
+  "billing": {
+    "unit": "1000 characters",
+    "unit_price_usd": 0.09,
+    "input_characters": 173,
+    "estimated_cost_usd": 0.01557,
+    "invoice_verified": false,
+    "project_budget_usd": 50
+  },
+  "limitations": [
+    "Stock voice, not Olof.",
+    "No reference face or personal voice uploaded.",
+    "This file records the speech job only. Video restyling provenance and cumulative estimates are in docs/experiments/restyle.json."
+  ]
+}

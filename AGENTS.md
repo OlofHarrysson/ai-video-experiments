@@ -45,6 +45,7 @@ Start here for repository documentation. Add shared explanations as separate `do
 
 ### Develop and operate
 
+- [Avatar studio](apps/avatar-studio/README.md): controllable 3D performance and AI video restyling experiments.
 - [Deforum app](apps/deforum/README.md): workspace and development entry points.
 - [ComfyUI Pods](apps/deforum/POD.md): GPU execution and resource lifecycle.
 - [RunPod setup](docs/runpod.md): repository-scoped tools and authentication; [serverless runbook](apps/deforum/serverless/README.md) for serverless operation.

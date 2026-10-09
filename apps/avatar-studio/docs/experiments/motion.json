@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-01",
+  "status": "completed_reviewed",
+  "source": {
+    "local_file": ".private/motion/source.mp4",
+    "recording": ".private/exports/6224f70d-6008-4f40-b6b4-a56123836d80.webm",
+    "duration_seconds": 8,
+    "fps": 30,
+    "frames": 240,
+    "width": 1280,
+    "height": 960,
+    "audio": false,
+    "bytes": 490117
+  },
+  "endpoint_id": "fal-ai/kling-video/o3/pro/video-to-video/edit",
+  "prepared_input": {
+    "prompt": "Restyle the entire @Video1 into a beautifully art-directed, high-end stylized 3D animated feature film. Transform the crude placeholder into a charming adult male storyteller with a softly sculpted face, natural eyelids and cheeks, expressive brown eyes behind round dark glasses, swept auburn hair with fine strands, and a warm terracotta knit sweater. Replace primitive segmented arms with seamless sleeve-covered arms and well-formed hands. Subtle skin translucency, tactile fabric, warm studio key light and cool fill, gentle contact shadows, quiet warm ivory background. Preserve the exact fixed camera and source framing: keep the complete upper body and both hands visible throughout. Preserve the source performance exactly: the character raises his right arm on the viewer's left, waves twice with the same reversals and timing, lowers that arm, turns his head toward the viewer's right, turns it toward the viewer's left, then returns to face forward. Follow the actual motion in @Video1, including the held poses, timing and turn magnitude; do not invent extra gestures or camera movement. The other arm and torso remain still. Keep the mouth closed; this is a silent motion test. No cuts, zoom, reframing, captions or logos. Keep a single consistent character and full clip duration, including the quiet final hold.",
+    "keep_audio": false,
+    "video_url": "https://v3b.fal.media/files/b/0aad32c2/fmJezB4Kk-GfRLLM_qFLW_avatar-motion-source.mp4"
+  },
+  "video_url": "https://v3b.fal.media/files/b/0aad32c2/fmJezB4Kk-GfRLLM_qFLW_avatar-motion-source.mp4",
+  "request_id": "01a10d8e-fbb0-7331-a6f8-c884814f3e24",
+  "billing": {
+    "unit_price_usd": 0.14,
+    "unit": "seconds",
+    "prior_project_estimated_spending_usd": 3.44249,
+    "project_spending_this_experiment_usd": 1.12,
+    "budget_usd": 50,
+    "invoice_verified": false,
+    "estimated_job_usd": 1.12,
+    "project_estimated_total_usd": 4.56249
+  },
+  "submitted_at": "2026-10-05T19:34:14.332Z",
+  "status_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a10d8e-fbb0-7331-a6f8-c884814f3e24/status",
+  "response_url": "https://queue.fal.run/fal-ai/kling-video/requests/01a10d8e-fbb0-7331-a6f8-c884814f3e24",
+  "previous_blocker": {
+    "stage": "upload_initiate",
+    "http_status": 403,
+    "reason": "balance_exhausted",
+    "billing_url": "https://fal.ai/dashboard/billing"
+  },
+  "completed_at": "2026-10-05T19:39:56.854Z",
+  "result": {
+    "video": {
+      "url": "https://v3b.fal.media/files/b/0aad32de/fgdTrmzJkL1K2JDBCoSn4_output.mp4",
+      "content_type": "video/mp4",
+      "file_name": "output.mp4",
+      "file_size": 6040952
+    }
+  },
+  "output": {
+    "local_file": ".private/motion/styled.mp4",
+    "duration_seconds": 8.041667,
+    "fps": 24,
+    "frames": 193,
+    "width": 1660,
+    "height": 1244,
+    "audio": false,
+    "bytes": 6040952
+  },
+  "review": {
+    "verdict": "Gross motion transfers with small local timing delays; visual polish improves but crude body and arm structure remains.",
+    "method": "Paired timestamp checkpoints and denser transition frames, independently reviewed. Browser playback completed without media error.",
+    "report": "docs/experiments/motion.md",
+    "comparison": ".private/motion/comparison.mp4",
+    "page": "/motion.html",
+    "lip_sync_tested": false
+  }
+}

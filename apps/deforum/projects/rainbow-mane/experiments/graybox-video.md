@@ -1,5 +1,7 @@
 # Graybox motion and separate appearance reference
 
+**Paused 9 October 2026 at Olof's request.** Inputs remain preserved. Do not upload or submit the prepared request unless Olof resumes this study. The billing observations below describe the earlier preparation session.
+
 2026-10-01. Olof finds the guided Krea result "pretty good" and says it restyles the input well. He wants the sketch to act as a graybox. He approves testing the same four-second motion with a neutral structural guide and a separate finished style image in a video model with structural control.
 
 ## Question
@@ -17,7 +19,7 @@ Can the approved profile-to-horse movement survive whole-clip video generation w
 
 Live catalog checked 2026-10-01. Seedance 2.5 reference-to-video supports a four-second guide video plus a separately named image reference. Its documented clay-render workflow assigns structure to the video and appearance to the image. This is reference-based guidance, not a guarantee of pixel-locked geometry.
 
-Fal's authenticated account readiness check reports `balance_exhausted`, so no upload or paid request has been submitted. Olof selects adding Fal credit for Seedance. Wait for him to report the top-up, then check account readiness before any upload or submission. No RunPod resource has been provisioned.
+During preparation, Fal's authenticated account readiness check reported `balance_exhausted`, so no upload or paid request was submitted. Olof initially selected adding Fal credit for Seedance, then paused this project on 9 October. No RunPod resource was provisioned.
 
 The Seedance US endpoint quotes $0.02568 per 1,000 tokens at 720p. Its published formula includes input and output video duration and multiplies by 0.6 for video references. For 1280×720 and four input plus four output seconds, the estimate is $2.73; this is not a final invoice. No new compute has been started.
 

@@ -14,6 +14,7 @@ Start with [AGENTS.md](AGENTS.md): the project brief, working guidance and canon
 
 ## Experiments
 
+- [Avatar studio](apps/avatar-studio/README.md): paused study of controllable 3D performance and AI video restyling, with source/style and motion comparisons.
 - [Deforum](apps/deforum/README.md): recurrent image diffusion, spatial controls and film experiments using ComfyUI on RunPod.
 - [ComfyUI](apps/comfyui/README.md): still-image composition, regional prompts and layered painting on RunPod.
 - [Blender animation](apps/blender-animation/README.md) and [stop-motion](apps/stop-motion/README.md): separate studies with their own project briefs.

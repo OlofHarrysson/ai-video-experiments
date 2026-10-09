@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Character screen test</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f1ea; color: #2b302d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    main { max-width: 1320px; margin: 0 auto; padding: 48px 32px; }
+    h1 { font-family: Georgia, serif; font-size: clamp(32px, 4vw, 52px); font-weight: 400; letter-spacing: -1.4px; margin: 0 0 12px; }
+    p { color: #62695f; line-height: 1.6; max-width: 720px; margin: 0; }
+    .screen { margin: 32px 0 18px; border-radius: 16px; overflow: hidden; background: #e6e2d9; }
+    video { display: block; width: 100%; background: #e6e2d9; }
+    .labels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 16px 20px; text-align: center; font-size: 14px; border-top: 1px solid #d7d5cc; }
+    .labels span { display: block; font-size: 12px; color: #6d7369; margin-top: 4px; }
+    .note { font-size: 14px; }
+    details { margin-top: 28px; border-top: 1px solid #d7d5cc; padding-top: 20px; }
+    summary { cursor: pointer; width: fit-content; font-size: 14px; }
+    details p { margin-top: 16px; font-size: 14px; }
+    .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 20px; }
+    a { color: #345847; text-underline-offset: 4px; font-size: 14px; }
+    #error { color: #943b2c; margin-top: 12px; }
+    @media (max-width: 600px) { main { padding: 30px 16px; } .labels { gap: 8px; padding: 12px 8px; font-size: 12px; } .labels span { font-size: 11px; } .screen { margin-top: 24px; border-radius: 10px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>One performance. Two new looks.</h1>
+  <p>A rough 3D character, passed through AI video styling. Same placeholder speech, two visual directions.</p>
+  <div class="screen">
+    <video id="comparison" controls playsinline preload="metadata" aria-label="Source, animated-film and clay style comparison"></video>
+    <div class="labels"><div>Rough 3D source<span>Original animation</span></div><div>Animated film<span>AI style pass</span></div><div>Handmade clay<span>AI style pass</span></div></div>
+  </div>
+  <p class="note">Play with sound. Compare the mouth, blinks and head movement as well as the overall look.</p>
+  <p class="note"><a href="/motion.html">Watch the short motion test</a></p>
+  <p id="error" role="status" hidden></p>
+  <details>
+    <summary>Full-size videos &amp; experiment notes</summary>
+    <div class="links"><a data-file="source.mp4">Original</a><a data-file="film.mp4">Animated film</a><a data-file="clay.mp4">Handmade clay</a></div>
+    <p>These are rendered videos. The AI changes the appearance of the footage; it does not produce a new editable 3D character. The source mouth follows speech volume, so this test cannot establish accurate phoneme lip-sync.</p>
+    <p>Both styles improve the look, but framing and mouth timing change. The film version retains the source blink with a small timing shift; the clay version misses it in the sampled interval. Both outputs trim about 0.16 seconds from the video tail. Visual review used sampled frames; uninterrupted playback remains to be judged.</p>
+    <p>The comparison center-crops each video and uses the original speech once, ending at the shortest output. Full-size links preserve the provider outputs. Kling O3 Pro performed both style passes. Two video jobs plus the stock Qwen voice cost approximately $3.44, based on the published rates; the invoice is not reconciled.</p>
+    <p><a href="/docs/experiments/restyle.md">Results and limitations</a> · <a href="/studio.html">Open source character workspace</a></p>
+  </details>
+</main>
+<script type="module">
+  const base = '/.private/restyle/';
+  const video = document.querySelector('#comparison');
+  video.poster = base + 'comparison-poster.jpg';
+  video.src = base + 'comparison.mp4';
+  for (const link of document.querySelectorAll('[data-file]')) link.href = base + link.dataset.file;
+  video.addEventListener('error', () => {
+    const error = document.querySelector('#error');
+    error.hidden = false;
+    error.textContent = 'The local comparison video is unavailable. Keep the generated files in .private/restyle and open this page through the local studio server.';
+  });
+</script>
+</body>
+</html>
