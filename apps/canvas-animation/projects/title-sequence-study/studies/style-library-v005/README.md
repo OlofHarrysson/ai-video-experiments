@@ -2,7 +2,9 @@
 
 A reusable visual vocabulary developed from Olof's *Enter the Void* and *All Of The Lights* references. **17 construction families, 68 material/composition states, and seven additional fixed layouts with four treatments each.** These counts describe alternatives, not 96 equally finished designs. Theme, final film structure and soundtrack remain open.
 
-Start with [the local review page](review.html): a 25-second escalating showcase, a 34-second construction catalogue, a 14-second composition catalogue, and a 16-second internal-motion comparison. Then [open the interactive library](index.html) to change words, compare treatments, animate a single treatment, or save a PNG. The videos are silent. Playback starts only when requested.
+The current [medium-to-medium-high timing experiment](RHYTHM.md) responds to Olof’s feedback that the opening was too slow and the peak too fast. It uses a repeated visual pulse with 0.25–0.5-second holds. The original escalation cut remains available for comparison.
+
+Start with [the local review page](review.html): a new 24-second rhythm cut, a 25-second escalating showcase, a 34-second construction catalogue, a 14-second composition catalogue, and a 16-second internal-motion comparison. Then [open the interactive library](index.html) to change words, compare treatments, animate a single treatment, or save a PNG. The videos are silent. Playback starts only when requested.
 
 ## What is worth taking forward
 

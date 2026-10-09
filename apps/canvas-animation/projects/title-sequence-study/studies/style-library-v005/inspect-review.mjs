@@ -27,7 +27,7 @@ try {
     fs.writeFileSync(path.join(out,`composition-states-${sheet+1}.png`),Buffer.from(png,'base64'));
   }
   await page.goto(pathToFileURL(path.join(here,'review.html')).href);
-  const expected=[25.4166666667,34,14,16],videos=[];
+  const expected=[24,25.4166666667,34,14,16],videos=[];
   for(let i=0;i<expected.length;i++){
     await page.locator('button[data-src]').nth(i).click();
     await page.waitForFunction(()=>document.querySelector('video').readyState>=2||document.querySelector('video').error);

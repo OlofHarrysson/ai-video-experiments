@@ -29,6 +29,8 @@ The first motion sprint is complete. Olof found it better but identified plain g
 
 `studies/style-library-v005/` expands that direction using All Of The Lights as a second inspected reference. Seventeen constructions, seven layouts, original Wild lettering, compound brush contours and a surface experiment are available with a silent escalating showcase. The library distinguishes material cycling from native motion and can preview either. See its README and screening record for current artifacts and unresolved finish issues.
 
+Olof’s latest timing direction is medium to medium-high activity with a modest lift and recurring rhythm, rather than a slow opening followed by an extreme rush. The first experiment in this range is recorded in `studies/style-library-v005/RHYTHM.md`; it is not yet a selected final cadence.
+
 The next high-value work is optical design of actual film words: custom joins/counters, coherent ornament, a few purposeful transitions and timing against sound. GPU effects remain conditional on a selected shot that needs them. A generalized script alphabet, arbitrary glyph morphing, true depth-ordered reflective lettering, perfect bulb placement and final-film timing are deferred. The new centreline SVG and family reuse notes make those choices concrete without committing to a new pipeline.
 
 Read this plan, the project README, and the latest study README for current evidence and remaining work. Keep reusable primitives in project-owned `tools/`; promote to workspace tooling only after a second project needs them.
