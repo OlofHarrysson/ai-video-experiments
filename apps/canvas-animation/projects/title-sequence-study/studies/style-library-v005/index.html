@@ -7,16 +7,75 @@
 @font-face{font-family:Racing;src:url('../../fonts/RacingSansOne-Regular.ttf')}
 @font-face{font-family:Cormorant;src:url('../../fonts/CormorantGaramond-Italic.ttf');font-weight:100 900}
 @font-face{font-family:Blackletter;src:url('../typography-v001/fonts/UnifrakturCook-Bold.ttf')}
-*{box-sizing:border-box}body{margin:24px;background:#17171b;color:#eee;font:16px system-ui}main{max-width:1280px;margin:auto}h1{font-size:25px;font-weight:550;margin-bottom:8px}p{color:#aba8b1}canvas{display:block;width:100%;height:auto;background:#030305}nav{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}select,input,button{font:inherit;color:#eee;background:#292930;border:1px solid #4a4851;border-radius:4px;padding:10px}input{width:180px}button{cursor:pointer}#error{color:#ffb3b3;min-height:24px}label{display:flex;align-items:center;gap:8px}a{color:#ccc}
-</style><main><h1>Typography library</h1><p>Seventeen constructions. Four material states each. Original sample words; no film theme selected.</p><canvas id="view" width="1280" height="768"></canvas><nav><select id="family" aria-label="Construction"></select><input id="word" aria-label="Sample words" maxlength="18"><select id="state" aria-label="Material"></select><button id="play">Play states</button><select id="cadence" aria-label="State cadence"><option value="12">2 changes / second</option><option value="6" selected>4 changes / second</option><option value="4">6 changes / second</option><option value="2">12 changes / second</option></select><button id="save">Save still</button></nav><div id="error" role="status"></div><p id="description"></p></main><script src="lettering.js"></script><script src="surface.js"></script><script src="library.js"></script><script>
-const $=s=>document.querySelector(s),c=$('#view'),fam=$('#family'),mat=$('#state'),word=$('#word');let active=false,raf,start=0,frame=0;
-for(const f of TypeLibrary.families)fam.add(new Option(f.name,f.id));
-function paint(){try{TypeLibrary.render(fam.value,word.value,Number(mat.value),frame,c,{label:true});$('#error').textContent=''}catch(e){$('#error').textContent=e.message;stop()}}
-function stop(){active=false;cancelAnimationFrame(raf);$('#play').textContent='Play states'}
-function choose(){stop();const f=TypeLibrary.families.find(f=>f.id===fam.value);word.value=f.word;mat.replaceChildren();f.states.forEach((s,i)=>mat.add(new Option(s,i)));$('#description').textContent=f.accepts?f.accepts+'.':'';frame=0;paint()}
-fam.onchange=choose;mat.onchange=()=>{stop();paint()};word.oninput=paint;
-$('#play').onclick=()=>{if(active){stop();return}active=true;start=performance.now();$('#play').textContent='Pause';raf=requestAnimationFrame(tick)};
-function tick(now){if(!active)return;frame=Math.floor((now-start)*24/1000);mat.value=Math.floor(frame/Number($('#cadence').value))%4;paint();if(active)raf=requestAnimationFrame(tick)}
-$('#save').onclick=()=>{const a=document.createElement('a'),p=TypeLibrary.canvas();TypeLibrary.render(fam.value,word.value,Number(mat.value),frame,p);a.href=p.toDataURL();a.download=fam.value+'-'+mat.value+'.png';a.click()};
-(async()=>{try{window.loadedArtFonts=[];for(const f of ['Anton','Audiowide','AlfaSlab','RubikMono','Racing','Cormorant','Blackletter']){const faces=await document.fonts.load('200px '+f);if(!faces.length||faces.some(x=>x.status!=='loaded'))throw new Error('Required artwork font failed: '+f);window.loadedArtFonts.push(f)}await document.fonts.ready;choose();window.libraryReady=true}catch(e){window.libraryLoadError=e.message;$('#error').textContent=e.message}})();
+*{box-sizing:border-box}body{margin:24px;background:#17171b;color:#eee;font:16px system-ui}main{max-width:1280px;margin:auto}h1{font-size:25px;font-weight:550;margin-bottom:8px}p{color:#aba8b1}canvas{display:block;width:100%;height:auto;max-height:65vh;object-fit:contain;background:#030305}nav{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}select,input,button{font:inherit;color:#eee;background:#292930;border:1px solid #4a4851;border-radius:4px;padding:10px}input{width:180px}button{cursor:pointer}#error{color:#ffb3b3;min-height:24px}label{display:flex;align-items:center;gap:8px}a{color:#ccc}
+</style><main><h1>Typography library</h1><p>Seventeen constructions and seven composition studies. Four treatments each. <a href="review.html">Watch the review cuts</a>.</p><canvas id="view" width="1280" height="768"></canvas><nav><select id="family" aria-label="Construction"></select><input id="word" aria-label="Sample words" maxlength="18"><select id="state" aria-label="Material"></select><select id="mode" aria-label="Playback mode"><option value="cycle">Cycle treatments</option><option value="native">Animate selected treatment</option></select><button id="play">Play</button><select id="cadence" aria-label="State cadence"><option value="12">2 changes / second</option><option value="6" selected>4 changes / second</option><option value="4">6 changes / second</option><option value="2">12 changes / second</option></select><button id="save">Save still</button></nav><div id="error" role="status"></div><p id="description"></p></main><script src="lettering.js"></script><script src="surface.js"></script><script src="library.js"></script><script src="compositions.js"></script><script>
+const $ = selector => document.querySelector(selector);
+const canvas = $('#view'), family = $('#family'), material = $('#state'), word = $('#word');
+let active = false, animation, start = 0, frame = 0;
+const constructionGroup = document.createElement('optgroup');
+constructionGroup.label = 'Constructions';
+for (const item of TypeLibrary.families) constructionGroup.append(new Option(item.name, item.id));
+family.append(constructionGroup);
+const compositionGroup = document.createElement('optgroup');
+compositionGroup.label = 'Composition studies';
+for (const item of TypeCompositions.cards) compositionGroup.append(new Option(item.name, 'layout:' + item.id));
+family.append(compositionGroup);
+function selectedLayout() { return family.value.startsWith('layout:'); }
+function draw(target, label = true) {
+  if (selectedLayout()) TypeCompositions.render(family.value.slice(7), Number(material.value), frame, target, {label});
+  else TypeLibrary.render(family.value, word.value, Number(material.value), frame, target, {label});
+}
+function paint() {
+  try { draw(canvas); $('#error').textContent = ''; }
+  catch (error) { $('#error').textContent = error.message; stop(); }
+}
+function stop() {
+  active = false; cancelAnimationFrame(animation); $('#play').textContent = 'Play';
+}
+function choose() {
+  stop(); material.replaceChildren(); frame = 0;
+  if (selectedLayout()) {
+    word.hidden = true;
+    for (let i = 0; i < 4; i++) material.add(new Option('Treatment ' + (i + 1), i));
+    $('#description').textContent = 'Fixed lettering and composition; compare the four treatments.';
+  } else {
+    word.hidden = false;
+    const item = TypeLibrary.families.find(item => item.id === family.value);
+    word.value = item.word;
+    item.states.forEach((state, i) => material.add(new Option(state, i)));
+    $('#description').textContent = ['tube', 'ribbon', 'softmetal'].includes(item.id)
+      ? '“Wild” uses the original drawn lettering. Other words use the uppercase alphabet.'
+      : item.accepts ? item.accepts + '.' : '';
+  }
+  paint();
+}
+family.onchange = choose;
+$('#mode').onchange = () => { stop(); $('#cadence').disabled = $('#mode').value === 'native'; };
+material.onchange = () => { stop(); paint(); };
+word.oninput = paint;
+$('#play').onclick = () => {
+  if (active) { stop(); return; }
+  active = true; start = performance.now(); $('#play').textContent = 'Pause'; animation = requestAnimationFrame(tick);
+};
+function tick(now) {
+  if (!active) return;
+  frame = Math.floor((now - start) * 24 / 1000);
+  if ($('#mode').value === 'cycle') material.value = Math.floor(frame / Number($('#cadence').value)) % 4;
+  paint(); if (active) animation = requestAnimationFrame(tick);
+}
+$('#save').onclick = () => {
+  const link = document.createElement('a'), still = TypeLibrary.canvas();
+  draw(still, false); link.href = still.toDataURL(); link.download = family.value.replace(':', '-') + '-' + material.value + '.png'; link.click();
+};
+(async () => {
+  try {
+    window.loadedArtFonts = [];
+    for (const name of ['Anton', 'Audiowide', 'AlfaSlab', 'RubikMono', 'Racing', 'Cormorant', 'Blackletter']) {
+      const faces = await document.fonts.load('200px ' + name);
+      if (!faces.length || faces.some(face => face.status !== 'loaded')) throw new Error('Required artwork font failed: ' + name);
+      window.loadedArtFonts.push(name);
+    }
+    await document.fonts.ready; choose(); window.libraryReady = true;
+  } catch (error) { window.libraryLoadError = error.message; $('#error').textContent = error.message; }
+})();
 </script></html>

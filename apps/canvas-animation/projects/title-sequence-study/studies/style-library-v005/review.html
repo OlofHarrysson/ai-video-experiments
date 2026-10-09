@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Typography studies · review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:28px;background:#111115;color:#eae8ed;font:16px/1.5 system-ui}main{max-width:1200px;margin:auto}h1{font-size:26px;font-weight:550;margin:0 0 8px}p{color:#aaa6b0;margin:8px 0 20px}video{display:block;width:100%;max-height:68vh;background:#030305;aspect-ratio:16/9}nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}button,a{font:inherit;color:inherit}button{padding:9px 15px;background:#232229;border:1px solid #47434e;border-radius:5px;cursor:pointer}button[aria-pressed=true]{background:#e9d8e4;color:#251b26;border-color:#e9d8e4}a{color:#d5b6ce}section{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}figure{margin:0}img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#030305}figcaption{padding-top:8px;color:#b8b2bd;font-size:14px}#error{color:#f4b5bd}@media(max-width:650px){body{padding:16px}section{grid-template-columns:1fr}h1{font-size:23px}}
+</style>
+<main>
+<h1>Typography studies</h1>
+<p>A quiet opening, changing materials, then a burst of unlike graphic identities. Silent studies; theme and soundtrack are still open.</p>
+<video id="player" controls preload="metadata" playsinline poster="output-review-layouts/interlock-0.png" src="output-delivery-showcase/showcase.mp4"></video>
+<nav aria-label="Review videos">
+<button data-src="output-delivery-showcase/showcase.mp4" aria-pressed="true">Escalation · 25 s</button>
+<button data-src="output-release-library/catalogue.mp4" aria-pressed="false">17 constructions · 34 s</button>
+<button data-src="output-review-layouts/composition-catalogue.mp4" aria-pressed="false">7 compositions · 14 s</button>
+<button data-src="output-native-review/native-motion.mp4" aria-pressed="false">Internal motion · 16 s</button>
+</nav>
+<p id="description">Start with the cut, then inspect individual treatments at your own pace. <a href="index.html">Open the interactive library</a>.</p>
+<p id="error" role="status"></p>
+<section aria-label="Selected stills">
+<figure><img src="output-review-layouts/interlock-0.png" alt="Original pink neon Wild above gold italic Hours"><figcaption>Drawn neon paired with a heavy italic serif.</figcaption></figure>
+<figure><img src="output-review-layouts/signature-0.png" alt="Wild in cream brush lettering with pink and gold borders"><figcaption>Thick-and-thin lettering with compound borders.</figcaption></figure>
+<figure><img src="output-release-library/marquee-0.png" alt="Dynamo on an angled illuminated marquee"><figcaption>Enamel, bulbs, an extruded sign and a chasing perimeter.</figcaption></figure>
+<figure><img src="output-review-layouts/breakout-0.png" alt="Oversized multicolour Echo outlines receding into depth"><figcaption>A cropped outline tunnel, with the front contour held in place.</figcaption></figure>
+</section>
+</main>
+<script>
+const player=document.querySelector('#player'),error=document.querySelector('#error');
+for(const button of document.querySelectorAll('button[data-src]'))button.onclick=()=>{
+  player.pause();player.src=button.dataset.src;player.removeAttribute('poster');player.load();error.textContent='';
+  for(const other of document.querySelectorAll('button[data-src]'))other.setAttribute('aria-pressed',String(other===button));
+};
+player.addEventListener('error',()=>{error.textContent='This local video is unavailable. Render the study outputs described in README.md, then reopen this page.'});
+</script>
+</html>

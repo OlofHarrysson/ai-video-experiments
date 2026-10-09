@@ -3,7 +3,7 @@
 Motion graphics written in TypeScript and drawn on an HTML canvas. Every frame is a pure function of time, so the browser preview and the headless render match exactly; soundtracks are synthesized in the same page with the Web Audio API and share the film's beat grid. This workflow is separate from diffusion (Deforum, ComfyUI), Blender and stop-motion.
 
 - [AI Filmhack promo](projects/filmhack-promo/README.md): a 30-second Instagram Reel for the AI Filmhack event, with an original synthesized score.
-- [Title Sequence Study](projects/title-sequence-study/README.md): twelve typography treatments plus eight GSAP-driven motion studies and an escalating edit; project-local outline and motion tooling, with theme selection still open.
+- [Title Sequence Study](projects/title-sequence-study/README.md): reference studies, a 17-family typography library, seven composition studies and an escalating cut; original lettering, material and motion tooling, with theme selection still open.
 
 Rendering uses local browsers through Playwright, and ffmpeg for encoding; no cloud compute. Dependencies and renders stay local and are ignored by Git. Redistributable fonts may be tracked with their licenses and source records.
 

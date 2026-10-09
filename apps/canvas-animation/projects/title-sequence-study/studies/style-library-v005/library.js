@@ -251,10 +251,11 @@ window.TypeLibrary = (() => {
     },135);
     softMasks.set(word,c);if(softMasks.size>8)softMasks.delete(softMasks.keys().next().value);return c;
   }
-  add('softmetal','17 · Soft metal','Wild',['Liquid silver','Rose resin','Molten brass','Interference foil'],(g,word,s,f)=>{
-    if(word==='Wild'){TypeSurface.draw(g,'drawn:Wild',DrawnLettering.mask(40),s,f,{bevel:17});return}
+  add('softmetal','17 · Soft metal','Wild',['Rose resin','Liquid silver','Molten brass','Interference foil'],(g,word,s,f)=>{
+    const material=[1,0,2,3][s];
+    if(word==='Wild'){TypeSurface.draw(g,'drawn:Wild',DrawnLettering.mask(40),material,f,{bevel:20,segments:DrawnLettering.segments});return}
     const bevel=14.5*Math.min(958/((word.length-1)*135+90),249/140)*.92;
-    TypeSurface.draw(g,'soft:'+word,softMask(word),s,f,{bevel});
+    TypeSurface.draw(g,'soft:'+word,softMask(word),material,f,{bevel});
   },{accepts:'A–Z and spaces'});
 
   function render(id,word,state,frame,target,{label=false,transparent=false}={}){

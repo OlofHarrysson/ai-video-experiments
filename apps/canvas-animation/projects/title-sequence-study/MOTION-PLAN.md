@@ -25,6 +25,10 @@ The first typography study is decent but less impressive than the reference. Olo
 
 ## Continuation
 
-The first motion sprint is complete. Olof found it better but identified plain graphic design as the primary risk. Three focused identities followed in `studies/design-v003/`. He prefers Night Fever as a still and rejects its movement. Claude login was restored and an Opus 5.5 consultation completed; the saved critique informed `studies/motion-v004/`, a fixed-composition material cycle tested at three speeds. Read that study's README and artifacts before further changes. Preserve the Night Fever artwork, and wait for Olof's playback judgment before treating this new motion as successful. The final film still needs many different identities and a selected theme.
+The first motion sprint is complete. Olof found it better but identified plain graphic design as the primary risk. Three focused identities followed in `studies/design-v003/`. He prefers Night Fever as a still and rejected its movement; he then called `studies/motion-v004/`'s fixed-composition material cycle much cooler. No one cadence is selected.
+
+`studies/style-library-v005/` expands that direction using All Of The Lights as a second inspected reference. Seventeen constructions, seven layouts, original Wild lettering, compound brush contours and a surface experiment are available with a silent escalating showcase. The library distinguishes material cycling from native motion and can preview either. See its README and screening record for current artifacts and unresolved finish issues.
+
+The next high-value work is optical design of actual film words: custom joins/counters, coherent ornament, a few purposeful transitions and timing against sound. GPU effects remain conditional on a selected shot that needs them. A generalized script alphabet, arbitrary glyph morphing, true depth-ordered reflective lettering, perfect bulb placement and final-film timing are deferred. The new centreline SVG and family reuse notes make those choices concrete without committing to a new pipeline.
 
 Read this plan, the project README, and the latest study README for current evidence and remaining work. Keep reusable primitives in project-owned `tools/`; promote to workspace tooling only after a second project needs them.

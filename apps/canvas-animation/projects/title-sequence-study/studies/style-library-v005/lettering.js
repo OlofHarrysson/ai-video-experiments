@@ -1,9 +1,11 @@
 /* Original connected Wild lettering, drawn as cubic centreline paths. */
 window.DrawnLettering=(()=>{
-  const d='M118 415 C37 438 58 329 164 319 C232 313 291 233 284 155 C276 94 228 163 216 253 C202 361 223 480 275 482 C322 484 366 383 390 291 C365 381 358 478 401 472 C450 466 503 329 500 246 C505 321 509 384 530 412 C544 429 568 408 577 353 C560 390 541 443 566 443 C589 443 622 400 643 350 C697 233 717 108 678 157 C639 210 623 370 651 426 C677 477 723 422 750 370 C785 304 852 318 838 368 C822 425 774 461 754 432 C722 399 809 309 865 331 C874 286 899 168 928 172 C959 177 913 302 872 370 C851 406 847 456 888 440 C922 426 969 379 1000 361 C1087 305 1191 370 1127 442 C1103 470 1067 451 1080 432';
+  const d='M118 415 C37 438 58 329 164 319 C232 313 291 233 284 155 C276 94 228 163 216 253 C202 361 223 480 275 482 C322 484 366 383 390 291 C365 381 358 478 401 472 C450 466 503 329 500 246 C505 321 509 384 530 412 C548 430 565 400 577 353 C577 392 574 442 594 441 C612 440 631 384 643 350 C697 233 717 108 678 157 C639 210 623 370 651 426 C677 477 723 422 750 370 C785 304 852 318 838 368 C822 425 774 461 754 432 C722 399 809 309 865 331 C874 286 899 168 928 172 C959 177 913 302 872 370 C851 406 847 456 888 440 C922 426 969 379 1000 361 C1087 305 1191 370 1127 442 C1103 470 1067 451 1080 432';
   const path=new Path2D(d),dot={x:587,y:292},maskCache=new Map();
   const svg=document.createElementNS('http://www.w3.org/2000/svg','path');svg.setAttribute('d',d);const length=svg.getTotalLength(),samples=[];
   for(let i=0;i<=length;i+=5){const p=svg.getPointAtLength(i);samples.push([p.x,p.y])}
+  const surfaceSamples=[];for(let t=0;t<=length;t+=1){const p=svg.getPointAtLength(t);surfaceSamples.push([p.x,p.y])}
+  const segments=surfaceSamples.slice(1).map((p,i)=>[...surfaceSamples[i],...p]);segments.push([dot.x,dot.y,dot.x,dot.y]);
   function geometry(g,stroke,width){g.save();g.lineJoin='round';g.lineCap='round';g.strokeStyle=stroke;g.lineWidth=width;g.stroke(path);g.fillStyle=stroke;g.beginPath();g.arc(dot.x,dot.y,width*.53,0,Math.PI*2);g.fill();g.restore()}
   function mask(width=34){if(maskCache.has(width))return maskCache.get(width);const c=Object.assign(document.createElement('canvas'),{width:1280,height:720});geometry(c.getContext('2d'),'#fff',width);maskCache.set(width,c);return c}
   function tube(g,state,frame){
@@ -25,5 +27,29 @@ window.DrawnLettering=(()=>{
     }
     g.fillStyle=colors[0];g.beginPath();g.arc(dot.x,dot.y,15,0,Math.PI*2);g.fill();
   }
-  return {path,geometry,mask,tube,ribbon,samples,length};
+  // Downstroke pressure gives the same original path a different silhouette from neon tubing.
+  function ink(g,color,expansion=0){
+    g.save();g.strokeStyle=color;g.fillStyle=color;g.lineCap='round';g.lineJoin='round';
+    for(let i=1;i<samples.length;i++){
+      const [x,y]=samples[i-1],[ex,ey]=samples[i],len=Math.hypot(ex-x,ey-y)||1;
+      const vertical=Math.max(0,(ey-y)/len);
+      g.lineWidth=5+29*Math.pow(vertical,1.6)+expansion;
+      g.beginPath();g.moveTo(x,y);g.lineTo(ex,ey);g.stroke();
+    }
+    g.beginPath();g.ellipse(dot.x,dot.y,10+expansion/2,14+expansion/2,-.3,0,Math.PI*2);g.fill();g.restore();
+  }
+  function signature(g,state,frame){
+    const schemes=[['#492264','#f551a1','#ffd07f','#f9f1da'],['#075764','#41d4cf','#263276','#f1eedf'],['#563320','#bc733a','#f3cd77','#1b1522'],['#3c1e74','#6d59d9','#d15b9e','#f6ddd0']];
+    const colors=schemes[state%4];
+    for(let i=18;i>0;i--){g.save();g.translate(i*.68,i*.88);ink(g,colors[0],15);g.restore()}
+    ink(g,colors[1],15);ink(g,colors[2],7);ink(g,colors[3]);
+    if(state===2||state===3){
+      const c=Object.assign(document.createElement('canvas'),{width:1280,height:720}),q=c.getContext('2d');ink(q,'#fff');
+      const pattern=Object.assign(document.createElement('canvas'),{width:1280,height:720}),p=pattern.getContext('2d');
+      if(state===2){for(let y=0;y<720;y+=7){p.fillStyle=y%14?'#e3b35f':'#fce1a0';p.fillRect(0,y,1280,2)}}
+      else {const offset=Math.floor(frame/3)*19;for(let x=-720;x<1700;x+=96){p.save();p.translate(x+offset%96,0);p.transform(1,0,-.35,1,0,0);p.fillStyle='#d680bd';p.fillRect(0,0,19,720);p.restore()}}
+      q.globalCompositeOperation='source-in';q.drawImage(pattern,0,0);g.drawImage(c,0,0);
+    }
+  }
+  return {path,svgPath:d,dot,geometry,mask,tube,ribbon,signature,samples,segments,length};
 })();

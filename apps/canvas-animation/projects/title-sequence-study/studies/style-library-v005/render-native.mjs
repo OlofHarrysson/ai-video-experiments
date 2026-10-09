@@ -1,0 +1,13 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';import {createRequire} from 'node:module';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+const {chromium}=createRequire(new URL('../../../../../../.agents/skills/animate/package.json',import.meta.url))('playwright');
+const here=path.dirname(fileURLToPath(import.meta.url)),out=path.join(here,process.env.OUTPUT||'output-native-motion');
+if(fs.existsSync(out))throw new Error('Preserve existing output');fs.mkdirSync(out,{recursive:true});
+const shots=[['depth',0],['tube',2],['pinboard',2],['palace',0],['marquee',2],['slats',2],['orbital',0],['signature',3]];
+const source=path.join(out,'source');fs.mkdirSync(source);for(const f of ['library.js','lettering.js','surface.js','compositions.js','index.html','render-native.mjs'])fs.copyFileSync(path.join(here,f),path.join(source,f));
+const b=await chromium.launch();try{
+ const p=await b.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.join(here,'index.html')).href);await p.waitForFunction(()=>window.libraryReady||window.libraryLoadError);if(await p.evaluate(()=>window.libraryLoadError))throw new Error('Fonts failed');
+ const capture=async(id,state,frame)=>Buffer.from(await p.evaluate(({id,state,frame})=>{const c=TypeLibrary.canvas();c.height=768;if(id==='signature')TypeCompositions.render(id,state,frame,c,{label:true});else TypeLibrary.render(id,null,state,frame,c,{label:true});return c.toDataURL().split(',')[1]},{id,state,frame}),'base64');
+ const checks=[],hash=x=>createHash('sha256').update(x).digest('hex'),dir=path.join(out,'frames');fs.mkdirSync(dir);
+ for(let i=0;i<shots.length;i++){const[id,state]=shots[i],a=await capture(id,state,0),z=await capture(id,state,11);if(hash(a)===hash(z))throw new Error('No native change in '+id);await capture(id,state,31);if(hash(a)!==hash(await capture(id,state,0)))throw new Error('Non-repeatable '+id);checks.push({id,state,changed:true,repeatable:true});for(let f=0;f<48;f++)fs.writeFileSync(path.join(dir,`f${String(i*48+f).padStart(4,'0')}.png`),await capture(id,state,f));console.log(id)}
+ const r=spawnSync('ffmpeg',['-v','error','-y','-framerate','24','-i',path.join(dir,'f%04d.png'),'-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',path.join(out,'native-motion.mp4')],{stdio:'inherit'});if(r.status)throw new Error('Encode failed');if(errors.length)throw new Error(errors.join('\n'));fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({fps:24,frames:384,duration:16,checks,errors,sha256:hash(fs.readFileSync(path.join(out,'native-motion.mp4')))},null,2));
+}finally{await b.close()}

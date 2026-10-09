@@ -1,0 +1,62 @@
+{
+  "created": "2026-10-09T20:36:26.743Z",
+  "artifacts": [
+    {
+      "file": "output-delivery-showcase/showcase.mp4",
+      "frames": 610,
+      "height": 720,
+      "duration": 25.4166666667,
+      "width": 1280,
+      "fps": 24,
+      "audio": false,
+      "sha256": "facb6d1b50b2ed38770155c17122c054adc45b9844621eefe967703bceadbb07",
+      "sourceSnapshot": "output-delivery-showcase/source/"
+    },
+    {
+      "file": "output-release-library/catalogue.mp4",
+      "frames": 816,
+      "height": 768,
+      "duration": 34,
+      "width": 1280,
+      "fps": 24,
+      "audio": false,
+      "sha256": "2da187948540abb6ca0ccc670db49e678276d3d24ef16764503e2525a9c17c97",
+      "sourceSnapshot": "output-release-library/source/"
+    },
+    {
+      "file": "output-review-layouts/composition-catalogue.mp4",
+      "frames": 336,
+      "height": 768,
+      "duration": 14,
+      "width": 1280,
+      "fps": 24,
+      "audio": false,
+      "sha256": "aca7c42c3e543c0612c3ba3002944e4f8ed5ce12a5c7c4f7541d35a8d0c3a0bd",
+      "sourceSnapshot": "output-review-layouts/source/"
+    },
+    {
+      "file": "output-native-review/native-motion.mp4",
+      "frames": 384,
+      "height": 768,
+      "duration": 16,
+      "width": 1280,
+      "fps": 24,
+      "audio": false,
+      "sha256": "71d4fbce8de6d658baf68c90f5e3118eaf38ae9153fd8707793d1c59fe71da2a",
+      "sourceSnapshot": "output-native-review/source/"
+    }
+  ],
+  "validation": {
+    "allFramesDecoded": true,
+    "showcaseBlackFrames": 40,
+    "blackFramesMatchTimeline": true,
+    "constructionStates": 68,
+    "compositionStates": 28,
+    "nativeChangeSamples": 25,
+    "nativeSampleFrames": [
+      0,
+      11
+    ],
+    "browserErrors": []
+  }
+}

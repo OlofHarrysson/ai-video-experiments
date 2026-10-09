@@ -24,6 +24,16 @@ Olof explicitly resumed the work for one additional hour. Fresh start: **19:38:4
 
 Build four additional constructions, improve the weakest existing states, export a refined catalogue and a short contrasting cut, inspect output, document reuse and limits, and commit the sprint. Check the clock at each render/review boundary.
 
-## Continuation checkpoint
+## Resumed-hour results
 
-The resumed hour runs until **20:38:43 UTC**. The next assistant should check the clock, git status and the latest `studies/style-library-v005/README.md` before continuing. This document is the durable sprint plan; update results and unresolved decisions beside the study.
+The resumed window remains **19:38:43–20:38:43 UTC**. The app goal resumed successfully. Implementation, screening and source/provenance review are complete. The library is ready for Olof's artistic checkpoint.
+
+- Seventeen constructions / 68 states, original connected Wild lettering, a thick-and-thin compound sign, and seven fixed layouts / 28 treatments.
+- A 25.417-second, 610-frame silent showcase, 34-second construction catalogue 14-second layout catalogue, and 16-second internal-motion comparison. Canonical paths and SHA-256 values live in `studies/style-library-v005/release.json`.
+- Read-only Claude Opus 5.5 consultations informed lettering joins, scale contrast and the shortlist. All consultations finished successfully; no process is pending.
+- Functional rendering, repeatable seeking, explicit input errors, native-only and material-cycle playback, PNG export, loaded/seekable local videos and responsive inspection controls passed. All 2,146 delivery frames decode; the showcase's 40 black frames match its intentional pauses.
+- Assistant inspected all construction and layout state sheets, selected full-size refinements, encoded overview and dense frame windows. Human playback/taste review remains pending; no audio review is claimed.
+- Silver/gold remain experimental. A wider surface-union trial was rejected and preserved; the showcase uses resin and gives the ornate serif more time. The source and catalogue retain the reflective study for inspection.
+- Prior v001–v004 and original reference media remain preserved. No cloud media generation, new dev service or paid media API was used.
+
+Theme, final wording, storyboard and soundtrack remain undecided. See the study's README, REVIEW.md and SURFACE-NOTES.md for the next creative checkpoint and limitations. Do not restart this sprint or infer a selected film treatment from the showcase.

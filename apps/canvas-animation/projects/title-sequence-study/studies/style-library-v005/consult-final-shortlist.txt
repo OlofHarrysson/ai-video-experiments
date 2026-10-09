@@ -1,0 +1,14 @@
+Olof is building a diverse typography/motion vocabulary inspired by Enter the Void credits and All Of The Lights (81–120 seconds), ahead of deciding a theme. He likes the earlier Night Fever still and its fixed-position material cycling, but rejects plain graphic design and whole-card crop/scale motion. You have already reviewed earlier library passes. This is a final read-only visual shortlist check after revisions; please be concise.
+
+Please visually inspect these actual current images, plus any evidence useful for your judgment:
+- studies/style-library-v005/output-review-layouts/signature-0.png and signature-2.png: new thick-and-thin original Wild path with layered borders / engraving.
+- studies/style-library-v005/output-review-layouts/interlock-0.png: neon above serif.
+- studies/style-library-v005/output-release-library/softmetal-1.png: revised fused surface crossings.
+- studies/style-library-v005/output-release-library/catalogue-1.png, catalogue-2.png, catalogue-3.png: all seventeen constructions.
+- studies/style-library-v005/output-release-showcase/inspection/v001/contact-sheet.jpg, contact-sheet-002.jpg, contact-sheet-003.jpg: decoded 25-second showcase including every-frame windows. They establish cuts and registration, not perceived playback rhythm.
+- studies/design-v003/output/01.png: Olof's preferred Night Fever original, if that path exists; otherwise locate its original still in that study.
+- reference-all-lights-study.md and references/inspection/all-lights/style-range/v001/: actual second reference evidence if useful.
+
+The W-to-i join has been opened, the crowded sign wall separated, and the previous misleading "interlocked" name changed to "script and serif". The new brush treatment changes downstroke width rather than only colouring a monoline tube. Seventeen construction families, seven layouts. Everything is original code/font/path artwork with no image model.
+
+Which four to six current directions best deserve Olof's attention? Does the thick-and-thin treatment actually add character, or is it less successful than the simpler neon? Identify any remaining visual defect serious enough to correct before handoff. Do not infer playback feel from stills. Do not recommend a new technical pipeline or more families; the current goal is a screened review package. No files may be modified.

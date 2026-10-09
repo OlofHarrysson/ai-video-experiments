@@ -34,13 +34,34 @@ window.TypeSurface=(()=>{
     const pixels=[];for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const i=y*w+x;if(!alpha[i])continue;const dx=(smooth[i+1]-smooth[i-1])*.5,dy=(smooth[i+w]-smooth[i-w])*.5;pixels.push([i,x,y,smooth[i],dx,dy,alpha[i]])}
     const value={w,h,pixels,distance:d};fields.set(key,value);if(fields.size>8)fields.delete(fields.keys().next().value);return value;
   }
+  function curveField(key,segments,r,w,h){
+    const cacheKey='curve:'+key+':'+r;if(fields.has(cacheKey))return fields.get(cacheKey);
+    const bins=new Map(),cell=24;
+    for(let index=0;index<segments.length;index++){const seg=[...segments[index],index], [x1,y1,x2,y2]=seg,bx0=Math.floor((Math.min(x1,x2)-r-1)/cell),bx1=Math.floor((Math.max(x1,x2)+r+1)/cell),by0=Math.floor((Math.min(y1,y2)-r-1)/cell),by1=Math.floor((Math.max(y1,y2)+r+1)/cell);
+      for(let by=by0;by<=by1;by++)for(let bx=bx0;bx<=bx1;bx++){const k=bx+','+by;if(!bins.has(k))bins.set(k,[]);bins.get(k).push(seg)}
+    }
+    const pixels=[];
+    for(const[k,list]of bins){const[bx,by]=k.split(',').map(Number);for(let y=Math.max(0,by*cell);y<Math.min(h,(by+1)*cell);y++)for(let x=Math.max(0,bx*cell);x<Math.min(w,(bx+1)*cell);x++){
+      let best=Infinity,vx=0,vy=0,bestIndex=0;
+      function vector(seg){const[x1,y1,x2,y2]=seg,dx=x2-x1,dy=y2-y1,len=dx*dx+dy*dy,t=len?clamp(((x+.5-x1)*dx+(y+.5-y1)*dy)/len):0;return [x+.5-x1-dx*t,y+.5-y1-dy*t]}
+      for(const seg of list){const[px,py]=vector(seg),ds=px*px+py*py;if(ds<best){best=ds;vx=px;vy=py;bestIndex=seg[4]}}
+      let second=Infinity,sx=0,sy=0;
+      for(const seg of list){if(Math.abs(seg[4]-bestIndex)<160)continue;const[px,py]=vector(seg),ds=px*px+py*py;if(ds<second){second=ds;sx=px;sy=py}}
+      let dist=Math.sqrt(best),dx=dist?-vx/dist:0,dy=dist?-vy/dist:0;
+      // Fuse intersecting branches with a small smooth union, rather than a hard normal seam.
+      const secondDist=Math.sqrt(second),blend=clamp(1-(secondDist-dist)/6);
+      if(blend){dx=dx*(1-blend*.5)-(secondDist?sx/secondDist:0)*blend*.5;dy=dy*(1-blend*.5)-(secondDist?sy/secondDist:0)*blend*.5;dist-=blend*blend*1.5}
+      const alpha=clamp(r+.5-dist)*255;if(!alpha)continue;pixels.push([y*w+x,x,y,Math.max(0,r-dist),dx,dy,alpha]);
+    }}
+    const value={w,h,pixels};fields.set(cacheKey,value);if(fields.size>8)fields.delete(fields.keys().next().value);return value;
+  }
   function mixStops(t,stops){for(let i=1;i<stops.length;i++)if(t<=stops[i][0]){const [a,ca]=stops[i-1],[b,cb]=stops[i],p=clamp((t-a)/(b-a));return ca.map((v,j)=>v+(cb[j]-v)*p)}return stops.at(-1)[1]}
   const chrome=[[0,[240,218,248]],[.22,[143,162,191]],[.39,[39,36,70]],[.48,[11,13,28]],[.505,[255,244,225]],[.57,[115,193,221]],[.73,[43,56,111]],[1,[246,214,226]]];
   const gold=[[0,[255,239,174]],[.28,[221,155,70]],[.47,[60,27,44]],[.5,[250,225,165]],[.62,[193,106,41]],[.81,[66,27,57]],[1,[255,233,176]]];
-  function draw(g,key,mask,state,frame,{bevel=25}={}){
-    const step=Math.floor(frame/4)%12,cacheKey=[key,state,step,bevel].join('|');
+  function draw(g,key,mask,state,frame,{bevel=25,segments=null}={}){
+    const step=Math.floor(frame/4)%12,cacheKey=[key,state,step,bevel,!!segments].join('|');
     if(renders.has(cacheKey)){g.drawImage(renders.get(cacheKey),0,0);return}
-    const {w,h,pixels}=field(key,mask),c=Object.assign(document.createElement('canvas'),{width:w,height:h}),q=c.getContext('2d'),im=q.createImageData(w,h),out=im.data,angle=(step/12-.5)*.36;
+    const {w,h,pixels}=segments?curveField(key,segments,bevel,mask.width,mask.height):field(key,mask),c=Object.assign(document.createElement('canvas'),{width:w,height:h}),q=c.getContext('2d'),im=q.createImageData(w,h),out=im.data,angle=(step/12-.5)*.36;
     for(const [i,x,y,d,dx,dy,a]of pixels){
       const t=clamp(d/bevel),edge=1-t,nx=-dx*edge,ny=-dy*edge,nz=Math.sqrt(Math.max(.001,1-nx*nx-ny*ny)),rx=2*nz*nx,ry=2*nz*ny;
       const e=clamp(.5+ry*.42+rx*.11+angle),light=clamp(nx*-.3+ny*-.48+nz*.82),fresnel=Math.pow(1-nz,3);

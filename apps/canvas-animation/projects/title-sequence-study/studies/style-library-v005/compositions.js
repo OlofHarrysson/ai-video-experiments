@@ -15,7 +15,7 @@ window.TypeCompositions=(()=>{
   add('triplicate','Wild / three exposures',(g,s,f)=>{
     for(let i=0;i<3;i++)layer(g,'tube','Wild',(s+i)%4,f,{x:640+(i-1)*54,y:197+i*207,scale:.7,angle:-.09});
   });
-  add('interlock','Wild hours / interlocked sign',(g,s,f)=>{
+  add('interlock','Wild hours / script and serif',(g,s,f)=>{
     g.save();g.translate(640,360);g.rotate(-.09);g.translate(-640,-360);
     // The serif sits behind the original drawn upper word and its long exit curl.
     const shade=['#f5c57f','#c9edcd','#d6c2ea','#91dbdb'][s];
@@ -30,13 +30,14 @@ window.TypeCompositions=(()=>{
       const x=40+col*81,y=18+row*42;if(x>200&&x<1000&&y>190&&y<560)continue;
       const lit=(col+row+Math.floor(f/3))%5!==0;g.save();g.translate(x+Math.sin(row*.6)*10,y);g.rotate(Math.PI/4);g.fillStyle=lit?'#eac180':'#422b2b';g.fillRect(-2.5,-2.5,5,5);g.restore();
     }
-    layer(g,'marquee','DYNAMO',(s+1)%4,f,{x:986,y:139,scale:.43,angle:.15});
-    layer(g,'palace','After Hours',(s+1)%4,f,{x:192,y:172,scale:.42,angle:-.2});
+    layer(g,'marquee','DYNAMO',(s+1)%4,f,{x:1050,y:116,scale:.36,angle:.15});
+    layer(g,'palace','After Hours',(s+1)%4,f,{x:174,y:114,scale:.35,angle:-.2});
     layer(g,'wire','VELOCITY',1,f,{x:995,y:623,scale:.5,angle:-.2});
     // A low, broad hero crosses the smaller signs; its black jacket supplies separation.
-    layer(g,'tube','Wild',s,f,{x:652,y:421,scale:1.07,angle:-.075});
+    layer(g,'tube','Wild',s,f,{x:652,y:440,scale:.98,angle:-.075});
     layer(g,'pinboard','PULSE',s===1?1:2,f,{x:177,y:620,scale:.3});
   });
+  add('signature','Wild / compound brush sign',(g,s,f)=>{g.save();g.translate(15,25);g.rotate(-.04);DrawnLettering.signature(g,s,f);g.restore()});
   function render(id,state,frame,target,{label=false}={}){
     const card=typeof id==='number'?cards[id]:cards.find(x=>x.id===id);if(!card)throw new Error('Unknown composition');const g=target.getContext('2d');g.fillStyle='#030305';g.fillRect(0,0,target.width,target.height);card.draw(g,state%4,frame);
     if(label){g.fillStyle='#17171b';g.fillRect(0,720,1280,48);g.font='17px system-ui';g.fillStyle='#eee';g.fillText(card.name,22,751)}

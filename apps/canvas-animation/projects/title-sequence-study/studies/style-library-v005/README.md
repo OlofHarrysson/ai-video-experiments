@@ -1,47 +1,72 @@
-# v005 · Typography construction library
+# Typography construction library · v005
 
-**In progress, one-hour sprint, 2026-10-09.** See [sprint plan](../../VISUAL-LIBRARY-SPRINT.md) for the deadline and scope. Seventeen constructions and 68 states now exist. The resumed pass adds original connected Wild lettering, a surface-material experiment and six composition studies. First-pass pixels and source are preserved in ignored `output-first-pass/`; they are not the final selection.
+A reusable visual vocabulary developed from Olof's *Enter the Void* and *All Of The Lights* references. **17 construction families, 68 material/composition states, and seven additional fixed layouts with four treatments each.** These counts describe alternatives, not 96 equally finished designs. Theme, final film structure and soundtrack remain open.
 
-The user supplied *All Of The Lights*, approximately 81–120 seconds, as a second reference. [Reference observations](../../reference-all-lights-study.md) distinguish source evidence from interpretation. [Claude's direction review](claude-direction.md) is advisory. The user liked Night Fever's fixed-composition material cycle in v004; no particular cadence, theme or final treatment is selected.
+Start with [the local review page](review.html): a 25-second escalating showcase, a 34-second construction catalogue, a 14-second composition catalogue, and a 16-second internal-motion comparison. Then [open the interactive library](index.html) to change words, compare treatments, animate a single treatment, or save a PNG. The videos are silent. Playback starts only when requested.
 
-## Interface
+## What is worth taking forward
 
-`TypeLibrary.render(id, word, state, frame, canvas, {label:false})` renders a pure frame at 1280×720. `families` holds stable IDs, display names, default words and material names. Four states per family. A labelled review frame uses a 1280×768 canvas.
+- **Wild neon** and **Wild / Hours**: original connected lettering, glass/hot-core/cold-tube construction, travelling gas and a contrasting serif partner.
+- **Wild compound brush sign**: the same original path with thick downstrokes, thin return strokes, layered edging, engraving and a moving stripe finish. This is an alternative to monoline tubing; it is not another font.
+- **Depth / broken frame**, **giant glyph / razor caption**, and **tiny chrome**: useful scale extremes. The depth layers move while the front contour remains registered.
+- **Dynamo marquee**, **overprint**, **pinboard**, and **slats**: lamp architecture, print, discrete lights and sliced geometry provide contrast to script.
+- **Rose resin**: the cleanest surface study. Silver/gold remain experiments; their self-crossings and sharp reflections still need optical work before a long hero hold.
 
-`index.html` is a local preview with family, sample text, material and cadence controls; playback is paused by default. Only its preview clock uses real time. Artwork and exported frames use explicit frame numbers and seeded functions. The preview is a small inspection surface, not a film authoring application.
+Orbital's sparse dial, some wing ornaments, the busiest modular weave and the competing-sign wall are secondary studies. Keep them available for brief accents; they have not earned equal prominence. The original Night Fever artwork and v004 material-cycle comparisons are preserved unchanged.
 
-Run from repository root:
+## What was built
 
-```sh
-node apps/canvas-animation/projects/title-sequence-study/studies/style-library-v005/render.mjs
-OUTPUT=output-reviewed node apps/canvas-animation/projects/title-sequence-study/studies/style-library-v005/render.mjs --video
+| Owner | Responsibility |
+| --- | --- |
+| `library.js` | Seventeen deterministic constructions and their four states; masks, sampling, original uppercase alphabets |
+| `lettering.js` | Original Wild cubic paths, neon, ribbon and pressure-based compound sign |
+| `surface.js` | Cached analytic/bitmap fields, approximate resin/metal shading and bulb placement |
+| `compositions.js` | Seven fixed art-directed layouts; words and placement are deliberately designed together |
+| `cut.js` | Explicit 610-frame, 24 fps escalation study; no whole-image camera animation |
+| `catalogue.json` | Per-family construction, source observation, motion and reuse notes |
+| `index.html` | Inspection controls; cycle treatments or animate the selected one independently |
+| `review.html` | Small visual shortlist and three exported review videos |
+
+Canvas 2D, local fonts, hand-authored vector paths, headless Chromium and FFmpeg produce the work. No image model, cloud media generation, source-video pixels or borrowed music are used. Earlier GSAP timeline tooling remains in v002; this library uses explicit frames and discrete state changes because that fits these studies.
+
+## Reuse
+
+```js
+TypeLibrary.render('tube', 'Wild', 2, 36, canvas, { label: false });
+TypeLibrary.render('wire', 'FUTURE', 1, 12, canvas);
+TypeCompositions.render('interlock', 0, 24, canvas);
+TypeCut.render(240, canvas);
 ```
 
-The renderer refuses to replace an existing output directory. It uses the Animate skill's local Playwright, bundled font files and system FFmpeg. No cloud image generation, source pixels or borrowed music. Earlier studies are unchanged.
+Artwork is 1280×720 at 24 fps. A labelled catalogue uses a 1280×768 target. `TypeLibrary.canvas()` creates an artwork target; pass `transparent: true` to omit its background when layering a construction.
 
-## First-pass screening
+The editable [Wild centreline SVG](assets/wild-centreline.svg) is included alongside its source paths. `Wild` is a bespoke logotype, not a complete script font. Exactly that spelling activates the drawn path in `tube`, `ribbon` and `softmetal`. The alternate input path in those families, plus `wire` and `modular`, accepts uppercase A–Z and spaces. Other families use the bundled fonts. Unsupported alphabet input produces an explicit error. The seven layouts use fixed wording; the interface hides the editable-word control for them.
 
-- All 12 families produced four states without browser errors.
-- Each family produced byte-identical PNGs after out-of-order seeks at the same frame.
-- Short and long sample words rendered; these smoke checks do not prove good typography for arbitrary wording.
-- All 48 states and both catalogue sheets were inspected visually.
-- A mirror-position defect in Mercury sport was found: its reflection was below the canvas. Fixed in source after preserving the first pass.
-- Wingline needs a more deliberate feather silhouette; the first version reads as leaves or an insect.
-- Electric palace is richer than plain text but still too evenly sparse around the lettering. Its next pass should deepen the sign construction.
-- Some states are just colour changes; construction diversity is stronger across families than within every four-state row. Keep useful variants, but report them honestly.
+The smoke checks cover short and long sample strings; they do not prove attractive spacing for every word. Use the ranges and limitations in `catalogue.json`, then optically adjust the actual film wording. A full alphabet, layout system or 3D renderer is not implied by a successful sample.
 
-## Current continuation
+## Reproduce and inspect
 
-Resumed by Olof for another hour at 19:38:43 UTC, deadline 20:38:43 UTC. Both Claude consultations completed successfully; read `claude-first-pass.md`. No Claude processes are running. `output-refined/` holds the second still pass: fixed mirror placement, attached feather roots, selective light spill, better serif spacing, thicker wire strokes, clipped nested outlines and a rebuilt orbital arrangement. The refined video is not yet exported. Preserve the prior outputs and continue from the current library source.
+Use the repository's installed Animate Playwright/Chromium and FFmpeg dependencies. Run from this directory, choosing a new output name each time:
 
-## Resumed-hour checkpoint — 20:02 UTC
+```sh
+OUTPUT=output-release-library node render.mjs --video
+OUTPUT=output-review-layouts node render-compositions.mjs --video
+OUTPUT=output-delivery-showcase node render-cut.mjs
+OUTPUT=output-release-inspection node inspect-library.mjs
+OUTPUT=output-native-review node render-native.mjs
+node check-surface.mjs
+node inspect-review.mjs
+node verify-exports.mjs
+```
 
-- `output-script-first/`: original hand-drawn Wild script in neon and shaded resin; generic uppercase input remains available.
-- `output-marquee-refined/`: larger enamel letters with bulbs sampled along interior distance ridges. The result is more readable than the original dense grid; bulb spacing remains an optical refinement opportunity.
-- `output-layouts-first/`: six fixed composition variants (cropped depth, tiny chrome, giant glyph, three exposures, interlocked two-line sign, a wall of signs). These are layouts, not six new alphabets.
-- `output-cut-first/`: 400-frame, 16.67-second same-word cut. It predates the script and new layouts and is not the final montage.
-- Current complete source is checkpointed on the existing branch; all earlier output directories remain preserved.
-- The new reflective material still has visible small bands/ticks. The resin state is cleaner. Do not claim the reflective version is polished or physically based rendering.
-- `check-surface.mjs` compares Euclidean distances to an independent brute-force oracle on small masks.
+Renderers refuse to overwrite an existing directory. On this checkout these outputs already exist; select another name to rerender. New clones must render them before opening the review page, or adjust its local paths to their chosen output directories. Source, dependencies and licensed fonts are tracked; references, renders and inspection pixels are local ignored files. Each render contains a source snapshot and hashes. Font licensing and provenance live in `../../fonts/`.
 
-Deadline for the resumed hour remains **20:38:43 UTC**. Next: improve composition joins, inspect dense motion windows and full state pages, export the current catalogue and updated montage, finish documentation and commit. No Claude processes remain running; the latest advice is `claude-expanded.md`.
+[Screening notes](REVIEW.md) distinguish code checks, decoded-frame inspection and human playback judgment. [Surface notes](SURFACE-NOTES.md) explain the approximation and unresolved seams. [Reference observations](../../reference-all-lights-study.md) retain source timestamps. [Sprint record](../../VISUAL-LIBRARY-SPRINT.md) records the interrupted and resumed windows.
+
+Claude Opus 5.5 provided read-only visual reviews: [direction](claude-direction.md), [first pass](claude-first-pass.md), [expanded library](claude-expanded.md), and [lettering/layouts](claude-lettering-layouts.md). [Final shortlist review](claude-final-shortlist.md) favours the script/serif pair, compound brush sign, palace, marquee and print/depth. Reflective seams remain unresolved; the showcase uses resin and gives the ornate serif sign more time instead. The principal adopted changes were custom lettering, stronger scale contrast, an opened W–i join and less crowded sign placement. These are advisory judgments, not Olof's approval.
+
+[Authoring guide](AUTHORING.md) gives the path from a selected phrase to a deterministic shot, with concrete next experiments.
+
+## Next creative checkpoint
+
+Review the short cut and choose a handful of contrasting identities. Once the wording/theme is selected, letter the actual hero phrases, tune their individual motion, and design the timing with sound. More font filters alone will not close the remaining gap to the references; optical lettering, composition, purposeful transitions and musical timing are the next work.

@@ -4,7 +4,7 @@ Working project name; theme and final title are undecided.
 
 ## Intent
 
-Develop an original short film or motion-graphics piece after studying the opening/credit sequence of *Enter the Void*. Olof supplied [this YouTube reference](https://www.youtube.com/watch?v=wNtxgxYY7sI) and highlighted approximately **1:50 onward** as the visually interesting section. The timestamp belongs to that upload and has not yet been verified against a local file.
+Develop an original short film or motion-graphics piece after studying the opening/credit sequence of *Enter the Void*. Olof supplied [this YouTube reference](https://www.youtube.com/watch?v=wNtxgxYY7sI) and highlighted approximately **1:50 onward** as the visually interesting section. The local source has since been preserved and inspected; exact sample timestamps are recorded in the reference study.
 
 First understand the reference visually, then discuss what our project should be about. Do not infer a theme from the reference film's subject matter. Duration, aspect ratio, text, soundtrack, narration and degree of resemblance remain open.
 
@@ -17,7 +17,9 @@ First understand the reference visually, then discuss what our project should be
 - [Twelve typography feasibility studies](studies/typography-v001/README.md) test font-based effects, integrated graphics and custom letter geometry. Olof finds them decent but less impressive than the reference, with insufficient motion in several examples.
 - [Eight motion studies and an escalating edit](studies/motion-v002/README.md) use project-local GSAP timelines, OpenType outline extraction and reusable drawing primitives. Catalogue and montage await Olof's motion review.
 - Olof finds v002 better, but identifies simple/plain graphic design as the primary risk. [Three focused graphic identities](studies/design-v003/README.md) test compound script, custom chrome lettering and dense poster typography, with a short stepped-motion study. These await his visual judgment. Claude consultation was attempted but blocked by an expired login.
-- Olof prefers Night Fever among the v003 stills and rejects the movement. Preserve its successful composition; the six-state whole-image crop/scale motion is not an approved direction. Claude Opus 5.5's completed critique informs [v004's fixed-composition material cycle](studies/motion-v004/README.md), compared at three speeds. Await Olof's playback judgment.
+- Olof prefers Night Fever among the v003 stills and rejects its whole-image crop/scale movement. He calls [v004's fixed-composition material cycle](studies/motion-v004/README.md) much cooler. Its three cadences remain alternatives; no speed has been selected.
+- Olof supplied *All Of The Lights* around 1:21–2:00 as a second reference. A hash-verified independent copy and [timestamped inspection](reference-all-lights-study.md) are preserved.
+- [v005's construction library](studies/style-library-v005/README.md) now contains 17 families / 68 states plus seven composition studies / 28 treatments: original lettering, neon, pressure-based script, lamps, print, wire, modular shapes, depth and surface materials. A 25-second silent showcase and two slower catalogues are ready for visual review. [Open the review page](studies/style-library-v005/review.html) or [interactive library](studies/style-library-v005/index.html). This is preparation for a film, not a selected treatment.
 - [Motion plan](MOTION-PLAN.md) records the authorized scope and deferred GPU effects, font collection, custom lettering, sound and theme work.
 - Local reference media belongs in `references/original/`; derived clips, frames and contact sheets belong elsewhere under `references/`. The entire reference directory is ignored by Git.
 - No theme, film storyboard or original soundtrack has been selected. The typography and motion studies are tests, not an approved film treatment.
@@ -28,7 +30,7 @@ Olof likes the text-based visual chaos and the gradual escalation from a calm be
 
 AI progress, investment and hype accelerating toward loss of control is a candidate, not the selected theme. Possible material includes model names, money and headlines, but Olof questions whether historical model names such as BERT would resonate with a broad audience. His personal experience in AI informs the idea; this does not establish an insider-history format or verify on-screen claims.
 
-The immediate priority is a large variety of graphic identities and motion behaviors. Olof explicitly requested these feasibility tests ahead of theme and story selection. He likes the neon look but wants meaningful motion, finds the detached script flourish out of place, and likes the tangled outlines' activity. Simple treatments can coexist with complex ones. He authorized motion tooling and the next study, recommending GSAP from prior experience. Next: review the eight motion behaviors and their escalating combination, then expand selected treatments and resume theme discussion.
+The immediate priority is a large variety of graphic identities and motion behaviors. Olof explicitly requested these feasibility tests ahead of theme and story selection. He likes the neon look but wants meaningful motion, finds the detached script flourish out of place, and likes the tangled outlines' activity. Simple treatments can coexist with complex ones. He authorized motion tooling and the next study, recommending GSAP from prior experience. Next: judge the v005 shortlist and escalating cut, choose a handful of contrasting identities, and apply them to actual words when a theme is selected. More font filters alone are unlikely to close the remaining finish gap.
 
 ## First milestone: inspect and discuss
 
