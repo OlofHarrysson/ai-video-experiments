@@ -1,11 +1,30 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wild Hours · editable lettering</title>
-<style>body{margin:0;background:#101014;color:#eee;font:15px system-ui}header{padding:18px 24px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}h1{font-size:18px;margin:0;margin-right:auto}button,select{background:#27272e;color:white;border:1px solid #555;border-radius:5px;padding:7px 12px}label{display:flex;align-items:center;gap:7px}main{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 24px 24px}figure{margin:0;min-width:0}canvas,img{width:100%;display:block;background:#000}figcaption{padding:10px 0;color:#b7b4bf}footer{padding:0 24px 24px;color:#a6a1ad}input{max-width:110px}@media(max-width:900px){main{grid-template-columns:1fr}}</style>
-<header><h1>Wild Hours</h1><button id="play">Play light</button><label>Light <input id="phase" type="range" min="0" max="143" value="0"></label><label>Depth <input id="depth" type="range" min="0" max="50" value="34"></label><label>View <select id="mode"><option value="enamel">Enamel</option><option value="flat">Silhouettes</option><option value="blue">Blue / silver</option></select></label><button id="save">Save PNG</button></header>
-<main><figure><canvas id="art" width="1536" height="1024"></canvas><figcaption>Code reconstruction · editable paths and procedural materials</figcaption></figure><figure><img src="output/wild-hours-reference-01.png" alt="Generated Wild Hours design reference"><figcaption>Generated reference · design target</figcaption></figure></main><footer>Original placeholder lettering study. The reference image is used only for comparison; it is not sampled by the renderer.</footer>
-<script src="geometry.js"></script><script src="details.js"></script><script src="renderer.js"></script><script>
-const art=document.querySelector('#art'),phase=document.querySelector('#phase'),depth=document.querySelector('#depth'),mode=document.querySelector('#mode');let playing=false,origin=0;
-function render(){WildRenderer.draw(art,Number(phase.value),{depth:Number(depth.value),flat:mode.value==='flat',palette:mode.value==='blue'?1:0})}
-phase.oninput=depth.oninput=mode.onchange=render;document.querySelector('#play').onclick=()=>{playing=!playing;origin=performance.now()-Number(phase.value)/24*1000;document.querySelector('#play').textContent=playing?'Pause':'Play light';if(playing)requestAnimationFrame(tick)};
-function tick(now){if(!playing)return;phase.value=Math.floor((now-origin)/1000*24)%144;render();requestAnimationFrame(tick)}
-document.querySelector('#save').onclick=()=>{const a=document.createElement('a');a.download='wild-hours-code.png';a.href=art.toDataURL();a.click()};render();window.ready=true;
-</script></html>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wild Hours · editable lettering</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#101014;color:#eee;font:15px system-ui}header{padding:18px 24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}h1{font-size:18px;margin:0;margin-right:auto}button,select{font:inherit;background:#27272e;color:white;border:1px solid #555;border-radius:5px;padding:7px 12px}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #ff4594;outline-offset:3px}label{display:flex;align-items:center;gap:7px}main{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 24px 24px}main.solo{grid-template-columns:1fr;max-width:1584px;margin:auto}main.solo #reference{display:none}figure{margin:0;min-width:0}canvas,img{width:100%;display:block;background:#030104}figcaption{padding:10px 0;color:#b7b4bf;font-size:13px}footer{padding:0 24px 24px;color:#a6a1ad;font-size:13px}input[type=range]{width:110px;accent-color:#ff3389}details{padding:0 24px 20px}summary{cursor:pointer;color:#c6c3cc;width:max-content}.options{padding-top:16px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}.help{max-width:760px;font-size:13px;color:#a6a1ad}#status{padding:16px 24px;color:#ffd397}#status:empty{display:none}@media(max-width:900px){main{grid-template-columns:1fr}header{gap:12px;padding:16px}main{padding:0 16px}h1{width:100%}details,footer{padding:16px}}
+</style>
+<header>
+  <h1>Wild Hours</h1>
+  <button id="play" disabled>Play light</button>
+  <label>Light <input id="phase" type="range" min="0" max="143" value="0" disabled></label>
+  <label>Finish <select id="mode" disabled><option value="enamel">Pink / gold</option><option value="blue">Ice / silver</option><option value="flat">Silhouettes</option></select></label>
+  <button id="compare" aria-pressed="true">Reference on</button>
+  <button id="save" disabled>Save PNG</button>
+</header>
+<div id="status" role="status">Preparing editable materials…</div>
+<main>
+  <figure><canvas id="art" width="1536" height="1024" aria-label="Code-rendered Wild Hours lettering"></canvas><figcaption>Code reconstruction</figcaption></figure>
+  <figure id="reference"><img src="output/wild-hours-reference-01.png" alt="Generated Wild Hours design reference"><figcaption>Generated reference</figcaption></figure>
+</main>
+<details><summary>Edit layers</summary><div class="options">
+  <label>Depth <input id="depth" type="range" min="0" max="50" value="34"><output id="depthValue">34</output></label>
+  <label>Component <select id="glyph"><option value="">All components</option></select></label>
+  <label><input id="glints" type="checkbox" checked>Glints</label>
+  <button id="svg">Save SVG paths</button>
+</div><p class="help">The SVG contains the editable silhouettes. Enamel, reflections and depth are rendered in code. This is bespoke lettering; changing the words requires new letterforms.</p></details>
+<footer>The generated image is used only for comparison. The lettering is drawn from Bézier paths and procedural materials.</footer>
+<script>window.addEventListener('error',event=>{document.querySelector('#status').textContent='Unable to render: '+event.message;window.renderError=event.message;});</script>
+<script src="geometry.js"></script><script src="details.js"></script><script src="facets.js"></script><script src="../../node_modules/clipper-lib/clipper.js"></script><script src="vector-fields.js"></script><script src="renderer.js"></script><script src="viewer.js"></script>
+</html>

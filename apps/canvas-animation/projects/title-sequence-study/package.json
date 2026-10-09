@@ -8,6 +8,7 @@
     "render:motion": "node studies/motion-v002/render.mjs"
   },
   "dependencies": {
+    "clipper-lib": "^6.4.2",
     "gsap": "3.15.0",
     "opentype.js": "2.0.0"
   }

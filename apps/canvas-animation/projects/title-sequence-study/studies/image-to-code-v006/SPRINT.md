@@ -37,3 +37,16 @@ Goal is active; hard stop remains 03:53:48 UTC. No motion export or final qualit
 - No dev server, cloud GPU or paid generation is running. Two Claude calls completed successfully.
 
 Next: inspect the newest profile render, continue refining visible gaps, add meaningful editing controls and SVG export, then deterministic motion evidence. Do not claim the requested quality is achieved merely because the technical checks pass.
+
+## Checkpoint: 2026-10-09 23:22 UTC
+
+The active goal remains within its six-hour window. Current still: `output-cache-02/enamel.png`. Motion proof `output-motion-01` is an earlier geometry checkpoint, not the final delivery. Do not use it as evidence of the later S correction.
+
+- Replaced raster-derived normals with analytic distances to flattened Bézier segments. `vector-fields.js` uses GPU closest-segment distances and exact scanline signs; Clipper 6.4.2 resolves contours and mitered offsets. This removes the earlier striped reflections.
+- Darkened purple sidewalls, added a dark seam/crimson lip, made the lower plinth predominantly gold, added concave faceted stars and H/R spurs, and refined the H crossbar and S. Authored translucent enamel planes live in `facets.js`.
+- Renderer uses cached depth geometry and local stroke widths. These are derived from paths, not the reference bitmap. Browser playback uses a 768×512 material preview; paused/PNG/video renders use a 3072×2048 internal material buffer, composited to 1536×1024.
+- Software WebGL measurements improved from approximately 1.5 s/frame to 42–57 ms/frame in preview. Full-quality rendering is about 560 ms/frame. This is a SwiftShader test, not a measurement of the user's hardware-accelerated browser.
+- `verify.mjs` passes square-with-hole distances at densities 1 and 2 (maximum error below 0.000016 world pixels), repeat seeking, exact frame-0/frame-144 loop, restoring state after palette/depth/quality changes, and image-free rendering with zero network requests.
+- `verify-viewer.mjs` passes UI interactions, isolated W SVG export with no image elements, PNG export, playback advancement and mobile overflow checks. Paused/full PNG output remains full quality.
+- Third read-only Opus 5.5 critique is recorded in `claude-third.md`. Fourth is running and must be awaited on its existing process. It focuses on the S curl and whether the new enamel planes are genuinely improving the design.
+- Still unresolved: S curl fidelity, a few overly uniform/material edges, final source snapshot and final video/decoded-frame review. Preserve all checkpoints; no new generated image or cloud resource is required.
