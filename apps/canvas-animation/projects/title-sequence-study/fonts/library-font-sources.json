@@ -1,0 +1,38 @@
+[
+  {
+    "family": "audiowide",
+    "file": "Audiowide-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/audiowide/Audiowide-Regular.ttf",
+    "license_file": "audiowide-OFL.txt",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/audiowide/OFL.txt",
+    "sha256": "c7c0f2b0f6fad8c623e31772ce79f94a4edb9321ffce9fce978ea892d20ae730",
+    "retrieved": "2026-10-09"
+  },
+  {
+    "family": "alfaslabone",
+    "file": "AlfaSlabOne-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/alfaslabone/AlfaSlabOne-Regular.ttf",
+    "license_file": "alfaslabone-OFL.txt",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/alfaslabone/OFL.txt",
+    "sha256": "28664afa698a3393bd5a29eec750230a0645c5301d62200e5f2d3a027fb2299d",
+    "retrieved": "2026-10-09"
+  },
+  {
+    "family": "racingsansone",
+    "file": "RacingSansOne-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/racingsansone/RacingSansOne-Regular.ttf",
+    "license_file": "racingsansone-OFL.txt",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/racingsansone/OFL.txt",
+    "sha256": "8b5cada83e3e4692f624f1b583a069b34e457e07a4210ceddbb1133b3383673e",
+    "retrieved": "2026-10-09"
+  },
+  {
+    "family": "rubikmonoone",
+    "file": "RubikMonoOne-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/rubikmonoone/RubikMonoOne-Regular.ttf",
+    "license_file": "rubikmonoone-OFL.txt",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/rubikmonoone/OFL.txt",
+    "sha256": "b22624b6a36e543e942106edfccd198c50b57b65b924bfe02a6f0a5699429e6b",
+    "retrieved": "2026-10-09"
+  }
+]

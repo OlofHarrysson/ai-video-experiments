@@ -1,0 +1,167 @@
+[
+  {
+    "id": "pinboard",
+    "construction": "A sampled letter mask becomes discrete lamps, each with housing and a hot core.",
+    "fonts": [
+      "Rubik Mono One"
+    ],
+    "motion": "Fixed lettering; travelling lamp groups and scan rows. The dim state is an intentional low-exposure partner.",
+    "reference_device": "All Of The Lights 88.5 s: lit and dim dot letters coexist.",
+    "reuse": "Arbitrary supported font text; best at 3\u20138 characters. The travelling bands are spatial groups, not semantic letter segmentation."
+  },
+  {
+    "id": "slats",
+    "construction": "A letter mask is divided into horizontal slats or vertical comb lines; selected slices shift independently.",
+    "fonts": [
+      "Anton"
+    ],
+    "motion": "Stepped row displacement; geometry remains registered apart from the intended split.",
+    "reference_device": "All Of The Lights 89.5, 98.5 and 115 s: interlaced and sliced type.",
+    "reuse": "Short uppercase words; thin combs require checking after video compression."
+  },
+  {
+    "id": "wingline",
+    "construction": "Compound contours and hand-drawn feather paths share the lettering's side anchors.",
+    "fonts": [
+      "Audiowide"
+    ],
+    "motion": "Material switches; no whole-card camera motion.",
+    "reference_device": "All Of The Lights 114.833\u2013114.917 s: a small winged tube sign.",
+    "reuse": "3\u20136 letters work best. The wing roots use the designed word box; unusual side bearings need optical correction."
+  },
+  {
+    "id": "depth",
+    "construction": "Nested letter contours converge toward a displaced vanishing point.",
+    "fonts": [
+      "Audiowide"
+    ],
+    "motion": "Interior depth layers advance on twos while the largest outline stays fixed; state changes alter density and material.",
+    "reference_device": "All Of The Lights 96.333\u201396.583 s: receding word outlines.",
+    "reuse": "3\u20138 uppercase letters. The foreground word is intentionally broad."
+  },
+  {
+    "id": "wire",
+    "construction": "Original full A\u2013Z monoline skeleton, sheared and repeated as conductors.",
+    "fonts": [],
+    "motion": "Material and conductor changes; shards extend from letter positions.",
+    "reference_device": "All Of The Lights 94.5 and 99.5 s: elongated angular strokes and shards.",
+    "reuse": "Uppercase A\u2013Z and spaces; 4\u201310 letters. This is a custom alphabet, not a downloadable typeface."
+  },
+  {
+    "id": "palace",
+    "construction": "A two-line italic serif sign with knockout lettering, bent rails, lamp diamonds and a baseline curl.",
+    "fonts": [
+      "Cormorant Garamond Italic"
+    ],
+    "motion": "Border lamp chase plus enamel/outline material changes.",
+    "reference_device": "All Of The Lights 109.333\u2013109.583 s: ornate serif lettering over a dense light field.",
+    "reuse": "One or two words. Longer two-word phrases need optical spacing; no fixed word is silently appended."
+  },
+  {
+    "id": "orbital",
+    "construction": "Segmented projected circles pass behind and in front of opaque lettering.",
+    "fonts": [
+      "Audiowide"
+    ],
+    "motion": "Counter-rotating ring segments, dot lettering and a sparse dial state.",
+    "reference_device": "All Of The Lights 110.833\u2013111.083 s: ring and dotted-letter variants.",
+    "reuse": "3\u20137 letters. Still an exploratory family; depth and word contrast need judging in motion."
+  },
+  {
+    "id": "monolith",
+    "construction": "Broad solid letterforms use split colour fields, negative space and nested clipped contours.",
+    "fonts": [
+      "Rubik Mono One"
+    ],
+    "motion": "Hard state changes; deliberately quiet inside each state.",
+    "reference_device": "All Of The Lights 116.5 s: simple geometric shapes and split fills.",
+    "reuse": "2\u20135 letters. This is a font-based counterform treatment, distinct from the custom modular alphabet."
+  },
+  {
+    "id": "relic",
+    "construction": "Blackletter with engraved hatching, a foil gradient, coloured initial and a fine seal.",
+    "fonts": [
+      "UnifrakturCook"
+    ],
+    "motion": "Material switching only.",
+    "reference_device": "Extends the Enter the Void blackletter feasibility study; the seal and engraving are original.",
+    "reuse": "Mixed case typically reads better than all caps; 4\u20139 letters. Decorative seal stays secondary."
+  },
+  {
+    "id": "overprint",
+    "construction": "Oversized slab lettering, halftone holes, offset printing plates and a textured paper field.",
+    "fonts": [
+      "Alfa Slab One"
+    ],
+    "motion": "Registration and ink/paper switches; the poster crop remains fixed.",
+    "reference_device": "An original contrast family developed from the earlier dense-poster study.",
+    "reuse": "3\u20137 letters; edge cropping is intentional. Do not use when complete word readability is required."
+  },
+  {
+    "id": "chrome",
+    "construction": "Italic solid letters receive layered extrusion, a sharp reflection horizon and a mirrored lower image.",
+    "fonts": [
+      "Racing Sans One"
+    ],
+    "motion": "Material switches; one state displaces the reflection horizon.",
+    "reference_device": "All Of The Lights 106.5 s: small reflective lettering; also extends v003 chrome.",
+    "reuse": "3\u20137 letters. A deliberately familiar chrome treatment, not claimed as a new alphabet."
+  },
+  {
+    "id": "stack",
+    "construction": "Three unlike typographic treatments overlap, or a giant initial supports a thin word.",
+    "fonts": [
+      "Anton",
+      "Audiowide",
+      "Rubik Mono One"
+    ],
+    "motion": "Composition switches between stacked voices, giant ground and thin echoes.",
+    "reference_device": "All Of The Lights 111.5 and 113 s: giant glyph plus outline and repeated overlapping words.",
+    "reuse": "2\u20136 letters. Overlap is intentional; this family is a composition device."
+  },
+  {
+    "id": "tube",
+    "construction": "An original connected Wild logotype or uppercase skeleton becomes glass tubing with a dark jacket, hot core and electrode caps.",
+    "fonts": [],
+    "motion": "Cold glass, coloured gas chase and individual dark electrodes.",
+    "reference_device": "Original extension of the wire alphabet, informed by the references' emissive lettering.",
+    "reuse": "Uppercase A\u2013Z and spaces; 3\u20137 letters. Straight skeleton corners remain visibly engineered.",
+    "drawn_word": "Wild: an original cubic-path logotype, available in addition to the generic uppercase alphabet."
+  },
+  {
+    "id": "marquee",
+    "construction": "A tilted sign facade combines slab letters, bulbs placed on distance ridges, an extruded edge, fan rails and a chasing perimeter.",
+    "fonts": [
+      "Alfa Slab One"
+    ],
+    "motion": "Independent bulb and border chase; dark housing and cut-glass states.",
+    "reference_device": "All Of The Lights 97 and 107 s: bulb lettering and sign architecture; no reference sign/logo is copied.",
+    "reuse": "4\u20138 uppercase letters. Lamp placement is sampled from the whole letter mask."
+  },
+  {
+    "id": "ribbon",
+    "construction": "Original skeleton strokes are built from overlapping faceted strips and triangular folds.",
+    "fonts": [],
+    "motion": "Material switching; the prismatic state changes facets along the strips.",
+    "reference_device": "Original construction added to broaden the set beyond illuminated typography.",
+    "reuse": "Uppercase A\u2013Z and spaces; 3\u20137 letters. Some complex glyph intersections remain an optical-design task.",
+    "drawn_word": "Wild: an original cubic-path logotype, available in addition to the generic uppercase alphabet."
+  },
+  {
+    "id": "modular",
+    "construction": "A custom A\u2013Z occupancy alphabet is assembled from square and quarter-circle modules.",
+    "fonts": [],
+    "motion": "Tile colour and two-plane weave change while the occupied letter cells stay fixed.",
+    "reference_device": "Original geometric family, inspired by the references' variety rather than a particular card.",
+    "reuse": "Uppercase A\u2013Z and spaces; 3\u20138 letters. This alphabet intentionally has a coarse, playful rhythm."
+  },
+  {
+    "id": "softmetal",
+    "construction": "Original Wild lettering or a rounded alphabet mask is shaded from a cached distance field into curved metallic or resin surfaces.",
+    "fonts": [],
+    "motion": "Analytic reflection and interference phases; no 3D camera or generated footage.",
+    "reference_device": "Original material experiment; see SURFACE-NOTES.md for method and limitations.",
+    "reuse": "Uppercase A\u2013Z and spaces. This is a 2D surface approximation; reflective artifacts and long-word fit need screening.",
+    "drawn_word": "Wild: an original cubic-path logotype, available in addition to the generic uppercase alphabet."
+  }
+]

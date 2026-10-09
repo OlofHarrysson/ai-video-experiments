@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Typography library · v005</title>
+<style>
+@font-face{font-family:Anton;src:url('../../fonts/Anton-Regular.ttf')}
+@font-face{font-family:Audiowide;src:url('../../fonts/Audiowide-Regular.ttf')}
+@font-face{font-family:AlfaSlab;src:url('../../fonts/AlfaSlabOne-Regular.ttf')}
+@font-face{font-family:RubikMono;src:url('../../fonts/RubikMonoOne-Regular.ttf')}
+@font-face{font-family:Racing;src:url('../../fonts/RacingSansOne-Regular.ttf')}
+@font-face{font-family:Cormorant;src:url('../../fonts/CormorantGaramond-Italic.ttf');font-weight:100 900}
+@font-face{font-family:Blackletter;src:url('../typography-v001/fonts/UnifrakturCook-Bold.ttf')}
+*{box-sizing:border-box}body{margin:24px;background:#17171b;color:#eee;font:16px system-ui}main{max-width:1280px;margin:auto}h1{font-size:25px;font-weight:550;margin-bottom:8px}p{color:#aba8b1}canvas{display:block;width:100%;height:auto;background:#030305}nav{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}select,input,button{font:inherit;color:#eee;background:#292930;border:1px solid #4a4851;border-radius:4px;padding:10px}input{width:180px}button{cursor:pointer}#error{color:#ffb3b3;min-height:24px}label{display:flex;align-items:center;gap:8px}a{color:#ccc}
+</style><main><h1>Typography library</h1><p>Seventeen constructions. Four material states each. Original sample words; no film theme selected.</p><canvas id="view" width="1280" height="768"></canvas><nav><select id="family" aria-label="Construction"></select><input id="word" aria-label="Sample words" maxlength="18"><select id="state" aria-label="Material"></select><button id="play">Play states</button><select id="cadence" aria-label="State cadence"><option value="12">2 changes / second</option><option value="6" selected>4 changes / second</option><option value="4">6 changes / second</option><option value="2">12 changes / second</option></select><button id="save">Save still</button></nav><div id="error" role="status"></div><p id="description"></p></main><script src="lettering.js"></script><script src="surface.js"></script><script src="library.js"></script><script>
+const $=s=>document.querySelector(s),c=$('#view'),fam=$('#family'),mat=$('#state'),word=$('#word');let active=false,raf,start=0,frame=0;
+for(const f of TypeLibrary.families)fam.add(new Option(f.name,f.id));
+function paint(){try{TypeLibrary.render(fam.value,word.value,Number(mat.value),frame,c,{label:true});$('#error').textContent=''}catch(e){$('#error').textContent=e.message;stop()}}
+function stop(){active=false;cancelAnimationFrame(raf);$('#play').textContent='Play states'}
+function choose(){stop();const f=TypeLibrary.families.find(f=>f.id===fam.value);word.value=f.word;mat.replaceChildren();f.states.forEach((s,i)=>mat.add(new Option(s,i)));$('#description').textContent=f.accepts?f.accepts+'.':'';frame=0;paint()}
+fam.onchange=choose;mat.onchange=()=>{stop();paint()};word.oninput=paint;
+$('#play').onclick=()=>{if(active){stop();return}active=true;start=performance.now();$('#play').textContent='Pause';raf=requestAnimationFrame(tick)};
+function tick(now){if(!active)return;frame=Math.floor((now-start)*24/1000);mat.value=Math.floor(frame/Number($('#cadence').value))%4;paint();if(active)raf=requestAnimationFrame(tick)}
+$('#save').onclick=()=>{const a=document.createElement('a'),p=TypeLibrary.canvas();TypeLibrary.render(fam.value,word.value,Number(mat.value),frame,p);a.href=p.toDataURL();a.download=fam.value+'-'+mat.value+'.png';a.click()};
+(async()=>{try{window.loadedArtFonts=[];for(const f of ['Anton','Audiowide','AlfaSlab','RubikMono','Racing','Cormorant','Blackletter']){const faces=await document.fonts.load('200px '+f);if(!faces.length||faces.some(x=>x.status!=='loaded'))throw new Error('Required artwork font failed: '+f);window.loadedArtFonts.push(f)}await document.fonts.ready;choose();window.libraryReady=true}catch(e){window.libraryLoadError=e.message;$('#error').textContent=e.message}})();
+</script></html>

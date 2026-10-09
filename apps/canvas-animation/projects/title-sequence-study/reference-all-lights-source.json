@@ -1,0 +1,32 @@
+{
+  "supplied_path": "/Users/olof/Downloads/Kanye West - All Of The Lights ft. Rihanna, Kid Cudi.mp4",
+  "preserved_path": "references/original/all-of-the-lights.mp4",
+  "sha256": "34f1fdcbca5a1dac9859132ab354412cb7469e4f8ff30b271dc2fe7e1dc1b553",
+  "focus_seconds": [
+    81,
+    120
+  ],
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1"
+      },
+      {
+        "index": 1,
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "327.744898",
+      "size": "34982054"
+    }
+  },
+  "copyright": "User-supplied visual reference; reference pixels remain local and excluded from original output."
+}
