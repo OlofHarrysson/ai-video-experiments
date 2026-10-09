@@ -5,19 +5,59 @@
   "url": "https://www.youtube.com/watch?v=wNtxgxYY7sI",
   "youtube_id": "wNtxgxYY7sI",
   "focus_start_seconds": 110,
-  "focus_timestamp_status": "Approximate user cue; not verified",
+  "focus_timestamp_status": "Local frames around 110 seconds show the requested typographic credit section",
   "purpose": "Visual and temporal style study before choosing an original theme",
-  "status": "awaiting-local-reference",
+  "status": "initial-visual-study-complete",
   "access_attempts": [
-    {"method": "web fetch", "result": "Failed to fetch"},
-    {"method": "yt-dlp metadata", "result": "HTTP 429 and sign-in-to-confirm-not-a-bot"},
-    {"method": "in-app browser", "result": "Anti-bot challenge; playback unavailable"}
+    {
+      "method": "web fetch",
+      "result": "Failed to fetch"
+    },
+    {
+      "method": "yt-dlp metadata",
+      "result": "HTTP 429 and sign-in-to-confirm-not-a-bot"
+    },
+    {
+      "method": "in-app browser",
+      "result": "Anti-bot challenge; playback unavailable"
+    }
   ],
-  "local_original": null,
-  "sha256": null,
-  "duration_seconds": null,
-  "dimensions": null,
-  "frame_rate": null,
-  "visually_inspected": false,
-  "theme": null
+  "local_original": "references/original/enter-the-void-intro.mp4",
+  "sha256": "811570543a9fe8c14d0c61653f02eaddab6d58de6e6e7541ee24265ebc659165",
+  "duration_seconds": 141.033288,
+  "dimensions": [
+    1280,
+    544
+  ],
+  "frame_rate": "24000/1001",
+  "visually_inspected": true,
+  "theme": null,
+  "provided_on": "2026-10-09",
+  "original_filename": "Enter the Void - Intro Title Credit Sequence (1080p).mp4",
+  "notes": [
+    "User-provided local file; hash-verified independent APFS copy retained.",
+    "Filename says 1080p; ffprobe reports decoded dimensions 1280x544."
+  ],
+  "inspection": {
+    "report": "reference-study.md",
+    "overview": "references/inspection/overview/v001/review.json",
+    "style_range": "references/inspection/type-range/v001/review.json",
+    "every_frame_windows_seconds": [
+      [
+        111.8,
+        112.3
+      ],
+      [
+        114.8,
+        115.3
+      ],
+      [
+        126.8,
+        127.3
+      ]
+    ],
+    "dense_frames": "references/inspection/transitions/v001/review.json",
+    "shortlist": "references/inspection/shortlist/v001/contact-sheet.jpg",
+    "audio_listened": false
+  }
 }

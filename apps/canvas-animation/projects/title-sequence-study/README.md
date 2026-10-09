@@ -12,7 +12,8 @@ First understand the reference visually, then discuss what our project should be
 
 - Project initialized inside the existing canvas-animation workspace.
 - Reference source and intake recorded in [reference-source.json](reference-source.json).
-- Direct YouTube retrieval failed with HTTP 429 / sign-in-to-confirm-not-a-bot; browser playback reached an anti-bot challenge. No video or reference frames were acquired or visually inspected.
+- Olof supplied the local video after YouTube access was blocked. A hash-verified independent copy is preserved at `references/original/enter-the-void-intro.mp4`.
+- [The first visual study](reference-study.md) is complete: overview, varied typographic samples and every-frame inspection of three short windows around 1:50 onward. Theme discussion is the next step.
 - Local reference media belongs in `references/original/`; derived clips, frames and contact sheets belong elsewhere under `references/`. The entire reference directory is ignored by Git.
 - No animation, visual reconstruction, theme, storyboard or original soundtrack has been created or approved.
 
@@ -25,7 +26,7 @@ First understand the reference visually, then discuss what our project should be
 5. Present a small contact sheet and a concise account of composition, typography, color, transformations and timing. Clearly separate observations, measurements and interpretations.
 6. Discuss theme with Olof using that visual evidence. Only then propose the original piece's story and look.
 
-Acceptance evidence is actual inspected reference imagery and a timestamped account of how the sequence works. A downloaded file or automated analysis alone is insufficient.
+Acceptance evidence is actual inspected reference imagery and a timestamped account of how the sequence works. This evidence is recorded in [the study](reference-study.md); theme selection remains open. A downloaded file or automated analysis alone is insufficient.
 
 ## Workflow
 
