@@ -1,0 +1,28 @@
+{
+  "origin": "Original deterministic pitched-noise synthesis",
+  "seed": 2026101029,
+  "sample_rate": 48000,
+  "design": "Noise resonators at the original chord pitches with a quiet sine component; 22ms attack, 240ms decay, no hard saturation",
+  "outputs": [
+    {
+      "file": "references/assets/haze/ucchord/00.wav",
+      "sha256": "b7287ae49866358268b3ff1d77c48d0a7e3fbffa8d6d6df53a6292d86176bcd4",
+      "notes_midi": [
+        56,
+        60,
+        63,
+        67
+      ]
+    },
+    {
+      "file": "references/assets/haze/ucchord/01.wav",
+      "sha256": "9f3ebd64891a42f15056418b9c09bdb8d5d2dc564d7f05a2c3534aba4baffda2",
+      "notes_midi": [
+        58,
+        60,
+        65,
+        67
+      ]
+    }
+  ]
+}

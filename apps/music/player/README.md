@@ -1,6 +1,6 @@
 # Sound player
 
-Local listening UI for aligned audio parts. Current study: **Undercurrent — Current, Smoke and Wire**, with eight independently mutable sounds per palette.
+Local listening UI for aligned audio parts. Current study: **Undercurrent — Current, Smoke, Wire and Haze**, with eight independently mutable sounds per palette.
 
 Use **Mute** to remove a part, **Solo** to isolate one or several, and **All sounds** to reset. Playback, pause, restart, seek, looping, volume and palette changes share one playhead. A palette change pauses while its files load, then resumes at the same position with the same mute/solo selection. Feedback saves the note, palette, position and selected parts to the study's ignored bundle directory; the assistant can read these notes in later turns.
 
@@ -21,6 +21,8 @@ uv run --locked python projects/undercurrent/prepare_player.py projects/undercur
 ```
 
 The preparation belongs to this composition: it declares the eight musical roles and preserves the score. Completed bundles refuse overwriting. Interrupted preparation can resume only already-completed renders with matching source, sample manifests and solo labels; a failed render remains an explicit error. Original masters and samples stay untouched. The player itself consumes the resulting `manifest.json` and aligned WAVs.
+
+Haze is a chord-only alternative to Current, added by the project-specific [Haze workflow](../projects/undercurrent/haze.md). It reuses the other seven files and the same global playback gain. Preparing the original three-palette bundle does not automatically add Haze.
 
 ## Synchronization and evidence
 

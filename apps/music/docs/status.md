@@ -4,7 +4,7 @@ Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical
 
 ## Current goal
 
-**Current handoff: [sound player](../player/README.md)**, running locally at [localhost:3046](http://localhost:3046/) through Terminal Manager service `music-player`. Current, Smoke and Wire each have eight mute/solo controls, synchronized transport, looping and saved feedback. Read `projects/undercurrent/exports/player-v001/feedback.jsonl` for Olof's notes before the next musical revision. He says Current and Smoke sound similar and dislikes an unidentified instrument; this tool lets him identify it. Playback is stopped and all sounds are enabled.
+**Current handoff: [sound player](../player/README.md)**, running locally at [localhost:3046](http://localhost:3046/) through Terminal Manager service `music-player`. Current, Smoke, Wire and Haze each have eight mute/solo controls, synchronized transport, looping and saved feedback. Read `projects/undercurrent/exports/player-v001/feedback.jsonl` for Olof's notes before the next musical revision. Olof identified **Chord stabs & echoes** as the disliked part. **Haze · new chords** replaces only that part with a softer pitched-noise texture; the other seven audio files and their playback levels are identical to Current. Haze is selected for comparison; taste feedback is pending. See [comparison evidence](../projects/undercurrent/haze.md). Playback is stopped and all sounds are enabled.
 
 
 Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Olof says its structure is closer but remains unsure about the instruments. The current task is a [three-way palette comparison](../projects/undercurrent/palette-comparison.md): v002 plus Smoke and Wire, holding the entire score, kick and bass fixed.
@@ -57,7 +57,7 @@ Latest selections: [Pressure Lock and Negative Space](../projects/club-detail-sp
 
 ## Next work
 
-1. Use the player and its saved feedback to identify the disliked part, then revise that sound with the groove and arrangement preserved.
+1. Compare Current with Haze in the player to judge the replacement chord sound. Keep the groove, arrangement and other seven parts fixed until Olof gives feedback.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 

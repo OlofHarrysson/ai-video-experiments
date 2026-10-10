@@ -1,6 +1,6 @@
 # Undercurrent
 
-**[Open the sound player](http://localhost:3046/)** to mute/solo eight parts and save feedback. [Player runbook](../../player/README.md). Olof says Current and Smoke are similar but wants to identify a disliked instrument before changing the song again.
+**[Open the sound player](http://localhost:3046/)** to mute/solo eight parts and save feedback. [Player runbook](../../player/README.md). Olof identified **Chord stabs & echoes** as the disliked instrument. **[Haze · new chords](haze.md)** changes only that sound; all other parts remain identical to Current. Haze is selected in the player, awaiting his comparison.
 
 **Current comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
 

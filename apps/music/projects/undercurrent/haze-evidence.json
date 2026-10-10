@@ -1,0 +1,41 @@
+{
+  "baseline": "Current v002 player mix",
+  "changed_part": "chords",
+  "unchanged_parts": {
+    "kick": "794e3bd225487d9669c12dfcc645a0dd55f94e2aedc17d4514f6693a5d323951",
+    "bass": "5be8baedd99c84d1d3cb0e0f3914e47f7546a0c880e324b2ee79f93dd8897421",
+    "clap": "595248dd5ff10ecc2c2c3300f37c0f142920bcbebb6b8ea2468843a94d76fe49",
+    "hat": "a54b818fa65a9206cfd4c987bf3ff79cd29c60eacbf9f66c9ae5c27fa4f6beb7",
+    "openhat": "f3ad088a4aa458342bd5092fe5a1973197edd1af12370ec322c9055786ee15cb",
+    "brush": "1014b34adacfe65daa8cbb92768a82c3c1cbba6380be1530e3b0d8f310b8dd87",
+    "air": "cfcf0cf279cfa171f75e874998c485fa81825ae28a583cf79ceac5908c5ebf6a"
+  },
+  "same_score_sha256": "27fdc3c2be5a6c29023800967ef57923ea5af3e37b8ff03159ec3826f67243d0",
+  "same_evaluated_score_sha256": "7bd73b1ed05e72acc7e2fabb4adccca3ea6c8048b891663ef52c9f82d1e6bba7",
+  "chord_only_gain_db": -1.976693789809919,
+  "global_gain_unchanged": 1.0,
+  "chords_sha256": "2cfe6caddf0c1fe15b786bde8c2c6a15521314a3fb0b0dedee9480a20bcc9093",
+  "mix": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/renders/haze-chords/haze.wav",
+    "sha256": "c3b15125ac77316858398340e4ab9da100858edb9ab2ae2cd358030ed47b814d",
+    "seconds": 30.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -3.8470511760278465,
+    "rms_dbfs": -18.155697706337577,
+    "samples_at_or_above_full_scale": 0,
+    "sample_format": "FLOAT",
+    "pcm_rail_samples": null,
+    "pcm_rail_longest_run_frames": null,
+    "bpm_supplied": null,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -17.55,
+    "true_peak_dbtp": -3.84,
+    "loudness_range_lu": 4.3,
+    "lr_correlation": 0.9990476072804287,
+    "mono_rms_dbfs": -18.157784631517966
+  },
+  "method": "Only the new chord stem is energy-matched. Other seven stem URLs, samples and playback gain are identical to Current."
+}
