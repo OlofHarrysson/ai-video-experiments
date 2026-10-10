@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "title": "Undertow",
+  "revisions": {
+    "v003": {
+      "source": "source/v003.strudel",
+      "notes": "Develops the approved v002 sound with five bass rhythms, phrase fills, a bass-only break, filtering changes, stripped middle and final return."
+    }
+  },
+  "end_cycle": 52,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "../chrome-after-rain/references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "shuffle",
+      "rim",
+      "fill",
+      "pickup"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "growl"
+    ],
+    "texture": [
+      "stab",
+      "texture",
+      "metal"
+    ]
+  },
+  "sections": {
+    "first-groove": [
+      0,
+      8
+    ],
+    "bass-variation": [
+      8,
+      16
+    ],
+    "break": [
+      16,
+      20
+    ],
+    "return": [
+      20,
+      32
+    ],
+    "stripped": [
+      32,
+      36
+    ],
+    "last-return": [
+      36,
+      44
+    ],
+    "ending": [
+      44,
+      48
+    ],
+    "tail": [
+      48,
+      52
+    ]
+  }
+}

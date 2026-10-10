@@ -2,7 +2,7 @@
 
 A small production workspace for original Strudel music: preserve source, export WAVs, inspect mixes and stems, ask an audio model for observations, and revise deliberately. Olof directs taste; the assistant owns composition tooling and initial technical review.
 
-Current audition: [Undertow](projects/undertow/README.md), a short bass-and-drums-led techno/club groove. Olof rejected [Soft Focus](projects/soft-focus/README.md) and [Chrome After Rain](projects/chrome-after-rain/README.md) as too game-like. The [DJ_Dave audio reference library](projects/dj-dave-reference-study/README.md) remains available; his clearer underground, heavy-bass direction now guides composition.
+Current track: [Undertow](projects/undertow/README.md), a bass-and-drums-led club arrangement. Olof approved its core sound and requested more variation; v003 adds rhythmic development, dropouts and returns. [Soft Focus](projects/soft-focus/README.md) and [Chrome After Rain](projects/chrome-after-rain/README.md) remain rejected comparisons. The [DJ_Dave reference library](projects/dj-dave-reference-study/README.md) is preserved.
 
 The current goal is to make better music while exercising the tooling on real compositions. Local inspection, stereo export, stem reconstruction and local voice/music sampling have been exercised end to end. Real OpenRouter audio input works, but timing accuracy and musical judgments remain limited. See [current status](docs/status.md), the [initial validation](projects/tooling-validation/README.md) and [practical dogfood](projects/practical-dogfood/README.md).
 

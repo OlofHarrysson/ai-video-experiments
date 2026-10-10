@@ -1,87 +1,155 @@
 {
   "date": "2026-10-10",
-  "selected_revision": "v002",
-  "purpose": "Short human audition before full arrangement",
-  "source_sha256": "983789a3547c3c02cc6042f56572e1f72a623ef32422476d45eb82ab2a49fa92",
+  "selected_revision": "v003",
+  "source_sha256": "848b859aec2184e7d6cb223f677a39639e48c9b435e93705fd753b941ecee54c",
+  "recipe": "arrangement.json",
   "render_status": "complete",
   "renders": {
     "master": {
-      "sha256": "fbd7ea11df12b26c183a6ed5c45c39742d1d05bf39b7a66ff0e43f284f5478cd",
-      "seconds": 32.238791666666664,
+      "sha256": "57a6efcaf79e2de39e64d53549ee90570cbcc84b9714b3f1368d251bb83c4898",
+      "seconds": 93.1343125,
       "sample_rate": 48000,
       "channels": 2,
-      "integrated_lufs": -13.71,
-      "true_peak_dbtp": -1.29,
-      "rms_dbfs": -14.267021085398424,
+      "integrated_lufs": -14.03,
+      "true_peak_dbtp": -1.06,
       "samples_at_or_above_full_scale": 0
     },
     "drums": {
-      "sha256": "80e3ee97c7ca8cc1f2c9ec62a8353edece99bccc48717cf86b3e1c605ebe3fa4",
-      "seconds": 32.238791666666664,
+      "sha256": "9cf7db0659689ddf159bd48cfdf482c474743234bc17cd3e8d4d1538e2444b0a",
+      "seconds": 93.1343125,
       "sample_rate": 48000,
       "channels": 2,
-      "integrated_lufs": -14.97,
-      "true_peak_dbtp": -1.49,
-      "rms_dbfs": -16.869903734167615,
+      "integrated_lufs": -15.01,
+      "true_peak_dbtp": -1.48,
       "samples_at_or_above_full_scale": 0
     },
     "bass": {
-      "sha256": "cdb729fbc0d35f069b08878eb552d089cfdbee787de066d48f9a8603664c6635",
-      "seconds": 32.238791666666664,
+      "sha256": "219f956ae4442144c670d3df9b5ba3a2736224a80e73c69385d97c6184ae4f21",
+      "seconds": 93.1343125,
       "sample_rate": 48000,
       "channels": 2,
-      "integrated_lufs": -19.59,
-      "true_peak_dbtp": -6.04,
-      "rms_dbfs": -17.744752486850864,
+      "integrated_lufs": -19.9,
+      "true_peak_dbtp": -6.44,
       "samples_at_or_above_full_scale": 0
     },
     "texture": {
-      "sha256": "78d52a9df14a420835e0b831f3bbad844c209fe01f7eaeedac7d8551e89992e4",
-      "seconds": 32.238791666666664,
+      "sha256": "097bda05428f258e01980999bbbef91d0e3213ba5807c71df748e25e4a66798c",
+      "seconds": 93.1343125,
       "sample_rate": 48000,
       "channels": 2,
-      "integrated_lufs": -44.67,
-      "true_peak_dbtp": -22.54,
-      "rms_dbfs": -48.76512083309686,
+      "integrated_lufs": -43.13,
+      "true_peak_dbtp": -20.72,
       "samples_at_or_above_full_scale": 0
     }
   },
   "listening_copy": {
-    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undertow/renders/v002/undertow.wav",
-    "sha256": "19d797228edaf18bc49bf658f37cdd13409b7e284fc570d7d90b874e374ad6da",
-    "seconds": 32.238791666666664,
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undertow/renders/v003/undertow.wav",
+    "sha256": "684ee4978d5bd5b277979681e7a8f142ad5ad572a95725e81e5cb0cc72c3e118",
+    "seconds": 93.1343125,
     "sample_rate": 48000,
     "channels": 2,
-    "sample_peak_dbfs": -1.368320109697358,
-    "rms_dbfs": -14.267021085398424,
+    "sample_peak_dbfs": -1.3211490436633488,
+    "rms_dbfs": -14.906212150259144,
     "samples_at_or_above_full_scale": 0,
     "bpm_supplied": 134,
     "silence_threshold_dbfs": -80,
     "silence_min_seconds": 0.1,
-    "silence_intervals": [],
-    "integrated_lufs": -13.71,
-    "true_peak_dbtp": -1.29,
-    "loudness_range_lu": 0.5,
-    "lr_correlation": 0.9988772070347609,
-    "mono_rms_dbfs": -14.269462170808653
+    "silence_intervals": [
+      {
+        "start_seconds": 90.33358333333334,
+        "end_seconds": 93.1343125
+      }
+    ],
+    "integrated_lufs": -14.23,
+    "true_peak_dbtp": -1.26,
+    "loudness_range_lu": 3.1,
+    "lr_correlation": 0.9987272932496588,
+    "mono_rms_dbfs": -14.908976328404236
   },
-  "listening_gain_db": 0,
-  "review": {
-    "receipt": "work/undertow/core-v001/request.json",
-    "source_sha256": "12e2aeb720aad52fa5b3beb7891c70f42fe6d5cb9333b5e26412c0629bbb9164",
+  "listening_gain_db": -0.2,
+  "human_feedback_on_v002": "Much better sound/feel, but super repetitive; add interest and variation.",
+  "human_verdict_on_v003": "pending",
+  "arrangement_windows_cycles": {
+    "full_before_break": [
+      12,
+      14
+    ],
+    "drum_dropout": [
+      16,
+      18
+    ],
+    "bass_gap": [
+      19,
+      20
+    ],
+    "full_return": [
+      20,
+      24
+    ],
+    "stripped": [
+      32,
+      34
+    ],
+    "last_return": [
+      36,
+      40
+    ]
+  },
+  "stem_window_rms_dbfs": {
+    "master": {
+      "full_before_break": -13.772,
+      "drum_dropout": -19.979,
+      "bass_gap": -19.307,
+      "full_return": -13.739,
+      "stripped": -14.828,
+      "last_return": -13.744
+    },
+    "drums": {
+      "full_before_break": -16.358,
+      "drum_dropout": -68.744,
+      "bass_gap": -19.356,
+      "full_return": -16.357,
+      "stripped": -16.421,
+      "last_return": -16.355
+    },
+    "bass": {
+      "full_before_break": -17.27,
+      "drum_dropout": -20.023,
+      "bass_gap": null,
+      "full_return": -17.217,
+      "stripped": -19.999,
+      "last_return": -17.208
+    },
+    "texture": {
+      "full_before_break": -47.77,
+      "drum_dropout": -40.367,
+      "bass_gap": -39.694,
+      "full_return": -46.754,
+      "stripped": -43.968,
+      "last_return": -46.758
+    }
+  },
+  "audio_review": {
+    "receipt": "work/undertow/arrangement-v003/request.json",
+    "source_sha256": "db77ef037a56bd1986de69264526596e88d00783b7a07f1482be265afefb0445",
+    "reviewed_full_track_window_seconds": [
+      20,
+      78
+    ],
     "model": "google/gemini-3.1-pro-preview",
     "status": "complete",
     "finish_reason": "stop",
-    "cost_usd": 0.017644
+    "cost_usd": 0.021238
   },
-  "human_verdict": "pending",
+  "review_limits": [
+    "Reviewer noticed contrast and returns but incorrectly claimed periodic complete kick/bass dropouts and consistent bass rhythm. Source and isolated stems show bass continues through most of the first break and kick/bass continue in the later stripped section.",
+    "No new human verdict or claim of improved taste is inferred from the model review."
+  ],
   "checks": {
-    "aligned_finite_stereo_renders": true,
     "source_hash_matches": true,
+    "aligned_finite_unclipped_stereo_renders": true,
     "python_tests": 19,
     "ruff": "passed",
     "renderer_changed": false
-  },
-  "friction_incident": "AF-20261010-133514",
-  "review_scope": "Paid review is of v001 prototype; v002 changes bass/kick gains only, no new paid review"
+  }
 }
