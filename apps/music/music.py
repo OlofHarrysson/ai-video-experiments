@@ -601,6 +601,7 @@ def main():
         default=[],
         help="Named source layer; repeat to group",
     )
+    command.add_argument("--trace-events", action="store_true", help="Save event onsets observed during export")
     command.add_argument("--timeout", type=float, default=120)
     for name in ["inspect", "excerpt", "review", "calibration"]:
         command = sub.add_parser(name)
@@ -710,6 +711,8 @@ def main():
             command.extend(["--samples", str(folder)])
         for label in args.solo:
             command.extend(["--solo", label])
+        if args.trace_events:
+            command.append("--trace-events")
         completed = subprocess.run(command, check=False)
         if completed.returncode:
             raise SystemExit(completed.returncode)

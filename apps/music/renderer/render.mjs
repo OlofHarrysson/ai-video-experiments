@@ -74,7 +74,7 @@ export async function render(options) {
       lock_sha256: sha256(await readFile(resolve(ROOT, 'package-lock.json'))),
       node: process.version,
     },
-    settings: { begin: options.begin, end: options.end, sample_rate: options.sampleRate, max_polyphony: MAX_POLYPHONY, multi_channel_orbits: false, timeout_seconds: options.timeout, solo: options.solo ?? [] },
+    settings: { begin: options.begin, end: options.end, sample_rate: options.sampleRate, max_polyphony: MAX_POLYPHONY, multi_channel_orbits: false, timeout_seconds: options.timeout, solo: options.solo ?? [], trace_events: Boolean(options.traceEvents) },
     samples: records, requested_samples: [], logs: [], errors: [],
   };
   const saveReceipt = () => writeFile(resolve(out, 'render.json'), JSON.stringify(receipt, null, 2) + '\n');
@@ -136,7 +136,7 @@ export async function render(options) {
       page.on('requestfailed', (request) => receipt.errors.push(`Request failed: ${request.url()}: ${request.failure()?.errorText}`));
       page.on('response', (response) => { if (response.status() >= 400) receipt.errors.push(`HTTP ${response.status()}: ${response.url()}`); });
       await page.goto(origin);
-      receipt.timing = await page.evaluate(async ({ code, map, begin, end, sampleRate, maxPolyphony }) => {
+      receipt.timing = await page.evaluate(async ({ code, map, begin, end, sampleRate, maxPolyphony, traceEvents }) => {
         document.addEventListener('strudel.log', ({ detail }) => {
           if (detail.type === 'error' || /loading sound .* took too long/.test(detail.message)) console.error(detail.message);
         });
@@ -149,15 +149,56 @@ export async function render(options) {
         if (!Number.isFinite(cps) || cps <= 0) throw new Error(`Invalid tempo: ${cps}`);
         const frames = Math.floor((end - begin) / cps * sampleRate);
         if (!Number.isSafeInteger(frames) || frames <= 0) throw new Error('Invalid audio frame count');
+        if (traceEvents) {
+          // Observe the exporter's real queries without querying the pattern again.
+          // Extra queries can change stateful patterns or random source functions.
+          window.eventTrace = [];
+          const query = pattern.queryArc.bind(pattern);
+          pattern.queryArc = (...args) => {
+            const haps = query(...args);
+            for (const hap of haps) {
+              if (!hap.hasOnset()) continue;
+              const value = hap.value;
+              const controls = value && typeof value === 'object'
+                ? Object.fromEntries(Object.entries(value).filter(([, item]) =>
+                  item === null || ['string', 'number', 'boolean'].includes(typeof item)))
+                : { value: ['string', 'number', 'boolean'].includes(typeof value) ? value : null };
+              window.eventTrace.push({
+                query_begin_cycle: Number(args[0]), query_end_cycle: Number(args[1]),
+                onset_cycle: Number(hap.whole.begin), end_cycle: Number(hap.whole.end),
+                onset_seconds: (Number(hap.whole.begin) - begin) / cps,
+                scheduled_duration_seconds: Number(hap.duration) / cps,
+                controls,
+                omitted_controls: value && typeof value === 'object'
+                  ? Object.keys(value).filter((key) => !(key in controls)) : [],
+                stateful: Boolean(hap.stateful),
+              });
+            }
+            return haps;
+          };
+        }
         window.renderAudio = () => engine.renderPatternAudio(pattern, cps, begin, end, sampleRate, maxPolyphony, false, 'render');
         return { cps, seconds: frames / sampleRate, frames };
-      }, { code: selected.code, map, begin: options.begin, end: options.end, sampleRate: options.sampleRate, maxPolyphony: MAX_POLYPHONY });
+      }, { code: selected.code, map, begin: options.begin, end: options.end, sampleRate: options.sampleRate, maxPolyphony: MAX_POLYPHONY, traceEvents: Boolean(options.traceEvents) });
       await saveReceipt();
       const [download] = await Promise.all([
         page.waitForEvent('download', { timeout: options.timeout * 1000 }),
         page.evaluate(() => window.renderAudio()),
       ]);
       await download.saveAs(resolve(out, 'incomplete.wav'));
+      if (options.traceEvents) {
+        const events = await page.evaluate(() => window.eventTrace);
+        events.sort((left, right) => left.onset_cycle - right.onset_cycle);
+        const trace = JSON.stringify({
+          version: 1, source_sha256: receipt.source.evaluated_sha256,
+          cps: receipt.timing.cps, begin_cycle: options.begin, end_cycle: options.end,
+          scope: 'Onsets returned to the pinned offline exporter during its actual queries. Controls are primitive query-time values; complex values are listed as omitted. These are scheduled events, not measured audio, audible attacks, effect tails or proof of successful sound generation.',
+          events,
+        }, null, 2) + '\n';
+        await writeFile(resolve(out, 'events.json'), trace);
+        receipt.event_trace = { file: 'events.json', count: events.length, sha256: sha256(trace) };
+      }
+
       if (receipt.errors.length) throw new Error('Engine reported errors; see render.json. Partial audio is incomplete.wav');
       const wav = await readFile(resolve(out, 'incomplete.wav'));
       // The pinned Strudel exporter writes a canonical PCM16 stereo WAV header.
@@ -196,9 +237,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       'sample-rate': { type: 'string', default: '48000' }, samples: { type: 'string', multiple: true, default: [] },
       timeout: { type: 'string', default: '120' },
       solo: { type: 'string', multiple: true, default: [] },
+      'trace-events': { type: 'boolean', default: false },
     } });
     if (positionals.length !== 1 || !values.out || !values.end) throw new Error('Usage: render.mjs source.strudel --out NEW_DIR --end CYCLE [--begin 0] [--samples FOLDER]');
-    console.log(JSON.stringify(await render({ input: positionals[0], out: values.out, begin: Number(values.begin), end: Number(values.end), sampleRate: Number(values['sample-rate']), samples: values.samples, timeout: Number(values.timeout), solo: values.solo }), null, 2));
+    console.log(JSON.stringify(await render({ input: positionals[0], out: values.out, begin: Number(values.begin), end: Number(values.end), sampleRate: Number(values['sample-rate']), samples: values.samples, timeout: Number(values.timeout), solo: values.solo, traceEvents: values['trace-events'] }), null, 2));
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

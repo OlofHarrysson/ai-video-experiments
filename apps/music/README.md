@@ -61,6 +61,8 @@ uv run --locked python music.py render projects/practical-dogfood/source/v002-fu
   --out outputs/my-practical-v001
 ```
 
+Use `render --trace-events` when a rhythm's global phase or layer interaction is unclear. It saves `events.json` with cycle/file-relative onset times, scheduled durations and primitive control values. Combine it with repeated `--solo` labels to inspect particular voices. The trace observes the offline exporter's actual pattern queries without issuing additional queries or changing the returned events. It is a schedule trace, not measured audio: gain-zero events, effect tails, sample envelopes and masking still require separate interpretation. Complex controls are listed as omitted and stateful events are flagged. The receipt hashes the trace.
+
 Each new output directory contains `render.wav`, an exact `source.strudel` copy and `render.json`: tempo, range, frame count, engine/browser versions, source/sample/output hashes, requested sample paths and logs. Failed engine runs retain a failed receipt and any partial audio as `incomplete.wav`; they never publish that audio as `render.wav`. Existing output directories are rejected. `--timeout` defaults to 120 seconds for browser startup and separately for evaluation/rendering; longer arrangements can use a larger value. It is not a spending limit.
 
 The renderer pins `@strudel/web` 1.3.0 with a checksum-verified scheduling patch. The unpatched npm exporter measurably changed the practical sample layers; matching the website's chunked scheduling fixed the discrepancy. `npm ci` applies the patch; runtime refuses an unverified bundle. See [renderer validation and limits](docs/renderer-validation.md).
@@ -157,6 +159,6 @@ npm test
 
 Tests cover spectral/stereo cancellation behavior, real FFmpeg measurements, silent input and intervals, exact excerpts, preservation, alignment rejection, overload visibility, loudness matching, reconstruction differences, calibration conditions, offline preflight, uncapped requests and incomplete provider responses. Real provider and browser results are recorded separately in the validation study.
 
-Renderer tests cover successful synthesis, fresh-profile samples, missing sounds, invalid source, remote-dependency failure, timeout cleanup and output preservation. Three reference-parity tests use ignored local media and explicitly skip when that corpus has not been restored; eight other renderer tests run without it.
+Renderer tests cover successful synthesis, fresh-profile samples, missing sounds, invalid source, remote-dependency failure, timeout cleanup and output preservation. Three reference-parity tests use ignored local media and explicitly skip when that corpus has not been restored. The current suite has 16 tests, including module assembly and an event-trace check for sustained notes, global four-cycle phase, cropped offsets and unchanged dry audio; all 16 passed on this restored workspace.
 
 Project workflow tests cover exact master excerpts with existing tails, context bounds, changed-file detection, matched revision copies, tempo mismatch, silent comparison failures, stem partition checks and failed batch receipts.

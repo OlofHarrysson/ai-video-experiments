@@ -110,3 +110,25 @@ test('named dry stems sum to the master and retain original source', async (t) =
   assert.equal(await readFile(join(`${opts.out}-low`, 'source.strudel'), 'utf8'), code);
   assert.ok((await readFile(join(`${opts.out}-low`, 'evaluated.strudel'), 'utf8')).includes('_high:'));
 });
+
+test('event trace observes global pattern phase and sustained onsets without changing dry audio', async (t) => {
+  const code = 'setcpm(60)\nlow: note("c2").s("sine").slow(3).gain(.04)\nhigh: note("<c3 e3 g3 b3>").s("triangle").gain(.03).mask("<0!2 1!2>")';
+  const opts = await fixture(t, code, { end: 4, sampleRate: 12000 });
+  const plain = await render(opts);
+  const traced = await render({ ...opts, out: `${opts.out}-traced`, traceEvents: true });
+  assert.deepEqual(await readFile(plain.output), await readFile(traced.output));
+  const trace = JSON.parse(await readFile(join(`${opts.out}-traced`, 'events.json')));
+  assert.deepEqual(trace.events.map((event) => [event.onset_cycle, event.controls.note]),
+    [[0, 'c2'], [2, 'g3'], [3, 'c2'], [3, 'b3']]);
+  assert.equal(trace.events[0].scheduled_duration_seconds, 3);
+  assert.equal(trace.events[1].onset_seconds, 2);
+  assert.equal(trace.events[1].query_begin_cycle, 2);
+  const receipt = JSON.parse(await readFile(traced.manifest));
+  assert.equal(receipt.event_trace.count, 4);
+  assert.equal(receipt.event_trace.sha256.length, 64);
+  const cropped = await render({ ...opts, out: `${opts.out}-cropped`, begin: 2, traceEvents: true });
+  const crop = JSON.parse(await readFile(join(`${opts.out}-cropped`, 'events.json')));
+  assert.deepEqual(crop.events.map((event) => event.onset_seconds), [0, 1, 1]);
+  assert.equal(crop.events[0].controls.note, 'g3');
+  assert.equal(JSON.parse(await readFile(cropped.manifest)).settings.trace_events, true);
+});
