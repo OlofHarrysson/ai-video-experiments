@@ -8,7 +8,7 @@ Develop an original short film or motion-graphics piece after studying the openi
 
 First understand the reference visually, then discuss what our project should be about. Do not infer a theme from the reference film's subject matter. Duration, aspect ratio, text, soundtrack, narration and degree of resemblance remain open.
 
-## Current state — 2026-10-09
+## Current state — 2026-10-10
 
 - Project initialized inside the existing canvas-animation workspace.
 - Reference source and intake recorded in [reference-source.json](reference-source.json).
@@ -22,6 +22,7 @@ First understand the reference visually, then discuss what our project should be
 - [v005's construction library](studies/style-library-v005/README.md) now contains 17 families / 68 states plus seven composition studies / 28 treatments: original lettering, neon, pressure-based script, lamps, print, wire, modular shapes, depth and surface materials. A 25-second silent showcase and two slower catalogues are ready for visual review. [Open the review page](studies/style-library-v005/review.html) or [interactive library](studies/style-library-v005/index.html). This is preparation for a film, not a selected treatment.
 - Olof finds the first v005 opening too slow and its fastest ending a little too fast. [A 24-second rhythm experiment](studies/style-library-v005/RHYTHM.md) uses medium to medium-high activity, recurring motifs and quarter-/half-second holds; the original ramp is preserved. He finds this substantially better, while the graphic design remains too plain.
 - [Generated design to editable lettering](studies/image-to-code-v006/README.md) tests Olof's proposed image-generation-to-code workflow. Wild Hours is now reconstructed as 13 editable vector components with enamel/gold/ivory materials, a six-second light loop, palette/depth controls and SVG/PNG exports. [Review the result](studies/image-to-code-v006/review.html). Assistant screening and deterministic rendering checks are complete; human taste review remains pending.
+- [Acid print v007](studies/print-to-code-v007/README.md) reconstructs a second generated reference with nine polygon letters, procedural fluorescent ink and an eight-second call-and-response motion phrase. Olof authorized this contrasting image-to-code test after the enamel study. [Watch and compare](studies/print-to-code-v007/review.html). Renderer, export and playback checks pass; assistant screening is complete and human motion feedback is pending.
 - [Motion plan](MOTION-PLAN.md) records the authorized scope and deferred GPU effects, font collection, custom lettering, sound and theme work.
 - Local reference media belongs in `references/original/`; derived clips, frames and contact sheets belong elsewhere under `references/`. The entire reference directory is ignored by Git.
 - No theme, film storyboard or original soundtrack has been selected. The typography and motion studies are tests, not an approved film treatment.

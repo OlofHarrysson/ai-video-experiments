@@ -1,0 +1,16 @@
+{
+  "selected": "output-phrase",
+  "screening": "output-screen",
+  "sha256": {
+    "reference/acid-print-01.png": "1c9906eda7e0f17a63ef8312cea97efcf73d03141c0e37426876d876748fdae7",
+    "output-phrase/hero.png": "9524e20b978f9680efabc215843cf6c1280692b8aee80932b395fe1c95390237",
+    "output-phrase/wild-hours-acid-print.mp4": "97751fe80612565ded431b6944c55d2fdfdca0285a7bab68e97423bb3c325681"
+  },
+  "frames": 240,
+  "fps": 30,
+  "seconds": 8,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "humanReview": "pending"
+}
