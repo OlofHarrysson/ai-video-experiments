@@ -1,0 +1,23 @@
+{
+  "source": "renders/body-probe/render.wav",
+  "source_sha256": "5572b6fcd5da2058e6af6a1382a6b27ae44a809e68d870a077a3471e8c214b8c",
+  "window_seconds": [
+    0.703125,
+    2.578125
+  ],
+  "scope": "Composite original nscloud direct chord, slowed echo layer, delay and reverb. No external recording.",
+  "processing": "3ms onset taper,20ms end taper,peak0.8; reverse copy of same waveform",
+  "purpose": "Whole hollow gesture, expanded memory in the vacuum, chopped return, and final whole gesture.",
+  "assets": [
+    {
+      "name": "nsbloomwarm",
+      "output": "references/assets/samples/nsbloomwarm/01.wav",
+      "sha256": "3738626059afd1ac4c8e9236fff17ca28d85cef2bc31227c518750d8ecb0b91b"
+    },
+    {
+      "name": "nsbloomwarmrev",
+      "output": "references/assets/samples/nsbloomwarmrev/01.wav",
+      "sha256": "a578ff19705c46b8f75f45f2d0e2e2988bd1f3794fbdf2daa19225ea5e19e557"
+    }
+  ]
+}

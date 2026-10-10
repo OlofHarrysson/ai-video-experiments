@@ -1,0 +1,6 @@
+// Negative Space — 128 BPM, 16 bars / 30 seconds, including release.
+setcpm(128/4)
+const nsOn = "<1!14 0!2>"
+const nsKick = "<1!8 0 [1 0 1 0] 1!4 [1 0 0 0] 0>"
+const nsTop = "<0!2 1!6 0!2 1!4 0!2>"
+const nsBass = "<[~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]!2 [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1]!2 [~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]!2 [~ f1 ~ ~ ~ f1 ~ f1 ~ ~ f1 ~ f1 ~ ~ ~] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ ~ f1 f1 ~] [f1 ~ ~ ~ ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ f1] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1]!2 [~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~] [~ f1 ~ ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~] ~!2>"

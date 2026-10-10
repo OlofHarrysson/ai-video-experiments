@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "title": "Negative Space",
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "Original mechanical dub miniature; first sound/mix audition."
+    }
+  },
+  "end_cycle": 16,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hats",
+      "openhat",
+      "spring"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "servo"
+    ],
+    "dub": [
+      "dub",
+      "dubecho",
+      "friction"
+    ],
+    "edits": [
+      "turnaround",
+      "reverse",
+      "landing",
+      "lastchord"
+    ]
+  },
+  "sections": {
+    "identity": [
+      0,
+      4
+    ],
+    "pressure": [
+      4,
+      8
+    ],
+    "vacuum": [
+      8,
+      10
+    ],
+    "return": [
+      10,
+      14
+    ],
+    "release": [
+      14,
+      16
+    ]
+  }
+}

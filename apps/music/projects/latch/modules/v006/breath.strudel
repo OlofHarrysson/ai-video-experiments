@@ -1,0 +1,3 @@
+// One recurring friction call; the burr answers early, then late.
+shuck: s("<[~ ~ lashuckroom ~ ~ ~ ~ ~ ~ lashuckroom ~ ~ ~ ~ ~ ~]!6 [~ ~ lashuckroom ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] [~ ~ lashuckroom ~ ~ ~ ~ ~ ~ lashuckroom ~ ~ ~ ~ ~ ~]!4 [~ ~ lashuckroom ~ ~ ~ ~ ~ ~ lashuckroom ~ ~ ~ lashuckroom ~ ~] [~ ~ lashuckroom ~ ~ ~ ~ ~ ~ lashuckroom ~ ~ ~ ~ ~ ~]!2 ~!4>").gain(".24 .16 .21 .15").speed(.92).lpf("<2200!4 1700!4 2600!4 2200!2 1300!4>").hpf(350).pan(".35 .63 .43 .70").swingBy(.095,8).room(.12).roomsize(2.5).orbit(5).postgain(.80)
+echo: s("~ ~ ~ lashuckroom").gain(.17).speed(.72).hpf(650).lpf(1800).pan(.65).delay(.55).delaytime(.340909).delayfeedback(.42).room(.12).orbit(8).mask("<0!3 1 0!7 1 0!6>").postgain(.80)

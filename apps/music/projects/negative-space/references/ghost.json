@@ -1,0 +1,13 @@
+{
+  "source": "renders/v001/dub/render.wav",
+  "source_sha256": "98722bcfbed09bf489c1896b093f6c594f3aea9f4d985a856efbadfcbc6bae1c",
+  "window_seconds": [
+    1.0546875,
+    1.875
+  ],
+  "transformation": "500\u20133200 Hz third-order bandpass; tanh saturation; edge fades; peak0.76",
+  "output": "references/assets/samples/nsghost/01.wav",
+  "sha256": "b4095222ea30b2cec4e37eeaa7527cbde4e8f594807bfd2f7e6f06f843502682",
+  "purpose": "A composite dub tail (direct sound plus delay/reverb) becomes the return section\u2019s syncopated percussion answer.",
+  "isolation": "Taken from the entire dub stem, not an isolated effect return. Direct chord tail and the dubecho layer may contribute."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/assembly-v010.json",
+    "sha256": "3e2c4fe1d3e21bad6f05f2d932fa03809817110cdd2febcf872fceb318813208"
+  },
+  "revision": "v010",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/modules/v010/setup.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "70d4246db42641282315fe039a61120a631c347d68872d712d7c35c91ecff24f",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/modules/v010/drums.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "9935cb0d35367a8d0e1203861653e72e810b8a08009f0152d3350b652783b8bc",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/modules/v010/bass.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "946566ac409d714d5967472fd7836c05f11ebf9f3ce3adbbb320e468a6a54a76",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/modules/v010/dub.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "1f159262f5d2324ad42f5d5d45f0b5ec5f64732cd0c067ef221938d815f1b2b4",
+      "stem": "dub"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/modules/v010/edits.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "076e3eefc528f1b26f0537fff3f03d66ff0d178febe40cb159aee3090b19659d",
+      "stem": "edits"
+    }
+  ],
+  "source_sha256": "f3af673b227f073e746c348eb20858cb4a3260bb9f4d48e155a1dff34e211bec",
+  "project_sha256": "8047c07eaad3cd04c97a8500303d32c591bd8d57c417bf6fa355f5dc67810808",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hats",
+      "openhat",
+      "spring"
+    ],
+    "bass": [
+      "sub",
+      "bass"
+    ],
+    "dub": [
+      "dub",
+      "dubecho",
+      "friction",
+      "ghost"
+    ],
+    "edits": [
+      "turnaround",
+      "reverse",
+      "landing",
+      "lastchord"
+    ]
+  }
+}

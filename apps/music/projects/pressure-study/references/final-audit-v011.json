@@ -1,0 +1,577 @@
+{
+  "revision": "v011",
+  "method": "Offline waveform checks on preserved PCM; mono is arithmetic L/R mean. Band filters run continuously before windowing.",
+  "limits": "No personal listening. Boundary derivatives are measurements, not a click detector. Nonzero mono energy does not establish good translation on a club system.",
+  "stems": {
+    "master": {
+      "sha256": "d4bc491609cf18697d60646713d72a50d209a6131c11e549d35ae50cf3b88e4b",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "seconds": 30.0,
+      "first_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame": [
+        0.0,
+        -3.0517578125e-05
+      ],
+      "last_frame_at_or_above_minus80_dbfs_seconds": 29.601958333333332,
+      "last_100ms_peak_dbfs": -84.28839878591474,
+      "fullband_mono_loss_db": -0.012201873138899089,
+      "bands": {
+        "low": {
+          "stereo_rms_dbfs": -16.01261972865999,
+          "mono_rms_dbfs": -16.0182367443252,
+          "mono_loss_db": -0.005617015665212222
+        },
+        "body": {
+          "stereo_rms_dbfs": -24.0137895091733,
+          "mono_rms_dbfs": -24.062914445533828,
+          "mono_loss_db": -0.04912493636052773
+        },
+        "presence": {
+          "stereo_rms_dbfs": -36.43166699781284,
+          "mono_rms_dbfs": -36.53141468217011,
+          "mono_loss_db": -0.09974768435726844
+        }
+      },
+      "arrangement_boundaries": [
+        {
+          "cycle": 4,
+          "seconds": 7.058833333333333,
+          "boundary_step_dbfs": -74.74597369152148,
+          "before_50ms_rms_dbfs": -44.3400127107728,
+          "after_50ms_rms_dbfs": -9.5776605762775
+        },
+        {
+          "cycle": 6,
+          "seconds": 10.588229166666666,
+          "boundary_step_dbfs": -72.24719895935549,
+          "before_50ms_rms_dbfs": -27.586095412277988,
+          "after_50ms_rms_dbfs": -9.44533127142585
+        },
+        {
+          "cycle": 6.5,
+          "seconds": 11.470583333333334,
+          "boundary_step_dbfs": -71.22414851040786,
+          "before_50ms_rms_dbfs": -18.586419946301906,
+          "after_50ms_rms_dbfs": -20.314011713794564
+        },
+        {
+          "cycle": 7,
+          "seconds": 12.3529375,
+          "boundary_step_dbfs": -56.86704154048001,
+          "before_50ms_rms_dbfs": -23.12505365194744,
+          "after_50ms_rms_dbfs": -34.19793386872847
+        },
+        {
+          "cycle": 7.75,
+          "seconds": 13.676479166666667,
+          "boundary_step_dbfs": -57.43994516947061,
+          "before_50ms_rms_dbfs": -13.736504792883872,
+          "after_50ms_rms_dbfs": -14.19513088401625
+        },
+        {
+          "cycle": 8,
+          "seconds": 14.117645833333333,
+          "boundary_step_dbfs": -80.76657360480111,
+          "before_50ms_rms_dbfs": -46.88395404670929,
+          "after_50ms_rms_dbfs": -8.136693037853943
+        },
+        {
+          "cycle": 11,
+          "seconds": 19.411770833333332,
+          "boundary_step_dbfs": -68.03013165305762,
+          "before_50ms_rms_dbfs": -33.96056627043241,
+          "after_50ms_rms_dbfs": -9.532218362094744
+        },
+        {
+          "cycle": 12,
+          "seconds": 21.176479166666667,
+          "boundary_step_dbfs": -57.24474842368749,
+          "before_50ms_rms_dbfs": -42.33188395577341,
+          "after_50ms_rms_dbfs": -9.601641273988823
+        },
+        {
+          "cycle": 15,
+          "seconds": 26.470583333333334,
+          "boundary_step_dbfs": -56.505077098624085,
+          "before_50ms_rms_dbfs": -42.23429157879903,
+          "after_50ms_rms_dbfs": -9.30535844684515
+        },
+        {
+          "cycle": 15.5,
+          "seconds": 27.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -63.94169860876858,
+          "after_50ms_rms_dbfs": -32.314130609569816
+        },
+        {
+          "cycle": 16,
+          "seconds": 28.235291666666665,
+          "boundary_step_dbfs": -63.0744419788425,
+          "before_50ms_rms_dbfs": -52.25427359633013,
+          "after_50ms_rms_dbfs": -42.171817072110144
+        }
+      ]
+    },
+    "drums": {
+      "sha256": "1a061a16cae5825b38cbf0ed650acdf7314e9be47214b9de4b5fe2ac882488c8",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "seconds": 30.0,
+      "first_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame_at_or_above_minus80_dbfs_seconds": 27.453520833333332,
+      "last_100ms_peak_dbfs": -240.0,
+      "fullband_mono_loss_db": -0.0024203074693360804,
+      "bands": {
+        "low": {
+          "stereo_rms_dbfs": -18.711574939704665,
+          "mono_rms_dbfs": -18.713433525616722,
+          "mono_loss_db": -0.0018585859120570092
+        },
+        "body": {
+          "stereo_rms_dbfs": -26.798201406756466,
+          "mono_rms_dbfs": -26.80015888844156,
+          "mono_loss_db": -0.001957481685092688
+        },
+        "presence": {
+          "stereo_rms_dbfs": -42.00291041199735,
+          "mono_rms_dbfs": -42.05326995979645,
+          "mono_loss_db": -0.05035954779910412
+        }
+      },
+      "arrangement_boundaries": [
+        {
+          "cycle": 4,
+          "seconds": 7.058833333333333,
+          "boundary_step_dbfs": -80.76657360480111,
+          "before_50ms_rms_dbfs": -64.63216870097256,
+          "after_50ms_rms_dbfs": -9.578612257282252
+        },
+        {
+          "cycle": 6,
+          "seconds": 10.588229166666666,
+          "boundary_step_dbfs": -84.28839878591474,
+          "before_50ms_rms_dbfs": -64.63414735728055,
+          "after_50ms_rms_dbfs": -9.580907333137619
+        },
+        {
+          "cycle": 6.5,
+          "seconds": 11.470583333333334,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -71.75157415893065,
+          "after_50ms_rms_dbfs": -75.78030966585291
+        },
+        {
+          "cycle": 7,
+          "seconds": 12.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 7.75,
+          "seconds": 13.676479166666667,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 8,
+          "seconds": 14.117645833333333,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -9.580790263295617
+        },
+        {
+          "cycle": 11,
+          "seconds": 19.411770833333332,
+          "boundary_step_dbfs": -84.28839878591474,
+          "before_50ms_rms_dbfs": -64.62998783623546,
+          "after_50ms_rms_dbfs": -9.579171014789154
+        },
+        {
+          "cycle": 12,
+          "seconds": 21.176479166666667,
+          "boundary_step_dbfs": -80.76657360480111,
+          "before_50ms_rms_dbfs": -64.63222256334122,
+          "after_50ms_rms_dbfs": -9.578803181396756
+        },
+        {
+          "cycle": 15,
+          "seconds": 26.470583333333334,
+          "boundary_step_dbfs": -84.28839878591474,
+          "before_50ms_rms_dbfs": -64.63382649904392,
+          "after_50ms_rms_dbfs": -9.58093128513678
+        },
+        {
+          "cycle": 15.5,
+          "seconds": 27.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -71.75820076587871,
+          "after_50ms_rms_dbfs": -75.7812346161904
+        },
+        {
+          "cycle": 16,
+          "seconds": 28.235291666666665,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        }
+      ]
+    },
+    "bass": {
+      "sha256": "44965b259bbde9ff745333b6fbbd9a9e02656ce1277238355fde2abb8a7340c0",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "seconds": 30.0,
+      "first_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame_at_or_above_minus80_dbfs_seconds": 26.8336875,
+      "last_100ms_peak_dbfs": -240.0,
+      "fullband_mono_loss_db": -0.0009375427180380314,
+      "bands": {
+        "low": {
+          "stereo_rms_dbfs": -19.866286143522267,
+          "mono_rms_dbfs": -19.866421704258233,
+          "mono_loss_db": -0.00013556073596632245
+        },
+        "body": {
+          "stereo_rms_dbfs": -36.54150594402245,
+          "mono_rms_dbfs": -36.582359746315156,
+          "mono_loss_db": -0.04085380229270896
+        },
+        "presence": {
+          "stereo_rms_dbfs": -54.112017436526244,
+          "mono_rms_dbfs": -54.11734837100183,
+          "mono_loss_db": -0.005330934475587412
+        }
+      },
+      "arrangement_boundaries": [
+        {
+          "cycle": 4,
+          "seconds": 7.058833333333333,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -99.78943842188454,
+          "after_50ms_rms_dbfs": -120.13171102959005
+        },
+        {
+          "cycle": 6,
+          "seconds": 10.588229166666666,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -96.12460466185773,
+          "after_50ms_rms_dbfs": -105.85036308930215
+        },
+        {
+          "cycle": 6.5,
+          "seconds": 11.470583333333334,
+          "boundary_step_dbfs": -90.30899869919436,
+          "before_50ms_rms_dbfs": -49.47415547637968,
+          "after_50ms_rms_dbfs": -50.92286872757825
+        },
+        {
+          "cycle": 7,
+          "seconds": 12.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -47.5316989499634,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 7.75,
+          "seconds": 13.676479166666667,
+          "boundary_step_dbfs": -90.30899869919436,
+          "before_50ms_rms_dbfs": -22.288043497482256,
+          "after_50ms_rms_dbfs": -27.286719724654695
+        },
+        {
+          "cycle": 8,
+          "seconds": 14.117645833333333,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 11,
+          "seconds": 19.411770833333332,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 12,
+          "seconds": 21.176479166666667,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 15,
+          "seconds": 26.470583333333334,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 15.5,
+          "seconds": 27.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        },
+        {
+          "cycle": 16,
+          "seconds": 28.235291666666665,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -240.0
+        }
+      ]
+    },
+    "percussion": {
+      "sha256": "0961a669ccd63cc70bf079cd7434dcae83a54f8ca2be85c85c7ce3855a0d9bc5",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "seconds": 30.0,
+      "first_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame_at_or_above_minus80_dbfs_seconds": 29.393958333333334,
+      "last_100ms_peak_dbfs": -240.0,
+      "fullband_mono_loss_db": -0.11206698475652743,
+      "bands": {
+        "low": {
+          "stereo_rms_dbfs": -29.73075469992127,
+          "mono_rms_dbfs": -29.839062876086977,
+          "mono_loss_db": -0.10830817616570698
+        },
+        "body": {
+          "stereo_rms_dbfs": -27.89776554192425,
+          "mono_rms_dbfs": -28.01162793903331,
+          "mono_loss_db": -0.11386239710905954
+        },
+        "presence": {
+          "stereo_rms_dbfs": -38.05298083813999,
+          "mono_rms_dbfs": -38.17115061532523,
+          "mono_loss_db": -0.11816977718524413
+        }
+      },
+      "arrangement_boundaries": [
+        {
+          "cycle": 4,
+          "seconds": 7.058833333333333,
+          "boundary_step_dbfs": -73.40703789890922,
+          "before_50ms_rms_dbfs": -43.93471319529996,
+          "after_50ms_rms_dbfs": -62.69074574920886
+        },
+        {
+          "cycle": 6,
+          "seconds": 10.588229166666666,
+          "boundary_step_dbfs": -67.3864379856296,
+          "before_50ms_rms_dbfs": -27.584208756409158,
+          "after_50ms_rms_dbfs": -34.82636101823362
+        },
+        {
+          "cycle": 6.5,
+          "seconds": 11.470583333333334,
+          "boundary_step_dbfs": -64.28839878591474,
+          "before_50ms_rms_dbfs": -18.615739166249778,
+          "after_50ms_rms_dbfs": -20.256226858432242
+        },
+        {
+          "cycle": 7,
+          "seconds": 12.3529375,
+          "boundary_step_dbfs": -58.053321564799646,
+          "before_50ms_rms_dbfs": -23.109407512405532,
+          "after_50ms_rms_dbfs": -33.945212822581475
+        },
+        {
+          "cycle": 7.75,
+          "seconds": 13.676479166666667,
+          "boundary_step_dbfs": -55.04043882793561,
+          "before_50ms_rms_dbfs": -14.301184508115629,
+          "after_50ms_rms_dbfs": -14.45549040209869
+        },
+        {
+          "cycle": 8,
+          "seconds": 14.117645833333333,
+          "boundary_step_dbfs": -90.30899869919436,
+          "before_50ms_rms_dbfs": -48.35106712242606,
+          "after_50ms_rms_dbfs": -16.204593972969068
+        },
+        {
+          "cycle": 11,
+          "seconds": 19.411770833333332,
+          "boundary_step_dbfs": -63.0744419788425,
+          "before_50ms_rms_dbfs": -34.04165645789969,
+          "after_50ms_rms_dbfs": -42.60594691156064
+        },
+        {
+          "cycle": 12,
+          "seconds": 21.176479166666667,
+          "boundary_step_dbfs": -62.35019852575361,
+          "before_50ms_rms_dbfs": -42.27703770724564,
+          "after_50ms_rms_dbfs": -49.83687522070376
+        },
+        {
+          "cycle": 15,
+          "seconds": 26.470583333333334,
+          "boundary_step_dbfs": -63.86461280451598,
+          "before_50ms_rms_dbfs": -42.231084236594455,
+          "after_50ms_rms_dbfs": -25.171992940035167
+        },
+        {
+          "cycle": 15.5,
+          "seconds": 27.3529375,
+          "boundary_step_dbfs": -84.28839878591474,
+          "before_50ms_rms_dbfs": -67.39170367349344,
+          "after_50ms_rms_dbfs": -32.31591337938646
+        },
+        {
+          "cycle": 16,
+          "seconds": 28.235291666666665,
+          "boundary_step_dbfs": -63.0744419788425,
+          "before_50ms_rms_dbfs": -52.340943734299046,
+          "after_50ms_rms_dbfs": -42.174848199896786
+        }
+      ]
+    },
+    "space": {
+      "sha256": "1c737a5ad0161c97ba474a86a82c3e87d221dd77f20253899804ff8a131fa649",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "seconds": 30.0,
+      "first_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame": [
+        0.0,
+        0.0
+      ],
+      "last_frame_at_or_above_minus80_dbfs_seconds": 29.562666666666665,
+      "last_100ms_peak_dbfs": -84.28839878591474,
+      "fullband_mono_loss_db": -0.3697117324751389,
+      "bands": {
+        "low": {
+          "stereo_rms_dbfs": -71.43379584933905,
+          "mono_rms_dbfs": -73.01972311809666,
+          "mono_loss_db": -1.5859272687576151
+        },
+        "body": {
+          "stereo_rms_dbfs": -57.59599339330316,
+          "mono_rms_dbfs": -58.247682937872504,
+          "mono_loss_db": -0.6516895445693436
+        },
+        "presence": {
+          "stereo_rms_dbfs": -53.87190321247775,
+          "mono_rms_dbfs": -54.12766159463728,
+          "mono_loss_db": -0.2557583821595344
+        }
+      },
+      "arrangement_boundaries": [
+        {
+          "cycle": 4,
+          "seconds": 7.058833333333333,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -70.21871469328897,
+          "after_50ms_rms_dbfs": -55.37362008090945
+        },
+        {
+          "cycle": 6,
+          "seconds": 10.588229166666666,
+          "boundary_step_dbfs": -84.28839878591474,
+          "before_50ms_rms_dbfs": -66.47096468139115,
+          "after_50ms_rms_dbfs": -63.934145183975595
+        },
+        {
+          "cycle": 6.5,
+          "seconds": 11.470583333333334,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -78.47428351589349,
+          "after_50ms_rms_dbfs": -78.71840502516675
+        },
+        {
+          "cycle": 7,
+          "seconds": 12.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -88.57349413241037,
+          "after_50ms_rms_dbfs": -89.61941379465841
+        },
+        {
+          "cycle": 7.75,
+          "seconds": 13.676479166666667,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -119.3398985691138
+        },
+        {
+          "cycle": 8,
+          "seconds": 14.117645833333333,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -240.0,
+          "after_50ms_rms_dbfs": -72.14334075398746
+        },
+        {
+          "cycle": 11,
+          "seconds": 19.411770833333332,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -64.17126737517309,
+          "after_50ms_rms_dbfs": -63.60837911744032
+        },
+        {
+          "cycle": 12,
+          "seconds": 21.176479166666667,
+          "boundary_step_dbfs": -90.30899869919436,
+          "before_50ms_rms_dbfs": -70.97137438914685,
+          "after_50ms_rms_dbfs": -62.06314292989586
+        },
+        {
+          "cycle": 15,
+          "seconds": 26.470583333333334,
+          "boundary_step_dbfs": -90.30899869919436,
+          "before_50ms_rms_dbfs": -64.78321127281053,
+          "after_50ms_rms_dbfs": -59.38185583591643
+        },
+        {
+          "cycle": 15.5,
+          "seconds": 27.3529375,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -66.87840608376447,
+          "after_50ms_rms_dbfs": -65.28666552697663
+        },
+        {
+          "cycle": 16,
+          "seconds": 28.235291666666665,
+          "boundary_step_dbfs": -240.0,
+          "before_50ms_rms_dbfs": -67.88818321629978,
+          "after_50ms_rms_dbfs": -64.33865264385597
+        }
+      ]
+    }
+  }
+}

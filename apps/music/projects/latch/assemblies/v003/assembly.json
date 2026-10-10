@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/assembly-v003.json",
+    "sha256": "3e70c6382fefb5e92b8d50b0071523b6300f48b7d4ed6bedfa69674480630269"
+  },
+  "revision": "v003",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v003/setup.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "48ee1d4f667b5407bae979058ed20a4e34177b4cace342b980f581ad3e0402ba",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v003/drums.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "c9512c589b7a3ce56f4474172f2953f1f7f56f7a52fe2096c2047f62360d7fd6",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v003/bass.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "f6f561940ddaf0202ba6e792a523b7d519c00f0be33fac719e0a9a71992fba25",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v003/breath.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "d0496384c9f4bcfbcdb4e9472c144a7b2cdd186ce32c16f054a6151ff451affb",
+      "stem": "breath"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v003/edits.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "4be385e975a549c6bceb722d21358452f35b3de31886b8f5eff58ee9fbedd83f",
+      "stem": "edits"
+    }
+  ],
+  "source_sha256": "8b99d196770c83598727c6927018766d6b0a6fa053fbd864d556a995afe86e55",
+  "project_sha256": "84cc89891547e8d76a917b1951c9a74b7891ade4ea19f5bb6ce83945054447e3",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost",
+      "bridgehat"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "clack",
+      "echo"
+    ],
+    "edits": [
+      "exposed",
+      "inhale",
+      "ending"
+    ]
+  }
+}

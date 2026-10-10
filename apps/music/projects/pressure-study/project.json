@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "title": "Pressure Study",
+  "end_cycle": 17,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "references/assets/samples"
+  ],
+  "sections": {
+    "whole": [
+      0,
+      17
+    ],
+    "engine": [
+      0,
+      4
+    ],
+    "exposure": [
+      4,
+      8
+    ],
+    "arrival": [
+      8,
+      12
+    ],
+    "exit": [
+      12,
+      17
+    ]
+  },
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "Original thirty-second four-gesture bass/percussion study; ghost metal, elastic FM articulations, no melody."
+    }
+  },
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "air"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "rubber",
+      "lowgrowl"
+    ],
+    "percussion": [
+      "chain",
+      "knock",
+      "ghost",
+      "fill"
+    ],
+    "space": [
+      "pressure",
+      "scrape"
+    ]
+  }
+}

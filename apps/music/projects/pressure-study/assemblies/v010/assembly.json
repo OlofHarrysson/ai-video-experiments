@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/assembly-v010.json",
+    "sha256": "0d67064afead046d70e5a23985884789df747a5a9062129f024a79901dac58a6"
+  },
+  "revision": "v010",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/modules/setup-v010.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "8b5f557c51dbd74d6404e85fbc4cc971d483e62fa1858eee7645c42c8314d11f",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/modules/drums-v010.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "03b7495bd8c21030c6cb26cf61d08eea918317edbe99d1f359d6570dd2a3b428",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/modules/bass-v010.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "7f50a70e0e3de738806643b216d08c9e842fbcb82301fbd1047cb51cbb4abe9a",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/modules/percussion-v010.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "a7ed809dde3278dc7aebfed71426c06abbf4203eb35506abf067fb89cdef8ba8",
+      "stem": "percussion"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/modules/space-v010.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "dcdde4577e5bb468be31fce9c94823c30bbd23d563bf85b7220dcf2155db2be6",
+      "stem": "space"
+    }
+  ],
+  "source_sha256": "968b023b7d1214bfe104756afeca66226bc6e8828fa6991d693417a7471c6a56",
+  "project_sha256": "1f4ec7a6a2c6adbc64bf2d90071d70cd7a9cd5ac83d14c1ad05156c83972f224",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "air"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "rubber",
+      "lowgrowl",
+      "transformsub"
+    ],
+    "percussion": [
+      "object",
+      "knock",
+      "ghost",
+      "fill",
+      "exitclick",
+      "ratchet"
+    ],
+    "space": [
+      "pressure",
+      "scrape"
+    ]
+  }
+}

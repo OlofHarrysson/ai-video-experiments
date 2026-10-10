@@ -1,0 +1,507 @@
+{
+  "engine_sha256": "446a0c42552401323c815a2cccfd013e4c03120ce924dee454fcf0f9dfcaa399",
+  "scope": "Pattern onset positions, not perceived timing or audibility",
+  "versions": {
+    "v007": {
+      "source_sha256": "e1314d951e7aef68f775dffd96877a65ea4a971ab4968d713b5cb5e280899d52",
+      "coincident_bass_object_onsets": 3,
+      "events": [
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.125,
+          "end_cycle": 10.375,
+          "sixteenth": 2,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.625,
+          "end_cycle": 10.875,
+          "sixteenth": 10,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.25,
+          "end_cycle": 11.625,
+          "sixteenth": 4,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.75,
+          "end_cycle": 11.875,
+          "sixteenth": 12,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.0625,
+          "end_cycle": 12.125,
+          "sixteenth": 1,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.25,
+          "end_cycle": 12.3125,
+          "sixteenth": 4,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.375,
+          "end_cycle": 12.4375,
+          "sixteenth": 6,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.5625,
+          "end_cycle": 12.625,
+          "sixteenth": 9,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.75,
+          "end_cycle": 12.8125,
+          "sixteenth": 12,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.875,
+          "end_cycle": 12.9375,
+          "sixteenth": 14,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.9375,
+          "end_cycle": 13,
+          "sixteenth": 15,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.125,
+          "end_cycle": 13.5,
+          "sixteenth": 2,
+          "bar": 13
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.75,
+          "end_cycle": 13.875,
+          "sixteenth": 12,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.125,
+          "end_cycle": 10.25,
+          "sixteenth": 2,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.5,
+          "end_cycle": 10.625,
+          "sixteenth": 8,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.875,
+          "end_cycle": 11,
+          "sixteenth": 14,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.25,
+          "end_cycle": 11.375,
+          "sixteenth": 4,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.625,
+          "end_cycle": 11.75,
+          "sixteenth": 10,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.125,
+          "end_cycle": 12.25,
+          "sixteenth": 2,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.5,
+          "end_cycle": 12.625,
+          "sixteenth": 8,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.875,
+          "end_cycle": 13,
+          "sixteenth": 14,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.25,
+          "end_cycle": 13.375,
+          "sixteenth": 4,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.625,
+          "end_cycle": 13.75,
+          "sixteenth": 10,
+          "bar": 13
+        }
+      ]
+    },
+    "v010": {
+      "source_sha256": "f3af673b227f073e746c348eb20858cb4a3260bb9f4d48e155a1dff34e211bec",
+      "coincident_bass_object_onsets": 3,
+      "events": [
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.0625,
+          "end_cycle": 10.1875,
+          "sixteenth": 1,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.375,
+          "end_cycle": 10.5,
+          "sixteenth": 6,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.6875,
+          "end_cycle": 10.8125,
+          "sixteenth": 11,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.1875,
+          "end_cycle": 11.375,
+          "sixteenth": 3,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.625,
+          "end_cycle": 11.75,
+          "sixteenth": 10,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.0625,
+          "end_cycle": 12.1875,
+          "sixteenth": 1,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.3125,
+          "end_cycle": 12.4375,
+          "sixteenth": 5,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.5625,
+          "end_cycle": 12.6875,
+          "sixteenth": 9,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.875,
+          "end_cycle": 12.9375,
+          "sixteenth": 14,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.125,
+          "end_cycle": 13.3125,
+          "sixteenth": 2,
+          "bar": 13
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.5625,
+          "end_cycle": 13.75,
+          "sixteenth": 9,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.1875,
+          "end_cycle": 10.25,
+          "sixteenth": 3,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.6875,
+          "end_cycle": 10.75,
+          "sixteenth": 11,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11,
+          "end_cycle": 11.0625,
+          "sixteenth": 0,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.375,
+          "end_cycle": 11.4375,
+          "sixteenth": 6,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.8125,
+          "end_cycle": 11.875,
+          "sixteenth": 13,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.9375,
+          "end_cycle": 12,
+          "sixteenth": 15,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.25,
+          "end_cycle": 12.3125,
+          "sixteenth": 4,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.5625,
+          "end_cycle": 12.625,
+          "sixteenth": 9,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.875,
+          "end_cycle": 12.9375,
+          "sixteenth": 14,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13,
+          "end_cycle": 13.0625,
+          "sixteenth": 0,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.4375,
+          "end_cycle": 13.5,
+          "sixteenth": 7,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.875,
+          "end_cycle": 13.9375,
+          "sixteenth": 14,
+          "bar": 13
+        }
+      ]
+    },
+    "v011": {
+      "source_sha256": "7ce17a4960b3f68716e9f36415875795848201c4b7b7da7be32a3c944a76253d",
+      "coincident_bass_object_onsets": 0,
+      "events": [
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.0625,
+          "end_cycle": 10.1875,
+          "sixteenth": 1,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.375,
+          "end_cycle": 10.5,
+          "sixteenth": 6,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 10.6875,
+          "end_cycle": 10.8125,
+          "sixteenth": 11,
+          "bar": 10
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.1875,
+          "end_cycle": 11.375,
+          "sixteenth": 3,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 11.625,
+          "end_cycle": 11.75,
+          "sixteenth": 10,
+          "bar": 11
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.0625,
+          "end_cycle": 12.1875,
+          "sixteenth": 1,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.3125,
+          "end_cycle": 12.4375,
+          "sixteenth": 5,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.5625,
+          "end_cycle": 12.6875,
+          "sixteenth": 9,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 12.875,
+          "end_cycle": 12.9375,
+          "sixteenth": 14,
+          "bar": 12
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.125,
+          "end_cycle": 13.3125,
+          "sixteenth": 2,
+          "bar": 13
+        },
+        {
+          "sound": "sawtooth",
+          "start_cycle": 13.5625,
+          "end_cycle": 13.75,
+          "sixteenth": 9,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.25,
+          "end_cycle": 10.3125,
+          "sixteenth": 4,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.5625,
+          "end_cycle": 10.625,
+          "sixteenth": 9,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 10.875,
+          "end_cycle": 10.9375,
+          "sixteenth": 14,
+          "bar": 10
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11,
+          "end_cycle": 11.0625,
+          "sixteenth": 0,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.4375,
+          "end_cycle": 11.5,
+          "sixteenth": 7,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 11.875,
+          "end_cycle": 11.9375,
+          "sixteenth": 14,
+          "bar": 11
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.1875,
+          "end_cycle": 12.25,
+          "sixteenth": 3,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 12.6875,
+          "end_cycle": 12.75,
+          "sixteenth": 11,
+          "bar": 12
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13,
+          "end_cycle": 13.0625,
+          "sixteenth": 0,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.375,
+          "end_cycle": 13.4375,
+          "sixteenth": 6,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.8125,
+          "end_cycle": 13.875,
+          "sixteenth": 13,
+          "bar": 13
+        },
+        {
+          "sound": "nsbloomwarm",
+          "start_cycle": 13.9375,
+          "end_cycle": 14,
+          "sixteenth": 15,
+          "bar": 13
+        }
+      ]
+    }
+  }
+}

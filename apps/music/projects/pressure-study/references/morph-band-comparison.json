@@ -1,0 +1,158 @@
+[
+  {
+    "revision": "v006",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.41,
+      "body": -24.59,
+      "presence": -38.41
+    }
+  },
+  {
+    "revision": "v006",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -37.99,
+      "body": -37.02,
+      "presence": -44.64
+    }
+  },
+  {
+    "revision": "v007",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.36,
+      "body": -24.0,
+      "presence": -36.54
+    }
+  },
+  {
+    "revision": "v007",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -32.64,
+      "body": -28.83,
+      "presence": -39.44
+    }
+  },
+  {
+    "revision": "v008",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.28,
+      "body": -22.19,
+      "presence": -33.73
+    }
+  },
+  {
+    "revision": "v008",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -29.31,
+      "body": -24.67,
+      "presence": -35.01
+    }
+  },
+  {
+    "revision": "v009",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.17,
+      "body": -21.45,
+      "presence": -30.98
+    }
+  },
+  {
+    "revision": "v009",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -28.35,
+      "body": -23.53,
+      "presence": -31.61
+    }
+  },
+  {
+    "revision": "v010",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.26,
+      "body": -22.87,
+      "presence": -33.24
+    }
+  },
+  {
+    "revision": "v010",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -30.57,
+      "body": -26.14,
+      "presence": -34.35
+    }
+  },
+  {
+    "revision": "v011",
+    "stem": "master",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -15.2,
+      "body": -23.38,
+      "presence": -34.96
+    }
+  },
+  {
+    "revision": "v011",
+    "stem": "percussion",
+    "window_seconds": [
+      14.2,
+      20
+    ],
+    "rms_dbfs": {
+      "low": -29.28,
+      "body": -27.37,
+      "presence": -36.71
+    }
+  }
+]

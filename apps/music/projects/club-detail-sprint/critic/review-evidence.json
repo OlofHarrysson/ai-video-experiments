@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-10",
+  "requests": [
+    {
+      "receipt": ".local/undertow-control-review/request.json",
+      "purpose": "Neutral description of previous baseline",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "d0781b8cb7430e8d5c5274dc10b72c1c30b2ea742c722aa9fd516dd927c98d3c",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.029356,
+      "conclusion": "Identified broad foreground but wrong entry times; subjective static-tone impression remains a hypothesis."
+    },
+    {
+      "receipt": ".local/comparison-control-review/request.json",
+      "purpose": "Same30-second master twice",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "7efd355842a39b32342e48b3fa8ab7b325bcb5a38411888e68ccb42a25b99164",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.02569,
+      "conclusion": "Correctly identified duplicate; narrated incorrect shared events, so narrow match detection only."
+    },
+    {
+      "receipt": ".local/identity-pair-v004-review/request.json",
+      "purpose": "Anonymous matched Pressurev004 vs NegativeSpacev004",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "e0bee6cfd42030796e0f9fce61e3e7e312330c142151a7220c56271f2c097afc",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.026698,
+      "conclusion": "Preferred NegativeSpace broad focus; exaggerated tempo/rhythm/spatial descriptions; no validated signature or finalselection."
+    },
+    {
+      "receipt": ".local/pro-track-reference/toast-pressure-review/request.json",
+      "purpose": "Anonymous matched public Blawan Toast excerpt versus Pressurev006",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "09c7099c93533164d5c7e4c94dff352093c757879ff4126cb2c9b21f77566559",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.033862,
+      "conclusion": "Distinguished different pieces, preferred Pressure focused groove versus abrasive reference; not expert preference or proof original surpasses professional."
+    },
+    {
+      "receipt": ".local/latch-negative-return-review/request.json",
+      "purpose": "Matched returned groove Latchv002 versus NegativeSpacev008",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "14c0d30add17dc4a701aee2ebfa24728815c3e31710d7083a6230d354e5b8532",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.020416,
+      "conclusion": "Preferred NegativeSpace shared space; called Latch noise synth stabs so sound identity unreliable. Subjective coherence hypothesis only."
+    },
+    {
+      "receipt": ".local/pressure-short-low-review/request.json",
+      "purpose": "Known v005/v006 low-band difference, short focused 3-second matched windows",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "5b6253a4f9ba69944718badcfbf96b348aedca940eec9178c64cacde691dc840",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.014404,
+      "conclusion": "Failed to distinguish; neighboring kick transients diluted submitted low-band difference to1.29dB, so weaker than intended."
+    },
+    {
+      "receipt": ".local/pressure-isolated-low-review/request.json",
+      "purpose": "Known v005/v006 low-band difference, fully isolated 2-second matched windows",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "eb4324f1e5a089a0dfd54d2a164a48d8ddc7ab0e69d5e6da01503db36694cd4b",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.0084,
+      "conclusion": "Reported the measured low-band contrast in the wrong direction; unusable for this distinction."
+    },
+    {
+      "receipt": ".local/pressure-isolated-duplicate-review/request.json",
+      "purpose": "Exact duplicate under same focused short low-weight prompt",
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "68b96b47b59e1cbdcbdafe8c8249ec5a82a5969de51b0ecbcd1ff7b402ac3701",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.010236,
+      "conclusion": "False positive: described A as heavier despite sample-identical excerpts. Short focused format does not rescue reliability."
+    }
+  ],
+  "reported_cost_usd": 0.169062,
+  "unknown_cost_requests": 0,
+  "note": "Critic-owned requests only. Composer/main calls are recorded in their own receipts and shared ledger."
+}

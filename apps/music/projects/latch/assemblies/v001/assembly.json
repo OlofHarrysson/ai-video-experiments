@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/assembly-v001.json",
+    "sha256": "e95be6cb6d42ae547b98e42f5f1b884b3520dd39b672a8c5c509b857ca503e72"
+  },
+  "revision": "v001",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v001/setup.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "1dfd0bc30c70c0b57f08fdd5644539ae713df6c7b5010c66e2a73571cc3cbed3",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v001/drums.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "a3e2adee92eb4d8ef6de2833d167ac2caf869b9908d0d7bb8ed269813c7de1e8",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v001/bass.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "0f9103c2516abc6ce82bf2635cb4d0cb11ade54194f6febad4e55b066a4b7907",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v001/breath.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "32d0009d9dea907b5257085f81f6891a808b407857b94c4eb03f21d199293f59",
+      "stem": "breath"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v001/edits.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "26db7acae8578dfd4351f1941a2131f560a6fadee9824592335fa4ea82d72a7e",
+      "stem": "edits"
+    }
+  ],
+  "source_sha256": "c802c7c8fb8f5bdf77bc993090d6a105bf425ad7df6fa9430e5030bdb3765c78",
+  "project_sha256": "95c50255d4d34446b67936c67090e5967d84fdefec37344f6ddabba89e2339d9",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "clack",
+      "echo"
+    ],
+    "edits": [
+      "exposed",
+      "inhale",
+      "ending"
+    ]
+  }
+}

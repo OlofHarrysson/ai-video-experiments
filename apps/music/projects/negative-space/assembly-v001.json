@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "Negative Space",
+  "end_cycle": 16,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "references/assets/samples"
+  ],
+  "sections": {
+    "identity": [
+      0,
+      4
+    ],
+    "pressure": [
+      4,
+      8
+    ],
+    "vacuum": [
+      8,
+      10
+    ],
+    "return": [
+      10,
+      14
+    ],
+    "release": [
+      14,
+      16
+    ]
+  },
+  "revision": "v001",
+  "modules": [
+    {
+      "file": "modules/v001/setup.strudel"
+    },
+    {
+      "file": "modules/v001/drums.strudel",
+      "stem": "drums"
+    },
+    {
+      "file": "modules/v001/bass.strudel",
+      "stem": "bass"
+    },
+    {
+      "file": "modules/v001/dub.strudel",
+      "stem": "dub"
+    },
+    {
+      "file": "modules/v001/edits.strudel",
+      "stem": "edits"
+    }
+  ]
+}

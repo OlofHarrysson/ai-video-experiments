@@ -1,0 +1,4 @@
+sub: note(bassLine).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(145).attack(.004).decay(.13).sustain(.5).release(.025).gain(.81).orbit(4).mask(bassGate)
+bass: note(bassLine).s("sawtooth").lpf("<340 380 400 430 210 380 450 340 540 500 580 400 590 520 620 360 200>").lpenv(1.75).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.30).release(.025).gain(.43).orbit(4).mask(bassGate)
+rubber: s("<[~ ~ ~ prrubber:0 ~ ~ prrubber:1 ~ ~ ~ ~ prrubber:0 ~ ~ prrubber:2 ~] [~ ~ prrubber:0 ~ ~ ~ prrubber:1 ~ ~ ~ ~ prrubber:3 ~ ~ ~ ~]>").gain("<.13!4 .18!4 .23!4 .20!4 0>").hpf(160).lpf(1700).orbit(4).mask(bassGate)
+lowgrowl: note("f2").struct("<~ [~ x ~ ~ ~ ~ x ~] ~ [~ ~ ~ x ~ ~ x ~]>").s("supersaw").unison(3).detune(.13).spread(.25).lpf(260).lpenv(1.5).lpdecay(.10).attack(.008).decay(.13).sustain(.05).release(.05).gain(.18).orbit(4).mask(bassGate)

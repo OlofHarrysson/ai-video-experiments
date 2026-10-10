@@ -1,0 +1,95 @@
+{
+  "origin": "Original deterministic shared excitation, fixed resonator family with changing damping and weights",
+  "seed": 101007,
+  "sample_rate": 48000,
+  "frequencies_hz": [
+    174.61411572,
+    261.92117358,
+    568.0,
+    946.4,
+    1557.6,
+    2567.2,
+    3760.8
+  ],
+  "generator_sha256": "e20a8359404517fe03933a699c2a410fcd363058a8f627627a0412a5b193daf2",
+  "sounds": [
+    {
+      "index": 0,
+      "alpha": 0.0,
+      "path": "references/assets/samples/prweight/01.wav",
+      "sha256": "7374238d133880fa68f65351c5a910b5aaa9375425e48f65cbe4a706f3cc3a02"
+    },
+    {
+      "index": 1,
+      "alpha": 0.08333333333333333,
+      "path": "references/assets/samples/prweight/02.wav",
+      "sha256": "6cbc760730cac6bb0ea936c6f509fcbc23499cf3d536cc189dc4bfad25ecddb6"
+    },
+    {
+      "index": 2,
+      "alpha": 0.16666666666666666,
+      "path": "references/assets/samples/prweight/03.wav",
+      "sha256": "c194ea44ba12a7c1890dfd1d413335f20190d3b421d578a02adb4e07ed6a4146"
+    },
+    {
+      "index": 3,
+      "alpha": 0.25,
+      "path": "references/assets/samples/prweight/04.wav",
+      "sha256": "5cd96483ecdd357d99d58b1680b635584b140e0897e7e76804844e410f2723a2"
+    },
+    {
+      "index": 4,
+      "alpha": 0.3333333333333333,
+      "path": "references/assets/samples/prweight/05.wav",
+      "sha256": "836e7d9137416d959a74a890df692cef1899fec6b6686f2b8f48511a1387869e"
+    },
+    {
+      "index": 5,
+      "alpha": 0.41666666666666663,
+      "path": "references/assets/samples/prweight/06.wav",
+      "sha256": "1118a5208dff367c887213b2b97e57659dcbc19fc9f6b0ed696621fe8fae18e1"
+    },
+    {
+      "index": 6,
+      "alpha": 0.5,
+      "path": "references/assets/samples/prweight/07.wav",
+      "sha256": "8a6d6b25e1314c6dae3f21c174c37e280b51ece74bb35d1bfc2aba54b15e625f"
+    },
+    {
+      "index": 7,
+      "alpha": 0.5833333333333333,
+      "path": "references/assets/samples/prweight/08.wav",
+      "sha256": "62a62b59af121ad83c16d259415047408deb934a27f83a83ab5e1738b0301a2e"
+    },
+    {
+      "index": 8,
+      "alpha": 0.6666666666666666,
+      "path": "references/assets/samples/prweight/09.wav",
+      "sha256": "1e931b258e822f9dd17e01879a5318ff742be4ffe2d5768ad2d8089550f80195"
+    },
+    {
+      "index": 9,
+      "alpha": 0.75,
+      "path": "references/assets/samples/prweight/10.wav",
+      "sha256": "b9e735815d905ab0d6c15436eae5a3799ed4e0be85c4b9421d119f9cf2866990"
+    },
+    {
+      "index": 10,
+      "alpha": 0.8333333333333333,
+      "path": "references/assets/samples/prweight/11.wav",
+      "sha256": "434f83d2513cf8c3e368eacdc822f91054d6a73b35b7b72270249ab509b2ba9d"
+    },
+    {
+      "index": 11,
+      "alpha": 0.9166666666666666,
+      "path": "references/assets/samples/prweight/12.wav",
+      "sha256": "376e214c336282bed25e1d69c60a22e4868beedb19bf362207e8e970ee2abd97"
+    },
+    {
+      "index": 12,
+      "alpha": 1.0,
+      "path": "references/assets/samples/prweight/13.wav",
+      "sha256": "6918558a36240e14e1c8f0d0e4f09c4714076af8f177b69402091c661f401c3b"
+    }
+  ]
+}

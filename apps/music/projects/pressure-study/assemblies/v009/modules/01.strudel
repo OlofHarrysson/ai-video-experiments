@@ -1,0 +1,8 @@
+// Pressure Study — 136 BPM. Seventeen cycles = thirty seconds.
+// Original bass/percussion micro-arrangement; no foreground melody.
+setcpm(136/4)
+const live = "<1!16 0>"
+const drumGate = "<1!6 [1 1 0 0] 0 1!3 [1 1 0 1] 1!3 [1 1 0 0] 0>"
+const topGate = "<1!4 0 1 [1 0 0 0] 0 1!3 [1 1 0 1] 1!3 [1 0 0 0] 0>"
+const bassGate = "<1!4 [1 0 1 0] 1 [1 1 0 0] 0 1!3 [1 1 0 1] 1!3 [1 0 0 0] 0>"
+const bassLine = "<[~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ ~ ~ f1 ~ ~ ~ ~ ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ f1 ~ f1 ~ f1 ~ ~ ~ ~ ~ ~] [~ f1@2 ~ ~ f1 ~ ~ ~ f1@2 ~ ~ f1 f1 ~] [~ f1 ~ f1 ~ f1@2 ~ ~ f1 ~ f1 ~ f1@2 ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ f1 f1 ~ ~ ~ ~ ~ ~ f1 f1 ~] [~ f1@2 ~ ~ f1 ~ f1 ~ f1@2 ~ ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 f1 ~ ~ f1@2 ~ ~ f1 ~ ~ ~ f1 f1 ~] [~ f1 f1 ~ ~ f1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] ~>"

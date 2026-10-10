@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "title": "Latch",
+  "revisions": {
+    "v004": {
+      "source": "source.strudel",
+      "notes": "Continuous physical pulse, interlocked friction calls and burred replies; authored four-bar transformations instead of an obligatory central break."
+    }
+  },
+  "end_cycle": 16.5,
+  "sample_rate": 48000,
+  "samples": [
+    "../../../practical-dogfood/references/assets/drums",
+    "../../references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "echo"
+    ],
+    "edits": [
+      "inhale",
+      "ending"
+    ]
+  },
+  "sections": {
+    "grip": [
+      0,
+      4
+    ],
+    "turn": [
+      4,
+      8
+    ],
+    "pressure": [
+      8,
+      12
+    ],
+    "release": [
+      12,
+      16.5
+    ]
+  }
+}

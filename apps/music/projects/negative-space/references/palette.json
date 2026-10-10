@@ -1,0 +1,49 @@
+{
+  "sample_rate": 48000,
+  "seed": 20261010,
+  "origin": "Original mathematical synthesis; no third-party recording or speech",
+  "assets": [
+    {
+      "name": "nsspring",
+      "file": "references/assets/samples/nsspring/01.wav",
+      "seconds": 0.2899791666666667,
+      "sha256": "b8ba9974859c3b5662aa011c73038deffd3381ce8323ea25250e6ba8e4b1f0fc",
+      "description": "Original inharmonic struck spring with bright noise attack."
+    },
+    {
+      "name": "nsservo",
+      "file": "references/assets/samples/nsservo/01.wav",
+      "seconds": 0.47,
+      "sha256": "3bb17a0e66675239cf5141d7af9b788c59e7ca366e17dfc700744f6ae5c02347",
+      "description": "Original rough servo response: falling FM pulse, saturation, bandpassed body."
+    },
+    {
+      "name": "nschord",
+      "file": "references/assets/samples/nschord/01.wav",
+      "seconds": 0.78,
+      "sha256": "8e3009ad1dea293ffce01cb36c94c2f2592ed45528e09cf1ea7ddd4c9db5100f",
+      "description": "Original detuned F3-Ab3-C4-F#4 dub chord, short struck envelope and tape-like saturation."
+    },
+    {
+      "name": "nsfriction",
+      "file": "references/assets/samples/nsfriction/01.wav",
+      "seconds": 1.35,
+      "sha256": "3fd10da64b741a1d2870af5d18b7a7a76f28e187c667345e4d0529e6e5b319bc",
+      "description": "Original stereo friction micrograins; independently seeded left and right textures."
+    },
+    {
+      "name": "nsreverse",
+      "file": "references/assets/samples/nsreverse/01.wav",
+      "seconds": 0.78,
+      "sha256": "7cd9fcee0427a8d447c1114acb0ee4641d1f6be59f25d91a40cdd48cd98c327a",
+      "description": "Reversed original dub chord for short pre-impact suction."
+    },
+    {
+      "name": "nslanding",
+      "file": "references/assets/samples/nslanding/01.wav",
+      "seconds": 1.6,
+      "sha256": "8137badfeee8e579d1189ab10586472ab751793308ae4193a8be8c69fe372f60",
+      "description": "Original sub impact with pitch fall and short asymmetric high-passed reflections."
+    }
+  ]
+}

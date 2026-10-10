@@ -1,0 +1,102 @@
+{
+  "status": "verified",
+  "scope": "Local relocated recipe and sample banks; installed workbench required. Original saved outputs are exact; wet rerenders vary.",
+  "frames": 1440000,
+  "sample_rate": 48000,
+  "channels": 2,
+  "pcm_rail_samples_all_outputs": 0,
+  "bundles": [
+    {
+      "name": "pressure-lock",
+      "bundle": "exports/bundles/pressure-lock",
+      "bundle_manifest_sha256": "8cfc5f75ae804edc4e962b022bce21cefd0eb6af5ef6af7205701ce2e604438a",
+      "verified_files": 79,
+      "sample_assets": 63,
+      "all_runtime_paths_inside_bundle": true,
+      "source_and_bank_indices_hashes_unchanged": true,
+      "rebuilt_stems": [
+        {
+          "stem": "master",
+          "sha256": "29d132ab41cb561589e77f6d827f4a7cdf5023ad9ef107becc9f4f522af7c19b",
+          "integrated_lufs": -14.42,
+          "true_peak_dbtp": -0.96,
+          "residual_rms_dbfs": -45.989143181072684
+        },
+        {
+          "stem": "drums",
+          "sha256": "900b1efe30691d22f2e05aee96087e317d8e1492e8ff77615ac71dd349616350",
+          "integrated_lufs": -15.87,
+          "true_peak_dbtp": -3.69,
+          "residual_rms_dbfs": -68.74638143425896
+        },
+        {
+          "stem": "bass",
+          "sha256": "7ac0ccbb1922fbd842fcc094c2a80f6bf13c2c154b7e8dfc041ad192ab0b5507",
+          "integrated_lufs": -21.29,
+          "true_peak_dbtp": -6.46,
+          "residual_rms_dbfs": -47.4194531512243
+        },
+        {
+          "stem": "percussion",
+          "sha256": "3265136c78d5497354900a9b57b3088d77234872017e33140c532e7eb2edd909",
+          "integrated_lufs": -22.8,
+          "true_peak_dbtp": -4.28,
+          "residual_rms_dbfs": -52.893093497297066
+        },
+        {
+          "stem": "space",
+          "sha256": "1694f1e6bafb0d7a92f837b4c2284524de058564ae38aca86fca908978137f98",
+          "integrated_lufs": -38.94,
+          "true_peak_dbtp": -20.44,
+          "residual_rms_dbfs": -57.80156095580601
+        }
+      ]
+    },
+    {
+      "name": "negative-space",
+      "bundle": "exports/bundles/negative-space",
+      "bundle_manifest_sha256": "226e3dd03549a57360d81b6bd9a7d41d51fe71d73babfeb772a07797a0ce6775",
+      "verified_files": 33,
+      "sample_assets": 17,
+      "all_runtime_paths_inside_bundle": true,
+      "source_and_bank_indices_hashes_unchanged": true,
+      "rebuilt_stems": [
+        {
+          "stem": "master",
+          "sha256": "7b4c6c16c45eaa8b9bced6a0555b8a557c56052f2d8b54560fc542e289ecd918",
+          "integrated_lufs": -17.16,
+          "true_peak_dbtp": -3.06,
+          "residual_rms_dbfs": -50.94642701779223
+        },
+        {
+          "stem": "drums",
+          "sha256": "2e23e8950e9f50294fb08ca5ad9173bbad5202a6a9b3c2bfd456735cff07bfc3",
+          "integrated_lufs": -18.04,
+          "true_peak_dbtp": -5.75,
+          "residual_rms_dbfs": -68.2380302184866
+        },
+        {
+          "stem": "bass",
+          "sha256": "f09add482e1b307ef4c2ad89e82bd3f9b93701a5c60cb5976e63f90841d8318a",
+          "integrated_lufs": -23.46,
+          "true_peak_dbtp": -8.49,
+          "residual_rms_dbfs": -131.06476991698236
+        },
+        {
+          "stem": "dub",
+          "sha256": "3d489cc43fe8da1ec856dd71aa899775c6933cb859b3429d144f09f5436a6a7d",
+          "integrated_lufs": -30.18,
+          "true_peak_dbtp": -11.5,
+          "residual_rms_dbfs": -59.01216728833255
+        },
+        {
+          "stem": "edits",
+          "sha256": "aea0a24eabdbfe0022a3abf9fb20ad040dc3a4bca9c65361a33fae1e039c8978",
+          "integrated_lufs": -31.84,
+          "true_peak_dbtp": -10.57,
+          "residual_rms_dbfs": -52.59337560491716
+        }
+      ]
+    }
+  ]
+}

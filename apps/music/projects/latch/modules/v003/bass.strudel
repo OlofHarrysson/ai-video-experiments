@@ -1,0 +1,3 @@
+sub: note(laBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4)
+bass: note(laBass).s("sawtooth").lpf("<370!2 510 290 440 620 180!2 390 650 480 700 420 500 220 160!3>").lpenv(1.8).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.44).orbit(4)
+burr: s("<[~ ~ ~ laburr ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ laburr ~] ~ [~ ~ ~ laburr ~ ~ ~ ~]>").gain("<.18!6 0!2 .30!6 0!4>").speed("<1 1 .5 .75>").lpf(1600).hpf(150).clip(.6).pan(.47).room(.12).roomsize(2.5).orbit(5).mask("<1!6 0!2 1!6 0!4>")

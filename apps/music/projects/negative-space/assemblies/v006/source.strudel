@@ -1,0 +1,41 @@
+// Module 1: modules/v006/setup.strudel
+// Negative Space — 128 BPM, 16 bars / 30 seconds, including release.
+setcpm(128/4)
+const nsOn = "<1!14 0!2>"
+const nsKick = "<1!8 0 [1 0 1 0] 1!4 [1 0 0 0] 0>"
+const nsTop = "<0!2 1!6 0!2 1!4 0!2>"
+const nsBass = "<[~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]!2 [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1]!2 [~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]!2 [~ f1 ~ ~ ~ f1 ~ f1 ~ ~ f1 ~ f1 ~ ~ ~] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ ~ f1 f1 ~] [f1 ~ ~ ~ ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ f1] [~ f1@2 ~ ~ f1@2 ~] [~ ~ f1@3 ~ f1 ~] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 f1] [~ f1@3 ~ ~ f1 ~] ~!2>"
+
+;
+
+// Module 2: modules/v006/drums.strudel
+kick: s("<[bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ bd ~ ~ bd ~]!3 [bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ ~ ~ bd ~ ~] [bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ bd ~ ~ bd ~]!3 [bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ ~ ~ bd ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ ~ bd ~ ~ bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ ~ ~ bd ~ bd ~ ~ ~ ~ bd ~ ~] [bd ~ ~ ~ ~ bd ~ ~ bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ ~ ~ bd ~ bd ~ ~ ~ ~ bd ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] ~>").bank("RolandTR909").speed(.84).gain(.48).orbit(1).mask(nsKick).postgain(.80)
+clap: s("~ cp ~ cp").bank("RolandTR909").speed(.83).gain(.21).hpf(650).room(.06).orbit(2).mask(nsTop).postgain(.80)
+hats: s("<[~ hh ~ hh ~ hh [hh hh] hh] [~ hh ~ [hh ~] ~ hh hh ~]>").bank("RolandTR909").gain(".085 .125 .075 .10").hpf(3300).pan(.59).swingBy(.07,8).orbit(1).mask(nsTop).postgain(.80)
+openhat: s("~ ~ oh ~ ~ ~ oh ~").bank("RolandTR909").gain(.085).clip(.55).hpf(3900).pan(.33).orbit(1).mask("<0!4 1!4 0!2 1!4 0!2>").postgain(.80)
+spring: s("<[~ ~ ~ nsspring ~ ~ ~ ~ ~ ~ nsspring ~ ~ ~ ~ ~] [~ ~ nsspring ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ nsspring ~ ~]>").speed(".82 1.11 .73").gain(".12 .085 .10").attack(.006).lpf(2700).hpf(500).pan(".30 .68").swingBy(.13,8).room(.15).delay(.12).delaytime(.234375).delayfeedback(.24).orbit(3).mask("<0 1!7 0!2 1!4 0!2>").postgain(.80)
+
+;
+
+// Module 3: modules/v006/bass.strudel
+sub: note(nsBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4).postgain(.80)
+bass: note(nsBass).s("sawtooth").lpf("<340!2 420!2 520!2 390 650 200!2 520!2 700 360 200!2>").lpenv(1.8).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.48).orbit(4).postgain(.80)
+
+;
+
+// Module 4: modules/v006/dub.strudel
+// A single printed object changes function: whole -> expanded tail -> rhythmic slices.
+dub: s("<[~ ~ ~ ~ ~ nsbloom ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] ~ [~ ~ ~ ~ ~ nsbloom ~ ~] ~>").gain("<.31!4 .35!4 .25!8>").lpf("<1900 1500 1100 1500>").hpf(330).pan(.43).orbit(6).mask("<1!8 0!8>").postgain(.80)
+dubecho: s("~ nsbloom").speed(.5).gain(.25).hpf(540).lpf(1600).tremolosync(6).tremolodepth(.25).pan(.56).room(.18).orbit(7).mask("<0!8 1 0!7>").postgain(.80)
+friction: s("nsfriction").slice(8,"<0 ~ 3 ~ 6 ~ 2 ~>").gain(.11).speed("<1 .75 1.2 .8>").hpf(1800).pan(".32 .64").delay(.17).delaytime(.1171875).delayfeedback(.27).room(.25).orbit(8).mask("<0!4 1!4 0!2 1!4 0!2>").postgain(.80)
+ghost: s("nsbloom").slice([0,.125,.375,.625,1],"<[~ 0 ~ ~ 2 ~ ~ 3] [~ ~ 1 ~ ~ 0 ~ ~]>").gain("<.31 .26>").lpf("<1800 1150>").hpf(450).attack(.008).pan(".32 .65 .42 .60").delay(.18).delaytime(.234375).delayfeedback(.25).room(.16).orbit(12).mask("<0!10 1!4 0!2>").postgain(.80)
+
+;
+
+// Module 5: modules/v006/edits.strudel
+turnaround: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ nsspring ~ nsspring ~ [nsspring nsspring] ~").gain(".09 .13 .1 .07").speed(.83).hpf(750).pan(".3 .7").orbit(9).mask("<0!3 1 0!3 1 0!5 1 0!2>").postgain(.80)
+reverse: s("nsbloomrev").slice(2,"~ 1").gain(.20).hpf(500).pan(.6).room(.2).orbit(10).mask("<0!7 1 0 1 0!3 1 0!2>").postgain(.80)
+landing: s("nslanding").gain(.31).orbit(1).mask("<0!14 1 0>").postgain(.80)
+lastchord: s("nsbloom").gain(.24).hpf(350).lpf(1250).pan(.42).delay(.18).delaytime(.3515625).delayfeedback(.35).room(.5).roomsize(5).orbit(11).mask("<0!14 1 0>").postgain(.80)
+
+;

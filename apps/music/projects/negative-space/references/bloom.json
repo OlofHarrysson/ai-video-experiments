@@ -1,0 +1,23 @@
+{
+  "source": "renders/v004/dub/render.wav",
+  "source_sha256": "71b664d09004dc24de3ab1b22df9ab6d9e57c75f42d32d9682feeac104302bc3",
+  "window_seconds": [
+    0.703125,
+    2.578125
+  ],
+  "scope": "Composite original nscloud direct chord, slowed echo layer, delay and reverb. No external recording.",
+  "processing": "3ms onset taper,20ms end taper,peak0.8; reverse copy of same waveform",
+  "purpose": "Whole hollow gesture, expanded memory in the vacuum, chopped return, and final whole gesture.",
+  "assets": [
+    {
+      "name": "nsbloom",
+      "output": "references/assets/samples/nsbloom/01.wav",
+      "sha256": "b90ba0132b9089d25dee2dc73517356b78fd3c43dd3f044bb3bc845af66aa260"
+    },
+    {
+      "name": "nsbloomrev",
+      "output": "references/assets/samples/nsbloomrev/01.wav",
+      "sha256": "40b4b9522319a8652b2acd09992a0f7631382eaddb9a08696922eda3d23e190f"
+    }
+  ]
+}

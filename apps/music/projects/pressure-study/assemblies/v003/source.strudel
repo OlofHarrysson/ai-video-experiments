@@ -1,0 +1,47 @@
+// Module 1: modules/setup-v003.strudel
+// Pressure Study — 136 BPM. Seventeen cycles = thirty seconds.
+// Original bass/percussion micro-arrangement; no foreground melody.
+setcpm(136/4)
+const live = "<1!16 0>"
+const drumGate = "<1!7 [1 1 1 0] 1!3 [1 1 0 1] 1!3 [1 1 0 0] 0>"
+const topGate = "<1!4 0 1!2 [1 1 0 0] 1!3 [1 1 0 1] 1!3 [1 0 0 0] 0>"
+const bassGate = "<1!4 [1 0 1 0] 1!2 [1 1 0 0] 1!3 [1 1 0 1] 1!3 [1 0 0 0] 0>"
+const bassLine = "<[~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ ~ ~ f1 ~ ~ ~ ~ ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ f1 ~ f1 ~ f1 ~ ~ ~ ~ ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ f1 ~ f1 ~ ~ ~ f1 f1 ~ ~ f1 f1 ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ f1 ~ f1 ~ ~] [~ f1 ~ ~ ~ f1 f1 ~ ~ ~ ~ ~ ~ f1 f1 ~] [~ f1 ~ f1 ~ f1 ~ ~ ~ f1 f1 ~ ~ f1 f1 ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ f1 ~ f1 ~ ~ ~ f1 ~ f1 ~ f1 f1 ~] [~ f1 f1 ~ ~ f1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] ~>"
+
+;
+
+// Module 2: modules/drums-v003.strudel
+kick: s("bd*4").bank("RolandTR909").speed(.86).gain(.52).orbit(1).mask(drumGate)
+clap: s("~ cp ~ cp").bank("RolandTR909").speed(.93).gain(.215).hpf(600).room(.065).orbit(2).mask(topGate)
+hat: s("<[~ hh ~ hh ~ hh [hh hh] hh] [~ hh hh ~ ~ hh ~ hh] [~ hh ~ hh [hh hh] ~ hh ~] [~ hh ~ hh ~ hh hh [hh ~]]>").bank("RolandTR909").gain(".066 .105 .073 .09").hpf(4800).swingBy(.045,8).pan(.62).orbit(1).mask(topGate)
+open: s("~ oh ~ oh ~ oh ~ oh").bank("RolandTR909").clip(.42).hpf(4300).gain(.085).pan(.39).orbit(1).mask("<1!4 0!2 1 0 1!7 0!2>")
+air: s("prair:0 prair:1 prair:0 prair:2 prair:1 prair:0 prair:3 prair:0").gain(".018 .032 .019 .045").swingBy(.09,8).pan(".3 .7 .4 .62").orbit(1).mask("<1!7 0 1!7 0!2>")
+
+;
+
+// Module 3: modules/bass-v003.strudel
+sub: note(bassLine).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(145).attack(.004).decay(.13).sustain(.5).release(.025).gain(.79).orbit(4).mask(bassGate)
+bass: note(bassLine).s("sawtooth").lpf("<340 380 400 430 210 380 450 340 540 500 580 400 590 520 620 360 200>").lpenv(1.75).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.30).release(.025).gain(.39).orbit(4).mask(bassGate)
+rubber: s("<[~ ~ ~ prrubber:0 ~ ~ prrubber:1 ~ ~ ~ ~ prrubber:0 ~ ~ prrubber:2 ~] [~ ~ prrubber:0 ~ ~ ~ prrubber:1 ~ ~ ~ ~ prrubber:3 ~ ~ ~ ~]>").gain("<.20!4 .25!4 .30!4 .27!4 0>").hpf(180).lpf(1900).pan(".42 .58").delay(.17).delaytime(.110294).delayfeedback(.16).orbit(5).mask(bassGate)
+lowgrowl: note("f2").struct("<~ [~ x ~ ~ ~ ~ x ~] ~ [~ ~ ~ x ~ ~ x ~]>").s("supersaw").unison(3).detune(.13).spread(.25).lpf(260).lpenv(1.5).lpdecay(.10).attack(.008).decay(.13).sustain(.05).release(.05).gain(.18).orbit(4).mask(bassGate)
+
+bend: s("~ ~ prbend ~").gain(.32).hpf(180).lpf(1900).pan(.5).orbit(5).mask("<0!7 1 0!9>")
+
+;
+
+// Module 4: modules/percussion-v003.strudel
+// A five-sixteenth metallic phrase runs against 4/4, then is interrupted at phrase ends.
+chain: s("prchain:0 ~ ~ prchain:2 ~").fast(16/5).gain(".12 .17 .135 .098 .18").speed("<.76 .82 .70 .86>").hpf(400).lpf(3200).clip(.75).pan(".25 .72 .4").delay(.14).delaytime(.165441).delayfeedback(.22).room(.13).orbit(3).mask("<1!4 0 1!2 [1 1 0 0] 1!3 [1 1 0 0] 1!3 [1 0 0 0] 0>")
+knock: s("<[~ ~ ~ ~ ~ ~ prknock:0 ~ ~ ~ ~ ~ ~ prknock:1 ~ ~] [~ ~ ~ prknock:1 ~ ~ ~ ~ ~ ~ prknock:2 ~ ~ ~ ~ ~]>").gain(".16 .22 .18 .21").hpf(130).pan(.43).room(.08).orbit(3).mask(live)
+ghost: s("<[~ ~ ~ ~ ~ ~ ~ ~ ~ ~ prknock:1 ~ ~ ~ ~ prchain:1] [~ ~ ~ ~ ~ prchain:2 ~ ~ ~ ~ ~ ~ ~ ~ prknock:2 ~]>").speed(1.45).gain(.075).hpf(480).pan(.73).orbit(3).mask(topGate)
+fill: s("~ ~ ~ ~ ~ ~ ~ ~ prchain:0 ~ prknock:0 prchain:2 prknock:1 [prchain:0 prchain:2] ~ ~").gain(".11 .12 .15 .09").hpf(320).speed("1 .83 1.12 .75").pan(".28 .69").orbit(3).mask("<0!3 1 0!7 1 0!5>")
+
+exitclick: s("~ ~ prchain:3 [prchain:1 ~ prchain:0 ~]").speed(.71).hpf(750).gain(.16).pan(".25 .7").delay(.32).delaytime(.220588).delayfeedback(.36).orbit(3).mask("<0!15 1 0>")
+
+;
+
+// Module 5: modules/space-v003.strudel
+pressure: note("[f2,gb3]").s("supersaw").unison(3).detune(.19).spread(.8).lpf("<410!4 720 550!2 830 570!3 660 530!3 340 200>").hpf(300).attack(.08).decay(.13).sustain(.22).release(.21).gain("<.035!4 .075 .045!2 .065 .04!7 .025 0>").tremolosync(8).tremoloshape("ramp").tremolodepth(.95).room(.55).roomsize(6).orbit(6).mask(live)
+scrape: s("prscrape").gain(.12).hpf(600).speed("<.72 .9>").pan(.63).room(.36).orbit(7).mask("<0!3 1 0!7 1 0!5>")
+
+;

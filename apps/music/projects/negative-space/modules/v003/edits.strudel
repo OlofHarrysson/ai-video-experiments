@@ -1,0 +1,4 @@
+turnaround: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ nsspring ~ nsservo ~ [nsspring nsspring] ~").gain(".09 .13 .1 .07").speed(.83).hpf(750).pan(".3 .7").orbit(9).mask("<0!3 1 0!3 1 0!5 1 0!2>").postgain(.80)
+reverse: s("~ ~ ~ nsreverse").gain(.22).hpf(500).pan(.6).room(.2).orbit(10).mask("<0!7 1 0 1 0!3 1 0!2>").postgain(.80)
+landing: s("nslanding").gain(.31).orbit(1).mask("<0!14 1 0>").postgain(.80)
+lastchord: s("nschord").speed(.75).gain(.22).hpf(350).lpf(1250).pan(.42).delay(.45).delaytime(.3515625).delayfeedback(.50).room(.5).roomsize(5).orbit(11).mask("<0!14 1 0>").postgain(.80)

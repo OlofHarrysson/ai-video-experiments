@@ -1,0 +1,104 @@
+{
+  "purpose": "Verify current generator after retained generator-byte hash mismatch",
+  "recorded_generator_sha256": "8ec098fde380a0f52f602aeb3932c835fedb652947cbefccf95db0c4c7d33cce",
+  "current_generator_sha256": "0fddb16c07a464e182b2d3b36b122a888e7544c326192dbe187997a65c49a91f",
+  "generated": 16,
+  "matches": [
+    {
+      "name": "prchain",
+      "index": 0,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prchain",
+      "index": 1,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prchain",
+      "index": 2,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prchain",
+      "index": 3,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prair",
+      "index": 0,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prair",
+      "index": 1,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prair",
+      "index": 2,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prair",
+      "index": 3,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prknock",
+      "index": 0,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prknock",
+      "index": 1,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prknock",
+      "index": 2,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prrubber",
+      "index": 0,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prrubber",
+      "index": 1,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prrubber",
+      "index": 2,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prrubber",
+      "index": 3,
+      "same_path": true,
+      "sample_hash_matches": true
+    },
+    {
+      "name": "prscrape",
+      "index": 0,
+      "same_path": true,
+      "sample_hash_matches": true
+    }
+  ]
+}

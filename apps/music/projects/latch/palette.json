@@ -1,0 +1,38 @@
+{
+  "origin": "Original deterministic synthesis; no third-party audio",
+  "seed": 40831,
+  "assets": [
+    {
+      "sound": "lashuck",
+      "file": "references/assets/samples/lashuck/00.wav",
+      "sha256": "82473fd25922378a0e6b73658d474bbf6715637c2cc935e671fb8259d69b2372",
+      "recipe": "Bandlimited friction noise, rough pulsed breath; no voice or recording",
+      "frames": 20160,
+      "sample_rate": 48000
+    },
+    {
+      "sound": "laclack",
+      "file": "references/assets/samples/laclack/00.wav",
+      "sha256": "7011ee8f1988ce85b9dfb572454eae46789cc9ec218726d27fce4899bf29671f",
+      "recipe": "Damped inharmonic wood-like resonator with short noise excitation",
+      "frames": 11040,
+      "sample_rate": 48000
+    },
+    {
+      "sound": "laburr",
+      "file": "references/assets/samples/laburr/00.wav",
+      "sha256": "5d8716beff9a00cc239b23a4f5677d31ebd3048c3ef5f85fab178bfe01cc6f59",
+      "recipe": "Additive F1 bass with two moving harmonic envelopes, saturation and removed sub; returns as percussion",
+      "frames": 33600,
+      "sample_rate": 48000
+    },
+    {
+      "sound": "lasuck",
+      "file": "references/assets/samples/lasuck/00.wav",
+      "sha256": "45aa55abed44a56139fb4d1e04663a0621bd2d8e20c1e3cdb9c7b4d9b421e92d",
+      "recipe": "Rising narrow noise inhale, isolated transition object",
+      "frames": 40800,
+      "sample_rate": 48000
+    }
+  ]
+}

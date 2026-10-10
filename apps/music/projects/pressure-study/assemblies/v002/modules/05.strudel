@@ -1,0 +1,2 @@
+pressure: note("[f2,gb3]").s("supersaw").unison(3).detune(.19).spread(.8).lpf("<410!4 720 550!2 830 570!3 660 530!3 340 200>").hpf(300).attack(.08).decay(.13).sustain(.22).release(.21).gain("<.035!4 .075 .045!2 .065 .04!7 .025 0>").tremolosync(8).tremoloshape("ramp").tremolodepth(.95).room(.55).roomsize(6).orbit(6).mask(live)
+scrape: s("prscrape").gain(.12).hpf(600).speed("<.72 .9>").pan(.63).room(.36).orbit(7).mask("<0!3 1 0!7 1 0!5>")

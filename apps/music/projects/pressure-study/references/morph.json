@@ -1,0 +1,177 @@
+{
+  "origin": "Original deterministic shared excitation/resonator family",
+  "seed": 101007,
+  "sample_rate": 48000,
+  "generator_sha256": "9a854cb8825b2b068d8f8d165f2aefa5e05b77b36f4209d48edadd9757ff195e",
+  "sounds": [
+    {
+      "index": 0,
+      "alpha": 0.0,
+      "frequencies_hz": [
+        568.0,
+        946.4,
+        1557.6,
+        2567.2,
+        3760.8
+      ],
+      "path": "references/assets/samples/prmorph/01.wav",
+      "sha256": "6b5b3526d5016ef8fad85841face6c66bbca698b12fb64ac0cb19bcf2efd12bd"
+    },
+    {
+      "index": 1,
+      "alpha": 0.08333333333333333,
+      "frequencies_hz": [
+        485.9296737912152,
+        802.595810375136,
+        1297.9497806652175,
+        2122.5223860937144,
+        3085.076922215547
+      ],
+      "path": "references/assets/samples/prmorph/02.wav",
+      "sha256": "7951a720b6f2d53df1d6bfc3c4cd6f8df65d755b806cb9388d3b2a4c24a9608b"
+    },
+    {
+      "index": 2,
+      "alpha": 0.16666666666666666,
+      "frequencies_hz": [
+        415.71768991344544,
+        680.6424712930279,
+        1081.5829693945093,
+        1754.8696164961668,
+        2530.7646287989146
+      ],
+      "path": "references/assets/samples/prmorph/03.wav",
+      "sha256": "891509641b01e2fe486ed4bb00d2ec2b912ca37d0d889ef2897da33e56df05ad"
+    },
+    {
+      "index": 3,
+      "alpha": 0.25,
+      "frequencies_hz": [
+        355.6506363536587,
+        577.2197758063852,
+        901.284269322572,
+        1450.8998308230002,
+        2076.0485938808038
+      ],
+      "path": "references/assets/samples/prmorph/04.wav",
+      "sha256": "21a55ac189d2d095beb6de0f81ee556f7423dcca9bd6fbe57a1904e6995cce2e"
+    },
+    {
+      "index": 4,
+      "alpha": 0.3333333333333333,
+      "frequencies_hz": [
+        304.2626720193162,
+        489.5120178866023,
+        751.0411656935312,
+        1199.5821793788577,
+        1703.033824287308
+      ],
+      "path": "references/assets/samples/prmorph/05.wav",
+      "sha256": "efbb0085eb00eee77673f07c71fcaffffc2a87d0e0ff6cc0a2473e781be61221"
+    },
+    {
+      "index": 5,
+      "alpha": 0.41666666666666663,
+      "frequencies_hz": [
+        260.29975521336235,
+        415.1313341970262,
+        625.8434233965511,
+        991.7965213815485,
+        1397.0406161086098
+      ],
+      "path": "references/assets/samples/prmorph/06.wav",
+      "sha256": "6f794ac3416da45ea4ef71dd201e2a4f2695f9eaedc36ac82a3c58fc797a38ec"
+    },
+    {
+      "index": 6,
+      "alpha": 0.5,
+      "frequencies_hz": [
+        222.68904073725767,
+        352.05269397926213,
+        521.5160080433506,
+        820.0024614686081,
+        1146.0268464567278
+      ],
+      "path": "references/assets/samples/prmorph/07.wav",
+      "sha256": "3cde27ca4dc475ec8772acf378d49c7771ec492049b830a99cbc24b1e5c63e19"
+    },
+    {
+      "index": 7,
+      "alpha": 0.5833333333333333,
+      "frequencies_hz": [
+        190.51269880692658,
+        298.55876713761177,
+        434.5798589196629,
+        677.9657140538602,
+        940.1140651571772
+      ],
+      "path": "references/assets/samples/prmorph/08.wav",
+      "sha256": "1ee0824c12a17b518291c7c09c98a2c945f4ff10c01def5eb6ec8c96b6a75528"
+    },
+    {
+      "index": 8,
+      "alpha": 0.6666666666666666,
+      "frequencies_hz": [
+        162.9855168738273,
+        253.1931695429132,
+        362.1358709336786,
+        560.5318654889875,
+        771.1987360845167
+      ],
+      "path": "references/assets/samples/prmorph/09.wav",
+      "sha256": "ba916aaabefcd1312c11826f206d8123e8219b88c32396cbe307067994cba6dc"
+    },
+    {
+      "index": 9,
+      "alpha": 0.75,
+      "frequencies_hz": [
+        139.43573775913995,
+        214.72081264871477,
+        301.76821664700554,
+        463.4393240180925,
+        632.6333288492185
+      ],
+      "path": "references/assets/samples/prmorph/10.wav",
+      "sha256": "3c6e9a617bcf3509a8f3d9fbf50d7d49c65286fe37a1c6052b734d74a82e4cfc"
+    },
+    {
+      "index": 10,
+      "alpha": 0.8333333333333333,
+      "frequencies_hz": [
+        119.28866648615553,
+        182.09427792920863,
+        251.46378441751085,
+        383.1646696106811,
+        518.9647104491395
+      ],
+      "path": "references/assets/samples/prmorph/11.wav",
+      "sha256": "468dfcbf78569a59ffd2d11877e70e036c12020145d47653b8578a73b7c0a017"
+    },
+    {
+      "index": 11,
+      "alpha": 0.9166666666666666,
+      "frequencies_hz": [
+        102.05264576163141,
+        154.4253006754739,
+        209.54504611578955,
+        316.7947915272954,
+        425.71954149407406
+      ],
+      "path": "references/assets/samples/prmorph/12.wav",
+      "sha256": "32aac2a0ad565da957fd6f7526401de8914620f7e7e81b99b9903c37f51a9391"
+    },
+    {
+      "index": 12,
+      "alpha": 1.0,
+      "frequencies_hz": [
+        87.30705786,
+        130.96058679,
+        174.61411572,
+        261.92117358,
+        349.22823144
+      ],
+      "path": "references/assets/samples/prmorph/13.wav",
+      "sha256": "e5d0503e7df0d81bf169623f27302b4b88a752546b219c6f701eb7641f59f533"
+    }
+  ]
+}

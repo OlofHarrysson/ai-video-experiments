@@ -1,0 +1,3 @@
+The supplied file contains two 30-second electronic-music takes back to back, with the second beginning at exactly 30 seconds. They may be identical or they may differ. Compare the audible recordings without assuming that any change was made.
+
+Are there meaningful audible differences between the first and second take in rhythm, sound identity, balance, spatial treatment or progression? If you detect a difference, name the precise sound or event and an approximate local timestamp within each 30-second take. If you cannot reliably distinguish the takes, say so plainly. Do not invent a preference or recommend changes simply to fill the response. Keep the answer under 300 words.

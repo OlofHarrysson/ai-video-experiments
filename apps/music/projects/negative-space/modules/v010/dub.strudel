@@ -1,0 +1,5 @@
+// A single printed object changes function: whole -> expanded tail -> rhythmic slices.
+dub: s("<[~ ~ ~ ~ ~ nsbloomwarm ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] ~ [~ ~ ~ ~ ~ nsbloomwarm ~ ~] ~>").gain("<.31!4 .35!4 .25!8>").lpf("<1900 1500 1100 1500>").hpf(220).pan(.43).orbit(6).mask("<1!8 0!8>").postgain(.80)
+dubecho: s("~ nsbloomwarm").speed(.5).gain(.25).hpf(350).lpf(1600).tremolosync(6).tremolodepth(.25).pan(.56).room(.18).orbit(7).mask("<0!8 1 0!7>").postgain(.80)
+friction: s("nsfriction").slice(8,"<0 ~ 3 ~ 6 ~ 2 ~>").gain(.11).speed("<1 .75 1.2 .8>").hpf(1800).pan(".32 .64").delay(.17).delaytime(.1171875).delayfeedback(.27).room(.25).orbit(8).mask("<0!4 1!4 0!2 1!4 0!2>").postgain(.80)
+ghost: s("nsbloomwarm").slice([0,.125,.375,.625,1],"<[~ ~ ~ ~ 0 ~ ~ ~ ~ 2 ~ ~ ~ ~ 3 ~] [1 ~ ~ ~ ~ ~ ~ 0 ~ ~ ~ ~ ~ ~ 2 ~] [~ ~ ~ 0 ~ ~ ~ ~ ~ ~ ~ 3 ~ ~ ~ ~] [1 ~ ~ ~ ~ ~ 2 ~ ~ ~ ~ ~ ~ 0 ~ 3]>").gain("<.31 .27 .33 .25>").lpf("<1700 1250 2000 1050>").hpf(280).attack(.008).pan(".32 .65 .42 .60").delay(.13).delaytime(.234375).delayfeedback(.20).room(.16).orbit(12).mask("<0!10 1!4 0!2>").postgain(.80)

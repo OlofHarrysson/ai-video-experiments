@@ -1,0 +1,5 @@
+dub: s("<[~ ~ ~ nschord ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ nschord ~] [~ nschord ~ ~ ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ nschord ~]>").speed("<.75 .75 .75 .75>").gain("<.34!4 .40!4 .46!2 .36!4 0!2>").lpf("<1800 1000 1450 700>").hpf(430).pan(.35).delay(.48).delaytime(.3515625).delayfeedback(.55).room(.42).roomsize(5).orbit(6).mask("<1!9 0 1 0 1 0 0!2>").postgain(.80)
+dubecho: s("<[~ ~ ~ nschord ~ ~ ~ ~] ~ [~ nschord ~ ~ ~ ~ ~ ~] ~>").late(.09375).speed(.375).gain(.19).hpf(650).lpf(1450).distort("1.2:.3").pan(.69).delay(.48).delaytime(.234375).delayfeedback(.48).room(.28).orbit(7).mask("<1!8 1 0 1!4 0!2>").postgain(.80)
+friction: s("nsfriction").slice(8,"<0 ~ 3 ~ 6 ~ 2 ~>").gain(.15).speed("<1 .75 1.2 .8>").hpf(1800).pan(".32 .64").delay(.17).delaytime(.1171875).delayfeedback(.27).room(.25).orbit(8).mask("<0!4 1!4 0!2 1!4 0!2>").postgain(.80)
+
+ghost: s("nsghost").slice(4,"0 ~ 2 ~ ~ 1 ~ 3").gain(.30).lpf("1400 2100 900 1800").hpf(600).pan(".28 .65 .42 .72").delay(.13).delaytime(.17578125).delayfeedback(.22).room(.18).orbit(12).mask("<0!11 1 0 1 0!2>").postgain(.80)

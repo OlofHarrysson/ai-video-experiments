@@ -1,0 +1,455 @@
+{
+  "events": [
+    {
+      "sixteenth": 0,
+      "cycle": 0.0,
+      "index": 0
+    },
+    {
+      "sixteenth": 3,
+      "cycle": 0.1875,
+      "index": 0
+    },
+    {
+      "sixteenth": 5,
+      "cycle": 0.3125,
+      "index": 0
+    },
+    {
+      "sixteenth": 8,
+      "cycle": 0.5,
+      "index": 0
+    },
+    {
+      "sixteenth": 10,
+      "cycle": 0.625,
+      "index": 0
+    },
+    {
+      "sixteenth": 13,
+      "cycle": 0.8125,
+      "index": 0
+    },
+    {
+      "sixteenth": 15,
+      "cycle": 0.9375,
+      "index": 0
+    },
+    {
+      "sixteenth": 18,
+      "cycle": 1.125,
+      "index": 0
+    },
+    {
+      "sixteenth": 20,
+      "cycle": 1.25,
+      "index": 0
+    },
+    {
+      "sixteenth": 23,
+      "cycle": 1.4375,
+      "index": 0
+    },
+    {
+      "sixteenth": 25,
+      "cycle": 1.5625,
+      "index": 0
+    },
+    {
+      "sixteenth": 28,
+      "cycle": 1.75,
+      "index": 0
+    },
+    {
+      "sixteenth": 30,
+      "cycle": 1.875,
+      "index": 0
+    },
+    {
+      "sixteenth": 33,
+      "cycle": 2.0625,
+      "index": 0
+    },
+    {
+      "sixteenth": 35,
+      "cycle": 2.1875,
+      "index": 0
+    },
+    {
+      "sixteenth": 38,
+      "cycle": 2.375,
+      "index": 0
+    },
+    {
+      "sixteenth": 40,
+      "cycle": 2.5,
+      "index": 0
+    },
+    {
+      "sixteenth": 43,
+      "cycle": 2.6875,
+      "index": 0
+    },
+    {
+      "sixteenth": 45,
+      "cycle": 2.8125,
+      "index": 0
+    },
+    {
+      "sixteenth": 48,
+      "cycle": 3.0,
+      "index": 0
+    },
+    {
+      "sixteenth": 50,
+      "cycle": 3.125,
+      "index": 0
+    },
+    {
+      "sixteenth": 53,
+      "cycle": 3.3125,
+      "index": 0
+    },
+    {
+      "sixteenth": 55,
+      "cycle": 3.4375,
+      "index": 0
+    },
+    {
+      "sixteenth": 58,
+      "cycle": 3.625,
+      "index": 0
+    },
+    {
+      "sixteenth": 60,
+      "cycle": 3.75,
+      "index": 0
+    },
+    {
+      "sixteenth": 63,
+      "cycle": 3.9375,
+      "index": 0
+    },
+    {
+      "sixteenth": 80,
+      "cycle": 5.0,
+      "index": 0
+    },
+    {
+      "sixteenth": 83,
+      "cycle": 5.1875,
+      "index": 1
+    },
+    {
+      "sixteenth": 85,
+      "cycle": 5.3125,
+      "index": 2
+    },
+    {
+      "sixteenth": 88,
+      "cycle": 5.5,
+      "index": 3
+    },
+    {
+      "sixteenth": 90,
+      "cycle": 5.625,
+      "index": 4
+    },
+    {
+      "sixteenth": 93,
+      "cycle": 5.8125,
+      "index": 5
+    },
+    {
+      "sixteenth": 95,
+      "cycle": 5.9375,
+      "index": 5
+    },
+    {
+      "sixteenth": 98,
+      "cycle": 6.125,
+      "index": 6
+    },
+    {
+      "sixteenth": 100,
+      "cycle": 6.25,
+      "index": 7
+    },
+    {
+      "sixteenth": 103,
+      "cycle": 6.4375,
+      "index": 8
+    },
+    {
+      "sixteenth": 105,
+      "cycle": 6.5625,
+      "index": 9
+    },
+    {
+      "sixteenth": 108,
+      "cycle": 6.75,
+      "index": 9
+    },
+    {
+      "sixteenth": 110,
+      "cycle": 6.875,
+      "index": 9
+    },
+    {
+      "sixteenth": 113,
+      "cycle": 7.0625,
+      "index": 10
+    },
+    {
+      "sixteenth": 115,
+      "cycle": 7.1875,
+      "index": 10
+    },
+    {
+      "sixteenth": 118,
+      "cycle": 7.375,
+      "index": 11
+    },
+    {
+      "sixteenth": 120,
+      "cycle": 7.5,
+      "index": 11
+    },
+    {
+      "sixteenth": 123,
+      "cycle": 7.6875,
+      "index": 12
+    },
+    {
+      "sixteenth": 128,
+      "cycle": 8.0,
+      "index": 12
+    },
+    {
+      "sixteenth": 130,
+      "cycle": 8.125,
+      "index": 11
+    },
+    {
+      "sixteenth": 133,
+      "cycle": 8.3125,
+      "index": 10
+    },
+    {
+      "sixteenth": 135,
+      "cycle": 8.4375,
+      "index": 9
+    },
+    {
+      "sixteenth": 138,
+      "cycle": 8.625,
+      "index": 7
+    },
+    {
+      "sixteenth": 140,
+      "cycle": 8.75,
+      "index": 6
+    },
+    {
+      "sixteenth": 143,
+      "cycle": 8.9375,
+      "index": 5
+    },
+    {
+      "sixteenth": 145,
+      "cycle": 9.0625,
+      "index": 3
+    },
+    {
+      "sixteenth": 148,
+      "cycle": 9.25,
+      "index": 3
+    },
+    {
+      "sixteenth": 150,
+      "cycle": 9.375,
+      "index": 3
+    },
+    {
+      "sixteenth": 153,
+      "cycle": 9.5625,
+      "index": 3
+    },
+    {
+      "sixteenth": 155,
+      "cycle": 9.6875,
+      "index": 3
+    },
+    {
+      "sixteenth": 158,
+      "cycle": 9.875,
+      "index": 3
+    },
+    {
+      "sixteenth": 160,
+      "cycle": 10.0,
+      "index": 3
+    },
+    {
+      "sixteenth": 163,
+      "cycle": 10.1875,
+      "index": 3
+    },
+    {
+      "sixteenth": 165,
+      "cycle": 10.3125,
+      "index": 3
+    },
+    {
+      "sixteenth": 168,
+      "cycle": 10.5,
+      "index": 3
+    },
+    {
+      "sixteenth": 170,
+      "cycle": 10.625,
+      "index": 3
+    },
+    {
+      "sixteenth": 173,
+      "cycle": 10.8125,
+      "index": 3
+    },
+    {
+      "sixteenth": 175,
+      "cycle": 10.9375,
+      "index": 3
+    },
+    {
+      "sixteenth": 178,
+      "cycle": 11.125,
+      "index": 3
+    },
+    {
+      "sixteenth": 180,
+      "cycle": 11.25,
+      "index": 3
+    },
+    {
+      "sixteenth": 183,
+      "cycle": 11.4375,
+      "index": 3
+    },
+    {
+      "sixteenth": 188,
+      "cycle": 11.75,
+      "index": 3
+    },
+    {
+      "sixteenth": 190,
+      "cycle": 11.875,
+      "index": 3
+    },
+    {
+      "sixteenth": 193,
+      "cycle": 12.0625,
+      "index": 3
+    },
+    {
+      "sixteenth": 195,
+      "cycle": 12.1875,
+      "index": 3
+    },
+    {
+      "sixteenth": 198,
+      "cycle": 12.375,
+      "index": 3
+    },
+    {
+      "sixteenth": 200,
+      "cycle": 12.5,
+      "index": 3
+    },
+    {
+      "sixteenth": 203,
+      "cycle": 12.6875,
+      "index": 3
+    },
+    {
+      "sixteenth": 205,
+      "cycle": 12.8125,
+      "index": 3
+    },
+    {
+      "sixteenth": 208,
+      "cycle": 13.0,
+      "index": 3
+    },
+    {
+      "sixteenth": 210,
+      "cycle": 13.125,
+      "index": 3
+    },
+    {
+      "sixteenth": 213,
+      "cycle": 13.3125,
+      "index": 3
+    },
+    {
+      "sixteenth": 215,
+      "cycle": 13.4375,
+      "index": 3
+    },
+    {
+      "sixteenth": 218,
+      "cycle": 13.625,
+      "index": 3
+    },
+    {
+      "sixteenth": 220,
+      "cycle": 13.75,
+      "index": 3
+    },
+    {
+      "sixteenth": 223,
+      "cycle": 13.9375,
+      "index": 3
+    },
+    {
+      "sixteenth": 225,
+      "cycle": 14.0625,
+      "index": 3
+    },
+    {
+      "sixteenth": 228,
+      "cycle": 14.25,
+      "index": 3
+    },
+    {
+      "sixteenth": 230,
+      "cycle": 14.375,
+      "index": 3
+    },
+    {
+      "sixteenth": 233,
+      "cycle": 14.5625,
+      "index": 3
+    },
+    {
+      "sixteenth": 235,
+      "cycle": 14.6875,
+      "index": 3
+    },
+    {
+      "sixteenth": 238,
+      "cycle": 14.875,
+      "index": 3
+    },
+    {
+      "sixteenth": 240,
+      "cycle": 15.0,
+      "index": 3
+    },
+    {
+      "sixteenth": 243,
+      "cycle": 15.1875,
+      "index": 3
+    }
+  ],
+  "description": "Same five-sixteenth cell changes resonator frequency ratios and damping; returns at alpha .25 as a darker longer percussion object."
+}

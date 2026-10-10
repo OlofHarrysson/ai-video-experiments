@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "title": "Latch",
+  "revisions": {
+    "v003": {
+      "source": "source.strudel",
+      "notes": "Shared short ambience for shuck and burred bass, shaped friction edge; core rhythm unchanged to test object coherence."
+    }
+  },
+  "end_cycle": 16.5,
+  "sample_rate": 48000,
+  "samples": [
+    "../../../practical-dogfood/references/assets/drums",
+    "../../references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost",
+      "bridgehat"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "clack",
+      "echo"
+    ],
+    "edits": [
+      "exposed",
+      "inhale",
+      "ending"
+    ]
+  },
+  "sections": {
+    "grip": [
+      0,
+      6
+    ],
+    "unlatch": [
+      6,
+      8
+    ],
+    "return": [
+      8,
+      14
+    ],
+    "release": [
+      14,
+      16.5
+    ]
+  }
+}

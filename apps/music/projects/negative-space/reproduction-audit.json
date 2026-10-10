@@ -1,0 +1,410 @@
+{
+  "palette": {
+    "references/assets/samples/nsbloomrise/01.wav": {
+      "sha256": "16280aea3b58048e890cfb619e048d127f33088e8c5249961ea7b99566660ee3",
+      "matches_original": true
+    },
+    "references/assets/samples/nsbloomwarm/01.wav": {
+      "sha256": "3738626059afd1ac4c8e9236fff17ca28d85cef2bc31227c518750d8ecb0b91b",
+      "matches_original": true
+    },
+    "references/assets/samples/nsbloomwarmrev/01.wav": {
+      "sha256": "a578ff19705c46b8f75f45f2d0e2e2988bd1f3794fbdf2daa19225ea5e19e557",
+      "matches_original": true
+    },
+    "references/assets/samples/nschord/01.wav": {
+      "sha256": "8e3009ad1dea293ffce01cb36c94c2f2592ed45528e09cf1ea7ddd4c9db5100f",
+      "matches_original": true
+    },
+    "references/assets/samples/nscloud/01.wav": {
+      "sha256": "946ef69772a5fe23a9d8391f80d35b1173e676d80e6118546684aa307e580f80",
+      "matches_original": true
+    },
+    "references/assets/samples/nsfriction/01.wav": {
+      "sha256": "3fd10da64b741a1d2870af5d18b7a7a76f28e187c667345e4d0529e6e5b319bc",
+      "matches_original": true
+    },
+    "references/assets/samples/nslanding/01.wav": {
+      "sha256": "8137badfeee8e579d1189ab10586472ab751793308ae4193a8be8c69fe372f60",
+      "matches_original": true
+    },
+    "references/assets/samples/nsreverse/01.wav": {
+      "sha256": "7cd9fcee0427a8d447c1114acb0ee4641d1f6be59f25d91a40cdd48cd98c327a",
+      "matches_original": true
+    },
+    "references/assets/samples/nsservo/01.wav": {
+      "sha256": "3bb17a0e66675239cf5141d7af9b788c59e7ca366e17dfc700744f6ae5c02347",
+      "matches_original": true
+    },
+    "references/assets/samples/nsspring/01.wav": {
+      "sha256": "b8ba9974859c3b5662aa011c73038deffd3381ce8323ea25250e6ba8e4b1f0fc",
+      "matches_original": true
+    }
+  },
+  "renders": {
+    "v007": {
+      "master": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "56a4e89d80823cab2f7cdb52d6846c0f27a45c4837b69c35a3ba2c7d588a911d",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -17.08,
+        "true_peak_dbtp": -2.86,
+        "final_100ms_peak_dbfs": -63.86461280451598,
+        "final_sample_peak_dbfs": -76.32959861247399,
+        "mono_rms_loss_db": -0.00872873790007489,
+        "sample_hashes_verified": 16
+      },
+      "drums": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "843c0240e92ea7274c2e7f412ffe2fa7028012a60b6fb6ac23f8e15ef4001b31",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -18.04,
+        "true_peak_dbtp": -5.76,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.003052031598219429,
+        "sample_hashes_verified": 16
+      },
+      "bass": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "7b040d22f71f40f95172d0a0d4a1726141775a3a025c207f2674073fbbb9e173",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -23.3,
+        "true_peak_dbtp": -8.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": 0.0,
+        "sample_hashes_verified": 16
+      },
+      "dub": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "6f2ae29283ba3f64c76739cb4139e2edd7c897685205abc5e16f9a53a0beb113",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -30.12,
+        "true_peak_dbtp": -11.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.4066580093008838,
+        "sample_hashes_verified": 16
+      },
+      "edits": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "b22e0b94c4724826767d5a8109f9230472d49f75995d577f59d6cc932f3f805f",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -31.43,
+        "true_peak_dbtp": -10.29,
+        "final_100ms_peak_dbfs": -67.3864379856296,
+        "final_sample_peak_dbfs": -74.74597369152148,
+        "mono_rms_loss_db": -0.1455636390570305,
+        "sample_hashes_verified": 16
+      }
+    },
+    "v009": {
+      "master": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "bdf2ab6a322adbc84b02566478c9f1dd30368f53a26115bf5ca1ad6b9221b827",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -17.07,
+        "true_peak_dbtp": -2.85,
+        "final_100ms_peak_dbfs": -61.68172341601461,
+        "final_sample_peak_dbfs": -76.32959861247399,
+        "mono_rms_loss_db": -0.010317805101202282,
+        "sample_hashes_verified": 17
+      },
+      "drums": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "005f419ed03b98fd716829b84726f7bf849ed4e7ae778bb32e40f78c9eac85b5",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -18.04,
+        "true_peak_dbtp": -5.74,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.0030354695645193885,
+        "sample_hashes_verified": 17
+      },
+      "bass": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "0216f46ea679ef5913ff9042efaa7d4409a936709ef49de9f156ffd2b3d21f77",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -23.3,
+        "true_peak_dbtp": -8.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": 0.0,
+        "sample_hashes_verified": 17
+      },
+      "dub": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "7f71820164d22d1fb4e5aacc1c21299a855094d8d67682b5d819a33e606701df",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -28.92,
+        "true_peak_dbtp": -11.14,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.2741690159642687,
+        "sample_hashes_verified": 17
+      },
+      "edits": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "40c08043bf410dc36203209e364d9d57d5795394a46e17f8d844f822ab3f3bd1",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -29.62,
+        "true_peak_dbtp": -9.82,
+        "final_100ms_peak_dbfs": -62.009531739778005,
+        "final_sample_peak_dbfs": -67.3864379856296,
+        "mono_rms_loss_db": -0.21016321318987252,
+        "sample_hashes_verified": 17
+      }
+    },
+    "v010": {
+      "master": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "b842440c4a38df8a784f2077fa98ed5d3c23297cdd1efafa8ae1a1a9ed8a70a3",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -17.16,
+        "true_peak_dbtp": -3.05,
+        "final_100ms_peak_dbfs": -66.22659904607586,
+        "final_sample_peak_dbfs": -74.74597369152148,
+        "mono_rms_loss_db": -0.008623055709772842,
+        "sample_hashes_verified": 17
+      },
+      "drums": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "5e704369aa0aa99556e9506d0ed8cbccc99d1267d0057def1e07010d5a181200",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -18.04,
+        "true_peak_dbtp": -5.73,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.002872586870026339,
+        "sample_hashes_verified": 17
+      },
+      "bass": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "482687c052807ba75a9786be9c3dc97228ac70b7786792e1d8f9252c32a73b6b",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -23.46,
+        "true_peak_dbtp": -8.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": 0.0,
+        "sample_hashes_verified": 17
+      },
+      "dub": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "92bdc66dbd1ddac26a902d6bd1781d63352d573605951d3a38a478d1b8f0b572",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -30.24,
+        "true_peak_dbtp": -11.5,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.35109287254377364,
+        "sample_hashes_verified": 17
+      },
+      "edits": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "431a5d91bf6316387adbad54aa93836b950d4a9606195af4d69bcd636842be97",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -31.57,
+        "true_peak_dbtp": -9.99,
+        "final_100ms_peak_dbfs": -65.70002027162887,
+        "final_sample_peak_dbfs": -73.40703789890922,
+        "mono_rms_loss_db": -0.12234497795125066,
+        "sample_hashes_verified": 17
+      }
+    },
+    "v011": {
+      "master": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "cbae715db7f9103fd87091cd6fe5b104cd137b7419cec5ae409181eb40ca5cb5",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -17.15,
+        "true_peak_dbtp": -3.06,
+        "final_100ms_peak_dbfs": -64.28839878591474,
+        "final_sample_peak_dbfs": -80.76657360480111,
+        "mono_rms_loss_db": -0.008435585356338038,
+        "sample_hashes_verified": 17
+      },
+      "drums": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "770239b9ae5bd31fa96a0d6ab3b0840c9a8178b8a7fe6591694fe1707c3ffa3d",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -18.04,
+        "true_peak_dbtp": -5.74,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.0028792284484389086,
+        "sample_hashes_verified": 17
+      },
+      "bass": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "d49aa1ea318d2cc0a060a9922c07391a2d9e35a6193e02ec0eba7706942de7a0",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -23.46,
+        "true_peak_dbtp": -8.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": 0.0,
+        "sample_hashes_verified": 17
+      },
+      "dub": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "17a3edd52a6e6d3200d7f082225d2b1c5f389ae21d12bf804a135a3601b73f7d",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -30.18,
+        "true_peak_dbtp": -11.5,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.3504695650090923,
+        "sample_hashes_verified": 17
+      },
+      "edits": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "0979f74a1dbd7619a0b79d6391af7fa392a58e331904c245e42d8de26ce0ba60",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -31.66,
+        "true_peak_dbtp": -10.25,
+        "final_100ms_peak_dbfs": -63.86461280451598,
+        "final_sample_peak_dbfs": -84.28839878591474,
+        "mono_rms_loss_db": -0.11367082523501182,
+        "sample_hashes_verified": 17
+      }
+    },
+    "v007-rebuild": {
+      "master": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "e1d819d7b5783b26f874ea486133b55f9bfbe34535206bd0ad2abd06568e45c6",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -17.08,
+        "true_peak_dbtp": -2.86,
+        "final_100ms_peak_dbfs": -64.28839878591474,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.008840911307821386,
+        "sample_hashes_verified": 17
+      },
+      "drums": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "48c557cad1acdc62fd483968fb2ae076d3dc436a172887c00fb7497532672c44",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -18.04,
+        "true_peak_dbtp": -5.75,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.003032383657373572,
+        "sample_hashes_verified": 17
+      },
+      "bass": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "433902a5fff06db9593ef6e0589621100d6407082c8bbcd83f9b3d3d5e57cc23",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -23.3,
+        "true_peak_dbtp": -8.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": 0.0,
+        "sample_hashes_verified": 17
+      },
+      "dub": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "5866cc3531841cc38474590a7c0ef190d92b2126c7c8ec330d0d9af1577da233",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -30.14,
+        "true_peak_dbtp": -11.49,
+        "final_100ms_peak_dbfs": -240.0,
+        "final_sample_peak_dbfs": -240.0,
+        "mono_rms_loss_db": -0.4049006901066292,
+        "sample_hashes_verified": 17
+      },
+      "edits": {
+        "frames": 1440000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "sha256": "786cef135c19239c1993739456834a7d2dae79a8a943bd11ac15c37a1c711512",
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -31.78,
+        "true_peak_dbtp": -10.23,
+        "final_100ms_peak_dbfs": -65.70002027162887,
+        "final_sample_peak_dbfs": -65.70002027162887,
+        "mono_rms_loss_db": -0.0925493893945557,
+        "sample_hashes_verified": 17
+      }
+    }
+  },
+  "scope": "Technical reproduction and asset integrity; not musical quality or personal hearing.",
+  "palette_note": "Mathematical generators and capture/performance transforms match byte-for-byte in a fresh temporary project. Capture starts from the preserved body-probe WAV; regenerating WebAudio reverberation is not claimed byte-identical.",
+  "fresh_v007_render_comparison": {
+    "master": {
+      "byte_identical": false,
+      "lufs_difference": 0.0,
+      "true_peak_difference_db": 0.0
+    },
+    "drums": {
+      "byte_identical": false,
+      "lufs_difference": 0.0,
+      "true_peak_difference_db": 0.01
+    },
+    "bass": {
+      "byte_identical": false,
+      "lufs_difference": 0.0,
+      "true_peak_difference_db": 0.0
+    },
+    "dub": {
+      "byte_identical": false,
+      "lufs_difference": -0.02,
+      "true_peak_difference_db": 0.0
+    },
+    "edits": {
+      "byte_identical": false,
+      "lufs_difference": -0.35,
+      "true_peak_difference_db": 0.06
+    }
+  }
+}

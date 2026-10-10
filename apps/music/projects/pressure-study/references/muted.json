@@ -1,0 +1,22 @@
+{
+  "origin": "Original deterministic noise-rich and damped variant of prchain; same five resonator frequencies",
+  "seed": 101036,
+  "generator_sha256": "4012bdfb864c613d740f40fbb28c479bb2fd27069eaafa8d966519ff2d911ebf",
+  "samples": [
+    {
+      "file": "references/assets/samples/prmute/01.wav",
+      "sha256": "6e99dc9c5e482133a4f53d9b543d0c9d238190229b9eeb9b40d0f4c039d86f82",
+      "seconds": 0.135
+    },
+    {
+      "file": "references/assets/samples/prmute/02.wav",
+      "sha256": "a21c744258e9bd5a3457f5edc2788cb828ebc37352886504e005f292c8953d75",
+      "seconds": 0.135
+    },
+    {
+      "file": "references/assets/samples/prmute/03.wav",
+      "sha256": "56fe6f09e0474024579175d678b1d1446bd9108425f44c00e5efd9861034832b",
+      "seconds": 0.135
+    }
+  ]
+}

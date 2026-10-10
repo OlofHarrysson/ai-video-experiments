@@ -1,0 +1,656 @@
+{
+  "title": "Pressure Lock",
+  "current_candidate": "renders/v011/master/render.wav",
+  "selection_state": "Assistant production choice awaiting human listening",
+  "rendered_versions": [
+    {
+      "revision": "v002",
+      "stem": "bass",
+      "sha256": "c3087de2094c1a137de5c3f6fb8c79d1fab77243c64d022484946335f944d509",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -20.37,
+      "true_peak_dbtp": -5.46
+    },
+    {
+      "revision": "v002",
+      "stem": "drums",
+      "sha256": "46a1b4b3ed62c4ff836b5dd43ca10d5442d56cd3b625a4814102544d2b6522a2",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.86,
+      "true_peak_dbtp": -3.63
+    },
+    {
+      "revision": "v002",
+      "stem": "master",
+      "sha256": "7844bb4396f003b79104374dc912a60decde0a8f0af72c661dec2062d767fe66",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.59,
+      "true_peak_dbtp": -0.97
+    },
+    {
+      "revision": "v002",
+      "stem": "percussion",
+      "sha256": "4232c74cf8ef1bdb52b238d5383676c186a8fd0f91f3eb907bb6248bc7f04f74",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -32.71,
+      "true_peak_dbtp": -11.58
+    },
+    {
+      "revision": "v002",
+      "stem": "space",
+      "sha256": "e466d0ee55292da7216c74e336df9ae344d2d374c26f38ab297e80c5af775181",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.66,
+      "true_peak_dbtp": -20.08
+    },
+    {
+      "revision": "v003",
+      "stem": "bass",
+      "sha256": "445acfd7273d712ed992fdf9e29af24ff97f0c8d67c6f7b1d8b5bd7cc434b60a",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -20.38,
+      "true_peak_dbtp": -5.91
+    },
+    {
+      "revision": "v003",
+      "stem": "drums",
+      "sha256": "910a2c441d9e2cee1a885082b824bffb9f8c756234105417893b00034d8911f7",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.86,
+      "true_peak_dbtp": -3.63
+    },
+    {
+      "revision": "v003",
+      "stem": "master",
+      "sha256": "608f4e74b6fc59c41e20d524c4e1663144890ae8faf8736a948468e7d4bf21ef",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.57,
+      "true_peak_dbtp": -0.97
+    },
+    {
+      "revision": "v003",
+      "stem": "percussion",
+      "sha256": "4cc3e71069f2b5595fb4d4f522fe8ebaf1fe91f823c5c89b18b93d8bbd905a05",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.7,
+      "true_peak_dbtp": -10.88
+    },
+    {
+      "revision": "v003",
+      "stem": "space",
+      "sha256": "7982e5a24552dc4be8b571f49a5d2657f3afda9f264ed786d70345e2b87d2911",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -40.3,
+      "true_peak_dbtp": -20.54
+    },
+    {
+      "revision": "v004",
+      "stem": "bass",
+      "sha256": "97470bb0866ada59d0952ab342810759e61da5231de24909515d67cb8294396f",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -20.38,
+      "true_peak_dbtp": -5.91
+    },
+    {
+      "revision": "v004",
+      "stem": "drums",
+      "sha256": "37425127f2a9e23651e61d25911a1b2a8e1215d7a8b895097b330e08c3af992a",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.86,
+      "true_peak_dbtp": -3.63
+    },
+    {
+      "revision": "v004",
+      "stem": "master",
+      "sha256": "d140ee03772a3cd90f03e73223c51bd73eb71d56f47b5a44a0d89c8bd1ad3f3f",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.57,
+      "true_peak_dbtp": -0.96
+    },
+    {
+      "revision": "v004",
+      "stem": "percussion",
+      "sha256": "cd8bd7a34371baf7a10d0788113377622ce9a36358dfd2e868b102d46987b6db",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.68,
+      "true_peak_dbtp": -9.49
+    },
+    {
+      "revision": "v004",
+      "stem": "space",
+      "sha256": "d2798771059a947657d3a6d7d001ca249575bbfc493d006ec755d3fa66660688",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.44,
+      "true_peak_dbtp": -20.71
+    },
+    {
+      "revision": "v005",
+      "stem": "bass",
+      "sha256": "4dfc9a898713c9b9fa588b3754256548a8d2c3b519f393c0c3c67c7b221f17cd",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -20.78,
+      "true_peak_dbtp": -5.46
+    },
+    {
+      "revision": "v005",
+      "stem": "drums",
+      "sha256": "3373ed3345d0556b9ec6f6b4839531bcae3a406cd537561418492b7db1aeac52",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.63
+    },
+    {
+      "revision": "v005",
+      "stem": "master",
+      "sha256": "31c3cc420ec479e933fc9e02b4455524370f798f914be519b08656b9fe687309",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.95,
+      "true_peak_dbtp": -0.98
+    },
+    {
+      "revision": "v005",
+      "stem": "percussion",
+      "sha256": "c29a354a764bddad97fbc114110c8722682f8de50c4d8adb5550e9346b4ad176",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.74,
+      "true_peak_dbtp": -10.88
+    },
+    {
+      "revision": "v005",
+      "stem": "space",
+      "sha256": "daea23aa4c99a229fe6864f4d7b4642006d4f02f762064f2169bd596064c097b",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -38.56,
+      "true_peak_dbtp": -19.74
+    },
+    {
+      "revision": "v006",
+      "stem": "bass",
+      "sha256": "3ad8359de0de2ba50ffa327db4ae64098ac978a1900d3ff09d433a291dc48d5e",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -20.67,
+      "true_peak_dbtp": -6.07
+    },
+    {
+      "revision": "v006",
+      "stem": "drums",
+      "sha256": "3461e01adad9faee05fe644b5a63739c8e51f7ed0ed719fd2bff681ee85f1847",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v006",
+      "stem": "master",
+      "sha256": "0f08a06e9d109536aeef757276f88b07975494af3b73422c573de18c22f8aa64",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.92,
+      "true_peak_dbtp": -0.98
+    },
+    {
+      "revision": "v006",
+      "stem": "percussion",
+      "sha256": "1ff999aeed6659679d2f383c8509db949b7d386e08290238d5e7652877f39947",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.76,
+      "true_peak_dbtp": -10.85
+    },
+    {
+      "revision": "v006",
+      "stem": "space",
+      "sha256": "1ef0689b797ca1259cfa06e1dd74b0934fd95b6ab493855e2f7aaed45f70d6d4",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.01,
+      "true_peak_dbtp": -20.42
+    },
+    {
+      "revision": "v007",
+      "stem": "bass",
+      "sha256": "0c14071a1000d620e353dc2b830918a039986b046b20e53a1f4615f746517a53",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.28,
+      "true_peak_dbtp": -6.26
+    },
+    {
+      "revision": "v007",
+      "stem": "drums",
+      "sha256": "a5aab83ec2e709e70d0064b8d0d52cfa8ac43741114c653798688b3b98bf8605",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v007",
+      "stem": "master",
+      "sha256": "7414d7e0d1fbaacf450a601812bdacaea77aabae70c597267decd31bc8e5d413",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.78,
+      "true_peak_dbtp": -0.98
+    },
+    {
+      "revision": "v007",
+      "stem": "percussion",
+      "sha256": "5b286502c35d2b1064ab8b26531f9a0774330f2a4a11266ac5fcc52fc3adb49e",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -25.8,
+      "true_peak_dbtp": -7.82
+    },
+    {
+      "revision": "v007",
+      "stem": "space",
+      "sha256": "648b63a400773c935e7c92d2231cb17b64dd2a789598387b8f9ddaf54c6f595d",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -38.78,
+      "true_peak_dbtp": -20.69
+    },
+    {
+      "revision": "v008",
+      "stem": "bass",
+      "sha256": "e2fcb4cf5b349b1a677dec4a8a9d6c0cce9a716b91ed7a83c5cecde56b1d6b2b",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.29,
+      "true_peak_dbtp": -6.22
+    },
+    {
+      "revision": "v008",
+      "stem": "drums",
+      "sha256": "d1fbbe202c7b12edec9b0cd358153333e10ef6d8a1450186deca15eba2c2c7ee",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v008",
+      "stem": "master",
+      "sha256": "b1d2c2794cc33cd4a40e127ef316cd12913356411d3bd16001054c4c91ddb24f",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.34,
+      "true_peak_dbtp": -0.97
+    },
+    {
+      "revision": "v008",
+      "stem": "percussion",
+      "sha256": "7098dda3ebf506e6473090ded1db685df8d9eaa2dc91b878f794cae40a52b019",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.84,
+      "true_peak_dbtp": -4.14
+    },
+    {
+      "revision": "v008",
+      "stem": "space",
+      "sha256": "abf39d1db544969325f7cbefcf9b4aa74a343b288aec4b93d40968cd56444797",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -38.9,
+      "true_peak_dbtp": -20.16
+    },
+    {
+      "revision": "v009",
+      "stem": "bass",
+      "sha256": "a2817a0495e866d1af5b22b9d0c0701b0a81f651934bed29281e7c99fa473a30",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.29,
+      "true_peak_dbtp": -6.37
+    },
+    {
+      "revision": "v009",
+      "stem": "drums",
+      "sha256": "ff3929ad4183aee2f79f9101f840153c28343bd52936f9825816d5c9332d0ee5",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v009",
+      "stem": "master",
+      "sha256": "315723991600dd59a87d21a43d230d6bde78c4d32280a5d8ac90886f5409d7ff",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 10,
+      "integrated_lufs": -13.92,
+      "true_peak_dbtp": 0.01
+    },
+    {
+      "revision": "v009",
+      "stem": "percussion",
+      "sha256": "80268e882c22b1c7feb54421c9229bcf543fb24289df0d26e15c13ae869c9b92",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -19.99,
+      "true_peak_dbtp": -2.43
+    },
+    {
+      "revision": "v009",
+      "stem": "space",
+      "sha256": "995ea951e1da54701af7aa4437bc8d14f9316bd2c3bafe9a162bcb870998baab",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.55,
+      "true_peak_dbtp": -20.41
+    },
+    {
+      "revision": "v010",
+      "stem": "bass",
+      "sha256": "18593d0703f23fe22ae70a7efaae3eba177004bdd3ab9484affdd45a835a5f88",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.28,
+      "true_peak_dbtp": -6.29
+    },
+    {
+      "revision": "v010",
+      "stem": "drums",
+      "sha256": "3c298953d00eb5e1304bb20801c68066bc5b612d020ec3d38c7e224706d2a2f1",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v010",
+      "stem": "master",
+      "sha256": "db47e6448c039086664064c19486e47b6de9eb3bab19e5355d7a17f807a65a77",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.36,
+      "true_peak_dbtp": -1.01
+    },
+    {
+      "revision": "v010",
+      "stem": "percussion",
+      "sha256": "d7f98c8401d15e3eec67d6530ecb45c74b76993c109d1997463319dfbb7c76e2",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -22.36,
+      "true_peak_dbtp": -4.19
+    },
+    {
+      "revision": "v010",
+      "stem": "space",
+      "sha256": "2d1b0050142981a29196e34e3bfc8f42e2be751f3a995c2673b558104567b9f0",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.68,
+      "true_peak_dbtp": -20.35
+    },
+    {
+      "revision": "v011",
+      "stem": "bass",
+      "sha256": "44965b259bbde9ff745333b6fbbd9a9e02656ce1277238355fde2abb8a7340c0",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -21.28,
+      "true_peak_dbtp": -5.94
+    },
+    {
+      "revision": "v011",
+      "stem": "drums",
+      "sha256": "1a061a16cae5825b38cbf0ed650acdf7314e9be47214b9de4b5fe2ac882488c8",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -15.87,
+      "true_peak_dbtp": -3.69
+    },
+    {
+      "revision": "v011",
+      "stem": "master",
+      "sha256": "d4bc491609cf18697d60646713d72a50d209a6131c11e549d35ae50cf3b88e4b",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -14.42,
+      "true_peak_dbtp": -1.0
+    },
+    {
+      "revision": "v011",
+      "stem": "percussion",
+      "sha256": "0961a669ccd63cc70bf079cd7434dcae83a54f8ca2be85c85c7ce3855a0d9bc5",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -22.76,
+      "true_peak_dbtp": -4.18
+    },
+    {
+      "revision": "v011",
+      "stem": "space",
+      "sha256": "1c737a5ad0161c97ba474a86a82c3e87d221dd77f20253899804ff8a131fa649",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -39.45,
+      "true_peak_dbtp": -20.32
+    }
+  ],
+  "reviews": [
+    {
+      "receipt": "work/pressure-study-audition-v005-v003/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.032238,
+      "source_sha256": "32a0e1d553f60fdd28dc880a0651bd9e69bdef5fffd40c3fd74e81a51173b762"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v005-v006/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.02005,
+      "source_sha256": "e4ae45b3e2e8e82b40695b286f159230140735b9d8978ecb3a357a469dcce81f"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v007/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.028602,
+      "source_sha256": "4299cad5a6a2653272fdb05564ad404a98b7c837aa6be477140c459b034fced7"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v009/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.02547,
+      "source_sha256": "72ad93bc749c8c764e62dcd63e8ab814e818b03b1db0998c5c974f42b037aa04"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v011/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.02229,
+      "source_sha256": "5887b7a0a27829451f071070e2fee6b7959e4ff992bf8a9975793e2f3ca9a41d"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v011-full/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.038954,
+      "source_sha256": "6f32cf1ae8a4cc996c5d430984fa511ec5acbf9bb4cbed86625f4cebd3006539"
+    },
+    {
+      "receipt": "work/pressure-study-compare-v002-v003/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.019478,
+      "source_sha256": "89c5aadf9c8ade27482c3cef6890044ac2429268885c5018c8d46987b5bda2ec"
+    },
+    {
+      "receipt": "work/pressure-study-compare-v004-v003/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.02297,
+      "source_sha256": "879b1053398e94d2ed9af2aebdc1ba4c16967738597e79504426845c4c394bbd"
+    },
+    {
+      "receipt": "work/pressure-study-review-v001/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.030014,
+      "source_sha256": "a7c3c9b1b38bf64214672a79630465c40678684a278222a68872bd5b3babb1be"
+    },
+    {
+      "receipt": "work/pressure-study-review-v002/request.json",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.027334,
+      "source_sha256": "7844bb4396f003b79104374dc912a60decde0a8f0af72c661dec2062d767fe66"
+    }
+  ],
+  "reported_review_cost_usd": 0.2674,
+  "musical_observation_limits": [
+    "No direct assistant hearing; audio-model reviews are textual observations from waveform input.",
+    "Model missed measured 10 dB low-band difference between v005 and v006.",
+    "Model descriptions of abrupt ending contradicted decay measurements.",
+    "Full v006/v011 review attributed differences to hi-hat/shaker entrance changes although drum modules are unchanged; reject that arrangement explanation."
+  ],
+  "checks": {
+    "project_renders_count": 50,
+    "all_project_renders_exactly_30_seconds": true,
+    "preserved_renders_with_pcm_rails": [
+      "v009/master"
+    ],
+    "v009_excluded_from_delivery": true,
+    "ruff": "passed",
+    "fresh_generated_sample_hash_matches": 29,
+    "fresh_public_drum_hash_matches": 4,
+    "fresh_assembled_source_byte_identical": true,
+    "fresh_render_master_and_four_stems_complete": true,
+    "fresh_render_all_zero_pcm_rails": true,
+    "fresh_render_audio_byte_identical": false,
+    "no_musical_revision_after_final_technical_audit": true
+  },
+  "continuity_experiment": "continuity-study.md",
+  "stable_alternative": "renders/v006/master/render.wav",
+  "final_audit": "references/final-audit-v011.json",
+  "fresh_rebuild": "references/fresh-rebuild-v011.json"
+}

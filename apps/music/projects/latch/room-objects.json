@@ -1,0 +1,29 @@
+{
+  "origin": "Processing original Latch synthesis; no third-party audio",
+  "method": "Shared deterministic short stereo room before tanh saturation; high-pass and edge fades after shaping",
+  "seed": 88231,
+  "room_seconds": 0.11,
+  "wet": 0.65,
+  "drive": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.72,
+  "generator_sha256": "217371afa8dff768957b4a869e9256b5c8b07ae603b2d9776b940ca8091e7f25",
+  "assets": [
+    {
+      "source": "references/assets/samples/lashuck/00.wav",
+      "source_sha256": "82473fd25922378a0e6b73658d474bbf6715637c2cc935e671fb8259d69b2372",
+      "file": "references/assets/samples/lashuckroom/00.wav",
+      "sha256": "993e06925037a8dcd3d26fb8599b8b8729f203b9be062cf65605178f687b8025",
+      "frames": 25439,
+      "channels": 2
+    },
+    {
+      "source": "references/assets/samples/laburr/00.wav",
+      "source_sha256": "5d8716beff9a00cc239b23a4f5677d31ebd3048c3ef5f85fab178bfe01cc6f59",
+      "file": "references/assets/samples/laburrroom/00.wav",
+      "sha256": "84c8a36376a378a881bea6805ffc293cfedbf1fa8e2de957fef917e30cc6e44e",
+      "frames": 38879,
+      "channels": 2
+    }
+  ]
+}

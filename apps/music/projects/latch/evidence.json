@@ -1,0 +1,147 @@
+{
+  "candidate": "v006",
+  "human_preference": null,
+  "versions": [
+    {
+      "revision": "v001",
+      "run": "renders/v001",
+      "status": "complete",
+      "source_sha256": "c802c7c8fb8f5bdf77bc993090d6a105bf425ad7df6fa9430e5030bdb3765c78",
+      "master_sha256": "ee19cd66eeb5179f1cc69d3ecece8eda566f1f3060b3c767426c18b965b8b313",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "integrated_lufs": -14.79,
+        "true_peak_dbtp": -0.4,
+        "pcm_rail_samples": 0,
+        "lr_correlation": 0.9979068536354295,
+        "rms_dbfs": -15.903337522717166,
+        "mono_rms_dbfs": -15.9078865923198
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    },
+    {
+      "revision": "v002",
+      "run": "renders/v002",
+      "status": "complete",
+      "source_sha256": "65c2941c262d282cb777764a5f1732fb64086515f10f2339c0e06f04a8ba9734",
+      "master_sha256": "a3049b2843d4d36466441a1b4b9ddf0a2a74ff05548e0c9f42759bb10a0aa9f2",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "integrated_lufs": -14.83,
+        "true_peak_dbtp": -0.48,
+        "pcm_rail_samples": 0,
+        "lr_correlation": 0.9977248771823485,
+        "rms_dbfs": -15.800827699566177,
+        "mono_rms_dbfs": -15.805772899225028
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    },
+    {
+      "revision": "v003",
+      "run": "renders/v003",
+      "status": "complete",
+      "source_sha256": "8b99d196770c83598727c6927018766d6b0a6fa053fbd864d556a995afe86e55",
+      "master_sha256": "372a640c1488df9183b350c0c4c0f2ccc2813e3ba85683bd7cd1a72937a1d45d",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "integrated_lufs": -14.83,
+        "true_peak_dbtp": -0.46,
+        "pcm_rail_samples": 0,
+        "lr_correlation": 0.9977127061376598,
+        "rms_dbfs": -15.80158200202629,
+        "mono_rms_dbfs": -15.806553392515465
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    },
+    {
+      "revision": "v004",
+      "run": "renders/v004-complete",
+      "status": "complete",
+      "source_sha256": "45d63005db92a8c53f4c5ecd3256c8fce930a5fade80846d400f22efd8c3e08d",
+      "master_sha256": "2fd7cd9880478a1336965bea32e223e96fc019d9c3ef7f0baed7df2af1894a6f",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "integrated_lufs": -14.78,
+        "true_peak_dbtp": -0.29,
+        "pcm_rail_samples": 0,
+        "lr_correlation": 0.9985116880561559,
+        "rms_dbfs": -15.57610011367334,
+        "mono_rms_dbfs": -15.579339407164465
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    },
+    {
+      "revision": "v005",
+      "run": "renders/v005",
+      "status": "complete",
+      "source_sha256": "856b6bc02dcc66ec5bebc13162296cdb6858f982da2a7d5cbb2d6926f1ab8eaf",
+      "master_sha256": "77b640eeea1a80f7c4ed982384576ab61d4bd3609f5049937da0d3f253f57abb",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "integrated_lufs": -16.59,
+        "true_peak_dbtp": -2.16,
+        "pcm_rail_samples": 0,
+        "lr_correlation": 0.9833612883070294,
+        "rms_dbfs": -17.36360338000588,
+        "mono_rms_dbfs": -17.399949618576365
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    },
+    {
+      "revision": "v006",
+      "run": "renders/v006",
+      "status": "complete",
+      "source_sha256": "3041f5a49c4bd861ecee43c9c5a7c294113c747d67cee964d19bddfa480359bf",
+      "master_sha256": "117a3eb3912fa38579d46fa9f936eb1a6c8fb6c1730a3425c42f63256d4c5c3a",
+      "metrics": {
+        "seconds": 29.999979166666666,
+        "rms_dbfs": -17.10426741244443,
+        "pcm_rail_samples": 0,
+        "integrated_lufs": -16.38,
+        "true_peak_dbtp": -2.4,
+        "lr_correlation": 0.9821530654792486,
+        "mono_rms_dbfs": -17.143366382444675
+      },
+      "stems": [
+        "master",
+        "drums",
+        "bass",
+        "breath",
+        "edits"
+      ]
+    }
+  ],
+  "rebuild": "rebuild-evidence.json",
+  "review_limits": "Subtle v002/v003 difference was called identical; candidate quality is not established by model comments.",
+  "motif_evidence": "motif-evidence.json"
+}

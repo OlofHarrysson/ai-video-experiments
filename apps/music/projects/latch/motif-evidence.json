@@ -1,0 +1,451 @@
+{
+  "scope": "Technical checks and actual scheduled-event recurrence, not perceived groove or quality.",
+  "versions": {
+    "v005": {
+      "trace_sha256": "edcd761433fca11beb5e35e8b352c8f55fb04d84f5b805e7943dd18ec85208de",
+      "source_sha256": "f87a8632cd97673868812c076b8b1ee4e7eafbd6bfc00d549f3e189a4cd80f84",
+      "two_bar_phrases": [
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            17.095
+          ],
+          [
+            "lashuckroom",
+            27.095
+          ],
+          [
+            "laburrroom",
+            28.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "laburrroom",
+            12.0
+          ],
+          [
+            "lashuckroom",
+            12.0
+          ],
+          [
+            "lashuckroom",
+            22.0
+          ],
+          [
+            "laburrroom",
+            26.0
+          ],
+          [
+            "lashuckroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "laburrroom",
+            2.0
+          ],
+          [
+            "lashuckroom",
+            4.0
+          ],
+          [
+            "lashuckroom",
+            12.0
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            28.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            1.095
+          ],
+          [
+            "laburrroom",
+            4.0
+          ],
+          [
+            "laburrroom",
+            22.0
+          ],
+          [
+            "lashuckroom",
+            24.0
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            8.0
+          ],
+          [
+            "lashuckroom",
+            11.095
+          ],
+          [
+            "lashuckroom",
+            17.095
+          ],
+          [
+            "laburrroom",
+            22.0
+          ],
+          [
+            "laburrroom",
+            28.0
+          ],
+          [
+            "lashuckroom",
+            28.0
+          ]
+        ],
+        [
+          [
+            "laburrroom",
+            2.0
+          ],
+          [
+            "lashuckroom",
+            4.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            22.0
+          ],
+          [
+            "laburrroom",
+            26.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            17.095
+          ],
+          [
+            "laburrroom",
+            20.0
+          ],
+          [
+            "laburrroom",
+            28.0
+          ],
+          [
+            "lashuckroom",
+            30.0
+          ]
+        ]
+      ],
+      "unique_two_bar_timing_phrases": 7,
+      "opening_timing_phrase_recurrences": 1
+    },
+    "v006": {
+      "trace_sha256": "97c7e8b397055c33b77981bc4ac6bb0a7a418af1ec309c3eb5d4c177d6b11d16",
+      "source_sha256": "877f53cbb006d509004b161dc00b6ee17f0897b2f28dc8af1193166e31a4cb98",
+      "two_bar_phrases": [
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "lashuckroom",
+            29.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ],
+        [
+          [
+            "lashuckroom",
+            2.0
+          ],
+          [
+            "laburrroom",
+            6.0
+          ],
+          [
+            "lashuckroom",
+            9.095
+          ],
+          [
+            "lashuckroom",
+            18.0
+          ],
+          [
+            "lashuckroom",
+            25.095
+          ],
+          [
+            "laburrroom",
+            30.0
+          ]
+        ]
+      ],
+      "unique_two_bar_timing_phrases": 3,
+      "opening_timing_phrase_recurrences": 5
+    }
+  },
+  "v006_render": {
+    "master": {
+      "sha256": "117a3eb3912fa38579d46fa9f936eb1a6c8fb6c1730a3425c42f63256d4c5c3a",
+      "frames": 1439999,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -16.38,
+      "true_peak_dbtp": -2.4,
+      "final_100ms_peak_dbfs": -240.0,
+      "mono_rms_loss_db": -0.039098970000246425
+    },
+    "drums": {
+      "sha256": "92ad0dc53487bbcac0fea816e1b0e81f0e065138e7a788b992f6d79a67ff7118",
+      "frames": 1439999,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -17.72,
+      "true_peak_dbtp": -4.49,
+      "final_100ms_peak_dbfs": -240.0,
+      "mono_rms_loss_db": -0.0021277641038679462
+    },
+    "bass": {
+      "sha256": "85058eaeae1392200dc9a0861d3ec85da1bdbd111000ecb152eb2f7a24b65e69",
+      "frames": 1439999,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -22.36,
+      "true_peak_dbtp": -8.54,
+      "final_100ms_peak_dbfs": -240.0,
+      "mono_rms_loss_db": -0.011826985464580275
+    },
+    "breath": {
+      "sha256": "52cf94ac393924cf68d2968d2aa1a81fb51297ae49b1457ef6952f0d0d0c27ad",
+      "frames": 1439999,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -25.43,
+      "true_peak_dbtp": -11.02,
+      "final_100ms_peak_dbfs": -240.0,
+      "mono_rms_loss_db": -0.8609753609355124
+    },
+    "edits": {
+      "sha256": "f933a46b899642f82c78ab74058344ccbe1e73aac6800fd180434dae38623065",
+      "frames": 1439999,
+      "sample_rate": 48000,
+      "channels": 2,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -28.42,
+      "true_peak_dbtp": -14.91,
+      "final_100ms_peak_dbfs": -240.0,
+      "mono_rms_loss_db": -0.9900991427211494
+    }
+  },
+  "decision": "v006 replaces v005 as challenger: same palette and pulse, recognisable phrase returns with controlled articulation. No new listening verdict or claim that it surpasses the selected pair."
+}

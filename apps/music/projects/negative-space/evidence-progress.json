@@ -1,0 +1,561 @@
+{
+  "v001": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -14.05,
+      "sample_peak_dbfs": -0.2585445216286816,
+      "true_peak_dbtp": -0.25,
+      "pcm_rail_samples": null,
+      "lr_correlation": 0.9976550828655677,
+      "sha256": "c11dcecbca33e3dcf746c6f7f658f6acc84e805ce06a5f94edaba1284fab04d8"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -14.87,
+      "sample_peak_dbfs": -3.225292726677145,
+      "true_peak_dbtp": -3.06,
+      "pcm_rail_samples": null,
+      "lr_correlation": 0.9988633287998159,
+      "sha256": "4300f0912b0472db06c7f8952bc461a7b40b2ff5199132d3e0c49963c0649295"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -21.13,
+      "sample_peak_dbfs": -6.147161793680462,
+      "true_peak_dbtp": -6.15,
+      "pcm_rail_samples": null,
+      "lr_correlation": 0.999966585677051,
+      "sha256": "efb340ad57140152e7263234a63e9c52070e833ab109952a4afb3f697d7a0ae9"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -31.51,
+      "sample_peak_dbfs": -10.098759444450083,
+      "true_peak_dbtp": -10.09,
+      "pcm_rail_samples": null,
+      "lr_correlation": 0.9136233457918126,
+      "sha256": "98722bcfbed09bf489c1896b093f6c594f3aea9f4d985a856efbadfcbc6bae1c"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.11,
+      "sample_peak_dbfs": -9.054351435086481,
+      "true_peak_dbtp": -9.05,
+      "pcm_rail_samples": null,
+      "lr_correlation": 0.9828820836956901,
+      "sha256": "51162b0a04d492d01ba2281b01a2d343786f6c54cf5aca74c2a52af9946af8e1"
+    }
+  },
+  "v002": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -14.88,
+      "sample_peak_dbfs": -0.00026507636037961915,
+      "true_peak_dbtp": 0.03,
+      "pcm_rail_samples": 7,
+      "lr_correlation": 0.9937790603701697,
+      "sha256": "fdb8efb70d3555a2e32b5303e8c57cbd9bb07d5f072d507dabe4110f1edabea1"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -16.04,
+      "sample_peak_dbfs": -4.082399653118496,
+      "true_peak_dbtp": -3.91,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9985700918195197,
+      "sha256": "1879848cbfbedacdf31181cf39ef7c3985385ec33958ef07c5146460c349ed95"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -21.01,
+      "sample_peak_dbfs": -5.840637561088473,
+      "true_peak_dbtp": -5.84,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9998989275141608,
+      "sha256": "5d104b5c3c360999a181412b0491caaf14cb49fa4db93d604441ef0542d0b62a"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -26.87,
+      "sample_peak_dbfs": -5.556113546410508,
+      "true_peak_dbtp": -5.55,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.8873478891235009,
+      "sha256": "99ff9bb5ebb5650098ed37aaf2bf0b3e8333b942f5e04e14e0abfe1a29c51875"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.18,
+      "sample_peak_dbfs": -9.061119954130456,
+      "true_peak_dbtp": -9.06,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9830822086510155,
+      "sha256": "fe67d3c8379c74630c9d492eedf78b37a248a4ce2db0abb94cf3b47acf792a0b"
+    }
+  },
+  "v003": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -16.81,
+      "sample_peak_dbfs": -1.4290401576315626,
+      "true_peak_dbtp": -1.43,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9940030299258064,
+      "sha256": "e32425876f5482a51b9f0ed0162ebcbdcbc691d00468a50692d9c6eed3e1f331"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.99,
+      "sample_peak_dbfs": -6.019009624976736,
+      "true_peak_dbtp": -5.84,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9985668515359419,
+      "sha256": "74cae32ad3cab9cc430125590c90d5d08e88e0611ae19e019f1d197fbfc64e58"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -22.96,
+      "sample_peak_dbfs": -7.779227285186866,
+      "true_peak_dbtp": -7.78,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.999899328898896,
+      "sha256": "1fd1bf65839e16f42042848e2dcbcb1633fa2f9b0b87b100a7ab4c832bad5beb"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -28.83,
+      "sample_peak_dbfs": -7.512046406268137,
+      "true_peak_dbtp": -7.51,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.8683464955621032,
+      "sha256": "f54874b3d0bb9de8712d70c1529a3bd70b3df5fdb5192989e1ea186c560ea276"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -32.07,
+      "sample_peak_dbfs": -11.001201294891912,
+      "true_peak_dbtp": -11.0,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9827730534667085,
+      "sha256": "362b2c2eac23a94df55d296e442ddbd62aa0d046a0d5d1490163c379cc4fc769"
+    }
+  },
+  "v004": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.16,
+      "sample_peak_dbfs": -3.2172269416495403,
+      "true_peak_dbtp": -3.16,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9952579152748101,
+      "sha256": "ccbb5b8942f0f66aff5d061137309cc6085e09d4acb10b6225aa041968bbb289"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.06,
+      "sample_peak_dbfs": -6.0195396887268195,
+      "true_peak_dbtp": -5.84,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9987091186171375,
+      "sha256": "26e8f5c8fc855657d0b0c0feab4f51947d804c83d58be01fdcaba6a7cf096f4a"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.41,
+      "sample_peak_dbfs": -8.272682979359482,
+      "true_peak_dbtp": -8.27,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9999909977604964,
+      "sha256": "716e9c4b7b76b4767748991cb47961b7233340297ece7ca383dd0f6ea2a6ab6f"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.8,
+      "sample_peak_dbfs": -9.244355722384315,
+      "true_peak_dbtp": -9.24,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.8823371530951508,
+      "sha256": "71b664d09004dc24de3ab1b22df9ab6d9e57c75f42d32d9682feeac104302bc3"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -32.19,
+      "sample_peak_dbfs": -11.264777537020978,
+      "true_peak_dbtp": -11.26,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.984489486402686,
+      "sha256": "8054624715d73b19d36374ffaee83fe3f361267bf9c301e1af967ac0a6a6216e"
+    }
+  },
+  "v005": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.14,
+      "sample_peak_dbfs": -3.133555669339678,
+      "true_peak_dbtp": -3.03,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9961699481262023,
+      "sha256": "239e9838462153f278b4dafcc3dc99f73a74e13f59841ec147d2aed68efa3c4e"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.06,
+      "sample_peak_dbfs": -6.0163597913315865,
+      "true_peak_dbtp": -5.84,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9987048623167216,
+      "sha256": "0253bcabad384567d26a098a079b57e961c6319a2862e81a2e85c29ce03bafbd"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.41,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 1.0,
+      "sha256": "039d88259ae045b19a852dffeebac76ca994de81fb201f1f0e597a155a2459aa"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -31.18,
+      "sample_peak_dbfs": -10.842746290136322,
+      "true_peak_dbtp": -10.84,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9456348082493534,
+      "sha256": "3ab73113c0339ea2bd6cb205c65577a369cf9df6a2d05e62a390b184797794b4"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.9,
+      "sample_peak_dbfs": -8.193346742905526,
+      "true_peak_dbtp": -8.19,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9520418710860351,
+      "sha256": "60be5ce6be7c749e8b2d81b5a2162d491d0cd789b98f404e1af6dcc283440e85"
+    }
+  },
+  "v006": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.09,
+      "sample_peak_dbfs": -2.954427777454829,
+      "true_peak_dbtp": -2.88,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9961491040125667,
+      "sha256": "cc02100193536c2a0509209c920fb6218f320918f9927f79689f6448f4b15e9d"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "sample_peak_dbfs": -5.868723695767173,
+      "true_peak_dbtp": -5.74,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9985984544914995,
+      "sha256": "5af57460f4940d4938c557508045b7918e2c2809d6dc33e33fc91850618bde6e"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.3,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9999999999999998,
+      "sha256": "eb0b254e4824809da7c796d068ed78f7ef5f72481051b325e979a279db2cd727"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.46,
+      "sample_peak_dbfs": -10.622954059596292,
+      "true_peak_dbtp": -10.62,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9335925386379906,
+      "sha256": "f0ac54485459d2489f669063e15d186b8c9103d19a2c4209f806a2798e65af0c"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -31.01,
+      "sample_peak_dbfs": -8.091819564557012,
+      "true_peak_dbtp": -8.09,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9533190818356974,
+      "sha256": "bf523983e9c41f9013f2f91df8cac1450f7273cc2eafcfa2d1acb98b40e7c1e4"
+    }
+  },
+  "v007": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.08,
+      "sample_peak_dbfs": -2.939170110878147,
+      "true_peak_dbtp": -2.86,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.996031235286277,
+      "sha256": "56a4e89d80823cab2f7cdb52d6846c0f27a45c4837b69c35a3ba2c7d588a911d"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "sample_peak_dbfs": -5.861433380295248,
+      "true_peak_dbtp": -5.76,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.998599080328473,
+      "sha256": "843c0240e92ea7274c2e7f412ffe2fa7028012a60b6fb6ac23f8e15ef4001b31"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.3,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 1.0,
+      "sha256": "7b040d22f71f40f95172d0a0d4a1726141775a3a025c207f2674073fbbb9e173"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.12,
+      "sample_peak_dbfs": -11.499665145923778,
+      "true_peak_dbtp": -11.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9343921717967038,
+      "sha256": "6f2ae29283ba3f64c76739cb4139e2edd7c897685205abc5e16f9a53a0beb113"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -31.43,
+      "sample_peak_dbfs": -10.285578400366344,
+      "true_peak_dbtp": -10.29,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9391955319589351,
+      "sha256": "b22e0b94c4724826767d5a8109f9230472d49f75995d577f59d6cc932f3f805f"
+    }
+  },
+  "v008": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.07,
+      "sample_peak_dbfs": -2.9373112520446636,
+      "true_peak_dbtp": -2.86,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9955774223404709,
+      "sha256": "ef122a17596a04fe7ea9fc494b71de63d567225cabebe8e5854c41b482dcd106"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "sample_peak_dbfs": -5.862474479378127,
+      "true_peak_dbtp": -5.74,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.998604133933995,
+      "sha256": "2c0cd6da0e81efb513ff745e30855900218ee5611064d5fe3fdc2cd7aa8c5310"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.3,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 1.0,
+      "sha256": "dabe11146a66254d3685b4b2cc7d0ecd74744d0760c5d6469b7f37a9dc5bf15c"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -28.68,
+      "sample_peak_dbfs": -11.126262075786876,
+      "true_peak_dbtp": -11.12,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9277094341663059,
+      "sha256": "04c21850ac75a62b16c49b2207bd50b95174a38f88ae568e673f851f6425ce77"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -28.95,
+      "sample_peak_dbfs": -9.572430031652097,
+      "true_peak_dbtp": -9.57,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9183487076980985,
+      "sha256": "576b2ede2c352ed320daf17b15cf662f657a210ac826b93e1a1837d8e8506494"
+    }
+  },
+  "decisions": {
+    "v001": "Baseline complete render; audio review timed out and provider outcome/cost unknown.",
+    "v002": "Rejected: raw master hit seven PCM rails after foreground gain increases.",
+    "v003": "Source-level postgain 0.80 fixed clipping. Reviewer reported spiky objects; repeated-phrase claim conflicts with source.",
+    "v004": "Earlier stable alternative. Softer chord and longer return bass notes. Matched model comparison preferred its roundness over v003.",
+    "v005": "Whole original gesture resampled into uneven return fragments. Comparison verdict discarded: false entire-track reversal claim.",
+    "v006": "Object timing moved between opening kick/bass; uneven slices and brief rolling-bass return.",
+    "v007": "Stable preceding version. Warmer original source print preserves evolving low-mid body.",
+    "v008": "Performed same-object bloom, expanded middle and varying return feedback. Matched model review preferred v007 rhythmic focus; preserve as a more ambient alternative, not a human rejection.",
+    "v009": "Hybrid restores v007 vacuum/return but keeps performed whole-object gestures. Model preferred v007, but generalized audible differences across unchanged return source; literal review timeline is unreliable. Preserve as expressive alternative.",
+    "v010": "Controlled four-bar bass/object response experiment. Preserved but superseded: global-cycle phase put three object onsets on bass attacks, contrary to this experiment\u2019s intended separation.",
+    "v011": "Recommended authored alternative: rotate the object phrase into the actual cycle-10 return, with three/two/four/two bass attacks answered by three/three/two/four object fragments; remove return spring layer. Pinned-engine event query confirms zero simultaneous bass/object attacks, versus three in v007. Clean technical export; no human listening verdict or new model review."
+  },
+  "review_evidence": {
+    "completed_cost_usd": 0.134812,
+    "unknown_outcome": [
+      "reviews/v001/request.json"
+    ],
+    "completed": [
+      "reviews/v003/request.json",
+      "reviews/v003-v004/request.json",
+      "reviews/v004-v005/request.json",
+      "reviews/v007-v008/request.json",
+      "reviews/v007-v009/request.json"
+    ],
+    "unusable_comparisons": [
+      "reviews/v004-v005/review.md"
+    ],
+    "human_verdict": null,
+    "interpretation_limits": {
+      "v007-v008": "Soft/long middle and lingering return description broadly matches source changes; subjective model preference only.",
+      "v007-v009": "Preference favors v007 but timeline claims differences throughout unchanged passages. Do not accept literal timeline or expert-status implication."
+    }
+  },
+  "v009": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.07,
+      "sample_peak_dbfs": -2.93285161324839,
+      "true_peak_dbtp": -2.85,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9953118488609687,
+      "sha256": "bdf2ab6a322adbc84b02566478c9f1dd30368f53a26115bf5ca1ad6b9221b827"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "sample_peak_dbfs": -5.854149178662341,
+      "true_peak_dbtp": -5.74,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9986066330708927,
+      "sha256": "005f419ed03b98fd716829b84726f7bf849ed4e7ae778bb32e40f78c9eac85b5"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.3,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9999999999999998,
+      "sha256": "0216f46ea679ef5913ff9042efaa7d4409a936709ef49de9f156ffd2b3d21f77"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -28.92,
+      "sample_peak_dbfs": -11.141544049622214,
+      "true_peak_dbtp": -11.14,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9282723193900554,
+      "sha256": "7f71820164d22d1fb4e5aacc1c21299a855094d8d67682b5d819a33e606701df"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -29.62,
+      "sample_peak_dbfs": -9.818464411451318,
+      "true_peak_dbtp": -9.82,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9199312276675741,
+      "sha256": "40c08043bf410dc36203209e364d9d57d5795394a46e17f8d844f822ab3f3bd1"
+    }
+  },
+  "recommended_for_cross_candidate_screening": "v011",
+  "expressive_alternatives": [
+    "v008",
+    "v009"
+  ],
+  "v010": {
+    "master": {
+      "sha256": "b842440c4a38df8a784f2077fa98ed5d3c23297cdd1efafa8ae1a1a9ed8a70a3",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -3.063874283532431,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -17.16,
+      "true_peak_dbtp": -3.05,
+      "lr_correlation": 0.9960776020257321
+    },
+    "drums": {
+      "sha256": "5e704369aa0aa99556e9506d0ed8cbccc99d1267d0057def1e07010d5a181200",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -5.87497741150242,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -18.04,
+      "true_peak_dbtp": -5.73,
+      "lr_correlation": 0.998681376558263
+    },
+    "bass": {
+      "sha256": "482687c052807ba75a9786be9c3dc97228ac70b7786792e1d8f9252c32a73b6b",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -8.489032744130395,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -23.46,
+      "true_peak_dbtp": -8.49,
+      "lr_correlation": 1.0
+    },
+    "dub": {
+      "sha256": "92bdc66dbd1ddac26a902d6bd1781d63352d573605951d3a38a478d1b8f0b572",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -11.499665145923778,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -30.24,
+      "true_peak_dbtp": -11.5,
+      "lr_correlation": 0.9235019054802647
+    },
+    "edits": {
+      "sha256": "431a5d91bf6316387adbad54aa93836b950d4a9606195af4d69bcd636842be97",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -9.98672537201619,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.57,
+      "true_peak_dbtp": -9.99,
+      "lr_correlation": 0.9477120961623211
+    }
+  },
+  "v011": {
+    "master": {
+      "sha256": "cbae715db7f9103fd87091cd6fe5b104cd137b7419cec5ae409181eb40ca5cb5",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -3.068024344900065,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -17.15,
+      "true_peak_dbtp": -3.06,
+      "lr_correlation": 0.9961619293918698
+    },
+    "drums": {
+      "sha256": "770239b9ae5bd31fa96a0d6ab3b0840c9a8178b8a7fe6591694fe1707c3ffa3d",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -5.87497741150242,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -18.04,
+      "true_peak_dbtp": -5.74,
+      "lr_correlation": 0.9986783296188578
+    },
+    "bass": {
+      "sha256": "d49aa1ea318d2cc0a060a9922c07391a2d9e35a6193e02ec0eba7706942de7a0",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -8.489032744130395,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -23.46,
+      "true_peak_dbtp": -8.49,
+      "lr_correlation": 1.0
+    },
+    "dub": {
+      "sha256": "17a3edd52a6e6d3200d7f082225d2b1c5f389ae21d12bf804a135a3601b73f7d",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -11.499665145923778,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -30.18,
+      "true_peak_dbtp": -11.5,
+      "lr_correlation": 0.9243813951977055
+    },
+    "edits": {
+      "sha256": "0979f74a1dbd7619a0b79d6391af7fa392a58e331904c245e42d8de26ce0ba60",
+      "seconds": 30.0,
+      "sample_peak_dbfs": -10.252723114700892,
+      "pcm_rail_samples": 0,
+      "integrated_lufs": -31.66,
+      "true_peak_dbtp": -10.25,
+      "lr_correlation": 0.9515954498497702
+    }
+  },
+  "earlier_stable_alternative": "v007",
+  "reproduction_audit": "reproduction-audit.json",
+  "return_event_audit": "return-events.json"
+}

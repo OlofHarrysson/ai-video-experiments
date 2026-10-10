@@ -1,0 +1,5 @@
+kick: s("<[bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ bd ~ ~ bd ~]!3 [bd ~ ~ ~ bd ~ ~ ~ bd ~ ~ ~ ~ bd ~ ~]>").bank("RolandTR909").speed(.84).gain(.55).orbit(1).mask(nsKick)
+clap: s("~ cp ~ cp").bank("RolandTR909").speed(.83).gain(.21).hpf(650).room(.06).orbit(2).mask(nsTop)
+hats: s("<[~ hh ~ hh ~ hh [hh hh] hh] [~ hh ~ [hh ~] ~ hh hh ~]>").bank("RolandTR909").gain(".075 .11 .07 .09").hpf(4100).pan(.59).swingBy(.07,8).orbit(1).mask(nsTop)
+openhat: s("~ ~ oh ~ ~ ~ oh ~").bank("RolandTR909").gain(.07).clip(.55).hpf(4300).pan(.33).orbit(1).mask("<0!4 1!4 0!2 1!4 0!2>")
+spring: s("<[~ ~ ~ nsspring ~ ~ ~ ~ ~ ~ nsspring ~ ~ ~ ~ ~] [~ ~ nsspring ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ nsspring ~ ~]>").speed(".82 1.11 .73").gain(".105 .075 .09").hpf(500).pan(".30 .68").swingBy(.13,8).room(.15).delay(.12).delaytime(.234375).delayfeedback(.24).orbit(3).mask("<0 1!7 0!2 1!4 0!2>")

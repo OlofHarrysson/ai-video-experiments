@@ -1,0 +1,317 @@
+{
+  "scope": "Selected current-palette provenance chains. Does not assert third-party drum licensing; drum origin separately retained.",
+  "checks": [
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prchain/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prchain/02.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prchain/03.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prchain/04.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prair/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prair/02.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prair/03.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prair/04.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prknock/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prknock/02.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prknock/03.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prrubber/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prrubber/02.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prrubber/03.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prrubber/04.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/references/assets/samples/prscrape/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/02.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/03.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/04.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/05.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/06.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/07.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/08.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/09.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/10.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/11.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/12.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/references/assets/samples/prdamped/13.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nsspring/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nsservo/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nschord/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nsfriction/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nsreverse/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/palette.json",
+      "file": "projects/negative-space/references/assets/samples/nslanding/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/cloud.json",
+      "file": "projects/negative-space/references/assets/samples/nscloud/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/bloom-body.json",
+      "file": "projects/negative-space/renders/body-probe/render.wav",
+      "kind": "source",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/bloom-body.json",
+      "file": "projects/negative-space/references/assets/samples/nsbloomwarm/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/bloom-body.json",
+      "file": "projects/negative-space/references/assets/samples/nsbloomwarmrev/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/performed-object.json",
+      "file": "projects/negative-space/references/assets/samples/nsbloomrise/01.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "negative-space/references/performed-object.json",
+      "file": "projects/negative-space/references/assets/samples/nsbloomwarm/01.wav",
+      "kind": "source",
+      "matches": true
+    },
+    {
+      "receipt": "latch/palette.json",
+      "file": "projects/latch/references/assets/samples/lashuck/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/palette.json",
+      "file": "projects/latch/references/assets/samples/laclack/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/palette.json",
+      "file": "projects/latch/references/assets/samples/laburr/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/palette.json",
+      "file": "projects/latch/references/assets/samples/lasuck/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/room-objects.json",
+      "file": "projects/latch/references/assets/samples/lashuckroom/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/room-objects.json",
+      "file": "projects/latch/references/assets/samples/lashuck/00.wav",
+      "kind": "source",
+      "matches": true
+    },
+    {
+      "receipt": "latch/room-objects.json",
+      "file": "projects/latch/references/assets/samples/laburrroom/00.wav",
+      "kind": "asset",
+      "matches": true
+    },
+    {
+      "receipt": "latch/room-objects.json",
+      "file": "projects/latch/references/assets/samples/laburr/00.wav",
+      "kind": "source",
+      "matches": true
+    },
+    {
+      "receipt": "pressure-study/references/palette.json",
+      "file": "projects/pressure-study/make_palette.py",
+      "kind": "generator",
+      "matches": false
+    },
+    {
+      "receipt": "pressure-study/references/damped-morph.json",
+      "file": "projects/pressure-study/make_damped_morph.py",
+      "kind": "generator",
+      "matches": true
+    },
+    {
+      "receipt": "latch/room-objects.json",
+      "file": "projects/latch/make_room_objects.py",
+      "kind": "generator",
+      "matches": true
+    }
+  ]
+}

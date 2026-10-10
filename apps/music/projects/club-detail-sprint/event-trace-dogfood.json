@@ -1,0 +1,16 @@
+{
+  "source": "projects/club-detail-sprint/screening/negative-timing-trace/events.json",
+  "scope": "Actual offline exporter queries for solo sub+ghost in Negative Space v011; confirms source timing, not perceived groove",
+  "return_bass_attacks": 11,
+  "return_object_attacks": 12,
+  "coincident_attacks": [],
+  "event_trace_sha256": "a6ea5b40c34756990e1439260e95bf1212a0d17a4f586d7416056c18dc93f4ae",
+  "v010_before": {
+    "coincident_attacks": [
+      10.6875,
+      12.5625,
+      12.875
+    ],
+    "scope": "Preserved wrong global phase; comparison uses actual exporter traces for the same selected voices."
+  }
+}

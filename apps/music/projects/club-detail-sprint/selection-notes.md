@@ -1,0 +1,11 @@
+# Selection notes
+
+Final assistant selection: Pressure Lock v011 and Negative Space v011. Human taste judgment is pending. Latch v006 is preserved as the continuous-groove alternative.
+
+Pressure has the clearest recurring mechanism: one five-sixteenth object moves against the bar, changes material, and carries that change into the returning groove. Its fixed frequencies avoid the rejected descending-pitch experiment. Negative Space contrasts with a slower, warmer object whose whole gesture becomes stretched material and then deliberately spaced replies. Its v011 return has four distinct exchanges while retaining the original palette.
+
+Latch v005 offers stronger formal contrast through an uninterrupted kick and bass groove. Its shared room-before-saturation processing is a substantial timbral experiment, but almost every foreground bar changes; rhythmic recall is less explicit. V006 restores a recurring two-bar motif, two bass phrases and five returns to the opening cell. It is a useful preserved alternative; the selected pair has the clearer relationship between a defining sound and its changing role. This is an authored judgment, not established listener preference.
+
+The final anonymous v005/Negative Space v011 comparison used 28 seconds per excerpt at matched loudness, with a two-second separator. A was Latch, B Negative Space; the key was read after the response. The model preferred B's coherent, sparse groove and described A as nervous/disjointed. This broadly agrees with the independent structural concern about recall, but is a subjective and fallible screen. It does not establish that Latch's timing is incorrect or that Negative Space is professionally successful. Earlier duplicate controls failed; model confidence is not a scoring system.
+
+Raw masters, stems, original sample generators and every tested revision remain preserved. Delivery copies use only constant attenuation to −17.15 LUFS, with no compression, time stretch or change to the endings. Their full sample arrays were checked against the expected gain-scaled originals; each is exactly 30 seconds, 48 kHz stereo. Matching makes comparison fairer, not better-sounding.

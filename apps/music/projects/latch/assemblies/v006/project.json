@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "title": "Latch",
+  "revisions": {
+    "v006": {
+      "source": "source.strudel",
+      "notes": "Recurring two-bar friction/burr motif and two bass phrases; development by articulation and sparse omission, returning to original colour in cycles12–13. Continuous kick and processed palette retained."
+    }
+  },
+  "end_cycle": 16.5,
+  "sample_rate": 48000,
+  "samples": [
+    "../../../practical-dogfood/references/assets/drums",
+    "../../references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "echo"
+    ],
+    "edits": [
+      "inhale",
+      "ending"
+    ]
+  },
+  "sections": {
+    "grip": [
+      0,
+      4
+    ],
+    "turn": [
+      4,
+      8
+    ],
+    "pressure": [
+      8,
+      12
+    ],
+    "release": [
+      12,
+      16.5
+    ]
+  }
+}

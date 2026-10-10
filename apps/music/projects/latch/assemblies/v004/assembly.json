@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/assembly-v004.json",
+    "sha256": "5e56607e3d0208b8183191402946e67b371b6ede3dfd04a0264b113185752bad"
+  },
+  "revision": "v004",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v004/setup.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "934e39a263180486567c7dde72f8dc0990c3f45b39fa1a3f7e175f64ab67ec2f",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v004/drums.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "f70c4320acd1b9af2ee2494fcee5c438192b8ab56ab73fee1362c99d44d349dc",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v004/bass.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "584d60adf42eb0830673ea880d12d06a3f75e3ca572cc2ce343ed3be25847899",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v004/breath.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "64f58e650850342079b8bfbaaf9fa9ebde926e33fcfe3e5710c050f85893fd31",
+      "stem": "breath"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/latch/modules/v004/edits.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "79b0b201b889c41177924b5ce5251b0583686a5dc4ed7e385b445f450e49a731",
+      "stem": "edits"
+    }
+  ],
+  "source_sha256": "45d63005db92a8c53f4c5ecd3256c8fce930a5fade80846d400f22efd8c3e08d",
+  "project_sha256": "768ae47e5a6f4c800449b28f67a327490042ef41b17a85b5ffdfd29af360803c",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "clapghost"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "burr"
+    ],
+    "breath": [
+      "shuck",
+      "echo"
+    ],
+    "edits": [
+      "inhale",
+      "ending"
+    ]
+  }
+}

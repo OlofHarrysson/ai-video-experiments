@@ -1,0 +1,2 @@
+sub: note(nsBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4).postgain(.80)
+bass: note(nsBass).s("sawtooth").lpf("<340!2 420!2 520!2 390 650 200!2 520!2 700 360 200!2>").lpenv(1.8).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.48).orbit(4).postgain(.80)

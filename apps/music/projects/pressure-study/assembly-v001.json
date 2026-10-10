@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "Pressure Study",
+  "revision": "v001",
+  "end_cycle": 17,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "references/assets/samples"
+  ],
+  "sections": {
+    "whole": [
+      0,
+      17
+    ],
+    "engine": [
+      0,
+      4
+    ],
+    "exposure": [
+      4,
+      8
+    ],
+    "arrival": [
+      8,
+      12
+    ],
+    "exit": [
+      12,
+      17
+    ]
+  },
+  "modules": [
+    {
+      "file": "modules/setup-v001.strudel"
+    },
+    {
+      "file": "modules/drums-v001.strudel",
+      "stem": "drums"
+    },
+    {
+      "file": "modules/bass-v001.strudel",
+      "stem": "bass"
+    },
+    {
+      "file": "modules/percussion-v001.strudel",
+      "stem": "percussion"
+    },
+    {
+      "file": "modules/space-v001.strudel",
+      "stem": "space"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+// Module 1: modules/v002/setup.strudel
+// Latch — 132 BPM, 16.5 cycles = 30 seconds.
+setcpm(132/4)
+const laBass = "<[~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1]!2 [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1 ~ eb1 ~ f1] [~ f1@2 ~ ~ f1 ~ f1 ~ f1 ~ ~ ~ f1 ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~ f1 ~ ~ f1 ~] ~ [~ ~ ~ f1@2 ~ ~ ~] [~ f1@2 ~ ~ f1@2 ~] [~ ~ f1 ~ f1@2 ~ ~] [~ f1@2 ~ ~ f1 ~ eb1 ~] [~ f1@2 ~ ~ f1 ~ ~ ~] [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1] [~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ ~ ~ f1 ~ ~] [~ f1 ~ ~ ~ f1 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~] ~!3>"
+const laKick = "<1!5 [1 1 1 0] [0 1 0 1] [0 1 0 1] 1!5 [1 1 0 1] [1 1 0 0] 0!3>"
+const laTop = "<1!6 0!2 1!6 0!4>"
+
+;
+
+// Module 2: modules/v002/drums.strudel
+kick: s("bd*4").bank("RolandTR909").speed(.88).gain(.54).orbit(1).mask(laKick)
+clap: s("~ cp ~ cp").bank("RolandTR909").gain(.20).hpf(550).room(.07).orbit(2).mask(laTop)
+hat: s("<[~ hh ~ hh ~ hh [hh ~] hh] [~ hh [~ hh] hh ~ hh hh ~]>").bank("RolandTR909").gain(".075 .09 .065 .10").hpf(4200).pan(.62).swingBy(.055,8).orbit(1).mask(laTop)
+open: s("~ oh ~ ~ ~ oh ~ oh").bank("RolandTR909").gain(.08).clip(.48).hpf(3600).pan(.40).orbit(1).mask("<0!2 1!4 0!2 1!6 0!4>")
+clapghost: s("~ ~ ~ ~ ~ ~ ~ cp").bank("RolandTR909").speed(.8).hpf(900).gain(.075).late(.015).room(.13).orbit(2).mask("<0!3 1 0 1 0!3 1 0 1 0 1 0!4>")
+
+bridgehat: s("~ hh ~ hh ~ hh ~ hh").bank("RolandTR909").gain(.045).hpf(3300).pan(.58).orbit(1).mask("<0!6 1!2 0!10>")
+
+;
+
+// Module 3: modules/v002/bass.strudel
+sub: note(laBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4)
+bass: note(laBass).s("sawtooth").lpf("<370!2 510 290 440 620 180!2 390 650 480 700 420 500 220 160!3>").lpenv(1.8).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.44).orbit(4)
+burr: s("<[~ ~ ~ laburr ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ laburr ~] ~ [~ ~ ~ laburr ~ ~ ~ ~]>").gain("<.18!6 0!2 .30!6 0!4>").speed("<1 1 .5 .75>").lpf(1600).hpf(150).clip(.6).pan(.47).orbit(5).mask("<1!6 0!2 1!6 0!4>")
+
+;
+
+// Module 4: modules/v002/breath.strudel
+shuck: s("<[~ ~ lashuck ~ ~ lashuck ~ ~ lashuck ~ ~ ~ lashuck ~ ~ ~] [~ lashuck ~ ~ ~ ~ lashuck ~ ~ ~ ~ lashuck ~ ~ ~ lashuck]>").gain(".20 .12 .17 .10").speed("1 .78 1.12 .88").lpf(1800).hpf(350).pan(".35 .63 .43 .70").swingBy(.095,8).orbit(6).mask("<1!6 0!2 1!6 0!4>")
+clack: s("<[~ ~ ~ ~ ~ lashuck ~ ~ ~ ~ lashuck ~ ~ ~ ~ ~] [~ ~ lashuck ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ lashuck ~ ~]>").gain(.07).speed(".38 .52 .42").hpf(200).lpf(900).pan(.25).delay(.16).delaytime(.340909).delayfeedback(.24).room(.10).orbit(7).mask("<0!2 1!4 0!2 1!6 0!4>")
+echo: s("~ ~ ~ lashuck").gain(.23).speed(.72).hpf(650).lpf(2100).pan(.7).delay(.65).delaytime(.340909).delayfeedback(.52).room(.23).orbit(8).mask("<0!3 1 0!7 1 0!6>")
+
+;
+
+// Module 5: modules/v002/edits.strudel
+exposed: s("<~!6 [laburr ~ lashuck ~ laburr ~ lashuck ~] [~ lashuck ~ laburr ~ ~ [lashuck lashuck] ~] ~!10>").gain(".29 .20 .24").speed("1 .75 1 .5").hpf(120).lpf(1600).pan(".45 .6 .4 .55").delay(.18).delaytime(.227273).delayfeedback(.3).room(.15).orbit(9)
+inhale: s("~ ~ ~ lasuck").gain(.095).hpf(600).pan(.53).mask("<0!7 1 0!5 1 0!4>").orbit(10)
+ending: s("<~!14 [~ ~ lashuck ~ laburr ~ ~ ~] [lashuck ~ ~ ~ ~ ~ ~ ~] ~!2>").gain(.21).hpf(380).lpf(1400).pan(.45).delay(.46).delaytime(.227273).delayfeedback(.38).room(.26).orbit(11)
+
+;

@@ -1,0 +1,7 @@
+kick: s("bd*4").bank("RolandTR909").speed(.88).gain(.54).orbit(1).mask(laKick)
+clap: s("~ cp ~ cp").bank("RolandTR909").gain(.20).hpf(550).room(.07).orbit(2).mask(laTop)
+hat: s("<[~ hh ~ hh ~ hh [hh ~] hh] [~ hh [~ hh] hh ~ hh hh ~]>").bank("RolandTR909").gain(".075 .09 .065 .10").hpf(4200).pan(.62).swingBy(.055,8).orbit(1).mask(laTop)
+open: s("~ oh ~ ~ ~ oh ~ oh").bank("RolandTR909").gain(.08).clip(.48).hpf(3600).pan(.40).orbit(1).mask("<0!2 1!4 0!2 1!6 0!4>")
+clapghost: s("~ ~ ~ ~ ~ ~ ~ cp").bank("RolandTR909").speed(.8).hpf(900).gain(.075).late(.015).room(.13).orbit(2).mask("<0!3 1 0 1 0!3 1 0 1 0 1 0!4>")
+
+bridgehat: s("~ hh ~ hh ~ hh ~ hh").bank("RolandTR909").gain(.045).hpf(3300).pan(.58).orbit(1).mask("<0!6 1!2 0!10>")

@@ -1,0 +1,32 @@
+{
+  "bass_onsets_cycles": [
+    10.0625,
+    10.375,
+    10.6875,
+    11.1875,
+    11.625,
+    12.0625,
+    12.3125,
+    12.5625,
+    12.875,
+    13.125,
+    13.5625
+  ],
+  "object_onsets_cycles": [
+    10.25,
+    10.5625,
+    10.875,
+    11,
+    11.4375,
+    11.875,
+    12.1875,
+    12.6875,
+    13,
+    13.375,
+    13.8125,
+    13.9375
+  ],
+  "coincident_onsets": 0,
+  "object_onsets_inside_bass_scheduled_gates": 0,
+  "scope": "Scheduled note gates/onsets, not audible transients or tails."
+}

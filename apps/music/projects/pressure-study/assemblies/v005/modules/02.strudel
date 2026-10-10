@@ -1,0 +1,5 @@
+kick: s("bd*4").bank("RolandTR909").speed(.86).gain(.52).orbit(1).mask(drumGate)
+clap: s("~ cp ~ cp").bank("RolandTR909").speed(.93).gain(.215).hpf(600).room(.065).orbit(2).mask(topGate)
+hat: s("<[~ hh ~ hh ~ hh [hh hh] hh] [~ hh hh ~ ~ hh ~ hh] [~ hh ~ hh [hh hh] ~ hh ~] [~ hh ~ hh ~ hh hh [hh ~]]>").bank("RolandTR909").gain(".066 .105 .073 .09").hpf(4800).swingBy(.045,8).pan(.62).orbit(1).mask(topGate)
+open: s("~ oh ~ oh ~ oh ~ oh").bank("RolandTR909").clip(.42).hpf(4300).gain(.085).pan(.39).orbit(1).mask("<1!4 0!4 1!7 0!2>")
+air: s("prair:0 prair:1 prair:0 prair:2 prair:1 prair:0 prair:3 prair:0").gain(".018 .032 .019 .045").swingBy(.09,8).pan(".3 .7 .4 .62").orbit(1).mask("<1!6 [1 0 0 0] 0 1!7 0!2>")

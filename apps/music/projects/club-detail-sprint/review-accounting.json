@@ -1,0 +1,384 @@
+{
+  "scope": "Requests retained under the three composition studies and club-detail sprint, including provider calibration; price is reported usage, not an imposed budget",
+  "requests": [
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/comparison-control-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.02569,
+      "created_at": "2026-10-10T12:31:45.003344+00:00",
+      "finished_at": "2026-10-10T12:32:25.544869+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/identity-pair-v004-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.026698,
+      "created_at": "2026-10-10T12:33:31.156884+00:00",
+      "finished_at": "2026-10-10T12:34:03.038861+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/latch-negative-return-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.020416,
+      "created_at": "2026-10-10T12:56:44.344137+00:00",
+      "finished_at": "2026-10-10T12:57:05.295699+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/pressure-isolated-duplicate-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.010236,
+      "created_at": "2026-10-10T13:05:35.381251+00:00",
+      "finished_at": "2026-10-10T13:05:46.127940+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/pressure-isolated-low-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.0084,
+      "created_at": "2026-10-10T13:04:33.800729+00:00",
+      "finished_at": "2026-10-10T13:04:42.574058+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/pressure-short-low-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.014404,
+      "created_at": "2026-10-10T13:02:40.273484+00:00",
+      "finished_at": "2026-10-10T13:02:54.621346+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/pro-track-reference/toast-pressure-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.033862,
+      "created_at": "2026-10-10T12:54:50.366159+00:00",
+      "finished_at": "2026-10-10T12:55:27.357298+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/critic/.local/undertow-control-review/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.029356,
+      "created_at": null,
+      "finished_at": null
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/gemini-probe/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.014914,
+      "created_at": "2026-10-10T12:56:20.109261+00:00",
+      "finished_at": "2026-10-10T12:56:36.226200+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/gpt-audio-dropout/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "openai/gpt-audio",
+      "provider": null,
+      "cost_usd": 0.00677,
+      "created_at": "2026-10-10T12:40:22.245398+00:00",
+      "finished_at": "2026-10-10T12:40:27.693295+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/gpt-audio-identical/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "openai/gpt-audio",
+      "provider": null,
+      "cost_usd": 0.0213375,
+      "created_at": "2026-10-10T12:40:01.509395+00:00",
+      "finished_at": "2026-10-10T12:40:16.393528+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/gpt-audio-probe/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "openai/gpt-audio",
+      "provider": "OpenAI",
+      "cost_usd": 0.004985,
+      "created_at": "2026-10-10T12:52:04.223900+00:00",
+      "finished_at": "2026-10-10T12:52:08.909573+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/latch-coherence/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.01678,
+      "created_at": "2026-10-10T13:02:17.483528+00:00",
+      "finished_at": "2026-10-10T13:02:37.685766+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/latch-pressure/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.031642,
+      "created_at": "2026-10-10T12:53:49.752602+00:00",
+      "finished_at": "2026-10-10T12:54:25.518269+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/mimo-dropout/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "xiaomi/mimo-v2.6-pro",
+      "provider": null,
+      "cost_usd": 0.00040099,
+      "created_at": "2026-10-10T12:41:06.926551+00:00",
+      "finished_at": "2026-10-10T12:41:25.216340+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/mimo-filter-control/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "xiaomi/mimo-v2.6-pro",
+      "provider": null,
+      "cost_usd": 0.00055224,
+      "created_at": "2026-10-10T12:42:50.771919+00:00",
+      "finished_at": "2026-10-10T12:43:17.766648+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/mimo-identical/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "xiaomi/mimo-v2.6-pro",
+      "provider": null,
+      "cost_usd": 0.00092863,
+      "created_at": "2026-10-10T12:41:07.257736+00:00",
+      "finished_at": "2026-10-10T12:41:44.308759+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/mimo-unaltered/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "xiaomi/mimo-v2.6-pro",
+      "provider": null,
+      "cost_usd": 0.00045754,
+      "created_at": "2026-10-10T12:42:46.906772+00:00",
+      "finished_at": "2026-10-10T12:43:11.798830+00:00"
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/mimo-xiaomi-probe/request.json",
+      "status": "transport_error",
+      "sent": null,
+      "model": "xiaomi/mimo-v2.6-pro",
+      "provider": null,
+      "cost_usd": null,
+      "created_at": "2026-10-10T12:45:29.263306+00:00",
+      "finished_at": "2026-10-10T12:55:44.719418+00:00"
+    },
+    {
+      "receipt": "projects/latch/reviews/v001/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.027208,
+      "created_at": "2026-10-10T12:36:51.275222+00:00",
+      "finished_at": "2026-10-10T12:37:23.062974+00:00"
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v001/request.json",
+      "status": "transport_error",
+      "sent": null,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": null,
+      "created_at": null,
+      "finished_at": null
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v003/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.023732,
+      "created_at": null,
+      "finished_at": null
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v003-v004/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.023298,
+      "created_at": "2026-10-10T12:31:38.168478+00:00",
+      "finished_at": "2026-10-10T12:32:24.982560+00:00"
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v004-v005/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.039698,
+      "created_at": "2026-10-10T12:36:30.166647+00:00",
+      "finished_at": "2026-10-10T12:37:15.424610+00:00"
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v007-v008/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.019044,
+      "created_at": "2026-10-10T12:55:33.762913+00:00",
+      "finished_at": "2026-10-10T12:55:57.433997+00:00"
+    },
+    {
+      "receipt": "projects/negative-space/reviews/v007-v009/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.02904,
+      "created_at": "2026-10-10T12:57:49.144338+00:00",
+      "finished_at": "2026-10-10T12:58:24.549347+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v005-v003/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.032238,
+      "created_at": "2026-10-10T12:35:58.346011+00:00",
+      "finished_at": "2026-10-10T12:36:31.638370+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v005-v006/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.02005,
+      "created_at": "2026-10-10T12:38:48.865872+00:00",
+      "finished_at": "2026-10-10T12:39:11.977739+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v007/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.028602,
+      "created_at": "2026-10-10T12:55:56.921298+00:00",
+      "finished_at": "2026-10-10T12:56:28.681277+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v009/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.02547,
+      "created_at": "2026-10-10T12:58:10.500026+00:00",
+      "finished_at": "2026-10-10T12:58:37.742630+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v011/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.02229,
+      "created_at": "2026-10-10T13:00:40.263901+00:00",
+      "finished_at": "2026-10-10T13:01:06.160351+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-audition-v006-v011-full/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.038954,
+      "created_at": "2026-10-10T13:02:16.630177+00:00",
+      "finished_at": "2026-10-10T13:02:54.863725+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-compare-v002-v003/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.019478,
+      "created_at": "2026-10-10T12:30:13.473942+00:00",
+      "finished_at": "2026-10-10T12:30:40.785865+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-compare-v004-v003/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.02297,
+      "created_at": "2026-10-10T12:31:24.931063+00:00",
+      "finished_at": "2026-10-10T12:32:04.955030+00:00"
+    },
+    {
+      "receipt": "work/pressure-study-review-v001/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.030014,
+      "created_at": null,
+      "finished_at": null
+    },
+    {
+      "receipt": "work/pressure-study-review-v002/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": null,
+      "cost_usd": 0.027334,
+      "created_at": null,
+      "finished_at": null
+    },
+    {
+      "receipt": "projects/club-detail-sprint/screening/final-second-slot/request.json",
+      "status": "complete",
+      "sent": true,
+      "model": "google/gemini-3.1-pro-preview",
+      "provider": "Google",
+      "cost_usd": 0.021242,
+      "created_at": "2026-10-10T13:27:15.782960+00:00",
+      "finished_at": "2026-10-10T13:27:42.692139+00:00"
+    }
+  ],
+  "reported_cost_usd": 0.7184919,
+  "unknown_outcomes": [
+    "projects/club-detail-sprint/screening/mimo-xiaomi-probe/request.json",
+    "projects/negative-space/reviews/v001/request.json"
+  ],
+  "counts": {
+    "complete": 35,
+    "transport_error": 2
+  }
+}

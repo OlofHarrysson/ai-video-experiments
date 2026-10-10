@@ -1,0 +1,95 @@
+{
+  "origin": "Original deterministic shared excitation, fixed resonator family: low decay lengthens, high resonances are damped, noise excitation stays crisp",
+  "seed": 101007,
+  "sample_rate": 48000,
+  "frequencies_hz": [
+    174.61411572,
+    261.92117358,
+    568.0,
+    946.4,
+    1557.6,
+    2567.2,
+    3760.8
+  ],
+  "generator_sha256": "ac91b76fc2c123e007b472b9128affef2bbc0ea22a2848cecce4db0870ff2111",
+  "sounds": [
+    {
+      "index": 0,
+      "alpha": 0.0,
+      "path": "references/assets/samples/prdamped/01.wav",
+      "sha256": "a0a40b8a1af17e11b3bc3650797f2ecb4b9fd2c40b4a2c763bf628465fdf3507"
+    },
+    {
+      "index": 1,
+      "alpha": 0.08333333333333333,
+      "path": "references/assets/samples/prdamped/02.wav",
+      "sha256": "970f93470fb2035935004a04748ff830790120ca043372a2a6b874aa531f6e79"
+    },
+    {
+      "index": 2,
+      "alpha": 0.16666666666666666,
+      "path": "references/assets/samples/prdamped/03.wav",
+      "sha256": "ffd9a54308932cb13961a8f5e960c494d0625e94c359edf3b5c9841e9a98b873"
+    },
+    {
+      "index": 3,
+      "alpha": 0.25,
+      "path": "references/assets/samples/prdamped/04.wav",
+      "sha256": "e0de90af3ad93030f718835943dd458e6b1aa00afd18a3c259d476abb0ad5735"
+    },
+    {
+      "index": 4,
+      "alpha": 0.3333333333333333,
+      "path": "references/assets/samples/prdamped/05.wav",
+      "sha256": "09eb9334e3eb45180c24556222fd5642dc9df29c79e2fb03fbd875727e7a1afb"
+    },
+    {
+      "index": 5,
+      "alpha": 0.41666666666666663,
+      "path": "references/assets/samples/prdamped/06.wav",
+      "sha256": "915d6c35bf452b481f83702ab8e8b725c78385d22688b8865a27352d62216865"
+    },
+    {
+      "index": 6,
+      "alpha": 0.5,
+      "path": "references/assets/samples/prdamped/07.wav",
+      "sha256": "682332d0c7739b0862c2033c22162ec5545854ff77cd579a7fa358692d36509a"
+    },
+    {
+      "index": 7,
+      "alpha": 0.5833333333333333,
+      "path": "references/assets/samples/prdamped/08.wav",
+      "sha256": "d916bc1ce0d7fc744bb474bab215a24e69c352b682f0542ec4729ce9b220990d"
+    },
+    {
+      "index": 8,
+      "alpha": 0.6666666666666666,
+      "path": "references/assets/samples/prdamped/09.wav",
+      "sha256": "7ad62c144d74bdceb25421927b3ed19177adc129adab6cf87cfb3de2071d8137"
+    },
+    {
+      "index": 9,
+      "alpha": 0.75,
+      "path": "references/assets/samples/prdamped/10.wav",
+      "sha256": "3d15fc003e8d4dd1f3a227d98297eb9d61f0157cbfe215425f6bfca8a7271ada"
+    },
+    {
+      "index": 10,
+      "alpha": 0.8333333333333333,
+      "path": "references/assets/samples/prdamped/11.wav",
+      "sha256": "61723e80a0c4d52a612f7cf066c9e8c39e740f5e3f9b75f131acaa3f531e2110"
+    },
+    {
+      "index": 11,
+      "alpha": 0.9166666666666666,
+      "path": "references/assets/samples/prdamped/12.wav",
+      "sha256": "fa79df569b386813dbb277b95e67c8177a516de906c1074116cf0b43e6e2708d"
+    },
+    {
+      "index": 12,
+      "alpha": 1.0,
+      "path": "references/assets/samples/prdamped/13.wav",
+      "sha256": "0ce06ca21fb71c9fcaf5f565a8bbda8faf285a7b0f633801f171ea8af858ad71"
+    }
+  ]
+}

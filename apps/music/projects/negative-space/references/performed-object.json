@@ -1,0 +1,9 @@
+{
+  "source": "references/assets/samples/nsbloomwarm/01.wav",
+  "source_sha256": "3738626059afd1ac4c8e9236fff17ca28d85cef2bc31227c518750d8ecb0b91b",
+  "origin": "Envelope and spectral articulation of the same original composite dub print",
+  "processing": "18 ms smoothed RMS envelope; 85 ms curved rise and 340 ms fall; correction capped 3.5x; 650 Hz lowpass blend opens then darkens; 3 ms / 20 ms edge fades; peak 0.8",
+  "envelope_peak_seconds": 0.193125,
+  "output": "references/assets/samples/nsbloomrise/01.wav",
+  "sha256": "16280aea3b58048e890cfb619e048d127f33088e8c5249961ea7b99566660ee3"
+}

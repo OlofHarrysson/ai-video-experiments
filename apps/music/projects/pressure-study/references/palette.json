@@ -1,0 +1,138 @@
+{
+  "origin": "Original deterministic procedural synthesis",
+  "seed": 1010136,
+  "sample_rate": 48000,
+  "generator_sha256": "8ec098fde380a0f52f602aeb3932c835fedb652947cbefccf95db0c4c7d33cce",
+  "sounds": [
+    {
+      "name": "prchain",
+      "index": 0,
+      "path": "references/assets/samples/prchain/01.wav",
+      "description": "Original inharmonic resonator strike, amplitude-modulated metal with a short noise attack",
+      "seconds": 0.26,
+      "sha256": "7d04745d669567819ffd1abc78cb1251d5b316a12f91ce257307d94d258af26b"
+    },
+    {
+      "name": "prchain",
+      "index": 1,
+      "path": "references/assets/samples/prchain/02.wav",
+      "description": "Original inharmonic resonator strike, amplitude-modulated metal with a short noise attack",
+      "seconds": 0.26,
+      "sha256": "1a7bac864029abac2102fc32b8219aa8fa71a3b8db08b3d8a30751028b2931d6"
+    },
+    {
+      "name": "prchain",
+      "index": 2,
+      "path": "references/assets/samples/prchain/03.wav",
+      "description": "Original inharmonic resonator strike, amplitude-modulated metal with a short noise attack",
+      "seconds": 0.26,
+      "sha256": "63637a51ba24188c4cb917c46e2b86f1cbb5e4928149ac90e10f22ba86a48e17"
+    },
+    {
+      "name": "prchain",
+      "index": 3,
+      "path": "references/assets/samples/prchain/04.wav",
+      "description": "Original inharmonic resonator strike, amplitude-modulated metal with a short noise attack",
+      "seconds": 0.26,
+      "sha256": "b2cc23648cfade61bb011aff0c57f040d5086f8e143094edf71fb5d50e95b4c2"
+    },
+    {
+      "name": "prair",
+      "index": 0,
+      "path": "references/assets/samples/prair/01.wav",
+      "description": "Original filtered air percussion with four decay lengths",
+      "seconds": 0.14,
+      "sha256": "89d476cac761974cb6f799be90d77fe991da0c08a45968c8cf3292e59e313542"
+    },
+    {
+      "name": "prair",
+      "index": 1,
+      "path": "references/assets/samples/prair/02.wav",
+      "description": "Original filtered air percussion with four decay lengths",
+      "seconds": 0.14,
+      "sha256": "e23c207da141d81fe3574d29b659eb048aaa7e6202432f4df625c4b95be2f37c"
+    },
+    {
+      "name": "prair",
+      "index": 2,
+      "path": "references/assets/samples/prair/03.wav",
+      "description": "Original filtered air percussion with four decay lengths",
+      "seconds": 0.14,
+      "sha256": "181a5f8c77b664f5f3d029d5021fe8719480e95a13fd5f633f60818746b10503"
+    },
+    {
+      "name": "prair",
+      "index": 3,
+      "path": "references/assets/samples/prair/04.wav",
+      "description": "Original filtered air percussion with four decay lengths",
+      "seconds": 0.14,
+      "sha256": "dbeb96d4bcedf2d8b0cc0e3fecf499e294f781eca54d4a55ec956a097e47e217"
+    },
+    {
+      "name": "prknock",
+      "index": 0,
+      "path": "references/assets/samples/prknock/01.wav",
+      "description": "Original hollow, low mechanical knock; FM body with noise transient",
+      "seconds": 0.2,
+      "sha256": "1cb8dba0176f06f50e1c6cadb43636df5ea65832d2739d531e6255f15bc48e03"
+    },
+    {
+      "name": "prknock",
+      "index": 1,
+      "path": "references/assets/samples/prknock/02.wav",
+      "description": "Original hollow, low mechanical knock; FM body with noise transient",
+      "seconds": 0.2,
+      "sha256": "42ba657e0fdde331cca5be4f0891c14a469fc8aa158b520b712fe7f146b50970"
+    },
+    {
+      "name": "prknock",
+      "index": 2,
+      "path": "references/assets/samples/prknock/03.wav",
+      "description": "Original hollow, low mechanical knock; FM body with noise transient",
+      "seconds": 0.2,
+      "sha256": "c4340aefac8ed671c2db26f0d1811c8cc291d1e121b894ad770d0da51a7d5062"
+    },
+    {
+      "name": "prrubber",
+      "index": 0,
+      "path": "references/assets/samples/prrubber/01.wav",
+      "description": "Original F1 FM/waveshaped bass articulation, high-passed to reserve the sub region",
+      "seconds": 0.36,
+      "sha256": "9835a2e887389d9c97a8063761947b7f2f78e86548ac7865c17c4eb414767ffd"
+    },
+    {
+      "name": "prrubber",
+      "index": 1,
+      "path": "references/assets/samples/prrubber/02.wav",
+      "description": "Original F1 FM/waveshaped bass articulation, high-passed to reserve the sub region",
+      "seconds": 0.36,
+      "sha256": "dd7b91b4b074d2713a9d073180eeb9a6bb0027d5ccf8f708690dc102e8c58b82"
+    },
+    {
+      "name": "prrubber",
+      "index": 2,
+      "path": "references/assets/samples/prrubber/03.wav",
+      "description": "Original F1 FM/waveshaped bass articulation, high-passed to reserve the sub region",
+      "seconds": 0.36,
+      "sha256": "7154856275b7b4a42436942e86fe68b9b677724522a727a4cead986c55013da6"
+    },
+    {
+      "name": "prrubber",
+      "index": 3,
+      "path": "references/assets/samples/prrubber/04.wav",
+      "description": "Original F1 FM/waveshaped bass articulation, high-passed to reserve the sub region",
+      "seconds": 0.36,
+      "sha256": "f711e218b80abbd467896781427152841b6b6f5a2098ee981f5f61611daf025d"
+    },
+    {
+      "name": "prscrape",
+      "index": 0,
+      "path": "references/assets/samples/prscrape/01.wav",
+      "description": "Original swelling granular-feeling scrape; three inharmonic resonators plus amplitude-modulated noise",
+      "seconds": 0.82,
+      "sha256": "1ef0dcc87960afe8f06c4d179e8154e5c59ad9d26fbe25bb3b71fd408be5529d"
+    }
+  ],
+  "generator_current_sha256": "0fddb16c07a464e182b2d3b36b122a888e7544c326192dbe187997a65c49a91f",
+  "generator_post_render_changes": "Import ordering and dictionary-literal style only; sample generation expressions unchanged."
+}

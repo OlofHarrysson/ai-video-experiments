@@ -1,0 +1,40 @@
+{
+  "selection": [
+    "Pressure Lock v011",
+    "Negative Space v011"
+  ],
+  "scope": "Direct sample-array, format and hash checks of selected-v001. No subjective listening judgment.",
+  "files": [
+    {
+      "file": "pressure-lock.wav",
+      "source_hash_matches": true,
+      "output_hash_matches": true,
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "source_shape_preserved": true,
+      "gain_db": -2.7299999999999986,
+      "max_gain_reconstruction_error": 2.9801336953738655e-08,
+      "full_scale_contacts": 0,
+      "encoding": "FLOAT"
+    },
+    {
+      "file": "negative-space.wav",
+      "source_hash_matches": true,
+      "output_hash_matches": true,
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "source_shape_preserved": true,
+      "gain_db": 0.0,
+      "max_gain_reconstruction_error": 0.0,
+      "full_scale_contacts": 0,
+      "encoding": "FLOAT"
+    }
+  ],
+  "documentation_findings": [
+    "Selection-state wording remained provisional at audit time; parent notified to update while preserving human taste pending.",
+    "Pressure opening no borrowed recording overbroad because retained909 samples are used; parent notified.",
+    "Negative Space sparse middle retains some low pulse/pickup events; thin out is more precise than implying complete withdrawal."
+  ]
+}

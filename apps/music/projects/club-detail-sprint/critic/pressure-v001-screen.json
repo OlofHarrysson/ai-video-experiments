@@ -1,0 +1,11 @@
+{
+  "frames": 1440000,
+  "seconds": 30.0,
+  "positive_rails": 0,
+  "negative_rails": 0,
+  "ending_last100ms_peak_dbfs": -90.30899869919436,
+  "last_sample_pcm16": [
+    0,
+    0
+  ]
+}

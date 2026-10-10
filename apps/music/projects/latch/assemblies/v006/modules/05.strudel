@@ -1,0 +1,2 @@
+inhale: s("~ ~ ~ lasuck").gain(.065).hpf(600).pan(.53).mask("<0!7 1 0!5 1 0!4>").orbit(10).postgain(.80)
+ending: s("<~!14 [~ ~ lashuckroom ~ laburrroom ~ ~ ~] [lashuckroom ~ ~ ~ ~ ~ ~ ~] ~!2>").gain(.21).hpf(380).lpf(1400).pan(.45).delay(.46).delaytime(.227273).delayfeedback(.38).room(.26).orbit(11).postgain(.80)

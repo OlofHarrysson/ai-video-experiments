@@ -1,0 +1,9 @@
+{
+  "origin": "Original deterministic mathematical synthesis",
+  "seed": 2026101004,
+  "notes": "F3 Ab3 C4 Eb4, two detuned partial sets per note",
+  "envelope": "11ms softened attack,240ms decay,1.3sec preserved tail",
+  "colour": "Crossfade2200Hz to550Hz lowpass voices over150ms;260Hz highpass",
+  "output": "references/assets/samples/nscloud/01.wav",
+  "sha256": "946ef69772a5fe23a9d8391f80d35b1173e676d80e6118546684aa307e580f80"
+}
