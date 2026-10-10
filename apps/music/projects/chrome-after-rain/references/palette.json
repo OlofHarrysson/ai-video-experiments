@@ -1,0 +1,63 @@
+{
+  "origin": "Original deterministic procedural synthesis",
+  "sample_rate": 48000,
+  "seed": 241010,
+  "bpm": 136,
+  "generator_sha256": "2722d33b15bff634384e3fb0d37bf5f0fcd3c25262ec1f4e88c6fbd1e39caacf",
+  "sounds": [
+    {
+      "sound": "crkick",
+      "file": "references/assets/samples/crkick/01.wav",
+      "seconds": 0.38,
+      "sha256": "a8e95a6b7805f850dec489eec5fae3ed3193136dcdd9e522da9096e82a45182e"
+    },
+    {
+      "sound": "crclap",
+      "file": "references/assets/samples/crclap/01.wav",
+      "seconds": 0.23,
+      "sha256": "9a1b1d32fda5a6c76618f9e086b3d6ee496fb08209e7f58e6c443560dba950b8"
+    },
+    {
+      "sound": "crrim",
+      "file": "references/assets/samples/crrim/01.wav",
+      "seconds": 0.095,
+      "sha256": "25b160e41723012df2cd6c17101e3b5c448dc32d63e13819fc5824c7cd8820ac"
+    },
+    {
+      "sound": "crhat",
+      "file": "references/assets/samples/crhat/01.wav",
+      "seconds": 0.14,
+      "sha256": "9099e5d3244d987493139d73d1da407d9ca1784fee681c7276ef650ddad836cd"
+    },
+    {
+      "sound": "crshaker",
+      "file": "references/assets/samples/crshaker/01.wav",
+      "seconds": 0.11,
+      "sha256": "0f6c9905fb841507e75cb071973d33c9da755ef4b150072a35eae27c6f5f96b7"
+    },
+    {
+      "sound": "crwood",
+      "file": "references/assets/samples/crwood/01.wav",
+      "seconds": 0.34,
+      "sha256": "e25a4a8aa12233da6030aa079811af77ae1a1cb62c8992d5a5c7e9bd0c3bc2ae"
+    },
+    {
+      "sound": "crlanding",
+      "file": "references/assets/samples/crlanding/01.wav",
+      "seconds": 1.7647083333333333,
+      "sha256": "bcddf1d7c085e657d00a24083d1e80ea3b58a90183694d1863194fcff230f411"
+    },
+    {
+      "sound": "crreverse",
+      "file": "references/assets/samples/crreverse/01.wav",
+      "seconds": 1.7647083333333333,
+      "sha256": "ef8576c2568056de2a6c78578c41422c7324a878f9a65b52ab143d7d283bf684"
+    },
+    {
+      "sound": "crrise",
+      "file": "references/assets/samples/crrise/01.wav",
+      "seconds": 3.5294166666666666,
+      "sha256": "a9eac147e4e275bfe9d9ce9d398896e9b8d1effe472e86251b81d6e3ead8945a"
+    }
+  ]
+}

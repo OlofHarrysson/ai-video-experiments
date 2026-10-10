@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-10",
+  "selected_revision": "v004",
+  "source_sha256": "75eff17700c9fd3a7e7fecedafced6b92362f5b613c9904234049e2931d32e05",
+  "render_status": "complete",
+  "renders": {
+    "master": {
+      "sha256": "ca38da18f1b5dc9ccbddd0de8677f5b87b7887f2d67d3eaf67f7231524d57da0",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -6.726009091971385,
+      "integrated_lufs": -22.49,
+      "samples_at_or_above_full_scale": 0
+    },
+    "drums": {
+      "sha256": "5cd6422cac5679220bd24f7bd219ea6dfb78411113920b8f13717cf11f891ae1",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -10.052254205090914,
+      "integrated_lufs": -23.89,
+      "samples_at_or_above_full_scale": 0
+    },
+    "bass": {
+      "sha256": "a893fa18872cf3106e1bc4cbc90d8bb30fc5cb80aa076da0f085837a2b0dd0d4",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -18.99912610181711,
+      "integrated_lufs": -30.76,
+      "samples_at_or_above_full_scale": 0
+    },
+    "harmony": {
+      "sha256": "0eca62a1d1500eb0b66e909783433da173034a0706c38a940700cc4b20c41032",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -13.734512156418532,
+      "integrated_lufs": -35.65,
+      "samples_at_or_above_full_scale": 0
+    },
+    "hook": {
+      "sha256": "f46868bd40c0bd7645b06e7b736418598f756c1be39d1cf89bdccc2dbb196eeb",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -16.198566430741014,
+      "integrated_lufs": -28.11,
+      "samples_at_or_above_full_scale": 0
+    },
+    "transitions": {
+      "sha256": "4063d4f2fb06d0a23ebd22bf0086ffdb74abecfdfb208bced84ef7e4f7cfd26d",
+      "seconds": 116.47058333333334,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -20.484567174408696,
+      "integrated_lufs": -37.0,
+      "samples_at_or_above_full_scale": 0
+    }
+  },
+  "listening_copy": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/chrome-after-rain/renders/v004/chrome-after-rain.wav",
+    "sha256": "029f0e2d2264f600ade1b93dc5128af0c598aa4f2811fea35d48c270c53fbe4d",
+    "seconds": 116.47058333333334,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -1.2260093368123621,
+    "rms_dbfs": -18.423681183196926,
+    "samples_at_or_above_full_scale": 0,
+    "bpm_supplied": null,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -16.99,
+    "true_peak_dbtp": -1.17,
+    "loudness_range_lu": 10.7,
+    "lr_correlation": 0.9660051081613326,
+    "mono_rms_dbfs": -18.498164566923197
+  },
+  "audio_reviews": [
+    {
+      "receipt": "work/chrome-sketch-review/request.json",
+      "source_sha256": "7bdb6303585d91ca3e683f0c3bb047368aae0583012240674d0708f12f8f0eda",
+      "seconds": 36.29408333333333,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.028234
+    },
+    {
+      "receipt": "work/chrome-sketch-review-02/request.json",
+      "source_sha256": "3da9cae6fa8f256cbc4848e823d096c4e73a1ddbf764eb4593fdc533b5e1f8db",
+      "seconds": 36.29408333333333,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.034858
+    },
+    {
+      "receipt": "work/chrome-v003-first-review/request.json",
+      "source_sha256": "e1327c5bcc464c4e586681ca616fb0e87ef4928b292a3f6a8978aa770050c282",
+      "seconds": 55.0,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.022772
+    },
+    {
+      "receipt": "work/chrome-v003-second-review/request.json",
+      "source_sha256": "65162fedd58984d6f5552ec79f8993cc6be3d9ba66d7818ae9d7ed267f90c8a5",
+      "seconds": 56.0,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.022558
+    },
+    {
+      "receipt": "work/chrome-v004-arc-review/request.json",
+      "source_sha256": "9a8577c4833dd11fce624c2ce090301ae038b63429f1947efa7a0f7a9f3f95a2",
+      "seconds": 56.47058333333333,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.021696
+    }
+  ],
+  "reported_cost_usd": 0.130118,
+  "human_listening_verdict": "Pending for this composition. Earlier workflow study rejected as tutorial-like; speech sample rejected.",
+  "review_limitations": [
+    "No parent or subagent independently heard local playback.",
+    "Initial model review misidentified syncopated drums as four-on-the-floor and existing effects as absent.",
+    "Final model review described absent drums where measured halftime drum RMS was -24.44 dBFS, comparable to -24.40 during the preceding return. Its momentum criticism remains an unvalidated musical opinion."
+  ],
+  "checks": [
+    "19 Python tests passed",
+    "Ruff passed",
+    "All 16 literal arrangement masks span 66 cycles; reused masks have same duration",
+    "Master and five stems aligned, no samples at full scale",
+    "Final playback copy has +5.5 dB gain only, -1.17 dBTP and -16.99 LUFS"
+  ]
+}

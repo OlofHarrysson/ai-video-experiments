@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "title": "Chrome After Rain",
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "First full arrangement, before kick/lead balance correction."
+    },
+    "v002": {
+      "source": "source/v002.strudel",
+      "notes": "Lower kick, clearer lower-register hook and chords."
+    },
+    "v003": {
+      "source": "source/v003.strudel",
+      "notes": "Held opening note, contour and answer; altered resolution in returning phrase."
+    },
+    "v004": {
+      "source": "source/v004.strudel",
+      "notes": "Selected: complete hook phrases alternate with reply space; brighter returning timbre, held anchors and changed resolution. No stock speech."
+    }
+  },
+  "end_cycle": 66,
+  "sample_rate": 48000,
+  "samples": [
+    "references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hats",
+      "rim",
+      "shaker",
+      "ghost",
+      "turn",
+      "halfdrums"
+    ],
+    "bass": [
+      "sub",
+      "halfbass"
+    ],
+    "harmony": [
+      "stab",
+      "pad"
+    ],
+    "hook": [
+      "hook",
+      "hookreply",
+      "memory",
+      "answer"
+    ],
+    "transitions": [
+      "reverse",
+      "landing",
+      "rise"
+    ]
+  },
+  "sections": {
+    "opening": [
+      0,
+      4
+    ],
+    "first-groove": [
+      4,
+      20
+    ],
+    "suspension": [
+      20,
+      28
+    ],
+    "return": [
+      28,
+      44
+    ],
+    "half-time": [
+      44,
+      52
+    ],
+    "final-return": [
+      52,
+      60
+    ],
+    "ending": [
+      60,
+      64
+    ]
+  }
+}

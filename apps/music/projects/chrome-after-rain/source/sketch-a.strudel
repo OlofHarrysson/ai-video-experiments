@@ -1,0 +1,11 @@
+// Chrome After Rain — hook candidate A, eight bars and two tail bars.
+setcpm(136/4)
+const active = "<1!8 0!2>"
+kick: s("<[crkick ~ ~ ~ ~ ~ crkick ~ ~ ~ crkick ~ ~ ~ ~ ~] [crkick ~ ~ ~ ~ ~ ~ crkick ~ ~ crkick ~ ~ ~ ~ crkick]>").gain(.67).orbit(1).mask(active)
+clap: s("~ crclap ~ crclap").gain(.32).hpf(170).orbit(1).mask(active)
+hats: s("crhat*16").gain(".06 .022 .13 .04 .055 .025 .11 .028").swingBy(.09,8).pan(".4 .6").orbit(1).mask(active)
+rim: s("<[~ ~ ~ crrim ~ ~ ~ ~ ~ crrim ~ ~ ~ ~ crrim ~] [~ ~ crrim ~ ~ ~ ~ ~ ~ ~ ~ crrim ~ ~ ~ ~]>").gain(.11).swingBy(.16,8).pan(.68).room(.07).orbit(5).mask(active)
+sub: note("<[~ ~ f#1 ~ ~ ~ ~ ~ f#2 ~ ~ e2 ~ ~ c#2 ~] [~ ~ f#1 ~ ~ ~ a1 ~ ~ ~ ~ e2 ~ c#2 ~ ~]>").s("sine").fm(.8).fmh(1).fmdecay(.1).fmsustain(.06).lpf(230).attack(.004).decay(.18).sustain(.25).release(.07).gain(.35).orbit(2).mask(active)
+stab: note("<[a3,c#4,e4,g#4] [a3,c#4,e4,g#4] [a3,c#4,e4,f#4] [g#3,b3,d4,f#4]>").struct("~ ~ x ~ ~ x ~ ~").s("supersaw").unison(3).detune(.12).spread(.8).lpf(850).lpenv(2.5).lpattack(.004).lpdecay(.20).lpsustain(.08).attack(.005).decay(.19).sustain(.04).release(.19).gain(.06).hpf(250).pan(.4).room(.18).roomsize(3).orbit(3).mask(active)
+hook: note("<[f#5 ~ ~ a5 ~ ~ e5 ~ ~ ~ c#5 ~ ~ e5 ~ ~] [f#5 ~ ~ c#5 ~ ~ e5 ~ ~ g#5 ~ e5 ~ ~ c#5 ~]>").s("sine").fm(2.3).fmh(2.001).fmdecay(.085).fmsustain(.05).attack(.004).decay(.24).sustain(0).release(.15).gain(.16).pan(".42 .58").delay(.24).delaytime(.330882).delayfeedback(.28).room(.16).orbit(4).mask(active)
+answer: note("<~ [~ ~ a4 g#4] ~ [~ ~ e4 c#4]>").s("sawtooth").vowel("<a e>").lpf(2100).attack(.04).decay(.13).sustain(.05).release(.18).gain(.045).pan(.72).room(.25).orbit(6).mask(active)

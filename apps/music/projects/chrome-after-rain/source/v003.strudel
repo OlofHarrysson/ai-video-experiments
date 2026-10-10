@@ -1,0 +1,31 @@
+// Chrome After Rain v003 — 136 BPM, 64 composed bars plus 2 tail bars.
+// F# minor: metallic call/answer, shuffled garage, suspended memory, half-time switch.
+setcpm(136/4)
+const groove = "<0!4 1!16 0!8 1!16 0!8 1!8 0!6>"
+const half = "<0!44 1!8 0!14>"
+const motif = "<[f#5@3 ~ c#5 ~ e5@2 ~@2 f#5@2 ~ e5 ~@2] [f#5@3 ~ a5@2 g#5@2 ~@2 e5@2 c#5@2 ~@2]>"
+const variation = "<[f#5@3 ~ c#5 ~ e5@2 ~@2 f#5@2 ~ e5 ~@2] [a5@3 ~ g#5@2 e5@2 ~@2 c#5@2 f#5@2 ~@2]>"
+
+kick: s("<[crkick ~ ~ ~ ~ ~ crkick ~ ~ ~ crkick ~ ~ ~ ~ ~] [crkick ~ ~ ~ ~ ~ ~ crkick ~ ~ crkick ~ ~ ~ ~ crkick]>").gain(.22).orbit(1).mask(groove)
+clap: s("~ crclap ~ crclap").gain(.30).hpf(170).orbit(1).mask(groove)
+hats: s("crhat*16").gain(".055 .018 .11 .035 .05 .02 .09 .023").swingBy(.09,8).pan(".32 .68").orbit(1).mask("<0!2 1!18 0!6 1!18 0!8 1!10 0!4>")
+rim: s("<[~ ~ ~ crrim ~ ~ ~ ~ ~ crrim ~ ~ ~ ~ crrim ~] [~ ~ crrim ~ ~ ~ ~ ~ ~ ~ ~ crrim ~ ~ ~ ~]>").gain(.12).swingBy(.16,8).pan(.73).room(.08).orbit(5).mask("<1!20 0!8 1!36 0!2>")
+shaker: s("~ crshaker ~ crshaker crshaker ~ crshaker ~").gain(".10 .055 .08 .045").pan(.23).orbit(1).mask("<0!12 1!8 0!8 1!16 0!8 1!8 0!6>")
+ghost: s("~ ~ ~ ~ ~ ~ ~ crclap ~ ~ ~ crclap ~ ~ ~ ~").speed(1.3).gain(.055).hpf(800).swingBy(.19,8).pan(.6).orbit(1).mask("<0!8 1!12 0!8 1!16 0!8 1!8 0!6>")
+turn: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ crwood ~ crwood ~ [crrim crrim] ~").speed("1 1.3 .85 1.1").gain(.14).pan(".28 .72").orbit(5).mask("<0!11 1 0!7 1 0!15 1 0!7 1 0!7 1 0!7 1 0!6>")
+halfdrums: stack(s("crkick ~ ~ ~ ~ ~ ~ crkick ~ ~ ~ ~ ~ ~ crkick ~").gain(.24),s("~ ~ crclap ~").gain(.34)).orbit(1).mask(half)
+
+sub: note("<[~ ~ f#1 ~ ~ ~ ~ ~ f#2 ~ ~ e2 ~ ~ c#2 ~] [~ ~ f#1 ~ ~ ~ a1 ~ ~ ~ ~ e2 ~ c#2 ~ ~]>").s("sine").fm(.8).fmh(1).fmdecay(.1).fmsustain(.06).lpf(230).attack(.004).decay(.18).sustain(.25).release(.07).gain(.31).orbit(2).mask(groove)
+halfbass: note("<f#1 ~ a1 e2>").struct("~ x ~ x").s("sine").fm(1.7).fmh(1).fmdecay(.25).fmsustain(.18).lpf(330).attack(.006).decay(.32).sustain(.35).release(.12).gain(.28).orbit(2).mask(half)
+
+stab: note("<[a3,c#4,e4,g#4] [a3,c#4,e4,g#4] [a3,c#4,e4,f#4] [g#3,b3,d4,f#4]>").struct("~ ~ x ~ ~ x ~ ~").s("supersaw").unison(3).detune(.12).spread(.8).lpf("<850!12 1300!8 500!8 1600!16 650!8 1900!8 600!6>").lpenv(2.5).lpattack(.004).lpdecay(.20).lpsustain(.08).attack(.005).decay(.19).sustain(.04).release(.19).gain(.13).hpf(250).pan(.32).room(.22).roomsize(3).orbit(3).mask("<0!4 1!16 0!8 1!16 0!8 1!8 0!6>")
+pad: note("<[a3,c#4,e4,g#4]!4 [a3,c#4,e4,f#4]!4 [g#3,b3,d4,f#4]!4 [g#3,b3,d4,f#4]!4>").s("supersaw").unison(3).detune(.2).spread(.9).lpf(1700).hpf(400).attack(.7).decay(.6).sustain(.5).release(1.2).gain(.04).pan(.68).room(.5).roomsize(6).orbit(7).mask("<1!4 0!16 1!7 0!1 1!8 0!8 1!8 1!8 0!6>")
+
+hook: note(motif).transpose(-12).s("sine").fm(1.7).fmh(2.001).fmdecay(.085).fmsustain(.05).attack(.004).decay(".24 .16 .28 .20").sustain(.25).release(.15).lpf("<1800!4 6500!62>").gain(".48 .38 .44 .40").pan(".37 .63").delay(.24).delaytime(.330882).delayfeedback(.28).room(.16).orbit(4).mask("<1!12 0!16 1!8 0!16 1!4 0!10>")
+hookreply: note(variation).transpose(-12).s("sine").fm(2.1).fmh(2.001).fmdecay(.07).fmsustain(.05).attack(.004).decay(.22).sustain(.25).release(.13).gain(".48 .38 .44 .40").pan(".63 .37").delay(.22).delaytime(.330882).delayfeedback(.28).room(.16).orbit(4).mask("<0!12 1!8 0!16 1!8 0!12 1!4 0!6>")
+memory: note("<[f#4 ~ ~ a4 ~ ~ e4 ~] [~ ~ c#4 ~ ~ e4 ~ ~]>").slow(2).s("sine").fm(1.8).fmh(2.001).fmdecay(.25).fmsustain(.12).attack(.12).decay(.5).sustain(.05).release(.55).gain(.28).pan(".22 .78").delay(.35).delaytime(.661765).delayfeedback(.42).room(.5).roomsize(5).orbit(8).mask("<0!20 1!7 0!17 1!8 0!8 1!4 0!2>")
+answer: note("<~ [~ ~ a4 g#4] ~ [~ ~ e4 c#4]>").s("sawtooth").vowel("<a e>").lpf(2100).attack(.04).decay(.13).sustain(.05).release(.18).gain(.07).pan(.76).room(.25).orbit(6).mask("<0!8 1!12 0!8 1!16 0!8 1!8 0!6>")
+
+reverse: s("crreverse").gain(.13).pan(.4).orbit(9).mask("<0!3 1 0!15 1 0!7 1 0!15 1 0!7 1 0!7 1 0!6>")
+landing: s("crlanding").gain(.12).pan(.6).room(.3).orbit(9).mask("<0!4 1 0!15 1 0!7 1 0!23 1 0!7 1 0!5>")
+rise: s("crrise").gain(.11).hpf(2500).orbit(9).mask("<0!26 1 0!23 1 0!15>")

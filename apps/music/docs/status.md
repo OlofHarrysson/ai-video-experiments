@@ -1,12 +1,15 @@
-# Music tooling — handoff
+# Music workbench — handoff
 
 Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical.
 
 ## Current goal
 
-Improve and dogfood the music tooling. Simple compositions are authorized as test fixtures; producing an impressive first song is not the goal. Olof manages the OpenRouter balance: no assistant-imposed dollar budget, price ceiling or attempt cap. Keep actual usage records.
+Produce an original piece with a stronger musical identity, informed by professional references. Olof found the workflow study tutorial-like and its stock speech sample lame, and requested collaborating agents. [Chrome After Rain](../projects/chrome-after-rain/README.md) owns this composition sprint. Keep using and improving the tooling through actual production. Olof manages the OpenRouter balance: no assistant-imposed dollar budget, price ceiling or attempt cap. Keep actual usage records.
 
 ## Completed and checked
+
+- **Original composition exported: [Chrome After Rain](../projects/chrome-after-rain/README.md), v004.** Professional interview research and three collaborating agents informed a 136 BPM, 1:56 instrumental with nine original synthesized samples, a two-bar hook, suspended breakdown and half-time switch. Master and five named stems completed; the playback copy is `projects/chrome-after-rain/renders/v004/chrome-after-rain.wav` (−16.99 LUFS, −1.17 dBTP, no clipping). Source, recipe, palette generator and [evidence](../projects/chrome-after-rain/evidence.json) are tracked; media remains local/ignored.
+- Four short hook/mix sketches, an initial full-length draft and two master/stem arrangement renders are preserved. Five new audio-model reviews completed, reporting $0.130118. Reviews informed mix balance and phrase spacing but included incorrect rhythm/part descriptions; no human verdict exists for this piece yet. All 19 Python tests and Ruff passed; renderer code is unchanged. Panning was verified by hard-left/right controls. `duckorbit` failed in a scratch test with an uncreated target orbit, so this composition uses interlocking kick/bass timing.
 
 - **Project workflow dogfood completed.** A saved recipe now renders and inspects the master plus named stems from one source. Master-derived section previews retain preceding effects exactly; labelled A/B copies use the existing loudness matcher. [Study and commands](../projects/workflow-dogfood/README.md), [evidence](../projects/workflow-dogfood/evidence.json).
 - Three 68-second arrangements (baseline, delayed drum/bass return, quieter hats) produced 12 successful renders with aligned frames/rates. No master clipping. Two section previews match master samples exactly; two A/B pairs were verified within 0.01 LUFS. The isolated hats interval fell 5.53 dB, consistent with the intended gain change.
@@ -30,12 +33,12 @@ Improve and dogfood the music tooling. Simple compositions are authorized as tes
 
 Read the [validation study](../projects/tooling-validation/README.md), [machine-readable evidence](../projects/tooling-validation/evidence.json) and [listening protocol](listening.md). Raw audio and provider receipts remain local/ignored.
 
-Latest: [saved-project workflow study](../projects/workflow-dogfood/README.md). The previous [programmatic renderer validation](renderer-validation.md) records the engine scheduling fix and parity evidence. The earlier [practical beat study](../projects/practical-dogfood/README.md) covers browser sampling and listening. Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
+Latest: [Chrome After Rain](../projects/chrome-after-rain/README.md). The [saved-project workflow study](../projects/workflow-dogfood/README.md) records the previous tooling sprint. The [programmatic renderer validation](renderer-validation.md) records the engine scheduling fix and parity evidence. The earlier [practical beat study](../projects/practical-dogfood/README.md) covers browser sampling and listening. Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
 
-## Next tooling work
+## Next work
 
-1. Listen to the prepared arrangement and hi-hat A/B pairs. The objective changes are verified; no preference has been recorded. The workflow is ready for a song brief when Olof wants one.
+1. Review the new composition against Olof's requested artistic improvement. The previous arrangement and hi-hat A/B pairs remain tooling evidence; they are not the creative target.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 
-A song brief and a polished composition remain deferred. Do not resume paused video studies.
+Do not resume paused video studies.
