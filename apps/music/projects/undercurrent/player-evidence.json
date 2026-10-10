@@ -1,0 +1,17 @@
+{
+  "v002": {
+    "sum_lufs": -17.61,
+    "sum_peak": 0.638885498046875,
+    "residual_rms_dbfs": -53.289785460764364
+  },
+  "smoke": {
+    "sum_lufs": -17.59,
+    "sum_peak": 0.690887451171875,
+    "residual_rms_dbfs": -52.33878438600746
+  },
+  "wire": {
+    "sum_lufs": -17.61,
+    "sum_peak": 0.688934326171875,
+    "residual_rms_dbfs": -53.788826172652726
+  }
+}

@@ -1,5 +1,7 @@
 # Undercurrent
 
+**[Open the sound player](http://localhost:3046/)** to mute/solo eight parts and save feedback. [Player runbook](../../player/README.md). Olof says Current and Smoke are similar but wants to identify a disliked instrument before changing the song again.
+
 **Current comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
 
 [Play v002](renders/v002/master/render.wav) — 30 seconds, 128 BPM, 48 kHz stereo. A new study responding to Olof's preference for Negative Space and request for a stable foundation with related detail and development.

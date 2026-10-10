@@ -10,7 +10,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test renderer/*.test.mjs",
-    "postinstall": "node renderer/apply-patch.mjs"
+    "postinstall": "node renderer/apply-patch.mjs",
+    "test:player": "node --test player/*.test.mjs"
   },
   "engines": {
     "node": ">=20"

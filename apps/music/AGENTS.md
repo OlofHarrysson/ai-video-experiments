@@ -5,6 +5,7 @@ Make original, editable music with Strudel and review rendered audio before choo
 ## Start here
 
 - [README.md](README.md): setup, commands, file ownership and render workflow.
+- [player/README.md](player/README.md): local mute/solo player, runtime ownership and saved feedback.
 - [docs/status.md](docs/status.md): validation evidence, remaining work and next-chat handoff.
 - [docs/music-foundations.md](docs/music-foundations.md): practical composition and sound-design references.
 - [references/strudel/README.md](references/strudel/README.md): Strudel operating guide, export procedure and DJ_Dave study; local official documentation corpus alongside it.
