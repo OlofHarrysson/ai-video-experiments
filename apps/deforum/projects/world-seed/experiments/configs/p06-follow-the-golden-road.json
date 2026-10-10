@@ -1,0 +1,178 @@
+{
+  "case": "p06-follow-the-golden-road",
+  "seed": 1017100,
+  "duration": 38,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "jungle",
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal oil painting, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, convincing luminous paint and tactile organic material. Visually precise and extravagant, not a photograph, no people, no text, no grids or panels. Landscape composition 3:2."
+    },
+    {
+      "at": 0.5,
+      "name": "follow-the-bridge",
+      "prompt": "We travel along a single curving braided root bridge toward the same immense saffron flower doorway. The oval dark entrance remains open, in the center-right. Lush alien jungle drops away into a violet abyss on both sides. Ferns and black orchids slip past the edges. Delicate veins in the translucent orange petals, finely detailed roots and moss. Strong layered depth, coherent clear passage ahead. Lavish surreal oil painting, jade greens, coral flowers, indigo shadows, honey light. No people, no text, no extra doorways."
+    },
+    {
+      "at": 8,
+      "name": "flower-becomes-monumental",
+      "prompt": "The immense saffron flower doorway towers over the approach. One root bridge leads directly into its open dark oval interior, centered in the image. The glowing petal edges reveal intricate veins like golden tracery. Through the passage a faint distant golden light begins to show. Jungle and tiny jewel flowers remain at the outer edges, deep violet abyss below. Richly detailed surreal painted world, organic material, jade, coral and amber. Clear passage, no solid object blocking the oval, no people, no text."
+    },
+    {
+      "at": 13.5,
+      "name": "approach-the-living-threshold",
+      "prompt": "A monumental saffron and coral flower surrounds a single open dark oval doorway. We fly along the narrow root stair into that clear opening. Its finely ribbed edges and exquisitely veined petals expand toward the image edges. Tiny gold lamps glow in the rim. Within the central opening a deeply receding black and gold passage is visible, empty and unobstructed. The dark opening remains an entrance, not a closed door. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    },
+    {
+      "at": 19,
+      "name": "enter-the-petal-arch",
+      "prompt": "Crossing beneath the rim of an immense flowering gateway. Close translucent amber petals and finely carved ribbed roots surround the outer edges of the image, moving past. Ahead an open cavernous passage has ornate black arches with gold tracery and tiny warm lights. A broad clear dark route leads into a distant golden glow. The entrance is expanding beyond the image, no new closed door. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    },
+    {
+      "at": 23.5,
+      "name": "turn-toward-the-light",
+      "prompt": "We travel forward and to the right through a black and gold arched passage. The near carved black ribs sweep past on the left, revealing a broad bright opening on the right into a vast lost city. The path curves right toward that light. Through the widening opening, innumerable black towers and gold bridges are visible. No wall or door blocks the route. Fantastically intricate engraved architecture, black lacquer and metallic gold filigree, microscopic carvings, hundreds of tiny balconies, tactile sculpted relief, luminous gold and bone white light, rich shadow depth. No people, no text, no foliage."
+    },
+    {
+      "at": 28,
+      "name": "beyond-the-ribs",
+      "prompt": "Emerging from a dark ornate arch into an immense ancient black and gold city. The last black carved column passes along the left edge. The entire center and right of the image open onto tall intricately carved towers, floating gold aqueducts and a curving engraved avenue. A vast bright atmosphere between the towers, golden rivers flow upward. Broad unobstructed passage and immense depth. Fantastically intricate engraved architecture, black lacquer and metallic gold filigree, microscopic carvings, hundreds of tiny balconies, tactile sculpted relief, luminous gold and bone white light, rich shadow depth. No people, no text, no foliage."
+    },
+    {
+      "at": 31.5,
+      "name": "pass-between-the-ribs",
+      "prompt": "We continue forward between the two immense black and gold ribs already beside us. Their near carved faces pass beyond the left and right image edges. Follow the existing curved golden avenue through the clear vertical gap into a luminous open city. Distant slender black towers stand above pale mist. The avenue curves around the nearest tower, revealing more sky and far bridges as we travel. Keep the passage open. Finely carved black basalt, delicate gilded galleries, engraved brass rails, immense depth and fantastic scale, surreal architectural painting. No people, no text, no new door."
+    },
+    {
+      "at": 35.5,
+      "name": "along-the-curve",
+      "prompt": "Floating above the same curved gold avenue through a vast impossible city. Near black pillars slip past the outer edges. The visible road guides the eye around a tall slender tower, revealing layered bridges, far spires and pale white atmosphere through broad open spaces. Clear continuation of the existing architecture and route. Finely carved black basalt, miniature sculpted galleries and filigree engraved brass, radiant gold against charcoal shadows and pearl mist, elaborate surreal architectural painting. No people, no text, no door."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 31,
+      "noise": 0.73
+    },
+    {
+      "at": 37.5,
+      "noise": 0.71
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 31,
+      "duration": 6.5,
+      "center": [
+        0.9,
+        0.55
+      ],
+      "end": [
+        -0.17,
+        -0.015,
+        0.83,
+        -0.04
+      ],
+      "velocity_start": [
+        -0.024827742592716227,
+        0.0028580893282662556,
+        0.12999082541341034,
+        -0.008000926327600334
+      ],
+      "velocity_end": [
+        -0.013,
+        0,
+        0.125,
+        -0.004
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828,
+    840,
+    852,
+    864,
+    876,
+    888,
+    900
+  ],
+  "prefix_root": "projects/world-seed/exports/v001/p05-carry-through-the-arch",
+  "prefix_through": 744,
+  "motion_note": {
+    "source_frame": 744,
+    "incoming_fit_residual": 9.431214535468003e-14,
+    "target": "Actual vertical gap at [.90,.55], about .2 image heights wide; gold road curves beyond the ribs. Keep entering while the near walls pass out, carry log zoom .13 to .125 with no low-speed reset. Inspect816 and900."
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "case": "p01-the-root-bridge",
+    "start": 0.0,
+    "end": 2.888888888888889,
+    "minimum_log_zoom_per_delivery_second": 0.24383279497160906,
+    "peak_log_zoom_per_delivery_second": 0.2925
+  },
+  {
+    "case": "p02-through-the-flower",
+    "start": 2.888888888888889,
+    "end": 7.666666666666667,
+    "minimum_log_zoom_per_delivery_second": 0.18,
+    "peak_log_zoom_per_delivery_second": 0.5046278358879739
+  },
+  {
+    "case": "p03-the-golden-exit",
+    "start": 5.111111111111111,
+    "end": 7.666666666666667,
+    "minimum_log_zoom_per_delivery_second": 0.15750000000000003,
+    "peak_log_zoom_per_delivery_second": 0.7368324161556472
+  },
+  {
+    "case": "p04-into-the-open-city",
+    "start": 7.666666666666667,
+    "end": 9.88888888888889,
+    "minimum_log_zoom_per_delivery_second": 0.15750000000000003,
+    "peak_log_zoom_per_delivery_second": 0.6627933913534536
+  },
+  {
+    "case": "p05-carry-through-the-arch",
+    "start": 5.111111111111111,
+    "end": 6.888888888888889,
+    "minimum_log_zoom_per_delivery_second": 0.5042531632206931,
+    "peak_log_zoom_per_delivery_second": 0.585
+  },
+  {
+    "case": "p06-follow-the-golden-road",
+    "start": 6.888888888888889,
+    "end": 8.333333333333334,
+    "minimum_log_zoom_per_delivery_second": 0.5625,
+    "peak_log_zoom_per_delivery_second": 0.5849587143603465
+  },
+  {
+    "case": "p07-out-above-the-city",
+    "start": 8.333333333333334,
+    "end": 9.88888888888889,
+    "minimum_log_zoom_per_delivery_second": 0.5624670174364221,
+    "peak_log_zoom_per_delivery_second": 0.5625
+  }
+]
