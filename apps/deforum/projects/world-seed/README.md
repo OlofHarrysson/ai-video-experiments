@@ -23,7 +23,7 @@ Krea Turbo, CFG 1, three Euler repaint intervals, recorded noise and seed schedu
 
 The [motion study](../../../../docs/research/motion-design-foundations.md) informed attention, overlapping movements and varied paths. Each new passage was composed from its actual starting painting, previewed without diffusion, then generated and inspected in short sections. The literal mechanical iris in the initial storyboard became an unfurling road; the ending follows the fern-filled chamber that emerged. [Recorded decisions and limitations](experiments/choreography.md) · [Execution and preservation](experiments/execution-summary-v004.json).
 
-Fine details and small structures continue to repaint. The plane turn is a flat-image transform, not true depth parallax. Assistant frame screening and technical validation do not establish Olof's playback preference; that judgment remains pending.
+Fine details and small structures continue to repaint. The plane turn is a flat-image transform, not true depth parallax. Olof finds this film much better, with beautiful middle/end imagery and interesting movement. The jungle and dark doorway need crisper, richer detail; retain the liked second-world style and bridge/cloud setting. [Opening diagnosis and next comparison](experiments/choreography.md#human-review-and-opening-diagnosis--2026-10-10).
 
 ## Preserved versions
 

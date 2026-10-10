@@ -464,6 +464,8 @@ Olof calls the cut-free opening much better, then rejects the camera rhythm: rep
 
 After the rhythm revision, Olof says it is better but still feels like one movement, predominantly zooming. He suggests occasional rotation and requests study of motion design and perception to learn how to apply the existing effects well. This supports studying greater variety and compound movement while preserving the improved flow; it does not approve a new spin schedule or establish that any particular theory has been learned. See [motion design foundations](research/motion-design-foundations.md).
 
+After the thirty-second v004, Olof calls it much better and finds the middle and ending beautiful, with interesting movement. This is positive playback evidence for the combined result. He finds the jungle weaker; the second world's style works, but the dark doorway/transition should be crisper and more richly detailed. The doorway feels different from the bridge/city that follows. He subsequently clarifies that the bridge/cloud world looks good and the black atmosphere is acceptable, so retain those identities rather than treating all clouds or darkness as rejected. His target is meticulous detail in every frame. He notices the immediate opening-image change and asks whether different models are involved; this is a question, not evidence of understanding the generation/finishing distinction. [Verified opening diagnosis and proposed short comparison](../apps/deforum/projects/world-seed/experiments/choreography.md#human-review-and-opening-diagnosis--2026-10-10).
+
 
 ### 2026-10-10 — Repeatable extraction must preserve graphic ambition
 
