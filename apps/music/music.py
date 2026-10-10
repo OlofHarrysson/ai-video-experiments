@@ -558,6 +558,12 @@ def main():
     command.add_argument("--duration", type=float, default=28)
     command.add_argument("--gap", type=float, default=2)
     command = sub.add_parser(
+        "bundle-project",
+        help="Preserve a completed run with portable source, samples and stems",
+    )
+    command.add_argument("run", type=Path)
+    command.add_argument("--out", type=Path, required=True)
+    command = sub.add_parser(
         "render-project", help="Render and inspect a saved project master and stems"
     )
     command.add_argument("project", type=Path)
@@ -601,7 +607,11 @@ def main():
         default=[],
         help="Named source layer; repeat to group",
     )
-    command.add_argument("--trace-events", action="store_true", help="Save event onsets observed during export")
+    command.add_argument(
+        "--trace-events",
+        action="store_true",
+        help="Save event onsets observed during export",
+    )
     command.add_argument("--timeout", type=float, default=120)
     for name in ["inspect", "excerpt", "review", "calibration"]:
         command = sub.add_parser(name)
@@ -652,6 +662,10 @@ def main():
             args.duration,
             args.gap,
         )
+    elif args.command == "bundle-project":
+        import bundle
+
+        result = bundle.bundle_project(args.run, args.out)
     elif args.command == "analyze-project":
         import analysis
 

@@ -95,6 +95,8 @@ Use unique top-level source labels such as `kick:`, `bass:` and `voice:`. Each l
 
 ## Modular composition and focused listening
 
+The [composition guide](docs/modular-composition.md) records practical module ownership, global-cycle phase and screening lessons from the club sprint.
+
 `assemble` combines independently editable Strudel modules into the existing project renderer. One setup module declares tempo/constants; each sound module names its stem. The assembler checks duplicate layers and top-level bindings, requires one tempo declaration and saves exact module snapshots, source hashes, concatenated source and a ready-to-render recipe. It does not create a separate synthesis engine.
 
 ```sh
@@ -109,6 +111,17 @@ The assembly manifest has `version`, `title`, `revision`, `end_cycle`, `sample_r
 `analyze-project` verifies completed audio hashes and measures continuous band-filtered RMS per cycle for master and stems. It writes CSV, JSON and a plot for low (30–180 Hz), body (180–1200 Hz), presence (1200–6000 Hz) and air (6000–20000 Hz), bounded by sample rate. `--window-cycles` changes the window size. These measurements help find buried parts and verify edits; they do not establish audibility, masking or musical quality. Levels below −120 dBFS become `null`; the plot floor is −90 dBFS.
 
 `audition` takes equal-duration windows (`--start-first`, `--start-second`), attenuates to matched loudness, randomizes their A/B order and saves one review WAV, a neutral prompt and a private `answer-key.json`. The total including `--gap` must be at most 60 seconds. It rejects out-of-bounds windows or mismatched formats instead of padding/resampling. Read the comparison before decoding the key. An identical-input control checks invented differences, but does not validate musical taste or timestamps.
+
+## Portable project snapshots
+
+```sh
+uv run --locked python music.py bundle-project projects/pressure-study/renders/v011 --out outputs/pressure-bundle
+uv run --locked python music.py render-project outputs/pressure-bundle/project.json --revision v011 --out outputs/pressure-rebuilt
+```
+
+`bundle-project` verifies a completed run and copies its assembled source, relative project recipe, master/stems, render receipts and every registered sample into a new folder. Numeric sample filenames preserve bank indices after relocation. Original media hashes are checked before and after copying; changed assets, incomplete runs and existing destinations fail explicitly. A copy failure leaves a marked failed bundle for inspection.
+
+The bundle can be moved and rendered through an installed workbench. It still requires the locked renderer, Chrome and FFmpeg; wet rerenders can differ. Original modules, generators and research stay in their project directories. This is a portable local snapshot, not an external backup. Both selected club studies were rebuilt from their bundled sample banks with aligned, unclipped master/stems.
 
 ## Local voice and music samples
 
@@ -140,6 +153,7 @@ Olof manages spending through the OpenRouter balance. The adapter imposes no dol
 - `music.py`, `tests/`, `pyproject.toml`, `uv.lock`: local CLI and reproducible Python environment.
 - `renderer/`, `patches/`, `package.json`, `package-lock.json`: pinned browser render engine, scheduling patch and integration tests.
 - `workflow.py`: saved project runs, master-derived previews and revision comparisons.
+- `bundle.py`: verified portable snapshots of completed source, samples and audio.
 - `analysis.py`, `audition.py`: time-resolved stem inspection and anonymous matched listening pairs.
 - `references/strudel/`: retained operating guide, DJ_Dave research, original sketches, and local documentation snapshots.
 - `docs/`: foundations, listening protocol, selected catalog snapshot and current handoff.
