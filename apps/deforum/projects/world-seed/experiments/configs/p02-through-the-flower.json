@@ -1,0 +1,170 @@
+{
+  "case": "p02-through-the-flower",
+  "seed": 1013100,
+  "duration": 35,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "jungle",
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal oil painting, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, convincing luminous paint and tactile organic material. Visually precise and extravagant, not a photograph, no people, no text, no grids or panels. Landscape composition 3:2."
+    },
+    {
+      "at": 0.5,
+      "name": "follow-the-bridge",
+      "prompt": "We travel along a single curving braided root bridge toward the same immense saffron flower doorway. The oval dark entrance remains open, in the center-right. Lush alien jungle drops away into a violet abyss on both sides. Ferns and black orchids slip past the edges. Delicate veins in the translucent orange petals, finely detailed roots and moss. Strong layered depth, coherent clear passage ahead. Lavish surreal oil painting, jade greens, coral flowers, indigo shadows, honey light. No people, no text, no extra doorways."
+    },
+    {
+      "at": 8,
+      "name": "flower-becomes-monumental",
+      "prompt": "The immense saffron flower doorway towers over the approach. One root bridge leads directly into its open dark oval interior, centered in the image. The glowing petal edges reveal intricate veins like golden tracery. Through the passage a faint distant golden light begins to show. Jungle and tiny jewel flowers remain at the outer edges, deep violet abyss below. Richly detailed surreal painted world, organic material, jade, coral and amber. Clear passage, no solid object blocking the oval, no people, no text."
+    },
+    {
+      "at": 13.5,
+      "name": "approach-the-living-threshold",
+      "prompt": "A monumental saffron and coral flower surrounds a single open dark oval doorway. We fly along the narrow root stair into that clear opening. Its finely ribbed edges and exquisitely veined petals expand toward the image edges. Tiny gold lamps glow in the rim. Within the central opening a deeply receding black and gold passage is visible, empty and unobstructed. The dark opening remains an entrance, not a closed door. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    },
+    {
+      "at": 19,
+      "name": "enter-the-petal-arch",
+      "prompt": "Crossing beneath the rim of an immense flowering gateway. Close translucent amber petals and finely carved ribbed roots surround the outer edges of the image, moving past. Ahead an open cavernous passage has ornate black arches with gold tracery and tiny warm lights. A broad clear dark route leads into a distant golden glow. The entrance is expanding beyond the image, no new closed door. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    },
+    {
+      "at": 25,
+      "name": "the-flower-becomes-a-city",
+      "prompt": "Inside a vast hollow seed, flying through a dark open passage toward a luminous ancient city. Organic ribs turn into magnificently carved basalt columns, translucent petal veins become molten gold aqueducts. Black towers with minuscule carved balconies rise beyond the arch. The near rim has passed outside the frame. An open suspended avenue leads ahead, golden rivers flow upward in the distant city. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    },
+    {
+      "at": 31,
+      "name": "black-gold-world-revealed",
+      "prompt": "A vast ancient city inside a hollow seed opens ahead. Finely engraved black basalt towers and bridges with exquisite metallic gold filigree float over deep shadows. A curving black avenue travels between towers. Molten gold aqueducts rise overhead. Dim orange organic ribs frame only the very outer edges; the city occupies the whole central view. Impossible architectural depth, no jungle, no people. Extravagantly detailed surreal architecture and botanical painting, intricate microscopic engraved veins, luminous fine filigree, tiny sculpted chambers, deep layered tactile relief. Rich jewel colors, glowing gold edging, black lacquered shadows, dimensional lighting. No people, no text."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 13,
+      "noise": 0.64
+    },
+    {
+      "at": 18,
+      "noise": 0.67
+    },
+    {
+      "at": 25,
+      "noise": 0.71
+    },
+    {
+      "at": 34.5,
+      "noise": 0.72
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 13,
+      "duration": 21.5,
+      "center": [
+        0.75,
+        0.47
+      ],
+      "end": [
+        0.015,
+        0.015,
+        1.9740810260220096,
+        0.16
+      ],
+      "velocity_start": [
+        -0.009884548299703609,
+        0.0030721341931168908,
+        0.06499683536701684,
+        -0.004000236996248023
+      ],
+      "velocity_end": [
+        -0.02,
+        0.005,
+        0.04,
+        0.003
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828
+  ],
+  "prefix_root": "projects/world-seed/exports/v001/p01-the-root-bridge",
+  "prefix_through": 312,
+  "motion_note": {
+    "source_frame": 312,
+    "incoming_fit_residual": 8.34997911560961e-14,
+    "target": "Measured open oval center [.75,.47], width about .20 height .37. Bank opposite the approach and enlarge7.2x over4.78 delivered seconds, filling the viewport through the opening and releasing zoom speed into lateral travel. Inspect at frame552 before continuation."
+  }
+}

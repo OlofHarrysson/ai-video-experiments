@@ -1,0 +1,30 @@
+{
+  "case": "o1-jungle",
+  "seed": 1010101,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal oil painting, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, convincing luminous paint and tactile organic material. Visually precise and extravagant, not a photograph, no people, no text, no grids or panels. Landscape composition 3:2.",
+    "seed": 1010101,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "jungle",
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal oil painting, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, convincing luminous paint and tactile organic material. Visually precise and extravagant, not a photograph, no people, no text, no grids or panels. Landscape composition 3:2."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

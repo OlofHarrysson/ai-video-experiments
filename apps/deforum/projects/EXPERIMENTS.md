@@ -6,6 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
+| Multiple independent artworks and contrasting surreal worlds | [A World Inside Every Seed — opening ten seconds](world-seed/experiments/baseline.md) |
 | A new film at the selected faster floating pace | [The Cartographer’s Dream](cartographers-dream/README.md) |
 | Stronger sustained movement in a new one-minute story | [The Storm Engine](storm-engine/README.md) |
 | A directed film made from the retrospective lessons | [The Night Orchard](night-orchard/README.md) |

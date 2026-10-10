@@ -1,0 +1,22 @@
+{
+  "pod_id": "efyslvztdx1vcu",
+  "created_at": "2026-10-10T08:32:53.665000+00:00",
+  "deletion_receipt_at": "2026-10-10T09:08:50.322913+00:00",
+  "deleted": true,
+  "pod_list_after_deletion": [],
+  "network_volume_retained": "vd3jnbwko1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "hourly_rate_usd": 0.89,
+  "elapsed_hours": 0.5991,
+  "estimated_compute_usd": 0.53,
+  "cost_note": "Elapsed creation-to-deletion at advertised rate; estimate, not invoice.",
+  "generated_paintings": 116,
+  "selected_source_paintings": 93,
+  "unused_city_trial_paintings": 22,
+  "crystal_still_reserved": 1,
+  "cloud_duplicate_files_verified_then_removed": 229,
+  "cloud_duplicate_bytes": 448781240,
+  "cleanup_receipt_sha256": "7a256b47a7c437994af210d48fba6ce1f29ca7d8d0a2f28e33c8d82350dee81a",
+  "local_session_records": "work/world-seed-session",
+  "external_media_backup": false
+}

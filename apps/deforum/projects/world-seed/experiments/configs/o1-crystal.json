@@ -1,0 +1,30 @@
+{
+  "case": "o1-crystal",
+  "seed": 1010301,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "A higher-dimensional fantasy universe, an immense impossible garden of faceted mineral architecture suspended in pale luminous space. Giant translucent rose-quartz branching structures fold into nested polyhedral chambers, hundreds of frosted pale-blue crystal stairways loop through themselves, enormous opalescent ribbons pierce tiny jewel constellations. Layer upon layer of recursive geometry at dramatically different scales, sharp exquisite etched mineral facets, microscopic lace-like crystalline growth and deep spatial separation. The entire garden curls around an irregular black seed-shaped void slightly above center, with a tiny deep emerald jungle visible inside. The outer world resembles finely sculpted translucent glass lit from within, an exquisite surreal scientific sculpture, luminous pearlescent whites, icy cyan, pale rose and ultraviolet shadows. Broad airy negative spaces between unbelievably intricate structures, no black-and-gold city, no human figures, no text, no standard neon tunnel, no flat kaleidoscope, no simple mandala. Wide asymmetrical view with clear near and far layers, landscape 3:2.",
+    "seed": 1010301,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "crystal",
+      "prompt": "A higher-dimensional fantasy universe, an immense impossible garden of faceted mineral architecture suspended in pale luminous space. Giant translucent rose-quartz branching structures fold into nested polyhedral chambers, hundreds of frosted pale-blue crystal stairways loop through themselves, enormous opalescent ribbons pierce tiny jewel constellations. Layer upon layer of recursive geometry at dramatically different scales, sharp exquisite etched mineral facets, microscopic lace-like crystalline growth and deep spatial separation. The entire garden curls around an irregular black seed-shaped void slightly above center, with a tiny deep emerald jungle visible inside. The outer world resembles finely sculpted translucent glass lit from within, an exquisite surreal scientific sculpture, luminous pearlescent whites, icy cyan, pale rose and ultraviolet shadows. Broad airy negative spaces between unbelievably intricate structures, no black-and-gold city, no human figures, no text, no standard neon tunnel, no flat kaleidoscope, no simple mandala. Wide asymmetrical view with clear near and far layers, landscape 3:2."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}

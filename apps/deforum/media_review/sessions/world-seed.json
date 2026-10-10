@@ -1,0 +1,13 @@
+{
+  "title": "A World Inside Every Seed",
+  "selected": ["world-seed-opening"],
+  "clips": [
+    {
+      "id": "world-seed-opening",
+      "label": "Opening ten seconds",
+      "note": "Follow a root bridge into a flowering gateway, then enter the black-and-gold city.",
+      "details": "First checkpoint for a planned thirty-second journey. The jungle and city begin from independently generated paintings; the crystal world is reserved for the continuation. A short editorial dissolve joins the shots at the threshold. Krea feedback paintings use measured camera paths, followed by local RIFE finishing at 24 fps and native 1536×1024. RIFE is not used across the edit. Silent working cut; fine details continue to repaint.",
+      "source": "projects/world-seed/exports/cuts/v001/preview.mp4"
+    }
+  ]
+}

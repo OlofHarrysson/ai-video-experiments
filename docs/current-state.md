@@ -1,6 +1,6 @@
 # Current creative and technical state
 
-Snapshot: 2026-10-01 (Europe/Stockholm), after the Rainbow Mane guided repaint test. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
+Snapshot: 2026-10-10 (Europe/Stockholm), after the World Seed opening checkpoint. [The Cartographer’s Dream](../apps/deforum/projects/cartographers-dream/README.md) remains the selected faster-motion film reference. This page owns the short operational handoff; experiment reports and saved configurations own detailed evidence. Return to the [documentation index](../AGENTS.md#documentation-index).
 
 ## What we are working toward
 
@@ -9,6 +9,8 @@ Make surreal films with rich imagery, recognizable focal forms and intentional t
 The working method keeps a plan, theme and recurring motifs while adapting the route to each actual painting. Generate a short passage, inspect it, keep what works, and handcraft the next movement from individual controls. Backtracking and branching from a preserved frame are expected. Olof supplies taste and direction; the assistant does the first review and presents a small, understandable shortlist. See the [vision](vision.md) and [review agreement](review-and-feedback.md).
 
 ## Where we are
+
+- **A World Inside Every Seed (2026-10-10):** [ten-second opening](http://localhost:3028/world-seed) for a planned thirty-second surreal journey. Olof requests much richer detail and multiple styles/palettes, using several starting stills. Three independent Krea paintings establish jungle, black/gold city and pale mineral geometry. The verified 240-frame cut approaches a flower doorway, follows its architectural transformation and dissolves into the independently initialized city shot. All 116 generated paintings are preserved locally; owned GPU deleted, model volume retained, estimated compute $0.53. Assistant screening finds a readable route and material change, but fine detail becomes smoother during recurrence. Human feedback pending; the remaining twenty seconds are storyboarded, not rendered. [Brief and storyboard](../apps/deforum/projects/world-seed/README.md) · [Production record](../apps/deforum/projects/world-seed/experiments/baseline.md).
 
 - **Music workbench (2026-10-10):** [Local audio tooling](../apps/music/README.md) and the Strudel/DJ_Dave reference corpus now live under `apps/music/`. Spectrograms, measurements, excerpts, aligned stem grouping and loudness matching pass local checks; the OpenRouter adapter is implemented and mock-tested. Actual listening calibration awaits the API key. No first song or new video generation has started. [Handoff](../apps/music/docs/status.md).
 

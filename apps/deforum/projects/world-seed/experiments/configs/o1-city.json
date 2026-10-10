@@ -1,0 +1,30 @@
+{
+  "case": "o1-city",
+  "seed": 1010201,
+  "duration": 0.5,
+  "cadence": 12,
+  "cfg": 1,
+  "opening": {
+    "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant dimensional etching, landscape 3:2.",
+    "seed": 1010201,
+    "width": 1536,
+    "height": 1024
+  },
+  "scenes": [
+    {
+      "at": 0,
+      "name": "city",
+      "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant dimensional etching, landscape 3:2."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [],
+  "painting_frames": [
+    0
+  ]
+}
