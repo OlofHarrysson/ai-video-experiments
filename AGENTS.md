@@ -25,6 +25,8 @@ Start here for repository documentation. Add shared explanations as separate `do
 
 ### Purpose and orientation
 
+- [Music workbench](apps/music/README.md): Strudel composition, local audio inspection and bounded OpenRouter listening; [current handoff](apps/music/docs/status.md).
+
 - [AGENTS.md](AGENTS.md): project brief, operating rules and canonical documentation index.
 - [README.md](README.md): public introduction and workspace overview.
 - [Creative vision](docs/vision.md): artistic aims, workflow priorities and deferred hypotheses.

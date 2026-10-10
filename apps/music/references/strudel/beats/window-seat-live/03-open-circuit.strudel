@@ -1,0 +1,23 @@
+// "Open Circuit"
+// 138 BPM - bright chords, broken drums, a returning hook
+setcpm(138/4)
+
+$: s("bd ~ [~ bd] ~").bank("RolandTR909").gain(.58)
+$: s("~ sd ~ [sd ~ sd ~]").bank("RolandTR909").gain(.29)
+$: s("hh*8").bank("RolandTR808").gain(".13 .07 .11 .06").swingBy(.12,4)
+$: s("~ ~ ~ oh").bank("RolandTR909").gain(.12)
+
+$: note("<d2 d2 bb1 c2>").struct("x ~ x ~ ~ x ~ x")
+  .s("sine").fm(1.5).fmh(1).lpf(900)
+  .attack(.005).decay(.18).sustain(.1).release(.06).gain(.28)
+
+$: note("<[d4,f4,a4] [d4,f4,a4] [bb3,d4,f4] [c4,e4,g4]>")
+  .struct("~ x ~ [x ~]").s("sawtooth").lpf(1700)
+  .attack(.012).decay(.22).sustain(.08).release(.18)
+  .room(.25).orbit(2).gain(.1)
+
+$: note("<[a4 ~ a4 c5 ~ a4 g4 ~] [f4 ~ a4 ~ g4 ~ e4 ~]>")
+  .s("triangle").fm(2).fmh(2).lpf(3200)
+  .attack(.003).decay(.11).sustain(0).release(.08)
+  .delay(.23).delaytime(.217391).delayfeedback(.25)
+  .orbit(3).gain(.15)

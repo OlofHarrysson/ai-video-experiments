@@ -44,6 +44,8 @@ Start with [AGENTS.md](AGENTS.md): the project brief, working guidance and canon
 
 ## Experiments
 
+- [Music workbench](apps/music/README.md): original Strudel composition, rendered audio inspection, spectrograms and OpenRouter listening trials.
+
 - [Avatar studio](apps/avatar-studio/README.md): paused study of controllable 3D performance and AI video restyling, with source/style and motion comparisons.
 - [Deforum](apps/deforum/README.md): recurrent image diffusion, spatial controls and film experiments using ComfyUI on RunPod.
 - [ComfyUI](apps/comfyui/README.md): still-image composition, regional prompts and layered painting on RunPod.

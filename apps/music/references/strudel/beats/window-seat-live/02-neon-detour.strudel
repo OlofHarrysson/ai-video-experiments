@@ -1,0 +1,26 @@
+// "Neon Detour"
+// 138 BPM - acid house
+setcpm(138/4)
+
+$: s("bd*4").bank("RolandTR808").gain(.62)
+$: s("~ cp ~ cp").bank("RolandTR909").gain(.38)
+$: s("hh*16").bank("RolandTR808")
+  .gain(".13 .05 .09 .05").swingBy(.1,8)
+$: s("[~ oh]*4").bank("RolandTR909").gain(.14).cut(1)
+
+$: note("d2 [~ d3] f2 [c2 d2]")
+  .s("sawtooth").lpf(sine.range(350,1800).slow(8))
+  .lpq(3).lpenv(3).lpd(.12)
+  .attack(.003).decay(.14).sustain(0).release(.06)
+  .gain(.23)
+
+$: n("0 2 4 6 4 2 1 3").scale("D4:minor")
+  .s("square").lpf(2200)
+  .attack(.003).decay(.08).sustain(0).release(.05)
+  .delay(.2).delaytime(.217391).delayfeedback(.25)
+  .pan(".3 .7").orbit(3).gain(.09)
+
+$: note("<[d3,f3,a3] [bb2,d3,f3] [f3,a3,c4] [c3,e3,g3]>")
+  .struct("~ x ~ x").s("sawtooth").lpf(1100)
+  .attack(.01).decay(.16).sustain(0).release(.15)
+  .room(.22).orbit(2).gain(.12)

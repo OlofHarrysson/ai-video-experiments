@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-10",
+  "source": "/Users/olof/git/codex-projects/codex-brainstorm-space/docs/learning/strudel",
+  "destination": "/Users/olof/git/ai-video-experiments/apps/music/references/strudel",
+  "verified_files": 68,
+  "originals_retained": true,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "728212eec00fa292bd187af113e3d1b422ab93923284719e6e400bcdddfdf670"
+    },
+    {
+      "path": "beats/window-seat-96bpm.wav",
+      "sha256": "1ef73ab8fe48d9d79c0650fa43031439672d184ed6d36e5e4c784e864bfe2ee1"
+    },
+    {
+      "path": "beats/window-seat-live/01.strudel",
+      "sha256": "9731aad7ddd38052baf13842563e12cd9276c4fb5973fef359f190e111df398c"
+    },
+    {
+      "path": "beats/window-seat-live/02-neon-detour.strudel",
+      "sha256": "bebb59eced8439b7804641de4a455e4cee46cde9276b54d3ce9b87d9a2500bf7"
+    },
+    {
+      "path": "beats/window-seat-live/03-open-circuit.strudel",
+      "sha256": "b04b0cc1914ffa690551ac46af6478df89ca6ad7d195e7d11714a6929c16910a"
+    },
+    {
+      "path": "beats/window-seat-live/04-breakdown.strudel",
+      "sha256": "3e76daa269183fd08fab657681ce595beeb196c3443ce0ecc5c1f809d4345a38"
+    },
+    {
+      "path": "beats/window-seat-live/05-lift.strudel",
+      "sha256": "7c068a3a9bb5d59b20943c115cacda262597791c804c22f35a3e118ef1ad52d1"
+    },
+    {
+      "path": "beats/window-seat-live/06-performance-controls.strudel",
+      "sha256": "fc5dd822e5359cb8ed91edc794ac8e5514c9261d6852c93e4bdefe9888a7a012"
+    },
+    {
+      "path": "beats/window-seat-live/07-cut-up-drums.failed.txt",
+      "sha256": "2c026719d3d03b247fcc1fa989f5fee2bbe80ba2753be486f69bad25746242ab"
+    },
+    {
+      "path": "beats/window-seat-live/08-second-movement.strudel",
+      "sha256": "c9b0d0287f4467911a5700b5caa7b222c1d44449f223ad91c566bf26fa77ad1d"
+    },
+    {
+      "path": "beats/window-seat-live/09-build.strudel",
+      "sha256": "f52c4b479590e5a25c152674e058e51959eb4d90b6ff27692e096d0b10ead13a"
+    },
+    {
+      "path": "beats/window-seat-live/10-home.strudel",
+      "sha256": "3636274a30aac83f40f46ff269796682d8480a0da72139c54883e1e21f9cf17f"
+    },
+    {
+      "path": "beats/window-seat-live/11-afterglow.strudel",
+      "sha256": "8d22ecfc7b1f5aba4f2d7217af5928abd1395d73e5da9a31c51780b2ad5d3139"
+    },
+    {
+      "path": "beats/window-seat-live/12-tail.strudel",
+      "sha256": "027ec0a4e6deac4ce7bc3c9c5460397f0d408dbfbf682a0485af465b52528c75"
+    },
+    {
+      "path": "beats/window-seat-live/finished.jpg",
+      "sha256": "702d2be91a4d887ebf0d0447c0b9c53d80d4352f21a02d779c19de7ed0ec5504"
+    },
+    {
+      "path": "beats/window-seat-live/set-history.json",
+      "sha256": "412598119dbadb63bc833aa4413e1eebbada8588cca3cf96584587be801c9c69"
+    },
+    {
+      "path": "beats/window-seat.jpg",
+      "sha256": "44406227da0f5169babfb2fee850505a5d1cb80f25898b90858582f139796888"
+    },
+    {
+      "path": "beats/window-seat.strudel",
+      "sha256": "57a042a015b1b72510868e3eb6854d0937afbf392ddaa4c470a8c95c1d794009"
+    },
+    {
+      "path": "beats/window-seat.url.txt",
+      "sha256": "e1475e212df5aeebe5bcb1c66b447d2b8953e7a12d54d217d0645d8f090d8314"
+    },
+    {
+      "path": "sources/README.md",
+      "sha256": "5aaba4ccbac67d571fe35b90cca3204c9f3f4add2ecb5b621f4283be73d502b4"
+    },
+    {
+      "path": "sources/functions--intro.txt",
+      "sha256": "73fd5a98407c05627ae24875b7cfa83b18c15ce8ee3a915caa929f270ee73a04"
+    },
+    {
+      "path": "sources/functions--value-modifiers.txt",
+      "sha256": "7e0a44280569767fe75510f41a70662668adff9737b8cc1ce0c771d6bac4bea4"
+    },
+    {
+      "path": "sources/learn--accumulation.txt",
+      "sha256": "b596510419a16da2371d1d92277b7a7982608113d279f071b1f721e950c529d8"
+    },
+    {
+      "path": "sources/learn--code.txt",
+      "sha256": "4bbffc6dea346020fad5a2c8f8127a8c67eb4f2b0d8651261da7ec0f7cb9dc35"
+    },
+    {
+      "path": "sources/learn--conditional-modifiers.txt",
+      "sha256": "7560e43c8468e42e9cf2bd999d82108afb3cdb6d379cadf4ecf913fac958c70d"
+    },
+    {
+      "path": "sources/learn--csound.txt",
+      "sha256": "7c8516d05aaee37f2be4d8413a13b72b552d9bd204cc821d39606d9e15f773ba"
+    },
+    {
+      "path": "sources/learn--devicemotion.txt",
+      "sha256": "643ac76a2f07aa38aedba5b74e1dc6988d0f5ecbdbebe8bdf5058c2794e06f94"
+    },
+    {
+      "path": "sources/learn--effects.txt",
+      "sha256": "58e9aa61150295a207acf3105f2aac24857cd97fff33b5add8e42f84db4038d4"
+    },
+    {
+      "path": "sources/learn--factories.txt",
+      "sha256": "713b516d21be4157e4a26904225068b2db9771884b22378c90c0aba46832af9e"
+    },
+    {
+      "path": "sources/learn--faq.txt",
+      "sha256": "58e655c653f734502136e1a96db92efa8d7a885948bfe1ea80dea860631b6516"
+    },
+    {
+      "path": "sources/learn--hydra.txt",
+      "sha256": "6c18c23668bbb7ecad2b4f0394c9c24f32ce30455f605e4dd8f3d0dff2bb858f"
+    },
+    {
+      "path": "sources/learn--input-devices.txt",
+      "sha256": "546bf6841832fc2246240620007051542c416f6f1f4b45d168ce642bb7adeac4"
+    },
+    {
+      "path": "sources/learn--input-output.txt",
+      "sha256": "64cb160f23c0cbb6f1b0fa160dc1c8928a2f068c61b50e08afe6a7e3644dfc9a"
+    },
+    {
+      "path": "sources/learn--lfo.txt",
+      "sha256": "cf7d4023e3f8e9cdced20f00c95df343a184d9080fb652cadfb35f364d0f08e8"
+    },
+    {
+      "path": "sources/learn--metadata.txt",
+      "sha256": "60d67b860afcaedf8f06e30bc56aa0b11ccc3b9105efcb1e4b7e8ef0498d7aa4"
+    },
+    {
+      "path": "sources/learn--mini-notation.txt",
+      "sha256": "a6e81650ac05f0e7a2931114cf0ac2ee1eef9ec3d2fec7032f2dbe74d95dbe86"
+    },
+    {
+      "path": "sources/learn--mondo-notation.txt",
+      "sha256": "e25f6be7040878c0269399cf4692d593896483089713ee5820d099a9083c812b"
+    },
+    {
+      "path": "sources/learn--pwa.txt",
+      "sha256": "8eb82f6e00eb5cfb81ae8797a463a807e127b279dfe9af4260f9657176bf0b4e"
+    },
+    {
+      "path": "sources/learn--random-modifiers.txt",
+      "sha256": "80ffac5316ebb6ac44661e44588f1f766eab8017a27b7f41064cd672b44afe9d"
+    },
+    {
+      "path": "sources/learn--samples.txt",
+      "sha256": "b7108f1943e84b6aa6563250838548cf86c3b9bf55c772a7a7b2c2ead4a18573"
+    },
+    {
+      "path": "sources/learn--signals.txt",
+      "sha256": "660296211b38fb2f43d3671b27ff895f136447c5a7a63bcb1b4a9c849bd06ed6"
+    },
+    {
+      "path": "sources/learn--stepwise.txt",
+      "sha256": "0265ece4018f42960c643774668084830014c459e23e028574f6890da4c361be"
+    },
+    {
+      "path": "sources/learn--strudel-vs-tidal.txt",
+      "sha256": "30152972496f0e5e5ea9a4a937f7c0f20ebbd2c2b492e81004828dd2d9c7132c"
+    },
+    {
+      "path": "sources/learn--synths.txt",
+      "sha256": "0f1511afcca7ac710943def81f659e21c4cf6d0cc494f6533f2ea2a2b42737c5"
+    },
+    {
+      "path": "sources/learn--time-modifiers.txt",
+      "sha256": "1f2f1b5c071c5e4515a4b9db27efb62d11b3bbdb5f3e67701e12cbe77d23b82d"
+    },
+    {
+      "path": "sources/learn--tonal.txt",
+      "sha256": "929b0b8081971e63771cd4c92d7d57cf362917eb7aec6fcb9a5cc0deea6b6b9a"
+    },
+    {
+      "path": "sources/learn--visual-feedback.txt",
+      "sha256": "c7010187fc33f7eaf07b42b681fde0ec8973e0aed85ed8348af79dc82bae18a1"
+    },
+    {
+      "path": "sources/learn--xen.txt",
+      "sha256": "abe0ef3ab50ef1889f52d984d1185b2d985aee208b559ffe15affdb7ea6a17ed"
+    },
+    {
+      "path": "sources/manifest.json",
+      "sha256": "72e53213a4f49f80f13306f04fa714b7f0a1c238b5db3187953684a55bd6d1fa"
+    },
+    {
+      "path": "sources/recipes--recipes.txt",
+      "sha256": "3abcfea6ff282330378c15129bedd7eda2d298ddc35ad86f4475f762ef55dbc5"
+    },
+    {
+      "path": "sources/technical-manual--alignment.txt",
+      "sha256": "5e21b485dbd198541da59f15f6c262203c8117442b17b621a86125cc6c820e40"
+    },
+    {
+      "path": "sources/technical-manual--docs.txt",
+      "sha256": "968ecc86272c4d47387cae7dd9cf34f4e26556bae878bd759f6bf8ad6e63717d"
+    },
+    {
+      "path": "sources/technical-manual--packages.txt",
+      "sha256": "a727835ab87d5e75e57252c130b633afd575c7b4bc9a7f66b19854ac99c0fb96"
+    },
+    {
+      "path": "sources/technical-manual--patterns.txt",
+      "sha256": "eb1b3982c777c8f592c61d6b3f3180d7153c24332004ef97f4e16bd733bfc2a8"
+    },
+    {
+      "path": "sources/technical-manual--project-start.txt",
+      "sha256": "0b9240a9f2cc4b92f441ee41d9bab68d3629368b9271a1163e33fc844903fed6"
+    },
+    {
+      "path": "sources/technical-manual--repl.txt",
+      "sha256": "0975b0a9ac593e34fa57ccdfe1fef23cd785b1a19718c4989826e5eef77dd60f"
+    },
+    {
+      "path": "sources/technical-manual--sounds.txt",
+      "sha256": "c4ece99d0219fba34c737be38113620a01535ca0272982558a013e35f95008eb"
+    },
+    {
+      "path": "sources/technical-manual--testing.txt",
+      "sha256": "8f2c60d9e3c8ae1443dde39a1dd9f68c807cab1e6d67343d3da2aa58cf530cbe"
+    },
+    {
+      "path": "sources/technical-manual--vim.txt",
+      "sha256": "23c3fcfbd55fcfd2ec52a6d93a7a3dade6b20690120bad02179a5cbee7e3c77c"
+    },
+    {
+      "path": "sources/understand--cycles.txt",
+      "sha256": "32264cf4a6fcc83050f5a3cd442a35b918087415dfcff8f7b252c6c3c8650b05"
+    },
+    {
+      "path": "sources/understand--pitch.txt",
+      "sha256": "a0e81f1c5c87f9160c3fa1d71a59e90ef01f3d4f35620a433c5cdc894b98a0a0"
+    },
+    {
+      "path": "sources/understand--voicings.txt",
+      "sha256": "487d53de179a1b9a1e0863d539c5a6153c8626e1259c5a9963bd257250a99410"
+    },
+    {
+      "path": "sources/workshop--first-effects.txt",
+      "sha256": "af5db74200a677bddd3520ada8f5fe1e716a8c89fef0c8a850f76bf2a8013972"
+    },
+    {
+      "path": "sources/workshop--first-notes.txt",
+      "sha256": "f57699e06010bd146c2524c268c47abdd4d7512346c3230723553d86315dc9f8"
+    },
+    {
+      "path": "sources/workshop--first-sounds.txt",
+      "sha256": "bc12bc6f80f2f342dad2a2fd068eea99fcb158c7b777b2218a6e62cd93121786"
+    },
+    {
+      "path": "sources/workshop--getting-started.txt",
+      "sha256": "1eda10f9acc04aedde47dea5eead841071ff8147eda5d682683f890ac706670d"
+    },
+    {
+      "path": "sources/workshop--pattern-effects.txt",
+      "sha256": "9bfed5ff26bac678c99a047c527c4fed7ffcd4bf4622684a468f4233ca725a7d"
+    },
+    {
+      "path": "sources/workshop--recap.txt",
+      "sha256": "b48a28ff7db2c37405c83f089e8eb32c9c9bbf8610eeb5ab45b8a813937abbf2"
+    }
+  ],
+  "post_copy_edits": [
+    "Updated the guide search path to the new workspace.",
+    "Removed one extra blank line at EOF from beats/window-seat-live/01.strudel; original remains unchanged."
+  ]
+}

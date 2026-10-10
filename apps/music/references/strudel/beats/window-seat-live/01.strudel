@@ -1,0 +1,26 @@
+// "Window Seat After Hours"
+// 01 — Lights low | 112 BPM
+setcpm(112/4)
+
+$: s("bd ~ ~ ~")
+  .bank("RolandTR909").gain(0.58)
+$: s("~ rim ~ ~")
+  .bank("RolandTR909").gain(0.27)
+$: s("hh*8").bank("RolandTR909")
+  .gain(".17 .08 .13 .08").swingBy(.12,4)
+$: s("~").bank("RolandTR909").gain(.12)
+
+$: note("<c2!2 ab1!2 eb2!2 bb1!2>")
+  .struct("x ~ ~ ~ ~ x ~ ~").s("sawtooth")
+  .lpf(380).attack(.01)
+  .decay(.16).sustain(.08).release(.08).gain(0.22)
+
+$: note("<[eb3,g3,bb3]!2 [c3,eb3,g3]!2 [g3,bb3,d4]!2 [d3,f3,ab3]!2>")
+  .struct("x ~ ~ ~").s("triangle")
+  .attack(0.12).decay(.5).sustain(.2).release(.7)
+  .lpf(1600).room(.38).orbit(2).gain(0.18)
+
+$: note("~").s("sine")
+  .attack(.005).decay(.14).sustain(0).release(.2)
+  .lpf(2400).delay(.23).delaytime(.267857)
+  .delayfeedback(.28).room(.25).orbit(3).gain(0.14)

@@ -1,0 +1,331 @@
+[
+  {
+    "title": "What is Strudel?",
+    "url": "https://strudel.cc/workshop/getting-started/",
+    "file": "workshop--getting-started.txt",
+    "characters": 2238,
+    "status": "fetched"
+  },
+  {
+    "title": "First Sounds",
+    "url": "https://strudel.cc/workshop/first-sounds/",
+    "file": "workshop--first-sounds.txt",
+    "characters": 7224,
+    "status": "fetched"
+  },
+  {
+    "title": "First Notes",
+    "url": "https://strudel.cc/workshop/first-notes/",
+    "file": "workshop--first-notes.txt",
+    "characters": 5553,
+    "status": "fetched"
+  },
+  {
+    "title": "First Effects",
+    "url": "https://strudel.cc/workshop/first-effects/",
+    "file": "workshop--first-effects.txt",
+    "characters": 4859,
+    "status": "fetched"
+  },
+  {
+    "title": "Pattern Effects",
+    "url": "https://strudel.cc/workshop/pattern-effects/",
+    "file": "workshop--pattern-effects.txt",
+    "characters": 3304,
+    "status": "fetched"
+  },
+  {
+    "title": "Recap",
+    "url": "https://strudel.cc/workshop/recap/",
+    "file": "workshop--recap.txt",
+    "characters": 2185,
+    "status": "fetched"
+  },
+  {
+    "title": "Samples",
+    "url": "https://strudel.cc/learn/samples/",
+    "file": "learn--samples.txt",
+    "characters": 14241,
+    "status": "fetched"
+  },
+  {
+    "title": "Synths",
+    "url": "https://strudel.cc/learn/synths/",
+    "file": "learn--synths.txt",
+    "characters": 8140,
+    "status": "fetched"
+  },
+  {
+    "title": "Audio Effects",
+    "url": "https://strudel.cc/learn/effects/",
+    "file": "learn--effects.txt",
+    "characters": 23342,
+    "status": "fetched"
+  },
+  {
+    "title": "MIDI & OSC",
+    "url": "https://strudel.cc/learn/input-output/",
+    "file": "learn--input-output.txt",
+    "characters": 10530,
+    "status": "fetched"
+  },
+  {
+    "title": "FAQ",
+    "url": "https://strudel.cc/learn/faq/",
+    "file": "learn--faq.txt",
+    "characters": 18521,
+    "status": "fetched"
+  },
+  {
+    "title": "Recipes",
+    "url": "https://strudel.cc/recipes/recipes/",
+    "file": "recipes--recipes.txt",
+    "characters": 5858,
+    "status": "fetched"
+  },
+  {
+    "title": "Mini-Notation",
+    "url": "https://strudel.cc/learn/mini-notation/",
+    "file": "learn--mini-notation.txt",
+    "characters": 8538,
+    "status": "fetched"
+  },
+  {
+    "title": "Visual Feedback",
+    "url": "https://strudel.cc/learn/visual-feedback/",
+    "file": "learn--visual-feedback.txt",
+    "characters": 7233,
+    "status": "fetched"
+  },
+  {
+    "title": "Offline",
+    "url": "https://strudel.cc/learn/pwa/",
+    "file": "learn--pwa.txt",
+    "characters": 2387,
+    "status": "fetched"
+  },
+  {
+    "title": "Patterns",
+    "url": "https://strudel.cc/technical-manual/patterns/",
+    "file": "technical-manual--patterns.txt",
+    "characters": 2605,
+    "status": "fetched"
+  },
+  {
+    "title": "Mondo Notation",
+    "url": "https://strudel.cc/learn/mondo-notation/",
+    "file": "learn--mondo-notation.txt",
+    "characters": 3606,
+    "status": "fetched"
+  },
+  {
+    "title": "Music metadata",
+    "url": "https://strudel.cc/learn/metadata/",
+    "file": "learn--metadata.txt",
+    "characters": 2594,
+    "status": "fetched"
+  },
+  {
+    "title": "CSound",
+    "url": "https://strudel.cc/learn/csound/",
+    "file": "learn--csound.txt",
+    "characters": 5427,
+    "status": "fetched"
+  },
+  {
+    "title": "Hydra",
+    "url": "https://strudel.cc/learn/hydra/",
+    "file": "learn--hydra.txt",
+    "characters": 1843,
+    "status": "fetched"
+  },
+  {
+    "title": "Input Devices",
+    "url": "https://strudel.cc/learn/input-devices/",
+    "file": "learn--input-devices.txt",
+    "characters": 3537,
+    "status": "fetched"
+  },
+  {
+    "title": "Device Motion",
+    "url": "https://strudel.cc/learn/devicemotion/",
+    "file": "learn--devicemotion.txt",
+    "characters": 3938,
+    "status": "fetched"
+  },
+  {
+    "title": "Introduction",
+    "url": "https://strudel.cc/functions/intro/",
+    "file": "functions--intro.txt",
+    "characters": 1719,
+    "status": "fetched"
+  },
+  {
+    "title": "Creating Patterns",
+    "url": "https://strudel.cc/learn/factories/",
+    "file": "learn--factories.txt",
+    "characters": 2823,
+    "status": "fetched"
+  },
+  {
+    "title": "Time Modifiers",
+    "url": "https://strudel.cc/learn/time-modifiers/",
+    "file": "learn--time-modifiers.txt",
+    "characters": 5965,
+    "status": "fetched"
+  },
+  {
+    "title": "Control Parameters",
+    "url": "https://strudel.cc/functions/value-modifiers/",
+    "file": "functions--value-modifiers.txt",
+    "characters": 5533,
+    "status": "fetched"
+  },
+  {
+    "title": "Signals",
+    "url": "https://strudel.cc/learn/signals/",
+    "file": "learn--signals.txt",
+    "characters": 1955,
+    "status": "fetched"
+  },
+  {
+    "title": "Random Modifiers",
+    "url": "https://strudel.cc/learn/random-modifiers/",
+    "file": "learn--random-modifiers.txt",
+    "characters": 3649,
+    "status": "fetched"
+  },
+  {
+    "title": "Conditional Modifiers",
+    "url": "https://strudel.cc/learn/conditional-modifiers/",
+    "file": "learn--conditional-modifiers.txt",
+    "characters": 5736,
+    "status": "fetched"
+  },
+  {
+    "title": "Accumulation",
+    "url": "https://strudel.cc/learn/accumulation/",
+    "file": "learn--accumulation.txt",
+    "characters": 1618,
+    "status": "fetched"
+  },
+  {
+    "title": "LFOs",
+    "url": "https://strudel.cc/learn/lfo/",
+    "file": "learn--lfo.txt",
+    "characters": 6755,
+    "status": "fetched"
+  },
+  {
+    "title": "Tonal Functions",
+    "url": "https://strudel.cc/learn/tonal/",
+    "file": "learn--tonal.txt",
+    "characters": 3370,
+    "status": "fetched"
+  },
+  {
+    "title": "Stepwise Functions",
+    "url": "https://strudel.cc/learn/stepwise/",
+    "file": "learn--stepwise.txt",
+    "characters": 8131,
+    "status": "fetched"
+  },
+  {
+    "title": "Coding syntax",
+    "url": "https://strudel.cc/learn/code/",
+    "file": "learn--code.txt",
+    "characters": 3416,
+    "status": "fetched"
+  },
+  {
+    "title": "Pitch",
+    "url": "https://strudel.cc/understand/pitch/",
+    "file": "understand--pitch.txt",
+    "characters": 4598,
+    "status": "fetched"
+  },
+  {
+    "title": "Xenharmonic Functions",
+    "url": "https://strudel.cc/learn/xen/",
+    "file": "learn--xen.txt",
+    "characters": 3609,
+    "status": "fetched"
+  },
+  {
+    "title": "Cycles",
+    "url": "https://strudel.cc/understand/cycles/",
+    "file": "understand--cycles.txt",
+    "characters": 3218,
+    "status": "fetched"
+  },
+  {
+    "title": "Voicings",
+    "url": "https://strudel.cc/understand/voicings/",
+    "file": "understand--voicings.txt",
+    "characters": 9375,
+    "status": "fetched"
+  },
+  {
+    "title": "Pattern Alignment",
+    "url": "https://strudel.cc/technical-manual/alignment/",
+    "file": "technical-manual--alignment.txt",
+    "characters": 3740,
+    "status": "fetched"
+  },
+  {
+    "title": "Strudel vs Tidal",
+    "url": "https://strudel.cc/learn/strudel-vs-tidal/",
+    "file": "learn--strudel-vs-tidal.txt",
+    "characters": 3672,
+    "status": "fetched"
+  },
+  {
+    "title": "Strudel in your Project",
+    "url": "https://strudel.cc/technical-manual/project-start/",
+    "file": "technical-manual--project-start.txt",
+    "characters": 4928,
+    "status": "fetched"
+  },
+  {
+    "title": "Packages",
+    "url": "https://strudel.cc/technical-manual/packages/",
+    "file": "technical-manual--packages.txt",
+    "characters": 1945,
+    "status": "fetched"
+  },
+  {
+    "title": "REPL",
+    "url": "https://strudel.cc/technical-manual/repl/",
+    "file": "technical-manual--repl.txt",
+    "characters": 9916,
+    "status": "fetched"
+  },
+  {
+    "title": "Sounds",
+    "url": "https://strudel.cc/technical-manual/sounds/",
+    "file": "technical-manual--sounds.txt",
+    "characters": 2326,
+    "status": "fetched"
+  },
+  {
+    "title": "Docs",
+    "url": "https://strudel.cc/technical-manual/docs/",
+    "file": "technical-manual--docs.txt",
+    "characters": 2126,
+    "status": "fetched"
+  },
+  {
+    "title": "Testing",
+    "url": "https://strudel.cc/technical-manual/testing/",
+    "file": "technical-manual--testing.txt",
+    "characters": 938,
+    "status": "fetched"
+  },
+  {
+    "title": "Vim shortcuts",
+    "url": "https://strudel.cc/technical-manual/vim/",
+    "file": "technical-manual--vim.txt",
+    "status": "fetched",
+    "characters": 1848
+  }
+]

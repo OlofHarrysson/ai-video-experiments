@@ -1,0 +1,29 @@
+// "Open Circuit — build"
+// 138 BPM - bright chords, broken drums, a returning hook
+setcpm(138/4)
+const DRUMS = 0
+const BASS = 0
+const HOOK = 1
+const BRIGHT = 3500
+
+$: s("bd ~ [~ bd] ~").bank("RolandTR909").gain(.58 * DRUMS).mask("<1!7 0>")
+$: s("~ sd ~ <sd [sd sd*2]>").bank("RolandTR909").gain(.29 * DRUMS)
+$: s("hh*8").bank("RolandTR808").gain(".12 .04 .08 .04").swingBy(.12,4)
+$: s("~ ~ ~ oh").bank("RolandTR909").gain(.12)
+
+$: note("<bb1 g1 d2 c2>").struct("x ~ x ~ ~ x ~ x")
+  .s("sine").fm(1.5).fmh(1).lpf(900)
+  .attack(.005).decay(.18).sustain(.1).release(.06).gain(.28 * BASS)
+
+$: note("<[bb3,d4,f4] [g3,bb3,d4] [d4,f4,a4] [c4,e4,g4]>")
+  .struct("~ x ~ [x ~]").s("sawtooth").lpf(BRIGHT)
+  .attack(.012).decay(.22).sustain(.08).release(.18)
+  .room(.25).orbit(2).gain(.1)
+
+$: note("<[f4 ~ f4 a4 ~ f4 d4 ~] [g4 ~ bb4 ~ a4 ~ g4 ~]>")
+  .s("sawtooth").vowel("<a e i e>").lpf(3200)
+  .attack(.003).decay(.11).sustain(0).release(.08)
+  .delay(.23).delaytime(.217391).delayfeedback(.25)
+  .orbit(3).gain(.12 * HOOK).mask("<1!6 0!2>")
+
+$: s("sd*8").bank("RolandTR909").hpf(1700).gain(".03 .04 .05 .06 .07 .08 .09 .1")

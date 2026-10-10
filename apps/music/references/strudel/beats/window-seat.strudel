@@ -1,0 +1,23 @@
+// "Window Seat"
+// 96 BPM - four-bar electronic groove
+setcpm(96/4)
+
+$: s("bd ~ [~ bd] ~").bank("RolandTR909").gain(.8)
+$: s("~ sd ~ sd").bank("RolandTR909").gain(.48)
+$: s("hh*8").bank("RolandTR909")
+  .gain(".25 .12 .2 .12 .25 .12 .2 .16").swingBy(.12,4)
+$: s("~ ~ ~ <~ oh>").bank("RolandTR909").gain(.16)
+
+$: note("<c2 ab1 eb2 bb1>")
+  .struct("x ~ ~ x ~ x ~ ~").s("sawtooth")
+  .lpf(650).attack(.01).decay(.18).sustain(.12).release(.08)
+  .gain(.3)
+
+$: note("<[eb3,g3,bb3] [c3,eb3,g3] [g3,bb3,d4] [d3,f3,a3]>")
+  .s("triangle").attack(.03).decay(.5).sustain(.15).release(.4)
+  .lpf(1800).room(.3).orbit(2).gain(.22)
+
+$: note("~ g4 ~ <bb4 d5>").s("sine")
+  .attack(.005).decay(.15).sustain(0).release(.15)
+  .delay(.25).delaytime(.3125).delayfeedback(.3)
+  .room(.2).orbit(3).gain(.18)
