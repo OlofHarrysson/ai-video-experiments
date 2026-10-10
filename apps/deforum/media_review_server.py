@@ -14,7 +14,7 @@ OUTPUT = APP / "projects/modern-model-study/exports/media-review-seed-for-sea-lo
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
     "/world-seed": APP
-    / "projects/world-seed/exports/media-review-v003/local.html",
+    / "projects/world-seed/exports/media-review-v004/local.html",
     "/rainbow-mane-guided": APP
     / "projects/rainbow-mane/exports/media-review-guided-v001/local.html",
     "/rainbow-mane": APP

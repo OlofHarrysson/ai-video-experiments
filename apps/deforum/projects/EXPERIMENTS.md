@@ -6,7 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
-| Contrasting surreal worlds in one continuous painting chain | [A World Inside Every Seed — sustained camera rhythm](world-seed/experiments/rhythm.md) |
+| Contrasting surreal worlds in one continuous painting chain | [A World Inside Every Seed — bank, reveal and unfold](world-seed/experiments/choreography.md) |
 | A new film at the selected faster floating pace | [The Cartographer’s Dream](cartographers-dream/README.md) |
 | Stronger sustained movement in a new one-minute story | [The Storm Engine](storm-engine/README.md) |
 | A directed film made from the retrospective lessons | [The Night Orchard](night-orchard/README.md) |

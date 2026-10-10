@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [A World Inside Every Seed](world-seed/README.md) — continuous ten-second checkpoint for a planned thirty-second journey through alien jungle, black/gold city and pale mineral worlds. The latest revision sustains the approach through the city, directed from short inspected passages. Three stills and all prior versions remain preserved; human rhythm review pending.
+- [A World Inside Every Seed](world-seed/README.md) — thirty-second continuous journey through jungle, ancient city, opalescent geometry and a garden inside a crystalline seed. Broad banks, local unfurling, lateral travel and an outward ending; 180 new paintings, with the earlier opening and all previous versions preserved. Human playback review pending.
 
 - [Rainbow Mane](rainbow-mane/README.md) — paused 2026-10-09: a white cartoon face with a rainbow mohawk turns into a white horse; a short opening test for an eventual 30–60 second story, using the supplied comic-print references.
 

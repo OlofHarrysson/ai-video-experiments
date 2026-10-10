@@ -1,14 +1,21 @@
 {
   "title": "A World Inside Every Seed",
   "selected": [
-    "world-seed-flowing"
+    "world-seed-choreographed"
   ],
   "clips": [
+    {
+      "id": "world-seed-choreographed",
+      "label": "Through three worlds · thirty seconds",
+      "note": "Bank along the golden road, unfold into crystal, and reveal a living garden inside a seed.",
+      "details": "The first ninety paintings are preserved; 180 new paintings continue the same recurrent chain. A broad bank, regional unfurling, lateral glide, membrane flex and outward ending follow the actual artwork. No cuts or dissolves. Native 1536×1024, 24 fps, thirty seconds; local RIFE outside recurrence. Fine structures still repaint. Human playback judgment is pending.",
+      "source": "projects/world-seed/exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "world-seed-flowing",
       "label": "Flowing approach · ten seconds",
       "note": "Carry the approach through the flowering threshold, between carved facades and out above the golden road.",
-      "details": "One continuous chain, with the first 47 paintings preserved and 43 new paintings directed in short inspected passages. The latter half sustains forward speed instead of repeatedly accelerating and braking. Camera targets follow the actual gaps and road that emerged. No cuts or dissolves. Native 1536×1024, 24 fps, 10 seconds; local RIFE outside recurrence. Architectural detail still repaints. Human judgment of the revised rhythm is pending.",
+      "details": "One continuous chain, with the first 47 paintings preserved and 43 new paintings directed in short inspected passages. The latter half sustains forward speed instead of repeatedly accelerating and braking. Camera targets follow the actual gaps and road that emerged. No cuts or dissolves. Native 1536×1024, 24 fps, 10 seconds; local RIFE outside recurrence. Architectural detail still repaints. Olof found the revised rhythm better and requested more movement variety.",
       "source": "projects/world-seed/exports/v001/p07-out-above-the-city/faster/rife-moving-tail/preview.mp4"
     },
     {

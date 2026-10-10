@@ -1,28 +1,32 @@
 # A World Inside Every Seed
 
-A planned 30-second surreal landscape journey through three distinct styles. First production checkpoint: ten seconds.
+A continuous thirty-second surreal journey: alien jungle, an ancient black-and-gold city, opalescent geometry and a small living world inside a crystalline seed.
 
-A vast alien jungle hides an ancient city inside a flower. The city opens into a higher-dimensional crystalline garden; the final pullback reveals a seed containing another jungle. No narration or character performance.
+[Watch the film](exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Direction and screening](experiments/choreography.md)
 
-## Storyboard
+## The journey
 
-| Delivery | World and event | Motion | Visual treatment |
-| --- | --- | --- | --- |
-| 0–3 s | Discover the flowering gateway in an alien canopy | Sweep diagonally across layered foliage toward the visible bridge | Dense jewel-green/coral oil painting |
-| 3–7 s | Roots arch around a dark passage; the flower becomes monumental | Follow the curved bridge, bank gently and approach the opening | Organic paint, bright pollen and deep violet shadows |
-| 7–10 s | Emerge between the flower-city buildings into the open city | Follow the gold road continuously through the visible gap | Organic ribs become black/gold architecture |
-| 10–20 s | The lost city unfolds; a stone iris reveals another universe | Travelling look-around along the avenue, rise beneath bridges, enter the iris | Black lacquer and finely engraved brass, bone-white light |
-| 20–27 s | Crystalline chambers fold through one another | Bank through spacious geometry; approach a dark seed-shaped cavity | Pale mineral sculpture, rose/cyan/opalescent glass |
-| 27–30 s | The whole garden resolves into a seed holding a new jungle | Pull back while turning to reveal the nested world | A brief return of green inside a predominantly luminous mineral world |
+| Delivery | World and event | Motion and visual treatment |
+| --- | --- | --- |
+| 0–10s | A flowering jungle gateway becomes an ancient city | Preserved opening; jewel-green/coral painting becomes black lacquer and gold |
+| 10–13s | Follow the suspended golden road | Broad bank and lateral reframing around the actual towers |
+| 13–17s | The road curls into intricate mineral lattice | Local unfurling; engraved brass becomes nested ivory ribs |
+| 17–21s | Look through an oval window into the crystalline garden | Sideways glide and plane turn; rose/cyan glass and tiny worlds appear |
+| 21–26s | Approach a fern garden inside an emerald cell | Diagonal approach with a small membrane flex; the selected cell stays recognizable |
+| 26–30s | Reveal the chamber around the living garden | One outward move with a continuing turn; a seed-like shell among hanging glass pods |
 
 ## Production
 
-The film is one continuous journey, with no cuts, dissolves or replacement shots. The three generated stills establish palette and composition targets. Every animated painting initializes from the warped preceding painting; the new world must emerge within that chain. Keep Krea Turbo CFG 1, three Euler repaint intervals, recorded noise, source cadence 12 at 24 fps and 4.5× delivery timing. RIFE remains outside recurrence. Inspect actual artwork and adapt the route in short passages. Carry momentum while the motif still calls for travel; stronger movement is welcome, but repeated acceleration and braking must not become automatic choreography. The crystal still is reserved as a visual target for the next chapter. Preserve all earlier versions and the established feedback mechanism.
+The film has no cuts, dissolves or independently initialized replacement shots. Ninety paintings from the earlier opening are preserved; 180 new paintings continue their feedback chain. Every new painting initializes from the warped preceding painting. The three original stills establish visual targets; the city and crystal stills are not inserted into the film.
 
-Human brief: very detailed unreal worlds, multiple styles/palettes, purposeful travelling motion and surprising events. Previous reference recommendations were not considered a higher quality bar than our own films. All stills and takes remain preserved.
+Krea Turbo, CFG 1, three Euler repaint intervals, recorded noise and seed schedules, native 1536×1024. Source cadence is twelve frames at 24 fps; delivery is 4.5× faster, retaining all 270 paintings. Local RIFE fills intervals outside recurrence. The silent working film is 24 fps and thirty seconds.
 
-[Opening ten seconds](exports/v001/p07-out-above-the-city/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Three starting worlds](exports/world-stills.jpg) · [Sustained rhythm revision](experiments/rhythm.md) · [Continuous revision](experiments/continuous.md) · [Original production record](experiments/baseline.md) · [Starting still prompts](experiments/configs)
+The [motion study](../../../../docs/research/motion-design-foundations.md) informed attention, overlapping movements and varied paths. Each new passage was composed from its actual starting painting, previewed without diffusion, then generated and inspected in short sections. The literal mechanical iris in the initial storyboard became an unfurling road; the ending follows the fern-filled chamber that emerged. [Recorded decisions and limitations](experiments/choreography.md) · [Execution and preservation](experiments/execution-summary-v004.json).
 
-## Motion study
+Fine details and small structures continue to repaint. The plane turn is a flat-image transform, not true depth parallax. Assistant frame screening and technical validation do not establish Olof's playback preference; that judgment remains pending.
 
-Olof finds the revised flow better but wants greater movement variety, including occasional rotation. The [motion design study](../../../../docs/research/motion-design-foundations.md) connects attention, overlap and path design to a proposed bank along the golden road and a lateral reveal into the cloud corridor. This is the next comparison to develop, not a rendered or approved continuation.
+## Preserved versions
+
+[Opening with sustained rhythm](cuts/v003.md) · [First continuous opening](cuts/v002.md) · [Original opening with dissolve](cuts/v001.md) · [All cuts](cuts/README.md) · [Three visual targets](exports/world-stills.jpg)
+
+Human direction: highly detailed unreal worlds, distinct styles and palettes, purposeful travelling motion and surprising transformations. Olof prefers the cut-free opening and its revised rhythm, but found it too dominated by zoom. Strong motion is welcome; repeated acceleration and braking are not. Earlier reference recommendations were not considered a higher quality bar than our own films. All prior stills, configurations and takes remain preserved.

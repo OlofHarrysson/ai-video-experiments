@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "new_paintings": 180,
+  "preserved_opening_paintings": 90,
+  "delivery_paintings": 270,
+  "remote_files_verified_locally": 3313,
+  "owned_pod": "hr58apwa4fm4vu",
+  "created_at": "2026-10-10T11:34:46.43Z",
+  "deleted_at": "2026-10-10T12:31:13+00:00",
+  "hourly_gpu_price_usd": 0.89,
+  "estimated_gpu_cost_usd": 0.8372,
+  "cost_excludes": "Storage and other account activity",
+  "verified_remote_duplicates_removed": 360,
+  "remaining_pods": [],
+  "retained_volume": {
+    "dataCenter": "EU-RO-1",
+    "id": "vd3jnbwko1",
+    "name": "deforum-models",
+    "size": 50,
+    "type": "STANDARD"
+  },
+  "media_preservation": "Local originals and provenance, no separate external backup",
+  "generation_method": "Warp previous painting, partial-noise Krea Turbo repaint, 3 Euler intervals, CFG 1; RIFE outside recurrence",
+  "delivery": {
+    "verified": true,
+    "frames": 720,
+    "fps": 24,
+    "paintings": 270,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "065718d1dde94ab933a99e718516d0b869731ce9a6bc26ea6113ae1baaf76681",
+    "retiming_sha256": "9cc1fb62f0adc94133adb9924f9022aabcef38127f52abd2e72e642225407b60",
+    "anchor_frames_sha256": "4c4f57322a2016b885e786eb9e184de39e48f8fd494ce1ba0295237666331f82",
+    "duration_seconds": 30,
+    "width": 1536,
+    "height": 1024,
+    "audio": false,
+    "source": "projects/world-seed/exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4"
+  }
+}
