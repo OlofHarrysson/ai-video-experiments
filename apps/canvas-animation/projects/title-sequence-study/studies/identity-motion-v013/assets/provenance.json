@@ -1,0 +1,74 @@
+{
+  "billions": {
+    "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/billions.png",
+    "sourceSha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+    "colors": 256,
+    "palette": null,
+    "params": {
+      "colormode": "color",
+      "hierarchical": "stacked",
+      "mode": "polygon",
+      "filter_speckle": 1,
+      "color_precision": 8,
+      "layer_difference": 1,
+      "corner_threshold": 60,
+      "length_threshold": 4,
+      "splice_threshold": 45,
+      "path_precision": 2
+    },
+    "simplify": 0.1,
+    "pathCount": 33826,
+    "svgBytes": 4006615,
+    "limitation": "Paint paths preserve color and order; they are not semantic glyphs or a lighting model.",
+    "geometrySha256": "bd25bee540cd6cf1229caa24df7e1c37f9dcebc3f2d635aba1cedb89d025430b",
+    "compressedBytes": 852477
+  },
+  "keep": {
+    "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/keep-up.png",
+    "sourceSha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+    "colors": 256,
+    "palette": null,
+    "params": {
+      "colormode": "color",
+      "hierarchical": "stacked",
+      "mode": "polygon",
+      "filter_speckle": 1,
+      "color_precision": 8,
+      "layer_difference": 1,
+      "corner_threshold": 60,
+      "length_threshold": 4,
+      "splice_threshold": 45,
+      "path_precision": 2
+    },
+    "simplify": 0.1,
+    "pathCount": 27917,
+    "svgBytes": 3332071,
+    "limitation": "Paint paths preserve color and order; they are not semantic glyphs or a lighting model.",
+    "geometrySha256": "bcccf5df7dae9714f915b4426d39d7e61f5398547a04511c73667c6ad83df5f4",
+    "compressedBytes": 717347
+  },
+  "next": {
+    "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/next.png",
+    "sourceSha256": "7951070f2c7b0dd94bf419b7dd6a2b3167a4d68cee20c0706d171b02eb24eb54",
+    "colors": 6,
+    "palette": "000000,f6f0dc,d7ff00,0735ed,ff1527,00cae7",
+    "params": {
+      "colormode": "color",
+      "hierarchical": "stacked",
+      "mode": "polygon",
+      "filter_speckle": 4,
+      "color_precision": 8,
+      "layer_difference": 1,
+      "corner_threshold": 60,
+      "length_threshold": 4,
+      "splice_threshold": 45,
+      "path_precision": 2
+    },
+    "simplify": 0.55,
+    "pathCount": 241,
+    "svgBytes": 33009,
+    "limitation": "Paint paths preserve color and order; they are not semantic glyphs or a lighting model.",
+    "geometrySha256": "e284e77d44917538e47605536bd07b364542988010f1ff47211fb83d7594eb66",
+    "compressedBytes": 8261
+  }
+}

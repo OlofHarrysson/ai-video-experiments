@@ -12,7 +12,7 @@ Develop three finished graphic targets for the AI theme before deciding what inf
 - **NEXT:** an asymmetric collision of custom architectural letterforms, nested linework, scale and overlap.
 - **KEEP UP:** elaborate red enamel calligraphy, interwoven swashes, gold edges and designed highlight shapes.
 
-These are design candidates, not a new approved sequence. Text is thematic language rather than attributed headlines or numeric factual claims. Silence and controlled medium-high intensity remain the intended eventual motion direction. No animation is authorized by a still-frame preference alone; prior animation review boundaries remain in place.
+Olof subsequently approved all three design directions: “Yeah these are pretty cool. Sure let's do those.” [v013](../identity-motion-v013/README.md) develops three bounded silent motion studies; this does not approve the rejected v011 story sequence. Text is thematic language rather than attributed headlines or numeric factual claims. Silence and controlled medium-high intensity remain the intended eventual motion direction. The latest explicit request to proceed authorizes these three motion studies.
 
 Generated originals and independent project copies are preserved. [Exact prompts](prompts.json) record the built-in image-generation calls. The finished targets are raster artwork until a separate reconstruction is shown; they must not be represented as rendered code.
 
@@ -20,7 +20,7 @@ Generated originals and independent project copies are preserved. [Exact prompts
 
 [Inspect all directions](index.html) · [NEXT rendered from vectors](next.html) · [NEXT side-by-side comparison](output-next-proof-v002/comparison.png)
 
-Three targets were generated and inspected. Independent source copies and originals have matching SHA-256 hashes in [sources.json](sources.json). The candidate words are correctly present; ornate P readability in KEEP UP deserves human inspection. These are visual candidates, not approved designs.
+Three targets were generated and inspected. Independent source copies and originals have matching SHA-256 hashes in [sources.json](sources.json). The candidate words are correctly present; ornate P readability in KEEP UP deserves human inspection. These targets are now approved for development; the resulting reconstruction and movement still need human judgment.
 
 The **NEXT vector proof** uses 241 paths and six declared inks: black, ivory, chartreuse, cobalt, red and cyan. It preserves the full composition, cropped background letters, interior rails and diagonal overlap, rather than extracting only the word silhouette. `vector-next-v003/art.svg` is 33,009 bytes. It draws deterministically without runtime errors, using no raster inside the self-contained [vector renderer](next.html). The assistant inspected the full-size vector drawing and target comparison. The transfer removes subtle source shading; this is an intentional flat-ink approximation, not pixel identity.
 
@@ -28,7 +28,7 @@ The first adaptive eight-color NEXT trace created 2,963 paths from incidental co
 
 **BILLIONS full-color transfer was rejected.** Its 16-color trace produced 15,757 paths and a roughly 7 MB SVG, yet the inspected proof muddies fine engraving and loses blue/red presence. Source and attempted conversion remain preserved under `reference/`, `output-vector-billions-v001/` and `output-billions-proof-v001/`. This target needs lettering/ornament/material separation or another deliberate reconstruction; it is not presented as successful code art. KEEP UP remains a generated material target; it has not been reconstructed in this experiment.
 
-No production animation, soundtrack or server was started. The next human checkpoint is whether these targets meet the intended graphic ambition. The v011 story has not been reaffirmed by this visual experiment.
+This v012 checkpoint contains stills and the NEXT transfer. Subsequent approved motion work is recorded in v013. The v011 story has not been reaffirmed by this visual experiment.
 
 ## Reproduce the selected transfer
 
