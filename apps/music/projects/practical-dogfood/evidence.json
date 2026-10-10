@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-10",
+  "export": {
+    "bpm": 120,
+    "start_cycle": 2,
+    "end_cycle": 16,
+    "sample_rate": 48000,
+    "multichannel_orbits": false
+  },
+  "renders": [
+    {
+      "file": "renders/practical-v001-drums.wav",
+      "sha256": "d6bfcbe8523ec7a7e9101d5a1671dffffb5d288bab6c342253cd79716400e1b6",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v001-full.wav",
+      "sha256": "e7d6632512ef21dd2c450a80ba0903c25cf9a5592cad47ddafb78b4d82d91ca2",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v001-music.wav",
+      "sha256": "50d014c56d0d762cbb1adbbcd71dcde4339f6ac6e9f12e2b49028b3343726992",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v001-reconstructed.wav",
+      "sha256": "7f704efc00e0eea71de74dae81990f661199db0b56383f16825fee64685478ab",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v001-repeat.wav",
+      "sha256": "f3ca982810ef419d2ee0f5654a24a35dfe92a25484457860ad34831a94bbff94",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v001-samples.wav",
+      "sha256": "c071a84582cb07d16c074f6c19197d836a2fa4f15b352cfdf22fa8f2fa8c5d3a",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v002-full.wav",
+      "sha256": "ca6e806df79b492c2044fb4165d41d3264e973517e3335969339c0906b02ce86",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v003-dry-full.wav",
+      "sha256": "72b8b5409040ad9bd272b5ef818d4b530d6f5e2e04df5b4097ba93b86677c20b",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/practical-v003-dry-repeat.wav",
+      "sha256": "18ed2260d7209009ce6ca8d110075bc4dd0fadd28994278dcdeebcee15837c2d",
+      "frames": 1344000,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    {
+      "file": "renders/voice-chops-preview.wav",
+      "sha256": "78e5d82a75bec7a59da60966db796ed82230ce0217173a9302e867d1d730e72e",
+      "frames": 192000,
+      "sample_rate": 48000,
+      "channels": 2
+    }
+  ],
+  "sources": [
+    {
+      "file": "source/v001-drums.strudel",
+      "sha256": "ea650af437645adb9a3bfb5aa84bab81b43c7bd85e803c8bb514f53c608087f2"
+    },
+    {
+      "file": "source/v001-full.strudel",
+      "sha256": "607cee8ba07f6ed338bcd4070d1d0af7ef48939bbd60a32c1f090233d1540bff"
+    },
+    {
+      "file": "source/v001-music.strudel",
+      "sha256": "825054621b8a6f75927bc9fbfe1daf434d10e648d6d19916097c50d365b06a3c"
+    },
+    {
+      "file": "source/v001-samples.strudel",
+      "sha256": "1d0dee594957cc19ddc7a1b4323d8bdc44a1e7704f94eecadf447eac473a44a4"
+    },
+    {
+      "file": "source/v002-full.strudel",
+      "sha256": "34fffbe7899cce9cd2c399b3a28675923c28455e46bb46505e11b7e5ff6d9ab4"
+    },
+    {
+      "file": "source/v003-dry-full.strudel",
+      "sha256": "f19de5c9e5ab45299c481b5aeb6ba7548fc9c8197c33bf338df9337a35eb1b37"
+    }
+  ],
+  "samples": [
+    {
+      "file": "references/assets/samples/testloop/phrase.wav",
+      "sha256": "d19cb08ecdf0d082ae4f3f22eaad7b8e9775fd3f4ee31984be147090026acb6a",
+      "seconds": 2.0
+    },
+    {
+      "file": "references/assets/samples/testvoice/phrase.wav",
+      "sha256": "4373ab0f1719082a930741db09e139dc4eb3e6068dc1ac6b3ddfe52a4294e1c3",
+      "seconds": 2.4851875
+    }
+  ],
+  "comparisons": {
+    "practical-reconstruction-v001": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v001-full.wav",
+        "sha256": "e7d6632512ef21dd2c450a80ba0903c25cf9a5592cad47ddafb78b4d82d91ca2"
+      },
+      "candidate": {
+        "path": "projects/practical-dogfood/renders/practical-v001-reconstructed.wav",
+        "sha256": "7f704efc00e0eea71de74dae81990f661199db0b56383f16825fee64685478ab"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -32.24719895935549,
+      "residual_rms_dbfs": -51.511184762542214,
+      "residual_relative_db": -32.62202074234425,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "practical-repeat-v001": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v001-full.wav",
+        "sha256": "e7d6632512ef21dd2c450a80ba0903c25cf9a5592cad47ddafb78b4d82d91ca2"
+      },
+      "candidate": {
+        "path": "projects/practical-dogfood/renders/practical-v001-repeat.wav",
+        "sha256": "f3ca982810ef419d2ee0f5654a24a35dfe92a25484457860ad34831a94bbff94"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -33.283831724812856,
+      "residual_rms_dbfs": -51.32098243112723,
+      "residual_relative_db": -32.43181841092926,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "practical-dry-repeat-v003": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v003-dry-full.wav",
+        "sha256": "72b8b5409040ad9bd272b5ef818d4b530d6f5e2e04df5b4097ba93b86677c20b"
+      },
+      "candidate": {
+        "path": "projects/practical-dogfood/renders/practical-v003-dry-repeat.wav",
+        "sha256": "18ed2260d7209009ce6ca8d110075bc4dd0fadd28994278dcdeebcee15837c2d"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -90.30899869919436,
+      "residual_rms_dbfs": -133.17314334047128,
+      "residual_relative_db": -114.28137301348042,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    }
+  },
+  "metrics": {
+    "v001-full": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/renders/practical-v001-full.wav",
+      "sha256": "e7d6632512ef21dd2c450a80ba0903c25cf9a5592cad47ddafb78b4d82d91ca2",
+      "seconds": 28.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -2.0836773689515695,
+      "rms_dbfs": -18.889164020197967,
+      "samples_at_or_above_full_scale": 0,
+      "bpm_supplied": 120,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 24.785770833333334,
+          "end_seconds": 28.0
+        }
+      ],
+      "integrated_lufs": -15.21,
+      "true_peak_dbtp": -2.08,
+      "loudness_range_lu": 5.0,
+      "lr_correlation": 0.9987002418347041,
+      "mono_rms_dbfs": -18.89198739543961
+    },
+    "v001-drums": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/renders/practical-v001-drums.wav",
+      "sha256": "d6bfcbe8523ec7a7e9101d5a1671dffffb5d288bab6c342253cd79716400e1b6",
+      "seconds": 28.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -2.7098421123003424,
+      "rms_dbfs": -19.35119674455924,
+      "samples_at_or_above_full_scale": 0,
+      "bpm_supplied": 120,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 8.73125,
+          "end_seconds": 12.0000625
+        },
+        {
+          "start_seconds": 24.73125,
+          "end_seconds": 28.0
+        }
+      ],
+      "integrated_lufs": -15.37,
+      "true_peak_dbtp": -2.71,
+      "loudness_range_lu": 4.7,
+      "lr_correlation": 0.9990459923178463,
+      "mono_rms_dbfs": -19.353270632111812
+    },
+    "v001-music": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/renders/practical-v001-music.wav",
+      "sha256": "50d014c56d0d762cbb1adbbcd71dcde4339f6ac6e9f12e2b49028b3343726992",
+      "seconds": 28.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -20.2631881408989,
+      "rms_dbfs": -39.02288833556552,
+      "samples_at_or_above_full_scale": 0,
+      "bpm_supplied": 120,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 24.5356875,
+          "end_seconds": 28.0
+        }
+      ],
+      "integrated_lufs": -36.88,
+      "true_peak_dbtp": -20.25,
+      "loudness_range_lu": 3.1,
+      "lr_correlation": 0.9966851196699181,
+      "mono_rms_dbfs": -39.030153369482356
+    },
+    "v001-samples": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/renders/practical-v001-samples.wav",
+      "sha256": "c071a84582cb07d16c074f6c19197d836a2fa4f15b352cfdf22fa8f2fa8c5d3a",
+      "seconds": 28.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -10.2777856463429,
+      "rms_dbfs": -30.0405716015163,
+      "samples_at_or_above_full_scale": 0,
+      "bpm_supplied": 120,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 4.0001875
+        },
+        {
+          "start_seconds": 4.509875,
+          "end_seconds": 4.750041666666666
+        },
+        {
+          "start_seconds": 5.000333333333334,
+          "end_seconds": 5.250020833333333
+        },
+        {
+          "start_seconds": 5.759791666666667,
+          "end_seconds": 6.0001875
+        },
+        {
+          "start_seconds": 9.069895833333334,
+          "end_seconds": 12.000125
+        },
+        {
+          "start_seconds": 21.069895833333334,
+          "end_seconds": 28.0
+        }
+      ],
+      "integrated_lufs": -23.66,
+      "true_peak_dbtp": -10.28,
+      "loudness_range_lu": 5.0,
+      "lr_correlation": 0.9945766541843539,
+      "mono_rms_dbfs": -30.052455853140515
+    },
+    "v002-full": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/renders/practical-v002-full.wav",
+      "sha256": "ca6e806df79b492c2044fb4165d41d3264e973517e3335969339c0906b02ce86",
+      "seconds": 28.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -2.174108574496303,
+      "rms_dbfs": -18.894322364536002,
+      "samples_at_or_above_full_scale": 0,
+      "bpm_supplied": 120,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [
+        {
+          "start_seconds": 24.774520833333334,
+          "end_seconds": 28.0
+        }
+      ],
+      "integrated_lufs": -15.22,
+      "true_peak_dbtp": -2.16,
+      "loudness_range_lu": 5.0,
+      "lr_correlation": 0.9986230371742097,
+      "mono_rms_dbfs": -18.8973134488546
+    }
+  },
+  "matched": {
+    "target_lufs": -15.22,
+    "copies": [
+      {
+        "source_sha256": "e7d6632512ef21dd2c450a80ba0903c25cf9a5592cad47ddafb78b4d82d91ca2",
+        "file": "01-practical-v001-full.wav",
+        "gain_db": -0.009999999999999787
+      },
+      {
+        "source_sha256": "ca6e806df79b492c2044fb4165d41d3264e973517e3335969339c0906b02ce86",
+        "file": "02-practical-v002-full.wav",
+        "gain_db": 0.0
+      }
+    ],
+    "method": "constant attenuation, no compression"
+  },
+  "review": {
+    "directory": "work/practical-review-v002",
+    "finish_reason": "stop",
+    "cost_usd": 0.015716
+  }
+}

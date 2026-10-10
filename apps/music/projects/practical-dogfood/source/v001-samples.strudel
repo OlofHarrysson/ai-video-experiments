@@ -1,0 +1,17 @@
+// Practical tooling beat v001 — 120 BPM, export cycles 2–16 at 48000 Hz
+// Import references/assets/samples first: testvoice and testloop.
+setcpm(120/4)
+const hats = .11
+const rhythm = "<0!2 1!4 0!2 1!6 0!2>"
+const harmony = "<0!2 1!12 0!2>"
+
+_$: s("bd*4").bank("RolandTR909").gain(.55).orbit(1).mask(rhythm)
+_$: s("~ cp ~ cp").bank("RolandTR909").gain(.22).room(.12).orbit(1).mask(rhythm)
+_$: s("hh*8").bank("RolandTR909").gain(hats).swingBy(.10,4).pan(.6).room(.12).orbit(1).mask(rhythm)
+_$: s("~ ~ ~ oh").bank("RolandTR909").gain(.1).orbit(1).mask(rhythm)
+
+_$: note("<c2 a1 f2 g1>").struct("x ~ x ~ ~ x ~ x").s("sawtooth").lpf(550).attack(.005).decay(.16).sustain(.05).release(.07).gain(.16).orbit(1).mask(rhythm)
+_$: note("<[c4,e4,g4] [a3,c4,e4] [f3,a3,c4] [g3,b3,d4]>").s("triangle").attack(.02).decay(.4).sustain(.12).release(.25).gain(.11).room(.12).orbit(1).mask(harmony)
+
+$: s("testvoice").slice(8,"0 1 ~ 3 ~ 5 6 ~").clip(1).gain(.7).room(.12).orbit(1).mask("<0!4 1!2 0!2 1!4 0!4>")
+$: s("testloop").slice(8,"0 ~ 3 ~ 4 ~ 7 ~").speed("<1 1 -1 1>").gain(1.5).orbit(1).mask("<0!8 1!4 0!4>")

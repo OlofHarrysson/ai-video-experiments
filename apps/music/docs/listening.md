@@ -16,6 +16,8 @@ Codex in this session can inspect the images and numbers, but playback in the br
 
 Completed 2026-10-10; see the [validation study](../projects/tooling-validation/README.md). Broad critique detected silence but missed the injected dropout. A focused timeline question subsequently located 8–10 seconds correctly and reported no silence in the original. Use local measurements for objective defects; the model's broader musical critique remains unvalidated.
 
+A subsequent [28-second practical beat](../projects/practical-dogfood/README.md) showed the limit of that result: a focused question detected voice and percussion dropout/return, but placed the actual 8–12-second drum break at about 11–14 seconds. Treat model timestamps as approximate hypotheses even after a simple control passes.
+
 `work/calibration/` contains four anonymous clips made from our own retained Window Seat render: original, complete silence, a two-second dropout and severe low-pass filtering. `answer-key.json` records the mapping but is not sent to the reviewer. These are conspicuous controls, not a music-understanding benchmark. The original and altered clips have equal duration; their loudness is deliberately not matched because silence/filtering are part of these first test conditions.
 
 1. Check that the key is installed without printing it. Use the four review calls below, substituting each anonymous filename and a unique output directory. Each receives the same neutral prompt from `music.py`.

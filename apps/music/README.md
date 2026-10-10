@@ -2,7 +2,7 @@
 
 A small production workspace for original Strudel music: preserve source, export WAVs, inspect mixes and stems, ask an audio model for observations, and revise deliberately. Olof directs taste; the assistant owns composition tooling and initial technical review.
 
-The current goal is to improve the tooling using simple music as test material. Local inspection, stereo export and synchronized stem reconstruction have been exercised end to end. Real OpenRouter audio input works; broad critique was unreliable, while a focused timeline prompt detected a known dropout. See [current status](docs/status.md) and the [validation study](projects/tooling-validation/README.md).
+The current goal is to improve the tooling using simple music as test material. Local inspection, stereo export, stem reconstruction and local voice/music sampling have been exercised end to end. Real OpenRouter audio input works, but timing accuracy remains limited on fuller music. See [current status](docs/status.md), the [initial validation](projects/tooling-validation/README.md) and [practical dogfood](projects/practical-dogfood/README.md).
 
 ## Setup
 
@@ -48,7 +48,11 @@ uv run --locked python music.py compare projects/example/renders/full.wav projec
 4. Make a short representative excerpt. Review audio with the workflow below and compare before/after copies at matched loudness.
 5. Change one musical issue, render under a new version, and record what changed and why. Show Olof a small number of actual playable candidates.
 
-The browser exporter was verified on Window Seat and two eight-second fixtures. Dry non-overlapping stems reconstructed exactly; overlapping voices with panning and independent delay reconstructed with a −96.44 dBFS RMS residual. Shared reverb, sample loading, random patterns and nonzero export starts remain outside that stem-validation scope. There is no headless Strudel render engine or automated source-separation system here.
+The browser exporter was verified on Window Seat, two eight-second fixtures and a 28-second practical beat. Dry non-overlapping stems reconstructed exactly; overlapping voices with panning and independent delay reconstructed with a −96.44 dBFS RMS residual. The practical beat tested sample loading and nonzero export starts. Shared reverb produced variation even between unchanged full renders, so do not demand exact wet-stem reconstruction. See the studies for measured limits. There is no headless Strudel render engine or automated source-separation system here.
+
+## Local voice and music samples
+
+Put retained WAV/MP3/OGG files in `projects/<study>/references/assets/samples/<sound-name>/`, then use Strudel **sounds → import-sounds → import sounds folder** on the `samples` folder. Play them with `s("sound-name")`; `slice` selects/reorders segments, and negative `speed` reverses playback. Local import, speech chopping and music-slice reversal were verified in the practical study. Keep originals on disk; browser storage is not a backup. This does not extract a voice from a mixed song. The published JavaScript packages also offer a route to direct rendering, documented in the practical study, but that integration is not implemented here.
 
 ## OpenRouter audio review
 
