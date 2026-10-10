@@ -1,0 +1,235 @@
+{
+  "case": "d03-crisp-digital",
+  "new_paintings": 17,
+  "total_paintings": 18,
+  "generation_verified": true,
+  "comparison": {
+    "verified": true,
+    "new_paintings": 17,
+    "only_rendering_language_changed": true,
+    "first_warp_pixels_identical": true,
+    "shared_opening_sha256": "0fca81927472316a6d52362a34c2a3a6bd7cfbd2c49baa3355cc838b54a48ada",
+    "first_warp_pixel_sha256": "6dfe47e16be5dd8f95eef0d6e7e383927939a93ae2294a4bf04d4fbce0fb1f56",
+    "frames": [
+      {
+        "source_frame": 12,
+        "seed": 1011101,
+        "sigmas": [
+          0.6016666666666667,
+          0.5142686525977028,
+          0.31176468970089444,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 24,
+        "seed": 1011102,
+        "sigmas": [
+          0.6033333333333333,
+          0.5156932195024055,
+          0.31262830379978884,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 36,
+        "seed": 1011103,
+        "sigmas": [
+          0.605,
+          0.5171177864071084,
+          0.3134919178986833,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 48,
+        "seed": 1011104,
+        "sigmas": [
+          0.6066666666666667,
+          0.5185423533118111,
+          0.31435553199757776,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 60,
+        "seed": 1011105,
+        "sigmas": [
+          0.6083333333333333,
+          0.5199669202165139,
+          0.31521914609647217,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 72,
+        "seed": 1011106,
+        "sigmas": [
+          0.61,
+          0.5213914871212166,
+          0.31608276019536663,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 84,
+        "seed": 1011107,
+        "sigmas": [
+          0.6116666666666667,
+          0.5228160540259196,
+          0.3169463742942611,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 96,
+        "seed": 1011108,
+        "sigmas": [
+          0.6133333333333333,
+          0.5242406209306222,
+          0.31780998839315555,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 108,
+        "seed": 1011109,
+        "sigmas": [
+          0.615,
+          0.525665187835325,
+          0.31867360249204996,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 120,
+        "seed": 1011110,
+        "sigmas": [
+          0.6166666666666667,
+          0.5270897547400278,
+          0.3195372165909445,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 132,
+        "seed": 1011111,
+        "sigmas": [
+          0.6183333333333333,
+          0.5285143216447306,
+          0.3204008306898389,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 144,
+        "seed": 1011112,
+        "sigmas": [
+          0.62,
+          0.5299388885494334,
+          0.3212644447887333,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 156,
+        "seed": 1011113,
+        "sigmas": [
+          0.6214285714285714,
+          0.5311599458963214,
+          0.32200468544492855,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 168,
+        "seed": 1011114,
+        "sigmas": [
+          0.6228571428571429,
+          0.5323810032432096,
+          0.3227449261011238,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 180,
+        "seed": 1011115,
+        "sigmas": [
+          0.6242857142857143,
+          0.5336020605900976,
+          0.32348516675731903,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 192,
+        "seed": 1011116,
+        "sigmas": [
+          0.6257142857142857,
+          0.5348231179369857,
+          0.32422540741351424,
+          0.0
+        ]
+      },
+      {
+        "source_frame": 204,
+        "seed": 1011117,
+        "sigmas": [
+          0.6271428571428571,
+          0.5360441752838738,
+          0.3249656480697095,
+          0.0
+        ]
+      }
+    ]
+  },
+  "delivery": {
+    "verified": true,
+    "frames": 48,
+    "fps": 24,
+    "paintings": 18,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "59c82144e9d75c953545e70ba59b297852c43b802b4ad880ec81e1e9637bf4e5",
+    "retiming_sha256": "b10e23dd9caec600621eec19469f0e33be9bfdf37475daeb1a5f7faab9f08e9c",
+    "anchor_frames_sha256": "7f765ea931c670b08dc4ae35c55cb268c1c1b808336f477253d7bdd717df8029"
+  },
+  "remote_files_preserved": 242,
+  "remote_cleanup": {
+    "queue_empty": true,
+    "verified_duplicate_files_removed": 34,
+    "completed_at": "2026-10-10T17:30:30.042528+00:00"
+  },
+  "pod_cleanup": {
+    "pod_id": "mrk09di9iv66n4",
+    "deleted": true,
+    "no_pods_remain": true,
+    "verified_at": "2026-10-10T17:31:37.604913+00:00",
+    "hourly_rate": 0.89,
+    "estimated_compute_cost_upper_bound": 0.1039,
+    "retained_volume": "vd3jnbwko1"
+  },
+  "separate_external_backup": false,
+  "reviewer": {
+    "url": "http://localhost:3028/world-seed-detail",
+    "selected": [
+      "detail-baseline",
+      "detail-digital"
+    ],
+    "served": [
+      {
+        "id": "detail-baseline",
+        "sha256": "62f416ba6a1aa9a501d940eab47f2ca19a682f66e3de6b635cd03b0b572a6c7b",
+        "range_verified": true
+      },
+      {
+        "id": "detail-digital",
+        "sha256": "59c82144e9d75c953545e70ba59b297852c43b802b4ad880ec81e1e9637bf4e5",
+        "range_verified": true
+      }
+    ],
+    "browser_playback_reached_frame": 47,
+    "painting_step_frame": 3
+  }
+}

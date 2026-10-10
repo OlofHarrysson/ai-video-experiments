@@ -29,6 +29,8 @@ Fine details and small structures continue to repaint. The plane turn is a flat-
 
 [Opening detail comparison](experiments/opening-detail.md): two-second baseline, full prompt with three steps, and full prompt with six steps. Olof finds them very similar and tentatively prefers the original, which remains the working choice. The follow-up audit checks exact prompts and official Krea Turbo guidance for style and quality language. The complete film remains v004.
 
+[Digital rendering comparison](experiments/digital-detail.md): the same original opening, camera and sampling with only the travelling prompts' rendering phrases changed. The new two-second test has finer petal linework and cleaner contours, but also flatter graphic surfaces; it does not establish an overall fidelity improvement. Olof's playback judgment is pending. The reviewer opens the original and digital test together; earlier comparisons remain available.
+
 [Opening with sustained rhythm](cuts/v003.md) · [First continuous opening](cuts/v002.md) · [Original opening with dissolve](cuts/v001.md) · [All cuts](cuts/README.md) · [Three visual targets](exports/world-stills.jpg)
 
 Human direction: highly detailed unreal worlds, distinct styles and palettes, purposeful travelling motion and surprising transformations. Olof prefers the cut-free opening and its revised rhythm, but found it too dominated by zoom. Strong motion is welcome; repeated acceleration and braking are not. Earlier reference recommendations were not considered a higher quality bar than our own films. All prior stills, configurations and takes remain preserved.

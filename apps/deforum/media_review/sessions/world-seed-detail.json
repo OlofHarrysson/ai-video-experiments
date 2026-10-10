@@ -1,6 +1,9 @@
 {
   "title": "World Seed — keeping the detail",
-  "selected": ["detail-baseline", "detail-full-prompt", "detail-six-steps"],
+  "selected": [
+    "detail-baseline",
+    "detail-digital"
+  ],
   "clips": [
     {
       "id": "detail-baseline",
@@ -22,6 +25,13 @@
       "note": "Same full description, with six smaller sampling steps.",
       "details": "Only the sampling schedule changes from the full-description case. Each original Euler interval is split at its midpoint, preserving the original sigma points and noise range. Same opening, camera, seeds and finishing. Seventeen new paintings; two seconds, native 1536×1024, 24 fps. Later image differences include accumulated feedback divergence.",
       "source": "projects/world-seed/exports/v002/d02-full-prompt-six-steps/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "detail-digital",
+      "label": "Crisp digital illustration",
+      "note": "Same scene and sampling; a more precise digital rendering prompt.",
+      "details": "Only the rendering phrases change from the original travelling descriptions. The original starting image, camera, palette, noise, seeds, Krea model and three Euler intervals are retained. Seventeen new repaints, eighteen paintings total; two seconds at native 1536×1024 and 24 fps, with identical RIFE finishing. The first still is shared, so this tests repaint conditioning, not a newly generated opening.",
+      "source": "projects/world-seed/exports/v002/d03-crisp-digital/faster/rife-moving-tail/preview.mp4"
     }
   ]
 }
