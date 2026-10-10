@@ -40,3 +40,8 @@ The planned thirty-second storyboard is in the project README. Review the ten-se
 ### Reproduction
 
 Run from `apps/deforum/`. Configurations are immutable per case; new creative choices need new cases. `film.py` uses shared `deforum_lab` mechanics and stores all run evidence under the project. `finish.py` uses the existing local RIFE runtime. `assemble.py` takes the two selected `faster/rife-moving-tail/preview.mp4` files and `--version v001`, refusing to overwrite an existing cut. Cloud execution needs a new owned deployment; the session's pod is deleted.
+
+
+## Human feedback — 2026-10-10
+
+Olof: “That's good but I don't want to have any cuts in the video.” The first version remains preserved. Continue the original jungle-to-architecture painting chain to ten seconds, replacing the dissolved independent city shot. [Continuous revision](continuous.md).
