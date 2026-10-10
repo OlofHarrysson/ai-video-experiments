@@ -1,0 +1,15 @@
+{
+  "selected_video": "output-delivery/make-it-move.mp4",
+  "sha256": "9ed170f785ee991032418c03154393c898a960a3baba2fc6384cdd3c6cfefab3",
+  "bytes": 5200233,
+  "duration_seconds": 12,
+  "width": 1600,
+  "height": 900,
+  "fps": 24,
+  "frames": 288,
+  "audio": false,
+  "render_report": "output-delivery/report.json",
+  "screening_report": "output-screen-delivery/report.json",
+  "review": "review.html",
+  "source_commit": "See repository Git history for this file"
+}
