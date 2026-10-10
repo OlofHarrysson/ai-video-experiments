@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "6beabdcdb0f8ea90fedca0372346c0a7c48c7cd9",
+  "modules": [
+    "capture",
+    "geometry",
+    "review",
+    "workflow"
+  ],
+  "files": {
+    "bin/design-harness.mjs": "2675264324b01bb5298d17191f8c585096cd45c64ba123aa6ca54603bdc218f8",
+    "compatibility.json": "e301fc373928e97064e40e44a64e8634009f9f630a7b3e6d62431e428e9b527a",
+    "package.json": "137091b18c92d6c74e472325b92e4c29ede03d63c974451d9701d4de20ade8de",
+    "modules/capture/index.mjs": "3d3d883a456daa5a0d6b1df2e6048a0649a07fcdb5c73aa0f315dadc8c2b6760",
+    "modules/core/browser.mjs": "3ed2e8228cd96e0692e7f92fee5b648d23069eb4583a16348c9d846db12d2104",
+    "modules/core/capture-files.mjs": "40545be967bade3660691d6a7d0663f5d8a9becdbb9946f3ac580481630399a7",
+    "modules/core/evidence.d.mts": "475ca92283f6f38f20253e03922c0585647da54d3d851f261dd7c370c6423866",
+    "modules/core/evidence.mjs": "5bf1658f5e20ffb82e748bbb098181d3a9ded930ea424053f82201202dcbea48",
+    "modules/core/plan.mjs": "9c71e25570cdcbd96fc534e56127967bd2fe1dbdae3055e426f4c17f807af3cf",
+    "modules/core/run.mjs": "e02774aed022b0a58c7c0dfddcc7186af36d44239915aa4886e1ecc512389933",
+    "modules/core/source.mjs": "5874d4172240085c65b6069c8a7aa599443b9558b80d65281e1c29a52c4609bc",
+    "modules/geometry/collect.mjs": "461bfb95618cd1d9e88d1e0e5ba9e94775b1b66c340e706dd6a8c873813c19f7",
+    "modules/geometry/observe.d.mts": "4f48df5c7718a22e67a8e56b52e914af1c64f6d0e9b0480deffbfaea5f686169",
+    "modules/geometry/observe.mjs": "88d4b77499c9b7af953968a7206b7b6c648800b11407b2e54c15e6e142a2f5d2",
+    "modules/geometry/report.mjs": "3509ac8ae379293f781c41135b60aeaf212c84906667664a3629519a5f68ba77",
+    "modules/review/README.md": "b207f35851138e4af90a6ab50cf3cbfd4b9a40bfe316267a5223c8ecfd8ae0f9",
+    "modules/review/build.mjs": "adf241499185900c7db15c785a5c779cd562df62b4b38ff2b1d063acbb5ac952",
+    "modules/review/template.html": "518d507728ce55c21e4977730ca5fcf18216e1f967a80df48692556669cbee07",
+    "modules/workflow/README.md": "b4aadb00d15bae2a95ed9fe57b64fa6d5bc3ba97674157ac1ad9ce033e1ef9dc",
+    "modules/workflow/design-foundations.md": "83dded7c8a76aa8e39e3186842dee0eab2ed6d1e53c329457d39d7b86c0f2715",
+    "modules/workflow/design-reference.md": "1ecd2ee87651a4fdaff9ffe708b978751f6e14d72eb52cc2ac5da975e7ff4005"
+  },
+  "validatedRevision": "6beabdcdb0f8ea90fedca0372346c0a7c48c7cd9",
+  "validation": {
+    "status": "passed",
+    "command": [
+      "npm",
+      "run",
+      "design:validate"
+    ],
+    "cwd": "/Users/olof/git/ai-video-experiments/apps/music",
+    "exitCode": 0
+  }
+}

@@ -1,38 +1,44 @@
-"""Loopback-only stem player; serves declared audio and appends study feedback."""
+"""Loopback stem player with acknowledged shared browser controls."""
 
 import argparse
 import json
+import math
 import os
 import threading
-from datetime import UTC, datetime
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 from uuid import uuid4
 
 WEB = Path(__file__).resolve().parent
-LOCK = threading.Lock()
 
 
 def make_handler(bundle):
     manifest = json.loads((bundle / "manifest.json").read_text())
-    files = {
-        "/": WEB / "index.html",
-        "/app.js": WEB / "app.js",
-        "/engine.js": WEB / "engine.js",
-        "/style.css": WEB / "style.css",
-        "/manifest.json": bundle / "manifest.json",
-    }
-    for palette in manifest["palettes"]:
-        for track in palette["tracks"].values():
-            path = (bundle / track["url"].lstrip("/")).resolve()
-            if not path.is_relative_to(bundle.resolve()):
-                raise ValueError("Audio escapes bundle")
-            files[track["url"]] = path
-    feedback = bundle / "feedback.jsonl"
+    files = {"/": WEB / "index.html", "/manifest.json": bundle / "manifest.json"}
+    for name in ["app.js", "engine.js", "style.css"]:
+        files[f"/{name}"] = WEB / name
+    ids = {t["id"] for t in manifest["tracks"]}
+    for track in manifest["tracks"]:
+        path = (bundle / track["url"].lstrip("/")).resolve()
+        if not path.is_relative_to(bundle.resolve()):
+            raise ValueError("Audio escapes bundle")
+        files[track["url"]] = path
+    lock = threading.Lock()
+    shared = {"session": None, "state": None, "seen": 0, "sequence": 0, "ack": 0}
+    commands = []
 
     class Handler(BaseHTTPRequestHandler):
+        def log_message(self, fmt, *args):
+            # Successful heartbeats are not actionable server logs.
+            if self.path == "/api/sync" and len(args) > 1 and str(args[1]) == "200":
+                return
+            super().log_message(fmt, *args)
+
         def reply(self, code, body, kind="application/json"):
+            if not isinstance(body, bytes):
+                body = json.dumps(body).encode()
             self.send_response(code)
             self.send_header("Content-Type", kind)
             self.send_header("Content-Length", str(len(body)))
@@ -43,17 +49,20 @@ def make_handler(bundle):
 
         def do_GET(self):
             route = urlsplit(self.path).path
-            if route == "/api/feedback":
-                with LOCK:
-                    rows = (
-                        [json.loads(line) for line in feedback.read_text().splitlines()]
-                        if feedback.exists()
-                        else []
+            if route == "/api/state":
+                with lock:
+                    return self.reply(
+                        200,
+                        {
+                            "connected": time.monotonic() - shared["seen"] < 4,
+                            "state": shared["state"],
+                            "last_applied_command": shared["ack"],
+                            "pending_commands": len(commands),
+                        },
                     )
-                return self.reply(200, json.dumps(rows).encode())
             path = files.get(route)
             if path is None or not path.is_file():
-                return self.reply(404, b'{"error":"Not found"}')
+                return self.reply(404, {"error": "Not found"})
             kinds = {
                 ".html": "text/html; charset=utf-8",
                 ".js": "text/javascript",
@@ -64,47 +73,91 @@ def make_handler(bundle):
             return self.reply(200, path.read_bytes(), kinds[path.suffix])
 
         def do_POST(self):
-            if self.path != "/api/feedback":
-                return self.reply(404, b"{}")
             origin = self.headers.get("Origin")
             if origin and urlsplit(origin).netloc != self.headers.get("Host"):
-                return self.reply(403, b'{"error":"Origin rejected"}')
+                return self.reply(403, {"error": "Origin rejected"})
+            if self.path not in {"/api/connect", "/api/sync", "/api/control"}:
+                return self.reply(404, {"error": "Not found"})
             try:
-                length = int(self.headers.get("Content-Length", 0))
-                if not 0 < length <= 10000:
-                    raise ValueError("Invalid size")
-                item = json.loads(self.rfile.read(length))
-                note = str(item["note"]).strip()
-                if not 0 < len(note) <= 2000:
-                    raise ValueError("Write a note under 2000 characters")
-                palette = item["palette"]
-                if palette not in [p["id"] for p in manifest["palettes"]]:
-                    raise ValueError("Unknown palette")
-                position = float(item["time"])
-                if not 0 <= position <= manifest["duration"]:
-                    raise ValueError("Invalid time")
-                ids = {t["id"] for t in manifest["tracks"]}
-                muted, solo = item["muted"], item["solo"]
-                if (
-                    not isinstance(muted, list)
-                    or not isinstance(solo, list)
-                    or not set(muted + solo) <= ids
-                ):
-                    raise ValueError("Invalid sounds")
-                entry = {
-                    "id": str(uuid4()),
-                    "created_at": datetime.now(UTC).isoformat(),
-                    "note": note,
-                    "palette": palette,
-                    "time": round(position, 3),
-                    "muted": muted,
-                    "solo": solo,
-                }
-                with LOCK, feedback.open("a") as f:
-                    f.write(json.dumps(entry) + "\n")
-                self.reply(201, json.dumps(entry).encode())
+                size = int(self.headers.get("Content-Length", 0))
+                if not 0 < size <= 20000:
+                    raise ValueError("Invalid request size")
+                item = json.loads(self.rfile.read(size))
+                with lock:
+                    if self.path == "/api/connect":
+                        shared.update(
+                            session=str(uuid4()), state=None, seen=0, ack=0, sequence=0
+                        )
+                        commands.clear()
+                        return self.reply(200, {"session": shared["session"]})
+                    if self.path == "/api/sync":
+                        if (
+                            item.get("session") != shared["session"]
+                            or not shared["session"]
+                        ):
+                            return self.reply(
+                                409,
+                                {
+                                    "error": "Shared control moved to another tab. Reload to reconnect."
+                                },
+                            )
+                        ack = item["lastCommand"]
+                        if (
+                            not isinstance(ack, int)
+                            or not shared["ack"] <= ack <= shared["sequence"]
+                        ):
+                            raise ValueError("Invalid acknowledgement")
+                        state = item["state"]
+                        if not isinstance(state, dict):
+                            raise ValueError("Invalid state")
+                        shared.update(state=state, seen=time.monotonic(), ack=ack)
+                        commands[:] = [c for c in commands if c["sequence"] > ack]
+                        return self.reply(200, {"commands": commands})
+                    if time.monotonic() - shared["seen"] >= 4 or not shared["state"]:
+                        return self.reply(
+                            409, {"error": "Open the player before controlling it"}
+                        )
+                    action = item.get("action")
+                    if action not in {
+                        "play",
+                        "pause",
+                        "seek",
+                        "only",
+                        "enabled",
+                        "reset",
+                        "volume",
+                        "loop",
+                    }:
+                        raise ValueError("Unknown action")
+                    command = {"action": action}
+                    if action in {"only", "enabled"}:
+                        track = item.get("track")
+                        if track not in ids and not (
+                            action == "only" and track is None
+                        ):
+                            raise ValueError("Unknown sound")
+                        command["track"] = track
+                    if action in {"enabled", "loop"}:
+                        if not isinstance(item.get("value"), bool):
+                            raise ValueError("Expected boolean value")
+                        command["value"] = item["value"]
+                    if action in {"seek", "volume"}:
+                        value = float(item["value"])
+                        limit = manifest["duration"] if action == "seek" else 1
+                        if not math.isfinite(value) or not 0 <= value <= limit:
+                            raise ValueError("Value out of range")
+                        command["value"] = value
+                    if len(commands) >= 32:
+                        return self.reply(
+                            409,
+                            {"error": "Wait for the browser to apply pending controls"},
+                        )
+                    shared["sequence"] += 1
+                    command["sequence"] = shared["sequence"]
+                    commands.append(command)
+                    return self.reply(202, {"queued": command["sequence"]})
             except (ValueError, KeyError, TypeError) as error:
-                self.reply(400, json.dumps({"error": str(error)}).encode())
+                self.reply(400, {"error": str(error)})
 
     return Handler
 

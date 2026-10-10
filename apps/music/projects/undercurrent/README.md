@@ -1,8 +1,8 @@
 # Undercurrent
 
-**[Open the sound player](http://localhost:3046/)** to mute/solo eight parts and save feedback. [Player runbook](../../player/README.md). Olof identified **Chord stabs & echoes** as the disliked instrument. **[Haze · new chords](haze.md)** changes only that sound; all other parts remain identical to Current. Haze is selected in the player, awaiting his comparison.
+**[Open the sound player](http://localhost:3046/)** to turn parts on/off or hear Only one part. The original and revised chord rhythms are separate rows; steady rhythm is initially on. Olof clarified that the original instrument was okay, but its rhythm/echoes disturbed the flow, and Haze was worse. [Rhythm revision and evidence](flow.md), [player and shared controls](../../player/README.md), [user stories and design](../../player/design/README.md).
 
-**Current comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
+**Previous comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
 
 [Play v002](renders/v002/master/render.wav) — 30 seconds, 128 BPM, 48 kHz stereo. A new study responding to Olof's preference for Negative Space and request for a stable foundation with related detail and development.
 

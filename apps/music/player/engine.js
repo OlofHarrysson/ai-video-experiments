@@ -12,7 +12,7 @@ export class Mixer {
     const raw = this.offset + Math.max(0, this.context.currentTime - this.started);
     return this.loop ? raw % this.duration : Math.min(raw, this.duration);
   }
-  audible(id) { return !this.muted.has(id) && (!this.solo.size || this.solo.has(id)); }
+  audible(id) { return this.solo.size ? this.solo.has(id) : !this.muted.has(id); }
   updateGains() {
     const now = this.context.currentTime;
     for (const {id, gain} of this.nodes) {
@@ -50,7 +50,7 @@ export class Mixer {
     const position = this.position(); this.offset = position; this.started = this.context.currentTime;
     this.loop = value; for (const n of this.nodes) n.source.loop = value;
   }
-  mute(id) { this.muted.has(id) ? this.muted.delete(id) : this.muted.add(id); this.solo.delete(id); this.updateGains(); }
-  isolate(id) { this.solo.has(id) ? this.solo.delete(id) : this.solo.add(id); this.muted.delete(id); this.updateGains(); }
+  mute(id) { this.muted.has(id) ? this.muted.delete(id) : this.muted.add(id); this.solo.clear(); this.updateGains(); }
+  isolate(id) { const wasOnly = this.solo.has(id); this.solo.clear(); if (!wasOnly) this.solo.add(id); this.updateGains(); }
   reset() { this.muted.clear(); this.solo.clear(); this.updateGains(); }
 }

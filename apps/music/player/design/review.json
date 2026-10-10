@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "music-player-refinement",
+  "before": {
+    "records": {
+      "desktop-context": "evidence/before/desktop-context.json",
+      "mobile-context": "evidence/before/mobile-context.json",
+      "desktop-detail": "evidence/before/desktop-detail.json",
+      "mobile-detail": "evidence/before/mobile-detail.json"
+    }
+  },
+  "after": {
+    "records": {
+      "desktop-context": "evidence/after/desktop-context.json",
+      "mobile-context": "evidence/after/mobile-context.json",
+      "desktop-detail": "evidence/after/desktop-detail.json",
+      "mobile-detail": "evidence/after/mobile-detail.json"
+    }
+  },
+  "targets": [
+    {
+      "id": "desktop",
+      "label": "Desktop"
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile"
+    }
+  ],
+  "views": [
+    {
+      "id": "context",
+      "label": "Player",
+      "liveUrl": "http://localhost:3046/",
+      "captures": {
+        "desktop": {
+          "before": "desktop-context",
+          "after": "desktop-context"
+        },
+        "mobile": {
+          "before": "mobile-context",
+          "after": "mobile-context"
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "label": "Sound controls",
+      "liveUrl": "http://localhost:3046/",
+      "captures": {
+        "desktop": {
+          "before": "desktop-detail",
+          "after": "desktop-detail"
+        },
+        "mobile": {
+          "before": "mobile-detail",
+          "after": "mobile-detail"
+        }
+      }
+    }
+  ]
+}

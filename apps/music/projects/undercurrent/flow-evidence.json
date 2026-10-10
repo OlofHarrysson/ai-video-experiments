@@ -1,0 +1,87 @@
+{
+  "source_sha256": "756c3b81e43f5d0689a0a1a5c42790eb26af3fb43273e567fec781d87cd2e66f",
+  "unchanged_parts": {
+    "kick": "794e3bd225487d9669c12dfcc645a0dd55f94e2aedc17d4514f6693a5d323951",
+    "bass": "5be8baedd99c84d1d3cb0e0f3914e47f7546a0c880e324b2ee79f93dd8897421",
+    "clap": "595248dd5ff10ecc2c2c3300f37c0f142920bcbebb6b8ea2468843a94d76fe49",
+    "hat": "a54b818fa65a9206cfd4c987bf3ff79cd29c60eacbf9f66c9ae5c27fa4f6beb7",
+    "openhat": "f3ad088a4aa458342bd5092fe5a1973197edd1af12370ec322c9055786ee15cb",
+    "brush": "1014b34adacfe65daa8cbb92768a82c3c1cbba6380be1530e3b0d8f310b8dd87",
+    "air": "cfcf0cf279cfa171f75e874998c485fa81825ae28a583cf79ceac5908c5ebf6a"
+  },
+  "unchanged_source_labels": [
+    "kick",
+    "clap",
+    "hat",
+    "brush",
+    "openhat",
+    "sub",
+    "bass",
+    "landing",
+    "fill",
+    "intake"
+  ],
+  "same_samples": [
+    {
+      "name": "ucbreath",
+      "index": 0,
+      "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/references/assets/samples/ucbreath/00.wav",
+      "sha256": "4b94b90a75f8c0da8fe912e9e44fad828ef15ed844fffe4f46441c45b2addb84",
+      "bytes": 135404,
+      "route": "/samples/0.wav"
+    },
+    {
+      "name": "ucbrush",
+      "index": 0,
+      "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/references/assets/samples/ucbrush/00.wav",
+      "sha256": "55a0be64ab6c0aff3f828765183b3df7bb3acdb876c2600348c6dfed0f64304f",
+      "bytes": 31724,
+      "route": "/samples/1.wav"
+    },
+    {
+      "name": "ucchord",
+      "index": 0,
+      "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/references/assets/samples/ucchord/00.wav",
+      "sha256": "5d15e2fb3fabc552eb10346091a9f90a2abd10484d46586cbe4830981a3275ff",
+      "bytes": 180044,
+      "route": "/samples/2.wav"
+    },
+    {
+      "name": "ucchord",
+      "index": 1,
+      "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/references/assets/samples/ucchord/01.wav",
+      "sha256": "e51616587eabaed7794f113f40a58fba80065d73773ea685ef65847279bae6d7",
+      "bytes": 180044,
+      "route": "/samples/3.wav"
+    }
+  ],
+  "rhythmic_onsets": 28,
+  "onset_positions_per_bar": [
+    0.25,
+    0.75
+  ],
+  "reply_onsets": 0,
+  "global_gain_unchanged": 1.0,
+  "mix": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/renders/flow-v002-chords/flow.wav",
+    "sha256": "20dfb38e01210225e33a1587afdca48ae20648bd2a521a3a2765da2c04529e20",
+    "seconds": 30.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -3.576202326360574,
+    "rms_dbfs": -18.166069091202893,
+    "samples_at_or_above_full_scale": 0,
+    "sample_format": "FLOAT",
+    "pcm_rail_samples": null,
+    "pcm_rail_longest_run_frames": null,
+    "bpm_supplied": null,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -17.64,
+    "true_peak_dbtp": -3.57,
+    "loudness_range_lu": 4.3,
+    "lr_correlation": 0.9991843228378735,
+    "mono_rms_dbfs": -18.167851664845177
+  }
+}

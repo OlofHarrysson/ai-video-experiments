@@ -11,7 +11,10 @@
   "scripts": {
     "test": "node --test renderer/*.test.mjs",
     "postinstall": "node renderer/apply-patch.mjs",
-    "test:player": "node --test player/*.test.mjs"
+    "test:player": "node --test player/*.test.mjs",
+    "design:before": "node player/design/validate.mjs before",
+    "design:validate": "node player/design/validate.mjs after",
+    "design:review": "node tools/design-harness/modules/review/build.mjs player/design/review.json player/design/review.html"
   },
   "engines": {
     "node": ">=20"

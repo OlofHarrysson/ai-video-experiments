@@ -5,7 +5,7 @@ Make original, editable music with Strudel and review rendered audio before choo
 ## Start here
 
 - [README.md](README.md): setup, commands, file ownership and render workflow.
-- [player/README.md](player/README.md): local mute/solo player, runtime ownership and saved feedback.
+- [player/README.md](player/README.md): shared sound player, runtime ownership and control API.
 - [docs/status.md](docs/status.md): validation evidence, remaining work and next-chat handoff.
 - [docs/music-foundations.md](docs/music-foundations.md): practical composition and sound-design references.
 - [references/strudel/README.md](references/strudel/README.md): Strudel operating guide, export procedure and DJ_Dave study; local official documentation corpus alongside it.
@@ -21,3 +21,7 @@ Make original, editable music with Strudel and review rendered audio before choo
 - Use saved project recipes for arrangements: `render-project` owns the master/stems and inspection, `preview` extracts from completed audio to preserve effect state, and `compare-revisions` makes labelled matched copies. See the README for recipe fields and boundaries.
 - For each study or song, create `projects/<name>/README.md` for intent and decisions, `source/` for versioned Strudel code and `renders/` for ignored WAVs. Current work is the [30-second club sprint](projects/club-detail-sprint/README.md). Olof approved [Undertow](projects/undertow/README.md) v002’s sound and v003’s improved arrangement, then requested a substantial quality increase through modular collaboration. Preserve heavy bass, strong drums, sparse melody and underground edge; Olof prefers Negative Space v012 over Pressure Lock v011 and calls both an improvement, but dislikes some unspecified timbres and the beat. He wants a stable rhythmic/thematic foundation, related development and surprises mainly in details. Olof finds [Undercurrent](projects/undercurrent/README.md) structurally closer and requested sound alternatives with groove/arrangement fixed; its current comparison is Original / Smoke / Wire, with the same score, kick and bass; Latch v006 remains a preserved alternative. Soft Focus and Chrome After Rain remain rejected as game-like.
 - Validate changes with `uv run --locked pytest -q` and `uv run --locked ruff check .`; renderer changes also require `npm test`. Keep measurements and human taste separate.
+
+## Player design
+
+Follow the [player design and user stories](player/design/README.md) and installed [Design Harness workflow](tools/design-harness/modules/workflow/README.md). For UI refinements, retain matched before/after desktop/mobile evidence, inspect the PNGs and present the comparison. `npm run design:validate` checks controls and captures the running player; `npm run design:review` builds its review. Keep consumer decisions outside the managed harness.

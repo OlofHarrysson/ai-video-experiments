@@ -11,3 +11,6 @@ references/**/*.jpg
 references/strudel/sources/*.txt
 projects/*/renders/
 projects/*/references/assets/
+
+player/design/evidence/
+player/design/review.html

@@ -1,10 +1,22 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undercurrent — sound player</title><link rel="stylesheet" href="/style.css"></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Undercurrent — sound player</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css">
+</head>
 <body><main>
-<header><div><h1>Undercurrent</h1></div><label class="palette-label">Sound palette<select id="palette" aria-label="Sound palette"></select></label></header>
-<section class="transport" aria-label="Playback"><button id="play" class="primary" disabled>Loading…</button><button id="restart" aria-label="Restart">↶</button><output id="time">0:00 / 0:30</output><label class="loop"><input id="loop" type="checkbox" checked> Loop</label><label class="volume">Volume <input id="volume" type="range" min="0" max="1" step=".01" value=".8"></label></section>
-<input id="seek" type="range" min="0" max="30" step=".01" value="0" aria-label="Playback position">
-<div class="mix-heading"><p>Mute a sound to remove it. Solo to hear it on its own.</p><button id="reset">All sounds</button></div>
-<section id="tracks" aria-label="Sounds"></section>
-<p id="status" role="status">Loading sounds…</p>
-<section class="feedback"><h2>What did you notice?</h2><form id="note-form"><textarea id="note" aria-label="Listening note" rows="2" maxlength="2000" placeholder="For example: this is the sound I dislike." required></textarea><button id="save" type="submit">Save note</button></form><p id="note-context">Notes include the time, palette and selected sounds.</p><div id="notes"></div></section>
-</main><script type="module" src="/app.js"></script></body></html>
+  <header><h1>Undercurrent</h1></header>
+  <section class="transport" aria-label="Playback">
+    <button id="play" class="primary" disabled>Loading…</button>
+    <button id="restart" aria-label="Restart">↶</button>
+    <output id="time">0:00 / 0:30</output>
+    <label class="loop"><input id="loop" type="checkbox" checked> Loop</label>
+    <label class="volume">Volume <input id="volume" aria-label="Volume" type="range" min="0" max="1" step=".01" value=".8"></label>
+  </section>
+  <input id="seek" type="range" min="0" max="30" step=".01" value="0" aria-label="Playback position">
+  <div class="mix-heading"><h2>Sounds</h2><button id="reset">Reset mix</button></div>
+  <section id="tracks" aria-label="Sounds"></section>
+  <p id="status" role="status"></p>
+</main><script type="module" src="/app.js"></script></body>
+</html>

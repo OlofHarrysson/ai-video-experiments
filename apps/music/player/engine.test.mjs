@@ -36,3 +36,14 @@ test('seeking to the end stops playback instead of jumping back to the beginning
  const {mixer,sources}=setup();await mixer.play();mixer.setLoop(false);await mixer.seek(30);
  assert.equal(mixer.playing,false);assert.equal(mixer.position(),30);assert.equal(sources.length,2);
 });
+
+test('Only is exclusive and returns to the saved mix, including a muted isolated part',async()=>{
+  const {mixer,context,sources}=setup();mixer.buffers.hat={};await mixer.play();
+  mixer.mute('chord');context.currentTime=15;const position=mixer.position();
+  mixer.isolate('bass');mixer.isolate('chord');
+  assert.deepEqual([...mixer.solo],['chord']);
+  assert.deepEqual(mixer.nodes.map(n=>n.gain.gain.value),[0,1,0]);
+  mixer.isolate('chord');
+  assert.deepEqual(mixer.nodes.map(n=>n.gain.gain.value),[1,0,1]);
+  assert.equal(mixer.position(),position);assert.equal(sources.length,3);
+});

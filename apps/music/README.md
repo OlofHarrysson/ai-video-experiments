@@ -2,7 +2,7 @@
 
 A small production workspace for original Strudel music: preserve source, export WAVs, inspect mixes and stems, ask an audio model for observations, and revise deliberately. Olof directs taste; the assistant owns composition tooling and initial technical review.
 
-Current listening: **[sound player](player/README.md)** for Undercurrent. Mute or solo eight sounds, compare Current / Smoke / Wire, and save feedback with the playback time and selected sounds. Olof finds the structure closer but needs to identify an instrument he dislikes. The local Terminal Manager service is `music-player`; the handoff URL is [localhost:3046](http://localhost:3046/).
+Current listening: **[shared sound player](player/README.md)** for Undercurrent. Turn parts on/off, hear Only one sound, and compare separate original/steady chord-rhythm rows. The assistant can read actual state and control the same open player. Olof identified the chord rhythm/echoes as disruptive; the original instrument is restored while that rhythm is revised. [Design and user stories](player/design/README.md). Terminal Manager service: `music-player`; [localhost:3046](http://localhost:3046/).
 
 The current goal is to make better music while exercising the tooling on real compositions. Local inspection, stereo export, stem reconstruction and local voice/music sampling have been exercised end to end. Real OpenRouter audio input works, but timing accuracy and musical judgments remain limited. See [current status](docs/status.md), the [initial validation](projects/tooling-validation/README.md) and [practical dogfood](projects/practical-dogfood/README.md).
 
