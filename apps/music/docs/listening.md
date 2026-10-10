@@ -34,6 +34,8 @@ The subsequent [DJ_Dave reference study](../projects/dj-dave-reference-study/REA
 uv run --locked python music.py review work/calibration/CLIP.wav --out work/calibration-review-01 --send
 ```
 
+The [30-second club sprint](../projects/club-detail-sprint/README.md) exposed another limit: a sample-identical duplicate control passed, yet a later real revision comparison confidently claimed the second piece was the first played backwards. Direct sample checks disproved that story. A passing identical control is narrow evidence; independently verify concrete explanations before acting on a preference. Conversely, source changes or increased low-band RMS do not disprove a perception that the mix feels static or lacks weight.
+
 ## Sources
 
 - [OpenRouter audio inputs](https://openrouter.ai/docs/guides/overview/multimodal/audio): base64 `input_audio` on chat completions. Verified 2026-10-10.
@@ -46,7 +48,7 @@ uv run --locked python music.py review work/calibration/CLIP.wav --out work/cali
 1. Run `inspect` first. Its near-silence intervals require every channel to remain at or below −80 dBFS for at least 0.1 seconds. A detected interval may be an intentional rest; measurements do not establish artistic intent.
 2. Ask one focused listening question via `review --prompt-file`. Keep ground truth and condition labels out of the prompt for calibration. The saved `timeline-review-prompt.txt` states a measured 20-second duration; adjust this fact for other clips.
 3. Read the full response and compare objective claims with local evidence. The default broad prompt remains available for exploration, but its suggestions are hypotheses, not instructions to change a mix.
-4. Require `status: complete` and `finish_reason: stop` before treating a new adapter result as a completed response. An incomplete reply is saved separately. Completion means the provider finished, not that the response is correct. Initial pre-change receipts used `response_received`; their stored finish reasons show completion.
+4. Require `status: complete` and `finish_reason: stop` before treating a new adapter result as a completed response. An incomplete reply is saved separately. Completion means the provider finished, not that the response is correct or even answers the question. A GPT Audio calibration returned only a promise to analyze later with `finish_reason: stop`; that is a task non-answer despite valid transport completion. Initial pre-change receipts used `response_received`; their stored finish reasons show completion.
 5. Use matched playback and Olof's judgment to evaluate taste. Stem grouping, spectral analysis and model text do not substitute for a human listening verdict.
 
 Six completed requests reported $0.161604; one timed-out request has unknown cost. The retry passed with a longer timeout, without proving the cause of the timeout. Full provenance is in the validation study. The initial DJ_Dave research used text sources and captions; the later audio reference study above contains waveform-based comparisons.

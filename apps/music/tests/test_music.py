@@ -128,6 +128,7 @@ def test_live_adapter_records_cost_without_spending_limit(tone, tmp_path, monkey
                         {
                             "id": music.MODEL,
                             "architecture": {"input_modalities": ["audio"]},
+                            "supported_parameters": ["reasoning", "max_tokens"],
                             "pricing": {"completion": "0.000012", "audio": "0.000002"},
                         }
                     ]
@@ -208,6 +209,7 @@ def test_review_rejects_incomplete_result_but_preserves_cost(
                         {
                             "id": music.MODEL,
                             "architecture": {"input_modalities": ["audio"]},
+                            "supported_parameters": ["reasoning", "max_tokens"],
                         }
                     ]
                 },
@@ -256,6 +258,7 @@ def test_transport_timeout_records_unknown_outcome_without_retry(
                         {
                             "id": music.MODEL,
                             "architecture": {"input_modalities": ["audio"]},
+                            "supported_parameters": ["reasoning", "max_tokens"],
                         }
                     ]
                 },
@@ -319,6 +322,7 @@ def test_reviews_overlap_network_calls_without_corrupting_ledger(
                         {
                             "id": music.MODEL,
                             "architecture": {"input_modalities": ["audio"]},
+                            "supported_parameters": ["reasoning", "max_tokens"],
                         }
                     ]
                 },
@@ -382,3 +386,62 @@ def test_catalog_failure_records_no_paid_dispatch(tone, tmp_path, monkeypatch):
     receipt = json.loads((out / "request.json").read_text())
     assert receipt["sent"] is False and receipt["status"] == "preflight_error"
     assert methods == ["GET"] and "dispatch_at" not in receipt
+
+
+@pytest.mark.parametrize(
+    "parameters,expected",
+    [(["max_tokens"], None), (["max_tokens", "reasoning"], "high")],
+)
+def test_explicit_audio_model_uses_catalog_reasoning_capability(
+    tone, tmp_path, monkeypatch, parameters, expected
+):
+    import httpx
+
+    monkeypatch.setattr(music, "ROOT", tmp_path)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    selected = "test/full-audio-model"
+    posts = []
+
+    def respond(request):
+        if request.method == "GET":
+            return httpx.Response(
+                200,
+                json={
+                    "data": [
+                        {
+                            "id": selected,
+                            "architecture": {"input_modalities": ["audio"]},
+                            "supported_parameters": parameters,
+                        }
+                    ]
+                },
+            )
+        posts.append(json.loads(request.content))
+        return httpx.Response(
+            200,
+            json={
+                "choices": [
+                    {
+                        "message": {"content": "Controlled reply"},
+                        "finish_reason": "stop",
+                    }
+                ],
+                "usage": {"cost": 0.01},
+            },
+        )
+
+    client_class = httpx.Client
+    monkeypatch.setattr(
+        music.httpx,
+        "Client",
+        lambda **kwargs: client_class(transport=httpx.MockTransport(respond)),
+    )
+    receipt = music.review(
+        tone, tmp_path / "review", True, model_id=selected, provider="TestProvider"
+    )
+    assert receipt["model"] == selected and receipt["reasoning_effort"] == expected
+    assert posts[0]["model"] == selected
+    assert posts[0]["provider"]["only"] == ["TestProvider"]
+    assert receipt["provider_requested"] == "TestProvider"
+    assert posts[0].get("reasoning") == ({"effort": "high"} if expected else None)
+    assert posts[0]["provider"]["allow_fallbacks"] is False

@@ -359,7 +359,7 @@ def append_review_event(work, event):
         os.fsync(ledger.fileno())
 
 
-def review(path, out, send=False, prompt=PROMPT):
+def review(path, out, send=False, prompt=PROMPT, model_id=MODEL, provider=None):
     data, sr = read_audio(path)
     if len(data) / sr > MAX_SECONDS or Path(path).stat().st_size > MAX_AUDIO_BYTES:
         raise ValueError(
@@ -377,9 +377,8 @@ def review(path, out, send=False, prompt=PROMPT):
         raise ValueError("Audio exceeds full scale; fix the mix before review")
     sf.write(buffer, data, sr, format="WAV", subtype="PCM_16")
     payload = {
-        "model": MODEL,
+        "model": model_id,
         "max_tokens": MAX_TOKENS,
-        "reasoning": {"effort": "high"},
         "provider": {"require_parameters": True, "allow_fallbacks": False},
         "messages": [
             {
@@ -397,13 +396,24 @@ def review(path, out, send=False, prompt=PROMPT):
             }
         ],
     }
+    if provider:
+        payload["provider"]["only"] = [provider]
     receipt = {
-        "model": MODEL,
+        "model": model_id,
+        "provider_requested": provider,
         "source_sha256": digest(path),
+        "submitted_audio": {
+            "sha256": hashlib.sha256(buffer.getvalue()).hexdigest(),
+            "bytes": len(buffer.getvalue()),
+            "format": "PCM_16 WAV",
+            "sample_rate": sr,
+            "channels": data.shape[1],
+            "frames": len(data),
+        },
         "seconds": len(data) / sr,
         "prompt": prompt,
         "max_tokens": MAX_TOKENS,
-        "reasoning_effort": "high",
+        "reasoning_effort": "high_if_supported",
         "sent": False,
         "created_at": datetime.now(UTC).isoformat(),
     }
@@ -422,9 +432,23 @@ def review(path, out, send=False, prompt=PROMPT):
         try:
             response = client.get(API + "/models", timeout=CATALOG_TIMEOUT_SECONDS)
             response.raise_for_status()
-            model = next(m for m in response.json()["data"] if m["id"] == MODEL)
+            model = next(
+                (m for m in response.json()["data"] if m["id"] == model_id), None
+            )
+            if model is None:
+                raise ValueError(
+                    f"Model is absent from the current catalog: {model_id}"
+                )
             if "audio" not in model["architecture"]["input_modalities"]:
                 raise ValueError("Selected model no longer advertises audio input")
+            parameters = model.get("supported_parameters")
+            if not isinstance(parameters, list):
+                raise TypeError("Model catalog does not declare supported parameters")
+            if "reasoning" in parameters:
+                payload["reasoning"] = {"effort": "high"}
+                receipt["reasoning_effort"] = "high"
+            else:
+                receipt["reasoning_effort"] = None
             save_json(out / "model.json", model)
         except Exception as error:
             receipt.update(
@@ -482,6 +506,7 @@ def review(path, out, send=False, prompt=PROMPT):
         choice = choices[0] if choices else {}
         content = choice.get("message", {}).get("content")
         receipt.update(
+            provider=result.get("provider"),
             usage=result.get("usage"),
             id=result.get("id"),
             finish_reason=choice.get("finish_reason"),
@@ -587,6 +612,14 @@ def main():
             command.add_argument("--start", type=float, required=True)
             command.add_argument("--duration", type=float, required=True)
         elif name == "review":
+            command.add_argument(
+                "--provider", help="Explicit OpenRouter provider name; no fallback"
+            )
+            command.add_argument(
+                "--model",
+                default=MODEL,
+                help="Explicit OpenRouter audio-model ID; no fallback",
+            )
             command.add_argument(
                 "--prompt-file",
                 type=Path,
@@ -695,7 +728,9 @@ def main():
         result = compare(args.reference, args.candidate, args.out)
     else:
         prompt = args.prompt_file.read_text() if args.prompt_file else PROMPT
-        result = review(args.input, args.out, args.send, prompt)
+        result = review(
+            args.input, args.out, args.send, prompt, args.model, args.provider
+        )
     if result is not None:
         print(json.dumps(result, indent=2, allow_nan=False))
 
