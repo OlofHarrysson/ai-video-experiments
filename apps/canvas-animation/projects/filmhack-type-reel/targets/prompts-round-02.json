@@ -1,0 +1,39 @@
+{
+  "shared": "A single vertical 9:16 frame from a high-end kinetic typography title sequence for a film event; typography is the entire image. Flat graphic design: no 3D, no gloss, no glow, no bevels, no gradients; only crisp flat shapes and a very subtle print grain. Palette limited to black background, crimson red (#C80528), electric cyan (#00D2E6) and warm ivory. Spelled exactly as given. Keep all lettering inside the central safe area: nothing important in the top 12% or bottom 22% of the frame. No other words, no logos, no watermark, no UI, no people.",
+  "keyframes": [
+    {
+      "id": "k8-come-alone",
+      "text": "MOST PEOPLE COME ALONE.",
+      "prompt": "\"MOST PEOPLE / COME ALONE.\" drawn as one continuous hairline monoline thread in warm ivory, elegant and fragile, medium-small, centred with vast empty black around it. The single thread enters from the left frame edge, writes every letter without lifting, and its loose end trails off the right frame edge. Lonely, delicate, precise."
+    },
+    {
+      "id": "k5b-rough-cuts-paper",
+      "text": "ROUGH CUTS SCREEN",
+      "prompt": "\"ROUGH / CUTS / SCREEN\" on three lines as heavy capitals hand-cut from flat crimson paper with visibly rough scissor edges, slightly misaligned and tilted, one strip of ivory masking tape holding a letter, a flat offset cyan shadow under each letter. Bold flat collage, handmade, confident."
+    },
+    {
+      "id": "k9-free",
+      "text": "FREE.",
+      "prompt": "\"FREE.\" as enormous dot-matrix letters made of a strict grid of uniform flat cyan circles on black, so large the letters are cropped by the left and right frame edges, with unlit dots of the grid visible as very dark grey circles. Flat, graphic, a scoreboard without any glow."
+    },
+    {
+      "id": "k10-full-house",
+      "text": "SUNDAY: FULL HOUSE.",
+      "prompt": "Small ivory caps \"SUNDAY:\" above enormous \"FULL / HOUSE.\" whose letters are formed entirely from hundreds of tiny identical flat cinema-seat shapes arranged in curved rows like a theatre seating chart; the seats inside the letters are crimson, the seats outside the letters are dark grey. Precise, clever, flat."
+    },
+    {
+      "id": "k11-dates",
+      "text": "NOV 13–15 BABELSBERG",
+      "prompt": "Swiss flat poster. Enormous numerals \"13–15\" in crimson fill most of the frame, cropped slightly by the frame edges, each numeral filled with thick parallel horizontal inline stripes. \"NOV\" above and \"BABELSBERG\" below in fine hairline ivory capitals with wide letterspacing. Extreme scale contrast, strict grid."
+    },
+    {
+      "id": "k7b-end",
+      "text": "APPLY BY OCT 24 filmhack.ai",
+      "prompt": "Flat end card with extreme scale contrast. An enormous \"24\" fills most of the frame in crimson, built from thick parallel horizontal stripes, cropped by the right edge. Above it, small heavy ivory capitals \"APPLY BY OCT\". Below it, small clean \"filmhack.ai\" in cyan. Strict grid, bold and calm."
+    }
+  ],
+  "models": [
+    {"id": "openai/gpt-image-2.5-sunburst", "params": {"aspect_ratio": "9:16", "quality": "high"}},
+    {"id": "google/gemini-nano-banana-2.1", "params": {"aspect_ratio": "9:16", "resolution": "2K"}}
+  ]
+}

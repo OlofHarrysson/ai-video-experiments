@@ -1,0 +1,50 @@
+{
+  "shared": "A single vertical 9:16 frame from a high-end kinetic typography title sequence for a film event; typography is the entire image. Deep black background, subtle film grain, crisp professional lettering craft, spelled exactly as given. Keep all lettering inside the central safe area: nothing important in the top 12% or bottom 22% of the frame. No other words, no logos, no watermark, no UI, no people.",
+  "keyframes": [
+    {
+      "id": "k0-doubt",
+      "text": "make a film in 48 hours?",
+      "prompt": "Almost the whole frame is empty black. Small and intimate, left-aligned at about 60% of the frame height with a generous left margin, the lowercase phrase \"make a film in 48 hours?\" set in an elegant light italic serif with refined book-typography kerning, warm grey-ivory, about 45% of the frame width. A thin cursor bar blinks after the question mark. One hairline rule under the phrase. Faint warm halation on the letters. Quiet, hesitant, a thought nobody has said out loud yet."
+    },
+    {
+      "id": "k1-yes",
+      "text": "YES.",
+      "prompt": "The word \"YES.\" as three enormous stacked sculptural letters Y, E, S with a full stop, so large they are cropped by the left and right frame edges. Liquid chrome with mirror reflections of hot vermilion red and electric cyan studio light, deep bevels, one bright diagonal band of light sweeping across all the letters. Pressed flat under the bottom of the S, small and squashed, the italic grey phrase \"make a film in 48 hours?\" being crushed by the weight. Triumphant, loud, physical."
+    },
+    {
+      "id": "k2-marquee",
+      "text": "NO AI EXPERIENCE NEEDED",
+      "prompt": "\"NO AI / EXPERIENCE / NEEDED\" on three lines as an ornamental vintage cinema marquee sign: every letter built from rows of warm incandescent bulbs, framed by art-deco fans, arcs, stars and chasing-light borders, accents of magenta and cyan neon tubing. A few bulbs mid-flicker. Centred, glowing against black, generous but full composition. Warm, welcoming, showbiz, the sign of a night you do not want to miss."
+    },
+    {
+      "id": "k3-crew",
+      "text": "CREWS FORM FRIDAY",
+      "prompt": "\"CREWS / FORM / FRIDAY\" on three lines in woven ribbon lettering: every letter is constructed from several flat ribbons of different colours and materials (vermilion red, cobalt blue, ivory, gold foil, electric cyan) that interlace over and under one another, with crisp dimensional shading at each crossing. Near the top of the frame a few loose single ribbons are still arriving from the frame edges to join the letters. Sophisticated, joyful, many strands becoming one."
+    },
+    {
+      "id": "k4-constraints",
+      "text": "CONSTRAINTS BEAT TALENT",
+      "prompt": "\"CONSTRAINTS / BEAT / TALENT\" in ultra-condensed heavy sans-serif capitals jammed edge to edge inside a tight rectangular frame, compressed so tightly the letters almost touch. Dozens of repeated contour outlines echo outward from the letters in alternating vermilion red and electric cyan, forming a vibrating op-art pressure field. Two of the letters are sliced horizontally with their sections slightly offset. Tense, compressed, powerful."
+    },
+    {
+      "id": "k5-rough-cuts",
+      "text": "ROUGH CUTS SCREEN",
+      "prompt": "\"ROUGH / CUTS / SCREEN\" on three lines made of 35mm film: letters cut from film strips with sprocket holes along their edges, film scratches and dust, a film-leader crosshair circle (without numbers) glowing behind them, and a warm projector light beam bursting through the letters from behind, casting cyan shadows. Handmade, cinematic, imperfect and proud of it."
+    },
+    {
+      "id": "k6-chorus",
+      "text": "A REAL CREW",
+      "prompt": "The phrase \"A REAL CREW\" repeated about nine times as an energetic collage, each instance in a completely different lettering identity: neon tube, bulb sign, liquid chrome, woven ribbon, dot-matrix LED, expressive brush script, dense outline contours, stencil, extruded 3D block. They overlap at different scales and angles like a crowd shouting together; one large central instance dominates. Maximal, joyful, colourful on black, yet every instance is legible."
+    },
+    {
+      "id": "k7-end",
+      "text": "APPLY BY OCT 24 · filmhack.ai",
+      "prompt": "Flat, sharply designed end card with Swiss precision. \"APPLY BY\" in huge heavy condensed sans-serif capitals in crimson red (#C80528). Below it \"OCT 24\" rendered as a large segmented seven-segment LED display in electric cyan (#00D2E6), some unlit segments faintly visible. Underneath, small and clean, \"filmhack.ai\" in white. Strong grid, bold scale contrast, no ornament."
+    }
+  ],
+  "models": [
+    {"id": "openai/gpt-image-2.5-sunburst", "params": {"aspect_ratio": "9:16", "quality": "high"}},
+    {"id": "google/gemini-nano-banana-2.1", "params": {"aspect_ratio": "9:16", "resolution": "2K"}}
+  ],
+  "vector_test": {"model": "recraft/recraft-v4.1-pro-vector", "params": {"aspect_ratio": "9:16", "output_format": "svg"}, "keyframes": ["k3-crew", "k7-end"]}
+}
