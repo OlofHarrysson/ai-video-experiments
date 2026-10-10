@@ -14,12 +14,14 @@ Codex in this session can inspect the images and numbers, but playback in the br
 
 ## Initial calibration
 
+Completed 2026-10-10; see the [validation study](../projects/tooling-validation/README.md). Broad critique detected silence but missed the injected dropout. A focused timeline question subsequently located 8–10 seconds correctly and reported no silence in the original. Use local measurements for objective defects; the model's broader musical critique remains unvalidated.
+
 `work/calibration/` contains four anonymous clips made from our own retained Window Seat render: original, complete silence, a two-second dropout and severe low-pass filtering. `answer-key.json` records the mapping but is not sent to the reviewer. These are conspicuous controls, not a music-understanding benchmark. The original and altered clips have equal duration; their loudness is deliberately not matched because silence/filtering are part of these first test conditions.
 
 1. Check that the key is installed without printing it. Use the four review calls below, substituting each anonymous filename and a unique output directory. Each receives the same neutral prompt from `music.py`.
 2. Read responses before comparing them with the answer key. Check whether silence is recognized without invented music, the dropout is located near 8–10 seconds, and the filtered clip is described as having reduced high-frequency content. Compare descriptions against the original to detect generic statements repeated without evidence.
 3. Store a brief comparison with each response: observed detection, missed change, hallucination, reported cost and finish reason. A truncated response does not count as a complete review.
-4. If a failure occurs, inspect it before spending another reservation. Stop after the four-call trial; discuss usefulness and further budget before extending it.
+4. If a failure occurs, inspect it before another request. Olof manages the OpenRouter balance; there is no dollar budget or attempt cap. Record actual costs when returned and unknown outcomes after transport failures. Do not automatically retry or switch models.
 5. Only after this baseline, consider subtle blind A/Bs using matched loudness and Olof's verdict. Do not claim that four obvious controls validate taste, arrangement judgment or accurate pitch/tempo estimation.
 
 ```sh
@@ -33,4 +35,12 @@ uv run --locked python music.py review work/calibration/CLIP.wav --out work/cali
 - [Gemini audio understanding](https://ai.google.dev/gemini-api/docs/audio): documented audio reasoning tasks; product claims do not establish our calibration results.
 - [FFmpeg filters](https://ffmpeg.org/ffmpeg-filters.html#loudnorm): use input measurements from `loudnorm`, not its normalized output values.
 
-No API review has been run as of initial setup. No audio-model verdict is part of the artist research; that research used text sources and captions.
+## Working review procedure
+
+1. Run `inspect` first. Its near-silence intervals require every channel to remain at or below −80 dBFS for at least 0.1 seconds. A detected interval may be an intentional rest; measurements do not establish artistic intent.
+2. Ask one focused listening question via `review --prompt-file`. Keep ground truth and condition labels out of the prompt for calibration. The saved `timeline-review-prompt.txt` states a measured 20-second duration; adjust this fact for other clips.
+3. Read the full response and compare objective claims with local evidence. The default broad prompt remains available for exploration, but its suggestions are hypotheses, not instructions to change a mix.
+4. Require `status: complete` and `finish_reason: stop` before treating a new adapter result as a completed response. An incomplete reply is saved separately. Completion means the provider finished, not that the response is correct. Initial pre-change receipts used `response_received`; their stored finish reasons show completion.
+5. Use matched playback and Olof's judgment to evaluate taste. Stem grouping, spectral analysis and model text do not substitute for a human listening verdict.
+
+Six completed requests reported $0.161604; one timed-out request has unknown cost. The retry passed with a longer timeout, without proving the cause of the timeout. Full provenance is in the validation study. No audio-model verdict is part of the DJ_Dave research; that research used text sources and captions.

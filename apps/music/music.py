@@ -1,4 +1,4 @@
-"""Local audio inspection and bounded OpenRouter listening experiments."""
+"""Local audio inspection and OpenRouter listening experiments."""
 
 import argparse
 import base64
@@ -27,8 +27,9 @@ API = "https://openrouter.ai/api/v1"
 MAX_SECONDS = 60
 MAX_AUDIO_BYTES = 24_000_000
 MAX_TOKENS = 8192
-TRIAL_BUDGET_USD = 1.0
-REQUEST_RESERVE_USD = 0.25
+API_TIMEOUT_SECONDS = 600
+SILENCE_THRESHOLD_DBFS = -80
+SILENCE_MIN_SECONDS = 0.1
 PROMPT = """Listen to the attached audio. You are reviewing an instrumental music sketch.
 Describe only what you can support from the audio: rhythmic feel, prominent sound
 roles, changes over time, low/high balance, stereo impression, and obvious defects.
@@ -59,6 +60,19 @@ def read_audio(path):
 
 def db(value):
     return float(20 * np.log10(value)) if value > 0 else None
+
+
+def silence_intervals(data, sr):
+    """Contiguous near-zero signal on every channel; rests are not necessarily defects."""
+    quiet = np.max(np.abs(data), axis=1) <= 10 ** (SILENCE_THRESHOLD_DBFS / 20)
+    edges = np.diff(np.r_[False, quiet, False].astype(int))
+    return [
+        {"start_seconds": int(start) / sr, "end_seconds": int(end) / sr}
+        for start, end in zip(
+            np.flatnonzero(edges == 1), np.flatnonzero(edges == -1), strict=True
+        )
+        if end - start >= sr * SILENCE_MIN_SECONDS
+    ]
 
 
 def fresh_dir(path):
@@ -138,6 +152,9 @@ def inspect_audio(path, out, bpm=None):
         "rms_dbfs": db(rms),
         "samples_at_or_above_full_scale": int(np.sum(np.abs(data) >= 1)),
         "bpm_supplied": bpm,
+        "silence_threshold_dbfs": SILENCE_THRESHOLD_DBFS,
+        "silence_min_seconds": SILENCE_MIN_SECONDS,
+        "silence_intervals": silence_intervals(data, sr),
         **loudness(path),
     }
     if data.shape[1] == 2:
@@ -254,6 +271,35 @@ def match(paths, out):
     )
 
 
+def compare(reference, candidate, out):
+    """Compare samples without aligning, normalizing or altering either input."""
+    original, sr = read_audio(reference)
+    other, other_sr = read_audio(candidate)
+    if sr != other_sr or original.shape != other.shape:
+        raise ValueError(
+            "Comparison requires identical sample rates, channels and frame counts"
+        )
+    residual = other - original
+    rms = np.sqrt(np.mean(residual**2))
+    original_rms = np.sqrt(np.mean(original**2))
+    report = {
+        "reference": {"path": str(reference), "sha256": digest(reference)},
+        "candidate": {"path": str(candidate), "sha256": digest(candidate)},
+        "sample_rate": sr,
+        "frames": len(original),
+        "channels": original.shape[1],
+        "identical_samples": bool(np.array_equal(original, other)),
+        "residual_peak_dbfs": db(np.max(np.abs(residual))),
+        "residual_rms_dbfs": db(rms),
+        "residual_relative_db": db(rms / original_rms) if original_rms else None,
+        "method": "candidate minus reference, no alignment or gain adjustment",
+    }
+    out = fresh_dir(out)
+    write_audio(out / "residual.wav", residual, sr)
+    save_json(out / "comparison.json", report)
+    return report
+
+
 def calibration(path, out):
     data, sr = read_audio(path)
     if len(data) / sr < 12:
@@ -276,7 +322,7 @@ def calibration(path, out):
     return {"clips": len(answer_key), "directory": str(out)}
 
 
-def review(path, out, send=False):
+def review(path, out, send=False, prompt=PROMPT):
     data, sr = read_audio(path)
     if len(data) / sr > MAX_SECONDS or Path(path).stat().st_size > MAX_AUDIO_BYTES:
         raise ValueError(
@@ -284,6 +330,8 @@ def review(path, out, send=False):
         )
     if Path(path).suffix.lower() != ".wav":
         raise ValueError("Review requires WAV")
+    if not prompt.strip():
+        raise ValueError("Review prompt must not be empty")
     # Provider-independent PCM16 WAV, without changing sample rate or channel count.
     import io
 
@@ -300,7 +348,7 @@ def review(path, out, send=False):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": PROMPT},
+                    {"type": "text", "text": prompt},
                     {
                         "type": "input_audio",
                         "input_audio": {
@@ -316,10 +364,9 @@ def review(path, out, send=False):
         "model": MODEL,
         "source_sha256": digest(path),
         "seconds": len(data) / sr,
-        "prompt": PROMPT,
+        "prompt": prompt,
         "max_tokens": MAX_TOKENS,
         "reasoning_effort": "high",
-        "request_reserve_usd": REQUEST_RESERVE_USD,
         "sent": False,
     }
     if not send:
@@ -331,71 +378,78 @@ def review(path, out, send=False):
     out = fresh_dir(out)
     work = ROOT / "work"
     work.mkdir(exist_ok=True)
-    # Lock across processes; pending/failed calls retain reservations (no blind retries).
+    # Append-only request history. Olof manages the provider balance, not this tool.
     with (work / "review-ledger.jsonl").open("a+") as ledger:
         fcntl.flock(ledger, fcntl.LOCK_EX)
-        ledger.seek(0)
-        reserved = sum(
-            json.loads(line)["reserved_usd"] for line in ledger if line.strip()
-        )
-        if reserved + REQUEST_RESERVE_USD > TRIAL_BUDGET_USD:
-            raise ValueError(
-                "Trial reservations exhausted; review ledger before agreeing another budget"
-            )
-        with httpx.Client(timeout=180) as client:
+        with httpx.Client(timeout=API_TIMEOUT_SECONDS) as client:
             response = client.get(API + "/models")
             response.raise_for_status()
             model = next(m for m in response.json()["data"] if m["id"] == MODEL)
             if "audio" not in model["architecture"]["input_modalities"]:
                 raise ValueError("Selected model no longer advertises audio input")
-            # Fail on price changes instead of silently spending under stale assumptions.
-            prices = model["pricing"]
-            if (
-                float(prices["completion"]) > 0.000012
-                or float(prices["audio"]) > 0.000002
-            ):
-                raise ValueError(
-                    "Model pricing increased; reassess trial cost before sending"
-                )
             save_json(out / "model.json", model)
             ledger.write(
-                json.dumps(
-                    {"output": str(out.resolve()), "reserved_usd": REQUEST_RESERVE_USD}
-                )
+                json.dumps({"output": str(out.resolve()), "event": "dispatching"})
                 + "\n"
             )
             ledger.flush()
             os.fsync(ledger.fileno())
             receipt.update(sent=None, status="dispatching")
             save_json(out / "request.json", receipt)
-            response = client.post(
-                API + "/chat/completions",
-                json=payload,
-                headers={"Authorization": "Bearer " + key},
-            )
+            try:
+                response = client.post(
+                    API + "/chat/completions",
+                    json=payload,
+                    headers={"Authorization": "Bearer " + key},
+                )
+            except httpx.RequestError as error:
+                receipt.update(
+                    status="transport_error", error_type=type(error).__name__
+                )
+                save_json(out / "request.json", receipt)
+                raise
             receipt.update(sent=True, status="response_received")
             save_json(out / "request.json", receipt)
             # Store response privately, never the key or base64 payload.
-            save_json(out / "response.json", response.json())
-            response.raise_for_status()
-            result = response.json()
-            if result.get("error"):
-                raise ValueError(
-                    "Provider returned an error; inspect private response.json"
+            try:
+                result = response.json()
+            except ValueError:
+                receipt.update(
+                    status="invalid_response", http_status=response.status_code
                 )
-            content = result["choices"][0]["message"].get("content")
-            if not content:
+                save_json(out / "request.json", receipt)
+                (out / "response.txt").write_text(response.text)
                 raise ValueError(
-                    "No review text; inspect finish reason before another paid call"
+                    "Non-JSON provider response; inspect private response.txt"
                 )
-            (out / "review.md").write_text(content + "\n")
+            save_json(out / "response.json", result)
+            choices = result.get("choices") or []
+            choice = choices[0] if choices else {}
+            content = choice.get("message", {}).get("content")
             receipt.update(
-                sent=True,
                 usage=result.get("usage"),
                 id=result.get("id"),
-                finish_reason=result["choices"][0].get("finish_reason"),
+                finish_reason=choice.get("finish_reason"),
             )
+            complete = (
+                not response.is_error
+                and not result.get("error")
+                and isinstance(content, str)
+                and bool(content.strip())
+                and receipt["finish_reason"] == "stop"
+            )
+            receipt["status"] = "complete" if complete else "incomplete"
             save_json(out / "request.json", receipt)
+            ledger.write(json.dumps({"output": str(out.resolve()), **receipt}) + "\n")
+            ledger.flush()
+            if isinstance(content, str) and content:
+                filename = "review.md" if complete else "review-incomplete.md"
+                (out / filename).write_text(content + "\n")
+            response.raise_for_status()
+            if not complete:
+                raise ValueError(
+                    "Incomplete review; inspect private response.json and request.json"
+                )
     return receipt
 
 
@@ -413,6 +467,11 @@ def main():
             command.add_argument("--duration", type=float, required=True)
         elif name == "review":
             command.add_argument(
+                "--prompt-file",
+                type=Path,
+                help="A focused listening question; saved in the receipt",
+            )
+            command.add_argument(
                 "--send", action="store_true", help="Upload audio; incurs API usage"
             )
     for name in ["mix", "match"]:
@@ -421,6 +480,10 @@ def main():
         command.add_argument("--out", type=Path, required=True)
         if name == "mix":
             command.add_argument("--gain-db", type=float, default=0)
+    command = sub.add_parser("compare")
+    command.add_argument("reference", type=Path)
+    command.add_argument("candidate", type=Path)
+    command.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "inspect":
         result = inspect_audio(args.input, args.out, args.bpm)
@@ -432,8 +495,11 @@ def main():
         result = match(args.inputs, args.out)
     elif args.command == "calibration":
         result = calibration(args.input, args.out)
+    elif args.command == "compare":
+        result = compare(args.reference, args.candidate, args.out)
     else:
-        result = review(args.input, args.out, args.send)
+        prompt = args.prompt_file.read_text() if args.prompt_file else PROMPT
+        result = review(args.input, args.out, args.send, prompt)
     if result is not None:
         print(json.dumps(result, indent=2, allow_nan=False))
 

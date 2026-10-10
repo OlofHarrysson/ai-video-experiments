@@ -13,9 +13,9 @@ Make original, editable music with Strudel and review rendered audio before choo
 ## Working rules
 
 - Use `uv sync --locked`, then `uv run --locked`; FFmpeg must be available. No server required.
-- Before relying on remote listening, finish the blinded calibration in `docs/listening.md`. A successful API response does not prove musical judgment.
+- Use `docs/listening.md` for calibrated listening scope. Broad reviews missed a known dropout; a focused timeline question detected it. Confirm objective defects with local measurements; musical judgment remains unvalidated.
 - Current Codex tools do not deliver browser playback back as heard audio. Distinguish numerical measurement, spectrogram interpretation, audio-model observations and Olof's listening verdict.
-- OpenRouter is the agreed billing route. `.env` owns `OPENROUTER_API_KEY`; never expose it. Model and bounded trial constants live at the top of `music.py`. No automatic paid retries or model fallback.
+- OpenRouter is the agreed billing route. `.env` owns `OPENROUTER_API_KEY`; never expose it. Olof manages the account balance; impose no dollar budget, price ceiling or attempt cap. Record actual usage and unresolved request outcomes. No automatic paid retries or model fallback.
 - Preserve originals and source code; create versioned outputs. Export stems from the same cycle range and sample rate. Grouping existing stems is not source separation.
-- For each song, create `projects/<song>/README.md` for intent and decisions, `source/` for versioned Strudel code and `renders/` for ignored WAVs. Do not start the first song until Olof supplies direction in the next chat.
+- For each study or song, create `projects/<name>/README.md` for intent and decisions, `source/` for versioned Strudel code and `renders/` for ignored WAVs. Current scope is tooling: create simple music to test it. A polished first song is deferred.
 - Validate changes with `uv run --locked pytest -q` and `uv run --locked ruff check .`. Keep measurements and human taste separate.

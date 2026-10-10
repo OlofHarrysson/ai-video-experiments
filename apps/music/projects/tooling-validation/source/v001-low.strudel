@@ -1,0 +1,6 @@
+// Stem export tooling fixture v001 — 120 BPM, cycles 0–4
+setcpm(120/4)
+
+// Dry, deterministic layers; no random choices or shared effects.
+$: note("c2 ~ c2 ~").s("sine").attack(.002).decay(.12).sustain(0).release(.03).gain(.25).orbit(1)
+_$: note("~ e4 ~ g4").s("triangle").attack(.002).decay(.08).sustain(0).release(.03).gain(.12).orbit(2)

@@ -91,12 +91,17 @@ def test_review_dry_run_is_offline(tone, tmp_path, monkeypatch):
     assert not (tmp_path / "dry").exists()
 
 
-def test_live_adapter_and_budget(tone, tmp_path, monkeypatch):
+def test_live_adapter_records_cost_without_spending_limit(tone, tmp_path, monkeypatch):
     monkeypatch.setattr(music, "ROOT", tmp_path)
     monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    (tmp_path / "work").mkdir()
+    legacy = json.dumps({"output": "historical", "reserved_usd": 1.0}) + "\n"
+    (tmp_path / "work" / "review-ledger.jsonl").write_text(legacy)
     calls = []
 
     class Response:
+        is_error = False
+
         def __init__(self, body):
             self.body = body
 
@@ -142,10 +147,135 @@ def test_live_adapter_and_budget(tone, tmp_path, monkeypatch):
             )
 
     monkeypatch.setattr(music.httpx, "Client", Client)
-    for i in range(4):
+    for i in range(5):
         assert music.review(tone, tmp_path / f"review-{i}", True)["sent"]
-    with pytest.raises(ValueError, match="exhausted"):
-        music.review(tone, tmp_path / "review-5", True)
-    assert len(calls) == 4
+    assert len(calls) == 5
+    receipt = json.loads((tmp_path / "review-4" / "request.json").read_text())
+    assert receipt["usage"]["cost"] == 0.01
+    assert receipt["status"] == "complete"
+    assert "request_reserve_usd" not in receipt
+    assert (tmp_path / "work" / "review-ledger.jsonl").read_text().startswith(legacy)
     assert calls[0]["messages"][0]["content"][1]["type"] == "input_audio"
     assert "test-only" not in (tmp_path / "review-0" / "request.json").read_text()
+
+
+def test_silence_intervals_require_all_channels_and_minimum_duration():
+    data = np.ones((3000, 2)) * 0.1
+    data[500:1500] = 0
+    data[1600:1650] = 0
+    data[2000:, 0] = 0
+    assert music.silence_intervals(data, 1000) == [
+        {"start_seconds": 0.5, "end_seconds": 1.5}
+    ]
+    assert music.silence_intervals(np.zeros((1000, 2)), 1000) == [
+        {"start_seconds": 0.0, "end_seconds": 1.0}
+    ]
+
+
+def test_compare_detects_timing_error_without_aligning(tone, tmp_path):
+    data, sr = music.read_audio(tone)
+    shifted = tmp_path / "shifted.wav"
+    music.write_audio(shifted, np.roll(data, 1, axis=0), sr)
+    same = music.compare(tone, tone, tmp_path / "same")
+    assert same["identical_samples"]
+    assert same["residual_peak_dbfs"] is None
+    changed = music.compare(tone, shifted, tmp_path / "changed")
+    assert not changed["identical_samples"]
+    residual, _ = music.read_audio(tmp_path / "changed" / "residual.wav")
+    assert np.allclose(residual, np.roll(data, 1, axis=0) - data)
+    short = tmp_path / "short.wav"
+    music.excerpt(tone, short, 0, 2)
+    with pytest.raises(ValueError, match="identical"):
+        music.compare(tone, short, tmp_path / "bad")
+
+
+@pytest.mark.parametrize("finish,content", [("length", "Partial text"), ("stop", "")])
+def test_review_rejects_incomplete_result_but_preserves_cost(
+    tone, tmp_path, monkeypatch, finish, content
+):
+    import httpx
+
+    monkeypatch.setattr(music, "ROOT", tmp_path)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    calls = []
+
+    def respond(request):
+        if request.method == "GET":
+            return httpx.Response(
+                200,
+                json={
+                    "data": [
+                        {
+                            "id": music.MODEL,
+                            "architecture": {"input_modalities": ["audio"]},
+                        }
+                    ]
+                },
+            )
+        calls.append(json.loads(request.content))
+        return httpx.Response(
+            200,
+            json={
+                "choices": [{"message": {"content": content}, "finish_reason": finish}],
+                "usage": {"cost": 0.02},
+            },
+        )
+
+    client_class = httpx.Client
+    monkeypatch.setattr(
+        music.httpx,
+        "Client",
+        lambda **kwargs: client_class(transport=httpx.MockTransport(respond)),
+    )
+    out = tmp_path / "review"
+    with pytest.raises(ValueError, match="Incomplete"):
+        music.review(tone, out, True, "Report only silence.")
+    assert len(calls) == 1
+    assert calls[0]["messages"][0]["content"][0]["text"] == "Report only silence."
+    assert not (out / "review.md").exists()
+    receipt = json.loads((out / "request.json").read_text())
+    assert receipt["status"] == "incomplete"
+    assert receipt["usage"]["cost"] == 0.02
+
+
+def test_transport_timeout_records_unknown_outcome_without_retry(
+    tone, tmp_path, monkeypatch
+):
+    import httpx
+
+    monkeypatch.setattr(music, "ROOT", tmp_path)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    posts = []
+
+    def respond(request):
+        if request.method == "GET":
+            return httpx.Response(
+                200,
+                json={
+                    "data": [
+                        {
+                            "id": music.MODEL,
+                            "architecture": {"input_modalities": ["audio"]},
+                        }
+                    ]
+                },
+            )
+        posts.append(request.method)
+        raise httpx.ReadTimeout("test timeout", request=request)
+
+    client_class = httpx.Client
+    monkeypatch.setattr(
+        music.httpx,
+        "Client",
+        lambda **kwargs: client_class(transport=httpx.MockTransport(respond)),
+    )
+    out = tmp_path / "review"
+    with pytest.raises(httpx.ReadTimeout):
+        music.review(tone, out, True)
+    receipt = json.loads((out / "request.json").read_text())
+    assert receipt["sent"] is None
+    assert receipt["status"] == "transport_error"
+    assert receipt["error_type"] == "ReadTimeout"
+    assert "usage" not in receipt
+    assert posts == ["POST"]
+    assert not (out / "review.md").exists()

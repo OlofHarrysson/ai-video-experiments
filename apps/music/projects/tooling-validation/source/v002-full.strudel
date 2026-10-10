@@ -1,0 +1,6 @@
+// Stem export tooling fixture v002 — 120 BPM, cycles 0–4
+setcpm(120/4)
+
+// Overlapping voices and independent delay, with a silent final bar for tails.
+$: note("c2 ~ g2 ~").s("sine").attack(.002).decay(.12).sustain(.1).release(.15).gain(.25).orbit(1).mask("<1 1 1 0>")
+$: note("<[e4,g4] [f4,a4] [e4,g4] [e4,g4]>").s("triangle").attack(.01).decay(.3).sustain(.2).release(.3).gain(.1).pan(.7).delay(.25).delaytime(.25).delayfeedback(.25).orbit(2).mask("<1 1 1 0>")

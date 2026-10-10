@@ -1,29 +1,28 @@
-# Music setup — handoff
+# Music tooling — handoff
 
-Updated 2026-10-10. Current scope: tooling and foundations, before the first song. Work in `/Users/olof/git/ai-video-experiments/apps/music`; the brainstorm workspace is historical.
+Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical.
+
+## Current goal
+
+Improve and dogfood the music tooling. Simple compositions are authorized as test fixtures; producing an impressive first song is not the goal. Olof manages the OpenRouter balance: no assistant-imposed dollar budget, price ceiling or attempt cap. Keep actual usage records.
 
 ## Completed and checked
 
-- Dedicated uv Python workspace, locked dependencies, local CLI and credential template. No server or cloud compute is running for music.
-- Strudel operating guide and all 47 official documentation snapshots, DJ_Dave interview/demo research and original sketches copied from the brainstorm workspace. All 68 copied files matched SHA-256 before adding the old workspace's migration pointer. See `migration.json`.
-- The existing Window Seat WAV inspected: 20 seconds, stereo 48 kHz, integrated -14.94 LUFS, sample peak -0.242 dBFS, estimated true peak -0.24 dBTP. No samples reach full scale. This is technical evidence, not a favorable listening verdict.
-- `outputs/window-seat-analysis-v002/spectrogram.png` generated and visually inspected: labeled time/frequency axes, log frequency, waveform above, visible transient and harmonic patterns. The first failed analysis directory is retained; FFmpeg appended progress after its JSON, and the parser was corrected to decode the first object.
-- Ten-second excerpt rendered to `outputs/window-seat-excerpt.wav`; offline OpenRouter preflight passed without network calls. Four anonymous calibration WAVs are ready in `work/calibration/`.
-- Eight tests pass, including actual FFmpeg measurements, antiphase stereo and silent input, duration/preservation, aligned summing, overload visibility, loudness matching, calibration copies and the mocked API adapter/attempt limit. Ruff passes.
-- Latest selected Pro model and audio modality verified against the live OpenRouter catalog; snapshot in `openrouter-model.json`. Gemini 3.1 Pro Preview, high reasoning. Direct Google billing rejected by Olof; use OpenRouter only.
-- Practical theory and references saved in `music-foundations.md`. Review protocol and evidence boundaries saved in `listening.md`.
+- Dedicated locked uv workspace, CLI, private credential file and preserved Strudel/DJ_Dave research. The original migration verified all 68 copied files by SHA-256; see `migration.json`.
+- OpenRouter key works. Six audio reviews completed with Gemini 3.1 Pro Preview, high reasoning. Reported costs total **$0.161604**; one additional timed-out request has unknown cost. No automatic retries or model fallback.
+- Initial four anonymous calibration clips were reviewed before reading the answer key. Broad critique recognized silence but missed the known 8–10 second dropout, misreported durations, and gave questionable high-frequency descriptions of a heavily filtered clip.
+- A focused timeline prompt located the dropout at 8–10 seconds and reported no silence in the original. This is narrow positive evidence, not validation of musical taste, mix judgment or general timing accuracy.
+- Browser exported two full mixes and four isolated stems, all 8 seconds / 48 kHz / stereo. Dry stems sum exactly. Overlapping synths, panning and independent delay sum with a −96.44 dBFS RMS residual (peak −84.29 dBFS, two 16-bit quantization steps). No automatic alignment or gain correction.
+- `inspect` now measures near-silent intervals and finds the injected dropout exactly. `compare` saves sample-difference evidence and a residual WAV. `review --prompt-file` accepts focused questions. Incomplete replies raise an error and remain preserved; transport failures record an unknown provider outcome.
+- Verification: 13 tests pass, Ruff passes from `apps/music`, and `git diff --check` passes. Tests include preserved historical ledger records, uncapped requests, incomplete responses and a timeout without automatic retry.
+- Original sketches, fixtures, stems, reconstructed WAVs, analyses and provider receipts are preserved. Strudel was left stopped with the complete v002 fixture. No local server or cloud compute is running for music.
 
-## Pending
+Read the [validation study](../projects/tooling-validation/README.md), [machine-readable evidence](../projects/tooling-validation/evidence.json) and [listening protocol](listening.md). Raw audio and provider receipts remain local/ignored.
 
-- Olof's `OPENROUTER_API_KEY` in `apps/music/.env`. File created and opened; empty when last checked. No paid requests or uploads have occurred.
-- Real API compatibility and blinded listening calibration. Mock success is not provider validation, and audio input support is not proof of useful musical critique. Initial plan: four calls maximum with $0.25 reserved per attempt against a $1 planning budget. See the adapter's ledger and protocol before running.
-- First synchronized Strudel stem export/reconstruction check. The mixer works on aligned files; correct browser stem export remains to be exercised. Native stereo export already produced the retained original WAV earlier in this session.
-- Direction for the first actual song. The earlier Window Seat/live sketches are learning artifacts, not the approved first-song brief.
+## Next tooling work
 
-## Continue in the next chat
+1. Extend export checks to sample-based drums, shared reverb and nonzero cycle starts. Existing findings cover deterministic synths with independent delay only.
+2. Exercise a real revision: change one layer, rerender, inspect that stem and compare matched full mixes. Preserve intent, source and playback together.
+3. Improve listening only through specific questions with known controls and objective checks. Broad critique is exploratory; do not automatically edit music based on it.
 
-Suggested opening message:
-
-> Continue the music project in apps/music. Read AGENTS.md, README.md and docs/status.md. Finish the OpenRouter listening calibration if my key is present, report what the model actually detects, then help me choose a direction for the first original song. Use the Strudel and DJ_Dave research as background; keep original source and versioned renders. Do not resume paused video studies.
-
-Once the key exists, run the four anonymous calibration clips with the same neutral prompt, inspect complete responses, compare with the answer key and record observed successes/failures plus actual costs. Ask one focused question about song direction after that. Do not produce a ten-minute set without a short reviewed musical checkpoint.
+A song brief and a polished composition remain deferred. Do not resume paused video studies.

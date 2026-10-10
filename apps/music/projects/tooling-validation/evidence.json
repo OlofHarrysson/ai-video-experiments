@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-10",
+  "model": "google/gemini-3.1-pro-preview",
+  "reasoning_effort": "high",
+  "requests": [
+    {
+      "directory": "work/calibration-review-01",
+      "status": "response_received",
+      "finish_reason": "stop",
+      "cost_usd": 0.010028,
+      "source_sha256": "ce3fd563c6f80a08920aabc8f897eb28162cb47e36723bcb5bb56bb0d79ba217"
+    },
+    {
+      "directory": "work/calibration-review-02",
+      "status": "response_received",
+      "finish_reason": "stop",
+      "cost_usd": 0.027524,
+      "source_sha256": "84d25a61ff1274504f8211f5283b78bf7145cfcc2a2cc819518ec099909bac1f"
+    },
+    {
+      "directory": "work/calibration-review-03",
+      "status": "response_received",
+      "finish_reason": "stop",
+      "cost_usd": 0.030752,
+      "source_sha256": "1e32499143b870bb44121013fa3fb52b55a8fb26e8efc50dcfe9dcaeefa7a65d"
+    },
+    {
+      "directory": "work/calibration-review-04",
+      "status": "response_received",
+      "finish_reason": "stop",
+      "cost_usd": 0.071588,
+      "source_sha256": "7f13e274a2a69a4a77f6569ea62ec0b5ff0e7e5989d8aaea6f7fbf9af0237b3e"
+    },
+    {
+      "directory": "work/timeline-review-dropout-01",
+      "status": "transport_error",
+      "finish_reason": null,
+      "cost_usd": null,
+      "source_sha256": "7f13e274a2a69a4a77f6569ea62ec0b5ff0e7e5989d8aaea6f7fbf9af0237b3e"
+    },
+    {
+      "directory": "work/timeline-review-dropout-02",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.010622,
+      "source_sha256": "7f13e274a2a69a4a77f6569ea62ec0b5ff0e7e5989d8aaea6f7fbf9af0237b3e"
+    },
+    {
+      "directory": "work/timeline-review-original-01",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.01109,
+      "source_sha256": "1e32499143b870bb44121013fa3fb52b55a8fb26e8efc50dcfe9dcaeefa7a65d"
+    }
+  ],
+  "reported_completed_cost_usd": 0.161604,
+  "unknown_cost_requests": 1,
+  "exports": [
+    {
+      "file": "renders/tooling-v001-full.wav",
+      "sha256": "07e103fdd3e053331def173f89cfd79ce039771b6be1a3f6ad8193dd628a4d6e",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v001-full.strudel",
+      "source_sha256": "042bdbd6b18ef887a2da56eb0ca018d0570cb88967e56a0474bc1407320c68fe"
+    },
+    {
+      "file": "renders/tooling-v001-low.wav",
+      "sha256": "285dad63fa83b02d5d743114845e8cb1e106408ceabfe36d8f52439cad87af20",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v001-low.strudel",
+      "source_sha256": "426ac86310e04efdab774e07de7a66b844c8670ac1efd343f5e34e35e1d3643a"
+    },
+    {
+      "file": "renders/tooling-v001-high.wav",
+      "sha256": "96099e4c67f57f59269512550cd3e66235586386f50d9a939ca0254c0832e13e",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v001-high.strudel",
+      "source_sha256": "dc1b0f141224b075372f2764079d47066ce7f4b75c4894685d46269585a4b3ea"
+    },
+    {
+      "file": "renders/tooling-v001-reconstructed.wav",
+      "sha256": "f3e9b7ebd93487d8659a58b21dbbde0a48acf82c1d855711ac3ce46c798cd3af",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "FLOAT",
+      "source": null,
+      "source_sha256": null
+    },
+    {
+      "file": "renders/tooling-v002-full.wav",
+      "sha256": "571fd12f7e18404393008b028b3e955cffbb894f80ac32b6b8babea6302fe34b",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v002-full.strudel",
+      "source_sha256": "ee37e278a5092acd3eae703a5101b99466ba3b85ff5c0f29e8332878e6bf1a81"
+    },
+    {
+      "file": "renders/tooling-v002-low.wav",
+      "sha256": "c0f4ff2a571a8af411e4f17925a49dc59b1c6a9fbf027ae04e45fc0938e76f42",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v002-low.strudel",
+      "source_sha256": "c85870fd661d15a6e777ebc2ed0f7c98fc5142d6499b780c955b953630594b6d"
+    },
+    {
+      "file": "renders/tooling-v002-high.wav",
+      "sha256": "5910dc7423a96900047621171d44ba428ae1c30e8b9b2c87b24d544996f7e930",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "PCM_16",
+      "source": "source/v002-high.strudel",
+      "source_sha256": "3cc9735c7edcc728b9ac02eb2d1a66bc9afc6b9f78f737677b8b89ee3d7c3cf4"
+    },
+    {
+      "file": "renders/tooling-v002-reconstructed.wav",
+      "sha256": "bfd0f3cab60cc777e4cbdb6ec7c46d856e4e543db84493d89c84f82726a310e6",
+      "sample_rate": 48000,
+      "channels": 2,
+      "frames": 384000,
+      "subtype": "FLOAT",
+      "source": null,
+      "source_sha256": null
+    }
+  ],
+  "export_settings": {
+    "bpm": 120,
+    "start_cycle": 0,
+    "end_cycle": 4,
+    "sample_rate": 48000,
+    "multichannel_orbits": false
+  },
+  "comparisons": {
+    "v001": {
+      "reference": {
+        "path": "projects/tooling-validation/renders/tooling-v001-full.wav",
+        "sha256": "07e103fdd3e053331def173f89cfd79ce039771b6be1a3f6ad8193dd628a4d6e"
+      },
+      "candidate": {
+        "path": "projects/tooling-validation/renders/tooling-v001-reconstructed.wav",
+        "sha256": "f3e9b7ebd93487d8659a58b21dbbde0a48acf82c1d855711ac3ce46c798cd3af"
+      },
+      "sample_rate": 48000,
+      "frames": 384000,
+      "channels": 2,
+      "identical_samples": true,
+      "residual_peak_dbfs": null,
+      "residual_rms_dbfs": null,
+      "residual_relative_db": null,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "v002": {
+      "reference": {
+        "path": "projects/tooling-validation/renders/tooling-v002-full.wav",
+        "sha256": "571fd12f7e18404393008b028b3e955cffbb894f80ac32b6b8babea6302fe34b"
+      },
+      "candidate": {
+        "path": "projects/tooling-validation/renders/tooling-v002-reconstructed.wav",
+        "sha256": "bfd0f3cab60cc777e4cbdb6ec7c46d856e4e543db84493d89c84f82726a310e6"
+      },
+      "sample_rate": 48000,
+      "frames": 384000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -84.28839878591474,
+      "residual_rms_dbfs": -96.44280159941543,
+      "residual_relative_db": -57.61308441330539,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    }
+  }
+}
