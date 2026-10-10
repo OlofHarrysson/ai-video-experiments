@@ -1,0 +1,19 @@
+{
+ "shared": "A single vertical 9:16 frame from a high-end kinetic typography title sequence for a film event; typography is the entire image. Deep black background, subtle film grain, crisp professional lettering craft, spelled exactly as given. Keep all lettering inside the central safe area: nothing important in the top 12% or bottom 22% of the frame. No other words, no logos, no watermark, no UI, no people.",
+ "keyframes": [
+  {
+   "id": "k2-marquee",
+   "text": "NO AI EXPERIENCE NEEDED",
+   "prompt": "\"NO AI / EXPERIENCE / NEEDED\" on three lines as an ornamental vintage cinema marquee sign: every letter built from rows of warm incandescent bulbs, framed by art-deco fans, arcs, stars and chasing-light borders, accents of magenta and cyan neon tubing. A few bulbs mid-flicker. Centred, glowing against black, generous but full composition. Warm, welcoming, showbiz, the sign of a night you do not want to miss."
+  }
+ ],
+ "models": [
+  {
+   "id": "openai/gpt-image-2.5-sunburst",
+   "params": {
+    "aspect_ratio": "9:16",
+    "quality": "max"
+   }
+  }
+ ]
+}

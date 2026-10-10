@@ -50,7 +50,16 @@ Assistant screening of the decoded MP4: deterministic rendering, no page errors;
 
 Known gaps against the targets: YES matches closely (image layer); the marquee is simpler, with less ornament and narrower letters; CREWS is the weakest reconstruction — thin single-stroke skeletons give braided-yarn letters instead of the target's broad flat ribbons and gold foil. The chrome S extends into Instagram's lower UI zone. The scratch beat only marks timing; the assistant cannot listen.
 
-Next: Olof's motion review → strengthen CREWS (bolder skeleton, broad flat ribbons, foil) and marquee ornament → compose the Strudel track → extend through the chorus and end card.
+### Motion proof v002 — hybrid everywhere
+
+Olof judged the hybrid YES closest to its target and the code reconstructions weaker, and chose hybrid for every card. [proof-v002/](proof-v002/) keeps v001's YES, doubt and thread, and replaces the code marquee and braid with the generated images animated in code ([imagecard.js](proof-v002/src/imagecard.js) helpers):
+
+- **Marquee** ([marqueeImage.js](proof-v002/src/marqueeImage.js)): an unlit state derived from the same pixels (so it aligns exactly), a radial power-on wipe, neon tubes masked by hue that stutter on, detected bulbs switching on from the outer frame inward, a full bloom, a ring chase and beat flashes.
+- **CREWS** ([crewsImage.js](proof-v002/src/crewsImage.js)): loose ribbons fall in, then letters (found from the image's column gaps) are laid with a diagonal wipe, a glint and a small settle; the lone thread runs under each line ahead of the letters; a light band sweeps the ribbons; the cyan inline flip lands on the bar-4 downbeat.
+
+`output-01/` is the reviewed render. A `quality: max` Sunburst test returned the same 864×1536 size at $0.13 ([prompt](targets/prompts-quality-test.json)), so targets stay at `high`; total reported image spend is about $1.96.
+
+Next: Olof's review → apply the hybrid approach to the remaining cards → compose the Strudel track → cut the full Reel to it.
 
 ## Files
 
