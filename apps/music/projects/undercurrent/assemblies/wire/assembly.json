@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "manifest": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/assembly-wire.json",
+    "sha256": "de809922bf635f905e7f101d2c5a52fdb12805a64cc7e55370b8e4b5ac1049cc"
+  },
+  "revision": "wire",
+  "modules": [
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/modules/v001/setup.strudel",
+      "snapshot": "modules/01.strudel",
+      "sha256": "3878dd51495e50d17e4dde999864a1011f697ac45c2a5c67d8f0c5b58d00af01",
+      "stem": null
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/modules/v002/drums.strudel",
+      "snapshot": "modules/02.strudel",
+      "sha256": "a862202fd0717c25525e6de07995fea3068092375179277831af4b691515caa7",
+      "stem": "drums"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/modules/v001/bass.strudel",
+      "snapshot": "modules/03.strudel",
+      "sha256": "5645e5efaf02fbe879239f293a915fa8e27298e4949e95821a755c3a21b9629b",
+      "stem": "bass"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/modules/v002/theme.strudel",
+      "snapshot": "modules/04.strudel",
+      "sha256": "9b14d36061013380eeb808a17ac63dfe7ad9cd463176cbd6816b9c8bdad6f6f7",
+      "stem": "theme"
+    },
+    {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/modules/v002/details.strudel",
+      "snapshot": "modules/05.strudel",
+      "sha256": "f34909928b6dbe8f329c5a361abdeb2e79e092ab3ab7ac04ede5de56150b9dda",
+      "stem": "details"
+    }
+  ],
+  "source_sha256": "27fdc3c2be5a6c29023800967ef57923ea5af3e37b8ff03159ec3826f67243d0",
+  "project_sha256": "8ce98758cdfaa30804f5ce0961cec94ddfd88d18dc24984edb1d949f72d31d87",
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "brush",
+      "openhat"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "landing"
+    ],
+    "theme": [
+      "theme",
+      "colour",
+      "held",
+      "resolve"
+    ],
+    "details": [
+      "reply",
+      "fill",
+      "intake"
+    ]
+  }
+}

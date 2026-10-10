@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "title": "Undercurrent",
+  "revisions": {
+    "smoke": {
+      "source": "source.strudel",
+      "notes": ""
+    }
+  },
+  "end_cycle": 16,
+  "sample_rate": 48000,
+  "samples": [
+    "../../references/assets/smoke"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "brush",
+      "openhat"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "landing"
+    ],
+    "theme": [
+      "theme",
+      "colour",
+      "held",
+      "resolve"
+    ],
+    "details": [
+      "reply",
+      "fill",
+      "intake"
+    ]
+  },
+  "sections": {
+    "theme": [
+      0,
+      4
+    ],
+    "development": [
+      4,
+      8
+    ],
+    "suspension": [
+      8,
+      11
+    ],
+    "break": [
+      11,
+      12
+    ],
+    "return": [
+      12,
+      15
+    ],
+    "release": [
+      15,
+      16
+    ]
+  }
+}

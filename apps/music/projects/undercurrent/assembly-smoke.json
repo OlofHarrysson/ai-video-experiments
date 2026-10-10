@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "title": "Undercurrent",
+  "revision": "smoke",
+  "end_cycle": 16,
+  "sample_rate": 48000,
+  "samples": [
+    "references/assets/smoke"
+  ],
+  "sections": {
+    "theme": [
+      0,
+      4
+    ],
+    "development": [
+      4,
+      8
+    ],
+    "suspension": [
+      8,
+      11
+    ],
+    "break": [
+      11,
+      12
+    ],
+    "return": [
+      12,
+      15
+    ],
+    "release": [
+      15,
+      16
+    ]
+  },
+  "modules": [
+    {
+      "file": "modules/v001/setup.strudel"
+    },
+    {
+      "file": "modules/v002/drums.strudel",
+      "stem": "drums"
+    },
+    {
+      "file": "modules/v001/bass.strudel",
+      "stem": "bass"
+    },
+    {
+      "file": "modules/v002/theme.strudel",
+      "stem": "theme"
+    },
+    {
+      "file": "modules/v002/details.strudel",
+      "stem": "details"
+    }
+  ]
+}

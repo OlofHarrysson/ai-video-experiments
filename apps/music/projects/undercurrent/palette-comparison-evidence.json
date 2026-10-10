@@ -1,0 +1,155 @@
+{
+  "source_sha256": "27fdc3c2be5a6c29023800967ef57923ea5af3e37b8ff03159ec3826f67243d0",
+  "unchanged_kick_sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+  "palettes": {
+    "v002": {
+      "bass_max_sample_difference": 0.0,
+      "stems": {
+        "master": {
+          "sha256": "d716f2eee8ed33bcec65b14e2dbfff284f933c33d7c4f9d9badc26b436131187",
+          "integrated_lufs": -17.61,
+          "true_peak_dbtp": -3.86,
+          "pcm_rail_samples": 0
+        },
+        "drums": {
+          "sha256": "8d73f7574e78ffccaa077dc868545c01df1e1847540850fe70feca1db99ae009",
+          "integrated_lufs": -18.83,
+          "true_peak_dbtp": -7.53,
+          "pcm_rail_samples": 0
+        },
+        "bass": {
+          "sha256": "5be8baedd99c84d1d3cb0e0f3914e47f7546a0c880e324b2ee79f93dd8897421",
+          "integrated_lufs": -23.9,
+          "true_peak_dbtp": -10.81,
+          "pcm_rail_samples": 0
+        },
+        "theme": {
+          "sha256": "fdee543891a18f1c22941d2e0917c7264f367150da238210362849bdabc482fb",
+          "integrated_lufs": -29.0,
+          "true_peak_dbtp": -13.8,
+          "pcm_rail_samples": 0
+        },
+        "details": {
+          "sha256": "cb385f38f0c3dcfc0e539b9ea58c006ae3eb9fd87eb6cabe684b33dd9aee2bfa",
+          "integrated_lufs": -39.22,
+          "true_peak_dbtp": -22.15,
+          "pcm_rail_samples": 0
+        }
+      }
+    },
+    "smoke": {
+      "bass_max_sample_difference": 3.0517578125e-05,
+      "stems": {
+        "master": {
+          "sha256": "e5e0d80b79540d4d73b5ef41fde88e5e5f855ff5f426d8661ab515cce12c4d0d",
+          "integrated_lufs": -17.58,
+          "true_peak_dbtp": -3.23,
+          "pcm_rail_samples": 0
+        },
+        "drums": {
+          "sha256": "ba02b2f394a02f6a771f4f1560bbe6da83022bd7fa61502c5cbedb116b2f5176",
+          "integrated_lufs": -18.83,
+          "true_peak_dbtp": -7.83,
+          "pcm_rail_samples": 0
+        },
+        "bass": {
+          "sha256": "d0ddf7024ed0bd1aacb85982ebdef7c973dc3e95c8a9ee07fb5e081652407981",
+          "integrated_lufs": -23.9,
+          "true_peak_dbtp": -10.81,
+          "pcm_rail_samples": 0
+        },
+        "theme": {
+          "sha256": "ee579892c5fe6c4c977201ffd6e8db50e5cfbc2e1528b468a47dd4962034695c",
+          "integrated_lufs": -29.1,
+          "true_peak_dbtp": -13.44,
+          "pcm_rail_samples": 0
+        },
+        "details": {
+          "sha256": "04d475450e08e0ea550aa2aeddca91f85535b95b7e3236a0fc5667c407766895",
+          "integrated_lufs": -39.09,
+          "true_peak_dbtp": -22.17,
+          "pcm_rail_samples": 0,
+          "recovery_file": "renders/smoke-details-retry/render.wav"
+        }
+      }
+    },
+    "wire": {
+      "bass_max_sample_difference": 3.0517578125e-05,
+      "stems": {
+        "master": {
+          "sha256": "22e4488b818001df447d462d6d13890443adf0660c0db4bd70ef00c96f504630",
+          "integrated_lufs": -17.61,
+          "true_peak_dbtp": -3.22,
+          "pcm_rail_samples": 0
+        },
+        "drums": {
+          "sha256": "ff12b9988c472d4b44e30eb59ceda885812771cf74387eff5b04b9c8dbc7b82d",
+          "integrated_lufs": -18.84,
+          "true_peak_dbtp": -7.66,
+          "pcm_rail_samples": 0
+        },
+        "bass": {
+          "sha256": "8bbc41ab61bfdeff81472828c6489b7f1c8a603a172789e9fe35adfddeb0b32b",
+          "integrated_lufs": -23.9,
+          "true_peak_dbtp": -10.81,
+          "pcm_rail_samples": 0
+        },
+        "theme": {
+          "sha256": "8d1126f4957fab61eabbc4cf33f9536f0043d4828052c39093ca02a986985a91",
+          "integrated_lufs": -29.62,
+          "true_peak_dbtp": -11.05,
+          "pcm_rail_samples": 0
+        },
+        "details": {
+          "sha256": "7ca6576b94e8be6e0073a8b4661523367d02e6a81df21a8ae1d43ca379b79bcc",
+          "integrated_lufs": -38.14,
+          "true_peak_dbtp": -18.01,
+          "pcm_rail_samples": 0
+        }
+      }
+    }
+  },
+  "comparison": {
+    "target_lufs": -17.61,
+    "copies": [
+      {
+        "source_sha256": "d716f2eee8ed33bcec65b14e2dbfff284f933c33d7c4f9d9badc26b436131187",
+        "file": "current.wav",
+        "gain_db": 0.0,
+        "label": "current",
+        "sha256": "b613425d78fd23aa157ac1f52c96c5cb1ff1b6bfc12e22a938c7a7ca142ecd94",
+        "measured": {
+          "integrated_lufs": -17.61,
+          "true_peak_dbtp": -3.86,
+          "loudness_range_lu": 4.2
+        }
+      },
+      {
+        "source_sha256": "e5e0d80b79540d4d73b5ef41fde88e5e5f855ff5f426d8661ab515cce12c4d0d",
+        "file": "smoke.wav",
+        "gain_db": -0.030000000000001137,
+        "label": "smoke",
+        "sha256": "d94cf3f0ee8188be0ed3b855ca312cdea786e055dfee7eb2c9d2b605ff037a02",
+        "measured": {
+          "integrated_lufs": -17.61,
+          "true_peak_dbtp": -3.26,
+          "loudness_range_lu": 4.2
+        }
+      },
+      {
+        "source_sha256": "22e4488b818001df447d462d6d13890443adf0660c0db4bd70ef00c96f504630",
+        "file": "wire.wav",
+        "gain_db": 0.0,
+        "label": "wire",
+        "sha256": "2dbb778dda587e1697baf4153d33f63709a0ba8c390d054b2ed9d84f72399e2d",
+        "measured": {
+          "integrated_lufs": -17.61,
+          "true_peak_dbtp": -3.22,
+          "loudness_range_lu": 4.3
+        }
+      }
+    ]
+  },
+  "recovery": "Smoke detail export timed out after 180 seconds before loading samples. Original failed receipt preserved; one standalone retry completed at renders/smoke-details-retry. Masters and matched copies are from the original successful exports.",
+  "scope": "Identical score and kick asset. Dry bass rerenders differ by at most one PCM16 step. Sample envelopes/timbres change; perceived groove and taste remain human judgments."
+}

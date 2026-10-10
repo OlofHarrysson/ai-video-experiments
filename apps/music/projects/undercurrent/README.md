@@ -1,12 +1,14 @@
 # Undercurrent
 
+**Current comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
+
 [Play v002](renders/v002/master/render.wav) — 30 seconds, 128 BPM, 48 kHz stereo. A new study responding to Olof's preference for Negative Space and request for a stable foundation with related detail and development.
 
 ## Intent and human feedback
 
 Olof called the previous two studies another improvement and preferred Negative Space. He liked the basslines more than some other instruments, and some timbres and the beat still did not fit his taste. He did not identify exact disliked voices. He asked for one more short study: a strong, predictable foundation, a recognizable main idea, related departures in the details, and occasional larger structural changes.
 
-This version tests a steady four-on-the-floor kick, the same two-bar F bass phrase throughout active sections, a muted three-hit chord motif, and sparse brush/echo replies. The bass synthesis retains Negative Space's core. Original softer chord/noise samples replace its spring/friction palette. This is a taste hypothesis, not evidence that these are Olof's preferred instruments. Human verdict on Undercurrent is pending.
+This version tests a steady four-on-the-floor kick, the same two-bar F bass phrase throughout active sections, a muted three-hit chord motif, and sparse brush/echo replies. The bass synthesis retains Negative Space's core. Original softer chord/noise samples replace its spring/friction palette. This is a taste hypothesis, not evidence that these are Olof's preferred instruments. Olof subsequently said the structure is closer, while remaining unsure about the instruments. He requested palette alternatives with groove and arrangement unchanged.
 
 ## Listening map
 

@@ -1,0 +1,136 @@
+{
+  "seed": 2026101023,
+  "sample_rate": 48000,
+  "notes_midi": [
+    [
+      56,
+      60,
+      63,
+      67
+    ],
+    [
+      58,
+      60,
+      65,
+      67
+    ]
+  ],
+  "origin": "Original synthesis, with the existing 909 kick copied unchanged",
+  "bank_names": "RolandTR909 names are compatibility slots for the fixed score. Only bd remains a 909 recording; cp/hh/oh are new synthesis.",
+  "palettes": {
+    "smoke": [
+      {
+        "path": "references/assets/smoke/RolandTR909_bd/00.wav",
+        "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+        "copied_from": "practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+        "unchanged": true
+      },
+      {
+        "path": "references/assets/smoke/RolandTR909_cp/00.wav",
+        "sha256": "546870d0285648fb38c56d379c8d698da33c3d18956d443c21580f4a3925ca68",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+        "energy_reference_sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/RolandTR909_hh/00.wav",
+        "sha256": "8977c6bba30a15bc48ca18c0cf48067824e057b3448eb0cfd97f5788e3df821f",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+        "energy_reference_sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/RolandTR909_oh/00.wav",
+        "sha256": "681248ebd94e378dc9607c039fcc8fe16033fc91e60394d539f59fede0d0e0a7",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+        "energy_reference_sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/ucbrush/00.wav",
+        "sha256": "f5863885b4724c998a87cb9f87a2fea7020ca1a72076aaff5d0298ef24b83b6c",
+        "energy_reference": "undercurrent/references/assets/samples/ucbrush/00.wav",
+        "energy_reference_sha256": "55a0be64ab6c0aff3f828765183b3df7bb3acdb876c2600348c6dfed0f64304f",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/ucbreath/00.wav",
+        "sha256": "1a6047ec88ada5561904c9c6b0aa38d4fbca1f6ff7aaef34bb6d4a4cd4c6a5b3",
+        "energy_reference": "undercurrent/references/assets/samples/ucbreath/00.wav",
+        "energy_reference_sha256": "4b94b90a75f8c0da8fe912e9e44fad828ef15ed844fffe4f46441c45b2addb84",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/ucchord/00.wav",
+        "sha256": "ccb97c4ad38165126764e07139d304e320c8594b264da1f7cd011c18ea28d923",
+        "energy_reference": "undercurrent/references/assets/samples/ucchord/00.wav",
+        "energy_reference_sha256": "5d15e2fb3fabc552eb10346091a9f90a2abd10484d46586cbe4830981a3275ff",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/smoke/ucchord/01.wav",
+        "sha256": "7ac66e7d2dae0232c3650cbb9982d74211dde0050486d26cc8236686ca88582d",
+        "energy_reference": "undercurrent/references/assets/samples/ucchord/01.wav",
+        "energy_reference_sha256": "e51616587eabaed7794f113f40a58fba80065d73773ea685ef65847279bae6d7",
+        "energy_match_limited_by_peak": false
+      }
+    ],
+    "wire": [
+      {
+        "path": "references/assets/wire/RolandTR909_bd/00.wav",
+        "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+        "copied_from": "practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+        "unchanged": true
+      },
+      {
+        "path": "references/assets/wire/RolandTR909_cp/00.wav",
+        "sha256": "7ca9af0054959686460fbec71796cec7b7e1f7942622a74aec4805d70965deb6",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+        "energy_reference_sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/wire/RolandTR909_hh/00.wav",
+        "sha256": "60cca871bf9b79d02480a27a172441fbe7ec363e240d3d23007e8bf1764966c6",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+        "energy_reference_sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/wire/RolandTR909_oh/00.wav",
+        "sha256": "cf40a27978a44c273278225ceecc84c803ee20b49671672ad20be6cd5d9a13c1",
+        "energy_reference": "practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+        "energy_reference_sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/wire/ucbrush/00.wav",
+        "sha256": "1680d7f880a1e81199739707e545d824004e60a00fcb129c19d1581832270dbb",
+        "energy_reference": "undercurrent/references/assets/samples/ucbrush/00.wav",
+        "energy_reference_sha256": "55a0be64ab6c0aff3f828765183b3df7bb3acdb876c2600348c6dfed0f64304f",
+        "energy_match_limited_by_peak": true
+      },
+      {
+        "path": "references/assets/wire/ucbreath/00.wav",
+        "sha256": "b4173d85475908f3489f23c702a1d76820804d8b77b055e2204ff73c4968586f",
+        "energy_reference": "undercurrent/references/assets/samples/ucbreath/00.wav",
+        "energy_reference_sha256": "4b94b90a75f8c0da8fe912e9e44fad828ef15ed844fffe4f46441c45b2addb84",
+        "energy_match_limited_by_peak": false
+      },
+      {
+        "path": "references/assets/wire/ucchord/00.wav",
+        "sha256": "8326554d2b9c40724c186c62ef17babe56705e01c0f2b414107c4893cbf8f53c",
+        "energy_reference": "undercurrent/references/assets/samples/ucchord/00.wav",
+        "energy_reference_sha256": "5d15e2fb3fabc552eb10346091a9f90a2abd10484d46586cbe4830981a3275ff",
+        "energy_match_limited_by_peak": true
+      },
+      {
+        "path": "references/assets/wire/ucchord/01.wav",
+        "sha256": "66ed5d7bc07d8bf477aadad9260a9ee599ec08d8c0d64cc4c13f1673af3c1858",
+        "energy_reference": "undercurrent/references/assets/samples/ucchord/01.wav",
+        "energy_reference_sha256": "e51616587eabaed7794f113f40a58fba80065d73773ea685ef65847279bae6d7",
+        "energy_match_limited_by_peak": true
+      }
+    ]
+  }
+}
