@@ -22,3 +22,7 @@ The film is one continuous journey, with no cuts, dissolves or replacement shots
 Human brief: very detailed unreal worlds, multiple styles/palettes, purposeful travelling motion and surprising events. Previous reference recommendations were not considered a higher quality bar than our own films. All stills and takes remain preserved.
 
 [Opening ten seconds](exports/v001/p07-out-above-the-city/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Three starting worlds](exports/world-stills.jpg) · [Sustained rhythm revision](experiments/rhythm.md) · [Continuous revision](experiments/continuous.md) · [Original production record](experiments/baseline.md) · [Starting still prompts](experiments/configs)
+
+## Motion study
+
+Olof finds the revised flow better but wants greater movement variety, including occasional rotation. The [motion design study](../../../../docs/research/motion-design-foundations.md) connects attention, overlap and path design to a proposed bank along the golden road and a lateral reveal into the cloud corridor. This is the next comparison to develop, not a rendered or approved continuation.

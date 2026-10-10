@@ -14,6 +14,7 @@ Return to the [project documentation index](../../AGENTS.md#documentation-index)
 
 ## Motion, structure and editing
 
+- [Motion design foundations](motion-design-foundations.md): attention, overlap, paths and timing; a small primary-source study list and an artwork-specific bank/reveal proposal for World Seed.
 - [From a motion request to a rendered image](motion-control-vocabulary.md)
 - [Seeing spatial controls before diffusion](spatial-controls-lesson.md)
 - [3D camera, depth, and temporal motion](3d-camera-and-motion.md)

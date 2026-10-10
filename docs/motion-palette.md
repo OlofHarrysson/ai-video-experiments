@@ -56,6 +56,8 @@ Reference presets mostly describe per-frame movement at 12 fps. Our renderer com
 
 ## Choosing the next motion
 
+For the directing foundation behind these controls, see [Composing motion for a continuous surreal journey](research/motion-design-foundations.md): study attention, paths, overlap and contrast, then compare a purposeful compound movement with its preserved baseline. More active controls do not by themselves establish more interesting motion.
+
 Olof's current pace reference (2026-09-17) is roughly **3–4× the original sixty-second Storm Engine delivery**, with **3× as the usual target** and **4× where the rhythm supports it**. Preserve smooth floating movement while shortening camera-path duration: an eight-second move becomes about 2.7 seconds at 3× or two seconds at 4×. These multipliers describe perceived delivery pace relative to that film, not parameters to multiply blindly in every transform or the generation clock. Plan scene reveals and prompt transitions for the shorter travel time. [Comparison and explicit feedback](../apps/deforum/projects/storm-engine/experiments/timing-audition.md#human-feedback--2026-09-17).
 
 1. Inspect the actual latest painting. Identify the focal form, available space, useful curves and crowded edges. Record the source frame and visible target position; measure an opening's size as well as its center when planning entry.
