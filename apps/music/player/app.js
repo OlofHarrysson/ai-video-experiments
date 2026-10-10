@@ -27,12 +27,14 @@ function reflect() {
     const row=document.querySelector(`[data-track="${track.id}"]`);
     if(!row)continue;
     row.classList.toggle('silent',!mixer.audible(track.id));
+    row.classList.toggle('isolated',mixer.solo.has(track.id));
     const on=!mixer.muted.has(track.id);
     row.querySelector('.sound-toggle').setAttribute('aria-checked',on);
     row.querySelector('.toggle-label').textContent=on?'On':'Off';
     row.querySelector('.solo').setAttribute('aria-pressed',mixer.solo.has(track.id));
   }
   $('play').textContent=mixer.playing?'Pause':'Play';
+  $('play').classList.toggle('is-playing',mixer.playing);
 }
 function draw() {
   $('tracks').replaceChildren();
@@ -46,9 +48,9 @@ function draw() {
     wave.onclick=e=>seek((e.clientX-wave.getBoundingClientRect().left)/wave.clientWidth*config.duration).catch(showError);
     const controls=document.createElement('div');controls.className='track-controls';
     const toggle=document.createElement('button');toggle.className='sound-toggle';toggle.setAttribute('role','switch');toggle.setAttribute('aria-label',`Sound on/off ${track.name}`);
-    toggle.innerHTML='<span class="switch" aria-hidden="true"></span><span class="toggle-label"></span>';
+    toggle.innerHTML='<svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="speaker-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="speaker-muted" d="m16 9 5 6m0-6-5 6"/></svg><span class="toggle-label"></span>';
     toggle.onclick=()=>{setEnabled(track.id,mixer.muted.has(track.id));reflect();};
-    const only=document.createElement('button');only.className='solo';only.textContent='Only';only.setAttribute('aria-label',`Only ${track.name}`);
+    const only=document.createElement('button');only.className='solo';only.innerHTML='<svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/></svg><span>Only</span>';only.setAttribute('aria-label',`Only ${track.name}`);
     only.onclick=()=>{mixer.isolate(track.id);reflect();};
     controls.append(toggle,only);row.append(title,wave,controls);$('tracks').append(row);
   }

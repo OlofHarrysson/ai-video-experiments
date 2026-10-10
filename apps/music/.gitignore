@@ -14,3 +14,6 @@ projects/*/references/assets/
 
 player/design/evidence/
 player/design/review.html
+player/design/references/*.png
+player/design/references/*.jpg
+player/design/references/*.webp
