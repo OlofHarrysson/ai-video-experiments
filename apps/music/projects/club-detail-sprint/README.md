@@ -1,6 +1,6 @@
 # Thirty-second club studies
 
-Two selected excerpts from Olof's two-hour composition and tooling sprint on 2026-10-10, scheduled for 12:10:53–14:10:53 UTC. The brief was to push craft, detail and identity beyond Undertow while preserving its approved heavy bass/drum direction. Human listening judgment on these selections is pending.
+Two selected excerpts from Olof's two-hour composition and tooling sprint on 2026-10-10, run from 12:10:53 UTC through the two-hour target of 14:10:53 UTC. The final handoff was recorded at 14:11:28 UTC. The brief was to push craft, detail and identity beyond Undertow while preserving its approved heavy bass/drum direction. Human listening judgment on these selections is pending.
 
 - **[Pressure Lock v011](../pressure-study/README.md), 136 BPM.** A shifting mechanical rhythm changes from metal into elastic low body, then returns inside the groove in a darker form. [Play selected copy](exports/selected-v002/pressure-lock.wav).
 - **[Negative Space v012](../negative-space/README.md), 128 BPM.** One hollow dub object appears whole, stretches into an exposed passage and returns as four deliberately different bass/object exchanges. [Play selected copy](exports/selected-v002/negative-space.wav).

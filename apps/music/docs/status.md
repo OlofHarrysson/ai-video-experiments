@@ -4,7 +4,7 @@ Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical
 
 ## Current goal
 
-The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md), 12:10:53–14:10:53 UTC on 2026-10-10, has selected **Pressure Lock v011** and **Negative Space v012** for Olof’s listening. Both are exactly 30 seconds. Final preservation and handoff checks are in progress; `sprint.json` records completion separately. Olof approved Undertow v003’s direction and requested substantially greater craft and originality through modular collaboration. These selections have not received a human taste verdict. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
+The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md), 12:10:53–14:10:53 UTC on 2026-10-10, has selected **Pressure Lock v011** and **Negative Space v012** for Olof’s listening. Both are exactly 30 seconds. The sprint and preservation checks are complete; `sprint.json` records the actual finish and acceptance evidence. Olof approved Undertow v003’s direction and requested substantially greater craft and originality through modular collaboration. These selections have not received a human taste verdict. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
 
 ## Completed and checked
 

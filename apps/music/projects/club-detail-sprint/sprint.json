@@ -12,5 +12,42 @@
   },
   "principle": "More code is not more music: detail must have an audible role, leave room for the groove and produce deliberate contrasts.",
   "billing": "OpenRouter balance managed by Olof; record costs, no assistant dollar cap or automatic paid retries",
-  "status": "in_progress"
+  "status": "complete",
+  "selected": [
+    {
+      "title": "Pressure Lock",
+      "revision": "v011",
+      "delivery": "exports/selected-v002/pressure-lock.wav",
+      "project": "../pressure-study/assembly-v011.json"
+    },
+    {
+      "title": "Negative Space",
+      "revision": "v012",
+      "delivery": "exports/selected-v002/negative-space.wav",
+      "project": "../negative-space/assembly-v012.json"
+    }
+  ],
+  "preserved_alternative": {
+    "title": "Latch",
+    "revision": "v006"
+  },
+  "human_taste_verdict": "pending",
+  "checks": {
+    "python_tests": 36,
+    "renderer_tests": 16,
+    "renderer_tests_skipped": 0,
+    "ruff": "passed",
+    "delivery": "both exactly 30 seconds, 48kHz stereo, matched -17.15 LUFS; sample arrays verified against gain-scaled originals",
+    "portable_bundle_rebuilds": "passed",
+    "fresh_local_dependency_install_and_render": "passed; existing system Chrome/FFmpeg/Node and dependency caches",
+    "raw_master_pcm_rail_contacts": 0,
+    "source_snapshots": "preserved byte-for-byte; harmless EOF blank lines retained"
+  },
+  "review_accounting": {
+    "completed_responses": 35,
+    "reported_cost_usd": 0.7184919,
+    "unknown_outcomes": 2
+  },
+  "finished_utc": "2026-10-10T14:11:28.969474+00:00",
+  "elapsed_minutes": 120.59949123333334
 }
