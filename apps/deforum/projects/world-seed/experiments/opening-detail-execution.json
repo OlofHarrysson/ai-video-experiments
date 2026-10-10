@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-10",
+  "owned_pod": "kaw5e1sdswq57l",
+  "created_at": "2026-10-10T16:04:51.272000+00:00",
+  "deleted_at": "2026-10-10T16:13:25+00:00",
+  "hourly_gpu_cost_usd": 0.89,
+  "estimated_gpu_cost_usd": 0.127,
+  "cost_excludes": "Storage and other account activity",
+  "new_paintings": 34,
+  "reused_baseline_paintings": 18,
+  "remote_files_verified_locally": 484,
+  "verified_remote_duplicates_removed": 68,
+  "pods_after_cleanup": [],
+  "retained_volume": {
+    "id": "vd3jnbwko1",
+    "name": "deforum-models",
+    "size_gb": 50,
+    "type": "STANDARD",
+    "data_center": "EU-RO-1"
+  },
+  "media_preservation": "Local originals and provenance, no separate external backup",
+  "same_finishing_settings": true,
+  "deliveries": [
+    {
+      "verified": true,
+      "frames": 48,
+      "fps": 24,
+      "paintings": 18,
+      "final_holds": 0,
+      "final_warps": 2,
+      "tail_changed_pixels": true,
+      "video_sha256": "62f416ba6a1aa9a501d940eab47f2ca19a682f66e3de6b635cd03b0b572a6c7b",
+      "retiming_sha256": "0c1c0dfe2135f7d382b3cc5d24cfa83214ceff435dbb904c3a857911ee3abed3",
+      "anchor_frames_sha256": "7f765ea931c670b08dc4ae35c55cb268c1c1b808336f477253d7bdd717df8029",
+      "source": "projects/world-seed/exports/v001/p01-the-root-bridge/through-0204/rife-moving-tail/preview.mp4",
+      "duration_seconds": 2,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "verified": true,
+      "frames": 48,
+      "fps": 24,
+      "paintings": 18,
+      "final_holds": 0,
+      "final_warps": 2,
+      "tail_changed_pixels": true,
+      "video_sha256": "ad07d8a75e6ccca50a2c5706525737984c5ed93ef6606078c900cdbba7ff6f89",
+      "retiming_sha256": "006695211e413270c396ad3dea6ce106cc81f5274c2a8935cad23754bbbbde26",
+      "anchor_frames_sha256": "7f765ea931c670b08dc4ae35c55cb268c1c1b808336f477253d7bdd717df8029",
+      "source": "projects/world-seed/exports/v002/d01-full-prompt/faster/rife-moving-tail/preview.mp4",
+      "duration_seconds": 2,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "verified": true,
+      "frames": 48,
+      "fps": 24,
+      "paintings": 18,
+      "final_holds": 0,
+      "final_warps": 2,
+      "tail_changed_pixels": true,
+      "video_sha256": "3492c67096a2dd9b2312ad4fd1ff53c1f944d82d230172667247d77f74895a30",
+      "retiming_sha256": "7e45132c323c778e272414d9bbc4a001076a584c4d042c155974364af074bbd5",
+      "anchor_frames_sha256": "7f765ea931c670b08dc4ae35c55cb268c1c1b808336f477253d7bdd717df8029",
+      "source": "projects/world-seed/exports/v002/d02-full-prompt-six-steps/faster/rife-moving-tail/preview.mp4",
+      "duration_seconds": 2,
+      "width": 1536,
+      "height": 1024
+    }
+  ]
+}

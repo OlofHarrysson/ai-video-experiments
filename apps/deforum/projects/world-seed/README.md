@@ -27,6 +27,8 @@ Fine details and small structures continue to repaint. The plane turn is a flat-
 
 ## Preserved versions
 
+[Opening detail comparison](experiments/opening-detail.md): two-second baseline, full prompt with three steps, and full prompt with six steps. The prompt-only revision is the assistant's provisional preference; Olof's comparison is pending. The complete film remains v004.
+
 [Opening with sustained rhythm](cuts/v003.md) · [First continuous opening](cuts/v002.md) · [Original opening with dissolve](cuts/v001.md) · [All cuts](cuts/README.md) · [Three visual targets](exports/world-stills.jpg)
 
 Human direction: highly detailed unreal worlds, distinct styles and palettes, purposeful travelling motion and surprising transformations. Olof prefers the cut-free opening and its revised rhythm, but found it too dominated by zoom. Strong motion is welcome; repeated acceleration and braking are not. Earlier reference recommendations were not considered a higher quality bar than our own films. All prior stills, configurations and takes remain preserved.

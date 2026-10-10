@@ -14,7 +14,7 @@ from deforum_lab.infrastructure.pod import PodClient
 from deforum_lab.records import copy_verified, read, require, save, sha
 from deforum_lab.rendering.feedback import render_paintings
 from deforum_lab.rendering.graphs import graph, repaint_graph
-from deforum_lab.rendering.schedules import recipe
+from deforum_lab.rendering.schedules import SIGMAS, recipe
 from deforum_lab.rendering.verification import validate_execution
 
 HERE = Path(__file__).resolve().parent
@@ -54,14 +54,15 @@ def preflight(config):
     )
     require(positions[-1] + 12 == round(config["duration"] * FPS), "Duration differs")
     require(config["cadence"] == 12 and config["cfg"] == 1, "Recipe changed")
+    sigma_count = len(config.get("sigma_ratios", SIGMAS))
     for frame in positions:
         scene, sigmas = recipe(config, frame / FPS)
         require(bool(scene["prompt"]), "Empty prompt")
         require(
-            len(sigmas) == 4
+            len(sigmas) == sigma_count
             and sigmas[-1] == 0
             and all(a > b for a, b in pairwise(sigmas)),
-            "Expected three descending Euler intervals",
+            "Expected the configured descending Euler intervals",
         )
     if "opening" in config:
         opening_graph(config)
