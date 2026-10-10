@@ -30,9 +30,27 @@ The voice in a filmmaker's head talks them out of applying; the film answers bac
 
 Script v1 approved for keyframe design. Round 1 visual targets generated (2026-10-10): eight keyframes on `openai/gpt-image-2.5-sunburst` (high) and `google/gemini-nano-banana-2.1` (2K), plus two SVG tests on `recraft/recraft-v4.1-pro-vector`, from [these prompts](targets/prompts-round-01.json). Olof authorized up to $10 of OpenRouter spend; round 1 reported $1.30 in usage (the account balance had moved $0.82 when checked). Outputs, hashes and exact prompts are in ignored `references/targets/round-01/` (`manifest.json`, `shortlist-round-01.jpg`, `compare-*.jpg`).
 
-Assistant screening: Sunburst is strongest for YES, the marquee, woven crew, film-strip and chorus; Nano Banana's contour version suits CONSTRAINTS. All lettering is spelled correctly. Sunburst returned 864×1536 images. Risk: most targets share a glossy, rendered-3D look; the references also rely on flat, sharp graphic identities, so the set needs flatter contrast. Awaiting Olof's selection.
+Assistant screening: Sunburst is strongest for YES, the marquee, woven crew, film-strip and chorus; Nano Banana's contour version suits CONSTRAINTS. All lettering is spelled correctly. Sunburst returned 864×1536 images. Most round-1 targets shared a glossy, rendered-3D look, so Olof chose to add flat graphic contrast: round 2 ([prompts](targets/prompts-round-02.json), $0.53 reported) produced the hairline thread, cut-paper ROUGH CUTS, dot-matrix FREE, seat-chart FULL HOUSE, striped dates and striped end card. The working storyboard is `references/targets/board-v001.jpg` (built by `tools/board.py`). Model artifacts to correct in code: stray slashes in "/BEAT/" and "FULL / HOUSE".
 
-Next: Olof selects identities → editable reconstruction → motion proof of the first three doubt/answer pairs → review before the full Reel.
+### Motion proof v001 — 2026-10-10
+
+[proof-v001/](proof-v001/) renders bars 1–3 (6.0 s, 1080×1920, 30 fps) with a scratch 140 BPM beat. Olof chose a **hybrid build**: code-native cards where motion lives in the letter construction, generated-image layers animated in code where the material is the point.
+
+| Card | Construction | Motion |
+|---|---|---|
+| Doubt | Cormorant Garamond Italic, hairline rule, cursor | Types on; crushed by YES; its rule becomes the thread |
+| YES. | Sunburst chrome target as an image layer with a luminance letter mask; Anton flat identities | 2 frames flat crimson → 2 frames cyan inline → chrome slam with spring; light band travels through the metal; cyan accent flip on the next beat |
+| NO AI EXPERIENCE NEEDED | Anton outlines, Clipper-inset bulb channels, panels, neon shield, crown fan, deco sunburst, stars | Builds itself in ~0.4 s; chasing border bulbs; letter bulbs flash on the following beats; two-pass glow |
+| MOST PEOPLE COME ALONE. | Hershey single-stroke skeleton | One hairline thread rises from the doubt's rule and writes both lines |
+| CREWS FORM FRIDAY | Same skeleton type; three strands braided by phase-sorted depth | Ivory lead thread, then crimson, cobalt and gold strands join one by one; the braid keeps flowing |
+
+Render: `npm ci && node render.mjs output-NN [--movie]` from `proof-v001/` (Playwright from the Animate skill). Outputs are ignored and never overwritten; `output-03/` is the reviewed version (`proof.mp4`, stills, `contact.png`, dense screening sheets, `target-vs-code.jpg`, `report.json` with source hashes).
+
+Assistant screening of the decoded MP4: deterministic rendering, no page errors; every frame inspected around the YES landing, marquee build, thread and braid. Only three large-area brightness jumps, all cuts ≥0.7 s apart (within the ≤3 flashes/s guideline). Fixed during screening: blown-out marquee bulbs, a mistimed YES accent, and a thread lead that read as a strike-through.
+
+Known gaps against the targets: YES matches closely (image layer); the marquee is simpler, with less ornament and narrower letters; CREWS is the weakest reconstruction — thin single-stroke skeletons give braided-yarn letters instead of the target's broad flat ribbons and gold foil. The chrome S extends into Instagram's lower UI zone. The scratch beat only marks timing; the assistant cannot listen.
+
+Next: Olof's motion review → strengthen CREWS (bolder skeleton, broad flat ribbons, foil) and marquee ornament → compose the Strudel track → extend through the chorus and end card.
 
 ## Files
 
