@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "title": "Soft Focus",
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "Sustained foreground and pumping chord bed, eight-bar melodic phrasing, stripped bridge and varied final return."
+    }
+  },
+  "end_cycle": 60,
+  "sample_rate": 48000,
+  "samples": [
+    "../chrome-after-rain/references/assets/samples",
+    "../practical-dogfood/references/assets/drums"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hats",
+      "shaker",
+      "openhat",
+      "percussion",
+      "fill",
+      "build"
+    ],
+    "bass": [
+      "bass",
+      "sub",
+      "bridgebass"
+    ],
+    "harmony": [
+      "chordsleft",
+      "chordsright",
+      "spark"
+    ],
+    "lead": [
+      "lead",
+      "leadbody",
+      "leadreturn",
+      "returnbody",
+      "memory",
+      "upper"
+    ],
+    "transitions": [
+      "reverse",
+      "landing",
+      "rise"
+    ]
+  },
+  "sections": {
+    "opening": [
+      0,
+      8
+    ],
+    "first-theme": [
+      8,
+      24
+    ],
+    "break": [
+      24,
+      28
+    ],
+    "build": [
+      28,
+      32
+    ],
+    "return": [
+      32,
+      40
+    ],
+    "last-theme": [
+      40,
+      48
+    ],
+    "ending": [
+      48,
+      56
+    ]
+  }
+}

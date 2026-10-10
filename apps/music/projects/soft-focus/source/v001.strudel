@@ -1,0 +1,40 @@
+// Soft Focus v001 — 126 BPM, 56 composed bars plus 4 tail bars.
+// Warm melodic club instrumental; original notes, no reference audio sampled.
+setcpm(126/4)
+const active = "<0!8 1!16 0!8 1!20 0!8>"
+const bassgate = "<0!4 1!20 0!8 1!20 0!8>"
+const leadgate = "<0!8 1!16 0!8 1!8 0!20>"
+const padgate = "<1!56 0!4>"
+const roots = "<b1!2 g1!2 d2!2 a1!2>"
+const phrase = "<[f#4@3 e4 d4@4] [e4@2 f#4@2 a4@3 f#4] [e4@3 d4 b3@4] [d4@3 e4 f#4@3 ~] [a4@3 f#4 e4@4] [f#4@2 e4@2 d4@3 ~] [e4@3 f#4 a4@4] [e4@3 d4 c#4@3 ~]>"
+
+const variation = "<[f#4@3 e4 d4@4] [e4@2 f#4@2 a4@3 b4] [a4@3 f#4 e4@4] [d4@3 e4 f#4@3 ~] [a4@3 b4 f#4@4] [e4@2 f#4@2 d4@3 ~] [e4@3 f#4 a4@4] [f#4@3 e4 d4@3 ~]>"
+
+kick: s("crkick*4").gain(.20).orbit(1).mask(bassgate)
+clap: s("~ crclap ~ crclap").gain(.24).hpf(180).room(.10).orbit(2).mask(active)
+hats: s("~ crhat ~ crhat ~ crhat [~ crhat] crhat").gain(".12 .10 .14 .09").speed("1 .95 1.05 1").swingBy(.07,8).pan(.66).orbit(1).mask("<0!2 1!22 0!4 1!26 0!6>")
+shaker: s("crshaker*16").gain(".016 .033 .026 .063").swingBy(.07,8).pan(.26).orbit(1).mask("<0!12 1!12 0!8 1!20 0!8>")
+openhat: s("~ oh ~ oh").bank("RolandTR909").gain(.075).hpf(1800).pan(.58).orbit(1).mask(active)
+percussion: s("~ ~ crrim ~ ~ crwood ~ ~ ~ ~ crrim ~ ~ ~ crwood ~").gain(.075).speed("1 .83 1 .95").pan(".22 .78").delay(.12).delaytime(.357143).delayfeedback(.18).orbit(3).mask(active)
+
+bass: note(roots).struct("~ x ~ x ~ x ~ x").s("sawtooth").lpf(360).lpenv(1.7).lpattack(.012).lpdecay(.19).lpsustain(.15).attack(.009).decay(.2).sustain(.6).release(.045).gain(.22).orbit(4).mask(bassgate)
+sub: note(roots).struct("~ x ~ x ~ x ~ x").s("sine").attack(.012).decay(.12).sustain(.7).release(.04).gain(.22).orbit(4).mask(bassgate)
+
+chordsleft: note("<[d4,f#4]!2 [b3,f#4]!2 [c#4,f#4]!2 [b3,e4]!2>").s("supersaw").unison(3).detune(.15).spread(.8).lpf("<800!8 2100!16 650!8 2600!16 1100!8 800!4>").hpf(220).attack(.10).decay(.35).sustain(.8).release(.32).tremolosync(4).tremoloshape("ramp").tremolodepth(.70).gain(.19).pan(.18).room(.32).roomsize(4).orbit(5).mask(padgate)
+chordsright: note("<[a3,c#5]!2 [d4,a4]!2 [a3,e4]!2 [c#4,g4]!2>").s("supersaw").unison(3).detune(.20).spread(.9).lpf("<650!8 1700!16 550!8 2200!16 900!8 650!4>").hpf(240).attack(.15).decay(.5).sustain(.7).release(.45).tremolosync(4).tremoloshape("ramp").tremolodepth(.65).gain(.18).pan(.82).room(.32).roomsize(4).orbit(5).mask(padgate)
+
+lead: note(phrase).s("supersaw").unison(3).detune(.08).spread(.45).lpf(2400).lpenv(.4).lpattack(.20).lpdecay(.4).lpsustain(.6).attack(.045).decay(.3).sustain(.75).release(.22).vib(4.8).vibmod(.09).gain(".33 .28 .31 .27").pan(.45).delay(.20).delaytime(.357143).delayfeedback(.31).room(.22).roomsize(4).orbit(6).mask(leadgate)
+leadbody: note(phrase).s("triangle").lpf(1600).attack(.07).decay(.3).sustain(.75).release(.18).gain(.16).pan(.55).orbit(7).mask(leadgate)
+spark: note("<b4 g4 d5 a4>").struct("~ ~ ~ x ~ ~ x ~").s("sawtooth").lpf(1600).attack(.008).decay(.15).sustain(.05).release(.12).gain(.09).pan(".25 .75").delay(.32).delaytime(.357143).delayfeedback(.4).room(.3).orbit(8).mask("<0!16 1!8 0!12 1!12 0!12>")
+
+leadreturn: note(variation).s("supersaw").unison(3).detune(.08).spread(.45).lpf(3000).lpenv(.4).lpattack(.20).lpdecay(.4).lpsustain(.6).attack(.045).decay(.3).sustain(.75).release(.22).vib(4.8).vibmod(.09).gain(".33 .28 .31 .27").pan(.45).delay(.20).delaytime(.357143).delayfeedback(.31).room(.22).roomsize(4).orbit(6).mask("<0!40 1!8 0!12>")
+returnbody: note(variation).s("triangle").lpf(1600).attack(.07).decay(.3).sustain(.75).release(.18).gain(.16).pan(.55).orbit(7).mask("<0!40 1!8 0!12>")
+
+memory: note("<[f#4@3 e4] [d4@3 ~] [e4@3 f#4] [d4@3 c#4]>").slow(2).s("supersaw").unison(3).detune(.12).spread(.8).lpf(1700).hpf(500).attack(.28).decay(.45).sustain(.65).release(.85).gain(.19).vib(4.5).vibmod(.12).pan(.60).delay(.34).delaytime(.714286).delayfeedback(.38).room(.48).roomsize(6).orbit(9).mask("<1!4 0!20 1!7 0!17 1!7 0!5>")
+bridgebass: note("<b1!2 g1!2 d2!2 a1!2>").s("sine").attack(.08).decay(.4).sustain(.8).release(.25).gain(.22).orbit(4).mask("<0!24 1!7 0!29>")
+upper: note("<[d5@3 c#5] [b4@3 a4] [f#5@3 e5] [e5@3 ~]>").s("sawtooth").lpf(1800).attack(.15).decay(.25).sustain(.5).release(.45).gain(.055).pan(.77).delay(.3).delaytime(.357143).delayfeedback(.3).room(.4).orbit(10).mask("<0!40 1!8 0!12>")
+fill: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ crclap ~ crclap crclap [crclap crclap] ~").hpf(650).gain(".045 .07 .085 .09 .10").pan(.40).room(.15).orbit(2).mask("<0!23 1 0!7 1 0!15 1 0!12>")
+build: s("crclap*4").hpf(1200).gain("<0!28 .035 .055 .07 .09 0!28>").room(.2).orbit(2)
+reverse: s("crreverse").gain(.14).pan(.35).room(.3).orbit(11).mask("<0!7 1 0!15 1 0!7 1 0!15 1 0!12>")
+landing: s("crlanding").gain(.13).hpf(300).pan(.65).room(.4).orbit(11).mask("<0!8 1 0!15 1 0!7 1 0!15 1 0!11>")
+rise: s("crrise").gain(.13).hpf(1800).pan(.5).orbit(11).mask("<0!30 1 0!29>")

@@ -2,9 +2,9 @@
 
 A small production workspace for original Strudel music: preserve source, export WAVs, inspect mixes and stems, ask an audio model for observations, and revise deliberately. Olof directs taste; the assistant owns composition tooling and initial technical review.
 
-Current work: [DJ_Dave audio reference study](projects/dj-dave-reference-study/README.md), a preserved library and matched listening comparisons. [Chrome After Rain](projects/chrome-after-rain/README.md) is the previous original composition; Olof found it too much like a computer game.
+Current track: [Soft Focus](projects/soft-focus/README.md), an original instrumental informed by the [DJ_Dave audio reference study](projects/dj-dave-reference-study/README.md). [Chrome After Rain](projects/chrome-after-rain/README.md) is the preserved comparison; Olof found it too much like a computer game.
 
-The current goal is to improve the tooling using simple music as test material. Local inspection, stereo export, stem reconstruction and local voice/music sampling have been exercised end to end. Real OpenRouter audio input works, but timing accuracy remains limited on fuller music. See [current status](docs/status.md), the [initial validation](projects/tooling-validation/README.md) and [practical dogfood](projects/practical-dogfood/README.md).
+The current goal is to make better music while exercising the tooling on real compositions. Local inspection, stereo export, stem reconstruction and local voice/music sampling have been exercised end to end. Real OpenRouter audio input works, but timing accuracy and musical judgments remain limited. See [current status](docs/status.md), the [initial validation](projects/tooling-validation/README.md) and [practical dogfood](projects/practical-dogfood/README.md).
 
 ## Setup
 

@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-10",
+  "selected_revision": "v001",
+  "source_sha256": "21d8b06ca598a5c724a403bd507f7a79234f0f9dfd26cff4331b5f56251de33d",
+  "project_sha256": "b88edcac3dfd599a216241d7e5f7037b9fb3f5ef8a2375070088cee680f6ca80",
+  "render_status": "complete",
+  "renders": {
+    "master": {
+      "sha256": "0f6d10e25b4096148fb836df3f8fa4cfe8070cd35e13aa0893a9466327729883",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -21.32,
+      "sample_peak_dbfs": -6.1219160003911535,
+      "samples_at_or_above_full_scale": 0
+    },
+    "drums": {
+      "sha256": "1b1d6d585cd5a6bdc6b1f6539442e8944e0eef3c2f13d0beac4dfb1f457f2df6",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -24.74,
+      "sample_peak_dbfs": -8.354137520296806,
+      "samples_at_or_above_full_scale": 0
+    },
+    "bass": {
+      "sha256": "d1e3762ad5e4a462fee2c5d31aaa60dba2e6f09991ec9cad23f403e6cea88915",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -28.12,
+      "sample_peak_dbfs": -20.28507385865258,
+      "samples_at_or_above_full_scale": 0
+    },
+    "harmony": {
+      "sha256": "ea97e97d9026abb7b446de552976431f45cb2c09ad404ffaa300dd71694b86d2",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -27.89,
+      "sample_peak_dbfs": -11.010612813461506,
+      "samples_at_or_above_full_scale": 0
+    },
+    "lead": {
+      "sha256": "e721cd754670a64ad31da49e56b52171bbd3bd731013db425e67191dcd46c289",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -27.1,
+      "sample_peak_dbfs": -13.528241231428241,
+      "samples_at_or_above_full_scale": 0
+    },
+    "transitions": {
+      "sha256": "2782ebfe0dabe533a5cd8cf1ce329719e985ffa7e75af44456aeba1dac4a1e30",
+      "seconds": 114.28570833333333,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -36.46,
+      "sample_peak_dbfs": -21.84735953324974,
+      "samples_at_or_above_full_scale": 0
+    }
+  },
+  "listening_copy": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/soft-focus/renders/v001/soft-focus.wav",
+    "sha256": "b566baeee33f2285cce8e9e5fdbb038d4b4fe2ad8b0a2a8a108ec7df62ba1709",
+    "seconds": 114.28570833333333,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -1.321915801358653,
+    "rms_dbfs": -17.893346461783175,
+    "samples_at_or_above_full_scale": 0,
+    "bpm_supplied": 126,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [
+      {
+        "start_seconds": 111.0146875,
+        "end_seconds": 111.18514583333334
+      },
+      {
+        "start_seconds": 111.20733333333334,
+        "end_seconds": 114.28570833333333
+      }
+    ],
+    "integrated_lufs": -16.52,
+    "true_peak_dbtp": -1.31,
+    "loudness_range_lu": 6.6,
+    "lr_correlation": 0.8974669834911753,
+    "mono_rms_dbfs": -18.121992391697045
+  },
+  "listening_gain_db": 4.8,
+  "audio_reviews": [
+    {
+      "receipt": "work/soft-focus/reference-v001/request.json",
+      "source_sha256": "48e406f81036e37ecf2564ee34d15d20594392b59634b7baa2887357a6d09cf0",
+      "seconds": 58.0,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.028676
+    },
+    {
+      "receipt": "work/soft-focus/previous-v001/request.json",
+      "source_sha256": "d8b44c4ea8fa5a85ae7e0b02ee4df2bb5d748a05fa9180433d809263b96d5aad",
+      "seconds": 58.0,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.024128
+    },
+    {
+      "receipt": "work/soft-focus/first-half-v001/request.json",
+      "source_sha256": "fc4a6291d2fba5b5e9def2a27eb2f06e0e8a22c8d342481aa9e89a3fd5827358",
+      "seconds": 57.0,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.015876
+    },
+    {
+      "receipt": "work/soft-focus/second-half-v001/request.json",
+      "source_sha256": "3a0920626e26a6ecbd6dc59b387eb2ece17aef8cff73716ed415c9af129f9ed9",
+      "seconds": 57.28570833333333,
+      "model": "google/gemini-3.1-pro-preview",
+      "status": "complete",
+      "finish_reason": "stop",
+      "cost_usd": 0.021112
+    }
+  ],
+  "reported_review_cost_usd": 0.089792,
+  "prototype_comparisons": {
+    "pair-reference": {
+      "A": "Soft Focus sketch-v001, start 1.904762 seconds, duration 28",
+      "B": "Cycles, preserved reference excerpt 30\u201358 seconds"
+    },
+    "pair-previous": {
+      "A": "Chrome After Rain, preserved reference-study excerpt",
+      "B": "Soft Focus sketch-v001, same excerpt"
+    },
+    "matched_lufs": [
+      -20.03,
+      -20.03,
+      -20.02
+    ],
+    "silence_between_seconds": 2
+  },
+  "validation": {
+    "python_tests_passed": 19,
+    "ruff": "passed",
+    "renderer_code_changed": false,
+    "all_renders_aligned_finite_unclipped_stereo": true,
+    "master_source_hash_matches_saved_source": true,
+    "final_master_frame_peak": 0.0,
+    "human_listening_verdict": "pending"
+  },
+  "review_limits": [
+    "The old and new melodies are different; the reviewer incorrectly called them identical.",
+    "Relative dry/staccato versus wet/legato descriptions changed depending on comparison partner.",
+    "The final reviewer described a guitar in the ending; the source contains a synthesizer phrase, not a guitar recording.",
+    "Reported arrangement timestamps were several seconds early; source cycles and rendered stem activity remain the timing evidence.",
+    "No vocal or sample from the reference recordings is incorporated; this remains an instrumental direction, not a demonstrated match to the reference production quality."
+  ]
+}
