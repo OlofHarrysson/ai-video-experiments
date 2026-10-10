@@ -1,0 +1,398 @@
+{
+  "selected": "output-v007/billions-motion.mp4",
+  "comparison": "output-inspection-v007/before-after.mp4",
+  "render": {
+    "deterministic": true,
+    "errors": [],
+    "network": [],
+    "frames": 72,
+    "fps": 24,
+    "duration": 3,
+    "silent": true,
+    "uniqueFrames": 58,
+    "layers": [
+      {
+        "id": "B",
+        "role": "letter",
+        "x": 9,
+        "y": 199,
+        "width": 355,
+        "height": 515,
+        "visiblePixels": 81926
+      },
+      {
+        "id": "I1",
+        "role": "letter",
+        "x": 328,
+        "y": 246,
+        "width": 136,
+        "height": 396,
+        "visiblePixels": 30637
+      },
+      {
+        "id": "L1",
+        "role": "letter",
+        "x": 462,
+        "y": 247,
+        "width": 177,
+        "height": 395,
+        "visiblePixels": 31934
+      },
+      {
+        "id": "L2",
+        "role": "letter",
+        "x": 624,
+        "y": 246,
+        "width": 181,
+        "height": 396,
+        "visiblePixels": 33670
+      },
+      {
+        "id": "I2",
+        "role": "letter",
+        "x": 781,
+        "y": 247,
+        "width": 132,
+        "height": 395,
+        "visiblePixels": 30740
+      },
+      {
+        "id": "O",
+        "role": "letter",
+        "x": 905,
+        "y": 247,
+        "width": 251,
+        "height": 399,
+        "visiblePixels": 48987
+      },
+      {
+        "id": "N",
+        "role": "letter",
+        "x": 1135,
+        "y": 247,
+        "width": 284,
+        "height": 395,
+        "visiblePixels": 52512
+      },
+      {
+        "id": "S",
+        "role": "letter",
+        "x": 1384,
+        "y": 242,
+        "width": 243,
+        "height": 445,
+        "visiblePixels": 52181
+      },
+      {
+        "id": "crown",
+        "role": "ornament",
+        "x": 656,
+        "y": 13,
+        "width": 360,
+        "height": 239,
+        "visiblePixels": 54343
+      },
+      {
+        "id": "seal-eye",
+        "role": "seal",
+        "x": 980,
+        "y": 282,
+        "width": 106,
+        "height": 330,
+        "visiblePixels": 22385
+      },
+      {
+        "id": "seal-bottom",
+        "role": "seal",
+        "x": 724,
+        "y": 632,
+        "width": 228,
+        "height": 220,
+        "visiblePixels": 33702
+      },
+      {
+        "id": "seal-left",
+        "role": "seal",
+        "x": 0,
+        "y": 342,
+        "width": 119,
+        "height": 120,
+        "visiblePixels": 9337
+      },
+      {
+        "id": "seal-right",
+        "role": "seal",
+        "x": 1560,
+        "y": 352,
+        "width": 112,
+        "height": 120,
+        "visiblePixels": 8699
+      },
+      {
+        "id": "upper-left",
+        "role": "ribbon",
+        "x": 0,
+        "y": 0,
+        "width": 840,
+        "height": 255,
+        "visiblePixels": 72704
+      },
+      {
+        "id": "upper-right",
+        "role": "ribbon",
+        "x": 836,
+        "y": 0,
+        "width": 836,
+        "height": 255,
+        "visiblePixels": 73149
+      },
+      {
+        "id": "lower-left",
+        "role": "ribbon",
+        "x": 0,
+        "y": 639,
+        "width": 840,
+        "height": 302,
+        "visiblePixels": 99172
+      },
+      {
+        "id": "lower-right",
+        "role": "ribbon",
+        "x": 836,
+        "y": 639,
+        "width": 836,
+        "height": 302,
+        "visiblePixels": 104254
+      },
+      {
+        "id": "interior",
+        "role": "filigree",
+        "x": 0,
+        "y": 251,
+        "width": 1672,
+        "height": 392,
+        "visiblePixels": 196616
+      }
+    ],
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1600,
+          "height": 900,
+          "coded_width": 1600,
+          "coded_height": 900,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "time_base": "1/12288",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 36864,
+          "duration": "3.000000",
+          "bit_rate": "8784218",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "72",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.101 libx264"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/Users/olof/git/ai-video-experiments/apps/canvas-animation/projects/title-sequence-study/studies/billions-motion-v015/output-v007/billions-motion.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "3.000000",
+        "size": "3295694",
+        "bit_rate": "8788517",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.12.101"
+        }
+      }
+    },
+    "passed": true
+  },
+  "screen": {
+    "completes": true,
+    "seeks": true,
+    "still": true,
+    "mobile": true,
+    "errors": [],
+    "playback": {
+      "ended": true,
+      "duration": 3,
+      "width": 1600,
+      "height": 900
+    },
+    "passed": true
+  },
+  "fidelityAndMotion": {
+    "sourceSha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+    "fidelity": {
+      "assembled-native": {
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "hold-native": {
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "motion": {
+      "B": {
+        "verticalTravelSourcePixels": 1127.8139434102795,
+        "rotationRangeDegrees": 26.85263760330128
+      },
+      "I1": {
+        "verticalTravelSourcePixels": 1267.9495539560828,
+        "rotationRangeDegrees": 29.553868621577635
+      },
+      "L1": {
+        "verticalTravelSourcePixels": 1163.381273196594,
+        "rotationRangeDegrees": 27.762846652748397
+      },
+      "L2": {
+        "verticalTravelSourcePixels": 1123.714572794915,
+        "rotationRangeDegrees": 26.111844463011614
+      },
+      "I2": {
+        "verticalTravelSourcePixels": 1196.483973854012,
+        "rotationRangeDegrees": 28.621756256623254
+      },
+      "O": {
+        "verticalTravelSourcePixels": 1150.4168289666113,
+        "rotationRangeDegrees": 26.75879061624072
+      },
+      "N": {
+        "verticalTravelSourcePixels": 1218.7517932160076,
+        "rotationRangeDegrees": 29.237663986395546
+      },
+      "S": {
+        "verticalTravelSourcePixels": 1162.0279448893727,
+        "rotationRangeDegrees": 27.061827187354293
+      }
+    },
+    "meanConsecutiveFrameDifference": {
+      "before": 0.22388273343766296,
+      "after": 6.79104830464267
+    },
+    "note": "Pixel difference measures activity, not artistic quality. Full assembled native and actual timeline hold must preserve RGB.",
+    "passed": true
+  },
+  "extraction": {
+    "sourceSha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+    "recipe": "ivory threshold + connected face + small-hole fill + 6px border; source RGB unchanged",
+    "letters": [
+      {
+        "id": "B",
+        "facePixels": 58474,
+        "contours": 3,
+        "vertices": 1432
+      },
+      {
+        "id": "I1",
+        "facePixels": 23006,
+        "contours": 2,
+        "vertices": 292
+      },
+      {
+        "id": "L1",
+        "facePixels": 23500,
+        "contours": 2,
+        "vertices": 391
+      },
+      {
+        "id": "L2",
+        "facePixels": 24223,
+        "contours": 1,
+        "vertices": 422
+      },
+      {
+        "id": "I2",
+        "facePixels": 22672,
+        "contours": 2,
+        "vertices": 406
+      },
+      {
+        "id": "O",
+        "facePixels": 35584,
+        "contours": 4,
+        "vertices": 948
+      },
+      {
+        "id": "N",
+        "facePixels": 36671,
+        "contours": 4,
+        "vertices": 875
+      },
+      {
+        "id": "S",
+        "facePixels": 35673,
+        "contours": 1,
+        "vertices": 1222
+      }
+    ]
+  },
+  "sourceHashes": {
+    "motion.js": "0f4c3d4a7f7d6d9cd194ef220e148d9ed440c1771b428021802c5741ebf56115",
+    "rig.json": "f6da85ed57f91c2c4eed3de845b1cffb3da3e4d1efe7ad239508f0a16925e4ca",
+    "build.mjs": "d1d95b572b60c47923b6a52c0721093a528ee170bfa059a1b170e9204ba8ffef",
+    "../../../../tools/artwork/split-plate.js": "a935f64f4c83c54ec992117b3be526399e653ea46fd76fdaf897f162ba8aa887"
+  },
+  "consultation": {
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "reviewed": "v003 stills; no claimed normal-speed viewing",
+    "applied": [
+      "opaque foreground lettering",
+      "early background clearing",
+      "remove muddy palette flashes"
+    ]
+  }
+}

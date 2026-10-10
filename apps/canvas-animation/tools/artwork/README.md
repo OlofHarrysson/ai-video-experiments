@@ -41,3 +41,9 @@ const controls = ArtworkMasks.render(maskData, {
 ```
 
 Upload the returned canvas separately from the original artwork. In a fragment shader, sample the control channel to blend effects continuously. The v014 example applies bounded exposure in linear light; it preserves neutral pixels exactly and does not manufacture surface normals. Overlapping masks are painted in declared layer order, so author independent channels deliberately.
+
+## Moving parts from a finished plate
+
+`split-plate.js` exposes `splitArtworkPlate(image, rig)`. The rig supplies native dimensions and an ordered list of named SVG ownership masks, pivots and optional contour padding. First matching mask owns the pixel; the last region must cover the remaining plate. It returns tightly cropped canvases and placement offsets while retaining the original RGB. A zero-transform assembly should be checked against the source before animating.
+
+[BILLIONS v015](../../projects/title-sequence-study/studies/billions-motion-v015/README.md) demonstrates independent glyph arrivals and rotating ornaments. Its color-based face extraction is project-specific; the shared splitter does not infer letters. Draw opaque foreground pieces after the background. Additive blending across opaque lettering destroys dark engraving at overlaps. A flattened plate has no hidden surfaces: reveal the background after letters settle, or author the missing background before moving them away from an assembled composition.

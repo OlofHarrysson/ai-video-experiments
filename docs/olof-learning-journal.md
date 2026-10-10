@@ -474,3 +474,7 @@ Olof rejects [KEEP UP v011](../apps/canvas-animation/projects/title-sequence-stu
 ### 2026-10-10 — ornate lettering fidelity
 
 Olof finds the texture and lost sharpness in v013’s first and third identities below the generated targets. He authorizes two hours to improve transfer tooling, explicitly including SVG cleanup and entirely different techniques. This feedback prioritizes fidelity over merely having paths. The [v014 study](../apps/canvas-animation/projects/title-sequence-study/studies/fidelity-v014/README.md) finds improved tracing and color meshes useful but selects preserved artwork with soft vector controls for these ornate surfaces. The assistant has verified that result; Olof has not yet judged it. This does not establish a blanket preference for raster artwork or approve the new motion.
+
+### 2026-10-10 — fidelity alone is not animation
+
+Olof says v014 still looks good, but its glimmer gives little visible change. He approves a three-second BILLIONS prototype with separated moving letters and ornaments and explicitly asks to push motion while preserving quality. [v015](../apps/canvas-animation/projects/title-sequence-study/studies/billions-motion-v015/README.md) tests that direction. His positive fidelity feedback does not approve the restrained motion; the new spatial choreography still needs his judgment.
