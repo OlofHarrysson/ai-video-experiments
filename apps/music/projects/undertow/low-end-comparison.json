@@ -1,0 +1,15 @@
+{
+  "method": "Fourth-order Butterworth 30\u2013160 Hz bandpass RMS relative to full-band RMS; gain-independent descriptor, not a quality measure",
+  "clips": {
+    "soft_focus": {
+      "start": 15.24,
+      "duration": 28,
+      "band_30_160_rms_relative_to_fullband_db": -1.9872205854620175
+    },
+    "undertow_core_v001": {
+      "start": 0,
+      "duration": 28,
+      "band_30_160_rms_relative_to_fullband_db": -0.8807908701231258
+    }
+  }
+}

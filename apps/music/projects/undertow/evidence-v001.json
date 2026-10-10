@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-10",
+  "selected_revision": "v001",
+  "purpose": "Short human audition before full arrangement",
+  "source_sha256": "7dc417a0784e8b09a33b9dd48f0d4e337d9336e878f12b509faa46ef76906989",
+  "render_status": "complete",
+  "renders": {
+    "master": {
+      "sha256": "1845f9cf8874c7d44e2707d200f00c4f472f5db7cee9fe59118998b1043a7bec",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -13.06,
+      "true_peak_dbtp": -0.51,
+      "rms_dbfs": -14.223306692896418,
+      "samples_at_or_above_full_scale": 0
+    },
+    "drums": {
+      "sha256": "3df18f8f44e720071ea03a2f15143db91552fffeb556833c9291d2046febeeb6",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -13.62,
+      "true_peak_dbtp": -0.59,
+      "rms_dbfs": -15.505140850635247,
+      "samples_at_or_above_full_scale": 0
+    },
+    "bass": {
+      "sha256": "828e7a41d09be4cc36ae4c7f58471fca2f49e2c8417ef4d99797e759841e1234",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -22.03,
+      "true_peak_dbtp": -8.82,
+      "rms_dbfs": -20.18499646975037,
+      "samples_at_or_above_full_scale": 0
+    },
+    "texture": {
+      "sha256": "d2e9b170bd0f2f30597dfcdb685ad383f9be30293dd4a2ed15d5aa6260b2ba38",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -44.36,
+      "true_peak_dbtp": -22.62,
+      "rms_dbfs": -48.330773544877054,
+      "samples_at_or_above_full_scale": 0
+    }
+  },
+  "listening_copy": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undertow/renders/v001/undertow.wav",
+    "sha256": "fe50252f6ff8b940cf9fd96bf8ec8b7092776a1c8fe7fbdaa1863fc0d2784ea6",
+    "seconds": 32.238791666666664,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -1.2446386154703744,
+    "rms_dbfs": -14.913306692507033,
+    "samples_at_or_above_full_scale": 0,
+    "bpm_supplied": 134,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -13.75,
+    "true_peak_dbtp": -1.2,
+    "loudness_range_lu": 0.6,
+    "lr_correlation": 0.9987317772802966,
+    "mono_rms_dbfs": -14.916065076654267
+  },
+  "listening_gain_db": -0.69,
+  "review": {
+    "receipt": "work/undertow/core-v001/request.json",
+    "source_sha256": "12e2aeb720aad52fa5b3beb7891c70f42fe6d5cb9333b5e26412c0629bbb9164",
+    "model": "google/gemini-3.1-pro-preview",
+    "status": "complete",
+    "finish_reason": "stop",
+    "cost_usd": 0.017644
+  },
+  "human_verdict": "pending",
+  "checks": {
+    "aligned_finite_stereo_renders": true,
+    "source_hash_matches": true,
+    "python_tests": 19,
+    "ruff": "passed",
+    "renderer_changed": false
+  },
+  "friction_incident": "AF-20261010-133514"
+}

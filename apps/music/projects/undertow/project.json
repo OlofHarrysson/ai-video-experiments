@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "title": "Undertow \u2014 club groove test",
+  "revisions": {
+    "v001": {
+      "source": "source/core-v001.strudel",
+      "notes": "Bass-and-drums-led direction test after Soft Focus rejection. F pedal, rolling bass, no lead melody or chord progression. Human audition before full arrangement."
+    },
+    "v002": {
+      "source": "source/core-v002.strudel",
+      "notes": "Raised rolling bass layers about 2.5 dB and lowered kick 1.4 dB after isolated-stem inspection. Same short direction test; human audition before arrangement."
+    }
+  },
+  "end_cycle": 18,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "../chrome-after-rain/references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hat",
+      "open",
+      "shuffle",
+      "rim"
+    ],
+    "bass": [
+      "sub",
+      "bass",
+      "growl"
+    ],
+    "texture": [
+      "stab",
+      "texture",
+      "metal"
+    ]
+  },
+  "sections": {
+    "groove": [
+      0,
+      16
+    ],
+    "tail": [
+      16,
+      18
+    ]
+  }
+}

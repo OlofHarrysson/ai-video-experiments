@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-10",
+  "selected_revision": "v002",
+  "purpose": "Short human audition before full arrangement",
+  "source_sha256": "983789a3547c3c02cc6042f56572e1f72a623ef32422476d45eb82ab2a49fa92",
+  "render_status": "complete",
+  "renders": {
+    "master": {
+      "sha256": "fbd7ea11df12b26c183a6ed5c45c39742d1d05bf39b7a66ff0e43f284f5478cd",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -13.71,
+      "true_peak_dbtp": -1.29,
+      "rms_dbfs": -14.267021085398424,
+      "samples_at_or_above_full_scale": 0
+    },
+    "drums": {
+      "sha256": "80e3ee97c7ca8cc1f2c9ec62a8353edece99bccc48717cf86b3e1c605ebe3fa4",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -14.97,
+      "true_peak_dbtp": -1.49,
+      "rms_dbfs": -16.869903734167615,
+      "samples_at_or_above_full_scale": 0
+    },
+    "bass": {
+      "sha256": "cdb729fbc0d35f069b08878eb552d089cfdbee787de066d48f9a8603664c6635",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -19.59,
+      "true_peak_dbtp": -6.04,
+      "rms_dbfs": -17.744752486850864,
+      "samples_at_or_above_full_scale": 0
+    },
+    "texture": {
+      "sha256": "78d52a9df14a420835e0b831f3bbad844c209fe01f7eaeedac7d8551e89992e4",
+      "seconds": 32.238791666666664,
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -44.67,
+      "true_peak_dbtp": -22.54,
+      "rms_dbfs": -48.76512083309686,
+      "samples_at_or_above_full_scale": 0
+    }
+  },
+  "listening_copy": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undertow/renders/v002/undertow.wav",
+    "sha256": "19d797228edaf18bc49bf658f37cdd13409b7e284fc570d7d90b874e374ad6da",
+    "seconds": 32.238791666666664,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -1.368320109697358,
+    "rms_dbfs": -14.267021085398424,
+    "samples_at_or_above_full_scale": 0,
+    "bpm_supplied": 134,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -13.71,
+    "true_peak_dbtp": -1.29,
+    "loudness_range_lu": 0.5,
+    "lr_correlation": 0.9988772070347609,
+    "mono_rms_dbfs": -14.269462170808653
+  },
+  "listening_gain_db": 0,
+  "review": {
+    "receipt": "work/undertow/core-v001/request.json",
+    "source_sha256": "12e2aeb720aad52fa5b3beb7891c70f42fe6d5cb9333b5e26412c0629bbb9164",
+    "model": "google/gemini-3.1-pro-preview",
+    "status": "complete",
+    "finish_reason": "stop",
+    "cost_usd": 0.017644
+  },
+  "human_verdict": "pending",
+  "checks": {
+    "aligned_finite_stereo_renders": true,
+    "source_hash_matches": true,
+    "python_tests": 19,
+    "ruff": "passed",
+    "renderer_changed": false
+  },
+  "friction_incident": "AF-20261010-133514",
+  "review_scope": "Paid review is of v001 prototype; v002 changes bass/kick gains only, no new paid review"
+}

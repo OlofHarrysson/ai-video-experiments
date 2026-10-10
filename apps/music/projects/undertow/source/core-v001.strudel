@@ -1,0 +1,19 @@
+// Undertow core — 134 BPM. F pedal; rhythm and bass carry the track.
+setcpm(134/4)
+const on = "<1!16 0!2>"
+const line = "<[~ f1 f1 ~ ~ f1 ~ f1 ~ f1 f1 ~ ~ f1 ~ f1]!3 [~ f1 f1 ~ ~ f1 ~ f1 ~ f1 ~ f1 ~ eb1 ~ f1]>"
+
+kick: s("bd*4").bank("RolandTR909").speed(.88).gain(.68).orbit(1).mask(on)
+clap: s("~ cp ~ cp").bank("RolandTR909").gain(.25).hpf(500).room(.07).orbit(2).mask(on)
+hat: s("~ hh ~ hh ~ hh [hh hh] hh").bank("RolandTR909").gain(".095 .11 .10 .075").hpf(4500).pan(.63).swingBy(.035,8).orbit(1).mask(on)
+open: s("~ oh ~ oh ~ oh ~ oh").bank("RolandTR909").gain(.115).clip(.65).hpf(3800).pan(.40).orbit(1).mask(on)
+shuffle: s("crshaker*16").gain(".012 .042 .026 .06").swingBy(.06,8).pan(.75).orbit(1).mask(on)
+rim: s("~ ~ ~ crrim ~ ~ crwood ~ ~ ~ ~ crrim ~ crwood ~ ~").speed(.68).gain(".13 .09 .11 .10").hpf(250).pan(".28 .70").delay(.14).delaytime(.335821).delayfeedback(.27).room(.11).orbit(3).mask(on)
+
+sub: note(line).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.62).orbit(4).mask(on)
+bass: note(line).s("sawtooth").lpf("<330 380 340 460>").lpenv(1.8).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.36).orbit(4).mask(on)
+growl: note("f2").struct("~ x ~ ~ ~ ~ x ~").s("supersaw").unison(3).detune(.13).spread(.3).lpf(240).lpenv(1.5).lpdecay(.12).attack(.008).decay(.13).sustain(.05).release(.07).gain(.16).orbit(4).mask(on)
+
+stab: note("[f3,ab3,c4]").struct("<~ [~ ~ ~ x ~ ~ ~ ~] ~ [~ ~ ~ ~ ~ ~ x ~]>").s("sawtooth").lpf(900).hpf(380).attack(.006).decay(.09).sustain(.025).release(.08).gain(.13).pan(.33).delay(.43).delaytime(.335821).delayfeedback(.48).room(.38).roomsize(5).orbit(5).mask(on)
+texture: note("[f2,c3,gb3]").s("supersaw").unison(3).detune(.23).spread(.9).lpf(720).hpf(320).attack(.5).decay(.5).sustain(.55).release(.6).gain(.045).pan(.73).tremolosync(4).tremoloshape("ramp").tremolodepth(.85).room(.65).roomsize(7).orbit(6).mask(on)
+metal: s("crhat").struct("<~ [~ ~ ~ ~ ~ ~ ~ x] ~ [~ ~ ~ x ~ ~ ~ ~]>").speed(.34).hpf(1200).gain(.11).pan(.23).delay(.4).delaytime(.447761).delayfeedback(.52).room(.5).orbit(7).mask(on)

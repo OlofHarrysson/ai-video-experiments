@@ -1,6 +1,6 @@
 # Soft Focus
 
-An original 126 BPM instrumental built after comparing actual DJ_Dave recordings with Chrome After Rain. The production question is whether longer melodic phrases, a sustained harmonic bed and a fuller rhythm move the sound away from the isolated, game-like plucks Olof rejected. Olof has authorized a new track; its artistic success awaits his playback.
+An original 126 BPM instrumental built after comparing actual DJ_Dave recordings with Chrome After Rain. The production question is whether longer melodic phrases, a sustained harmonic bed and a fuller rhythm move the sound away from the isolated, game-like plucks Olof rejected. Olof rejected this version as still game-like and too much like a children’s song. He wants heavier bass, stronger drums, less melody and an underground techno/club direction; see [Undertow](../undertow/README.md).
 
 ## Listen
 
@@ -41,4 +41,4 @@ Source: [v001](source/v001.strudel). [Recipe](project.json). [Evidence](evidence
 
 The master and five stem groups completed at 48 kHz stereo with identical lengths, finite samples and no clipping. Source and output hashes were verified. The 1:54 listening copy uses a constant +4.8 dB gain, measuring −16.52 LUFS and −1.31 dBTP; the final near-silence is the intentional effect tail. No limiting or hidden processing was added. Nineteen Python tests and Ruff passed; renderer code is unchanged.
 
-Two additional audio-model reviews covered the entire final arrangement in contiguous halves and flagged no conspicuous overload or persistent masking. They nevertheless misidentified the ending synth as a guitar and placed some changes several seconds early. These are limited screening observations, not a claim of professional quality. Four completed reviews reported **$0.089792** total. The next decision is Olof’s listening response.
+Two additional audio-model reviews covered the entire final arrangement in contiguous halves and flagged no conspicuous overload or persistent masking. They nevertheless misidentified the ending synth as a guitar and placed some changes several seconds early. These are limited screening observations, not a claim of professional quality. Four completed reviews reported **$0.089792** total. Olof’s subsequent verdict was negative; the new direction is recorded above.
