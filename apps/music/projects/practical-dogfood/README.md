@@ -30,7 +30,7 @@ Existing WAV/MP3/OGG clips can be imported and then triggered, trimmed, sliced, 
 
 ## Programmatic Strudel route
 
-Current production here still uses the official UI. The published `@strudel/web` and `@strudel/webaudio` **1.3.0** packages were inspected from the npm registry on this date. `@strudel/web` documents `initStrudel`, `evaluate`, sample loading and playback. `@strudel/webaudio` exports:
+The initial study used the official UI. The follow-up [programmatic renderer](../../docs/renderer-validation.md) is now implemented and validated. The published `@strudel/web` and `@strudel/webaudio` **1.3.0** packages were inspected from the npm registry on this date. `@strudel/web` documents `initStrudel`, `evaluate`, sample loading and playback. `@strudel/webaudio` exports:
 
 ```js
 renderPatternAudio(pattern, cps, begin, end, sampleRate, maxPolyphony, multiChannelOrbits, downloadName)
@@ -38,10 +38,10 @@ renderPatternAudio(pattern, cps, begin, end, sampleRate, maxPolyphony, multiChan
 
 It creates an `OfflineAudioContext`, schedules pattern events and generates a WAV browser download. It uses DOM/browser APIs and does not return WAV bytes directly. Thus it offers a route around editor/menu automation, not an established HTTP service or proven pure-Node renderer. Its event scheduling catches and logs individual sound errors, so a future wrapper must capture those errors and reject partial renders. The npm build and live website may differ; do not assume parity.
 
-Recommended next architecture checkpoint: a small local browser-backed renderer using a pinned package version, with source/range/sample inputs and saved WAV/provenance outputs. Validate it against the existing fixtures and this beat before replacing the UI export workflow. This integration has **not** been implemented or benchmarked. The packages declare AGPL-3.0-or-later; preserve their license requirements in any integration.
+The follow-up implements that browser-backed renderer with explicit local samples and saved WAV/provenance. It required a patch to match the website's chunked scheduling; unpatched npm output does not match this practical dry reference. See the linked validation for measured parity and limitations. The packages declare AGPL-3.0-or-later; preserve their license requirements in any integration.
 
 Sources: [Strudel samples](https://strudel.cc/learn/samples/), [integration guide](https://strudel.cc/technical-manual/project-start/), [package overview](https://strudel.cc/technical-manual/packages/), [published webaudio source](https://unpkg.com/@strudel/webaudio@1.3.0/webaudio.mjs), [web package README](https://unpkg.com/@strudel/web@1.3.0/README.md).
 
 ## Evidence and limits
 
-`evidence.json` records source/media hashes, export parameters, measured results, reconstruction and repeat comparisons. All original renders and samples remain local/ignored. Code was unchanged in this study; validation was actual browser export, numerical measurements, visual spectrogram inspection and one real audio-model request. Codex did not personally hear playback. Longer arrangements, recovery after browser cache loss, automatic stem separation and renderer integration remain untested.
+`evidence.json` records source/media hashes, export parameters, measured results, reconstruction and repeat comparisons. All original renders and samples remain local/ignored. Code was unchanged in this study; validation was actual browser export, numerical measurements, visual spectrogram inspection and one real audio-model request. Codex did not personally hear playback. This initial study did not test longer arrangements or fresh-browser restoration. The linked renderer follow-up covers both. Automatic stem separation remains unimplemented.

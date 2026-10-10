@@ -1,0 +1,51 @@
+diff --git a/node_modules/@strudel/web/dist/index.mjs b/node_modules/@strudel/web/dist/index.mjs
+index d2ac02b..ff1f63c 100644
+--- a/node_modules/@strudel/web/dist/index.mjs
++++ b/node_modules/@strudel/web/dist/index.mjs
+@@ -9353,21 +9353,33 @@ async function dw(e, t, n, s, i, r, a, u = void 0) {
+     maxPolyphony: r,
+     multiChannelOrbits: a
+   }), nu("[webaudio] preloading");
+-  let c = e.queryArc(n, s, { _cps: t }).sort((l, p) => l.whole.begin.valueOf() - p.whole.begin.valueOf());
+-  for (const l of c)
+-    if (l.hasOnset())
++  // Schedule one cycle at a time, as in Strudel's website exporter (2026-10-10).
++  // Scheduling every future voice before rendering changes sample playback.
++  const schedule = async (begin, end) => {
++    const haps = e.queryArc(begin, end, { _cps: t })
++      .sort((left, right) => left.whole.begin.valueOf() - right.whole.begin.valueOf());
++    for (const hap of haps) {
++      if (!hap.hasOnset()) continue;
+       try {
+-        await Sr(
+-          GM(l),
+-          (l.whole.begin.valueOf() - n) / t,
+-          l.duration / t,
+-          t,
+-          (l.whole?.begin.valueOf() - n) / t
+-        );
+-      } catch (p) {
+-        Pi(p, "webaudio");
++        await Sr(GM(hap), (hap.whole.begin.valueOf() - n) / t,
++          hap.duration / t, t, (hap.whole.begin.valueOf() - n) / t);
++      } catch (error) {
++        Pi(error, "webaudio");
+       }
+-  return nu("[webaudio] start rendering"), o.startRendering().then((l) => {
++    }
++  };
++  let cycle = n;
++  let rendered = null;
++  while (cycle <= s) {
++    await schedule(cycle, Math.min(cycle + 1, s));
++    cycle += 1;
++    let paused;
++    if (cycle < s) paused = o.suspend((cycle - n - 1) / t);
++    if (rendered === null) rendered = o.startRendering();
++    else await o.resume();
++    if (cycle < s) await paused;
++  }
++  return rendered.then((l) => {
+     const p = hw(l), m = new Blob([p], { type: "audio/wav" }), g = URL.createObjectURL(m), y = document.createElement("a");
+     y.href = g, u = u ? `${u}.wav` : `${(/* @__PURE__ */ new Date()).toISOString()}.wav`, y.download = `${u}`, document.body.appendChild(y), y.click(), document.body.removeChild(y), URL.revokeObjectURL(g);
+   }).finally(async () => {

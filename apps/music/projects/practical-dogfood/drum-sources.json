@@ -1,0 +1,34 @@
+{
+  "map_url": "https://strudel.b-cdn.net/tidal-drum-machines.json",
+  "retrieved_at": "2026-10-10",
+  "samples": [
+    {
+      "sound": "RolandTR909_bd",
+      "index": 0,
+      "source": "https://strudel.b-cdn.net/tidal-drum-machines/machines/RolandTR909/rolandtr909-bd/Bassdrum-01.wav",
+      "path": "projects/practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+      "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb"
+    },
+    {
+      "sound": "RolandTR909_cp",
+      "index": 0,
+      "source": "https://strudel.b-cdn.net/tidal-drum-machines/machines/RolandTR909/rolandtr909-cp/Clap.wav",
+      "path": "projects/practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+      "sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2"
+    },
+    {
+      "sound": "RolandTR909_hh",
+      "index": 0,
+      "source": "https://strudel.b-cdn.net/tidal-drum-machines/machines/RolandTR909/rolandtr909-hh/hh01.wav",
+      "path": "projects/practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+      "sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd"
+    },
+    {
+      "sound": "RolandTR909_oh",
+      "index": 0,
+      "source": "https://strudel.b-cdn.net/tidal-drum-machines/machines/RolandTR909/rolandtr909-oh/Hat Open.wav",
+      "path": "projects/practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+      "sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7"
+    }
+  ]
+}

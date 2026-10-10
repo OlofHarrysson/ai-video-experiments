@@ -10,7 +10,8 @@ From `/Users/olof/git/ai-video-experiments/apps/music`:
 
 ```sh
 uv sync --locked
-# Requires ffmpeg and ffprobe on PATH; installed on this Mac.
+npm ci
+# Requires Node.js, Google Chrome, patch, ffmpeg and ffprobe; installed on this Mac.
 uv run --locked python music.py --help
 ```
 
@@ -42,17 +43,38 @@ uv run --locked python music.py compare projects/example/renders/full.wav projec
 
 ## Rendering and revision
 
-1. Read the [Strudel guide](references/strudel/README.md), including the verified browser WAV export procedure. Preserve each evaluated source and its BPM, cycle range, sample rate and sample-bank dependencies.
-2. Export a stereo mix with **Multi Channel Orbits off**. Export stems by muting other layers, using the identical cycle range and sample rate each time. Start with deterministic patterns. Random pattern choices and shared reverb/delay can prevent independently rendered stems from summing exactly to the original mix; verify any reconstruction.
-3. Inspect the full mix, then the individual stem or explicit stem group relevant to a suspected problem. Include effect tails in the arrangement/export window; exports can cut them off.
-4. Make a short representative excerpt. Review audio with the workflow below and compare before/after copies at matched loudness.
-5. Change one musical issue, render under a new version, and record what changed and why. Show Olof a small number of actual playable candidates.
+Render saved source directly through the CLI. It uses a fresh headless Chrome process and a temporary loopback server, then closes both. There is no persistent service to start and no editor/menu automation.
 
-The browser exporter was verified on Window Seat, two eight-second fixtures and a 28-second practical beat. Dry non-overlapping stems reconstructed exactly; overlapping voices with panning and independent delay reconstructed with a −96.44 dBFS RMS residual. The practical beat tested sample loading and nonzero export starts. Shared reverb produced variation even between unchanged full renders, so do not demand exact wet-stem reconstruction. See the studies for measured limits. There is no headless Strudel render engine or automated source-separation system here.
+```sh
+# Synth-only fixture; tempo comes from setcpm/setcps in the source.
+uv run --locked python music.py render projects/tooling-validation/source/v001-full.strudel --end 4 --out outputs/my-synth-v001
+
+# Practical beat with explicit local drum and speech/music libraries.
+uv run --locked python music.py render projects/practical-dogfood/source/v002-full.strudel \
+  --begin 2 --end 16 --sample-rate 48000 \
+  --samples projects/practical-dogfood/references/assets/drums \
+  --samples projects/practical-dogfood/references/assets/samples \
+  --out outputs/my-practical-v001
+```
+
+Each new output directory contains `render.wav`, an exact `source.strudel` copy and `render.json`: tempo, range, frame count, engine/browser versions, source/sample/output hashes, requested sample paths and logs. Failed engine runs retain a failed receipt and any partial audio as `incomplete.wav`; they never publish that audio as `render.wav`. Existing output directories are rejected. `--timeout` defaults to 120 seconds for browser startup and separately for evaluation/rendering; longer arrangements can use a larger value. It is not a spending limit.
+
+The renderer pins `@strudel/web` 1.3.0 with a checksum-verified scheduling patch. The unpatched npm exporter measurably changed the practical sample layers; matching the website's chunked scheduling fixed the discrepancy. `npm ci` applies the patch; runtime refuses an unverified bundle. See [renderer validation and limits](docs/renderer-validation.md).
+
+1. Preserve versioned source and sample originals. Use `setcpm` or `setcps` explicitly. Only trusted local JavaScript source belongs in this tool.
+2. Render a stereo mix, then stems by muting other layers with `_$:` and using the identical range/rate. Multi Channel Orbits stays off. Include rests for effect tails; events before the start are not warmed up and tails beyond the end are cut off.
+3. Inspect the mix and relevant stems, then make a short excerpt for focused listening. Use `match` for before/after comparisons.
+4. Change one musical issue, render to a new directory and record the decision. Preserve wet masters: shared reverb and randomized patterns can vary across renders, so exact wet reconstruction is not an invariant.
+
+The [Strudel guide](references/strudel/README.md) remains useful for interactive editing and browser export. The automated path passed reference comparisons for dry synths, overlap/delay and the practical dry sampled beat, plus a 128-second wet arrangement. This is evidence for those recipes, not all Strudel features.
 
 ## Local voice and music samples
 
-Put retained WAV/MP3/OGG files in `projects/<study>/references/assets/samples/<sound-name>/`, then use Strudel **sounds → import-sounds → import sounds folder** on the `samples` folder. Play them with `s("sound-name")`; `slice` selects/reorders segments, and negative `speed` reverses playback. Local import, speech chopping and music-slice reversal were verified in the practical study. Keep originals on disk; browser storage is not a backup. This does not extract a voice from a mixed song. The published JavaScript packages also offer a route to direct rendering, documented in the practical study, but that integration is not implemented here.
+Put retained audio in `projects/<study>/references/assets/samples/<sound-name>/<file>.wav`, then pass the parent `samples` folder with `--samples`. Immediate child folders become sound names; files use case-sensitive filename order, recorded by index in the receipt. Multiple `--samples` folders are allowed, but duplicate sound names fail. WAV is tested; MP3/OGG/FLAC/M4A depend on Chrome decoding and have not been separately validated here.
+
+Use `s("sound-name")` to trigger a clip, `slice` to reorder segments and negative `speed` to reverse playback. Speech chopping and reversed music slices work in a fresh profile. No microphone recorder or extraction of vocals from a mixed song is implemented. The website can also import these folders through **sounds → import-sounds → import sounds folder**; browser storage is not a backup.
+
+Drum libraries must be explicit too: `.bank("RolandTR909")` expects folders such as `RolandTR909_bd`. This study retains the four index-zero drum samples it actually uses, with source URLs/hashes in [drum-sources.json](projects/practical-dogfood/drum-sources.json). Other banks and sample indices require their own files. Runtime HTTP requests outside its local server fail explicitly; download and preserve dependencies before rendering. It does not automatically load the website's entire sound library.
 
 ## OpenRouter audio review
 
@@ -71,7 +93,8 @@ Olof manages spending through the OpenRouter balance. The adapter imposes no dol
 
 ## Files and preservation
 
-- `music.py`, `tests/`, `pyproject.toml`, `uv.lock`: local CLI and reproducible environment.
+- `music.py`, `tests/`, `pyproject.toml`, `uv.lock`: local CLI and reproducible Python environment.
+- `renderer/`, `patches/`, `package.json`, `package-lock.json`: pinned browser render engine, scheduling patch and integration tests.
 - `references/strudel/`: retained operating guide, DJ_Dave research, original sketches, and local documentation snapshots.
 - `docs/`: foundations, listening protocol, selected catalog snapshot and current handoff.
 - `outputs/`: ignored analysis images and review copies.
@@ -85,6 +108,9 @@ The 68 source files were copied from the brainstorm workspace and SHA-256 verifi
 ```sh
 uv run --locked pytest -q
 uv run --locked ruff check .
+npm test
 ```
 
 Tests cover spectral/stereo cancellation behavior, real FFmpeg measurements, silent input and intervals, exact excerpts, preservation, alignment rejection, overload visibility, loudness matching, reconstruction differences, calibration conditions, offline preflight, uncapped requests and incomplete provider responses. Real provider and browser results are recorded separately in the validation study.
+
+Renderer tests cover successful synthesis, fresh-profile samples, missing sounds, invalid source, remote-dependency failure, timeout cleanup and output preservation. Three reference-parity tests use ignored local media and explicitly skip when that corpus has not been restored; six synthetic tests run without it.

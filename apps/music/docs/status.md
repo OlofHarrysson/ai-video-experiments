@@ -8,6 +8,10 @@ Improve and dogfood the music tooling. Simple compositions are authorized as tes
 
 ## Completed and checked
 
+- **Programmatic renderer implemented and verified.** `music.py render` evaluates trusted Strudel source in fresh headless Chrome, loads explicit local samples and saves stereo WAV/source/provenance. It closes its temporary server/browser after success, failure or timeout. No UI export clicks required.
+- Pinned npm 1.3.0 needed a scheduling fix: whole-piece scheduling differed from the saved practical dry export by −30.55 dBFS RMS. A checksum-verified patch using the website's chunked scheduling reduced the residual to −132.40 dBFS RMS, with a one-PCM16-step peak. Dry synths match exactly; overlap/delay passes the one-step bound. A 128-second wet render completed without engine errors. [Renderer evidence](renderer-validation.md).
+- Current checks: 13 Python tests, 9 renderer integration/parity tests (none skipped on this machine), Ruff and fresh `npm ci` pass; npm audit reports zero vulnerabilities. Three parity tests require the ignored reference corpus on new clones.
+
 - Dedicated locked uv workspace, CLI, private credential file and preserved Strudel/DJ_Dave research. The original migration verified all 68 copied files by SHA-256; see `migration.json`.
 - OpenRouter key works. Seven audio reviews completed with Gemini 3.1 Pro Preview, high reasoning. Reported costs total **$0.177320**; one additional timed-out request has unknown cost. No automatic retries or model fallback.
 - Initial four anonymous calibration clips were reviewed before reading the answer key. Broad critique recognized silence but missed the known 8–10 second dropout, misreported durations, and gave questionable high-frequency descriptions of a heavily filtered clip.
@@ -22,12 +26,12 @@ Improve and dogfood the music tooling. Simple compositions are authorized as tes
 
 Read the [validation study](../projects/tooling-validation/README.md), [machine-readable evidence](../projects/tooling-validation/evidence.json) and [listening protocol](listening.md). Raw audio and provider receipts remain local/ignored.
 
-Latest: [practical beat, sampling and API investigation](../projects/practical-dogfood/README.md), with [evidence](../projects/practical-dogfood/evidence.json). Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
+Latest: [programmatic renderer validation](renderer-validation.md), with [evidence](../projects/tooling-validation/renderer-evidence.json). The earlier [practical beat study](../projects/practical-dogfood/README.md) covers browser sampling and listening. Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
 
 ## Next tooling work
 
-1. Align on a small browser-backed programmatic renderer before implementation. Published `@strudel/web` / `@strudel/webaudio` 1.3.0 expose evaluation and `renderPatternAudio`, which uses OfflineAudioContext and downloads WAV through the DOM. This is a promising direct integration, not a working CLI/API in this repository. Verify parity with saved reference renders and capture partial-render errors.
-2. Further practical checks: longer arrangements, local-sample restoration in a fresh profile and controlled A/B listening. The first full revision and matched comparison files exist; no human listening preference is recorded.
-3. Improve listening only through specific questions with known controls and objective checks. Broad critique is exploratory; do not automatically edit music based on it.
+1. Dogfood the command-driven render → inspect → revise loop on a new small arrangement. Use explicit local sample folders; there is no need for UI export clicks.
+2. Controlled A/B listening with Olof. Matched files exist, but no human listening preference is recorded. Keep model questions specific and check objective defects locally.
+3. Extend sampling only when an experiment needs it: supplied voice/music clips already work. Vocal extraction, automatic beat/key detection and sample discovery remain deferred.
 
 A song brief and a polished composition remain deferred. Do not resume paused video studies.

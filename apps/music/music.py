@@ -456,6 +456,16 @@ def review(path, out, send=False, prompt=PROMPT):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
+    command = sub.add_parser(
+        "render", help="Render trusted Strudel source in a fresh headless Chrome"
+    )
+    command.add_argument("input", type=Path)
+    command.add_argument("--out", type=Path, required=True)
+    command.add_argument("--begin", type=float, default=0)
+    command.add_argument("--end", type=float, required=True)
+    command.add_argument("--sample-rate", type=int, default=48000)
+    command.add_argument("--samples", type=Path, action="append", default=[])
+    command.add_argument("--timeout", type=float, default=120)
     for name in ["inspect", "excerpt", "review", "calibration"]:
         command = sub.add_parser(name)
         command.add_argument("input", type=Path)
@@ -485,7 +495,29 @@ def main():
     command.add_argument("candidate", type=Path)
     command.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    if args.command == "inspect":
+    if args.command == "render":
+        command = [
+            "node",
+            str(ROOT / "renderer/render.mjs"),
+            str(args.input),
+            "--out",
+            str(args.out),
+            "--begin",
+            str(args.begin),
+            "--end",
+            str(args.end),
+            "--sample-rate",
+            str(args.sample_rate),
+            "--timeout",
+            str(args.timeout),
+        ]
+        for folder in args.samples:
+            command.extend(["--samples", str(folder)])
+        completed = subprocess.run(command, check=False)
+        if completed.returncode:
+            raise SystemExit(completed.returncode)
+        return
+    elif args.command == "inspect":
         result = inspect_audio(args.input, args.out, args.bpm)
     elif args.command == "excerpt":
         result = excerpt(args.input, args.out, args.start, args.duration)

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@strudel/web": "1.3.0",
+    "playwright-core": "1.64.0"
+  },
+  "name": "music-workbench-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test renderer/*.test.mjs",
+    "postinstall": "node renderer/apply-patch.mjs"
+  }
+}

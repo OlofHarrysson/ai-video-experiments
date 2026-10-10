@@ -1,0 +1,610 @@
+{
+  "date": "2026-10-10",
+  "renders": {
+    "renderer-v001-dry": {
+      "receipt": "outputs/renderer-v001-dry/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T07:57:21.976Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/tooling-validation/source/v001-full.strudel",
+        "sha256": "042bdbd6b18ef887a2da56eb0ca018d0570cb88967e56a0474bc1407320c68fe"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "50beb01abd04589333a10e078dce182c82e2de75b43e9bbe81a34bd069948931",
+        "lock_sha256": "3225f60f47e83315076ae0e2d6390cf63faa7d5f9c1bb107dadace22c9edae21",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 0,
+        "end": 4,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [],
+      "requested_samples": [],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 8,
+        "frames": 384000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 1536044,
+        "sha256": "07e103fdd3e053331def173f89cfd79ce039771b6be1a3f6ad8193dd628a4d6e"
+      },
+      "finished_at": "2026-10-10T07:57:24.153Z"
+    },
+    "renderer-v001-delay": {
+      "receipt": "outputs/renderer-v001-delay/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T07:58:41.929Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/tooling-validation/source/v002-full.strudel",
+        "sha256": "ee37e278a5092acd3eae703a5101b99466ba3b85ff5c0f29e8332878e6bf1a81"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "50beb01abd04589333a10e078dce182c82e2de75b43e9bbe81a34bd069948931",
+        "lock_sha256": "3225f60f47e83315076ae0e2d6390cf63faa7d5f9c1bb107dadace22c9edae21",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 0,
+        "end": 4,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [],
+      "requested_samples": [],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 8,
+        "frames": 384000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 1536044,
+        "sha256": "1581fe43645fc599b0d6698ada15548bc65455c09feafaefaef97ce637e0d5a8"
+      },
+      "finished_at": "2026-10-10T07:58:43.138Z"
+    },
+    "renderer-v001-practical-dry": {
+      "receipt": "outputs/renderer-v001-practical-dry/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T07:57:50.041Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/source/v003-dry-full.strudel",
+        "sha256": "f19de5c9e5ab45299c481b5aeb6ba7548fc9c8197c33bf338df9337a35eb1b37"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "50beb01abd04589333a10e078dce182c82e2de75b43e9bbe81a34bd069948931",
+        "lock_sha256": "3225f60f47e83315076ae0e2d6390cf63faa7d5f9c1bb107dadace22c9edae21",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 2,
+        "end": 16,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [
+        {
+          "name": "testloop",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testloop/phrase.wav",
+          "sha256": "d19cb08ecdf0d082ae4f3f22eaad7b8e9775fd3f4ee31984be147090026acb6a",
+          "bytes": 768088,
+          "route": "/samples/0.wav"
+        },
+        {
+          "name": "testvoice",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testvoice/phrase.wav",
+          "sha256": "4373ab0f1719082a930741db09e139dc4eb3e6068dc1ac6b3ddfe52a4294e1c3",
+          "bytes": 477234,
+          "route": "/samples/1.wav"
+        },
+        {
+          "name": "RolandTR909_bd",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+          "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+          "bytes": 82232,
+          "route": "/samples/2.wav"
+        },
+        {
+          "name": "RolandTR909_cp",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+          "sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+          "bytes": 135952,
+          "route": "/samples/3.wav"
+        },
+        {
+          "name": "RolandTR909_hh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+          "sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+          "bytes": 21228,
+          "route": "/samples/4.wav"
+        },
+        {
+          "name": "RolandTR909_oh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+          "sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+          "bytes": 136420,
+          "route": "/samples/5.wav"
+        }
+      ],
+      "requested_samples": [
+        "/samples/2.wav",
+        "/samples/4.wav",
+        "/samples/3.wav",
+        "/samples/5.wav",
+        "/samples/1.wav",
+        "/samples/0.wav"
+      ],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 28,
+        "frames": 1344000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 5376044,
+        "sha256": "a04270fe9a83e97da5a578dd3303d61e087b38f69f67da7708e9fd9ba15e2112"
+      },
+      "finished_at": "2026-10-10T07:57:53.087Z"
+    },
+    "renderer-v002-practical-dry": {
+      "receipt": "outputs/renderer-v002-practical-dry/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T08:07:24.596Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/source/v003-dry-full.strudel",
+        "sha256": "f19de5c9e5ab45299c481b5aeb6ba7548fc9c8197c33bf338df9337a35eb1b37"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "446a0c42552401323c815a2cccfd013e4c03120ce924dee454fcf0f9dfcaa399",
+        "renderer_sha256": "a622752e526863653b60de67ed6a4892542cd89eb6c2a180e46bc4ca130b6bb6",
+        "lock_sha256": "e2fd5f4d0a400c17d7fdeb981768103c4c501b2d01334483700544fad18abb48",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 2,
+        "end": 16,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [
+        {
+          "name": "testloop",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testloop/phrase.wav",
+          "sha256": "d19cb08ecdf0d082ae4f3f22eaad7b8e9775fd3f4ee31984be147090026acb6a",
+          "bytes": 768088,
+          "route": "/samples/0.wav"
+        },
+        {
+          "name": "testvoice",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testvoice/phrase.wav",
+          "sha256": "4373ab0f1719082a930741db09e139dc4eb3e6068dc1ac6b3ddfe52a4294e1c3",
+          "bytes": 477234,
+          "route": "/samples/1.wav"
+        },
+        {
+          "name": "RolandTR909_bd",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+          "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+          "bytes": 82232,
+          "route": "/samples/2.wav"
+        },
+        {
+          "name": "RolandTR909_cp",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+          "sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+          "bytes": 135952,
+          "route": "/samples/3.wav"
+        },
+        {
+          "name": "RolandTR909_hh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+          "sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+          "bytes": 21228,
+          "route": "/samples/4.wav"
+        },
+        {
+          "name": "RolandTR909_oh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+          "sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+          "bytes": 136420,
+          "route": "/samples/5.wav"
+        }
+      ],
+      "requested_samples": [
+        "/samples/2.wav",
+        "/samples/4.wav",
+        "/samples/3.wav",
+        "/samples/5.wav",
+        "/samples/1.wav",
+        "/samples/0.wav"
+      ],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 28,
+        "frames": 1344000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 5376044,
+        "sha256": "2ae49f0dbd3bd8f46c6bafe2df5f3199a3f72ec7d3067e7c96cc2f63beb0209a"
+      },
+      "finished_at": "2026-10-10T08:07:25.549Z"
+    },
+    "renderer-v002-practical-wet": {
+      "receipt": "outputs/renderer-v002-practical-wet/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T08:07:26.355Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/source/v002-full.strudel",
+        "sha256": "34fffbe7899cce9cd2c399b3a28675923c28455e46bb46505e11b7e5ff6d9ab4"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "446a0c42552401323c815a2cccfd013e4c03120ce924dee454fcf0f9dfcaa399",
+        "renderer_sha256": "a622752e526863653b60de67ed6a4892542cd89eb6c2a180e46bc4ca130b6bb6",
+        "lock_sha256": "e2fd5f4d0a400c17d7fdeb981768103c4c501b2d01334483700544fad18abb48",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 2,
+        "end": 16,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [
+        {
+          "name": "testloop",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testloop/phrase.wav",
+          "sha256": "d19cb08ecdf0d082ae4f3f22eaad7b8e9775fd3f4ee31984be147090026acb6a",
+          "bytes": 768088,
+          "route": "/samples/0.wav"
+        },
+        {
+          "name": "testvoice",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testvoice/phrase.wav",
+          "sha256": "4373ab0f1719082a930741db09e139dc4eb3e6068dc1ac6b3ddfe52a4294e1c3",
+          "bytes": 477234,
+          "route": "/samples/1.wav"
+        },
+        {
+          "name": "RolandTR909_bd",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+          "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+          "bytes": 82232,
+          "route": "/samples/2.wav"
+        },
+        {
+          "name": "RolandTR909_cp",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+          "sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+          "bytes": 135952,
+          "route": "/samples/3.wav"
+        },
+        {
+          "name": "RolandTR909_hh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+          "sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+          "bytes": 21228,
+          "route": "/samples/4.wav"
+        },
+        {
+          "name": "RolandTR909_oh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+          "sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+          "bytes": 136420,
+          "route": "/samples/5.wav"
+        }
+      ],
+      "requested_samples": [
+        "/samples/2.wav",
+        "/samples/4.wav",
+        "/samples/3.wav",
+        "/samples/5.wav",
+        "/samples/1.wav",
+        "/samples/0.wav"
+      ],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 28,
+        "frames": 1344000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 5376044,
+        "sha256": "5a975c212c4468c5c82d489e42dd41fe178ba8499940e0e4bb50545d3d3d1164"
+      },
+      "finished_at": "2026-10-10T08:07:28.118Z"
+    },
+    "renderer-v002-long": {
+      "receipt": "outputs/renderer-v002-long/render.json",
+      "status": "complete",
+      "started_at": "2026-10-10T08:07:28.918Z",
+      "source": {
+        "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/source/v002-full.strudel",
+        "sha256": "34fffbe7899cce9cd2c399b3a28675923c28455e46bb46505e11b7e5ff6d9ab4"
+      },
+      "engine": {
+        "strudel_web": "1.3.0",
+        "bundle_sha256": "446a0c42552401323c815a2cccfd013e4c03120ce924dee454fcf0f9dfcaa399",
+        "renderer_sha256": "a622752e526863653b60de67ed6a4892542cd89eb6c2a180e46bc4ca130b6bb6",
+        "lock_sha256": "e2fd5f4d0a400c17d7fdeb981768103c4c501b2d01334483700544fad18abb48",
+        "node": "v25.9.0",
+        "browser": "154.0.8037.98"
+      },
+      "settings": {
+        "begin": 0,
+        "end": 64,
+        "sample_rate": 48000,
+        "max_polyphony": 128,
+        "multi_channel_orbits": false,
+        "timeout_seconds": 120
+      },
+      "samples": [
+        {
+          "name": "testloop",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testloop/phrase.wav",
+          "sha256": "d19cb08ecdf0d082ae4f3f22eaad7b8e9775fd3f4ee31984be147090026acb6a",
+          "bytes": 768088,
+          "route": "/samples/0.wav"
+        },
+        {
+          "name": "testvoice",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/samples/testvoice/phrase.wav",
+          "sha256": "4373ab0f1719082a930741db09e139dc4eb3e6068dc1ac6b3ddfe52a4294e1c3",
+          "bytes": 477234,
+          "route": "/samples/1.wav"
+        },
+        {
+          "name": "RolandTR909_bd",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_bd/Bassdrum-01.wav",
+          "sha256": "5ae8cbf94145b4d8a2c4ee6a6a922045564887c22812916149c1e5740820b8bb",
+          "bytes": 82232,
+          "route": "/samples/2.wav"
+        },
+        {
+          "name": "RolandTR909_cp",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_cp/Clap.wav",
+          "sha256": "efd0c167a66955308d72b563a629ac11cd1d8a8f20c6d12ad8c57435fcf6bbf2",
+          "bytes": 135952,
+          "route": "/samples/3.wav"
+        },
+        {
+          "name": "RolandTR909_hh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_hh/hh01.wav",
+          "sha256": "6b737acdd4e9db504dc8225c613ae72fb9b67c2e493b011c50750e16c708e9bd",
+          "bytes": 21228,
+          "route": "/samples/4.wav"
+        },
+        {
+          "name": "RolandTR909_oh",
+          "index": 0,
+          "path": "/Users/olof/git/ai-video-experiments/apps/music/projects/practical-dogfood/references/assets/drums/RolandTR909_oh/Hat Open.wav",
+          "sha256": "d68cfd300f400f7b616b9cd7b75971b29bfe90d2d6c79c1206719def21d539c7",
+          "bytes": 136420,
+          "route": "/samples/5.wav"
+        }
+      ],
+      "requested_samples": [
+        "/samples/2.wav",
+        "/samples/4.wav",
+        "/samples/3.wav",
+        "/samples/5.wav",
+        "/samples/1.wav",
+        "/samples/0.wav"
+      ],
+      "errors": [],
+      "timing": {
+        "cps": 0.5,
+        "seconds": 128,
+        "frames": 6144000
+      },
+      "output": {
+        "file": "render.wav",
+        "bytes": 24576044,
+        "sha256": "e8b254de16deb6e5fead172848fc44e6b97620e23518e7370402658e316901f9"
+      },
+      "finished_at": "2026-10-10T08:07:33.947Z"
+    }
+  },
+  "comparisons": {
+    "renderer-v001-dry-compare": {
+      "reference": {
+        "path": "projects/tooling-validation/renders/tooling-v001-full.wav",
+        "sha256": "07e103fdd3e053331def173f89cfd79ce039771b6be1a3f6ad8193dd628a4d6e"
+      },
+      "candidate": {
+        "path": "outputs/renderer-v001-dry/render.wav",
+        "sha256": "07e103fdd3e053331def173f89cfd79ce039771b6be1a3f6ad8193dd628a4d6e"
+      },
+      "sample_rate": 48000,
+      "frames": 384000,
+      "channels": 2,
+      "identical_samples": true,
+      "residual_peak_dbfs": null,
+      "residual_rms_dbfs": null,
+      "residual_relative_db": null,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "renderer-v001-delay-compare": {
+      "reference": {
+        "path": "projects/tooling-validation/renders/tooling-v002-full.wav",
+        "sha256": "571fd12f7e18404393008b028b3e955cffbb894f80ac32b6b8babea6302fe34b"
+      },
+      "candidate": {
+        "path": "outputs/renderer-v001-delay/render.wav",
+        "sha256": "1581fe43645fc599b0d6698ada15548bc65455c09feafaefaef97ce637e0d5a8"
+      },
+      "sample_rate": 48000,
+      "frames": 384000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -90.30899869919436,
+      "residual_rms_dbfs": -149.16261089950947,
+      "residual_relative_db": -110.33289371339946,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "renderer-v001-practical-dry-compare": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v003-dry-full.wav",
+        "sha256": "72b8b5409040ad9bd272b5ef818d4b530d6f5e2e04df5b4097ba93b86677c20b"
+      },
+      "candidate": {
+        "path": "outputs/renderer-v001-practical-dry/render.wav",
+        "sha256": "a04270fe9a83e97da5a578dd3303d61e087b38f69f67da7708e9fd9ba15e2112"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -6.920212719615536,
+      "residual_rms_dbfs": -30.549561397658465,
+      "residual_relative_db": -11.657791070667596,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "renderer-v002-practical-dry-compare": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v003-dry-full.wav",
+        "sha256": "72b8b5409040ad9bd272b5ef818d4b530d6f5e2e04df5b4097ba93b86677c20b"
+      },
+      "candidate": {
+        "path": "outputs/renderer-v002-practical-dry/render.wav",
+        "sha256": "2ae49f0dbd3bd8f46c6bafe2df5f3199a3f72ec7d3067e7c96cc2f63beb0209a"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -90.30899869919436,
+      "residual_rms_dbfs": -132.4022104626117,
+      "residual_relative_db": -113.51044013562081,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    },
+    "renderer-v002-practical-wet-compare": {
+      "reference": {
+        "path": "projects/practical-dogfood/renders/practical-v002-full.wav",
+        "sha256": "ca6e806df79b492c2044fb4165d41d3264e973517e3335969339c0906b02ce86"
+      },
+      "candidate": {
+        "path": "outputs/renderer-v002-practical-wet/render.wav",
+        "sha256": "5a975c212c4468c5c82d489e42dd41fe178ba8499940e0e4bb50545d3d3d1164"
+      },
+      "sample_rate": 48000,
+      "frames": 1344000,
+      "channels": 2,
+      "identical_samples": false,
+      "residual_peak_dbfs": -33.38225645659825,
+      "residual_rms_dbfs": -50.97137571907375,
+      "residual_relative_db": -32.077053354537746,
+      "method": "candidate minus reference, no alignment or gain adjustment"
+    }
+  },
+  "checks": {
+    "python_tests": 13,
+    "renderer_tests": 9,
+    "renderer_tests_skipped": 0,
+    "ruff": "passed",
+    "fresh_npm_ci": "passed",
+    "npm_audit_vulnerabilities": 0
+  },
+  "long_render_metrics": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/outputs/renderer-v002-long/render.wav",
+    "sha256": "e8b254de16deb6e5fead172848fc44e6b97620e23518e7370402658e316901f9",
+    "seconds": 128.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -2.14148547647284,
+    "rms_dbfs": -19.472861902314378,
+    "samples_at_or_above_full_scale": 0,
+    "bpm_supplied": 120.0,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [
+      {
+        "start_seconds": 0.0,
+        "end_seconds": 4.0000625
+      },
+      {
+        "start_seconds": 28.8405,
+        "end_seconds": 36.0000625
+      },
+      {
+        "start_seconds": 60.8405,
+        "end_seconds": 68.0000625
+      },
+      {
+        "start_seconds": 92.8405,
+        "end_seconds": 100.0000625
+      },
+      {
+        "start_seconds": 124.8405,
+        "end_seconds": 128.0
+      }
+    ],
+    "integrated_lufs": -15.23,
+    "true_peak_dbtp": -2.13,
+    "loudness_range_lu": 5.6,
+    "lr_correlation": 0.998650012128203,
+    "mono_rms_dbfs": -19.47579437064537
+  },
+  "scheduling_diagnosis": {
+    "website_module": "https://strudel.cc/_astro/spectrum.DmSH5sgu.js",
+    "module_sha256": "96a079f42ebbe9a32ba9ee5a3f402a64f3b56fa8ac936b2854a7b5fa889646b4",
+    "whole_range_events": 272,
+    "one_cycle_queries_events": 272,
+    "event_multiset_equal": true,
+    "query_probe_receipt": "outputs/renderer-query-probe-v002/render.json",
+    "patched_bundle_sha256": "446a0c42552401323c815a2cccfd013e4c03120ce924dee454fcf0f9dfcaa399",
+    "scope": "Changing scheduling/render interleaving fixed this parity discrepancy. Deeper engine-state mechanism not isolated."
+  }
+}
