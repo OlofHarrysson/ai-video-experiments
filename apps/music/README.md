@@ -41,6 +41,8 @@ uv run --locked python music.py compare projects/example/renders/full.wav projec
 
 `mix` sums aligned stems and applies the specified overall gain. Rates, channels and frame counts must match; it never guesses offsets or resamples. Float WAV preserves any overload for inspection instead of clipping it silently. `match` attenuates copies to the quietest file's measured integrated loudness; it does not master or compress them. Compare similar musical sections. Originals remain untouched.
 
+For integer PCM exports, `inspect` also counts samples touching either representable rail and the longest consecutive run. This catches positive PCM16 saturation that a `>= 1.0` check misses. A rail contact is evidence to investigate, not proof of audible distortion; inspect the original render before attenuating it.
+
 `inspect` also reports intervals of at least 0.1 seconds where every channel stays at or below −80 dBFS. These are measurements of near-silence, not automatic defect judgments: intentional rests and tails count too. `compare` subtracts a reference from a candidate and saves a residual WAV, hashes, exact sample equality and residual levels. It requires matching rates, channels and frame counts and never aligns or changes gain. A JSON `null` level means zero energy (or an undefined ratio), not 0 dB.
 
 ## Rendering and revision
@@ -89,6 +91,23 @@ Use unique top-level source labels such as `kick:`, `bass:` and `voice:`. Each l
 
 `compare-revisions` selects the same section from two completed runs and creates `matched/01-A.wav` and `matched/02-B.wav`, with revision labels, edit notes, original hashes and attenuation values. It reuses the existing loudness-matching tool. Tempo, sample rate and section cycle boundaries must match; silent comparisons fail explicitly. No compression, stretching or automatic alignment is applied. A comparison folder's README links the two matched clips. Shared reverb can vary independently of the revision, and no preference is inferred automatically.
 
+## Modular composition and focused listening
+
+`assemble` combines independently editable Strudel modules into the existing project renderer. One setup module declares tempo/constants; each sound module names its stem. The assembler checks duplicate layers and top-level bindings, requires one tempo declaration and saves exact module snapshots, source hashes, concatenated source and a ready-to-render recipe. It does not create a separate synthesis engine.
+
+```sh
+uv run --locked python music.py assemble projects/pressure-study/assembly-v003.json --out outputs/assembly-v003
+uv run --locked python music.py render-project outputs/assembly-v003/project.json --revision v003 --out outputs/render-v003
+uv run --locked python music.py analyze-project outputs/render-v003 --out outputs/bands-v003
+uv run --locked python music.py audition first.wav second.wav --duration 28 --gap 2 --out outputs/pair-v001
+```
+
+The assembly manifest has `version`, `title`, `revision`, `end_cycle`, `sample_rate`, `samples`, `sections` and `modules`. Each module has `file` and, when it contains sound layers, `stem`. Paths are relative to the manifest. [Pressure Study](projects/pressure-study/assembly-v003.json) is a working example.
+
+`analyze-project` verifies completed audio hashes and measures continuous band-filtered RMS per cycle for master and stems. It writes CSV, JSON and a plot for low (30–180 Hz), body (180–1200 Hz), presence (1200–6000 Hz) and air (6000–20000 Hz), bounded by sample rate. `--window-cycles` changes the window size. These measurements help find buried parts and verify edits; they do not establish audibility, masking or musical quality. Levels below −120 dBFS become `null`; the plot floor is −90 dBFS.
+
+`audition` takes equal-duration windows (`--start-first`, `--start-second`), attenuates to matched loudness, randomizes their A/B order and saves one review WAV, a neutral prompt and a private `answer-key.json`. The total including `--gap` must be at most 60 seconds. It rejects out-of-bounds windows or mismatched formats instead of padding/resampling. Read the comparison before decoding the key. An identical-input control checks invented differences, but does not validate musical taste or timestamps.
+
 ## Local voice and music samples
 
 For a complete arrangement, use the saved-project workflow below so sample paths and stem membership live in one recipe.
@@ -112,13 +131,14 @@ uv run --locked python music.py review work/calibration/d87652a5.wav --out work/
 
 Only `--send` makes a paid request. Each request sends actual PCM WAV audio plus a neutral prompt, without Strudel source or the filename. The adapter rechecks model audio support/prices and stores the model metadata, input hash, prompt, response, finish reason and reported usage/cost. It defaults to Gemini 3.1 Pro Preview with high reasoning, verified in OpenRouter's catalog on 2026-10-10. Review windows are limited to 60 seconds / 24 MB. Model selection should be rechecked in later sessions.
 
-Olof manages spending through the OpenRouter balance. The adapter imposes no dollar budget, price ceiling or attempt cap. `work/review-ledger.jsonl` is an append-only request history; earlier reservation records remain historical. Each output folder preserves provider usage/cost when reported. There are no automatic retries or model fallbacks. A timeout has an unknown provider outcome and cost, not a free request. The response timeout is 600 seconds after one observed 180-second timeout. Empty or truncated replies are saved as incomplete and raise an error; they are never presented as completed reviews. Read [listening and calibration](docs/listening.md) first. The example timeline prompt states a 20-second duration; update it when using a different clip.
+Olof manages spending through the OpenRouter balance. The adapter imposes no dollar budget, price ceiling or attempt cap. `work/review-ledger.jsonl` is an append-only request history; earlier reservation records remain historical. Each output folder preserves provider usage/cost when reported. There are no automatic retries or model fallbacks. A timeout has an unknown provider outcome and cost, not a free request. Catalog preflight has a 30-second timeout; the paid response timeout is 600 seconds. Receipts record preflight, dispatch and completion states with timestamps. Concurrent requests share only a brief ledger-append lock, so one slow request does not block independent reviews. Empty or truncated replies are saved as incomplete and raise an error; they are never presented as completed reviews. Read [listening and calibration](docs/listening.md) first. The example timeline prompt states a 20-second duration; update it when using a different clip.
 
 ## Files and preservation
 
 - `music.py`, `tests/`, `pyproject.toml`, `uv.lock`: local CLI and reproducible Python environment.
 - `renderer/`, `patches/`, `package.json`, `package-lock.json`: pinned browser render engine, scheduling patch and integration tests.
 - `workflow.py`: saved project runs, master-derived previews and revision comparisons.
+- `analysis.py`, `audition.py`: time-resolved stem inspection and anonymous matched listening pairs.
 - `references/strudel/`: retained operating guide, DJ_Dave research, original sketches, and local documentation snapshots.
 - `docs/`: foundations, listening protocol, selected catalog snapshot and current handoff.
 - `outputs/`: ignored analysis images and review copies.

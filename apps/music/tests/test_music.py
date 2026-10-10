@@ -121,7 +121,7 @@ def test_live_adapter_records_cost_without_spending_limit(tone, tmp_path, monkey
         def __exit__(self, *args):
             pass
 
-        def get(self, url):
+        def get(self, url, **kwargs):
             return Response(
                 {
                     "data": [
@@ -279,3 +279,106 @@ def test_transport_timeout_records_unknown_outcome_without_retry(
     assert "usage" not in receipt
     assert posts == ["POST"]
     assert not (out / "review.md").exists()
+
+
+def test_pcm_positive_rail_is_not_missed(tmp_path):
+    path = tmp_path / "clipped.wav"
+    samples = np.zeros((24000, 2))
+    samples[100:120, 0] = 1.2
+    samples[400:405, 1] = -1.2
+    sf.write(path, samples, 24000, subtype="PCM_16")
+    data, _ = music.read_audio(path)
+    assert data[100, 0] < 1
+    # The old >=1 metric counts only negative saturation in a PCM16 file.
+    assert np.sum(np.abs(data) >= 1) == 5
+    measured = music.pcm_rail_metrics(data, sf.info(path).subtype)
+    assert measured["pcm_rail_samples"] == 25
+    assert measured["pcm_rail_longest_run_frames"] == 20
+    assert music.pcm_rail_metrics(data * 0.9, "PCM_16")["pcm_rail_samples"] == 0
+    assert music.pcm_rail_metrics(data, "FLOAT")["pcm_rail_samples"] is None
+
+
+def test_reviews_overlap_network_calls_without_corrupting_ledger(
+    tone, tmp_path, monkeypatch
+):
+    from concurrent.futures import ThreadPoolExecutor
+    from threading import Barrier
+
+    import httpx
+
+    monkeypatch.setattr(music, "ROOT", tmp_path)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    gate = Barrier(2)
+
+    def respond(request):
+        if request.method == "GET":
+            return httpx.Response(
+                200,
+                json={
+                    "data": [
+                        {
+                            "id": music.MODEL,
+                            "architecture": {"input_modalities": ["audio"]},
+                        }
+                    ]
+                },
+            )
+        # Both paid requests must arrive before either returns; a network-wide lock deadlocks this.
+        gate.wait(timeout=3)
+        return httpx.Response(
+            200,
+            json={
+                "choices": [
+                    {
+                        "message": {"content": "Controlled response"},
+                        "finish_reason": "stop",
+                    }
+                ],
+                "usage": {"cost": 0.01},
+            },
+        )
+
+    client = httpx.Client
+    monkeypatch.setattr(
+        music.httpx,
+        "Client",
+        lambda **kw: client(transport=httpx.MockTransport(respond)),
+    )
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        jobs = [
+            pool.submit(music.review, tone, tmp_path / f"review-{i}", True)
+            for i in range(2)
+        ]
+        results = [job.result(timeout=10) for job in jobs]
+    assert all(r["status"] == "complete" for r in results)
+    rows = [
+        json.loads(line)
+        for line in (tmp_path / "work/review-ledger.jsonl").read_text().splitlines()
+    ]
+    assert len(rows) == 4 and len({r["request_id"] for r in rows}) == 2
+    assert len([r for r in rows if r.get("status") == "complete"]) == 2
+
+
+def test_catalog_failure_records_no_paid_dispatch(tone, tmp_path, monkeypatch):
+    import httpx
+
+    monkeypatch.setattr(music, "ROOT", tmp_path)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-only")
+    methods = []
+
+    def respond(request):
+        methods.append(request.method)
+        raise httpx.ConnectTimeout("catalog unavailable", request=request)
+
+    client = httpx.Client
+    monkeypatch.setattr(
+        music.httpx,
+        "Client",
+        lambda **kw: client(transport=httpx.MockTransport(respond)),
+    )
+    out = tmp_path / "failed"
+    with pytest.raises(httpx.ConnectTimeout):
+        music.review(tone, out, True)
+    receipt = json.loads((out / "request.json").read_text())
+    assert receipt["sent"] is False and receipt["status"] == "preflight_error"
+    assert methods == ["GET"] and "dispatch_at" not in receipt

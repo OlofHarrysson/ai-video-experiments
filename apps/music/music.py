@@ -9,6 +9,7 @@ import math
 import os
 import subprocess
 import uuid
+from datetime import UTC, datetime
 from pathlib import Path
 
 import dotenv
@@ -28,6 +29,7 @@ MAX_SECONDS = 60
 MAX_AUDIO_BYTES = 24_000_000
 MAX_TOKENS = 8192
 API_TIMEOUT_SECONDS = 600
+CATALOG_TIMEOUT_SECONDS = 30
 SILENCE_THRESHOLD_DBFS = -80
 SILENCE_MIN_SECONDS = 0.1
 PROMPT = """Listen to the attached audio. You are reviewing an instrumental music sketch.
@@ -136,6 +138,31 @@ def spectrogram(data, sr):
     return frequency, time, 10 * np.log10(np.maximum(power.mean(axis=1), 1e-12))
 
 
+def pcm_rail_metrics(data, subtype):
+    """Count representable integer limits; positive PCM full scale is below 1.0."""
+    bits = {"PCM_U8": 8, "PCM_S8": 8, "PCM_16": 16, "PCM_24": 24, "PCM_32": 32}.get(
+        subtype
+    )
+    if bits is None:
+        return {
+            "sample_format": subtype,
+            "pcm_rail_samples": None,
+            "pcm_rail_longest_run_frames": None,
+        }
+    positive_limit = 1 - 2 ** (1 - bits)
+    rail = (data >= positive_limit) | (data <= -1)
+    longest = 0
+    for channel in rail.T:
+        edges = np.diff(np.r_[False, channel, False].astype(int))
+        runs = np.flatnonzero(edges == -1) - np.flatnonzero(edges == 1)
+        longest = max(longest, int(runs.max(initial=0)))
+    return {
+        "sample_format": subtype,
+        "pcm_rail_samples": int(rail.sum()),
+        "pcm_rail_longest_run_frames": longest,
+    }
+
+
 def inspect_audio(path, out, bpm=None):
     data, sr = read_audio(path)
     if bpm is not None and bpm <= 0:
@@ -151,6 +178,7 @@ def inspect_audio(path, out, bpm=None):
         "sample_peak_dbfs": db(np.max(np.abs(data))),
         "rms_dbfs": db(rms),
         "samples_at_or_above_full_scale": int(np.sum(np.abs(data) >= 1)),
+        **pcm_rail_metrics(data, sf.info(path).subtype),
         "bpm_supplied": bpm,
         "silence_threshold_dbfs": SILENCE_THRESHOLD_DBFS,
         "silence_min_seconds": SILENCE_MIN_SECONDS,
@@ -322,6 +350,15 @@ def calibration(path, out):
     return {"clips": len(answer_key), "directory": str(out)}
 
 
+def append_review_event(work, event):
+    """Keep each ledger append durable without serializing provider requests."""
+    with (work / "review-ledger.jsonl").open("a") as ledger:
+        fcntl.flock(ledger, fcntl.LOCK_EX)
+        ledger.write(json.dumps(event) + "\n")
+        ledger.flush()
+        os.fsync(ledger.fileno())
+
+
 def review(path, out, send=False, prompt=PROMPT):
     data, sr = read_audio(path)
     if len(data) / sr > MAX_SECONDS or Path(path).stat().st_size > MAX_AUDIO_BYTES:
@@ -368,6 +405,7 @@ def review(path, out, send=False, prompt=PROMPT):
         "max_tokens": MAX_TOKENS,
         "reasoning_effort": "high",
         "sent": False,
+        "created_at": datetime.now(UTC).isoformat(),
     }
     if not send:
         return receipt
@@ -378,84 +416,122 @@ def review(path, out, send=False, prompt=PROMPT):
     out = fresh_dir(out)
     work = ROOT / "work"
     work.mkdir(exist_ok=True)
-    # Append-only request history. Olof manages the provider balance, not this tool.
-    with (work / "review-ledger.jsonl").open("a+") as ledger:
-        fcntl.flock(ledger, fcntl.LOCK_EX)
-        with httpx.Client(timeout=API_TIMEOUT_SECONDS) as client:
-            response = client.get(API + "/models")
+    receipt.update(status="preflight", request_id=str(uuid.uuid4()))
+    save_json(out / "request.json", receipt)
+    with httpx.Client(timeout=API_TIMEOUT_SECONDS) as client:
+        try:
+            response = client.get(API + "/models", timeout=CATALOG_TIMEOUT_SECONDS)
             response.raise_for_status()
             model = next(m for m in response.json()["data"] if m["id"] == MODEL)
             if "audio" not in model["architecture"]["input_modalities"]:
                 raise ValueError("Selected model no longer advertises audio input")
             save_json(out / "model.json", model)
-            ledger.write(
-                json.dumps({"output": str(out.resolve()), "event": "dispatching"})
-                + "\n"
-            )
-            ledger.flush()
-            os.fsync(ledger.fileno())
-            receipt.update(sent=None, status="dispatching")
-            save_json(out / "request.json", receipt)
-            try:
-                response = client.post(
-                    API + "/chat/completions",
-                    json=payload,
-                    headers={"Authorization": "Bearer " + key},
-                )
-            except httpx.RequestError as error:
-                receipt.update(
-                    status="transport_error", error_type=type(error).__name__
-                )
-                save_json(out / "request.json", receipt)
-                raise
-            receipt.update(sent=True, status="response_received")
-            save_json(out / "request.json", receipt)
-            # Store response privately, never the key or base64 payload.
-            try:
-                result = response.json()
-            except ValueError:
-                receipt.update(
-                    status="invalid_response", http_status=response.status_code
-                )
-                save_json(out / "request.json", receipt)
-                (out / "response.txt").write_text(response.text)
-                raise ValueError(
-                    "Non-JSON provider response; inspect private response.txt"
-                )
-            save_json(out / "response.json", result)
-            choices = result.get("choices") or []
-            choice = choices[0] if choices else {}
-            content = choice.get("message", {}).get("content")
+        except Exception as error:
             receipt.update(
-                usage=result.get("usage"),
-                id=result.get("id"),
-                finish_reason=choice.get("finish_reason"),
+                status="preflight_error",
+                error_type=type(error).__name__,
+                finished_at=datetime.now(UTC).isoformat(),
             )
-            complete = (
-                not response.is_error
-                and not result.get("error")
-                and isinstance(content, str)
-                and bool(content.strip())
-                and receipt["finish_reason"] == "stop"
-            )
-            receipt["status"] = "complete" if complete else "incomplete"
             save_json(out / "request.json", receipt)
-            ledger.write(json.dumps({"output": str(out.resolve()), **receipt}) + "\n")
-            ledger.flush()
-            if isinstance(content, str) and content:
-                filename = "review.md" if complete else "review-incomplete.md"
-                (out / filename).write_text(content + "\n")
-            response.raise_for_status()
-            if not complete:
-                raise ValueError(
-                    "Incomplete review; inspect private response.json and request.json"
-                )
+            append_review_event(work, {"output": str(out.resolve()), **receipt})
+            raise
+        receipt.update(
+            sent=None, status="dispatching", dispatch_at=datetime.now(UTC).isoformat()
+        )
+        save_json(out / "request.json", receipt)
+        append_review_event(
+            work,
+            {
+                "output": str(out.resolve()),
+                "event": "dispatching",
+                "request_id": receipt["request_id"],
+            },
+        )
+        try:
+            response = client.post(
+                API + "/chat/completions",
+                json=payload,
+                headers={"Authorization": "Bearer " + key},
+            )
+        except httpx.RequestError as error:
+            receipt.update(
+                status="transport_error",
+                error_type=type(error).__name__,
+                finished_at=datetime.now(UTC).isoformat(),
+            )
+            save_json(out / "request.json", receipt)
+            append_review_event(work, {"output": str(out.resolve()), **receipt})
+            raise
+        receipt.update(
+            sent=True,
+            status="response_received",
+            finished_at=datetime.now(UTC).isoformat(),
+        )
+        save_json(out / "request.json", receipt)
+        # Store response privately, never the key or base64 payload.
+        try:
+            result = response.json()
+        except ValueError:
+            receipt.update(status="invalid_response", http_status=response.status_code)
+            save_json(out / "request.json", receipt)
+            (out / "response.txt").write_text(response.text)
+            append_review_event(work, {"output": str(out.resolve()), **receipt})
+            raise ValueError("Non-JSON provider response; inspect private response.txt")
+        save_json(out / "response.json", result)
+        choices = result.get("choices") or []
+        choice = choices[0] if choices else {}
+        content = choice.get("message", {}).get("content")
+        receipt.update(
+            usage=result.get("usage"),
+            id=result.get("id"),
+            finish_reason=choice.get("finish_reason"),
+        )
+        complete = (
+            not response.is_error
+            and not result.get("error")
+            and isinstance(content, str)
+            and bool(content.strip())
+            and receipt["finish_reason"] == "stop"
+        )
+        receipt["status"] = "complete" if complete else "incomplete"
+        save_json(out / "request.json", receipt)
+        append_review_event(work, {"output": str(out.resolve()), **receipt})
+        if isinstance(content, str) and content:
+            filename = "review.md" if complete else "review-incomplete.md"
+            (out / filename).write_text(content + "\n")
+        response.raise_for_status()
+        if not complete:
+            raise ValueError(
+                "Incomplete review; inspect private response.json and request.json"
+            )
+
     return receipt
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
+    command = sub.add_parser(
+        "assemble", help="Assemble named Strudel modules into a saved project"
+    )
+    command.add_argument("manifest", type=Path)
+    command.add_argument("--out", type=Path, required=True)
+    command = sub.add_parser(
+        "analyze-project", help="Measure stem levels by time window and frequency band"
+    )
+    command.add_argument("run", type=Path)
+    command.add_argument("--out", type=Path, required=True)
+    command.add_argument("--window-cycles", type=float, default=1)
+    command = sub.add_parser(
+        "audition", help="Make an anonymous, loudness-matched audio pair"
+    )
+    command.add_argument("first", type=Path)
+    command.add_argument("second", type=Path)
+    command.add_argument("--out", type=Path, required=True)
+    command.add_argument("--start-first", type=float, default=0)
+    command.add_argument("--start-second", type=float, default=0)
+    command.add_argument("--duration", type=float, default=28)
+    command.add_argument("--gap", type=float, default=2)
     command = sub.add_parser(
         "render-project", help="Render and inspect a saved project master and stems"
     )
@@ -530,7 +606,37 @@ def main():
     command.add_argument("candidate", type=Path)
     command.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    if args.command in {"render-project", "preview", "compare-revisions"}:
+    if args.command == "audition":
+        import audition
+
+        result = audition.make_audition(
+            args.first,
+            args.second,
+            args.out,
+            args.start_first,
+            args.start_second,
+            args.duration,
+            args.gap,
+        )
+    elif args.command == "analyze-project":
+        import analysis
+
+        result = analysis.analyze_project(args.run, args.out, args.window_cycles)
+    elif args.command == "assemble":
+        completed = subprocess.run(
+            [
+                "node",
+                str(ROOT / "renderer/assemble.mjs"),
+                str(args.manifest),
+                "--out",
+                str(args.out),
+            ],
+            check=False,
+        )
+        if completed.returncode:
+            raise SystemExit(completed.returncode)
+        return
+    elif args.command in {"render-project", "preview", "compare-revisions"}:
         import workflow
 
         if args.command == "render-project":
