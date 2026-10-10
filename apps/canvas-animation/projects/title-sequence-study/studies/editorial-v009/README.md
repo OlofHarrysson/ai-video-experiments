@@ -49,7 +49,7 @@ The renderer checks deterministic seeking, exact frame-0/frame-288 equality, vis
 
 The first contact-sheet compositor produced blank thumbnails despite nonblank individual renders. Review sheets now compose the saved PNG frames, rather than repeatedly copying a mutable staging canvas. Local-file image security initially blocked canvas export in the screening page; the harness now passes its already-decoded frames as in-memory image data. These are review-tool corrections, not extra artwork assets.
 
-Assistant screening covers the candidate sheets, selected full-size stills, the complete edit contact sheet and the three dense decoded windows. Browser playback completion is a technical check, not a human judgment of rhythm. Human taste review of the final silent cut is pending.
+Assistant screening covers the candidate sheets, selected full-size stills, the complete edit contact sheet and the three dense decoded windows. Browser playback completion is a technical check, not a human judgment of rhythm. Olof subsequently rejected the final silent cut as low quality compared with the reference films. The technical checks do not override that judgment. The next experiment is [custom vector lettering v010](../vector-lettering-v010/README.md).
 
 ## Limits and next decision
 

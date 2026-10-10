@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="768" height="460">
+<path d="M0,0 L34,0 L129,104 L129,144 L95,144 L1,42 Z" fill="#000000" transform="translate(55,101)" />
+<path d="M0,0 L61,0 L62,45 L138,130 L137,144 L83,144 L-1,48 Z" fill="#000000" transform="translate(153,101)" />
+<path d="M0,0 L65,0 L65,112 L0,41 Z" fill="#000000" transform="translate(226,101)" />
+<path d="M0,0 L20,0 L53,35 L52,144 L15,144 L0,126 Z" fill="#000000" transform="translate(301,101)" />
+<path d="M0,0 L54,0 L54,57 L2,4 Z" fill="#000000" transform="translate(334,101)" />
+<path d="M0,0 L175,0 L207,33 L207,116 L177,144 L47,144 L21,116 L21,49 L58,49 L58,104 L91,103 L167,41 L0,40 Z M114,104 L164,104 L164,63 Z" fill="#000000" transform="translate(485,101)" />
+<path d="M0,0 L59,57 L117,58 L154,98 L35,98 L0,63 Z" fill="#000000" transform="translate(364,147)" />
+<path d="M10,0 L41,37 L41,46 L88,46 L136,102 L136,149 L102,149 L90,137 L90,91 L41,91 L40,150 L4,150 L-8,138 L-8,1 Z" fill="#000000" transform="translate(39,257)" />
+<path d="M0,0 L110,1 L110,115 L76,150 L-2,150 L-31,115 L-31,33 Z M11,44 L4,50 L4,98 L9,102 L13,100 L68,46 L67,44 Z M25,103 L64,103 L75,92 L75,54 Z" fill="#000000" transform="translate(215,257)" />
+<path d="M0,0 L19,0 L19,23 Z" fill="#000000" transform="translate(61,258)" />
+<path d="M0,0 L45,0 L45,87 L0,35 Z" fill="#000000" transform="translate(130,258)" />
+<path d="M31,0 L32,37 L46,53 L46,103 L4,149 L-60,149 L-86,118 L-85,1 L-50,38 L-50,102 L-1,101 L-1,1 Z" fill="#000000" transform="translate(420,258)" />
+<path d="M0,0 L103,0 L125,24 L125,88 L100,90 L152,148 L100,148 L22,57 L96,57 L95,44 L91,40 L5,39 L0,34 Z" fill="#000000" transform="translate(460,258)" />
+<path d="M0,0 L93,0 L109,16 L108,43 L16,43 L16,50 L73,51 L109,85 L109,140 L60,89 L-5,88 L-21,71 L-21,17 Z" fill="#000000" transform="translate(616,258)" />
+<path d="M0,0 L43,48 L43,83 L-1,83 Z" fill="#000000" transform="translate(476,323)" />
+<path d="M94,0 L134,42 L137,47 L41,47 L0,1 Z" fill="#000000" transform="translate(582,359)" />
+</svg>

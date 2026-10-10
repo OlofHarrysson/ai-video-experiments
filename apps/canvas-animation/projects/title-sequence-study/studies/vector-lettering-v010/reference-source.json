@@ -1,0 +1,38 @@
+{
+  "source": "reference/lettering-board-01.png",
+  "generated_original": "/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-ebf5248d-db5d-489d-821c-8b89736b4ac0.png",
+  "sha256": "e32dfa0581d89b47d0dbf00f6dec92590ecc39b99ee34f3c2247eda2e34efd2c",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "threshold": 130,
+  "vectorizer": "vtracer 0.6.15",
+  "regions": {
+    "script": [
+      0,
+      0,
+      768,
+      512
+    ],
+    "machine": [
+      768,
+      0,
+      1536,
+      460
+    ],
+    "tuscan": [
+      0,
+      480,
+      768,
+      1024
+    ],
+    "liquid": [
+      768,
+      480,
+      1536,
+      1024
+    ]
+  },
+  "pixel_use": "Reference and vector extraction only. No PNG loaded at render time."
+}

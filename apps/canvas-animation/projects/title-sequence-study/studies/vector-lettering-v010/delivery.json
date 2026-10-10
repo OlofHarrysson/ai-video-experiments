@@ -1,0 +1,23 @@
+{
+  "selected": "output-final-02/wild-hours.mp4",
+  "sha256": "e86dbe7e7cf3a744162129df43595f2d620c9ff949717f01843848d2e0d227d8",
+  "width": 1600,
+  "height": 900,
+  "fps": 24,
+  "frames": 240,
+  "seconds": 10,
+  "audio": false,
+  "sourceHashes": {
+    "clipper.js": "a650c6946682edc1a64016f6553eeb5c32ce45eb7ca0ad5d8221961af011d97c",
+    "vector-fields.js": "4d239f3359c771ed5c163047f620def92ca616a290d1ad8524576f5a81cfd1ad",
+    "geometry.js": "9b39eb1765c5254d8a27c65eaea9e73904d9485e17022eee892d79b9c9c790d3",
+    "highlights.js": "2fed55326ae54c2faf5b5ca52af3eb86fc9b96e2f0300a9bca9f0ff7456f65ab",
+    "art.js": "7a32a0f81bc3f33309f62bf7f60820ae43906c52191bf3b719e10233f017b95b",
+    "edit.js": "00fd1ffc6909c61083dffa95b742d393649661c15b9a54f4f2e2738591fc3f76"
+  },
+  "renderReport": "output-final-02/report.json",
+  "screenReport": "output-screen-final-03/report.json",
+  "stills": "output-stills-final/material-sheet.png",
+  "comparison": "output-comparison/before-after.png",
+  "humanTasteReview": "pending"
+}
