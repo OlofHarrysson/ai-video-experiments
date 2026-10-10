@@ -12,7 +12,7 @@ Acceptance evidence: comparative stills and a screened silent cut with an honest
 
 Selected `output-final-02/wild-hours.mp4`: ten seconds, 1600×900, 24 fps, 240 frames, silent. Twenty shots last 6–28 frames; holds alternate with short accents without a two-frame strobe passage. Four custom lettering designs support six graphic constructions. The sequence mixes identities from its opening and includes isolated words, off-centre placements, close details, registration and one final hero hold.
 
-Assistant judgment: materially stronger silhouettes and graphic construction than v009. The before/after sheet is illustrative, not a controlled A/B test because the words and layouts differ. The script still has less nuanced local shaping than the generated target. The film references have far broader text/design variety, and our silent placeholder study does not establish parity with their editorial rhythm. Olof has not reviewed v010.
+Assistant judgment: materially stronger silhouettes and graphic construction than v009. The before/after sheet is illustrative, not a controlled A/B test because the words and layouts differ. The script still has less nuanced local shaping than the generated target. The film references have far broader text/design variety, and our silent placeholder study does not establish parity with their editorial rhythm. Olof subsequently calls v010 much better and amazing, then authorizes a repeatable extraction workflow and an AI-themed piece.
 
 ## Experiments and selection
 
@@ -43,4 +43,4 @@ Assistant judgment: materially stronger silhouettes and graphic construction tha
 6. Inspect the encoded movie: thin chromatic strokes lose presence after H.264 chroma subsampling.
 7. Technical passes, independent model critique, assistant taste and Olof approval are separate evidence. The output-quality incident is recorded centrally as AF-20261010-121017; it does not create a new global instruction.
 
-Screening and source verification completed 2026-10-10 10:11:44 UTC, within the two-hour maximum. The improvement goal is complete at the assistant-screening level; human taste review remains the next checkpoint.
+Screening and source verification completed 2026-10-10 10:11:44 UTC, within the two-hour maximum. The improvement goal is complete at the assistant-screening level; Olof subsequently confirms a substantial visual improvement; new creative directions still require their own review.

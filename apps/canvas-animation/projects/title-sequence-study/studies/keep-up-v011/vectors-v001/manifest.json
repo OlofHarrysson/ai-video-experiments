@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "assets": [
+    {"id":"keep", "text":"KEEP UP", "source":"reference/keep.png", "mode":"spline", "minimumMargin":0.04,
+      "original":"/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-4162b63c-177b-4f15-b977-851e913ce3a6.png",
+      "groups":[{"id":"title", "label":"KEEP UP", "role":"wordmark", "region":[0,0,1,1], "pivot":[0.5,0.5]}]},
+    {"id":"money", "text":"$40B", "source":"reference/money.png", "mode":"spline", "minimumMargin":0.04,
+      "original":"/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-3e62c1b8-8f40-4979-a3b9-3e662c459afd.png",
+      "groups":[{"id":"amount", "label":"$40B", "role":"amount", "region":[0,0,1,1], "pivot":[0.5,0.5]}]},
+    {"id":"break", "text":"BREAK THROUGH", "source":"reference/break.png", "mode":"polygon", "simplify":1.05, "minimumMargin":0.04,
+      "original":"/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-1528bd0e-5329-40fd-92d2-8cfb143ff7c2.png",
+      "groups":[{"id":"break", "label":"BREAK", "role":"word", "region":[0,0,1,0.59], "pivot":[0.5,1]},
+                {"id":"through", "label":"THROUGH", "role":"word", "region":[0,0.59,1,1], "pivot":[0.5,0]}]}
+  ]
+}

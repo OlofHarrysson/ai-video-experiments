@@ -3,7 +3,7 @@
 Motion graphics written in TypeScript and drawn on an HTML canvas. Every frame is a pure function of time, so the browser preview and the headless render match exactly; soundtracks are synthesized in the same page with the Web Audio API and share the film's beat grid. This workflow is separate from diffusion (Deforum, ComfyUI), Blender and stop-motion.
 
 - [AI Filmhack promo](projects/filmhack-promo/README.md): a 30-second Instagram Reel for the AI Filmhack event, with an original synthesized score.
-- [Title Sequence Study](projects/title-sequence-study/README.md): reference studies, a 17-family typography library, seven composition studies and an escalating cut; original lettering, material and motion tooling, with theme selection still open.
+- [Title Sequence Study](projects/title-sequence-study/README.md): reference studies, a 17-family typography library, seven composition studies and an escalating cut; original lettering, material and motion tooling, now developing an AI news-overload intro.
 
 Rendering uses local browsers through Playwright, and ffmpeg for encoding; no cloud compute. Dependencies and renders stay local and are ignored by Git. Redistributable fonts may be tracked with their licenses and source records.
 
@@ -32,3 +32,7 @@ Faster-whisper and its model downloads are disabled. Narration takes still work,
 The vendored skill retains its MIT license and records its upstream revision in [upstream.json](../../.agents/skills/animate/upstream.json). Local adaptations use portable question tools, local dependencies, estimated narration timing and browser-drawn review labels. Preserve these changes when updating upstream.
 
 Installation validation (2026-10-07): the six-second beat-cut template built and exported at 1080×1920/24 fps; deterministic frame sampling, cut-grid, story-arc, text and dead-beat checks passed. The NumPy analyzer processed that MP4 successfully. Synthetic audio verified measured line durations and estimated word flags; generated voice quality was not tested. Smoke-test files are kept under ignored `work/animate-install-smoke/`. Skill paths resolve to the same file for both assistants; in-session discovery is checked on the next turn.
+
+## Reusable lettering
+
+[Generated lettering tools](tools/lettering/README.md) convert individual monochrome plates into vectors, record extraction settings and source hashes, validate explicit word/glyph groups, and provide source/vector inspection. [KEEP UP](projects/title-sequence-study/studies/keep-up-v011/README.md) is the first three-design test. Film renderers consume the paths; the inspector alone uses reference PNGs.

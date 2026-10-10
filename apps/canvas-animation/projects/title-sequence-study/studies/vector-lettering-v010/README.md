@@ -43,7 +43,7 @@ References and generated source images remain local under ignored `reference/`. 
 
 `output-final-02/wild-hours.mp4`: 1600×900, 24 fps, 240 frames, ten seconds, no audio stream. Twenty shots last 6–28 frames. The selected movie and source hashes are recorded in `delivery.json`; all earlier proofs and cuts remain preserved.
 
-Assistant assessment: the custom shapes are materially stronger than the previous stock-font treatments. The finish and editorial breadth still fall short of the references. This establishes a better design workflow, not reference-level parity or a finished film concept. Olof has not reviewed v010 yet.
+Assistant assessment: the custom shapes are materially stronger than the previous stock-font treatments. The finish and editorial breadth still fall short of the references. This establishes a better design workflow, not reference-level parity or a finished film concept. Olof subsequently calls v010 much better and amazing. He identifies strong generated letterforms converted to vectors as the breakthrough and authorizes making that process repeatable.
 
 ## Reproduce
 
