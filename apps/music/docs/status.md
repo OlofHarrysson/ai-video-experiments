@@ -8,9 +8,13 @@ Improve and dogfood the music tooling. Simple compositions are authorized as tes
 
 ## Completed and checked
 
+- **Project workflow dogfood completed.** A saved recipe now renders and inspects the master plus named stems from one source. Master-derived section previews retain preceding effects exactly; labelled A/B copies use the existing loudness matcher. [Study and commands](../projects/workflow-dogfood/README.md), [evidence](../projects/workflow-dogfood/evidence.json).
+- Three 68-second arrangements (baseline, delayed drum/bass return, quieter hats) produced 12 successful renders with aligned frames/rates. No master clipping. Two section previews match master samples exactly; two A/B pairs were verified within 0.01 LUFS. The isolated hats interval fell 5.53 dB, consistent with the intended gain change.
+- Current verification: 19 Python tests and 11 renderer tests pass (none skipped here), plus Ruff. GitHub sample importing remains deferred at Olof's request. No new paid reviews or human listening verdict were used in this sprint.
+
 - **Programmatic renderer implemented and verified.** `music.py render` evaluates trusted Strudel source in fresh headless Chrome, loads explicit local samples and saves stereo WAV/source/provenance. It closes its temporary server/browser after success, failure or timeout. No UI export clicks required.
 - Pinned npm 1.3.0 needed a scheduling fix: whole-piece scheduling differed from the saved practical dry export by −30.55 dBFS RMS. A checksum-verified patch using the website's chunked scheduling reduced the residual to −132.40 dBFS RMS, with a one-PCM16-step peak. Dry synths match exactly; overlap/delay passes the one-step bound. A 128-second wet render completed without engine errors. [Renderer evidence](renderer-validation.md).
-- Current checks: 13 Python tests, 9 renderer integration/parity tests (none skipped on this machine), Ruff and fresh `npm ci` pass; npm audit reports zero vulnerabilities. Three parity tests require the ignored reference corpus on new clones.
+- Earlier renderer checkpoint: 13 Python tests, 9 renderer integration/parity tests (none skipped on this machine), Ruff and fresh `npm ci` pass; npm audit reports zero vulnerabilities. Three parity tests require the ignored reference corpus on new clones.
 
 - Dedicated locked uv workspace, CLI, private credential file and preserved Strudel/DJ_Dave research. The original migration verified all 68 copied files by SHA-256; see `migration.json`.
 - OpenRouter key works. Seven audio reviews completed with Gemini 3.1 Pro Preview, high reasoning. Reported costs total **$0.177320**; one additional timed-out request has unknown cost. No automatic retries or model fallback.
@@ -26,12 +30,12 @@ Improve and dogfood the music tooling. Simple compositions are authorized as tes
 
 Read the [validation study](../projects/tooling-validation/README.md), [machine-readable evidence](../projects/tooling-validation/evidence.json) and [listening protocol](listening.md). Raw audio and provider receipts remain local/ignored.
 
-Latest: [programmatic renderer validation](renderer-validation.md), with [evidence](../projects/tooling-validation/renderer-evidence.json). The earlier [practical beat study](../projects/practical-dogfood/README.md) covers browser sampling and listening. Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
+Latest: [saved-project workflow study](../projects/workflow-dogfood/README.md). The previous [programmatic renderer validation](renderer-validation.md) records the engine scheduling fix and parity evidence. The earlier [practical beat study](../projects/practical-dogfood/README.md) covers browser sampling and listening. Local import, slicing and reversing work; vocal extraction from a finished song is not implemented.
 
 ## Next tooling work
 
-1. Dogfood the command-driven render → inspect → revise loop on a new small arrangement. Use explicit local sample folders; there is no need for UI export clicks.
-2. Controlled A/B listening with Olof. Matched files exist, but no human listening preference is recorded. Keep model questions specific and check objective defects locally.
-3. Extend sampling only when an experiment needs it: supplied voice/music clips already work. Vocal extraction, automatic beat/key detection and sample discovery remain deferred.
+1. Listen to the prepared arrangement and hi-hat A/B pairs. The objective changes are verified; no preference has been recorded. The workflow is ready for a song brief when Olof wants one.
+2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
+3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 
 A song brief and a polished composition remain deferred. Do not resume paused video studies.

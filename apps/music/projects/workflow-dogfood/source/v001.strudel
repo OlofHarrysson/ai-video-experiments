@@ -1,0 +1,19 @@
+// Workflow study v001 — 120 BPM; 32 musical cycles plus 2 cycles for tails.
+setcpm(120/4)
+const hats = .085
+const rhythm = "<0!4 1!8 0!4 1!12 0!6>"
+const backbeat = "<0!6 1!6 0!4 1!12 0!6>"
+const bassline = "<0!4 1!8 0!4 1!14 0!4>"
+const melody = "<0!8 1!4 0!8 1!8 0!6>"
+
+kick: s("bd*4").bank("RolandTR909").gain(.5).orbit(1).mask(rhythm)
+clap: s("~ cp ~ cp").bank("RolandTR909").gain(.18).room(.1).orbit(1).mask(backbeat)
+hats: s("hh*8").bank("RolandTR909").swingBy(.1,4).pan(.6).gain(hats).orbit(1).mask("<0!2 1!10 0!2 1!16 0!4>")
+openhat: s("~ ~ ~ oh").bank("RolandTR909").gain(.065).orbit(1).mask("<0!8 1!4 0!8 1!8 0!6>")
+
+bass: note("<c2 a1 f2 g1>").struct("x ~ x ~ ~ x ~ x").s("sawtooth").lpf(650).attack(.005).decay(.16).sustain(.05).release(.08).gain(.14).orbit(2).mask(bassline)
+chords: note("<[c4,e4,g4] [a3,c4,e4] [f3,a3,c4] [g3,b3,d4]>").s("triangle").attack(.08).decay(.35).sustain(.12).release(.65).gain(.09).room(.2).orbit(2).mask("<1!31 0!3>")
+lead: note("<e5 g5 a5 d5>").struct("x ~ x ~ ~ x ~ ~").s("sine").attack(.01).decay(.15).sustain(0).release(.15).gain(.075).delay(.25).delaytime(.375).delayfeedback(.3).orbit(3).mask(melody)
+
+voice: s("testvoice").slice(8,"0 ~ 3 ~ ~ 5 6 ~").clip(1).gain(.45).room(.16).orbit(3).mask("<0!10 1!2 0!10 1!4 0!8>")
+texture: s("testloop").slice(8,"0 ~ 3 ~ 4 ~ 7 ~").speed("<.5 1 -1 1>").gain(.8).delay(.2).delaytime(.5).delayfeedback(.2).orbit(3).mask("<0!12 1!4 0!18>")

@@ -1,4 +1,4 @@
-"""Local audio inspection and OpenRouter listening experiments."""
+"""Strudel project rendering, audio inspection and OpenRouter listening."""
 
 import argparse
 import base64
@@ -457,6 +457,35 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     command = sub.add_parser(
+        "render-project", help="Render and inspect a saved project master and stems"
+    )
+    command.add_argument("project", type=Path)
+    command.add_argument("--revision", required=True)
+    command.add_argument("--out", type=Path, required=True)
+    command.add_argument("--timeout", type=float, default=120)
+    for operation in ["preview", "compare-revisions"]:
+        command = sub.add_parser(
+            operation,
+            help={
+                "preview": "Extract a section from a completed master or stem",
+                "compare-revisions": "Create labelled, loudness-matched section comparisons",
+            }[operation],
+        )
+        if operation == "preview":
+            command.add_argument("run", type=Path)
+        else:
+            command.add_argument("reference", type=Path)
+            command.add_argument("candidate", type=Path)
+        command.add_argument("--section", required=True)
+        command.add_argument("--stem", default="master")
+        command.add_argument(
+            "--lead", type=float, default=0, help="Seconds of preceding context"
+        )
+        command.add_argument(
+            "--tail", type=float, default=0, help="Seconds of following context"
+        )
+        command.add_argument("--out", type=Path, required=True)
+    command = sub.add_parser(
         "render", help="Render trusted Strudel source in a fresh headless Chrome"
     )
     command.add_argument("input", type=Path)
@@ -465,6 +494,12 @@ def main():
     command.add_argument("--end", type=float, required=True)
     command.add_argument("--sample-rate", type=int, default=48000)
     command.add_argument("--samples", type=Path, action="append", default=[])
+    command.add_argument(
+        "--solo",
+        action="append",
+        default=[],
+        help="Named source layer; repeat to group",
+    )
     command.add_argument("--timeout", type=float, default=120)
     for name in ["inspect", "excerpt", "review", "calibration"]:
         command = sub.add_parser(name)
@@ -495,7 +530,28 @@ def main():
     command.add_argument("candidate", type=Path)
     command.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    if args.command == "render":
+    if args.command in {"render-project", "preview", "compare-revisions"}:
+        import workflow
+
+        if args.command == "render-project":
+            result = workflow.render_project(
+                args.project, args.revision, args.out, args.timeout
+            )
+        elif args.command == "preview":
+            result = workflow.preview(
+                args.run, args.section, args.out, args.lead, args.tail, args.stem
+            )
+        else:
+            result = workflow.compare_revisions(
+                args.reference,
+                args.candidate,
+                args.section,
+                args.out,
+                args.lead,
+                args.tail,
+                args.stem,
+            )
+    elif args.command == "render":
         command = [
             "node",
             str(ROOT / "renderer/render.mjs"),
@@ -513,6 +569,8 @@ def main():
         ]
         for folder in args.samples:
             command.extend(["--samples", str(folder)])
+        for label in args.solo:
+            command.extend(["--solo", label])
         completed = subprocess.run(command, check=False)
         if completed.returncode:
             raise SystemExit(completed.returncode)

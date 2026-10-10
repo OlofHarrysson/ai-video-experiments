@@ -1,0 +1,316 @@
+{
+  "date": "2026-10-10",
+  "scope": "Project master/stem rendering, master-derived previews and deliberate revision comparisons. GitHub import deferred by user.",
+  "project_sha256": "17329d422d0ae3291e06d575e5bd957949dabd1e198cf6787c7f66431c138ac8",
+  "source_hashes": {
+    "v001.strudel": "68c4f4de80897955569e4c574fd0630594c62c42b85959f03fc64b8481eadce6",
+    "v002.strudel": "74c1097a9e1e21bc203cdf428e3767c14f1df526957d57c6ca06f77ba54af7dd",
+    "v003.strudel": "3ba677e6910cf632ba8f2eda306fb7d112fed5ad242ecc80a85042a08d0f94ee"
+  },
+  "runs": {
+    "v001": {
+      "receipt": "projects/workflow-dogfood/renders/v001/project-render.json",
+      "receipt_sha256": "b0da43e5b59fde2b104d70206c6b837960259b486b11d583a24adb985de89e38",
+      "status": "complete",
+      "cps": 0.5,
+      "sample_rate": 48000,
+      "frames": 3264000,
+      "renders": {
+        "master": {
+          "file": "projects/workflow-dogfood/renders/v001/master/render.wav",
+          "sha256": "e00cb3bd22728e1df8fb3ead15fc26e8a6b8c7e1d3496dfa550f76a8b7ba205e",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.27,
+            "sample_peak_dbfs": -3.83694479406457,
+            "true_peak_dbtp": -3.74,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "drums": {
+          "file": "projects/workflow-dogfood/renders/v001/drums/render.wav",
+          "sha256": "af2c4cc31566fd605189c7851cb690a72dfcf968ba103bc23d577c9f8d0aa7d7",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.23,
+            "sample_peak_dbfs": -3.928127371212092,
+            "true_peak_dbtp": -3.93,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "music": {
+          "file": "projects/workflow-dogfood/renders/v001/music/render.wav",
+          "sha256": "f9129349671cdccd786813ba3d0f505415b2166d61d13a741e82cf147f289201",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -37.68,
+            "sample_peak_dbfs": -22.67586904747862,
+            "true_peak_dbtp": -22.68,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "samples": {
+          "file": "projects/workflow-dogfood/renders/v001/samples/render.wav",
+          "sha256": "1fa6d1461b6a434e27d340155f95fda83ff8abec4d970769274db35e7189ac3f",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -29.35,
+            "sample_peak_dbfs": -14.753214950497009,
+            "true_peak_dbtp": -14.75,
+            "samples_at_or_above_full_scale": 0
+          }
+        }
+      }
+    },
+    "v002": {
+      "receipt": "projects/workflow-dogfood/renders/v002/project-render.json",
+      "receipt_sha256": "c5c66078285a5f70382ff2e8d93051bd2a96e8f0a0462da2e8ac2c434ef559a7",
+      "status": "complete",
+      "cps": 0.5,
+      "sample_rate": 48000,
+      "frames": 3264000,
+      "renders": {
+        "master": {
+          "file": "projects/workflow-dogfood/renders/v002/master/render.wav",
+          "sha256": "caa9578871d1c8a60102e6ec3f8d873c28d2cd8a9fc35f6a317545ea32ffd1a6",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.28,
+            "sample_peak_dbfs": -3.8824164313339677,
+            "true_peak_dbtp": -3.76,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "drums": {
+          "file": "projects/workflow-dogfood/renders/v002/drums/render.wav",
+          "sha256": "ee722f246f70b48d5b6b0f4636da1199b34392e51e7cc9d68995769089a529f3",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.23,
+            "sample_peak_dbfs": -3.9264609335575846,
+            "true_peak_dbtp": -3.93,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "music": {
+          "file": "projects/workflow-dogfood/renders/v002/music/render.wav",
+          "sha256": "f6020b7c448ab7ee611142e881b78b946d884bdf65b44b63758b5ef1d6ffdec7",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -37.88,
+            "sample_peak_dbfs": -22.65425338396775,
+            "true_peak_dbtp": -22.65,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "samples": {
+          "file": "projects/workflow-dogfood/renders/v002/samples/render.wav",
+          "sha256": "bc5f987ba18271700b68ab2d1608ec8709a643378c3ad0dcc4d036f2d6a71a6c",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -29.36,
+            "sample_peak_dbfs": -14.759012307387058,
+            "true_peak_dbtp": -14.76,
+            "samples_at_or_above_full_scale": 0
+          }
+        }
+      }
+    },
+    "v003": {
+      "receipt": "projects/workflow-dogfood/renders/v003/project-render.json",
+      "receipt_sha256": "bb0a289bbebfcce1e1841b4ad444607987dbd957e9126718dd0adb776f39b6c1",
+      "status": "complete",
+      "cps": 0.5,
+      "sample_rate": 48000,
+      "frames": 3264000,
+      "renders": {
+        "master": {
+          "file": "projects/workflow-dogfood/renders/v003/master/render.wav",
+          "sha256": "63eae31774a275b7b2c838483a8e9ee7e0a10bb51a2271a5fe0ea719cbe0ce50",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.29,
+            "sample_peak_dbfs": -3.8629585068939716,
+            "true_peak_dbtp": -3.75,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "drums": {
+          "file": "projects/workflow-dogfood/renders/v003/drums/render.wav",
+          "sha256": "148a7893edef0a33874022d52ec21c7549a935aa4928e742feb94819df13a0e1",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -16.23,
+            "sample_peak_dbfs": -3.9256278346083495,
+            "true_peak_dbtp": -3.93,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "music": {
+          "file": "projects/workflow-dogfood/renders/v003/music/render.wav",
+          "sha256": "592625959718267b86bec0e913ffe74336e620156a115104db07cbc87f1186d2",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -37.92,
+            "sample_peak_dbfs": -22.69030943258032,
+            "true_peak_dbtp": -22.69,
+            "samples_at_or_above_full_scale": 0
+          }
+        },
+        "samples": {
+          "file": "projects/workflow-dogfood/renders/v003/samples/render.wav",
+          "sha256": "06561e107a55eaf5bf1fb19b5c127c2d031846bfb643f7ac1bd9d1dcb3406194",
+          "metrics": {
+            "seconds": 68.0,
+            "integrated_lufs": -29.34,
+            "sample_peak_dbfs": -14.886071722894656,
+            "true_peak_dbtp": -14.89,
+            "samples_at_or_above_full_scale": 0
+          }
+        }
+      }
+    }
+  },
+  "previews": {
+    "workflow-v001-breakdown": {
+      "revision": "v001",
+      "section": "breakdown",
+      "stem": "master",
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v001/master/render.wav",
+      "source_sha256": "e00cb3bd22728e1df8fb3ead15fc26e8a6b8c7e1d3496dfa550f76a8b7ba205e",
+      "start_seconds": 22.0,
+      "end_seconds": 34.0,
+      "lead_seconds": 2.0,
+      "tail_seconds": 2.0,
+      "output_sha256": "2362d3a1de2ef232cb4a63120f2ac05c1f4e53060cdc5f0b1814cff83b605a9d",
+      "method": "exact excerpt of completed render, preserving prior effect state; context includes adjacent notes",
+      "identical_to_master_excerpt": true,
+      "frames": 576000
+    },
+    "workflow-ending-preview": {
+      "revision": "v003",
+      "section": "ending",
+      "stem": "master",
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v003/master/render.wav",
+      "source_sha256": "63eae31774a275b7b2c838483a8e9ee7e0a10bb51a2271a5fe0ea719cbe0ce50",
+      "start_seconds": 56.0,
+      "end_seconds": 66.0,
+      "lead_seconds": 0,
+      "tail_seconds": 2.0,
+      "output_sha256": "abdbf5d1fddfb83061e1b39f7a93cf52bd275520b019f968f0090d0cf191ff38",
+      "method": "exact excerpt of completed render, preserving prior effect state; context includes adjacent notes",
+      "identical_to_master_excerpt": true,
+      "frames": 480000
+    }
+  },
+  "comparisons": {
+    "workflow-arrangement-ab": {
+      "folder": "outputs/workflow-arrangement-ab",
+      "status": "complete",
+      "section": "return",
+      "stem": "master",
+      "versions": {
+        "A": {
+          "revision": "v001",
+          "notes": "Baseline: direct full-rhythm return after the breakdown.",
+          "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v001/master/render.wav",
+          "source_sha256": "e00cb3bd22728e1df8fb3ead15fc26e8a6b8c7e1d3496dfa550f76a8b7ba205e",
+          "start_seconds": 30.0,
+          "end_seconds": 58.0,
+          "original_sha256": "3aea3a32b146a71f36505dd4a38d1d7a2e9f2e3d61e3ca43b551443c2ef4e9df",
+          "file": "matched/01-A.wav",
+          "gain_db": -0.019999999999999574,
+          "sha256": "6d920894b3518af905c185de18d49cc3126583301dc0ea55790e0c805789cf0d",
+          "frames": 1344000
+        },
+        "B": {
+          "revision": "v002",
+          "notes": "Arrangement revision: kick, clap and bass wait two cycles into the return; the lead enters with them.",
+          "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v002/master/render.wav",
+          "source_sha256": "caa9578871d1c8a60102e6ec3f8d873c28d2cd8a9fc35f6a317545ea32ffd1a6",
+          "start_seconds": 30.0,
+          "end_seconds": 58.0,
+          "original_sha256": "3f9f628daa12e133e433614a213d60641047a9ef909c6d5f1d4b8ee997004d8e",
+          "file": "matched/02-B.wav",
+          "gain_db": 0.0,
+          "sha256": "8d5693cbc138b3b183664651a15f2a9261974fde22ef00844e5cddef85e1e066",
+          "frames": 1344000
+        }
+      },
+      "target_lufs": -16.29,
+      "method": "constant attenuation, no compression",
+      "verified_lufs": {
+        "A": -16.3,
+        "B": -16.29
+      }
+    },
+    "workflow-mix-ab": {
+      "folder": "outputs/workflow-mix-ab",
+      "status": "complete",
+      "section": "return",
+      "stem": "drums",
+      "versions": {
+        "A": {
+          "revision": "v002",
+          "notes": "Arrangement revision: kick, clap and bass wait two cycles into the return; the lead enters with them.",
+          "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v002/drums/render.wav",
+          "source_sha256": "ee722f246f70b48d5b6b0f4636da1199b34392e51e7cc9d68995769089a529f3",
+          "start_seconds": 30.0,
+          "end_seconds": 58.0,
+          "original_sha256": "de5055cb3d3b4c8482f1c5751064429416c0b75327c876ff3c9415b8744d4465",
+          "file": "matched/01-A.wav",
+          "gain_db": 0.0,
+          "sha256": "8adc5e6eee21f8f8df1e0a097373f95dc04f3244a8ea4ef4a6ca2f88abf89e1a",
+          "frames": 1344000
+        },
+        "B": {
+          "revision": "v003",
+          "notes": "Mix revision of v002: hi-hat gain reduced from .085 to .045; arrangement unchanged.",
+          "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/workflow-dogfood/renders/v003/drums/render.wav",
+          "source_sha256": "148a7893edef0a33874022d52ec21c7549a935aa4928e742feb94819df13a0e1",
+          "start_seconds": 30.0,
+          "end_seconds": 58.0,
+          "original_sha256": "9fc9d2a2d2258a3e6edfc7e695823a4969cc7335177932e0f373d89b0bd19d74",
+          "file": "matched/02-B.wav",
+          "gain_db": 0.0,
+          "sha256": "d0a46938e499d0b93ca06e4f9d33627f0c445b2d2d2cb0dccb6ef95b0b2fe84e",
+          "frames": 1344000
+        }
+      },
+      "target_lufs": -16.23,
+      "method": "constant attenuation, no compression",
+      "verified_lufs": {
+        "A": -16.23,
+        "B": -16.23
+      }
+    }
+  },
+  "checks": {
+    "python_tests": 19,
+    "node_tests": 11,
+    "skipped": 0,
+    "ruff": "passed",
+    "human_listening_verdict": null,
+    "new_audio_model_requests": 0
+  },
+  "arrangement_check": {
+    "v001": {
+      "return_first_four_seconds_lowpass_rms_dbfs": -19.945623471345538
+    },
+    "v002": {
+      "return_first_four_seconds_lowpass_rms_dbfs": -72.00569152919981
+    }
+  },
+  "hats_check": {
+    "interval_seconds": [
+      32,
+      36
+    ],
+    "rms_dbfs": {
+      "v002": -48.081394438499395,
+      "v003": -53.61518303357406
+    },
+    "difference_db": -5.533788595074668,
+    "expected_gain_difference_db": -5.5241282387789825
+  }
+}

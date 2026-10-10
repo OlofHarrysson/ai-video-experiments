@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, writeFile, readFile, access, rm } from 'node:fs/promise
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { render } from './render.mjs';
+import { selectLayers } from './layers.mjs';
 
 async function fixture(t, code, overrides = {}) {
   const dir = await mkdtemp(join(tmpdir(), 'music-render-test-'));
@@ -64,7 +65,7 @@ test('missing sound cannot silently produce a successful partial render', async 
 
 test('invalid source fails with a receipt', async (t) => {
   const opts = await fixture(t, '$: note(');
-  await assert.rejects(render(opts), /Evaluation failed/);
+  await assert.rejects(render(opts), /Unexpected token/);
   assert.equal(JSON.parse(await readFile(join(opts.out, 'render.json'))).status, 'failed');
   await assert.rejects(access(join(opts.out, 'render.wav')));
 });
@@ -81,4 +82,31 @@ test('nonterminating source times out and closes the browser', async (t) => {
   const opts = await fixture(t, '(() => { while (true) {} })()\n$: s("sine")', { timeout: 2 });
   await assert.rejects(render(opts), /timed out/);
   assert.equal(JSON.parse(await readFile(join(opts.out, 'render.json'))).status, 'failed');
+});
+
+test('layer selection parses multiline labels without rewriting comments or strings', () => {
+  const code = '// bass: is a comment\nconst text = \'drums: a string\';\ndrums: s("sine")\n .gain(.2)\nbass: note("c2").s("sine")';
+  const result = selectLayers(code, ['bass']);
+  assert.deepEqual(result.labels, ['drums', 'bass']);
+  assert.ok(result.code.includes('\n_drums: s("sine")'));
+  assert.ok(result.code.includes("'drums: a string'"));
+  assert.ok(result.code.includes('// bass: is a comment'));
+  assert.throws(() => selectLayers(code, ['typo']), /Unknown layer/);
+  assert.throws(() => selectLayers('$: s("sine")', ['bass']), /named labels/);
+});
+
+test('named dry stems sum to the master and retain original source', async (t) => {
+  const code = 'setcpm(60)\nlow: note("c3 ~").s("sine").gain(.2)\nhigh: note("~ g4").s("triangle").gain(.1)';
+  const opts = await fixture(t, code, { end: 1 });
+  const full = await render(opts);
+  const low = await render({ ...opts, out: `${opts.out}-low`, solo: ['low'] });
+  const high = await render({ ...opts, out: `${opts.out}-high`, solo: ['high'] });
+  const wavs = await Promise.all([full, low, high].map((result) => readFile(result.output)));
+  let peak = 0;
+  for (let i = 44; i < wavs[0].length; i += 2) peak = Math.max(peak, Math.abs(wavs[0].readInt16LE(i) - wavs[1].readInt16LE(i) - wavs[2].readInt16LE(i)));
+  // Three separately quantized PCM16 signals can differ by two steps where
+  // release tails overlap, as in the retained overlap/delay fixture.
+  assert.ok(peak <= 2, `Stem residual ${peak} steps`);
+  assert.equal(await readFile(join(`${opts.out}-low`, 'source.strudel'), 'utf8'), code);
+  assert.ok((await readFile(join(`${opts.out}-low`, 'evaluated.strudel'), 'utf8')).includes('_high:'));
 });

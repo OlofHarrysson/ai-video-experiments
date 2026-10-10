@@ -11,7 +11,7 @@ From `/Users/olof/git/ai-video-experiments/apps/music`:
 ```sh
 uv sync --locked
 npm ci
-# Requires Node.js, Google Chrome, patch, ffmpeg and ffprobe; installed on this Mac.
+# Requires Node.js 20+, Google Chrome, patch, ffmpeg and ffprobe; installed on this Mac.
 uv run --locked python music.py --help
 ```
 
@@ -68,7 +68,28 @@ The renderer pins `@strudel/web` 1.3.0 with a checksum-verified scheduling patch
 
 The [Strudel guide](references/strudel/README.md) remains useful for interactive editing and browser export. The automated path passed reference comparisons for dry synths, overlap/delay and the practical dry sampled beat, plus a 128-second wet arrangement. This is evidence for those recipes, not all Strudel features.
 
+## Projects, section previews and revision comparisons
+
+A project recipe records source versions, local sample folders, named stem groups, section boundaries and the export endpoint. Paths in the recipe are relative to its own directory; output paths are relative to the command's working directory. See the tested [workflow project](projects/workflow-dogfood/project.json) and [study](projects/workflow-dogfood/README.md).
+
+```sh
+uv run --locked python music.py render-project projects/workflow-dogfood/project.json --revision v001 --out outputs/study-v001
+uv run --locked python music.py render-project projects/workflow-dogfood/project.json --revision v002 --out outputs/study-v002
+uv run --locked python music.py preview outputs/study-v001 --section breakdown --lead 2 --tail 2 --out outputs/breakdown-preview
+uv run --locked python music.py compare-revisions outputs/study-v001 outputs/study-v002 --section return --lead 2 --tail 2 --out outputs/return-comparison
+```
+
+`render-project` renders the master and every stem, then inspects each. It saves source/recipe snapshots, per-render receipts, measurements, spectrograms and a summary in a new output directory. A failure preserves completed work and marks the overall receipt failed. All project exports begin at cycle zero. `end_cycle` must include the desired effect-tail window, with the source silent during that window. The recipe's `sections` are cycle pairs; the preview command's `--lead` and `--tail` are seconds.
+
+Use unique top-level source labels such as `kick:`, `bass:` and `voice:`. Each label must belong to exactly one stem in the recipe. Labels must start with a lowercase letter and must not end with `_`; anonymous `$:` layers are supported by the low-level renderer but not by named project stems. The renderer uses JavaScript parsing and Strudel's native mute syntax to select layers; it retains both the original and evaluated source. For an individual render, repeat `render --solo NAME` to select a group. No manually maintained stem-source copies are needed.
+
+`preview` extracts `preview.wav` from an already completed master. Earlier notes' reverb/delay state is preserved exactly; there is no fresh evaluation or random rerender. Lead/tail context includes any adjacent notes present in that master. Insufficient context fails explicitly rather than padding or truncating silently. Use `--stem drums` (or another declared stem) to inspect a specific group. The CLI checks the saved audio hash before extracting it.
+
+`compare-revisions` selects the same section from two completed runs and creates `matched/01-A.wav` and `matched/02-B.wav`, with revision labels, edit notes, original hashes and attenuation values. It reuses the existing loudness-matching tool. Tempo, sample rate and section cycle boundaries must match; silent comparisons fail explicitly. No compression, stretching or automatic alignment is applied. A comparison folder's README links the two matched clips. Shared reverb can vary independently of the revision, and no preference is inferred automatically.
+
 ## Local voice and music samples
+
+For a complete arrangement, use the saved-project workflow below so sample paths and stem membership live in one recipe.
 
 Put retained audio in `projects/<study>/references/assets/samples/<sound-name>/<file>.wav`, then pass the parent `samples` folder with `--samples`. Immediate child folders become sound names; files use case-sensitive filename order, recorded by index in the receipt. Multiple `--samples` folders are allowed, but duplicate sound names fail. WAV is tested; MP3/OGG/FLAC/M4A depend on Chrome decoding and have not been separately validated here.
 
@@ -95,6 +116,7 @@ Olof manages spending through the OpenRouter balance. The adapter imposes no dol
 
 - `music.py`, `tests/`, `pyproject.toml`, `uv.lock`: local CLI and reproducible Python environment.
 - `renderer/`, `patches/`, `package.json`, `package-lock.json`: pinned browser render engine, scheduling patch and integration tests.
+- `workflow.py`: saved project runs, master-derived previews and revision comparisons.
 - `references/strudel/`: retained operating guide, DJ_Dave research, original sketches, and local documentation snapshots.
 - `docs/`: foundations, listening protocol, selected catalog snapshot and current handoff.
 - `outputs/`: ignored analysis images and review copies.
@@ -113,4 +135,6 @@ npm test
 
 Tests cover spectral/stereo cancellation behavior, real FFmpeg measurements, silent input and intervals, exact excerpts, preservation, alignment rejection, overload visibility, loudness matching, reconstruction differences, calibration conditions, offline preflight, uncapped requests and incomplete provider responses. Real provider and browser results are recorded separately in the validation study.
 
-Renderer tests cover successful synthesis, fresh-profile samples, missing sounds, invalid source, remote-dependency failure, timeout cleanup and output preservation. Three reference-parity tests use ignored local media and explicitly skip when that corpus has not been restored; six synthetic tests run without it.
+Renderer tests cover successful synthesis, fresh-profile samples, missing sounds, invalid source, remote-dependency failure, timeout cleanup and output preservation. Three reference-parity tests use ignored local media and explicitly skip when that corpus has not been restored; eight other renderer tests run without it.
+
+Project workflow tests cover exact master excerpts with existing tails, context bounds, changed-file detection, matched revision copies, tempo mismatch, silent comparison failures, stem partition checks and failed batch receipts.

@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "title": "Workflow dogfood \u2014 return and release",
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "Baseline: direct full-rhythm return after the breakdown."
+    },
+    "v002": {
+      "source": "source/v002.strudel",
+      "notes": "Arrangement revision: kick, clap and bass wait two cycles into the return; the lead enters with them."
+    },
+    "v003": {
+      "source": "source/v003.strudel",
+      "notes": "Mix revision of v002: hi-hat gain reduced from .085 to .045; arrangement unchanged."
+    }
+  },
+  "end_cycle": 34,
+  "sample_rate": 48000,
+  "samples": [
+    "../practical-dogfood/references/assets/drums",
+    "../practical-dogfood/references/assets/samples"
+  ],
+  "stems": {
+    "drums": [
+      "kick",
+      "clap",
+      "hats",
+      "openhat"
+    ],
+    "music": [
+      "bass",
+      "chords",
+      "lead"
+    ],
+    "samples": [
+      "voice",
+      "texture"
+    ]
+  },
+  "sections": {
+    "intro": [
+      0,
+      4
+    ],
+    "main": [
+      4,
+      12
+    ],
+    "breakdown": [
+      12,
+      16
+    ],
+    "return": [
+      16,
+      28
+    ],
+    "ending": [
+      28,
+      32
+    ]
+  }
+}

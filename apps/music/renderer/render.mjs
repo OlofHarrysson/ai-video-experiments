@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { chromium } from 'playwright-core';
 import { BUNDLE_SHA256 } from './engine-version.mjs';
+import { selectLayers } from './layers.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const AUDIO_EXTENSIONS = new Set(['.wav', '.mp3', '.ogg', '.flac', '.m4a']);
@@ -73,7 +74,7 @@ export async function render(options) {
       lock_sha256: sha256(await readFile(resolve(ROOT, 'package-lock.json'))),
       node: process.version,
     },
-    settings: { begin: options.begin, end: options.end, sample_rate: options.sampleRate, max_polyphony: MAX_POLYPHONY, multi_channel_orbits: false, timeout_seconds: options.timeout },
+    settings: { begin: options.begin, end: options.end, sample_rate: options.sampleRate, max_polyphony: MAX_POLYPHONY, multi_channel_orbits: false, timeout_seconds: options.timeout, solo: options.solo ?? [] },
     samples: records, requested_samples: [], logs: [], errors: [],
   };
   const saveReceipt = () => writeFile(resolve(out, 'render.json'), JSON.stringify(receipt, null, 2) + '\n');
@@ -99,6 +100,10 @@ export async function render(options) {
     }
   });
   try {
+    const selected = selectLayers(source.toString('utf8'), options.solo);
+    receipt.layers = selected.labels;
+    receipt.source.evaluated_sha256 = sha256(selected.code);
+    await writeFile(resolve(out, 'evaluated.strudel'), selected.code);
     await new Promise((yes, no) => { server.once('error', no); server.listen(0, '127.0.0.1', yes); });
     const origin = `http://127.0.0.1:${server.address().port}`;
     browser = await chromium.launch({ channel: 'chrome', headless: true, timeout: options.timeout * 1000 });
@@ -146,7 +151,7 @@ export async function render(options) {
         if (!Number.isSafeInteger(frames) || frames <= 0) throw new Error('Invalid audio frame count');
         window.renderAudio = () => engine.renderPatternAudio(pattern, cps, begin, end, sampleRate, maxPolyphony, false, 'render');
         return { cps, seconds: frames / sampleRate, frames };
-      }, { code: source.toString('utf8'), map, begin: options.begin, end: options.end, sampleRate: options.sampleRate, maxPolyphony: MAX_POLYPHONY });
+      }, { code: selected.code, map, begin: options.begin, end: options.end, sampleRate: options.sampleRate, maxPolyphony: MAX_POLYPHONY });
       await saveReceipt();
       const [download] = await Promise.all([
         page.waitForEvent('download', { timeout: options.timeout * 1000 }),
@@ -190,9 +195,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       out: { type: 'string' }, begin: { type: 'string', default: '0' }, end: { type: 'string' },
       'sample-rate': { type: 'string', default: '48000' }, samples: { type: 'string', multiple: true, default: [] },
       timeout: { type: 'string', default: '120' },
+      solo: { type: 'string', multiple: true, default: [] },
     } });
     if (positionals.length !== 1 || !values.out || !values.end) throw new Error('Usage: render.mjs source.strudel --out NEW_DIR --end CYCLE [--begin 0] [--samples FOLDER]');
-    console.log(JSON.stringify(await render({ input: positionals[0], out: values.out, begin: Number(values.begin), end: Number(values.end), sampleRate: Number(values['sample-rate']), samples: values.samples, timeout: Number(values.timeout) }), null, 2));
+    console.log(JSON.stringify(await render({ input: positionals[0], out: values.out, begin: Number(values.begin), end: Number(values.end), sampleRate: Number(values['sample-rate']), samples: values.samples, timeout: Number(values.timeout), solo: values.solo }), null, 2));
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;
