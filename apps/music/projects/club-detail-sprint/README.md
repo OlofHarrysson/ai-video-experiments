@@ -26,7 +26,7 @@ Editable portable snapshots are in `exports/bundles/pressure-lock/` and `exports
 
 All audio and private API receipts remain local and ignored by Git. A bundle here is not a second-device backup. Negative Space's captured sound object depends on a preserved original print; do not discard it expecting identical WebAudio reverb to regenerate from a seed.
 
-For the next iteration, use Olof's listening verdict to choose which identity to develop. Extend the chosen musical idea rather than joining all three candidates or adding layers simply because the system can generate them. Keep the 30-second selections as baselines.
+For the next iteration, use Olof's listening verdict to choose which identity to develop. Extend the chosen musical idea rather than joining all three candidates or adding layers simply because the system can generate them. Keep the 30-second selections as baselines. Focused stem previews and a v011/v012 return comparison are preserved under ignored `screening/`; [sample checks](focused-preview-evidence.json) confirm their exact extraction and gain transforms.
 
 ## Listening evidence and limits
 

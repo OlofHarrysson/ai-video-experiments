@@ -25,7 +25,7 @@ uv run --locked python music.py render ASSEMBLED_SOURCE --end END_CYCLE \
 
 A scheduled event can contain very little signal. In Negative Space v011, the quiet tail slices measured roughly 20 dB below the main chopped attacks during short onset windows. Counting twelve replies did not establish twelve equally prominent gestures. A solo export made that difference inspectable without the kick and bass covering the waveform.
 
-V012 lifts the two quieter slice types by 3 and 7 dB while preserving the main attacks, all onset times and every other control. The replies remain subordinate; the whole return dub stem rises only about 0.25 dB. Short windows include previous effect tails and do not establish perceptual audibility. This check supports a restrained articulation edit, not automatic normalization of every note. [The repeatable study](../projects/club-detail-sprint/audit_reply_dynamics.py) retains both traces and renders.
+V012 lifts the two quieter slice types by 3 and 7 dB while preserving the main attacks, all onset times and every other control. The replies remain subordinate; the whole return dub stem’s RMS level rises only about 0.25 dB. Short windows include previous effect tails and do not establish perceptual audibility. This check supports a restrained articulation edit, not automatic normalization of every note. [The repeatable study](../projects/club-detail-sprint/audit_reply_dynamics.py) retains both traces and renders.
 
 ## Keep experiments comparable
 

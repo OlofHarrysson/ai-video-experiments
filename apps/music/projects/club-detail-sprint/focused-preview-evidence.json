@@ -1,0 +1,17 @@
+{
+  "pressure_preview_exact_source_slice": true,
+  "pressure_frames": 482823,
+  "negative_comparison": [
+    {
+      "revision": "v011",
+      "frames": 408000,
+      "max_gain_reconstruction_error": 1.0910257752794195e-08
+    },
+    {
+      "revision": "v012",
+      "frames": 408000,
+      "max_gain_reconstruction_error": 0.0
+    }
+  ],
+  "scope": "Preserves existing effect state by extracting completed stems; matched solo LUFS is not a perceptual or gain-treatment score."
+}

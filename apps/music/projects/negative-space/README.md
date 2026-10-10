@@ -73,7 +73,7 @@ The sample generators refuse to overwrite original assets. If rebuilding the cur
 
 ## Final reply dynamics
 
-V012 retains v011's whole arrangement and all twelve chopped-reply timings, but lifts slice type 2 by 3 dB and the quietest tail slice type 3 by 7 dB. The main slice attacks retain their original gains. Solo renders show the tail replies remain roughly 9–14 dB below principal attacks; the whole return dub stem rises only about 0.25 dB. This preserves accent hierarchy while giving the tail fragments a stronger signal. Master loudness/true peak remain −17.15 LUFS / −3.06 dBTP, with zero rails and aligned 30-second stems.
+V012 retains v011's whole arrangement and all twelve chopped-reply timings, but lifts slice type 2 by 3 dB and the quietest tail slice type 3 by 7 dB. The main slice attacks retain their original gains. Solo renders show the tail replies remain roughly 9–14 dB below principal attacks; the whole return dub stem’s RMS level rises only about 0.25 dB. This preserves accent hierarchy while giving the tail fragments a stronger signal. Master loudness/true peak remain −17.15 LUFS / −3.06 dBTP, with zero rails and aligned 30-second stems.
 
 The actual-export traces have identical timings, durations, bounds and all non-gain controls. Short onset measurements include preceding effect tails; they are not isolated-sample loudness or perceptual scores. [Repeatable dynamics audit](../club-detail-sprint/audit_reply_dynamics.py) and [evidence](../club-detail-sprint/reply-dynamics-study.json) preserve the comparison. The v012 portable bundle was rebuilt successfully with identical source/sample hashes and sample indices, and clean aligned master/stems. V011 remains the prior selection. No additional paid review was used for this refinement.
 
