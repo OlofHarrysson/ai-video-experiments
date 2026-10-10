@@ -23,7 +23,7 @@ This is a **cutout rig**, not a font, a recovered 3D model or complete hidden su
 
 ## Screening
 
-The assistant inspected the isolated glyph atlas, encoded overview, all twelve consecutive arrival and exit frames, intermediate full-size frames and the assembled proof. The selected entrance reads clearly at contact-sheet size. The full design remains crisp at its hold. Human judgment of the rhythm and visual quality remains pending; still-frame inspection does not establish normal-speed taste.
+The assistant inspected the isolated glyph atlas, encoded overview, all twelve consecutive arrival and exit frames, intermediate full-size frames and the assembled proof. The selected entrance reads clearly at contact-sheet size. The full design remains crisp at its hold. Olof subsequently says, “Yeah that's definitely more movement. Good job!” He approves combining this motion with NEXT and KEEP UP in a six-second silent rhythm study. This confirms the movement improvement, not parity with the film references.
 
 Validation: 72 frames, 24 fps, three seconds, 1600×900, no audio, deterministic seeks, no browser errors or external network requests, full FFmpeg decode and browser playback through the end. Both the diagnostic assembly and actual timeline hold reproduce the 1672×941 original exactly. The browser player also checks completion, seeking, assembled view and a 390-pixel layout. Consolidated results are in [results.json](results.json).
 

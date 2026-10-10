@@ -1,0 +1,90 @@
+{
+  "selected": "output-v004/three-identities.mp4",
+  "frames": 144,
+  "fps": 24,
+  "duration": 6,
+  "width": 1600,
+  "height": 900,
+  "silent": true,
+  "uniqueFrames": 82,
+  "deterministic": true,
+  "errors": [],
+  "network": [],
+  "screen": {
+    "completes": true,
+    "seeks": true,
+    "anchors": [
+      true,
+      true,
+      true
+    ],
+    "mobile": true,
+    "errors": [],
+    "playback": {
+      "ended": true,
+      "duration": 6,
+      "width": 1600,
+      "height": 900
+    },
+    "passed": true
+  },
+  "quality": {
+    "passed": true,
+    "actual_timeline_holds": {
+      "billions": {
+        "dimensions": [
+          1672,
+          941
+        ],
+        "identical": true,
+        "mean_absolute_rgb_difference": 0,
+        "max_channel_difference": 0
+      },
+      "keep": {
+        "dimensions": [
+          1672,
+          941
+        ],
+        "identical": true,
+        "mean_absolute_rgb_difference": 0,
+        "max_channel_difference": 0
+      }
+    }
+  },
+  "provenance": {
+    "build.mjs": "73baf9f4c087c676a02a5cbcd2f8e1c0164fb70288bc19aeb9125f823597e51b",
+    "motion.js": "d2c0aba7ea713ad99dd6d683e00edce88ec79bcc568626be23bf870d1c2e74e3",
+    "../billions-motion-v015/motion.js": "0f4c3d4a7f7d6d9cd194ef220e148d9ed440c1771b428021802c5741ebf56115",
+    "../billions-motion-v015/rig.json": "f6da85ed57f91c2c4eed3de845b1cffb3da3e4d1efe7ad239508f0a16925e4ca",
+    "../../../../tools/artwork/split-plate.js": "a935f64f4c83c54ec992117b3be526399e653ea46fd76fdaf897f162ba8aa887",
+    "../fidelity-v014/assets/billions.png": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+    "../fidelity-v014/assets/keep.png": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+    "../identity-motion-v013/assets/next.json.gz": "35b072c7b99e1bf457bae8c731f20ec2313d908cff726c1954030d91157cbd9c"
+  },
+  "consultation": {
+    "completed": true,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "reviewed": "output-v002 stills and code",
+    "adopted": [
+      "NEXT behind departing BILLIONS",
+      "light feather of visibility mask only"
+    ],
+    "independentlyAddressed": [
+      "hard mask cutoffs",
+      "sparse NEXT to KEEP overlap"
+    ],
+    "notAssessed": "Normal-speed playback and final output-v004"
+  },
+  "assistantInspection": [
+    "decoded overview",
+    "every frame 40-55 BILLIONS to NEXT",
+    "every frame 84-99 NEXT to KEEP in final",
+    "every frame 98-113 KEEP reveal in final",
+    "full-size frame128 original-artwork hold",
+    "native equality comparison"
+  ],
+  "humanReview": "Pending for v016; Olof praised v015 movement",
+  "passed": true
+}
