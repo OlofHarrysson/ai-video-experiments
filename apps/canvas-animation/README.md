@@ -36,3 +36,5 @@ Installation validation (2026-10-07): the six-second beat-cut template built and
 ## Reusable lettering
 
 [Generated lettering tools](tools/lettering/README.md) convert individual monochrome plates into vectors, record extraction settings and source hashes, validate explicit word/glyph groups, and provide source/vector inspection. [KEEP UP](projects/title-sequence-study/studies/keep-up-v011/README.md) is the first three-design test. Film renderers consume the paths; the inspector alone uses reference PNGs.
+
+[Finished artwork tools](tools/artwork/README.md) compare faithful surface preservation, soft vector controls and adaptive color meshes for designs whose engraving or shading does not survive flat-color tracing. [The fidelity study](projects/title-sequence-study/studies/fidelity-v014/README.md) selects preserved surfaces for BILLIONS and KEEP UP and retains vectors for simpler graphic artwork.

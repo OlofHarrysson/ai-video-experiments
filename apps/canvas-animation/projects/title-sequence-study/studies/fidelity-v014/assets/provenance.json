@@ -1,0 +1,372 @@
+{
+  "billions": {
+    "sourceOrigin": "../../art-direction-v012/reference/billions.png",
+    "width": 1672,
+    "height": 941,
+    "files": {
+      "billions.png": {
+        "sha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+        "bytes": 2530227
+      },
+      "billions.masks.json": {
+        "sha256": "fe3142ae6a02e222283ca4f80ad3d27affa07b3fa4becd30538f6961f6faa0d6",
+        "bytes": 2542407
+      },
+      "billions.mesh.gz": {
+        "sha256": "ffb43e810ba15ade10943427560a5462c4371d6ed760e0b1625e920ff9bdd5bd",
+        "bytes": 6253300
+      }
+    },
+    "maskRecipe": {
+      "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/billions.png",
+      "sourceSha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+      "kind": "billions",
+      "layerPaths": {
+        "face": 24,
+        "red": 23,
+        "blue": 60
+      },
+      "params": {
+        "colormode": "binary",
+        "mode": "spline",
+        "filter_speckle": 4,
+        "corner_threshold": 85,
+        "length_threshold": 2,
+        "splice_threshold": 45,
+        "path_precision": 3
+      },
+      "limitation": "Broad visible-surface masks for exposure and reveals; no recovered hidden geometry or true surface normals."
+    },
+    "meshFit": {
+      "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/billions.png",
+      "sourceSha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+      "vertices": 600000,
+      "triangles": 1199994,
+      "meshGzipBytes": 12583386,
+      "iterations": [
+        {
+          "vertices": 43807,
+          "triangles": 87608,
+          "mae": 23.083582176309676,
+          "p99": 158.66666666666669,
+          "elapsed": 2.9119097501970828
+        },
+        {
+          "vertices": 78807,
+          "triangles": 157608,
+          "mae": 21.341757537856335,
+          "p99": 143.0,
+          "elapsed": 5.609289583284408
+        },
+        {
+          "vertices": 113807,
+          "triangles": 227608,
+          "mae": 14.86455246377962,
+          "p99": 109.72222222222221,
+          "elapsed": 7.579189749900252
+        },
+        {
+          "vertices": 148807,
+          "triangles": 297608,
+          "mae": 11.446485769121187,
+          "p99": 94.0,
+          "elapsed": 9.479123833123595
+        },
+        {
+          "vertices": 183807,
+          "triangles": 367608,
+          "mae": 8.607308114383313,
+          "p99": 76.15566801619508,
+          "elapsed": 11.119964875280857
+        },
+        {
+          "vertices": 218807,
+          "triangles": 437608,
+          "mae": 6.592563482198928,
+          "p99": 61.32368421052958,
+          "elapsed": 13.00928416615352
+        },
+        {
+          "vertices": 253807,
+          "triangles": 507608,
+          "mae": 5.183502327986173,
+          "p99": 49.0,
+          "elapsed": 15.183277833275497
+        },
+        {
+          "vertices": 288807,
+          "triangles": 577608,
+          "mae": 4.205141799813551,
+          "p99": 40.5,
+          "elapsed": 17.633450208231807
+        },
+        {
+          "vertices": 323807,
+          "triangles": 647608,
+          "mae": 3.434701359291019,
+          "p99": 33.333333333333336,
+          "elapsed": 20.361488957889378
+        },
+        {
+          "vertices": 358807,
+          "triangles": 717608,
+          "mae": 2.8287465042216358,
+          "p99": 27.5,
+          "elapsed": 23.629326540976763
+        },
+        {
+          "vertices": 393807,
+          "triangles": 787608,
+          "mae": 2.329552775798768,
+          "p99": 23.0,
+          "elapsed": 27.010462500154972
+        },
+        {
+          "vertices": 428807,
+          "triangles": 857608,
+          "mae": 1.922781203613618,
+          "p99": 19.0,
+          "elapsed": 32.237381583079696
+        },
+        {
+          "vertices": 463807,
+          "triangles": 927608,
+          "mae": 1.585854753377533,
+          "p99": 15.666666666666657,
+          "elapsed": 36.529134625103325
+        },
+        {
+          "vertices": 498807,
+          "triangles": 997608,
+          "mae": 1.3079405416484584,
+          "p99": 13.0,
+          "elapsed": 41.72025716630742
+        },
+        {
+          "vertices": 533807,
+          "triangles": 1067608,
+          "mae": 1.0740906940317687,
+          "p99": 10.5,
+          "elapsed": 46.894750791136175
+        },
+        {
+          "vertices": 568807,
+          "triangles": 1137608,
+          "mae": 0.8830364151197209,
+          "p99": 8.5,
+          "elapsed": 52.0574241662398
+        },
+        {
+          "vertices": 600000,
+          "triangles": 1199994,
+          "mae": 0.7293601489420897,
+          "p99": 7.0,
+          "elapsed": 60.294240875169635
+        },
+        {
+          "stage": "least-squares vertex colors",
+          "mae": 0.7535650742267471,
+          "p99": 5.85261476635933
+        }
+      ],
+      "seconds": 67.53091812506318,
+      "limitation": "Adaptive sampled color geometry; not semantic glyphs, true surface normals or unlimited source detail."
+    },
+    "meshPack": {
+      "format": "GMESH001",
+      "width": 1672,
+      "height": 941,
+      "vertices": 600000,
+      "triangles": 1199994,
+      "rawBytes": 18599952,
+      "gzipBytes": 6253300,
+      "inputSha256": "db20b41b207e78385c06ffaca66819f0f53b7658c581a5755f634aff70c4be6c",
+      "payloadSha256": "0b20a5582a5deaed20797693a6809f6bb4343f9555a10fbc2bdcccb5e5533fd0",
+      "note": "Spatially reordered half-pixel coordinates, RGB8 vertex colors and uint32 indices; sorted triangles require culling disabled."
+    }
+  },
+  "keep": {
+    "sourceOrigin": "../../art-direction-v012/reference/keep-up.png",
+    "width": 1672,
+    "height": 941,
+    "files": {
+      "keep.png": {
+        "sha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+        "bytes": 1861591
+      },
+      "keep.masks.json": {
+        "sha256": "a08f6a4c1aa92ac6639ab6ce1cb3ea4025d18d1e930b6565312e96457b1ba41d",
+        "bytes": 1153224
+      },
+      "keep.mesh.gz": {
+        "sha256": "8173e821a9751459c097230681bccc6ca1dd2c2cc9b81fbaecd4fb94cb7cf5c8",
+        "bytes": 4199188
+      }
+    },
+    "maskRecipe": {
+      "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/keep-up.png",
+      "sourceSha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+      "kind": "keep",
+      "layerPaths": {
+        "enamel": 1
+      },
+      "params": {
+        "colormode": "binary",
+        "mode": "spline",
+        "filter_speckle": 4,
+        "corner_threshold": 85,
+        "length_threshold": 2,
+        "splice_threshold": 45,
+        "path_precision": 3
+      },
+      "limitation": "Broad visible-surface masks for exposure and reveals; no recovered hidden geometry or true surface normals."
+    },
+    "meshFit": {
+      "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/keep-up.png",
+      "sourceSha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+      "vertices": 400000,
+      "triangles": 799994,
+      "meshGzipBytes": 8331590,
+      "iterations": [
+        {
+          "vertices": 24666,
+          "triangles": 49326,
+          "mae": 14.041907271224327,
+          "p99": 146.75,
+          "elapsed": 2.111804250162095
+        },
+        {
+          "vertices": 49666,
+          "triangles": 99326,
+          "mae": 9.467291047103211,
+          "p99": 110.0,
+          "elapsed": 4.246039125137031
+        },
+        {
+          "vertices": 74666,
+          "triangles": 149326,
+          "mae": 5.704030097474767,
+          "p99": 63.416666666666686,
+          "elapsed": 6.530664292164147
+        },
+        {
+          "vertices": 99666,
+          "triangles": 199326,
+          "mae": 4.225552146442907,
+          "p99": 46.3125,
+          "elapsed": 8.322618417441845
+        },
+        {
+          "vertices": 124666,
+          "triangles": 249326,
+          "mae": 3.264119676834959,
+          "p99": 35.625,
+          "elapsed": 9.917788042221218
+        },
+        {
+          "vertices": 149666,
+          "triangles": 299326,
+          "mae": 2.6171247097892767,
+          "p99": 28.5,
+          "elapsed": 11.328944625332952
+        },
+        {
+          "vertices": 174666,
+          "triangles": 349326,
+          "mae": 2.148161473966861,
+          "p99": 23.200000000000017,
+          "elapsed": 12.929077750071883
+        },
+        {
+          "vertices": 199666,
+          "triangles": 399326,
+          "mae": 1.7786389019383053,
+          "p99": 19.0,
+          "elapsed": 14.755716917105019
+        },
+        {
+          "vertices": 224666,
+          "triangles": 449326,
+          "mae": 1.4920000326335678,
+          "p99": 15.666666666666657,
+          "elapsed": 16.698403125163168
+        },
+        {
+          "vertices": 249666,
+          "triangles": 499326,
+          "mae": 1.2623872835817687,
+          "p99": 13.0,
+          "elapsed": 18.944131292402744
+        },
+        {
+          "vertices": 274666,
+          "triangles": 549326,
+          "mae": 1.078533862603221,
+          "p99": 11.0,
+          "elapsed": 21.38217050023377
+        },
+        {
+          "vertices": 299666,
+          "triangles": 599326,
+          "mae": 0.9246479061149593,
+          "p99": 9.333333333333343,
+          "elapsed": 24.276137333363295
+        },
+        {
+          "vertices": 324666,
+          "triangles": 649326,
+          "mae": 0.8020463844221648,
+          "p99": 8.0,
+          "elapsed": 27.1697854581289
+        },
+        {
+          "vertices": 349666,
+          "triangles": 699326,
+          "mae": 0.6965555119472286,
+          "p99": 6.75,
+          "elapsed": 31.62152316700667
+        },
+        {
+          "vertices": 374666,
+          "triangles": 749326,
+          "mae": 0.6106308350292262,
+          "p99": 5.875,
+          "elapsed": 35.05097620841116
+        },
+        {
+          "vertices": 399666,
+          "triangles": 799326,
+          "mae": 0.5338232346430484,
+          "p99": 5.0,
+          "elapsed": 38.781055042054504
+        },
+        {
+          "vertices": 400000,
+          "triangles": 799994,
+          "mae": 0.5247438599676163,
+          "p99": 5.0,
+          "elapsed": 43.06994879199192
+        },
+        {
+          "stage": "least-squares vertex colors",
+          "mae": 0.5051492729189911,
+          "p99": 3.8004661798477177
+        }
+      ],
+      "seconds": 48.55219650035724,
+      "limitation": "Adaptive sampled color geometry; not semantic glyphs, true surface normals or unlimited source detail."
+    },
+    "meshPack": {
+      "format": "GMESH001",
+      "width": 1672,
+      "height": 941,
+      "vertices": 400000,
+      "triangles": 799994,
+      "rawBytes": 12399952,
+      "gzipBytes": 4199188,
+      "inputSha256": "2742768529ea7b0d1445cef07162e571e428aa79cffa6bc76e56170fcea945ed",
+      "payloadSha256": "b3fbf761fb4d39ba15c344d30fbf2263cc1ffdea9008329263ace5fd37ce2c55",
+      "note": "Spatially reordered half-pixel coordinates, RGB8 vertex colors and uint32 indices; sorted triangles require culling disabled."
+    }
+  }
+}

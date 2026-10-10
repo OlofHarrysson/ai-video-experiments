@@ -1,0 +1,261 @@
+{
+  "selected": "Preserved original artwork with code-driven exposure through feathered vector controls",
+  "selectedMovie": "output-motion-v004/clean-lettering.mp4",
+  "comparison": "output-quality-v004/review-comparison.png",
+  "nativeAndDelivery": {
+    "billions": {
+      "Previous SVG": {
+        "mae": 11.01085898133412,
+        "max": 247.0,
+        "sha256": "46f4d629b8debff51641b4bc71a98bd05fed7f1b0f30f10c9005bddc42dfab90"
+      },
+      "Packed mesh": {
+        "mae": 0.7232895118193513,
+        "max": 118.0,
+        "sha256": "2e50b958c3025972ba70abc4c6860322722e0e41f571f51067eebba4fbf0ada4"
+      },
+      "Selected hybrid": {
+        "mae": 0.0,
+        "max": 0.0,
+        "sha256": "af1b081496847c877bf865f7ace22f30ddb2aff77987bdf6e935b3a789442625"
+      },
+      "Original": {
+        "mae": 0.0,
+        "max": 0.0,
+        "sha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe"
+      },
+      "delivery": {
+        "frame": 24,
+        "mae": 2.2674907407407408,
+        "p99": 20.0
+      }
+    },
+    "keep": {
+      "Previous SVG": {
+        "mae": 5.539627495944964,
+        "max": 210.0,
+        "sha256": "e8895dbd0e12471334a29dedfe1f980d1de63f56103fdf33d6803ad40c454011"
+      },
+      "Packed mesh": {
+        "mae": 0.4683393586855749,
+        "max": 65.0,
+        "sha256": "8243ee9ff8ddb712ee4bd34d83f7dd80dd782a6642f3b6fedbbae2c8fe208f0a"
+      },
+      "Selected hybrid": {
+        "mae": 0.0,
+        "max": 0.0,
+        "sha256": "dff6bbff02f3f89d5bd728d2ff0fc73f7d50809dca40241f08a62ec4d82a84c8"
+      },
+      "Original": {
+        "mae": 0.0,
+        "max": 0.0,
+        "sha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5"
+      },
+      "delivery": {
+        "frame": 120,
+        "mae": 1.5457928240740741,
+        "p99": 16.0
+      }
+    }
+  },
+  "render": {
+    "passed": true,
+    "deterministic": true,
+    "errors": [],
+    "network": [],
+    "width": 1600,
+    "height": 900,
+    "supersample": 2,
+    "frames": 192,
+    "fps": 24,
+    "duration": 8,
+    "silent": true,
+    "fullDecode": true,
+    "uniqueFrames": 192,
+    "benchmark": {
+      "billions": {
+        "medianMs": 0.09999990463256836,
+        "maxMs": 0.10000038146972656
+      },
+      "keep": {
+        "medianMs": 0,
+        "maxMs": 0.20000028610229492
+      }
+    },
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1600,
+          "height": 900,
+          "coded_width": 1600,
+          "coded_height": 900,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "time_base": "1/12288",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 98304,
+          "duration": "8.000000",
+          "bit_rate": "3878751",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "192",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.101 libx264"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/Users/olof/git/ai-video-experiments/apps/canvas-animation/projects/title-sequence-study/studies/fidelity-v014/output-motion-v004/clean-lettering.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "8.000000",
+        "size": "3880495",
+        "bit_rate": "3880495",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.12.101"
+        }
+      }
+    },
+    "sourceHashes": {
+      "surface-runtime.js": "0ef94bc2e3720b23c1647c7db0c839d312d2efaef8f02e2fb58f8dfeb3bd01c0",
+      "build.mjs": "89bcc2d4d15b8696436aa17bcbefbfa43a3a08aa342a8a00af6eff5074d9de70",
+      "../../../../tools/artwork/mask-texture.js": "57278ee427fab748166a8977728a812e3214792403e3e8e55e1e0b6970b15ecf"
+    }
+  },
+  "playback": {
+    "plays": true,
+    "scene": true,
+    "seeks": true,
+    "mobile": true,
+    "errors": [],
+    "playback": {
+      "ended": true,
+      "duration": 8,
+      "width": 1600,
+      "height": 900
+    },
+    "passed": true
+  },
+  "finalBuild": {
+    "index.html": {
+      "checks": {
+        "billions": true,
+        "keep": true,
+        "selectedFrame": true
+      },
+      "neutralDeltas": {},
+      "comparisonNote": "Exact PNG identity required.",
+      "errors": [],
+      "sha256": "63fec8f0edbb61f39b8ead4a34ecb292382f38d720bfc6ce2777ee36fdd36e18",
+      "passed": true
+    },
+    "mesh.html": {
+      "checks": {
+        "billions": true,
+        "keep": true
+      },
+      "neutralDeltas": {
+        "billions": {
+          "max": 1,
+          "mae": 0.01750784312728493
+        },
+        "keep": {
+          "max": 1,
+          "mae": 0.02353298350697534
+        }
+      },
+      "comparisonNote": "Neutral shader now bypasses a gamma round trip; permit at most one RGB code value versus the frozen earlier mesh.",
+      "errors": [],
+      "sha256": "1b09dab391e04447946b30749abc40516e410092dc354e55bf2cdcac4a9ba187",
+      "passed": true
+    }
+  },
+  "isolatedBuild": {
+    "index.html": {
+      "identical": true,
+      "sha256": "63fec8f0edbb61f39b8ead4a34ecb292382f38d720bfc6ce2777ee36fdd36e18"
+    },
+    "mesh.html": {
+      "identical": true,
+      "sha256": "1b09dab391e04447946b30749abc40516e410092dc354e55bf2cdcac4a9ba187"
+    }
+  },
+  "maskInspection": {
+    "billions": {
+      "time": 2,
+      "crop": [
+        1261,
+        523,
+        1581,
+        823
+      ],
+      "localMeanChange": 1.5662333333333323,
+      "purpose": "Largest 100px local effect of feathering; crop is magnified 2x nearest, not an artistic score."
+    },
+    "keep": {
+      "time": 1.5,
+      "crop": [
+        1208,
+        0,
+        1528,
+        300
+      ],
+      "localMeanChange": 1.8153666666666661,
+      "purpose": "Largest 100px local effect of feathering; crop is magnified 2x nearest, not an artistic score."
+    }
+  },
+  "limits": [
+    "Exact neutral fidelity is pixel preservation, not semantic vector reconstruction.",
+    "Native-image similarity does not establish arbitrary-scale fidelity.",
+    "Encoded video is lossy; thin colored lines still lose detail.",
+    "Human motion and quality judgment remains open."
+  ]
+}
