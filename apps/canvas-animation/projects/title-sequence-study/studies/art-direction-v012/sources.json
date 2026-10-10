@@ -1,0 +1,23 @@
+[
+  {
+    "id": "billions",
+    "source": "reference/billions.png",
+    "original": "/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-0c48157f-03d6-4761-bb33-ef3b8d446413.png",
+    "sha256": "4a30de80a6400266dad69d205b18af0928c0fb56cf4839138abad7f16b8d23fe",
+    "kind": "generated design target, not code"
+  },
+  {
+    "id": "next",
+    "source": "reference/next.png",
+    "original": "/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-e961b4d6-c959-447b-be3f-28f479ae4098.png",
+    "sha256": "7951070f2c7b0dd94bf419b7dd6a2b3167a4d68cee20c0706d171b02eb24eb54",
+    "kind": "generated design target, not code"
+  },
+  {
+    "id": "keep-up",
+    "source": "reference/keep-up.png",
+    "original": "/Users/olof/.codex/generated_images/01a11531-7ce5-7fd1-bc3d-a4921247fd3d/exec-484f59a6-08d5-4859-8f3c-b52a777e86be.png",
+    "sha256": "4b90bc9f9232c6a904902703838bb6a04719796fae9921d3e4b4d5271d6055b5",
+    "kind": "generated design target, not code"
+  }
+]

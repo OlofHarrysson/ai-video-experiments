@@ -1,0 +1,22 @@
+{
+  "source": "apps/canvas-animation/projects/title-sequence-study/studies/art-direction-v012/reference/next.png",
+  "sourceSha256": "7951070f2c7b0dd94bf419b7dd6a2b3167a4d68cee20c0706d171b02eb24eb54",
+  "colors": 6,
+  "palette": "000000,f6f0dc,d7ff00,0735ed,ff1527,00cae7",
+  "params": {
+    "colormode": "color",
+    "hierarchical": "stacked",
+    "mode": "polygon",
+    "filter_speckle": 4,
+    "color_precision": 8,
+    "layer_difference": 1,
+    "corner_threshold": 60,
+    "length_threshold": 4,
+    "splice_threshold": 45,
+    "path_precision": 2
+  },
+  "simplify": 0.55,
+  "pathCount": 241,
+  "svgBytes": 33009,
+  "limitation": "Paint paths preserve color and order; they are not semantic glyphs or a lighting model."
+}

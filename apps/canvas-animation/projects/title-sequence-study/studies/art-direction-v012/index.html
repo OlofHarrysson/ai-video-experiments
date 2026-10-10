@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI intro — graphic directions</title>
+<style>*{box-sizing:border-box}body{background:#171719;color:#eee;font:16px system-ui;margin:24px}main{max-width:1500px;margin:auto}h1{font-size:23px}p{color:#c5c2c7;line-height:1.5;max-width:85ch}nav{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}button{font:inherit;color:inherit;background:#29292d;border:1px solid #666;padding:10px 14px;border-radius:4px}button[aria-pressed=true]{border-color:#eee;background:#444}img,iframe{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;border:0;background:black}[hidden]{display:none}a{color:#cdbbff}#status{min-height:3em}</style>
+<main><h1>AI intro — graphic directions</h1><p>Three finished design targets, plus a vector transfer of NEXT. These are visual candidates; the story and motion remain open.</p>
+<nav aria-label="Graphic direction"><button data-id="billions">BILLIONS</button><button data-id="next">NEXT</button><button data-id="keep-up">KEEP UP</button><button data-id="vector">NEXT · drawn from vectors</button></nav>
+<img id="target" alt="Generated graphic target"><iframe id="vector" src="next.html" title="NEXT drawn from 241 vector paths" hidden></iframe><p id="status" role="status"></p>
+<details><summary>Comparison and method</summary><p><a href="output-next-proof-v002/comparison.png">NEXT target versus vector rendering</a> · <a href="README.md">Results and limits</a> · <a href="prompts.json">Built-in image-generation prompts</a></p><p>BILLIONS and KEEP UP are generated targets. NEXT's vector transfer uses six flat inks and retains the composition and linework. It is not yet split into complete movable word layers. BILLIONS's attempted full-color trace is preserved but rejected: it muddies the engraving.</p></details></main>
+<script>
+const descriptions={billions:'Generated target — engraved financial lettering, integrated guilloche ornament and red/blue accents. Its first vector transfer was rejected.',next:'Generated target — repeated announcements through overlapping scale, diagonal cuts and fine rails.','keep-up':'Generated target — elaborate enamel calligraphy, gold edges and intertwined swashes.',vector:'Code rendering — 241 colored vector paths; six deliberate inks. No image is displayed inside this renderer. Motion and complete word separation are not built.'};
+const target=document.querySelector('#target'),vector=document.querySelector('#vector'),status=document.querySelector('#status');
+function select(id){target.hidden=id==='vector';vector.hidden=id!=='vector';if(id!=='vector'){target.src='reference/'+id+'.png';target.alt=id.toUpperCase()+' — generated target';}status.textContent=descriptions[id];document.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.id===id)));}
+target.onerror=()=>status.textContent='The preserved local reference image could not be loaded.';
+document.querySelectorAll('button').forEach(b=>b.onclick=()=>select(b.dataset.id));select('keep-up');
+</script></html>

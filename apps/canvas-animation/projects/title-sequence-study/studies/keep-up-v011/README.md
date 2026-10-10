@@ -20,11 +20,11 @@ Selected inspection: `output-inspection-v003/report.json`. KEEP UP source/vector
 
 Selected board: `output-board-v002/storyboard.png`; six individual 1600×900 frames and the desktop/mobile preview screenshots are beside it. `output-board-v002/report.json` records deterministic frame redraws, working previous/next controls, no network/runtime errors, no source raster in the renderer and no overflow at 390px. A failed initial build used a deprecated OpenType loader; it was replaced by parsing the existing local font bytes before successful screening. No server was started.
 
-Assistant inspected the full board, title and funding frames at full size, source/vector comparisons and group views. The three bespoke lettering cards are the visual anchors; simpler copy provides context and a human turn. The hard blue shadow and graphic contours are intentionally flat. No claim is made of physically accurate material rendering, reference-film parity or approved rhythm. Human feedback on v011 is pending.
+Assistant inspected the full board, title and funding frames at full size, source/vector comparisons and group views. The three bespoke lettering cards are the visual anchors; simpler copy provides context and a human turn. The hard blue shadow and graphic contours are intentionally flat. No claim is made of physically accurate material rendering, reference-film parity or approved rhythm. Olof rejects this storyboard because its graphics are too simple. Technical extraction success did not establish an adequate visual result. [Richer direction v012](../art-direction-v012/README.md) supersedes this board as the active visual experiment.
 
 ## Continue
 
-Review the six frames and [timed sequence](BRIEF.md). After story/board approval, build local construction events for the grouped artwork and render the silent eighteen-second edit. Keep date/company/announcement context legible for the money card; use the human-question beat as a brief compositional change, not a slow opening or a strobe finale. Preserve this board when iterating.
+This visual direction is rejected; do not animate it as an approved board. Review [v012](../art-direction-v012/README.md) before returning to the [proposed story](BRIEF.md). Keep date/company/announcement context legible for the money card; use the human-question beat as a brief compositional change, not a slow opening or a strobe finale. Preserve this board when iterating.
 
 Rebuild the current static board:
 
