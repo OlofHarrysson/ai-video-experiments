@@ -43,7 +43,7 @@ Assistant inspected the full hero, untextured geometry, generated-reference comp
 
 All 240 frames decode. Render checks pass exact frame-0/frame-240 equality, repeat seeking, texture changes, zero-strength restoration, changed motion output and zero image/network requests. Browser checks pass live playback advancement, controls, PNG download, a valid nine-path image-free SVG, and mobile overflow. Review-page video metadata/playback and editor navigation pass. Source snapshots and reports accompany the selected output.
 
-[Claude's read-only critique](claude-review.md) helped identify the repetitive first cadence and muddy transparency treatment. It reviewed the earlier draft; the final selection and inspection are the assistant's judgment. Normal-speed human motion/taste feedback remains pending. Silent delivery is intentional; this does not demonstrate music synchronization.
+[Claude's read-only critique](claude-review.md) helped identify the repetitive first cadence and muddy transparency treatment. It reviewed the earlier draft; the final selection and inspection are the assistant's judgment. Olof subsequently called this much better than the first reconstruction and approved another contrasting style. He did not give separate feedback on each motion phase. Silent delivery is intentional; this does not demonstrate music synchronization.
 
 ## Reproduce
 

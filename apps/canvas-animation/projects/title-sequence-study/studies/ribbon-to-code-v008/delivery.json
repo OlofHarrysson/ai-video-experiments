@@ -1,0 +1,16 @@
+{
+  "selected": "output-delivery",
+  "screening": "output-screen-delivery",
+  "sha256": {
+    "reference/ribbon-reference-01.png": "d00a5fdd5922affe76e4d0259c969616cc03a1a541b1e52fa7a7e4a59e3f5772",
+    "output-delivery/hero.png": "27508c585d6d74693366d7e561e816e0c9f80628d7d7063b736b44ca9ef4aef6",
+    "output-delivery/wild-hours-ribbons.mp4": "5b561d913de30a678e894506490dd32d32fdcd16af4c4a46d4e27f7ace7f4021"
+  },
+  "frames": 240,
+  "fps": 30,
+  "seconds": 8,
+  "width": 1536,
+  "height": 1024,
+  "audio": false,
+  "humanReview": "pending"
+}
