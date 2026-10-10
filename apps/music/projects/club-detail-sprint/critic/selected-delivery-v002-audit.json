@@ -1,0 +1,58 @@
+{
+  "selection": [
+    "Pressure Lock v011",
+    "Negative Space v012"
+  ],
+  "scope": "Independent final delivery hashes, decoded sample arrays, and actual ghost event traces. No subjective listening judgment.",
+  "files": [
+    {
+      "file": "pressure-lock.wav",
+      "source_hash_matches": true,
+      "output_hash_matches": true,
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "source_shape_preserved": true,
+      "gain_db": -2.7299999999999986,
+      "max_gain_reconstruction_error": 2.9801336953738655e-08,
+      "full_scale_contacts": 0,
+      "encoding": "FLOAT"
+    },
+    {
+      "file": "negative-space.wav",
+      "source_hash_matches": true,
+      "output_hash_matches": true,
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "source_shape_preserved": true,
+      "gain_db": 0.0,
+      "max_gain_reconstruction_error": 0.0,
+      "full_scale_contacts": 0,
+      "encoding": "FLOAT"
+    }
+  ],
+  "pressure_samples_identical_to_selected_v001": true,
+  "negative_v011_to_v012_trace": {
+    "old_event_count": 12,
+    "new_event_count": 12,
+    "onsets_durations_non_gain_controls_equal": true,
+    "per_event_gain_change_db": [
+      0.0,
+      3.0,
+      7.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      7.0,
+      0.0,
+      3.0,
+      0.0,
+      7.0
+    ],
+    "trace_original_source_matches_master": true,
+    "trace_evaluated_hash_matches": true
+  },
+  "previous_audits_preserved": true
+}

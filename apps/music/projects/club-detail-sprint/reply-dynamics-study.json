@@ -1,0 +1,125 @@
+{
+  "status": "verified",
+  "scope": "Solo ghost layer; onset windows include previous effect tails and wet-render variation. Signal level is not perceived audibility or preference.",
+  "window_seconds": 0.1171875,
+  "input_audio_sha256": [
+    "62c66c7b81c860e4098653ea3112003252713f6edd57b059ac1edcf18b8a74f7",
+    "bba71b42032bbca726e2ba68bbe643664c9405292aac15be2beff0c880d22775"
+  ],
+  "input_event_trace_sha256": [
+    "f6a9321da395246e144665b9cb62d1b8b0dc91fec9a23d032a9bfed050f451e4",
+    "9d13c1f8f32a3f3ce5883cb5dd225bffd4fa90d5a48b70797d1ad97198e16176"
+  ],
+  "event_count": 12,
+  "onsets_and_all_non_gain_controls_unchanged": true,
+  "events": [
+    {
+      "onset_seconds": 19.21875,
+      "slice_begin": 0,
+      "gain_before": 0.31,
+      "gain_after": 0.31,
+      "rms_before_dbfs": -25.105296967907393,
+      "rms_after_dbfs": -25.085052036811952,
+      "rms_change_db": 0.020244931095440677
+    },
+    {
+      "onset_seconds": 19.8046875,
+      "slice_begin": 0.375,
+      "gain_before": 0.31,
+      "gain_after": 0.43788664,
+      "rms_before_dbfs": -36.928084211694234,
+      "rms_after_dbfs": -33.88247099565555,
+      "rms_change_db": 3.0456132160386815
+    },
+    {
+      "onset_seconds": 20.390625,
+      "slice_begin": 0.625,
+      "gain_before": 0.31,
+      "gain_after": 0.69400355,
+      "rms_before_dbfs": -46.55014880109999,
+      "rms_after_dbfs": -39.41911575769658,
+      "rms_change_db": 7.131033043403413
+    },
+    {
+      "onset_seconds": 20.625,
+      "slice_begin": 0.125,
+      "gain_before": 0.27,
+      "gain_after": 0.27,
+      "rms_before_dbfs": -31.447861625018557,
+      "rms_after_dbfs": -30.998590626841537,
+      "rms_change_db": 0.44927099817702043
+    },
+    {
+      "onset_seconds": 21.4453125,
+      "slice_begin": 0,
+      "gain_before": 0.27,
+      "gain_after": 0.27,
+      "rms_before_dbfs": -26.102971241025045,
+      "rms_after_dbfs": -26.091258515738865,
+      "rms_change_db": 0.011712725286180614
+    },
+    {
+      "onset_seconds": 22.265625,
+      "slice_begin": 0.375,
+      "gain_before": 0.27,
+      "gain_after": 0.38138514,
+      "rms_before_dbfs": -37.63666586553237,
+      "rms_after_dbfs": -34.6852185021091,
+      "rms_change_db": 2.95144736342327
+    },
+    {
+      "onset_seconds": 22.8515625,
+      "slice_begin": 0,
+      "gain_before": 0.33,
+      "gain_after": 0.33,
+      "rms_before_dbfs": -24.46893916098247,
+      "rms_after_dbfs": -24.46174837990004,
+      "rms_change_db": 0.007190781082428543
+    },
+    {
+      "onset_seconds": 23.7890625,
+      "slice_begin": 0.625,
+      "gain_before": 0.33,
+      "gain_after": 0.73877798,
+      "rms_before_dbfs": -45.8658601698336,
+      "rms_after_dbfs": -39.01968406265883,
+      "rms_change_db": 6.84617610717477
+    },
+    {
+      "onset_seconds": 24.375,
+      "slice_begin": 0.125,
+      "gain_before": 0.25,
+      "gain_after": 0.25,
+      "rms_before_dbfs": -31.95334968927366,
+      "rms_after_dbfs": -31.505231982259364,
+      "rms_change_db": 0.44811770701429765
+    },
+    {
+      "onset_seconds": 25.078125,
+      "slice_begin": 0.375,
+      "gain_before": 0.25,
+      "gain_after": 0.35313439,
+      "rms_before_dbfs": -37.80554442321283,
+      "rms_after_dbfs": -34.77756223345112,
+      "rms_change_db": 3.0279821897617083
+    },
+    {
+      "onset_seconds": 25.8984375,
+      "slice_begin": 0,
+      "gain_before": 0.25,
+      "gain_after": 0.25,
+      "rms_before_dbfs": -27.078298275438854,
+      "rms_after_dbfs": -27.056181276982354,
+      "rms_change_db": 0.02211699845650017
+    },
+    {
+      "onset_seconds": 26.1328125,
+      "slice_begin": 0.625,
+      "gain_before": 0.25,
+      "gain_after": 0.55968028,
+      "rms_before_dbfs": -40.42884600697679,
+      "rms_after_dbfs": -38.40687656961353,
+      "rms_change_db": 2.0219694373632606
+    }
+  ]
+}

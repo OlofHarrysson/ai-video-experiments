@@ -97,6 +97,52 @@
           "residual_rms_dbfs": -52.59337560491716
         }
       ]
+    },
+    {
+      "name": "negative-space-v012",
+      "bundle": "exports/bundles/negative-space-v012",
+      "bundle_manifest_sha256": "7b205fad0bb1912dfd19efb95c81e427327834d86a2bbe861a1394f8084bc7b0",
+      "verified_files": 33,
+      "sample_assets": 17,
+      "all_runtime_paths_inside_bundle": true,
+      "source_and_bank_indices_hashes_unchanged": true,
+      "rebuilt_stems": [
+        {
+          "stem": "master",
+          "sha256": "2d6d84dcc92f4a2fc8a958cf5d8b3968ff8af5fc9366590c79bf50d5b605927d",
+          "integrated_lufs": -17.14,
+          "true_peak_dbtp": -3.06,
+          "residual_rms_dbfs": -50.24390109288359
+        },
+        {
+          "stem": "drums",
+          "sha256": "799ba46227fb13faee0a6b90cced33f6654ad5b1de90d9fc1f240218f18a2a5b",
+          "integrated_lufs": -18.04,
+          "true_peak_dbtp": -5.74,
+          "residual_rms_dbfs": -68.1985838912339
+        },
+        {
+          "stem": "bass",
+          "sha256": "d77f1b18a7f199d5bec574d7f3cd8cab7b4a68af533ec8d6c33b89415cb3ed6f",
+          "integrated_lufs": -23.46,
+          "true_peak_dbtp": -8.49,
+          "residual_rms_dbfs": -129.63953080288823
+        },
+        {
+          "stem": "dub",
+          "sha256": "b677b8fe59cc44bfbeff61da6f17e707ee9ed06d7dc7f5390d0d2b377b59ee64",
+          "integrated_lufs": -30.38,
+          "true_peak_dbtp": -11.5,
+          "residual_rms_dbfs": -58.64121666159108
+        },
+        {
+          "stem": "edits",
+          "sha256": "bf4012aad4444a9811f28413f62d6ed2303b4af9dd87e2ab0904daeb32ae6163",
+          "integrated_lufs": -31.78,
+          "true_peak_dbtp": -10.34,
+          "residual_rms_dbfs": -52.77991929458807
+        }
+      ]
     }
   ]
 }

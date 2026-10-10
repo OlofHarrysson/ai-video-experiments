@@ -557,5 +557,52 @@
   },
   "earlier_stable_alternative": "v007",
   "reproduction_audit": "reproduction-audit.json",
-  "return_event_audit": "return-events.json"
+  "return_event_audit": "return-events.json",
+  "v012": {
+    "master": {
+      "seconds": 30.0,
+      "integrated_lufs": -17.15,
+      "sample_peak_dbfs": -3.063874283532431,
+      "true_peak_dbtp": -3.06,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9962408038932293,
+      "sha256": "f7ec8a1c88c3e0d6d7ec8dd581ebd75182dfbd30bcd8536dc1a7d57e3998275d"
+    },
+    "drums": {
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "sample_peak_dbfs": -5.87497741150242,
+      "true_peak_dbtp": -5.73,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9986792237607763,
+      "sha256": "c67ad5b9c5d0a105b86191d9b01fd4713d6b6dbf324b459b1e0dff7b01fc5fec"
+    },
+    "bass": {
+      "seconds": 30.0,
+      "integrated_lufs": -23.46,
+      "sample_peak_dbfs": -8.489032744130395,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9999999999999998,
+      "sha256": "b2d9a69d8cf2cdd5964235b9d6cf64af40c929be8b92a945198072d8ac83edbc"
+    },
+    "dub": {
+      "seconds": 30.0,
+      "integrated_lufs": -30.41,
+      "sample_peak_dbfs": -11.498669000543014,
+      "true_peak_dbtp": -11.5,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9241241877719137,
+      "sha256": "2cd076ea6c2ae409baa9c2287aa74a32d5984f7f09a63306ab331cf374e91ecd"
+    },
+    "edits": {
+      "seconds": 30.0,
+      "integrated_lufs": -31.8,
+      "sample_peak_dbfs": -10.241511618799361,
+      "true_peak_dbtp": -10.24,
+      "pcm_rail_samples": 0,
+      "lr_correlation": 0.9531403431922056,
+      "sha256": "c13559cc2ad9e2875e0f190b54144b2ca58bf770d098d21d197f888426f5a06b"
+    }
+  }
 }

@@ -21,6 +21,12 @@ uv run --locked python music.py render ASSEMBLED_SOURCE --end END_CYCLE \
 
 `events.json` records onsets returned during the exporter's actual queries. It does not add independent queries, and its dry-audio parity is tested. Inspect the primitive controls and cycle positions to understand the pattern. Then inspect the rendered audio: note gates, sample envelopes, effects and perceptual masking differ from event positions.
 
+## Check whether written detail survives rendering
+
+A scheduled event can contain very little signal. In Negative Space v011, the quiet tail slices measured roughly 20 dB below the main chopped attacks during short onset windows. Counting twelve replies did not establish twelve equally prominent gestures. A solo export made that difference inspectable without the kick and bass covering the waveform.
+
+V012 lifts the two quieter slice types by 3 and 7 dB while preserving the main attacks, all onset times and every other control. The replies remain subordinate; the whole return dub stem rises only about 0.25 dB. Short windows include previous effect tails and do not establish perceptual audibility. This check supports a restrained articulation edit, not automatic normalization of every note. [The repeatable study](../projects/club-detail-sprint/audit_reply_dynamics.py) retains both traces and renders.
+
 ## Keep experiments comparable
 
 Preserve each candidate before editing. Reuse unchanged module paths where convenient; assemble snapshots before rendering. Keep raw masters and aligned stems, check PCM rails before attenuating, and match comparable excerpts for listening. Rendering a section afresh can change its preceding effect state; extract a preview from the completed master instead.

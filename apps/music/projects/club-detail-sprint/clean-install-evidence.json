@@ -1,0 +1,51 @@
+{
+  "status": "verified",
+  "method": "Copied workbench source and final bundle to a fresh folder, created a new Python virtual environment with uv sync --locked, ran npm ci including verified scheduling patch, rendered master and four stems. No .env copied.",
+  "scope": "Fresh local dependency installations; existing system Chrome, Node, FFmpeg and dependency caches. Not a second-machine or cross-platform test.",
+  "revision": "v012",
+  "source_sha256": "4d16db26fafb6f0efc87d1951b857a8304fa76e5d17414bddfd5b8788418f250",
+  "sample_count": 17,
+  "all_sample_paths_inside_copied_bundle": true,
+  "sample_indices_and_hashes_match": true,
+  "frames": 1440000,
+  "sample_rate": 48000,
+  "renders": {
+    "master": {
+      "sha256": "860d373bcb3f0f62c9231068feafcf1c71724e92cc48cbc9a5c5a3ef9dcf5ebc",
+      "seconds": 30.0,
+      "integrated_lufs": -17.14,
+      "true_peak_dbtp": -3.05,
+      "pcm_rail_samples": 0
+    },
+    "drums": {
+      "sha256": "2fe13de2e7e0f7f9ca6291fc75e5ddb8a45c9803ad292536762812502b677c10",
+      "seconds": 30.0,
+      "integrated_lufs": -18.04,
+      "true_peak_dbtp": -5.73,
+      "pcm_rail_samples": 0
+    },
+    "bass": {
+      "sha256": "965f9214dd046bff86a8771cbe05c4cd88d48f6d24f2f92d52b51fe682e724f6",
+      "seconds": 30.0,
+      "integrated_lufs": -23.46,
+      "true_peak_dbtp": -8.49,
+      "pcm_rail_samples": 0
+    },
+    "dub": {
+      "sha256": "0af088a6f1307808867a97262aa22f16fd9012bc5e24118aa0dda88b6bdf53c1",
+      "seconds": 30.0,
+      "integrated_lufs": -30.36,
+      "true_peak_dbtp": -11.49,
+      "pcm_rail_samples": 0
+    },
+    "edits": {
+      "sha256": "4e4610a4c452549137b4b25e57d7e4f76f2264bc40cf6e2e0fd06419e5a1677f",
+      "seconds": 30.0,
+      "integrated_lufs": -31.68,
+      "true_peak_dbtp": -10.23,
+      "pcm_rail_samples": 0
+    }
+  },
+  "npm_audit_vulnerabilities_reported": 0,
+  "wet_rerenders_byte_identical": false
+}

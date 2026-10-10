@@ -4,7 +4,7 @@ Scope: preserved sources, arrangement intent, render receipts, local waveform me
 
 ## Selection advice
 
-Pressure v011 is the strongest source-level choice for the first slot. Its five-step rhythmic object changes material while retaining its timing, then carries that change into the returning groove. The fixed resonator bank avoids the earlier pitch-descent experiment's risk of turning the object into a prominent melody. Recommend Negative Space v011 for the second slot: its returned bass and object are now written as a coordinated four-bar answer, giving the resampled material a clearer rhythmic purpose. Latch v005 remains the meaningful continuous-groove challenger. This is a selection based on the brief, source relationships and verified technical behavior, not a claim that either track has passed human taste judgment.
+Pressure v011 is the strongest source-level choice for the first slot. Its five-step rhythmic object changes material while retaining its timing, then carries that change into the returning groove. The fixed resonator bank avoids the earlier pitch-descent experiment's risk of turning the object into a prominent melody. Recommend Negative Space v012 (the final gain refinement of v011) for the second slot: its returned bass and object are now written as a coordinated four-bar answer, giving the resampled material a clearer rhythmic purpose. Latch v005 remains the meaningful continuous-groove challenger. This is a selection based on the brief, source relationships and verified technical behavior, not a claim that either track has passed human taste judgment.
 
 | Candidate | Specific identity and development | Remaining structural risk |
 | --- | --- | --- |
@@ -44,3 +44,11 @@ The new palettes come from retained deterministic synthesis scripts and, in Nega
 Of 52 selected asset/source/generator provenance checks, 51 match their recorded hashes. Pressure's base `make_palette.py` has a different byte hash from its historical receipt. An isolated regeneration using the current script reproduced all 16 original assets exactly. Thus the source still reproduces the audio; the old generator-byte receipt is stale. The original receipt and the independent verification are both preserved in `pressure-generator-reproduction.json` rather than silently changing historical evidence. Other checked chains pass; see `provenance-audit.json`.
 
 The critic's eight paid review receipts reconcile exactly to **$0.169062**, with zero unknown outcomes. This is only the critic-owned subset; composer and parent requests, including their timeouts, must be counted separately. No new paid calls were made for this audit. The failed focused short-review experiment is documented in `short-review-calibration.md`.
+
+## Final delivery refinement — Negative Space v012
+
+The selected pair is Pressure Lock v011 and Negative Space v012 in `../exports/selected-v002/`. V012 changes only the gains of two quieter slice types in the returned object: three attacks gain 3 dB, three gain 7 dB, and six remain unchanged. Independent comparison of the actual exporter traces confirms all 12 onsets, durations and non-gain controls remain identical to v011. This preserves the four-bar relationship described above; the gain changes alone do not establish improved audibility or artistic quality.
+
+Both listening copies contain exactly 1,440,000 stereo frames at 48 kHz (30 seconds). Source and output hashes match the delivery manifest. Pressure's decoded samples match the earlier selected-v001 copy exactly and reconstruct from its master with only the recorded −2.73 dB gain, within floating-point precision. Negative Space's copy equals its v012 master sample-for-sample at 0 dB gain. Neither delivery has full-scale contacts. The v012 master inspection reports −17.15 LUFS, −3.06 dBTP and zero PCM rail samples.
+
+The independent delivery evidence is preserved in `selected-delivery-v002-audit.json`; `selected-delivery-audit.json` and all earlier candidate audits remain unchanged. No consequential delivery issue was found, and no paid calls were made for this final check. Human judgment of the music remains open.

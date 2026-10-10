@@ -14,22 +14,23 @@ import workflow
 
 SPRINT = Path(__file__).resolve().parent
 PAIRS = [
-    ("pressure-lock", "pressure-study", "bundle-pressure"),
-    ("negative-space", "negative-space", "bundle-negative"),
+    ("pressure-lock", "pressure-study", "bundle-pressure", "v011"),
+    ("negative-space", "negative-space", "bundle-negative", "v011"),
+    ("negative-space-v012", "negative-space", "bundle-negative-v012", "v012"),
 ]
 
 
 def main():
     results = []
-    for name, project, rendered in PAIRS:
+    for name, project, rendered, revision in PAIRS:
         folder = SPRINT / "exports/bundles" / name
         manifest = json.loads((folder / "bundle.json").read_text())
         assert manifest["status"] == "complete"
         for item in manifest["files"]:
             assert music.digest(folder / item["file"]) == item["sha256"]
-        _, _, source, samples = workflow.load_project(folder / "project.json", "v011")
+        _, _, source, samples = workflow.load_project(folder / "project.json", revision)
         assert all(path.is_relative_to(folder) for path in [source, *samples])
-        original = ROOT / "projects" / project / "renders/v011"
+        original = ROOT / "projects" / project / "renders" / revision
         before = json.loads((original / "project-render.json").read_text())
         rebuilt = SPRINT / "screening" / rendered
         after = json.loads((rebuilt / "project-render.json").read_text())

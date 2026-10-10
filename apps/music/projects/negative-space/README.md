@@ -6,7 +6,7 @@ This is direction B in the two-hour composition sprint requested on 2026-10-10. 
 
 ## Inspect the work
 
-- Selected version for Olof’s listening: `renders/v011/master/render.wav`.
+- Selected version for Olof’s listening: `renders/v012/master/render.wav`.
 - Earlier stable alternative: `renders/v007/master/render.wav`.
 - Expressive alternatives: `renders/v008/master/render.wav` and the tighter hybrid `renders/v009/master/render.wav`.
 - Earlier, simpler alternative: `renders/v004/master/render.wav`.
@@ -28,7 +28,7 @@ V007 measures exactly 30 seconds at 48 kHz stereo, −17.08 LUFS and −2.86 dBT
 | 18.75–26.25 s | Held bass notes and changed kick placement return. V011 uses four distinct bass/object exchanges; the object answers the bass gaps and the spring layer withdraws. V007 retains its earlier rolling-bass callback. |
 | 26.25–30 s | A deep impact and whole object release into the ending. V008/v009 use the softer blooming articulation. |
 
-`modules/v011/` separates setup, drums, bass, dub and edits. `assembly-v011.json` owns the module and stem assignments. The assembly output in `assemblies/v011/` is the recommended candidate’s reproducible project recipe and source. V008/v009 have equivalent preserved module and assembly folders. Root `project.json` and `source/v001.strudel` preserve the original first draft; they do not represent the latest version.
+`assembly-v012.json` owns the selected module and stem assignments. It reuses the v011 setup, drums, bass and edits, and changes only the dub module in `modules/v012/`. The assembly output in `assemblies/v012/` is the selected candidate’s reproducible project recipe and source. V008/v009 have equivalent preserved module and assembly folders. Root `project.json` and `source/v001.strudel` preserve the original first draft; they do not represent the latest version.
 
 ## Original palette and provenance
 
@@ -48,9 +48,9 @@ All special sounds are deterministic synthesis or transformations of our own pri
 From `apps/music`, with the recorded local sample assets present:
 
 ```sh
-uv run --locked python music.py assemble projects/negative-space/assembly-v011.json --out projects/negative-space/assemblies/v011-rebuild
-uv run --locked python music.py render-project projects/negative-space/assemblies/v011-rebuild/project.json --revision v011 --out projects/negative-space/renders/v011-rebuild --timeout 180
-uv run --locked python music.py analyze-project projects/negative-space/renders/v011-rebuild --out projects/negative-space/reviews/analysis-v011-rebuild --window-cycles 1
+uv run --locked python music.py assemble projects/negative-space/assembly-v012.json --out projects/negative-space/assemblies/v012-rebuild
+uv run --locked python music.py render-project projects/negative-space/assemblies/v012-rebuild/project.json --revision v012 --out projects/negative-space/renders/v012-rebuild --timeout 180
+uv run --locked python music.py analyze-project projects/negative-space/renders/v012-rebuild --out projects/negative-space/reviews/analysis-v012-rebuild --window-cycles 1
 ```
 
 The sample generators refuse to overwrite original assets. If rebuilding the current custom palette from scratch in a separate copy, run `make_palette.py`, then `make_cloud.py`; render `source/body-probe.strudel` for cycles 0–2 with `references/assets/samples`, run `capture_body.py`, then `perform_object.py`. Older `nsghost` and `nsbloom` assets are needed only for historical versions. The recorded sibling drum folder must also be present.
@@ -70,6 +70,12 @@ The sample generators refuse to overwrite original assets. If rebuilding the cur
 | v009 | Hybrid keeps the blooming first-half/ending gestures while restoring v007’s vacuum and return. Model again preferred v007, but incorrectly generalized envelope differences across passages whose source is unchanged. Its literal timeline is not reliable. |
 | v010 | Four-bar return places longer bass notes and chopped object answers into complementary gaps and removes the competing spring layer. Pinned-engine event inspection caught a global-cycle phase mismatch: three attacks still coincided. Preserved as the intermediate experiment. |
 | v011 | Correct phase alignment at cycle 10. Three/two/four/two bass attacks receive three/three/two/four object answers across four different bars. Zero bass/object onset coincidences in this deliberately separated exchange; this is not a universal composition rule. Opening, vacuum and ending retain v007. No new model review. |
+
+## Final reply dynamics
+
+V012 retains v011's whole arrangement and all twelve chopped-reply timings, but lifts slice type 2 by 3 dB and the quietest tail slice type 3 by 7 dB. The main slice attacks retain their original gains. Solo renders show the tail replies remain roughly 9–14 dB below principal attacks; the whole return dub stem rises only about 0.25 dB. This preserves accent hierarchy while giving the tail fragments a stronger signal. Master loudness/true peak remain −17.15 LUFS / −3.06 dBTP, with zero rails and aligned 30-second stems.
+
+The actual-export traces have identical timings, durations, bounds and all non-gain controls. Short onset measurements include preceding effect tails; they are not isolated-sample loudness or perceptual scores. [Repeatable dynamics audit](../club-detail-sprint/audit_reply_dynamics.py) and [evidence](../club-detail-sprint/reply-dynamics-study.json) preserve the comparison. The v012 portable bundle was rebuilt successfully with identical source/sample hashes and sample indices, and clean aligned master/stems. V011 remains the prior selection. No additional paid review was used for this refinement.
 
 ## Reproduction and return audit
 

@@ -6,10 +6,10 @@
       "file": "pressure-lock.wav",
       "gain_db": -2.7299999999999986,
       "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/pressure-study/renders/v011/master/render.wav",
-      "output_sha256": "d6b65a94d48036dd95856960bf50f0ba638dbc551ec1619b1c13a16680808fac",
+      "output_sha256": "cc94d265202ce981eb5d8d3ae54f8f51d1af1cbe0c4d4076cdb8480b5bcc72b1",
       "metrics": {
-        "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/club-detail-sprint/exports/selected-v001/pressure-lock.wav",
-        "sha256": "d6b65a94d48036dd95856960bf50f0ba638dbc551ec1619b1c13a16680808fac",
+        "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/club-detail-sprint/exports/selected-v002/pressure-lock.wav",
+        "sha256": "cc94d265202ce981eb5d8d3ae54f8f51d1af1cbe0c4d4076cdb8480b5bcc72b1",
         "seconds": 30.0,
         "sample_rate": 48000,
         "channels": 2,
@@ -37,19 +37,19 @@
       "gain_reconstruction_max_abs": 2.9801336953738655e-08
     },
     {
-      "source_sha256": "cbae715db7f9103fd87091cd6fe5b104cd137b7419cec5ae409181eb40ca5cb5",
+      "source_sha256": "f7ec8a1c88c3e0d6d7ec8dd581ebd75182dfbd30bcd8536dc1a7d57e3998275d",
       "file": "negative-space.wav",
       "gain_db": 0.0,
-      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/renders/v011/master/render.wav",
-      "output_sha256": "edc35f9ab1f1a65d26d524881e99f21ff06ef71b3192babdf330d3301cc0bcc1",
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/negative-space/renders/v012/master/render.wav",
+      "output_sha256": "c9e4cf11c10ec5dd0f2c34e63bf2521a378c64faa48066de0692114988c38229",
       "metrics": {
-        "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/club-detail-sprint/exports/selected-v001/negative-space.wav",
-        "sha256": "edc35f9ab1f1a65d26d524881e99f21ff06ef71b3192babdf330d3301cc0bcc1",
+        "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/club-detail-sprint/exports/selected-v002/negative-space.wav",
+        "sha256": "c9e4cf11c10ec5dd0f2c34e63bf2521a378c64faa48066de0692114988c38229",
         "seconds": 30.0,
         "sample_rate": 48000,
         "channels": 2,
-        "sample_peak_dbfs": -3.068024344900065,
-        "rms_dbfs": -18.159661135073378,
+        "sample_peak_dbfs": -3.063874283532431,
+        "rms_dbfs": -18.15836718802697,
         "samples_at_or_above_full_scale": 0,
         "sample_format": "FLOAT",
         "pcm_rail_samples": null,
@@ -61,14 +61,14 @@
         "integrated_lufs": -17.15,
         "true_peak_dbtp": -3.06,
         "loudness_range_lu": 4.0,
-        "lr_correlation": 0.9961619293918698,
-        "mono_rms_dbfs": -18.168096720429716
+        "lr_correlation": 0.9962408038932293,
+        "mono_rms_dbfs": -18.166625692489816
       },
       "gain_reconstruction_max_abs": 0.0
     }
   ],
   "method": "constant attenuation, no compression",
   "status": "verified",
-  "selection": "final assistant selection: Pressure Lock v011 and Negative Space v011; human taste verdict pending",
+  "selection": "final assistant selection: Pressure Lock v011 and Negative Space v012; human taste verdict pending",
   "audience": "Olof; human taste verdict pending"
 }
