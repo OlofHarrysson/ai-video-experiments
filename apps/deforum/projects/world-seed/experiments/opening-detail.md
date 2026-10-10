@@ -22,7 +22,21 @@ Configurations: [full prompt](configs/d01-full-prompt.json), [full prompt with s
 
 Assistant judgment: keeping the complete prompt is the clearer improvement. At the final original painting (1.875s), both full-prompt cases retain layered roots, moss, fungi and distant growth; the baseline has become flatter foliage and larger simple decorative shapes. The first repaint still alters fine texture in both alternatives. The full prompt does not solve all detail loss.
 
-The six-step case develops denser vegetation, more leaf veins and an ornamented doorway rim, but also stronger patches of paint/highlight on the petals. It changes the look rather than consistently making every material crisper. The three-step full-prompt case is the provisional recommendation for its cleaner petal treatment, with six steps as the meaningful alternative for denser ornament. Neither establishes the requested meticulous detail in every frame. This is one opening/seed family; it does not establish a universal step count. Human playback preference is pending.
+The six-step case develops denser vegetation, more leaf veins and an ornamented doorway rim, but also stronger patches of paint/highlight on the petals. It changes the look rather than consistently making every material crisper. Before human review, the assistant provisionally recommended the three-step full-prompt case for its cleaner petal treatment, with six steps as an alternative for denser ornament. Neither establishes the requested meticulous detail in every frame. This is one opening/seed family; it does not establish a universal step count.
+
+## Human review and prompting audit — 2026-10-10
+
+Olof finds the three results very similar and tentatively prefers the original. Retain the original as the working choice; the assistant's preference for the fuller prompt did not predict his playback preference. He clarifies that the question is about style and quality language, including possible prefixes or suffixes, rather than simply adding more scene content. He requests the exact prompts and model-specific prompting research.
+
+The executed opening and first-repaint graphs both load `krea2_turbo_fp8_scaled.safetensors`, the Qwen3VL encoder and Qwen Image VAE. Their text matches [the opening configuration](configs/o1-jungle.json) and [the original travelling schedule](configs/p01-the-root-bridge.json). There is no automatic prompt expansion in these graphs. Both new comparisons retain the exact long opening prompt; d02 changes sampling only. The original opening asks for “Lavish maximalist surreal oil painting” and “convincing luminous paint”; the first travelling prompt asks for “Lavish surreal oil painting” and “finely detailed roots and moss.” Retaining more scene description did not isolate the effect of changing medium or surface-rendering language.
+
+Official sources rechecked on 2026-10-10:
+
+- [Krea's Turbo prompting guide](https://github.com/krea-ai/krea-2/blob/main/docs/prompting.md) recommends natural-language descriptions, favors detailed prompts while demonstrating concise ones, and explicitly identifies its examples as Turbo outputs. Examples specify medium, lighting, texture and composition; it does not establish a special quality-prefix syntax.
+- [The linked official expansion instructions](https://github.com/krea-ai/krea-2/blob/main/docs/expansion.txt) preserve subjects and spatial relationships, avoid unsupported additions, retain the requested medium, and lightly polish already-detailed prompts. This supports refining the intended appearance without inventing more objects.
+- [Krea's broader hosted-product guide](https://www.krea.ai/blog/explorative-prompting-krea-2) recommends broad exploration followed by style, medium, lighting and composition constraints. Its exploration workflow is not a validated recipe for our recurrent partial-noise repaints.
+
+The project had already consulted the official Turbo guide in [earlier prompting research](../../../../../docs/research/prompting-for-feedback.md). The present comparison tested retention of the complete description and sampling subdivision; it did not test a crisp digital-art treatment. The oil-painting wording may contribute to the surface aesthetic, but this is a hypothesis, not an isolated cause of blur. A possible next comparison would retain the original scene and sampling while varying only rendering language. No new generation or prompt configuration was changed during this audit.
 
 ## Screening and validation
 

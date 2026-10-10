@@ -478,3 +478,10 @@ Olof finds the texture and lost sharpness in v013’s first and third identities
 ### 2026-10-10 — fidelity alone is not animation
 
 Olof says v014 still looks good, but its glimmer gives little visible change. He approves a three-second BILLIONS prototype with separated moving letters and ornaments and explicitly asks to push motion while preserving quality. [v015](../apps/canvas-animation/projects/title-sequence-study/studies/billions-motion-v015/README.md) tests that direction. His positive fidelity feedback does not approve the restrained motion; the new spatial choreography still needs his judgment.
+
+
+### 2026-10-10 — World Seed: more prompt content is not a demonstrated detail improvement
+
+After the [two-second opening comparison](../apps/deforum/projects/world-seed/experiments/opening-detail.md), Olof finds the original, full-prompt three-step and full-prompt six-step results very similar and tentatively prefers the original. The assistant's preference for the fuller prompt did not predict his playback judgment. Keep the original as the working choice; this result does not establish a universal preference for short prompts or three-step sampling.
+
+He clarifies that style and quality language, such as prefixes or suffixes describing the intended rendering, may matter more than adding scene objects. He requests transparency about the actual prompt and research from the specific model's creator. His example of detailed digital artwork is exploratory, not a selected new medium or approval of a specific replacement prompt. The [prompting audit](../apps/deforum/projects/world-seed/experiments/opening-detail.md#human-review-and-prompting-audit--2026-10-10) checks the actual Krea 2 Turbo graphs and official guidance; no new generation is made.
