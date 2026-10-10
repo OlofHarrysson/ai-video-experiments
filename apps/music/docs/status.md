@@ -4,11 +4,11 @@ Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical
 
 ## Current goal
 
-Develop [Undertow](../projects/undertow/README.md) while retaining its approved sound. Olof said v002’s feel and sound were much better, but too repetitive. V003 responds with bass-pattern changes, fills, filtering, dropouts and returns. Its arrangement awaits his verdict. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
+Complete the [two-hour club-detail sprint](../projects/club-detail-sprint/README.md), 12:10:53–14:10:53 UTC on 2026-10-10, and present two selected 30-second excerpts. Olof judged Undertow v003 a clear improvement, then requested substantially greater quality, originality and detail through modular collaboration. Pressure Lock, Negative Space and Latch are being refined and screened; final selection remains pending. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
 
 ## Completed and checked
 
-- **[Undertow v003](../projects/undertow/README.md): arrangement of the approved core.** 1:33 at 134 BPM; five related bass patterns, fills, changing filter/texture levels, a short drum break, a stripped groove and a final return. Master and three stems complete. Listening copy `projects/undertow/renders/v003/undertow.wav` measures -14.23 LUFS / -1.26 dBTP with no clipping. One transition review cost $0.021238; its inaccurate dropout descriptions were checked against stems. Nineteen Python tests and Ruff passed, renderer unchanged. [Evidence](../projects/undertow/evidence.json); human arrangement verdict pending.
+- **[Undertow v003](../projects/undertow/README.md): arrangement of the approved core.** 1:33 at 134 BPM; five related bass patterns, fills, changing filter/texture levels, a short drum break, a stripped groove and a final return. Master and three stems complete. Listening copy `projects/undertow/renders/v003/undertow.wav` measures -14.23 LUFS / -1.26 dBTP with no clipping. One transition review cost $0.021238; its inaccurate dropout descriptions were checked against stems. Nineteen Python tests and Ruff passed, renderer unchanged. [Evidence](../projects/undertow/evidence.json); Olof subsequently called it a clear improvement and requested a higher quality bar.
 
 - **[Undertow](../projects/undertow/README.md), v002: short club-direction audition.** 134 BPM, 16 bars plus tails (32.24 seconds), rolling F bass, 909 drums, sparse dark texture and no lead tune/chord progression. Master and three stems complete; playback `projects/undertow/renders/v002/undertow.wav` measures -13.71 LUFS / -1.29 dBTP without clipping. V002 raises the bass and lowers the kick relative to the reviewed v001 core. Olof approved the sound/feel and requested more variation. One v001 review cost $0.017644. Nineteen Python tests and Ruff passed; no renderer change. V003 develops this approved core.
 
@@ -47,7 +47,7 @@ Latest arrangement: [Undertow](../projects/undertow/README.md). [Soft Focus](../
 
 ## Next work
 
-1. Get Olof's verdict on Undertow v003’s variation and transitions. Preserve the approved sound unless his feedback calls for a timbre change; refine the arrangement from actual listening.
+1. Finish the active two-hour sprint and present its two selected 30-second studies for Olof’s listening verdict. Preserve the approved heavy sound and let his feedback determine further development.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 

@@ -65,6 +65,21 @@ def load_project(path, revision):
     return config, selected, source, samples
 
 
+def render_warnings(stem, metrics):
+    warnings = []
+    rails = metrics.get("pcm_rail_samples")
+    if rails:
+        warnings.append(
+            f"{stem}: {rails} samples touch integer PCM rails; inspect source levels before attenuating the export"
+        )
+    peak = metrics.get("true_peak_dbtp")
+    if peak is not None and peak > 0:
+        warnings.append(
+            f"{stem}: true peak {peak:.2f} dBTP exceeds 0; inspect headroom"
+        )
+    return warnings
+
+
 def render_project(path, revision, out, timeout=120):
     config, selected, source, samples = load_project(path, revision)
     out = audio.fresh_dir(out).resolve()
@@ -80,6 +95,7 @@ def render_project(path, revision, out, timeout=120):
         "end_cycle": config["end_cycle"],
         "sections": config["sections"],
         "renders": {},
+        "warnings": [],
     }
     audio.save_json(out / "project-render.json", receipt)
     try:
@@ -138,6 +154,10 @@ def render_project(path, revision, out, timeout=120):
             metrics = audio.inspect_audio(
                 out / stem / "render.wav", out / stem / "inspection"
             )
+            warnings = render_warnings(stem, metrics)
+            receipt["warnings"].extend(warnings)
+            for warning in warnings:
+                print(f"Warning: {warning}", file=sys.stderr, flush=True)
             receipt["renders"][stem] = {
                 "file": f"{stem}/render.wav",
                 "sha256": rendered["output"]["sha256"],
@@ -147,10 +167,17 @@ def render_project(path, revision, out, timeout=120):
         receipt["status"] = "complete"
         (out / "README.md").write_text(
             f"# {receipt['title']} — {revision}\n\n{receipt['notes']}\n\n"
-            "| Render | Seconds | LUFS | Peak dBFS |\n| --- | ---: | ---: | ---: |\n"
+            "| Render | Seconds | LUFS | True peak dBTP | PCM rail samples |\n| --- | ---: | ---: | ---: | ---: |\n"
             + "".join(
-                f"| [{stem}]({item['file']}) | {item['metrics']['seconds']:.2f} | {item['metrics']['integrated_lufs']} | {item['metrics']['sample_peak_dbfs']} |\n"
+                f"| [{stem}]({item['file']}) | {item['metrics']['seconds']:.2f} | {item['metrics']['integrated_lufs']} | {item['metrics'].get('true_peak_dbtp')} | {item['metrics'].get('pcm_rail_samples')} |\n"
                 for stem, item in receipt["renders"].items()
+            )
+            + (
+                "\n"
+                + "\n".join(f"- {warning}" for warning in receipt["warnings"])
+                + "\n"
+                if receipt["warnings"]
+                else ""
             )
             + "\nStems are separate renders of named layers. Shared effects can differ; preserve the master.\n"
         )
@@ -164,6 +191,16 @@ def render_project(path, revision, out, timeout=120):
         "output": str(out),
         "revision": revision,
         "renders": list(receipt["renders"]),
+        "master_metrics": {
+            key: receipt["renders"]["master"]["metrics"].get(key)
+            for key in [
+                "seconds",
+                "integrated_lufs",
+                "true_peak_dbtp",
+                "pcm_rail_samples",
+            ]
+        },
+        "warnings": receipt["warnings"],
     }
 
 

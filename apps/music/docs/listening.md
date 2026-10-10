@@ -36,6 +36,8 @@ uv run --locked python music.py review work/calibration/CLIP.wav --out work/cali
 
 The [30-second club sprint](../projects/club-detail-sprint/README.md) exposed another limit: a sample-identical duplicate control passed, yet a later real revision comparison confidently claimed the second piece was the first played backwards. Direct sample checks disproved that story. A passing identical control is narrow evidence; independently verify concrete explanations before acting on a preference. Conversely, source changes or increased low-band RMS do not disprove a perception that the mix feels static or lacks weight.
 
+The later [short-window controls](../projects/club-detail-sprint/critic/short-review-calibration.md) did not fix this: a two-second exact duplicate received confident claims of different low-frequency weight. An isolated changed pair was described in the opposite direction to its measured low-band contrast. Do not use this route to adjudicate subtle mix changes. A shorter prompt/window is not itself a validated improvement; inspect the exact submitted excerpts, including the effects of cropping and matching.
+
 ## Sources
 
 - [OpenRouter audio inputs](https://openrouter.ai/docs/guides/overview/multimodal/audio): base64 `input_audio` on chat completions. Verified 2026-10-10.
