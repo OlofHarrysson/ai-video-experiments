@@ -26,7 +26,7 @@ export function createMarqueeImage({ image }) {
   const ring = [...spots].sort((a, b) => a.a - b.a);
   const soft = sprite('#ffffff', 'rgba(255,255,255,.6)', 64);
 
-  return function draw(ctx, t, T0) {
+  const draw = function (ctx, t, T0) {
     const u = t - T0;
     if (u < 0) return;
     // Power arrives from the base: the unlit sign is uncovered by a fast radial wipe.
@@ -56,4 +56,6 @@ export function createMarqueeImage({ image }) {
     if ([1, 2].some(k => { const f = frameIndex(t, T0 + k * BEAT); return f >= 0 && f <= 1; }))
       drawMasked(ctx, lit, g => g.drawImage(glow, 0, 0), { op: 'lighter', alpha: .45 });
   };
+  draw.layers = { picture: lit, unlit, neon, glow, spots };
+  return draw;
 }

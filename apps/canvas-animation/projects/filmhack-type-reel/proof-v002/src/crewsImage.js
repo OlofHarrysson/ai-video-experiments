@@ -37,7 +37,7 @@ export function createCrewsImage({ image, anton }) {
 
   const glint = canvas(), gg = glint.getContext('2d');
 
-  return function draw(ctx, t, T0, { accent = [] } = {}) {
+  const draw = function (ctx, t, T0, { accent = [] } = {}) {
     const u = t - T0;
     if (u < 0) return;
     for (const a of accent) {
@@ -89,4 +89,6 @@ export function createCrewsImage({ image, anton }) {
       g.fillStyle = gr; g.fillRect(x - 140, -1800, 280, 3600); g.restore(); g.globalCompositeOperation = 'destination-in'; g.drawImage(fg, 0, 0);
     }, { op: 'lighter', alpha: .55 });
   };
+  draw.layers = { picture: lit, letters: fg, boxes: letters };
+  return draw;
 }

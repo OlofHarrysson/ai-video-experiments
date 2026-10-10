@@ -39,7 +39,7 @@ export function createYes({ image, anton }) {
     ctx.restore();
   }
 
-  return function draw(ctx, t, T0, { accent = [] } = {}) {
+  const draw = function (ctx, t, T0, { accent = [] } = {}) {
     const local = t - T0, f = frameIndex(t, T0);
     if (local < 0) return;
     if (f <= 1) return drawFlat(ctx, 'red');
@@ -64,4 +64,6 @@ export function createYes({ image, anton }) {
     }
     ctx.restore();
   };
+  draw.layers = { picture: chrome, metal: mask, flat };
+  return draw;
 }

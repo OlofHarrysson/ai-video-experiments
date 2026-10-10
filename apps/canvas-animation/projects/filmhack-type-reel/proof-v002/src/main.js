@@ -74,6 +74,7 @@ export function renderFrame(t) {
 window.renderFrame = renderFrame;
 window.DURATION = DURATION;
 window.TIMES = T;
+window.LAYERS = { yes: yes.layers, marquee: marquee.layers, crews: crews.layers };
 window.ready = true;
 
 if (new URLSearchParams(location.search).has('play')) {

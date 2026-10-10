@@ -59,7 +59,9 @@ Olof judged the hybrid YES closest to its target and the code reconstructions we
 
 `output-01/` is the reviewed render. A `quality: max` Sunburst test returned the same 864×1536 size at $0.13 ([prompt](targets/prompts-quality-test.json)), so targets stay at `high`; total reported image spend is about $1.96.
 
-Next: Olof's review → apply the hybrid approach to the remaining cards → compose the Strudel track → cut the full Reel to it.
+**Review (Olof, 2026-10-10):** the artistic style is better, but it does not yet read as a beautiful picture; the scratch sound is poor; the message is unclear; the type-led concept may have been the wrong choice for this promo. The project now prioritizes **learning** over a finished Reel: first how the hybrid visuals work, then audio.
+
+**How the hybrid works** (`proof-v002/breakdown.mjs` → `breakdown-01/breakdown-{yes,marquee,crews}.png`): each card starts from one generated picture that code never redraws. Code derives masks from the picture's own pixels (brightness, colour, gaps), optional extra states (the unlit marquee is the same pixels darkened), and decides per frame what is visible, how bright and where: reveal through a growing mask, add light through a mask, swap hard to a flat code identity, or transform (slam, settle). Finding from the breakdown: the CREWS gap detector finds 9 chunks, not 15 letters, because the generated letters touch. The motion can only be as fine as the picture can be split.
 
 ## Files
 
