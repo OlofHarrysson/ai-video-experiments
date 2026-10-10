@@ -1,0 +1,642 @@
+{
+  "retrieved_at": "2026-10-10T11:02:51.007795+00:00",
+  "channel_id": "UClP415zhIvcwjjuFj1o3V3g",
+  "channel_title": "DJ_Dave",
+  "scope": "All accessible items from this channel uploads playlist, sorted by current video viewCount; not a streaming-platform ranking.",
+  "uploads_playlist_count": 79,
+  "returned_video_count": 79,
+  "videos": [
+    {
+      "id": "E1K6Sv-oIb0",
+      "title": "DJ_Dave Hybrid Set for 808 on Twitch Week",
+      "published_at": "2025-08-14T00:48:37Z",
+      "duration": "PT57M44S",
+      "view_count": 215282,
+      "url": "https://www.youtube.com/watch?v=E1K6Sv-oIb0"
+    },
+    {
+      "id": "Mbeku_nj0Nk",
+      "title": "Cycles - DJ_Dave + Switch Angel (Live)",
+      "published_at": "2025-05-30T04:00:23Z",
+      "duration": "PT3M41S",
+      "view_count": 209642,
+      "url": "https://www.youtube.com/watch?v=Mbeku_nj0Nk"
+    },
+    {
+      "id": "ZCcpWzhekEY",
+      "title": "coding dance music in #strudel !!!!!",
+      "published_at": "2025-05-26T19:57:32Z",
+      "duration": "PT1M36S",
+      "view_count": 176270,
+      "url": "https://www.youtube.com/watch?v=ZCcpWzhekEY"
+    },
+    {
+      "id": "5OYiOGxHxTQ",
+      "title": "Making dance music with code !!! #livecoding #algorave",
+      "published_at": "2025-08-19T19:52:50Z",
+      "duration": "PT1M",
+      "view_count": 161484,
+      "url": "https://www.youtube.com/watch?v=5OYiOGxHxTQ"
+    },
+    {
+      "id": "YvsoWehBbec",
+      "title": "DJ_Dave - Easy Live Coded for Oatly",
+      "published_at": "2021-06-09T19:15:12Z",
+      "duration": "PT13M7S",
+      "view_count": 118014,
+      "url": "https://www.youtube.com/watch?v=YvsoWehBbec"
+    },
+    {
+      "id": "IqhKVEsSkls",
+      "title": "DJ_Dave - Castles (Live Coded Visualizer)",
+      "published_at": "2022-04-13T04:00:08Z",
+      "duration": "PT3M3S",
+      "view_count": 113583,
+      "url": "https://www.youtube.com/watch?v=IqhKVEsSkls"
+    },
+    {
+      "id": "kF6FUG9Lz_I",
+      "title": "A little WIP from my live on 11_19 #algorave #livecoding #electronicmusic",
+      "published_at": "2025-11-21T18:05:41Z",
+      "duration": "PT58S",
+      "view_count": 83941,
+      "url": "https://www.youtube.com/watch?v=kF6FUG9Lz_I"
+    },
+    {
+      "id": "ure6OT0LwtM",
+      "title": "DJ_Dave - Airglow (Visualizer)",
+      "published_at": "2025-09-12T04:49:42Z",
+      "duration": "PT4M51S",
+      "view_count": 79960,
+      "url": "https://www.youtube.com/watch?v=ure6OT0LwtM"
+    },
+    {
+      "id": "w2s1DK1w3WI",
+      "title": "Array - DJ_Dave (Official Music Video)",
+      "published_at": "2023-06-27T14:00:41Z",
+      "duration": "PT3M7S",
+      "view_count": 79801,
+      "url": "https://www.youtube.com/watch?v=w2s1DK1w3WI"
+    },
+    {
+      "id": "JiQHclg_648",
+      "title": "DJ_Dave - Easy (Live Coded Video)",
+      "published_at": "2021-11-03T18:00:15Z",
+      "duration": "PT3M57S",
+      "view_count": 60310,
+      "url": "https://www.youtube.com/watch?v=JiQHclg_648"
+    },
+    {
+      "id": "xAAbQMW0dFk",
+      "title": "my process in #strudel !! -*-*-*-*- #livecoding #algorave",
+      "published_at": "2025-05-27T16:46:13Z",
+      "duration": "PT1M7S",
+      "view_count": 49706,
+      "url": "https://www.youtube.com/watch?v=xAAbQMW0dFk"
+    },
+    {
+      "id": "W24pteoigXk",
+      "title": "My process making my track Hard Refresh \u273c \u273c \u273c #algorave #livecoding #electronicmusic",
+      "published_at": "2025-08-20T19:16:43Z",
+      "duration": "PT1M25S",
+      "view_count": 38814,
+      "url": "https://www.youtube.com/watch?v=W24pteoigXk"
+    },
+    {
+      "id": "jlRoEVujTEk",
+      "title": "DJ_Dave - Next to U [Official Music Video]",
+      "published_at": "2026-07-23T04:00:06Z",
+      "duration": "PT2M57S",
+      "view_count": 37771,
+      "url": "https://www.youtube.com/watch?v=jlRoEVujTEk"
+    },
+    {
+      "id": "UTZXYezbUsA",
+      "title": "DJ_Dave - World's Hardest Game (Music Video)",
+      "published_at": "2024-03-21T04:00:21Z",
+      "duration": "PT3M33S",
+      "view_count": 35444,
+      "url": "https://www.youtube.com/watch?v=UTZXYezbUsA"
+    },
+    {
+      "id": "jLmD0oJkqOk",
+      "title": "DJ_Dave Live Set",
+      "published_at": "2021-05-18T17:00:32Z",
+      "duration": "PT14M55S",
+      "view_count": 33414,
+      "url": "https://www.youtube.com/watch?v=jLmD0oJkqOk"
+    },
+    {
+      "id": "XChXZY6drG8",
+      "title": "React - DJ_Dave (Live)",
+      "published_at": "2023-08-07T16:39:44Z",
+      "duration": "PT3M10S",
+      "view_count": 33147,
+      "url": "https://www.youtube.com/watch?v=XChXZY6drG8"
+    },
+    {
+      "id": "DWQmSSu3eTY",
+      "title": "Full podcast of my paper on pop live coding with Lil Data out June 6!",
+      "published_at": "2024-06-03T22:36:44Z",
+      "duration": "PT18S",
+      "view_count": 31624,
+      "url": "https://www.youtube.com/watch?v=DWQmSSu3eTY"
+    },
+    {
+      "id": "MnmGjI8MmOE",
+      "title": "DJ_Dave - Live at Elsewhere",
+      "published_at": "2025-10-20T18:52:48Z",
+      "duration": "PT47M41S",
+      "view_count": 30948,
+      "url": "https://www.youtube.com/watch?v=MnmGjI8MmOE"
+    },
+    {
+      "id": "9W7Kqi88KhA",
+      "title": "DJ_Dave - Await (Visualizer)",
+      "published_at": "2026-09-04T04:00:04Z",
+      "duration": "PT3M4S",
+      "view_count": 27308,
+      "url": "https://www.youtube.com/watch?v=9W7Kqi88KhA"
+    },
+    {
+      "id": "mrLyMsnpUdU",
+      "title": "DJ_Dave & Sipper - Naive (Official Full Stream)",
+      "published_at": "2024-08-29T04:00:29Z",
+      "duration": "PT2M58S",
+      "view_count": 24025,
+      "url": "https://www.youtube.com/watch?v=mrLyMsnpUdU"
+    },
+    {
+      "id": "nXzTGiLcRL4",
+      "title": "DJ_Dave - Still Miss U (Live Coded Video)",
+      "published_at": "2021-12-30T23:27:41Z",
+      "duration": "PT2M31S",
+      "view_count": 22943,
+      "url": "https://www.youtube.com/watch?v=nXzTGiLcRL4"
+    },
+    {
+      "id": "ByngmAb0e7g",
+      "title": "Me & U - DJ_Dave Remix",
+      "published_at": "2021-10-17T15:20:56Z",
+      "duration": "PT3M3S",
+      "view_count": 21140,
+      "url": "https://www.youtube.com/watch?v=ByngmAb0e7g"
+    },
+    {
+      "id": "LEXoTRo870I",
+      "title": "Await - DJ_Dave [live at Homeboy Recycling]",
+      "published_at": "2026-09-04T14:00:33Z",
+      "duration": "PT3M20S",
+      "view_count": 19617,
+      "url": "https://www.youtube.com/watch?v=LEXoTRo870I"
+    },
+    {
+      "id": "03lKVs-ZZMA",
+      "title": "DJ_Dave - Give it 2 me  [official music video]",
+      "published_at": "2026-10-02T04:00:21Z",
+      "duration": "PT3M7S",
+      "view_count": 16451,
+      "url": "https://www.youtube.com/watch?v=03lKVs-ZZMA"
+    },
+    {
+      "id": "NbSLQbikFyo",
+      "title": "DJ_Dave x Andy Rolfes Live at Zerospace",
+      "published_at": "2022-12-14T02:26:29Z",
+      "duration": "PT31M43S",
+      "view_count": 15958,
+      "url": "https://www.youtube.com/watch?v=NbSLQbikFyo"
+    },
+    {
+      "id": "sbMM1B4oELs",
+      "title": "Bloom - DJ_Dave (Visualizer)",
+      "published_at": "2023-09-08T04:54:10Z",
+      "duration": "PT3M18S",
+      "view_count": 15321,
+      "url": "https://www.youtube.com/watch?v=sbMM1B4oELs"
+    },
+    {
+      "id": "pKs7NehiszY",
+      "title": "Next to U \u2014 out 07_23",
+      "published_at": "2026-07-22T22:08:50Z",
+      "duration": "PT1M",
+      "view_count": 14570,
+      "url": "https://www.youtube.com/watch?v=pKs7NehiszY"
+    },
+    {
+      "id": "1O7-sSwH-0U",
+      "title": "Did a  hybrid live set for  \u2068@Twitch \u2069last week \u273c \u273c  full 1 hour set on my YouTube channel",
+      "published_at": "2025-08-19T19:46:23Z",
+      "duration": "PT1M",
+      "view_count": 14021,
+      "url": "https://www.youtube.com/watch?v=1O7-sSwH-0U"
+    },
+    {
+      "id": "v5V6dsMhB8E",
+      "title": "DJ_Dave - Fail-safe (Visualizer)",
+      "published_at": "2026-05-08T17:15:33Z",
+      "duration": "PT3M28S",
+      "view_count": 13896,
+      "url": "https://www.youtube.com/watch?v=v5V6dsMhB8E"
+    },
+    {
+      "id": "xRJ2dzziWn0",
+      "title": "Dealer's Gone - DJ_Dave Remix",
+      "published_at": "2021-02-04T22:05:20Z",
+      "duration": "PT2M53S",
+      "view_count": 13603,
+      "url": "https://www.youtube.com/watch?v=xRJ2dzziWn0"
+    },
+    {
+      "id": "KGzqyGaYyqs",
+      "title": "Break - DJ_Dave (Live)",
+      "published_at": "2022-12-15T05:13:29Z",
+      "duration": "PT3M32S",
+      "view_count": 13567,
+      "url": "https://www.youtube.com/watch?v=KGzqyGaYyqs"
+    },
+    {
+      "id": "_A4vOeUPvnE",
+      "title": "DJ_Dave - one4u | Live at The Echo, Los Angeles (Full Song)",
+      "published_at": "2026-02-27T05:00:45Z",
+      "duration": "PT5M9S",
+      "view_count": 13207,
+      "url": "https://www.youtube.com/watch?v=_A4vOeUPvnE"
+    },
+    {
+      "id": "Lix8uU2KxfM",
+      "title": "putting out this finale track out this week \u2661 #tbt to the #jpegmafia & #dannybrown tour last fall \u2606",
+      "published_at": "2024-03-18T22:50:24Z",
+      "duration": "PT13S",
+      "view_count": 13144,
+      "url": "https://www.youtube.com/watch?v=Lix8uU2KxfM"
+    },
+    {
+      "id": "U4_z8zP2UGk",
+      "title": "DJ_Dave Set at The Sultan Room (Graphics by Chloe Walecki)",
+      "published_at": "2021-07-20T22:40:10Z",
+      "duration": "PT47M10S",
+      "view_count": 11034,
+      "url": "https://www.youtube.com/watch?v=U4_z8zP2UGk"
+    },
+    {
+      "id": "mpQivxLYGoU",
+      "title": "Ninajirachi + LAVA Live at Interface 09_15_23",
+      "published_at": "2023-09-25T16:13:45Z",
+      "duration": "PT1H4M52S",
+      "view_count": 10584,
+      "url": "https://www.youtube.com/watch?v=mpQivxLYGoU"
+    },
+    {
+      "id": "Ca1t4gjpX8A",
+      "title": "DJ_Dave - Hard Refresh | Live at The Echo, Los Angeles (Full Song)",
+      "published_at": "2026-02-24T20:27:13Z",
+      "duration": "PT4M50S",
+      "view_count": 10283,
+      "url": "https://www.youtube.com/watch?v=Ca1t4gjpX8A"
+    },
+    {
+      "id": "-ke5rhBEnbY",
+      "title": "React - DJ_Dave (Visualizer)",
+      "published_at": "2023-08-01T14:00:00Z",
+      "duration": "PT3M11S",
+      "view_count": 10252,
+      "url": "https://www.youtube.com/watch?v=-ke5rhBEnbY"
+    },
+    {
+      "id": "KddDEgDWyeo",
+      "title": "idc [live sketch] - DJ_Dave (Visualizer)",
+      "published_at": "2023-09-08T19:00:11Z",
+      "duration": "PT3M11S",
+      "view_count": 9515,
+      "url": "https://www.youtube.com/watch?v=KddDEgDWyeo"
+    },
+    {
+      "id": "QrMk5HTVwJQ",
+      "title": "DJ_Dave - Array [Lil Data Edit]",
+      "published_at": "2023-11-02T04:00:13Z",
+      "duration": "PT1M34S",
+      "view_count": 9372,
+      "url": "https://www.youtube.com/watch?v=QrMk5HTVwJQ"
+    },
+    {
+      "id": "uI2QMBE6KZs",
+      "title": "LA IS SOLD OUT \u2661 SO WE\u2019RE ADDING A SECOND DATE!!!! Tickets are on sale NOW for 02_12 -\u035f\u035f\u035e\u2606 #algorave",
+      "published_at": "2025-11-25T22:54:53Z",
+      "duration": "PT14S",
+      "view_count": 8644,
+      "url": "https://www.youtube.com/watch?v=uI2QMBE6KZs"
+    },
+    {
+      "id": "gFz--kLa1tE",
+      "title": "DJ_Dave + Char Stiles Live at Interface 09_15_23",
+      "published_at": "2023-09-25T16:13:35Z",
+      "duration": "PT1H3M21S",
+      "view_count": 8395,
+      "url": "https://www.youtube.com/watch?v=gFz--kLa1tE"
+    },
+    {
+      "id": "K1jymSeU7Ww",
+      "title": "I'm performing live in Los Angeles on 02_13_26 \u273c tickets are on sale now #algorave #livecoding",
+      "published_at": "2025-11-14T20:21:24Z",
+      "duration": "PT14S",
+      "view_count": 8153,
+      "url": "https://www.youtube.com/watch?v=K1jymSeU7Ww"
+    },
+    {
+      "id": "Lkc-w5AdJi8",
+      "title": "Live on my roof - 05_18_21",
+      "published_at": "2023-04-19T17:32:19Z",
+      "duration": "PT14M55S",
+      "view_count": 7353,
+      "url": "https://www.youtube.com/watch?v=Lkc-w5AdJi8"
+    },
+    {
+      "id": "e28j595HfbE",
+      "title": "Bitrot - DJ_Dave (Visualizer)",
+      "published_at": "2023-09-08T18:23:35Z",
+      "duration": "PT3M17S",
+      "view_count": 7340,
+      "url": "https://www.youtube.com/watch?v=e28j595HfbE"
+    },
+    {
+      "id": "jYkrZLYawkg",
+      "title": "DJ_Dave - React [R Tyler Edit]",
+      "published_at": "2023-11-02T04:00:20Z",
+      "duration": "PT2M37S",
+      "view_count": 7187,
+      "url": "https://www.youtube.com/watch?v=jYkrZLYawkg"
+    },
+    {
+      "id": "8vGjGJpNX6M",
+      "title": "Intercell EP Live Coded: Part 01 - React",
+      "published_at": "2023-09-20T00:53:07Z",
+      "duration": "PT4M23S",
+      "view_count": 6987,
+      "url": "https://www.youtube.com/watch?v=8vGjGJpNX6M"
+    },
+    {
+      "id": "BCt7Gub108g",
+      "title": "DJ_Dave - Forget (Visualizer)",
+      "published_at": "2026-10-02T16:00:29Z",
+      "duration": "PT4M16S",
+      "view_count": 6400,
+      "url": "https://www.youtube.com/watch?v=BCt7Gub108g"
+    },
+    {
+      "id": "RW4ZCO-OY_s",
+      "title": "DJ_Dave & Sipper - Naive [Dadabots Infinite Remix]",
+      "published_at": "2024-11-11T23:42:07Z",
+      "duration": "PT3M20S",
+      "view_count": 6317,
+      "url": "https://www.youtube.com/watch?v=RW4ZCO-OY_s"
+    },
+    {
+      "id": "VWUksVKkWj0",
+      "title": "Await ~ out now",
+      "published_at": "2026-09-18T17:04:28Z",
+      "duration": "PT1M",
+      "view_count": 5777,
+      "url": "https://www.youtube.com/watch?v=VWUksVKkWj0"
+    },
+    {
+      "id": "-yZJNauEwVw",
+      "title": "If I Wrote You A Song - DJ_Dave Edit - Live w/ Maddy Davis",
+      "published_at": "2023-01-05T15:42:27Z",
+      "duration": "PT4M",
+      "view_count": 5755,
+      "url": "https://www.youtube.com/watch?v=-yZJNauEwVw"
+    },
+    {
+      "id": "dgH-pD62AOw",
+      "title": "DJ_Dave - idc [c_robo_  Edit]",
+      "published_at": "2023-11-02T04:00:21Z",
+      "duration": "PT2M43S",
+      "view_count": 5411,
+      "url": "https://www.youtube.com/watch?v=dgH-pD62AOw"
+    },
+    {
+      "id": "vqgRgzLvFms",
+      "title": "Easy - DJ_Dave [Visualizer]",
+      "published_at": "2021-09-17T23:55:43Z",
+      "duration": "PT3M5S",
+      "view_count": 5342,
+      "url": "https://www.youtube.com/watch?v=vqgRgzLvFms"
+    },
+    {
+      "id": "HyO3NWRpvGw",
+      "title": "DJ_Dave - Fail-Safe (Official Full Stream)",
+      "published_at": "2026-05-08T04:00:21Z",
+      "duration": "PT3M28S",
+      "view_count": 5235,
+      "url": "https://www.youtube.com/watch?v=HyO3NWRpvGw"
+    },
+    {
+      "id": "z_cJMdBp67Q",
+      "title": "DJ_Dave - Bitrot [v10101a Edit]",
+      "published_at": "2023-11-02T04:00:27Z",
+      "duration": "PT3M17S",
+      "view_count": 4737,
+      "url": "https://www.youtube.com/watch?v=z_cJMdBp67Q"
+    },
+    {
+      "id": "kIbPpnqtd-M",
+      "title": "DJ_Dave - Alive Internet Theory (Visualizer)",
+      "published_at": "2026-10-03T04:00:15Z",
+      "duration": "PT4M5S",
+      "view_count": 4446,
+      "url": "https://www.youtube.com/watch?v=kIbPpnqtd-M"
+    },
+    {
+      "id": "x012gyly4ok",
+      "title": "Intercell EP Live Coded: Part 05 - Array",
+      "published_at": "2023-09-20T00:52:23Z",
+      "duration": "PT4M47S",
+      "view_count": 4070,
+      "url": "https://www.youtube.com/watch?v=x012gyly4ok"
+    },
+    {
+      "id": "TCFOho2FAhg",
+      "title": "Call Me One More Time - DJ_Dave Remix",
+      "published_at": "2021-02-04T22:32:42Z",
+      "duration": "PT2M37S",
+      "view_count": 3760,
+      "url": "https://www.youtube.com/watch?v=TCFOho2FAhg"
+    },
+    {
+      "id": "Y0J2Q_TV-wg",
+      "title": "DJ_Dave Live at Avant Gardner (12/3)",
+      "published_at": "2021-12-14T21:09:41Z",
+      "duration": "PT1M7S",
+      "view_count": 3733,
+      "url": "https://www.youtube.com/watch?v=Y0J2Q_TV-wg"
+    },
+    {
+      "id": "Cf59JVfIVGc",
+      "title": "Thank you for coming to Algo_Rave x Posh in LA feat.\u21b3Switch Angel, LOFI SCIFI, c_robo_, Glossing",
+      "published_at": "2026-07-21T20:24:33Z",
+      "duration": "PT30S",
+      "view_count": 3695,
+      "url": "https://www.youtube.com/watch?v=Cf59JVfIVGc"
+    },
+    {
+      "id": "6--6xVkJINc",
+      "title": "Intercell EP Live Coded: Part 03 - Bloom",
+      "published_at": "2023-09-20T00:52:43Z",
+      "duration": "PT3M26S",
+      "view_count": 3594,
+      "url": "https://www.youtube.com/watch?v=6--6xVkJINc"
+    },
+    {
+      "id": "BEXklcyVSYw",
+      "title": "Lil Data + Andy Rolfes Live at Interface 09_15_23",
+      "published_at": "2023-09-25T16:13:47Z",
+      "duration": "PT38M16S",
+      "view_count": 3554,
+      "url": "https://www.youtube.com/watch?v=BEXklcyVSYw"
+    },
+    {
+      "id": "DnphhsOii7c",
+      "title": "Intercell EP Live Coded: Part 04 - Bitrot",
+      "published_at": "2023-09-20T00:52:33Z",
+      "duration": "PT6M51S",
+      "view_count": 3408,
+      "url": "https://www.youtube.com/watch?v=DnphhsOii7c"
+    },
+    {
+      "id": "2F85nuwf4m4",
+      "title": "Intercell EP Live Coded: Part 02 - idc [live sketch]",
+      "published_at": "2023-09-20T00:52:54Z",
+      "duration": "PT3M30S",
+      "view_count": 3278,
+      "url": "https://www.youtube.com/watch?v=2F85nuwf4m4"
+    },
+    {
+      "id": "o79c6Avu-ig",
+      "title": "Can't Do This Alone - DJ_Dave Remix",
+      "published_at": "2021-02-04T23:19:25Z",
+      "duration": "PT3M3S",
+      "view_count": 3103,
+      "url": "https://www.youtube.com/watch?v=o79c6Avu-ig"
+    },
+    {
+      "id": "T7tKoj4Bvig",
+      "title": "DJ_Dave Mix 06_29_21 (Graphics by Indira Ardolic)",
+      "published_at": "2021-06-29T19:32:22Z",
+      "duration": "PT44M42S",
+      "view_count": 2782,
+      "url": "https://www.youtube.com/watch?v=T7tKoj4Bvig"
+    },
+    {
+      "id": "Ql7ucgOdzEQ",
+      "title": "Next to U - song + video out now",
+      "published_at": "2026-07-23T16:21:17Z",
+      "duration": "PT22S",
+      "view_count": 2674,
+      "url": "https://www.youtube.com/watch?v=Ql7ucgOdzEQ"
+    },
+    {
+      "id": "CmFiCUwfme0",
+      "title": "Vibing #algorave #livecoding",
+      "published_at": "2026-10-07T22:01:38Z",
+      "duration": "PT1M",
+      "view_count": 2641,
+      "url": "https://www.youtube.com/watch?v=CmFiCUwfme0"
+    },
+    {
+      "id": "V7qczcBfO9c",
+      "title": "Hardcore Software Tour",
+      "published_at": "2026-07-24T18:12:14Z",
+      "duration": "PT33S",
+      "view_count": 2081,
+      "url": "https://www.youtube.com/watch?v=V7qczcBfO9c"
+    },
+    {
+      "id": "9N98ZC1xqcw",
+      "title": "DJ_Dave & meat computer - Memory Leak (Visualizer)",
+      "published_at": "2026-10-02T16:00:38Z",
+      "duration": "PT2M25S",
+      "view_count": 2053,
+      "url": "https://www.youtube.com/watch?v=9N98ZC1xqcw"
+    },
+    {
+      "id": "Y_2LY7TZmUU",
+      "title": "DJ_Dave - Music is Code you can Hear (Visualizer)",
+      "published_at": "2026-10-02T16:00:03Z",
+      "duration": "PT3M57S",
+      "view_count": 1439,
+      "url": "https://www.youtube.com/watch?v=Y_2LY7TZmUU"
+    },
+    {
+      "id": "AZuFm53bt4g",
+      "title": "girl_irl + Easterner Live at Interface 09_15",
+      "published_at": "2023-09-25T16:13:37Z",
+      "duration": "PT55M50S",
+      "view_count": 1210,
+      "url": "https://www.youtube.com/watch?v=AZuFm53bt4g"
+    },
+    {
+      "id": "f6E7ceGHV4A",
+      "title": "DJ_Dave & Switch Angel - Always Learning (Visualizer)",
+      "published_at": "2026-10-02T16:00:02Z",
+      "duration": "PT2M47S",
+      "view_count": 1149,
+      "url": "https://www.youtube.com/watch?v=f6E7ceGHV4A"
+    },
+    {
+      "id": "eIuEs_cSoBw",
+      "title": "Come see me on tour!!!",
+      "published_at": "2026-09-21T15:00:35Z",
+      "duration": "PT11S",
+      "view_count": 1102,
+      "url": "https://www.youtube.com/watch?v=eIuEs_cSoBw"
+    },
+    {
+      "id": "Mk-b5C65LUQ",
+      "title": "c_robo_ Live at Interface 09_15_23",
+      "published_at": "2023-09-22T21:02:03Z",
+      "duration": "PT55M38S",
+      "view_count": 1006,
+      "url": "https://www.youtube.com/watch?v=Mk-b5C65LUQ"
+    },
+    {
+      "id": "ywwPULO2TRM",
+      "title": "DJ_Dave & Switch Angel - x=x.SwitchAngel(\"interlude\") (Visualizer)",
+      "published_at": "2026-10-02T16:00:07Z",
+      "duration": "PT1M16S",
+      "view_count": 775,
+      "url": "https://www.youtube.com/watch?v=ywwPULO2TRM"
+    },
+    {
+      "id": "uAlcDwKHaGs",
+      "title": "s(\u201cairglow\u201d).slice(16, \u201c14 [14 | 14!8]\u201d).clip(1)",
+      "published_at": "2026-10-07T22:01:35Z",
+      "duration": "PT19S",
+      "view_count": 753,
+      "url": "https://www.youtube.com/watch?v=uAlcDwKHaGs"
+    },
+    {
+      "id": "meH0ZjoaVJE",
+      "title": "DJ_Dave & c_robo_ - x=x.c_robo_(\"interlude\") (Visualizer)",
+      "published_at": "2026-10-02T16:00:30Z",
+      "duration": "PT1M",
+      "view_count": 691,
+      "url": "https://www.youtube.com/watch?v=meH0ZjoaVJE"
+    },
+    {
+      "id": "-8xfAHaDcAY",
+      "title": "DJ_Dave & Lil Data - x=x.LilData(\"interlude\") (Visualizer)",
+      "published_at": "2026-10-02T16:00:20Z",
+      "duration": "PT52S",
+      "view_count": 676,
+      "url": "https://www.youtube.com/watch?v=-8xfAHaDcAY"
+    },
+    {
+      "id": "8qa8gmgE4l0",
+      "title": "GIVE IT 2 ME MALWARE MUSIC VIDEO OUT NOW full experience linked on my site #livecoding",
+      "published_at": "2026-10-07T22:01:42Z",
+      "duration": "PT23S",
+      "view_count": 389,
+      "url": "https://www.youtube.com/watch?v=8qa8gmgE4l0"
+    }
+  ]
+}

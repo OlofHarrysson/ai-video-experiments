@@ -20,6 +20,8 @@ A subsequent [28-second practical beat](../projects/practical-dogfood/README.md)
 
 During [Chrome After Rain](../projects/chrome-after-rain/README.md), a broad comparison incorrectly called a syncopated pattern four-on-the-floor and described effects as absent. Solo measurements instead revealed that the kick overwhelmed the hook. A neutral comparison after rebalancing identified rhythmic space and lead masking more usefully. Use specific listening questions and independent stem evidence; do not optimize toward every confident model statement or treat its praise as proof of quality.
 
+The subsequent [DJ_Dave reference study](../projects/dj-dave-reference-study/README.md) acquired five actual recordings and matched their excerpts with our sketch. An undisclosed, sample-identical A/B control was correctly identified as identical. Two real comparisons consistently distinguished sustained vocal-led material from our instrumental plucks. These are useful narrow observations; exact production chains, subtle differences and aesthetic judgment remain unvalidated.
+
 `work/calibration/` contains four anonymous clips made from our own retained Window Seat render: original, complete silence, a two-second dropout and severe low-pass filtering. `answer-key.json` records the mapping but is not sent to the reviewer. These are conspicuous controls, not a music-understanding benchmark. The original and altered clips have equal duration; their loudness is deliberately not matched because silence/filtering are part of these first test conditions.
 
 1. Check that the key is installed without printing it. Use the four review calls below, substituting each anonymous filename and a unique output directory. Each receives the same neutral prompt from `music.py`.

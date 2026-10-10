@@ -1,0 +1,170 @@
+{
+  "artist": "DJ_Dave",
+  "selection": "Five most-viewed song-length uploads (2\u20136 minutes) in the complete 79-upload channel snapshot; excludes shorts and extended performances. Not an all-platform popularity claim.",
+  "source_audio": "YouTube bestaudio format 251 Opus; decoded to float WAV without resampling or loudness changes. WAV is not a lossless master of the original production.",
+  "excerpt_selection": "Fixed 30\u201358 second windows for this first pass, not asserted to be choruses or track highlights.",
+  "references": [
+    {
+      "id": "Mbeku_nj0Nk",
+      "title": "Cycles - DJ_Dave + Switch Angel (Live)",
+      "published_at": "2025-05-30T04:00:23Z",
+      "duration": "PT3M41S",
+      "view_count": 209642,
+      "url": "https://www.youtube.com/watch?v=Mbeku_nj0Nk",
+      "name": "cycles",
+      "original": "references/assets/originals/Mbeku_nj0Nk.webm",
+      "original_sha256": "68f1da4fb83871bc63df8786675faff7377b568ef22a0b550954b10556eca3d1",
+      "decoded": "references/assets/decoded/cycles.wav",
+      "decoded_sha256": "9a465ccffb25f018190598b6cb9cbc61a5f531ec90c779b3b8ca5e5bd3917044",
+      "codec": "opus",
+      "format_id": "251",
+      "sample_rate": 48000,
+      "channels": 2,
+      "excerpt": {
+        "file": "references/assets/excerpts/cycles.wav",
+        "start_seconds": 30,
+        "seconds": 28,
+        "sha256": "8eed1ad13a66b48969d77ec518b094d258e143c3000af025cee41ae185382416"
+      },
+      "purpose": "Private listening/reference analysis; not licensed for sampling or redistribution."
+    },
+    {
+      "id": "IqhKVEsSkls",
+      "title": "DJ_Dave - Castles (Live Coded Visualizer)",
+      "published_at": "2022-04-13T04:00:08Z",
+      "duration": "PT3M3S",
+      "view_count": 113583,
+      "url": "https://www.youtube.com/watch?v=IqhKVEsSkls",
+      "name": "castles",
+      "original": "references/assets/originals/IqhKVEsSkls.webm",
+      "original_sha256": "a8b7d1c0a6ff82a880f0f8a46a059cb71490f8c154b665dc8c498b199b3f1bda",
+      "decoded": "references/assets/decoded/castles.wav",
+      "decoded_sha256": "f24ddd72ce4308ea4a3b737d7034c8633b28ee2b51b4347906a7b568b39588f7",
+      "codec": "opus",
+      "format_id": "251",
+      "sample_rate": 48000,
+      "channels": 2,
+      "excerpt": {
+        "file": "references/assets/excerpts/castles.wav",
+        "start_seconds": 30,
+        "seconds": 28,
+        "sha256": "c687add8df8a3007d581533053979a300d535d5b8242fee665dd4e4b64ce5ae7"
+      },
+      "purpose": "Private listening/reference analysis; not licensed for sampling or redistribution."
+    },
+    {
+      "id": "ure6OT0LwtM",
+      "title": "DJ_Dave - Airglow (Visualizer)",
+      "published_at": "2025-09-12T04:49:42Z",
+      "duration": "PT4M51S",
+      "view_count": 79960,
+      "url": "https://www.youtube.com/watch?v=ure6OT0LwtM",
+      "name": "airglow",
+      "original": "references/assets/originals/ure6OT0LwtM.webm",
+      "original_sha256": "78a9afe3b1db5462572ba8acdf02622e24c20ec5faacb6b334cb4f49b9ff99d6",
+      "decoded": "references/assets/decoded/airglow.wav",
+      "decoded_sha256": "f0c0c8181ee1d6de6a39d4a3257fe6344674c0cc0d6eacc29c659a5f905fe825",
+      "codec": "opus",
+      "format_id": "251",
+      "sample_rate": 48000,
+      "channels": 2,
+      "excerpt": {
+        "file": "references/assets/excerpts/airglow.wav",
+        "start_seconds": 30,
+        "seconds": 28,
+        "sha256": "20ba61ccc5673ad3fbd7795ca8ca2a6040fa4755d4bbb01ceac51be3735fb084"
+      },
+      "purpose": "Private listening/reference analysis; not licensed for sampling or redistribution."
+    },
+    {
+      "id": "w2s1DK1w3WI",
+      "title": "Array - DJ_Dave (Official Music Video)",
+      "published_at": "2023-06-27T14:00:41Z",
+      "duration": "PT3M7S",
+      "view_count": 79801,
+      "url": "https://www.youtube.com/watch?v=w2s1DK1w3WI",
+      "name": "array",
+      "original": "references/assets/originals/w2s1DK1w3WI.webm",
+      "original_sha256": "d1483e5a09c709548eb2cc850fc35a46e2becd080dfe414cb60d19f7992b5763",
+      "decoded": "references/assets/decoded/array.wav",
+      "decoded_sha256": "2ce5a93822a2f7ef756fa64f4394d043ec0c55cf724911bb1b7f8897e76b5174",
+      "codec": "opus",
+      "format_id": "251",
+      "sample_rate": 48000,
+      "channels": 2,
+      "excerpt": {
+        "file": "references/assets/excerpts/array.wav",
+        "start_seconds": 30,
+        "seconds": 28,
+        "sha256": "af387d3b4611d6713c5f9645a380118430a7f240ca90bcf2eb96fdc9ae70993d"
+      },
+      "purpose": "Private listening/reference analysis; not licensed for sampling or redistribution."
+    },
+    {
+      "id": "JiQHclg_648",
+      "title": "DJ_Dave - Easy (Live Coded Video)",
+      "published_at": "2021-11-03T18:00:15Z",
+      "duration": "PT3M57S",
+      "view_count": 60310,
+      "url": "https://www.youtube.com/watch?v=JiQHclg_648",
+      "name": "easy",
+      "original": "references/assets/originals/JiQHclg_648.webm",
+      "original_sha256": "687f078898c656edac80ea04f8c390c9489d8f8281d65469ca3efd65fcefa4e9",
+      "decoded": "references/assets/decoded/easy.wav",
+      "decoded_sha256": "797d872d40d82c13178697480205321a44a51824fccade620c5318c5d444550f",
+      "codec": "opus",
+      "format_id": "251",
+      "sample_rate": 48000,
+      "channels": 2,
+      "excerpt": {
+        "file": "references/assets/excerpts/easy.wav",
+        "start_seconds": 30,
+        "seconds": 28,
+        "sha256": "bd7c1cefbfb121b2318d166b939850c6618b439496aa78d181fe3bbfd9d4d863"
+      },
+      "purpose": "Private listening/reference analysis; not licensed for sampling or redistribution."
+    }
+  ],
+  "candidate": {
+    "source": "projects/chrome-after-rain/renders/v004/chrome-after-rain.wav",
+    "source_sha256": "029f0e2d2264f600ade1b93dc5128af0c598aa4f2811fea35d48c270c53fbe4d",
+    "start_seconds": 49.411764705882355,
+    "seconds": 28
+  },
+  "matching": {
+    "target_lufs": -18.07,
+    "copies": [
+      {
+        "source_sha256": "8eed1ad13a66b48969d77ec518b094d258e143c3000af025cee41ae185382416",
+        "file": "01-cycles.wav",
+        "gain_db": -6.41
+      },
+      {
+        "source_sha256": "c687add8df8a3007d581533053979a300d535d5b8242fee665dd4e4b64ce5ae7",
+        "file": "02-castles.wav",
+        "gain_db": 0.0
+      },
+      {
+        "source_sha256": "20ba61ccc5673ad3fbd7795ca8ca2a6040fa4755d4bbb01ceac51be3735fb084",
+        "file": "03-airglow.wav",
+        "gain_db": -9.5
+      },
+      {
+        "source_sha256": "af387d3b4611d6713c5f9645a380118430a7f240ca90bcf2eb96fdc9ae70993d",
+        "file": "04-array.wav",
+        "gain_db": -5.0
+      },
+      {
+        "source_sha256": "bd7c1cefbfb121b2318d166b939850c6618b439496aa78d181fe3bbfd9d4d863",
+        "file": "05-easy.wav",
+        "gain_db": -5.48
+      },
+      {
+        "source_sha256": "6956d572d8429d78c48d70254ce4de7841c634c903fe2064954e0c47ff4e8160",
+        "file": "06-chrome-after-rain.wav",
+        "gain_db": -1.8399999999999999
+      }
+    ],
+    "method": "constant attenuation, no compression"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-10",
+  "verified_sources": [
+    {
+      "name": "cycles",
+      "decoded_seconds": 220.92627083333332,
+      "original_bytes": 3696986,
+      "decoded_bytes": 84835780
+    },
+    {
+      "name": "castles",
+      "decoded_seconds": 182.82666666666665,
+      "original_bytes": 3109221,
+      "decoded_bytes": 70205532
+    },
+    {
+      "name": "airglow",
+      "decoded_seconds": 290.58133333333336,
+      "original_bytes": 5320359,
+      "decoded_bytes": 111583324
+    },
+    {
+      "name": "array",
+      "decoded_seconds": 186.4098125,
+      "original_bytes": 3107707,
+      "decoded_bytes": 71581460
+    },
+    {
+      "name": "easy",
+      "decoded_seconds": 236.82133333333334,
+      "original_bytes": 3970842,
+      "decoded_bytes": 90939484
+    }
+  ],
+  "reviews": [
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "30b640474286d5d8bb80ff108aad3c2a85bfe4764d8e662f2c8a30e07964919e",
+      "seconds": 58.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "pair-03",
+      "receipt": "work/dj-dave-reference/pair-03/request.json",
+      "reported_cost_usd": 0.02402
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "47a0a145beeb6a9c20d67686144a1afccf7f448ae03eb32804381c35c6dd5012",
+      "seconds": 58.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "pair-01",
+      "receipt": "work/dj-dave-reference/pair-01/request.json",
+      "reported_cost_usd": 0.02672
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "62845c842996070d61d424cc2259b7a502f81cbaa5c7557638bc06b60d92c8cb",
+      "seconds": 58.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "pair-02",
+      "receipt": "work/dj-dave-reference/pair-02/request.json",
+      "reported_cost_usd": 0.026936
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "5fffd9a8528afaac5c4df7a7ed157e0cc1eeb371a1db5962d77cf8dc771106a2",
+      "seconds": 28.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "airglow",
+      "receipt": "work/dj-dave-reference/airglow/request.json",
+      "reported_cost_usd": 0.022326
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "79ab78c81b7fa35259dcb17dc544c648addf8c68d21ce8fd13e3f9d6c3625ee0",
+      "seconds": 28.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "array",
+      "receipt": "work/dj-dave-reference/array/request.json",
+      "reported_cost_usd": 0.01995
+    },
+    {
+      "model": "google/gemini-3.1-pro-preview",
+      "source_sha256": "6b64597bdd71465477aa18f5f4ca1dda96db5b25abb080e41dd162e2da42ef15",
+      "seconds": 28.0,
+      "status": "complete",
+      "finish_reason": "stop",
+      "label": "easy",
+      "receipt": "work/dj-dave-reference/easy/request.json",
+      "reported_cost_usd": 0.022014
+    }
+  ],
+  "reported_cost_usd": 0.141966,
+  "control": {
+    "pair": "pair-03",
+    "ground_truth": "Two sample-identical Castles excerpts with two seconds digital silence.",
+    "result": "Model correctly reported identical excerpts; narrow positive control only."
+  },
+  "validation": [
+    "Five original/decoded/excerpt hashes verified against manifest",
+    "Five full-length, finite, stereo 48kHz WAV decodes",
+    "Six matched 28-second excerpts, no full-scale samples",
+    "Matching residual at most 0.01 LUFS",
+    "Six completed reviews, finish_reason stop",
+    "No new composition or renderer changes"
+  ],
+  "scope_limits": [
+    "Fixed 30\u201358 second reference excerpts do not establish full-track arrangement or artistic intent.",
+    "Qualitative observations come from an audio model, not direct parent-agent hearing.",
+    "Exact processing chains and instrument identities remain hypotheses.",
+    "Popularity ranks only accessible uploads on supplied channel; selected subset is 2\u20136 minute songs."
+  ]
+}

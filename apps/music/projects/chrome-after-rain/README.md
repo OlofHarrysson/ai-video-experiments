@@ -28,6 +28,8 @@ All notes, patterns and samples here are original. See [make_palette.py](make_pa
 
 Source critique, signal measurements and an audio-capable model are separate forms of evidence. The model receives actual audio, but its taste and precise timing remain unvalidated. Olof's listening verdict decides whether this artistic direction works.
 
+**Human verdict, 2026-10-10:** Olof said this still sounded too much like a computer game. He then supplied DJ_Dave's channel and requested actual audio references. Continue with the [reference study](../dj-dave-reference-study/README.md); this composition remains a preserved comparison candidate, not an accepted artistic direction.
+
 Selected source: [v004](source/v004.strudel), saved in [project.json](project.json). The playback copy is `renders/v004/chrome-after-rain.wav`; the original master and five stems remain alongside it. Playback gain is +5.5 dB, with no limiter, compression or equalization applied afterward.
 
 | Time | Musical event |
