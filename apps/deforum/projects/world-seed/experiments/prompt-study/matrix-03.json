@@ -1,0 +1,143 @@
+{
+  "question": "Transfer rendering approaches to a previously unused scene without a bridge or portal, with two seeds. Three separate resolution diagnostics retain their original prompts.",
+  "body": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text.",
+  "styles": {
+    "neutral": "",
+    "materials": "A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+    "quality": "Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+    "vfx": "A high-end cinematic visual-effects environment, rendered with lifelike optical detail. Pin-sharp fine structures, richly textured solid surfaces, subtle natural irregularity and deep dimensional shading. Clear air and deep focus, small controlled specular highlights, finely resolved contact shadows. An extravagant impossible world with tangible material detail.",
+    "micro": "Extremely intricate surreal digital art. Every large form contains medium-scale structure, and every medium-scale structure contains fine material detail. Tiny physical ridges, pores, fibers, chips and layered growth follow the shape of each surface. Precise directional lighting reveals the relief without flattening it. Clear deep shadows retain small details; all depth layers are sharply resolved.",
+    "specific": "A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+  },
+  "cases": [
+    {
+      "id": "tidal-neutral-a",
+      "scene": "tidal",
+      "variant": "neutral",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text.",
+      "round": 3
+    },
+    {
+      "id": "tidal-materials-a",
+      "scene": "tidal",
+      "variant": "materials",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+      "round": 3
+    },
+    {
+      "id": "tidal-quality-a",
+      "scene": "tidal",
+      "variant": "quality",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+      "round": 3
+    },
+    {
+      "id": "tidal-vfx-a",
+      "scene": "tidal",
+      "variant": "vfx",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A high-end cinematic visual-effects environment, rendered with lifelike optical detail. Pin-sharp fine structures, richly textured solid surfaces, subtle natural irregularity and deep dimensional shading. Clear air and deep focus, small controlled specular highlights, finely resolved contact shadows. An extravagant impossible world with tangible material detail.",
+      "round": 3
+    },
+    {
+      "id": "tidal-micro-a",
+      "scene": "tidal",
+      "variant": "micro",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. Extremely intricate surreal digital art. Every large form contains medium-scale structure, and every medium-scale structure contains fine material detail. Tiny physical ridges, pores, fibers, chips and layered growth follow the shape of each surface. Precise directional lighting reveals the relief without flattening it. Clear deep shadows retain small details; all depth layers are sharply resolved.",
+      "round": 3
+    },
+    {
+      "id": "tidal-specific-a",
+      "scene": "tidal",
+      "variant": "specific",
+      "seed": 1010411,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes.",
+      "round": 3
+    },
+    {
+      "id": "tidal-neutral-b",
+      "scene": "tidal",
+      "variant": "neutral",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text.",
+      "round": 3
+    },
+    {
+      "id": "tidal-materials-b",
+      "scene": "tidal",
+      "variant": "materials",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+      "round": 3
+    },
+    {
+      "id": "tidal-quality-b",
+      "scene": "tidal",
+      "variant": "quality",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+      "round": 3
+    },
+    {
+      "id": "tidal-vfx-b",
+      "scene": "tidal",
+      "variant": "vfx",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A high-end cinematic visual-effects environment, rendered with lifelike optical detail. Pin-sharp fine structures, richly textured solid surfaces, subtle natural irregularity and deep dimensional shading. Clear air and deep focus, small controlled specular highlights, finely resolved contact shadows. An extravagant impossible world with tangible material detail.",
+      "round": 3
+    },
+    {
+      "id": "tidal-micro-b",
+      "scene": "tidal",
+      "variant": "micro",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. Extremely intricate surreal digital art. Every large form contains medium-scale structure, and every medium-scale structure contains fine material detail. Tiny physical ridges, pores, fibers, chips and layered growth follow the shape of each surface. Precise directional lighting reveals the relief without flattening it. Clear deep shadows retain small details; all depth layers are sharply resolved.",
+      "round": 3
+    },
+    {
+      "id": "tidal-specific-b",
+      "scene": "tidal",
+      "variant": "specific",
+      "seed": 1010482,
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes.",
+      "round": 3
+    },
+    {
+      "id": "jungle-full-material-2k",
+      "scene": "jungle",
+      "variant": "full-material",
+      "seed": 1010101,
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal digital environment, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, tactile organic material with finely resolved surface relief. Visually precise and extravagant, no people, no text, no grids or panels. Landscape composition 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights.",
+      "round": 3,
+      "width": 2016,
+      "height": 1344,
+      "diagnostic": "Resolution changes separately; prompt and seed fixed. Different latent grid changes composition, so this is not a pixel-aligned detail comparison."
+    },
+    {
+      "id": "city-full-material-2k",
+      "scene": "city",
+      "variant": "full-material",
+      "seed": 1010201,
+      "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant cinematic digital environment, landscape 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights.",
+      "round": 3,
+      "width": 2016,
+      "height": 1344,
+      "diagnostic": "Resolution changes separately; prompt and seed fixed. Different latent grid changes composition, so this is not a pixel-aligned detail comparison."
+    },
+    {
+      "id": "crystal-full-material-2k",
+      "scene": "crystal",
+      "variant": "full-material",
+      "seed": 1010301,
+      "prompt": "A higher-dimensional fantasy universe, an immense impossible garden of faceted mineral architecture suspended in pale luminous space. Giant translucent rose-quartz branching structures fold into nested polyhedral chambers, hundreds of clear pale-blue crystal stairways loop through themselves, enormous opalescent ribbons pierce tiny jewel constellations. Layer upon layer of recursive geometry at dramatically different scales, sharp exquisite etched mineral facets, microscopic lace-like crystalline growth and deep spatial separation. The entire garden curls around an irregular black seed-shaped void slightly above center, with a tiny deep emerald jungle visible inside. The outer world resembles finely sculpted translucent glass with crisp transmitted light, an exquisite surreal scientific sculpture, pearlescent whites, icy cyan, pale rose and ultraviolet shadows. Broad airy negative spaces between unbelievably intricate structures, no black-and-gold city, no human figures, no text, no standard neon tunnel, no flat kaleidoscope, no simple mandala. Wide asymmetrical view with clear near and far layers, landscape 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights.",
+      "round": 3,
+      "width": 2016,
+      "height": 1344,
+      "diagnostic": "Resolution changes separately; prompt and seed fixed. Different latent grid changes composition, so this is not a pixel-aligned detail comparison."
+    }
+  ]
+}

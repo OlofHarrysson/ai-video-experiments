@@ -1,0 +1,161 @@
+{
+  "question": "Matched scene, seed and native sampler; compare rendering language across three worlds. Original prompts are separate references; five variants share the same body.",
+  "bodies": {
+    "jungle": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text.",
+    "city": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text.",
+    "crystal": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala."
+  },
+  "styles": {
+    "neutral": "",
+    "illustration": "Meticulously detailed surreal digital illustration, crisp contours, finely resolved surface textures, delicate engraved linework, clearly separated overlapping forms, controlled highlights and deep clean shadows.",
+    "materials": "A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+    "matte": "An exquisitely finished surreal digital matte painting with rich dimensional depth. Meticulous tiny textures belong to the underlying surfaces, with distinct rough, polished and translucent materials. Fine local contrast, crisp intricate silhouettes and controlled directional lighting. Foreground and distant structures are sharply resolved, with clear air and restrained luminous accents.",
+    "quality": "Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting."
+  },
+  "cases": [
+    {
+      "id": "jungle-original-a",
+      "scene": "jungle",
+      "variant": "original",
+      "seed": 1010101,
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal oil painting, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, convincing luminous paint and tactile organic material. Visually precise and extravagant, not a photograph, no people, no text, no grids or panels. Landscape composition 3:2.",
+      "round": 1
+    },
+    {
+      "id": "jungle-neutral-a",
+      "scene": "jungle",
+      "variant": "neutral",
+      "seed": 1010101,
+      "prompt": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text.",
+      "round": 1
+    },
+    {
+      "id": "jungle-illustration-a",
+      "scene": "jungle",
+      "variant": "illustration",
+      "seed": 1010101,
+      "prompt": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text. Meticulously detailed surreal digital illustration, crisp contours, finely resolved surface textures, delicate engraved linework, clearly separated overlapping forms, controlled highlights and deep clean shadows.",
+      "round": 1
+    },
+    {
+      "id": "jungle-materials-a",
+      "scene": "jungle",
+      "variant": "materials",
+      "seed": 1010101,
+      "prompt": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text. A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+      "round": 1
+    },
+    {
+      "id": "jungle-matte-a",
+      "scene": "jungle",
+      "variant": "matte",
+      "seed": 1010101,
+      "prompt": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text. An exquisitely finished surreal digital matte painting with rich dimensional depth. Meticulous tiny textures belong to the underlying surfaces, with distinct rough, polished and translucent materials. Fine local contrast, crisp intricate silhouettes and controlled directional lighting. Foreground and distant structures are sharply resolved, with clear air and restrained luminous accents.",
+      "round": 1
+    },
+    {
+      "id": "jungle-quality-a",
+      "scene": "jungle",
+      "variant": "quality",
+      "seed": 1010101,
+      "prompt": "An alien rainforest grows on the inside of an enormous hollow planet. A curving bridge of braided roots leads from the lower left across a deep violet chasm to a huge saffron-orange flower in the middle distance, center-right. Its seven translucent petals surround an open dark oval doorway. Jade fern spirals, glossy black orchids, crimson fungi and pale coral leaves frame the edges. Tiny moss cushions and lichen cling to furrowed bark; branching veins and jewel-like pollen cover the petals. Suspended mountain islands and bands of vegetation curve upward into an inverted forest overhead. Jewel-green shadows, coral flowers, honey light inside the flower and dark indigo distances. Wide asymmetrical composition with a clear open route and distinct foreground, middle distance and far world. No people or text. Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+      "round": 1
+    },
+    {
+      "id": "city-original-a",
+      "scene": "city",
+      "variant": "original",
+      "seed": 1010201,
+      "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant dimensional etching, landscape 3:2.",
+      "round": 1
+    },
+    {
+      "id": "city-neutral-a",
+      "scene": "city",
+      "variant": "neutral",
+      "seed": 1010201,
+      "prompt": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text.",
+      "round": 1
+    },
+    {
+      "id": "city-illustration-a",
+      "scene": "city",
+      "variant": "illustration",
+      "seed": 1010201,
+      "prompt": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text. Meticulously detailed surreal digital illustration, crisp contours, finely resolved surface textures, delicate engraved linework, clearly separated overlapping forms, controlled highlights and deep clean shadows.",
+      "round": 1
+    },
+    {
+      "id": "city-materials-a",
+      "scene": "city",
+      "variant": "materials",
+      "seed": 1010201,
+      "prompt": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text. A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+      "round": 1
+    },
+    {
+      "id": "city-matte-a",
+      "scene": "city",
+      "variant": "matte",
+      "seed": 1010201,
+      "prompt": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text. An exquisitely finished surreal digital matte painting with rich dimensional depth. Meticulous tiny textures belong to the underlying surfaces, with distinct rough, polished and translucent materials. Fine local contrast, crisp intricate silhouettes and controlled directional lighting. Foreground and distant structures are sharply resolved, with clear air and restrained luminous accents.",
+      "round": 1
+    },
+    {
+      "id": "city-quality-a",
+      "scene": "city",
+      "variant": "quality",
+      "seed": 1010201,
+      "prompt": "An ancient lost city hangs inside an enormous seed shell. A curved black basalt avenue leads from the foreground through golden aqueducts, needle towers, ribbed temples and bridges spiraling overhead. Tiny sculpted chambers, pierced filigree terraces and staircases on different gravity planes cover the immense buildings. Streams of molten gold flow upward between the towers. At the end of the avenue a circular iris of interlocking stone blades frames a small icy blue crystalline world. Black, warm bone white, molten brass and restrained oxblood accents, with narrow shafts of amber light. Wide asymmetrical composition with a clear passage, monumental near structures and many distinct distant layers. No vegetation, people or text. Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+      "round": 1
+    },
+    {
+      "id": "crystal-original-a",
+      "scene": "crystal",
+      "variant": "original",
+      "seed": 1010301,
+      "prompt": "A higher-dimensional fantasy universe, an immense impossible garden of faceted mineral architecture suspended in pale luminous space. Giant translucent rose-quartz branching structures fold into nested polyhedral chambers, hundreds of frosted pale-blue crystal stairways loop through themselves, enormous opalescent ribbons pierce tiny jewel constellations. Layer upon layer of recursive geometry at dramatically different scales, sharp exquisite etched mineral facets, microscopic lace-like crystalline growth and deep spatial separation. The entire garden curls around an irregular black seed-shaped void slightly above center, with a tiny deep emerald jungle visible inside. The outer world resembles finely sculpted translucent glass lit from within, an exquisite surreal scientific sculpture, luminous pearlescent whites, icy cyan, pale rose and ultraviolet shadows. Broad airy negative spaces between unbelievably intricate structures, no black-and-gold city, no human figures, no text, no standard neon tunnel, no flat kaleidoscope, no simple mandala. Wide asymmetrical view with clear near and far layers, landscape 3:2.",
+      "round": 1
+    },
+    {
+      "id": "crystal-neutral-a",
+      "scene": "crystal",
+      "variant": "neutral",
+      "seed": 1010301,
+      "prompt": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala.",
+      "round": 1
+    },
+    {
+      "id": "crystal-illustration-a",
+      "scene": "crystal",
+      "variant": "illustration",
+      "seed": 1010301,
+      "prompt": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala. Meticulously detailed surreal digital illustration, crisp contours, finely resolved surface textures, delicate engraved linework, clearly separated overlapping forms, controlled highlights and deep clean shadows.",
+      "round": 1
+    },
+    {
+      "id": "crystal-materials-a",
+      "scene": "crystal",
+      "variant": "materials",
+      "seed": 1010301,
+      "prompt": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala. A richly detailed cinematic 3D environment render of an impossible world. Solid sculpted volumes, physically convincing materials, minute surface relief and crisp material boundaries. Directional light grazes the surfaces and reveals their texture; fine contact shadows separate overlapping forms. Deep focus from foreground to distance, clear air, restrained glow and precise small highlights.",
+      "round": 1
+    },
+    {
+      "id": "crystal-matte-a",
+      "scene": "crystal",
+      "variant": "matte",
+      "seed": 1010301,
+      "prompt": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala. An exquisitely finished surreal digital matte painting with rich dimensional depth. Meticulous tiny textures belong to the underlying surfaces, with distinct rough, polished and translucent materials. Fine local contrast, crisp intricate silhouettes and controlled directional lighting. Foreground and distant structures are sharply resolved, with clear air and restrained luminous accents.",
+      "round": 1
+    },
+    {
+      "id": "crystal-quality-a",
+      "scene": "crystal",
+      "variant": "quality",
+      "seed": 1010301,
+      "prompt": "An impossible mineral garden hangs in pale luminous space. Giant translucent rose-quartz branches fold into nested polyhedral chambers. Hundreds of pale-blue crystal stairways loop through themselves; enormous opalescent ribbons thread through tiny jewel constellations. Recursive geometry at dramatically different scales, etched facets and lace-like mineral growth. The garden curls around an irregular black seed-shaped void slightly above center, with a tiny emerald jungle visible inside. Pearlescent white, icy cyan, pale rose and ultraviolet shadows. A wide asymmetrical view with airy gaps between intricate structures, distinct near and far layers and a clear view into the central void. No figures, text, flat kaleidoscope or mandala. Super detailed digital artwork, high quality, masterpiece, ultra high fidelity, 8k, extremely intricate, razor sharp, highly detailed, rich textures, cinematic lighting.",
+      "round": 1
+    }
+  ]
+}

@@ -26,6 +26,7 @@ Return to the [project documentation index](../../AGENTS.md#documentation-index)
 - [Image models and recurring cost](models-and-cost.md)
 - [Moving the feedback loop to a modern image model](modern-model-transition.md)
 - [Prompting the opening and the next repaint](prompting-for-feedback.md)
+- [Krea cross-scene prompt study](../../apps/deforum/projects/world-seed/experiments/prompt-study/README.md): 51 stills, four worlds and recurrent checks distinguish material wording from sampling and detail retention.
 - [Model and sampler recipes for feedback animation](model-sampler-recipes.md)
 - [Krea 2 Turbo sampler practice](krea-sampler-practice.md)
 - [Feedback parameters: what this version actually does](feedback-parameters.md)

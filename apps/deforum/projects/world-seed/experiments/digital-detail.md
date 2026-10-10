@@ -24,6 +24,10 @@ All 242 remote output/receipt files are hash-verified locally. After confirming 
 
 The existing reviewer defaults to Original / Crisp digital illustration; both earlier comparisons remain selectable. It serves the verified MP4 bytes and range requests. Browser playback reaches frame 47 in both clips, and painting stepping reaches painting 1 / frame 3 in both. The reviewer remains running for Olof. No viewer code or layout changed. Human preference is pending.
 
-## Reproduction
+## Human review — 10 October 2026
+
+Olof finds this result similar or worse than the original and still expects substantially more high-fidelity detail. The illustration wording is not selected. He authorizes a 60–90 minute [prompt study](prompt-study/README.md), including other scenes and repeated motion, to investigate generalizable rendering language and present the strongest screened result. The original film remains current.
+
+## Reproduction commands
 
 From `apps/deforum`, run `uv run --locked python projects/world-seed/experiments/film.py plan d03-crisp-digital`, then `render` with an explicit owned deployment receipt, and `check`. Finish with `projects/world-seed/experiments/finish.py d03-crisp-digital pair --version v002`, inspect, then `full` and `tail`. The saved configuration owns the exact prompt schedule. Rebuild `media_review/sessions/world-seed-detail.json` with `media_review.build(..., local=True)` and refresh the existing reviewer through Terminal Manager.

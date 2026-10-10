@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-10",
+  "study_started_at": "2026-10-10T17:51:16Z",
+  "model": "Krea 2 Turbo FP8",
+  "still_generations": 51,
+  "recurrent_cases": 17,
+  "new_repaints": 289,
+  "unique_completed_jobs": 340,
+  "subjects": [
+    "jungle",
+    "engraved city",
+    "crystal lattice",
+    "alien tidal basin"
+  ],
+  "still_dimensions": {
+    "1536x1024": 48,
+    "2016x1344": 3
+  },
+  "motion_dimensions": [
+    1536,
+    1024
+  ],
+  "source_cadence": 12,
+  "source_fps": 24,
+  "delivery_fps": 24,
+  "case_delivery_seconds": 2,
+  "pod": {
+    "id": "fhd0yj2iegunud",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "created_at": "2026-10-10T17:53:56.513000+00:00",
+    "deleted_at": "2026-10-10T18:49:42+00:00",
+    "hourly_compute_usd": 0.89,
+    "estimated_compute_usd": 0.827,
+    "cost_scope": "Elapsed quoted GPU compute estimate, excludes storage; not an itemized invoice.",
+    "absence_verified": true,
+    "pods_after_cleanup": [],
+    "model_volume_retained": "vd3jnbwko1"
+  },
+  "preservation": {
+    "remote_files": 4730,
+    "bytes": 2651280952,
+    "manifest_sha256": "b34379ce5ffd5b0b4b458fd817e59de885c3b85afb9e7ade5828e914e2bd7933",
+    "verified_at": "2026-10-10T18:48:17.792017+00:00",
+    "separate_external_backup": false
+  },
+  "cleanup": {
+    "queue_empty": true,
+    "verified_duplicate_files_removed": 629,
+    "completed_at": "2026-10-10T18:49:11.240030+00:00"
+  },
+  "validation": {
+    "completed_job_ids_unique": true,
+    "stills_executed_graphs_history_png_and_hashes": true,
+    "motion_executed_graphs_lineage_warps_seeds_sigmas_and_hashes": true,
+    "noise_control_config_pairs_verified": 6
+  },
+  "full_film_selection": "Preserved original v004 remains current; no replacement approved.",
+  "review": "Assistant frame screening; human playback judgment pending.",
+  "finished_cases": [
+    {
+      "case": "ps-city-full-material",
+      "file": "projects/world-seed/exports/v002/ps-city-full-material/faster/rife-moving-tail/preview.mp4",
+      "sha256": "3071fd0019f078746dfec2e2fdfcbc92e253254137654972e2465e4ed1dd95fe",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-city-full-n025",
+      "file": "projects/world-seed/exports/v002/ps-city-full-n025/faster/rife-moving-tail/preview.mp4",
+      "sha256": "e6e772a705016545b6dc0f885c7ec2e804175630756aa5cfe650716cc8cc3804",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-jungle-full-n025",
+      "file": "projects/world-seed/exports/v002/ps-jungle-full-n025/faster/rife-moving-tail/preview.mp4",
+      "sha256": "ee9e968ca38e0d248ae733f4a07d08e2cef11563d8c2fddd96c23d7cefbdbdbe",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-tidal-neutral",
+      "file": "projects/world-seed/exports/v002/ps-tidal-neutral/faster/rife-moving-tail/preview.mp4",
+      "sha256": "f43166912153cb5a22edf4f0dfa3362005138ff1be7a53b25e97ff5799921021",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-tidal-specific",
+      "file": "projects/world-seed/exports/v002/ps-tidal-specific/faster/rife-moving-tail/preview.mp4",
+      "sha256": "413da702ed135e22c46ea8decc0e3cc6ba221b24aa623d6c8b9700b57b2af624",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-tidal-specific-n025",
+      "file": "projects/world-seed/exports/v002/ps-tidal-specific-n025/faster/rife-moving-tail/preview.mp4",
+      "sha256": "0041e9d963255a2fb491dbabca9d47669af41146e83857c526935ea4c5c67290",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-tidal-specific-n072",
+      "file": "projects/world-seed/exports/v002/ps-tidal-specific-n072/faster/rife-moving-tail/preview.mp4",
+      "sha256": "b4024cd98634a6837b12ee35e64d2646245c2cb7e4230ba8810b61496c46f635",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    },
+    {
+      "case": "ps-tidal-specific-n085",
+      "file": "projects/world-seed/exports/v002/ps-tidal-specific-n085/faster/rife-moving-tail/preview.mp4",
+      "sha256": "15dd613eb3ab5de3149156b7a82829ea2b85176ae041f8518a8692c53f4ae2e3",
+      "frames": 48,
+      "fps": 24,
+      "seconds": 2
+    }
+  ],
+  "reviewer_verified": {
+    "route": "http://localhost:3028/world-seed-detail",
+    "selected": [
+      "tidal-rich",
+      "tidal-gentle"
+    ],
+    "served_html_matches_build": true,
+    "all_11_range_routes_verified": true,
+    "selected_full_video_hashes_verified": true,
+    "unchanged_ui_interaction_not_retested": true
+  }
+}

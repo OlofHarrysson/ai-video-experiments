@@ -1,0 +1,76 @@
+{
+  "case": "ps-tidal-specific-n025",
+  "seed": 1014100,
+  "duration": 9,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "tidal",
+      "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.25
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 18,
+      "center": [
+        0.58,
+        0.45
+      ],
+      "end": [
+        -0.07,
+        0.03,
+        0.6,
+        -0.055
+      ],
+      "velocity_start": [
+        -0.003888888888888889,
+        0.0016666666666666666,
+        0.03333333333333333,
+        -0.0030555555555555557
+      ],
+      "velocity_end": [
+        -0.003888888888888889,
+        0.0016666666666666666,
+        0.03333333333333333,
+        -0.0030555555555555557
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204
+  ],
+  "prefix_root": "projects/world-seed/exports/v002/prompt-study/tidal-specific-b",
+  "prefix_through": 0,
+  "export_version": "v002",
+  "study_note": {
+    "comparison": "Neutral and specific share opening, noise and all motion/sampling settings. The n025 case keeps specific wording and changes only noise.",
+    "motion": "Follow the turquoise channel toward the nested shell with continuous lateral drift, forward movement and a small counterclockwise bank. The same constant-velocity phrase allows a later extension."
+  }
+}

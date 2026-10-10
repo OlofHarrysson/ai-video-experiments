@@ -1,0 +1,76 @@
+{
+  "case": "ps-city-full-material",
+  "seed": 1012100,
+  "duration": 9,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "city",
+      "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant cinematic digital environment, landscape 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 9,
+      "center": [
+        0.65,
+        0.44
+      ],
+      "end": [
+        0.015,
+        0.01,
+        0.4,
+        0.075
+      ],
+      "velocity_start": [
+        0.0016666666666666666,
+        0.0011111111111111111,
+        0.044444444444444446,
+        0.008333333333333333
+      ],
+      "velocity_end": [
+        0.0016666666666666666,
+        0.0011111111111111111,
+        0.044444444444444446,
+        0.008333333333333333
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204
+  ],
+  "prefix_root": "projects/world-seed/exports/v001/o1-city",
+  "prefix_through": 0,
+  "export_version": "v002",
+  "study_note": {
+    "comparison": "Same original RGB opening, camera, seeds, sigma schedule and sampler in both arms; only full descriptive prompt treatment changes.",
+    "motion": "Sustained inward drift with one small continuous bank, composed around the existing central passage. No repeated acceleration or cuts."
+  }
+}

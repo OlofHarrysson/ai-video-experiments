@@ -1,0 +1,76 @@
+{
+  "case": "ps-crystal-original",
+  "seed": 1013100,
+  "duration": 9,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "crystal",
+      "prompt": "A higher-dimensional fantasy universe, an immense impossible garden of faceted mineral architecture suspended in pale luminous space. Giant translucent rose-quartz branching structures fold into nested polyhedral chambers, hundreds of frosted pale-blue crystal stairways loop through themselves, enormous opalescent ribbons pierce tiny jewel constellations. Layer upon layer of recursive geometry at dramatically different scales, sharp exquisite etched mineral facets, microscopic lace-like crystalline growth and deep spatial separation. The entire garden curls around an irregular black seed-shaped void slightly above center, with a tiny deep emerald jungle visible inside. The outer world resembles finely sculpted translucent glass lit from within, an exquisite surreal scientific sculpture, luminous pearlescent whites, icy cyan, pale rose and ultraviolet shadows. Broad airy negative spaces between unbelievably intricate structures, no black-and-gold city, no human figures, no text, no standard neon tunnel, no flat kaleidoscope, no simple mandala. Wide asymmetrical view with clear near and far layers, landscape 3:2."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.6
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 9,
+      "center": [
+        0.42,
+        0.52
+      ],
+      "end": [
+        0.015,
+        0.01,
+        0.4,
+        -0.065
+      ],
+      "velocity_start": [
+        0.0016666666666666666,
+        0.0011111111111111111,
+        0.044444444444444446,
+        -0.007222222222222223
+      ],
+      "velocity_end": [
+        0.0016666666666666666,
+        0.0011111111111111111,
+        0.044444444444444446,
+        -0.007222222222222223
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204
+  ],
+  "prefix_root": "projects/world-seed/exports/v001/o1-crystal",
+  "prefix_through": 0,
+  "export_version": "v002",
+  "study_note": {
+    "comparison": "Same original RGB opening, camera, seeds, sigma schedule and sampler in both arms; only full descriptive prompt treatment changes.",
+    "motion": "Sustained inward drift with one small continuous bank, composed around the existing central passage. No repeated acceleration or cuts."
+  }
+}

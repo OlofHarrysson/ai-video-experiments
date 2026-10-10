@@ -1,0 +1,79 @@
+{
+  "case": "ps-jungle-full-n040",
+  "seed": 1011100,
+  "duration": 9,
+  "cadence": 12,
+  "cfg": 1,
+  "scenes": [
+    {
+      "at": 0,
+      "name": "full-material",
+      "prompt": "A vast alien rainforest growing on the inside of an enormous hollow planet, a breathtaking impossible landscape. The foreground is an intricate tangled canopy of jade fern spirals, glossy black orchids, tiny crimson fungi and translucent pale coral leaves with branching veins. Enormous braided roots form bridges over a deep violet atmospheric chasm. In the middle distance an immense saffron-orange flower with seven fleshy translucent petals encloses an oval dark opening, like a cathedral entrance, occupying one quarter of the image. A clear curving root bridge leads from the lower left toward that opening near the center-right. Beyond it, suspended mountain islands and rings of vegetation curve upward into an overhead inverted forest. A dozen scales of micro-detail: moss, lichen, etched bark, jewel-like pollen, delicate luminous gills. Layered cinematic depth and intelligible open route, foreground at the edges, medium-distance destination. Lavish maximalist surreal digital environment, jewel-green shadows, coral and vermilion flowers, warm honey light inside the flower, dark indigo distances, tactile organic material with finely resolved surface relief. Visually precise and extravagant, no people, no text, no grids or panels. Landscape composition 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights."
+    }
+  ],
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.4
+    }
+  ],
+  "phrases": [
+    {
+      "kind": "continuation",
+      "start": 0,
+      "duration": 13,
+      "center": [
+        0.948,
+        0.421
+      ],
+      "end": [
+        -0.17,
+        0.065,
+        0.7419373447293773,
+        -0.08
+      ],
+      "velocity_start": [
+        -0.015,
+        0.006,
+        0.055,
+        -0.004
+      ],
+      "velocity_end": [
+        -0.008,
+        0.004,
+        0.065,
+        -0.004
+      ]
+    }
+  ],
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204
+  ],
+  "prefix_root": "projects/world-seed/exports/v001/o1-jungle",
+  "prefix_through": 0,
+  "motion_note": {
+    "source_frame": 0,
+    "target": "Measured flower entrance center [.948,.421], inner opening roughly .08 by .13 image heights. Follow bridge, 2.1x enlargement and mild clockwise bank; move opening toward [.778,.486] without losing surrounding world."
+  },
+  "export_version": "v002",
+  "study_note": {
+    "comparison": "Sampling diagnostic after prompt comparison. Same full-material prompt, original RGB opening, camera and seeds; only starting-noise schedule changes. Three Euler intervals remain proportionally scaled. This is not evidence for a prompt-only improvement."
+  }
+}

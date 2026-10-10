@@ -1,0 +1,82 @@
+{
+  "noise_pairs": [
+    {
+      "a": "ps-city-full-material",
+      "b": "ps-city-full-n025",
+      "different_fields": [
+        "case",
+        "noise_schedule",
+        "study_note"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    },
+    {
+      "a": "ps-jungle-full-material",
+      "b": "ps-jungle-full-n040",
+      "different_fields": [
+        "case",
+        "noise_schedule",
+        "study_note"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    },
+    {
+      "a": "ps-jungle-full-material",
+      "b": "ps-jungle-full-n025",
+      "different_fields": [
+        "case",
+        "noise_schedule",
+        "study_note"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    },
+    {
+      "a": "ps-tidal-specific",
+      "b": "ps-tidal-specific-n025",
+      "different_fields": [
+        "case",
+        "noise_schedule"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    },
+    {
+      "a": "ps-tidal-specific",
+      "b": "ps-tidal-specific-n085",
+      "different_fields": [
+        "case",
+        "noise_schedule",
+        "study_note"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    },
+    {
+      "a": "ps-tidal-specific",
+      "b": "ps-tidal-specific-n072",
+      "different_fields": [
+        "case",
+        "noise_schedule",
+        "study_note"
+      ],
+      "same_initial_image": true,
+      "same_motion": true,
+      "same_text": true,
+      "same_seed": true
+    }
+  ],
+  "scope": "Config field audit. Executed graphs, source hashes, warps and lineage are checked separately by film.py check."
+}

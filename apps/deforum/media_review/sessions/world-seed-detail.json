@@ -1,36 +1,85 @@
 {
-  "title": "World Seed — keeping the detail",
+  "title": "World Seed \u2014 detail across worlds",
   "selected": [
-    "detail-baseline",
-    "detail-digital"
+    "tidal-rich",
+    "tidal-gentle"
   ],
   "clips": [
     {
+      "id": "tidal-rich",
+      "label": "Tidal world \u00b7 richer surfaces",
+      "note": "Stronger repainting rebuilds material relief; shapes change more.",
+      "details": "Same Krea 2 Turbo model, previous-image initialization, opening, full material prompt, camera, seeds and three Euler intervals. Two seconds, eighteen paintings, native 1536\u00d71024, 24 fps; identical RIFE finishing outside recurrence. Starting noise 0.85. Assistant prefers the material depth, but the planet expands abruptly at 0.33\u20130.46s; this remains a continuity limitation.",
+      "source": "projects/world-seed/exports/v002/ps-tidal-specific-n085/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "tidal-gentle",
+      "label": "Tidal world \u00b7 gentler changes",
+      "note": "Keeps more of the opening structure, with softer surfaces.",
+      "details": "Same Krea 2 Turbo model, previous-image initialization, opening, full material prompt, camera, seeds and three Euler intervals. Two seconds, eighteen paintings, native 1536\u00d71024, 24 fps; identical RIFE finishing outside recurrence. Starting noise 0.25. More stable than the stronger version, but small textures still smooth and repeated patterns emerge.",
+      "source": "projects/world-seed/exports/v002/ps-tidal-specific-n025/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "tidal-standard",
+      "label": "Tidal world \u00b7 standard repaint",
+      "note": "The same detailed prompt with the original repaint strength.",
+      "details": "Same Krea 2 Turbo model, previous-image initialization, opening, full material prompt, camera, seeds and three Euler intervals. Two seconds, eighteen paintings, native 1536\u00d71024, 24 fps; identical RIFE finishing outside recurrence. Starting noise 0.60. Shell pits enlarge into dark holes and the terrain simplifies.",
+      "source": "projects/world-seed/exports/v002/ps-tidal-specific/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "tidal-middle",
+      "label": "Tidal world \u00b7 middle strength",
+      "note": "An intermediate test; a second moon briefly appears.",
+      "details": "Same Krea 2 Turbo model, previous-image initialization, opening, full material prompt, camera, seeds and three Euler intervals. Two seconds, eighteen paintings, native 1536\u00d71024, 24 fps; identical RIFE finishing outside recurrence. Starting noise 0.72. More dimensional than 0.60 in some areas, but not a clear improvement: extra moon appears around 0.54s and disappears by 0.67s.",
+      "source": "projects/world-seed/exports/v002/ps-tidal-specific-n072/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "city-gentle",
+      "label": "Engraved city \u00b7 gentler changes",
+      "note": "Retains more architectural ornament, but loses some sparkle.",
+      "details": "Full material prompt and starting noise 0.25. Compare with City standard: identical opening, motion, seeds, sampling intervals and finishing; only starting noise changes. Two seconds, eighteen paintings, native 1536\u00d71024, 24 fps.",
+      "source": "projects/world-seed/exports/v002/ps-city-full-n025/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "city-standard",
+      "label": "Engraved city \u00b7 standard repaint",
+      "note": "Fine architecture becomes larger, smoother patterns.",
+      "details": "Full material prompt and starting noise 0.60. Same opening, camera, seed schedule and finishing as City gentler changes.",
+      "source": "projects/world-seed/exports/v002/ps-city-full-material/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "jungle-gentle",
+      "label": "Jungle \u00b7 full prompt, gentler changes",
+      "note": "Retains more original forms, but becomes muted and softer.",
+      "details": "Full material wording plus noise 0.25. This changes both text and noise from the preserved original. It is not selected as an improvement over the original film.",
+      "source": "projects/world-seed/exports/v002/ps-jungle-full-n025/faster/rife-moving-tail/preview.mp4"
+    },
+    {
       "id": "detail-baseline",
-      "label": "Original · three steps",
+      "label": "Original \u00b7 three steps",
       "note": "The opening switches to shorter travelling descriptions.",
-      "details": "Preserved original paintings, source0–204. Same opening, camera, noise, seeds and finishing as the comparisons. Two seconds, native 1536×1024, 24 fps; eighteen paintings with RIFE outside recurrence.",
+      "details": "Preserved original paintings, source0\u2013204. Same opening, camera, noise, seeds and finishing as the comparisons. Two seconds, native 1536\u00d71024, 24 fps; eighteen paintings with RIFE outside recurrence.",
       "source": "projects/world-seed/exports/v001/p01-the-root-bridge/through-0204/rife-moving-tail/preview.mp4"
     },
     {
       "id": "detail-full-prompt",
-      "label": "Full description · three steps",
+      "label": "Full description \u00b7 three steps",
       "note": "Keep the complete opening description through every repaint.",
-      "details": "Only text conditioning changes from the original. Same previous-image initialization, camera, noise, seed schedule, Krea model and three Euler intervals. No additional reference conditioning. Seventeen new paintings; two seconds, native 1536×1024, 24 fps, identical RIFE finishing.",
+      "details": "Only text conditioning changes from the original. Same previous-image initialization, camera, noise, seed schedule, Krea model and three Euler intervals. No additional reference conditioning. Seventeen new paintings; two seconds, native 1536\u00d71024, 24 fps, identical RIFE finishing.",
       "source": "projects/world-seed/exports/v002/d01-full-prompt/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "detail-six-steps",
-      "label": "Full description · six steps",
+      "label": "Full description \u00b7 six steps",
       "note": "Same full description, with six smaller sampling steps.",
-      "details": "Only the sampling schedule changes from the full-description case. Each original Euler interval is split at its midpoint, preserving the original sigma points and noise range. Same opening, camera, seeds and finishing. Seventeen new paintings; two seconds, native 1536×1024, 24 fps. Later image differences include accumulated feedback divergence.",
+      "details": "Only the sampling schedule changes from the full-description case. Each original Euler interval is split at its midpoint, preserving the original sigma points and noise range. Same opening, camera, seeds and finishing. Seventeen new paintings; two seconds, native 1536\u00d71024, 24 fps. Later image differences include accumulated feedback divergence.",
       "source": "projects/world-seed/exports/v002/d02-full-prompt-six-steps/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "detail-digital",
       "label": "Crisp digital illustration",
       "note": "Same scene and sampling; a more precise digital rendering prompt.",
-      "details": "Only the rendering phrases change from the original travelling descriptions. The original starting image, camera, palette, noise, seeds, Krea model and three Euler intervals are retained. Seventeen new repaints, eighteen paintings total; two seconds at native 1536×1024 and 24 fps, with identical RIFE finishing. The first still is shared, so this tests repaint conditioning, not a newly generated opening.",
+      "details": "Only the rendering phrases change from the original travelling descriptions. The original starting image, camera, palette, noise, seeds, Krea model and three Euler intervals are retained. Seventeen new repaints, eighteen paintings total; two seconds at native 1536\u00d71024 and 24 fps, with identical RIFE finishing. The first still is shared, so this tests repaint conditioning, not a newly generated opening.",
       "source": "projects/world-seed/exports/v002/d03-crisp-digital/faster/rife-moving-tail/preview.mp4"
     }
   ]
