@@ -1,0 +1,5 @@
+// Same three-hit, two-bar motif. One upper voicing changes in the middle phrase.
+theme: s(ucMotif).gain(".25 .19 .24").lpf("<1400!4 1800!4 2200!3 900 1600!3 900>").hpf(260).pan(.46).delay(.18).delaytime(.3515625).delayfeedback(.29).room(.14).orbit(5).mask("<1!8 0!4 1!3 0>").postgain(.78)
+colour: s("<[~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~ ~ ~ ~ ~]>").gain(".25 .19 .24").lpf(1800).hpf(260).pan(.46).delay(.21).delaytime(.3515625).delayfeedback(.32).room(.14).orbit(6).mask("<0!8 1!3 0!5>").postgain(.78)
+held: s("ucchord:1").speed(.75).gain(.23).lpf(1500).hpf(300).pan(.5).delay(.3).delaytime(.3515625).delayfeedback(.43).room(.26).orbit(7).mask("<0!11 1 0!4>").postgain(.78)
+resolve: s("ucchord:0").gain(.21).lpf(1100).hpf(260).delay(.24).delaytime(.3515625).delayfeedback(.3).room(.22).orbit(8).mask("<0!15 1>").postgain(.78)

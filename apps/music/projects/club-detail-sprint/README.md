@@ -1,6 +1,6 @@
 # Thirty-second club studies
 
-Two selected excerpts from Olof's two-hour composition and tooling sprint on 2026-10-10, run from 12:10:53 UTC through the two-hour target of 14:10:53 UTC. The final handoff was recorded at 14:11:28 UTC. The brief was to push craft, detail and identity beyond Undertow while preserving its approved heavy bass/drum direction. Human listening judgment on these selections is pending.
+Two selected excerpts from Olof's two-hour composition and tooling sprint on 2026-10-10, run from 12:10:53 UTC through the two-hour target of 14:10:53 UTC. The final handoff was recorded at 14:11:28 UTC. The brief was to push craft, detail and identity beyond Undertow while preserving its approved heavy bass/drum direction. Olof subsequently called these another improvement and preferred Negative Space. He liked the basslines more than some other instruments and disliked parts of the sound palette and beat, without identifying exact voices. His next request is a stronger repeating foundation and recognizable theme, with progression and surprises concentrated in details; [Undercurrent](../undercurrent/README.md) tests that direction.
 
 - **[Pressure Lock v011](../pressure-study/README.md), 136 BPM.** A shifting mechanical rhythm changes from metal into elastic low body, then returns inside the groove in a darker form. [Play selected copy](exports/selected-v002/pressure-lock.wav).
 - **[Negative Space v012](../negative-space/README.md), 128 BPM.** One hollow dub object appears whole, stretches into an exposed passage and returns as four deliberately different bass/object exchanges. [Play selected copy](exports/selected-v002/negative-space.wav).
@@ -26,7 +26,7 @@ Editable portable snapshots are in `exports/bundles/pressure-lock/` and `exports
 
 All audio and private API receipts remain local and ignored by Git. A bundle here is not a second-device backup. Negative Space's captured sound object depends on a preserved original print; do not discard it expecting identical WebAudio reverb to regenerate from a seed.
 
-For the next iteration, use Olof's listening verdict to choose which identity to develop. Extend the chosen musical idea rather than joining all three candidates or adding layers simply because the system can generate them. Keep the 30-second selections as baselines. Focused stem previews and a v011/v012 return comparison are preserved under ignored `screening/`; [sample checks](focused-preview-evidence.json) confirm their exact extraction and gain transforms.
+Olof selected Negative Space's direction for the next iteration. Extend the chosen musical idea rather than joining all three candidates or adding layers simply because the system can generate them. Keep the 30-second selections as baselines. Focused stem previews and a v011/v012 return comparison are preserved under ignored `screening/`; [sample checks](focused-preview-evidence.json) confirm their exact extraction and gain transforms.
 
 ## Listening evidence and limits
 

@@ -1,0 +1,5 @@
+// Undercurrent — 128 BPM, 16 bars / 30 seconds.
+setcpm(128/4)
+const ucBed = "<1!11 0 1!3 0>"
+const ucBass = "<[~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ ~] [~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]>"
+const ucMotif = "<[~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~ ~ ~ ~ ~]>"

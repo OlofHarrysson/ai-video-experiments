@@ -1,0 +1,162 @@
+{
+  "revision": "v002",
+  "seconds": 30,
+  "sample_rate": 48000,
+  "foundation": {
+    "active_bars_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14
+    ],
+    "four_even_kicks_every_active_bar": true,
+    "bass_matches_same_two_bar_phrase_every_active_bar": true,
+    "foundation_trace_unchanged_from_v001": true,
+    "motif_rhythm_preserved_through_voicing_change": true,
+    "break_seconds": [
+      20.625,
+      22.5
+    ],
+    "return_seconds": 22.5,
+    "trace_sha256": "c864c0ba13121209657dbc39b66866a4f904b585bf2421f8837fbd6d2e5986bd",
+    "scope": "Actual export schedule, not audibility. Landing sub at cycle 15 is a separate voice excluded from this trace."
+  },
+  "renders": {
+    "master": {
+      "sha256": "d716f2eee8ed33bcec65b14e2dbfff284f933c33d7c4f9d9badc26b436131187",
+      "integrated_lufs": -17.61,
+      "true_peak_dbtp": -3.86,
+      "pcm_rail_samples": 0,
+      "bar_rms_dbfs": [
+        -17.699,
+        -17.493,
+        -17.701,
+        -17.484,
+        -17.697,
+        -17.483,
+        -17.698,
+        -17.473,
+        -17.581,
+        -17.444,
+        -17.581,
+        -35.46,
+        -17.696,
+        -17.474,
+        -17.695,
+        -31.956
+      ],
+      "last_20ms_peak_dbfs": -69.48
+    },
+    "drums": {
+      "sha256": "8d73f7574e78ffccaa077dc868545c01df1e1847540850fe70feca1db99ae009",
+      "integrated_lufs": -18.83,
+      "true_peak_dbtp": -7.53,
+      "pcm_rail_samples": 0,
+      "bar_rms_dbfs": [
+        -20.121,
+        -20.121,
+        -20.118,
+        -20.119,
+        -20.109,
+        -20.11,
+        -20.109,
+        -20.11,
+        -20.109,
+        -20.11,
+        -20.109,
+        -81.545,
+        -20.11,
+        -20.11,
+        -20.109,
+        -81.545
+      ],
+      "last_20ms_peak_dbfs": -240.0
+    },
+    "bass": {
+      "sha256": "5be8baedd99c84d1d3cb0e0f3914e47f7546a0c880e324b2ee79f93dd8897421",
+      "integrated_lufs": -23.9,
+      "true_peak_dbtp": -10.81,
+      "pcm_rail_samples": 0,
+      "bar_rms_dbfs": [
+        -21.865,
+        -21.095,
+        -21.874,
+        -21.096,
+        -21.871,
+        -21.088,
+        -21.868,
+        -21.09,
+        -21.86,
+        -21.089,
+        -21.866,
+        null,
+        -21.871,
+        -21.087,
+        -21.867,
+        -36.199
+      ],
+      "last_20ms_peak_dbfs": -240.0
+    },
+    "theme": {
+      "sha256": "fdee543891a18f1c22941d2e0917c7264f367150da238210362849bdabc482fb",
+      "integrated_lufs": -29.0,
+      "true_peak_dbtp": -13.8,
+      "pcm_rail_samples": 0,
+      "bar_rms_dbfs": [
+        -32.214,
+        -37.24,
+        -32.161,
+        -37.235,
+        -32.264,
+        -37.337,
+        -32.264,
+        -37.337,
+        -30.002,
+        -35.306,
+        -30.002,
+        -34.877,
+        -32.223,
+        -37.295,
+        -32.221,
+        -34.161
+      ],
+      "last_20ms_peak_dbfs": -69.48
+    },
+    "details": {
+      "sha256": "cb385f38f0c3dcfc0e539b9ea58c006ae3eb9fd87eb6cabe684b33dd9aee2bfa",
+      "integrated_lufs": -39.22,
+      "true_peak_dbtp": -22.15,
+      "pcm_rail_samples": 0,
+      "bar_rms_dbfs": [
+        null,
+        null,
+        null,
+        -44.613,
+        -64.528,
+        null,
+        null,
+        -42.657,
+        -64.45,
+        null,
+        -50.574,
+        -49.694,
+        null,
+        -44.613,
+        -50.403,
+        -82.1
+      ],
+      "last_20ms_peak_dbfs": -240.0
+    }
+  },
+  "screening": "Source/event and signal checks only. No claim of personal hearing or validated model taste judgment; Olof's verdict pending."
+}

@@ -1,0 +1,3 @@
+sub: note(ucBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4).mask(ucBed).postgain(.78)
+bass: note(ucBass).s("sawtooth").lpf("<370!4 420!4 470 520 590 240 440!3 200>").lpenv(1.65).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.43).orbit(4).mask(ucBed).postgain(.78)
+landing: note("f1").s("sine").attack(.008).decay(.3).sustain(0).release(.2).gain(.40).orbit(4).mask("<0!15 1>").postgain(.78)

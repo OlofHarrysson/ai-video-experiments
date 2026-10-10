@@ -1,0 +1,41 @@
+// Module 1: modules/v001/setup.strudel
+// Undercurrent — 128 BPM, 16 bars / 30 seconds.
+setcpm(128/4)
+const ucBed = "<1!11 0 1!3 0>"
+const ucBass = "<[~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ ~] [~ f1 ~ f1 ~ ~ f1 ~ ~ f1 ~ ~ f1 ~ eb1 ~]>"
+const ucMotif = "<[~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ ucchord:0 ~ ~ ~ ~ ~ ~ ~ ~]>"
+
+;
+
+// Module 2: modules/v001/drums.strudel
+kick: s("bd*4").bank("RolandTR909").speed(.86).gain(.49).orbit(1).mask(ucBed).postgain(.78)
+clap: s("~ cp ~ cp").bank("RolandTR909").speed(.79).hpf(700).lpf(4300).gain(.16).room(.07).orbit(2).mask(ucBed).postgain(.78)
+hat: s("~ hh ~ hh ~ hh ~ hh").bank("RolandTR909").speed(.93).gain(".12 .095 .11 .095").hpf(3500).lpf(9200).pan(.55).orbit(1).mask(ucBed).postgain(.78)
+brush: s("<[~ ~ ~ ucbrush ~ ~ ~ ~ ~ ~ ucbrush ~ ~ ~ ~ ucbrush] [~ ~ ~ ucbrush ~ ~ ~ ~ ~ ~ ~ ucbrush ~ ~ ucbrush ~]>").gain(".035 .052 .028").lpf(3800).pan(".35 .65").swingBy(.11,8).orbit(3).mask("<0!2 1!9 0 1!3 0>").postgain(.78)
+openhat: s("~ ~ ~ oh ~ ~ ~ oh").bank("RolandTR909").gain(.065).clip(.32).hpf(4600).lpf(10000).pan(.4).orbit(1).mask("<0!4 1!7 0 1!3 0>").postgain(.78)
+
+;
+
+// Module 3: modules/v001/bass.strudel
+sub: note(ucBass).s("sine").fm(.65).fmh(1).fmdecay(.075).fmsustain(.12).lpf(150).attack(.004).decay(.13).sustain(.5).release(.025).gain(.82).orbit(4).mask(ucBed).postgain(.78)
+bass: note(ucBass).s("sawtooth").lpf("<370!4 420!4 470 520 590 240 440!3 200>").lpenv(1.65).lpattack(.002).lpdecay(.10).lpsustain(.12).attack(.004).decay(.13).sustain(.3).release(.025).gain(.43).orbit(4).mask(ucBed).postgain(.78)
+landing: note("f1").s("sine").attack(.008).decay(.3).sustain(0).release(.2).gain(.40).orbit(4).mask("<0!15 1>").postgain(.78)
+
+;
+
+// Module 4: modules/v001/theme.strudel
+// Same three-hit, two-bar motif. One upper voicing changes in the middle phrase.
+theme: s(ucMotif).gain(".25 .19 .24").lpf("<1400!4 1800!4 2200!3 900 1600!3 900>").hpf(260).pan(.46).delay(.18).delaytime(.3515625).delayfeedback(.29).room(.14).orbit(5).mask("<1!8 0!4 1!3 0>").postgain(.78)
+colour: s("<[~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~] [~ ~ ~ ~ ~ ~ ~ ucchord:1 ~ ~ ~ ~ ~ ~ ~ ~]>").gain(".25 .19 .24").lpf(1800).hpf(260).pan(.46).delay(.21).delaytime(.3515625).delayfeedback(.32).room(.14).orbit(6).mask("<0!8 1!3 0!5>").postgain(.78)
+held: s("ucchord:1").speed(.75).gain(.23).lpf(1500).hpf(300).pan(.5).delay(.3).delaytime(.3515625).delayfeedback(.43).room(.26).orbit(7).mask("<0!11 1 0!4>").postgain(.78)
+resolve: s("ucchord:0").gain(.21).lpf(1100).hpf(260).delay(.24).delaytime(.3515625).delayfeedback(.3).room(.22).orbit(8).mask("<0!15 1>").postgain(.78)
+
+;
+
+// Module 5: modules/v001/details.strudel
+// Phrase-end answers use the existing chord and brush instead of introducing a new lead.
+reply: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ucchord:0 ~ ucchord:0").gain(".095 .07").speed(.5).hpf(500).lpf(1600).pan(".65 .36").delay(.15).delaytime(.234375).delayfeedback(.2).orbit(9).mask("<0!3 1 0!3 1 0!5 1 0!2>").postgain(.78)
+fill: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ucbrush ~ ~ ucbrush [ucbrush ucbrush] ~").gain(".045 .06 .035 .05").speed(".83 1 .91 1.1").pan(".36 .62").room(.1).orbit(10).mask("<0!7 1 0!2 1 0!3 1 0>").postgain(.78)
+intake: s("~ ucbreath").gain(.04).hpf(1000).pan(.53).orbit(11).mask("<0!7 1 0!3 1 0!4>").postgain(.78)
+
+;

@@ -1,0 +1,28 @@
+{
+  "origin": "Original deterministic synthesis; no artist recordings",
+  "seed": 2026101017,
+  "sample_rate": 48000,
+  "chords": [
+    "Ab3 C4 Eb4 G4: rootless Fm9 over F bass",
+    "Bb3 C4 F4 G4: suspended colour over the same F bass"
+  ],
+  "design": "Muted detuned harmonic bodies, softened attack, fast darkening; filtered noise brush and breath",
+  "outputs": [
+    {
+      "file": "references/assets/samples/ucchord/00.wav",
+      "sha256": "5d15e2fb3fabc552eb10346091a9f90a2abd10484d46586cbe4830981a3275ff"
+    },
+    {
+      "file": "references/assets/samples/ucchord/01.wav",
+      "sha256": "e51616587eabaed7794f113f40a58fba80065d73773ea685ef65847279bae6d7"
+    },
+    {
+      "file": "references/assets/samples/ucbrush/00.wav",
+      "sha256": "55a0be64ab6c0aff3f828765183b3df7bb3acdb876c2600348c6dfed0f64304f"
+    },
+    {
+      "file": "references/assets/samples/ucbreath/00.wav",
+      "sha256": "4b94b90a75f8c0da8fe912e9e44fad828ef15ed844fffe4f46441c45b2addb84"
+    }
+  ]
+}

@@ -4,10 +4,13 @@ Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical
 
 ## Current goal
 
-The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md), 12:10:53–14:10:53 UTC on 2026-10-10, has selected **Pressure Lock v011** and **Negative Space v012** for Olof’s listening. Both are exactly 30 seconds. The sprint and preservation checks are complete; `sprint.json` records the actual finish and acceptance evidence. Olof approved Undertow v003’s direction and requested substantially greater craft and originality through modular collaboration. These selections have not received a human taste verdict. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
+Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Its taste verdict is pending.
+
+The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md) is complete; do not restart its goal. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
 
 ## Completed and checked
 
+- **[Undercurrent v002](../projects/undercurrent/README.md): stable foundation and related development.** Exactly 30 seconds at 128 BPM. A repeating two-bar bass phrase, four-on-the-floor kick and three-hit muted chord motif; upper-voicing change, phrase-end details, one-bar break and familiar return. Master plus four stems complete at 48 kHz stereo, zero PCM rails; master −17.61 LUFS / −3.86 dBTP. Actual-export event checks verify the repeating foundation and unchanged motif rhythm through its harmonic change. Original sample generator, versioned sources and a verified portable bundle are preserved. 36 Python tests and Ruff pass; reusable tooling and renderer unchanged. Technical screening only; Olof's taste verdict pending.
 - **[Club-detail selections](../projects/club-detail-sprint/README.md): Pressure Lock v011 and Negative Space v012.** Three modular contenders developed through composition, sound design and independent critique. Matched listening copies are in `projects/club-detail-sprint/exports/selected-v002/`; original masters/stems, samples, generators and revisions remain preserved. Both selected masters are unclipped, aligned 48 kHz stereo. Their portable bundles were rebuilt successfully with all source/sample hashes and bank indices verified. Latch v006 is the continuous-groove alternative. A fresh local workbench installation also rebuilt the final Negative Space bundle successfully.
 - Tooling now supports checked module assembly, per-band stem inspection, anonymous matched pairs, PCM rail/headroom warnings, actual-export onset tracing and verified portable bundles. The onset trace caught and verified the correction of three unintended bass/object collisions. Latest checks: **36 Python tests, all 16 renderer tests, none skipped, and Ruff pass**. Thirty-five completed audio-review responses report $0.7184919; two timeouts remain unknown outcomes/costs. Duplicate and timing controls exposed unreliable model descriptions; they do not establish expert taste. [Evidence and limits](../projects/club-detail-sprint/README.md).
 
@@ -50,7 +53,7 @@ Latest selections: [Pressure Lock and Negative Space](../projects/club-detail-sp
 
 ## Next work
 
-1. Get Olof’s listening verdict on the selected two 30-second studies. Preserve these baselines and use his preference to choose the next focused refinement or extension.
+1. Get Olof’s listening verdict on Undercurrent: does its foundation/development relationship fit better, and which specific timbres or drum elements should change? Preserve the previous selections.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 

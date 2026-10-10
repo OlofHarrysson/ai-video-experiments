@@ -1,0 +1,4 @@
+// Phrase-end answers use the existing chord and brush instead of introducing a new lead.
+reply: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ucchord:0 ~ ucchord:0").gain(".095 .07").speed(.5).hpf(500).lpf(1600).pan(".65 .36").delay(.15).delaytime(.234375).delayfeedback(.2).orbit(9).mask("<0!3 1 0!3 1 0!5 1 0!2>").postgain(.78)
+fill: s("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ucbrush ~ ~ ucbrush [ucbrush ucbrush] ~").gain(".045 .06 .035 .05").speed(".83 1 .91 1.1").pan(".36 .62").room(.1).orbit(10).mask("<0!7 1 0!2 1 0!3 1 0>").postgain(.78)
+intake: s("~ ucbreath").gain(.04).hpf(1000).pan(.53).orbit(11).mask("<0!7 1 0!3 1 0!4>").postgain(.78)
