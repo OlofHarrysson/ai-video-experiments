@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
@@ -104,16 +105,17 @@ def prepare(config):
     copy_verified(source, root / "anchors/0000.png")
 
 
-def check(config):
+def check(config, through=None):
     root = OUT / config["case"]
     require(read(root / "config.json") == config, "Frozen configuration differs")
     require(
         sha(root / "anchors/0000.png") == config["initial_sha256"], "Opening differs"
     )
+    last = config["painting_frames"][-1] if through is None else through
+    require(last in config["painting_frames"][1:], "Expected a repaint boundary")
+    positions = [frame for frame in config["painting_frames"] if frame <= last]
     jobs = []
-    for previous, frame in zip(
-        config["painting_frames"], config["painting_frames"][1:]
-    ):
+    for previous, frame in pairwise(positions):
         row = read(root / f"anchor-{frame:04d}.json")
         run = OUT / row["run"]
         parent = root / f"anchors/{previous:04d}.png"
@@ -168,7 +170,12 @@ def check(config):
         jobs.append(
             {"frame": frame, "prompt_id": history["prompt"][1], "sha256": sha(target)}
         )
-    save(root / "study-check.json", {"verified": True, "jobs": jobs})
+    check_file = (
+        "study-check.json"
+        if last == config["painting_frames"][-1]
+        else f"study-check-through-{last:04d}.json"
+    )
+    save(root / check_file, {"verified": True, "jobs": jobs})
     return jobs
 
 
@@ -178,6 +185,7 @@ def main():
     parser.add_argument("matrix", type=Path)
     parser.add_argument("--deployment", type=Path)
     parser.add_argument("--ids", nargs="+")
+    parser.add_argument("--through-frame", type=int)
     args = parser.parse_args()
     cases = read(args.matrix)["cases"]
     if args.ids:
@@ -190,6 +198,12 @@ def main():
             "Invalid case",
         )
         require(config["cfg"] == 1 and config["cadence"] == 12, "Study controls differ")
+        last = (
+            config["painting_frames"][-1]
+            if args.through_frame is None
+            else args.through_frame
+        )
+        require(last in config["painting_frames"][1:], "Expected a repaint boundary")
         if args.stage == "render":
             require(args.deployment is not None, "Explicit deployment required")
             prepare(config)
@@ -198,12 +212,12 @@ def main():
                 OUT,
                 PodClient.from_path(args.deployment),
                 first_frame=12,
-                last_frame=config["painting_frames"][-1],
+                last_frame=last,
                 run_prefix=config["case"],
                 filename_prefix="world-seed/noise-reference/" + config["case"],
                 graph_transform=transform,
             )
-        jobs = check(config)
+        jobs = check(config, last)
         print(f"VERIFIED {config['case']}: {len(jobs)} paintings", flush=True)
 
 

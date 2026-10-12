@@ -4,6 +4,8 @@ A continuous thirty-second surreal journey: alien jungle, an ancient black-and-g
 
 [Watch the film](exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Direction and screening](experiments/choreography.md)
 
+[The Crystal Gate](experiments/crisp-passage/README.md) is a new six-second passage using the preferred adapter settings: black/gold architecture develops into a cyan/violet crystal gateway. Clearer contours, persistent landmarks and simplified fine engraving; human review pending. [Watch the draft](http://localhost:3028/world-seed-crisp-passage).
+
 ## The journey
 
 | Delivery | World and event | Motion and visual treatment |

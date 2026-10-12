@@ -1,0 +1,19 @@
+{
+  "study": "crisp-passage-openings",
+  "cases": [
+    {
+      "id": "cp-city-clear-a",
+      "seed": 1012500,
+      "prompt": "An ancient impossible city of jet-black basalt and polished metallic gold suspended beneath an ink-black cosmic sky. A sweeping elevated road curves from the lower left foreground toward a large open circular aperture just right of center. Needle towers and terraced palaces stand on both sides of the road; their densely carved facades contain miniature arches, fluted pillars and precise geometric relief. The road has razor-thin golden edge inlays and sharply incised basalt arabesques. Several immense interlocking architectural rings surround the distant aperture, framing a small luminous cyan faceted crystal. The black stone has crisp chipped edges, minute silver mineral flecks and engraved seams; golden rails carry closely spaced chased metal grooves. Deep cobalt shadows separate the structures. Small amber windows and thin cyan reflections provide bright color against the black and gold. Clear empty space between sharply resolved near and distant forms, deep focus, directional grazing light and controlled pinpoint reflections. A meticulously detailed surreal digital environment with clean color separation and strong local contrast. Wide asymmetrical composition, monumental scale, an unobstructed route into the aperture. The air is perfectly clear, the outlines precise, the materials solid and intricately modeled. No people, letters, mist, bloom or painted brush texture.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "cp-city-clear-b",
+      "seed": 1012501,
+      "prompt": "An ancient impossible city of jet-black basalt and polished metallic gold suspended beneath an ink-black cosmic sky. A sweeping elevated road curves from the lower left foreground toward a large open circular aperture just right of center. Needle towers and terraced palaces stand on both sides of the road; their densely carved facades contain miniature arches, fluted pillars and precise geometric relief. The road has razor-thin golden edge inlays and sharply incised basalt arabesques. Several immense interlocking architectural rings surround the distant aperture, framing a small luminous cyan faceted crystal. The black stone has crisp chipped edges, minute silver mineral flecks and engraved seams; golden rails carry closely spaced chased metal grooves. Deep cobalt shadows separate the structures. Small amber windows and thin cyan reflections provide bright color against the black and gold. Clear empty space between sharply resolved near and distant forms, deep focus, directional grazing light and controlled pinpoint reflections. A meticulously detailed surreal digital environment with clean color separation and strong local contrast. Wide asymmetrical composition, monumental scale, an unobstructed route into the aperture. The air is perfectly clear, the outlines precise, the materials solid and intricately modeled. No people, letters, mist, bloom or painted brush texture.",
+      "width": 1536,
+      "height": 1024
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "World Seed — the crystal gate",
+  "selected": ["crisp-passage"],
+  "clips": [
+    {
+      "id": "crisp-passage",
+      "label": "The crystal gate · six-second draft",
+      "note": "Black stone and gold develop into a cyan/violet crystal gateway. Clear outlines and a persistent focal crystal; fine engraving still simplifies.",
+      "details": "Fresh opening B, followed by 53 recurrent paintings. Krea 2 Turbo, 1536×1024, Euler at noise 0.72, three updates, CFG1, editing adapter 0.25, reference boost 0.01 and grounding 768. Each repaint uses the already-moved previous painting for both partial-noise initialization and clean-reference conditioning. Material prompts change through the passage. RIFE finishing stays outside feedback; six seconds at 24 fps. No extra refinement pass, masks or fixed-opening reference. This is a new artistic passage, not a matched settings comparison with the earlier film.",
+      "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

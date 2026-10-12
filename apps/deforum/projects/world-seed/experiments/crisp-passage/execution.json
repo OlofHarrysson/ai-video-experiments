@@ -1,0 +1,465 @@
+{
+  "experiment": "The Crystal Gate",
+  "date": "2026-10-12",
+  "status": "complete_human_review_pending",
+  "model": "Krea 2 Turbo FP8",
+  "configuration": "passage-a.json",
+  "configuration_sha256": "c58cca0f8da1349fc95b5cb0d197741c2b8d28eba4b299388fbc3fcee2041709",
+  "opening": "cp-city-clear-b",
+  "actual_new_jobs": 55,
+  "openings": 2,
+  "new_repaints": 53,
+  "painting_count": 54,
+  "resolution": [
+    1536,
+    1024
+  ],
+  "sampler": "euler",
+  "primary_noise": 0.72,
+  "sigmas": [
+    0.72,
+    0.6154129028316,
+    0.3730812907224,
+    0
+  ],
+  "cfg": 1,
+  "adapter_strength": 0.25,
+  "ref_boost": 0.01,
+  "grounding_px": 768,
+  "reference_policy": "Already-warped previous painting supplies target initialization and clean reference; no fixed opening, mask, copyback or additional refinement.",
+  "runtime": {
+    "comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+    "reference_nodes_commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+    "edit_adapter_revision": "89e9e7a09ee2e5c9331e952063d79b1b8a703280",
+    "edit_adapter_sha256": "6adf9a69cc9502d286db7b69964d37da7e9cfe4b05b4d004bc275f087d3fd3cf"
+  },
+  "jobs": [
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "194a9384-cdf1-4bbc-8846-7d35760ec8b8",
+      "output_sha256": "bc7ee98e30dabbeefa1fca0667ae26fe24a24972b070fc9e5a467b505b51047b"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "d6bb4b33-58bb-47e0-930e-ef5d7cebef87",
+      "output_sha256": "8f447829f7254bcdd059d25a16792548a3dfc20277e8778c05826d39474736f9"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "867d5a0b-36df-4906-8bdb-98ea8099e4d1",
+      "output_sha256": "6e540dbb735e3311f42f9821dd3b4c947e9b65ac60818f26dd477ee8a81e06a9"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "7ca570e1-665b-479e-a93d-062aec22b250",
+      "output_sha256": "e70eef7471eb2e9b945e59ee5a440d7cf830eb7143ee5b070b48a1417b59805b"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "f59ab6a9-e432-4b3c-9c7b-ff2dc9dae072",
+      "output_sha256": "af6518a1c80f04cae2f3adfb188ee760c0ab68745dcdc9c166cccd237615e974"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "8ac747ef-59b6-440f-8d49-7e69739b2cad",
+      "output_sha256": "2edbbe31e32b474f7ead4e40bf5895ad4f76d8c0c95ecb69baee01de460e08e7"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "30dafaa6-c680-4c8c-9844-f4283b0b795a",
+      "output_sha256": "a992ee0ab80bca3971552f529daf4b902db9dd8754a879cd45e44eead7f7b50c"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "1e5857e6-dc2a-4864-8c43-9fed6926d206",
+      "output_sha256": "7ff1ca7a0665fbda6819a5bf90684c5aade0d0e1a1a946a161cd9e1354a1ecac"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "90fc3e8d-b3f4-4e6e-b834-1a4b732629c9",
+      "output_sha256": "807c20c4b5988102989f1abe117f8d86a2b2e5b31c5c99488fc155775749d00b"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "59f824e1-72e0-446f-8a11-bd088f581a5f",
+      "output_sha256": "e9d569dab6713d88601f3fad47284fb38496a45a91ce1bc2339b8d3fd8c8fc21"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "d5bb2e89-4a15-4d37-b057-9ad7fdd52746",
+      "output_sha256": "7329272176d150ba60f29bcd5f6aef105b55ecaf4b91818191afe30488f537ab"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "8feba1eb-f040-4c88-9363-df58d9936f47",
+      "output_sha256": "ddfe6a0c4b0d00180523e6fd4926f53e732fa013c4c979e17364a705b56c7cae"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "ef56ed29-e7e2-40bf-8067-d99603679811",
+      "output_sha256": "fdbae3cd1126c4fa85169dbc812a5a1a15ffff97241d1e21720f346ccf030617"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "f37d2a9d-6e1c-4bd4-9cb1-d837f52ca1ce",
+      "output_sha256": "6017b52dbd1e021b4d7bc6c5775773738ac54580d5d02ca7191dbc8f7208adc9"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "019bb9f6-8650-4c2f-b0d6-74e125114d8a",
+      "output_sha256": "0ec1529206efaa28343d9ce30341250c792e2626a8b07578cc95265057275108"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "a9ab7b19-f2a6-4057-b326-a4b7eb9d7453",
+      "output_sha256": "c764135b75c4773510c422546117932e4f315e6f9d56789fe3bd27de37f914ea"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "fc51ee4a-fe3a-43b3-b78f-ad21953ea395",
+      "output_sha256": "f848a1610d949b8500df3ba9dc4b842512d85a2c045201cd8377a60b9e076a2a"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "057c28e4-0f16-4676-b9e4-9b8fd73030ab",
+      "output_sha256": "f8e80cfe9c04d01e5c75f5ecf8002337ba9b2dd484c6dc7c2d0d91d0c137381f"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "afff5c99-74b0-4243-ab9f-da7401461233",
+      "output_sha256": "d1e538dd7da6782c2b25038f45f3520a88714c2e713c986d6c777af9a2b1b51b"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "200e9105-df86-40a0-bfd7-339ee78f1664",
+      "output_sha256": "868ff89d720a52168d3a2b57c52141f55da58d310ba3e480899521251924c94b"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "3b7742f1-5844-4ef3-aabe-60c2af1d4bb5",
+      "output_sha256": "ddb1fd9eb0a9940eac62ef6ba434c93b3098b84ad062516cf3f292b748e26012"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "d3207a95-bf85-45f5-a82f-50fe06c2222d",
+      "output_sha256": "dcb9d4c734ab15db339fe06d9daedba5ada43bdd056f7e726e59fa5621e08348"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "ec8da2a5-79cd-4fff-897b-60395ce22d51",
+      "output_sha256": "1d968a21a4797b6b012d444f5aa3d6ab51cdd415d95b8a36c21caa43ca72bfa6"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "053d9419-2507-4b0e-8c05-4848cd161f95",
+      "output_sha256": "a6707180ad2f22a4409432165ae26183d97a916021628f3b82c43fa7e10c53b0"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "5df5afe5-ae2c-49da-afb9-c03972464b47",
+      "output_sha256": "bde5c6d7242883a7104557b200ca17561281234e87a7e5a31a36ac8105163c59"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "bb92af23-8208-49aa-afda-6593fd0f2de5",
+      "output_sha256": "e490e57e5ef6618e3c0bc6c7d1128af77622ca990e63413b4e783d1cd7004841"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "246b2be4-488a-4046-b36a-776203efa3ee",
+      "output_sha256": "cf5638ed29f444c2e24c7fa8f86d1cf7907e658f86f70c59d1a36844230f6bcf"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "f0d9947d-1dfc-4b18-a802-6feec627954e",
+      "output_sha256": "c65481e2c3eb6565b0087db63bd7fd2947dc1693f8654ba3da33d82998515dd3"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "6c55ac4a-2c87-480a-b19c-1640f67b5183",
+      "output_sha256": "acd2bd8005b6e4bcef3634d1be6c742af7751635e6c694b40f4d1a35b7acdefa"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "9f555d0c-1e17-4041-8be8-5cd23d7f3373",
+      "output_sha256": "69c06c1d650a16b5eed3d530ef95afd5273de50fe1767a6ed990aa89470491f0"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "d4a6742c-b0f9-41be-8496-5f1db5766743",
+      "output_sha256": "c58619fcc21c290911974f9dc68d3bdbaaa91c7afac1339a72fb078db3a6f487"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "299a725a-4ac1-4087-bdd5-b4fea4dd33d5",
+      "output_sha256": "55c3cae4f05fe8854dd7113cb4bc8378121fd76bc432c5f99ab0d4a913a48f92"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "d84b1ecc-0888-4962-b60f-edc37901d7aa",
+      "output_sha256": "3bbcc9061f889f4da664a74347666ed4951917a30b48c75e73ac30bf22710932"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "46a3c771-944d-4f51-8689-274ca5f32b50",
+      "output_sha256": "0994955e4511e15f07f34fd8ef7337db117d5ad5e8608886d7c5ab637f941907"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "5b827547-4001-4d20-9c11-4cc7e8828c78",
+      "output_sha256": "73e4a110013f63048c4ecc9202abeccce72167a9f0ad30137c70ba62d0c6f81e"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "1a9a5916-9be9-4fdb-9e3d-de4fdc23020e",
+      "output_sha256": "4554aecb91d83c9f4ce050937809d13214c832efd4b0d5d604b216fe34de8ce4"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "8534fce0-e67d-49a8-8a26-ac4cbce10ac2",
+      "output_sha256": "f841281a5f25b04f2cf9f8d0a66d2ab35a93882374121c0ae436793242fe8db3"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "b02b16e7-8db4-4e78-966e-fc36fee5f159",
+      "output_sha256": "fbb608c5d6364db65cc4284533978624417aa1f8b8e6ca1557a7d5ee13bafe8f"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "dd3142ce-17bb-41b0-a9c7-9b0091cfdc5b",
+      "output_sha256": "ed434305ceae2697bd6ab943a2996b8f3e2b13a99c637d1653be73dc325a9ef8"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "c885bc3e-5084-4754-8490-8566dc97d5ed",
+      "output_sha256": "edc4630c7010f391192844f90905db3dab564ecdd42c397265d6e47eba852ea8"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "253ead49-9e55-43c4-8c9e-489034a85828",
+      "output_sha256": "f61b6213a162e0b0473e54766f856187b5e01a1a95d5f6998f21bda38c9d4bc0"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "29878386-1621-45cf-98cc-24783e1b3f15",
+      "output_sha256": "b63153c98bb3f2fee8eac324309fb356e5fb6c961dccf31080b54ec813c2f0e8"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "f48aed15-0f92-4a6e-8ba5-f1427a98f2cc",
+      "output_sha256": "49999f3a1e350b42087edf1f4197d02b3900a9d489150d563c89936fa6e89fe6"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "181f5ce1-f25f-4742-91f4-eccd26256976",
+      "output_sha256": "fdbe7737df459a26a1af3be351d6dca5cc71d7af1b1d7111f2065c92eeb2fdd5"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "6a3fe642-4944-4115-8259-f1dd8be4d99e",
+      "output_sha256": "ab18ba98f0621bd84a1ae49d04f488cf559a92786ac157a73d4779ba76c6ad3a"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "f5178fb6-469c-49d9-89fd-a4b219b6b0f5",
+      "output_sha256": "8c99171913d1d0b301096d26e59605c69461031fcbb8e8002a59c3bbe85b4b37"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "62f1539f-ac27-42d7-8b69-5efa1b6a145c",
+      "output_sha256": "83ecc411a11523108176b8aaf5ae4989486aa690578c53fc1033c2dd26a327fc"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "14b4afdd-58ce-4fc3-8846-a5b7e85b38c5",
+      "output_sha256": "b5a7a968e015661c26f9d368e9fe96c52e4ed297a365f02a0fbdd9ccf78b8430"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "752816ec-598b-469f-aa4c-23ca3016391d",
+      "output_sha256": "cf364c1a5fed608a9026e431fee779e4ea1b2f511538263084f7fb6e7674fc47"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "af4a8f0d-fb6d-47b5-82d9-a3aa22416d2f",
+      "output_sha256": "ad4f2af81cdd3201f7b562b0c6d30c8eb52686bf3de4568cc8ae9699b8bc9a4a"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "3adb6809-9b31-428a-af8c-72576f2b6214",
+      "output_sha256": "3c16ef1205c3215419ec5a798cc8a4d217f4aad27d8f2d9adcc563a7d1cc5f18"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "7556da9d-f6f3-471d-8227-fc095b94aed4",
+      "output_sha256": "0d8a329070a23c24cdb0f94305d3ded4b6eb49f91e3e1f22344ee882f9f71e92"
+    },
+    {
+      "case": "nr-cp-city-crystal-a",
+      "prompt_id": "8dc42705-a460-413a-aa56-6d4541ed4e09",
+      "output_sha256": "6f577cd0f46e7bc8abdd5583c41532b814d2792ea888ede09524205efe54c5cc"
+    },
+    {
+      "case": "cp-city-clear-a",
+      "prompt_id": "42932a06-78e0-4779-a28c-654ec04189e4",
+      "output_sha256": "c68c7062b1bfd6da591b890e7d10d26ed8f0b76ababa281f534d6091bf9d6fa6"
+    },
+    {
+      "case": "cp-city-clear-b",
+      "prompt_id": "d2545bb7-3408-4537-b261-5b75db79cbcf",
+      "output_sha256": "bf805bc3a14842518e07594b2baab9571db40965cd511a569527cd868a8ceddb"
+    }
+  ],
+  "screening": {
+    "opening_candidates": [
+      "cp-city-clear-a",
+      "cp-city-clear-b"
+    ],
+    "selected_opening": "cp-city-clear-b",
+    "opening_selection": "Viewed both native paintings. B has a broader readable road and clean carved foreground edges. Both avoid the earlier pale haze; this is an assistant artistic choice.",
+    "motion_only_review": {
+      "source_seconds": [
+        0,
+        4.5,
+        9,
+        13.5
+      ],
+      "artifact": "projects/world-seed/exports/crisp-passage-review-v001/motion-only-overview.jpg",
+      "timing": "Inspected after submitting the first repaint. No framing defect found; do not present as a pre-inference check."
+    },
+    "first_checkpoint": {
+      "through_source_frame": 204,
+      "painting_count": 18,
+      "viewed_all_paintings": true,
+      "native_checkpoints": [
+        0,
+        108,
+        132,
+        156,
+        204
+      ],
+      "delivery_review": {
+        "first_pair": "all 4 frames",
+        "two_second_overview": 8,
+        "dense_window": [
+          1.25,
+          1.5
+        ]
+      },
+      "observations": "Road, gold rings and cyan crystal persist. Fine carving becomes smoother and simpler. Porous rose/ivory mineral structures grow in the rings near 1.3 seconds. No major opening composition replacement or ring doubling in inspected first pair. The mineral reveal is quick and may read as a visible repaint. No claim of flawless normal-speed rhythm from still inspection.",
+      "decision": "Extend the same frozen plan through source frame 420."
+    },
+    "second_checkpoint": {
+      "through_source_frame": 420,
+      "painting_count": 36,
+      "native_checkpoints": [
+        288,
+        336,
+        420
+      ],
+      "observations": "Clear outline continuity persists. City becomes a porous ivory/gold aperture with cyan and violet cells. Transformation is more conservative than authored; broad surfaces have simplified. Road and principal crystal remain.",
+      "decision": "Complete the frozen six-second draft to assess the final crystalline-world and garden stages.",
+      "viewed_all_paintings": true,
+      "dense_windows": [
+        [
+          2.58,
+          2.83
+        ],
+        [
+          3.5,
+          3.75
+        ]
+      ],
+      "interpolation_observation": "No conspicuous doubled road or ring contour in these 14 inspected displayed frames. Local cells and light accents repaint. This is frame inspection, not a human playback verdict."
+    },
+    "final": {
+      "all_paintings_viewed": 54,
+      "native_additional_checkpoints": [
+        444,
+        576,
+        636
+      ],
+      "full_video_overview": 10,
+      "dense_final_windows": [
+        [
+          3.92,
+          4.17
+        ],
+        [
+          5.04,
+          5.29
+        ],
+        [
+          5.75,
+          5.959
+        ]
+      ],
+      "full_review": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/faster/rife-moving-tail/reviews/preview/v001/review.json",
+      "observations": "Main cyan crystal and road persist. Cyan/violet cells and green interior pockets emerge; outer rings develop angular facets. A smaller cyan crystal appears. Fine carving simplifies and later ribs become broad smooth surfaces. No conspicuous doubled road/ring contours in inspected windows. City-to-crystal development is more conservative than storyboard; no expansive garden reveal.",
+      "recommendation": "Show the six-second draft as an artistic application of the preferred settings; retain original thirty-second film as selected.",
+      "human_playback_verdict": "Pending. Still/frame inspection does not establish normal-speed rhythm or a universal detail improvement."
+    }
+  },
+  "delivery": {
+    "path": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/faster/rife-moving-tail/preview.mp4",
+    "sha256": "c13154295fa545ae72478797e63678ea9b3aabd84195a43602ad9866978558f9",
+    "seconds": 6,
+    "fps": 24,
+    "frames": 144,
+    "finishing": "RIFE 4.25 outside feedback, all original paintings preserved, final two displayed frames spatially warped",
+    "source_clock_seconds": 27,
+    "speed_multiplier": 4.5,
+    "verification": "Pair, full and moving-tail manifests, source pixels, all 144 frames, codec dimensions/timing and full decoding pass."
+  },
+  "verification": {
+    "generation": "All 55 requested/executed/history/PNG graphs, output hashes and dimensions match. All 53 parent images and camera-warp inputs match.",
+    "partial_checkpoints": [
+      204,
+      420
+    ],
+    "local_generation_and_checkpoint_files": 1101,
+    "local_preserved_bytes": 961948849,
+    "runtime_archive_sha256": "b4b82d054ff5d8e1844f2340d717a2452f19c033958575dfa99946e2520d1aed",
+    "remote_duplicates_verified_and_removed": 108,
+    "queue_empty_before_cleanup": true,
+    "reviewer_paintings": 54,
+    "runner_change": "Added bounded --through-frame render/check; historical requested graph comparison unchanged across 59 cases; preserved baseline partial check and actual staged resume passed.",
+    "lint": "Ruff passed for modified Python files.",
+    "reviewer_http": {
+      "new_review_http": 200,
+      "selected_film_http": 200,
+      "original_media_range_http": 206,
+      "range_bytes": 256,
+      "content_type": "video/mp4",
+      "content_range": "bytes 0-255/9911272",
+      "served_bytes_match_original": true
+    },
+    "reviewer_service": {
+      "status": "ready",
+      "ready": true,
+      "run_id": "b9b35f7d-2215-40ad-a3e2-ebd91b26c009",
+      "browser_open_request": "Queued by Codex; no claim of foreground playback verification.",
+      "layout": "Existing reviewer layout unchanged; new session data only."
+    }
+  },
+  "resources": {
+    "pod_id": "1jt4tme8p99vx5",
+    "gpu": "NVIDIA RTX PRO 4000 Blackwell",
+    "cost_per_hour_usd": 0.57,
+    "created_at": "2026-10-12T19:10:45.460000+00:00",
+    "deleted_at": "2026-10-12T19:42:20.725425+00:00",
+    "deletion_verified": true,
+    "model_volume_retained": "vd3jnbwko1",
+    "elapsed_minutes": 31.59,
+    "estimated_compute_usd": 0.3001,
+    "cost_scope": "Compute estimate, not posted billing; excludes retained storage."
+  },
+  "operational_notes": [
+    "RTX PRO 4500 provisioning returned unavailable capacity; RTX PRO 4000 provisioned successfully.",
+    "Final CLI cleanup initially lacked the repository environment; loading .env through uv completed and verified Pod deletion. No credentials written into this receipt.",
+    "SSH tunnel closed after verified Pod deletion."
+  ],
+  "private_receipts": "apps/deforum/work/world-seed-crisp-passage-session/",
+  "review": "http://localhost:3028/world-seed-crisp-passage",
+  "scope": "New artistic passage with different opening, camera, prompts and permissive transformation instruction; not an isolated adapter comparison with the older film."
+}

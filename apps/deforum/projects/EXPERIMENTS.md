@@ -6,6 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
+| Crisp city-to-crystal passage with the preferred reference settings | [World Seed six-second film draft](world-seed/experiments/crisp-passage/README.md) |
 | Noise schedules and clean references in recurrent paintings | [World Seed noise/reference study](world-seed/experiments/noise-reference/README.md) |
 | Prompt wording, material detail and cross-scene recurrence | [World Seed prompt study](world-seed/experiments/prompt-study/README.md) |
 | Contrasting surreal worlds in one continuous painting chain | [A World Inside Every Seed — bank, reveal and unfold](world-seed/experiments/choreography.md) |
