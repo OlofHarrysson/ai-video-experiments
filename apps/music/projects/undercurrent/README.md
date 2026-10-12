@@ -1,6 +1,6 @@
 # Undercurrent
 
-**[Open the sound player](http://localhost:3046/)** to turn parts on/off or hear Only one part. The original and revised chord rhythms are separate rows; steady rhythm is initially on. Olof clarified that the original instrument was okay, but its rhythm/echoes disturbed the flow, and Haze was worse. [Rhythm revision and evidence](flow.md), [player and shared controls](../../player/README.md), [user stories and design](../../player/design/README.md).
+**[Open the sound player](http://localhost:3046/)** to turn parts on/off or hear Only one part. Three chord rhythms are separate rows; **offbeat pocket** is initially on, alongside the previous **steady rhythm** and the original. [New offbeat comparison](pocket.md). Olof clarified that the original instrument was okay, but its rhythm/echoes disturbed the flow, and Haze was worse. [Rhythm revision and evidence](flow.md), [player and shared controls](../../player/README.md), [user stories and design](../../player/design/README.md).
 
 **Previous comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
 

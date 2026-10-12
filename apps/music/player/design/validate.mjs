@@ -20,7 +20,8 @@ try {
     await page.getByRole('button',{name:'Play',exact:true}).waitFor();
     await page.waitForFunction(()=>!document.querySelector('#play').disabled);
     const legacy=await page.locator('#palette').count()>0;
-    assert.equal(await page.locator('.track').count(),legacy?8:9);
+    const manifest=await page.request.get(url+'/manifest.json').then(r=>r.json());
+    assert.equal(await page.locator('.track').count(),manifest.tracks.length);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
     if(phase==='after') {
       assert.equal(await page.locator('textarea, #save, .feedback, #palette').count(),0);
@@ -30,13 +31,24 @@ try {
       assert.equal(await page.locator('.track:not(.silent)').count(),1);
       assert.equal(await page.locator('[data-track=chords-flow].silent').count(),0);
       await page.getByRole('button',{name:'Only Chords · steady rhythm',exact:true}).click();
-      assert.equal(await page.locator('.track:not(.silent)').count(),8);
+      assert.equal(await page.locator('.track:not(.silent)').count(),manifest.tracks.filter(t=>t.enabled).length);
       await page.getByRole('switch',{name:'Sound on/off Bass',exact:true}).click();
       assert.equal(await page.locator('[data-track=bass].silent').count(),1);
       await page.getByRole('button',{name:'Only Bass',exact:true}).click();
       assert.equal(await page.locator('[data-track=bass].silent').count(),0);
       await page.getByRole('button',{name:'Only Bass',exact:true}).click();
       assert.equal(await page.locator('[data-track=bass].silent').count(),1);
+      await page.getByRole('button',{name:'Reset mix',exact:true}).click();
+      // Every published take participates in the same exclusive comparison group.
+      const alternatives=manifest.tracks.filter(t=>t.alternativeGroup==='chords');
+      for(const take of alternatives) {
+        await page.getByRole('switch',{name:`Sound on/off ${take.name}`,exact:true}).click();
+        // A default-on take toggles off first; turn it on for this comparison.
+        if(await page.locator(`[data-track="${take.id}"] .sound-toggle`).getAttribute('aria-checked')==='false')
+          await page.getByRole('switch',{name:`Sound on/off ${take.name}`,exact:true}).click();
+        for(const other of alternatives)
+          assert.equal(await page.locator(`[data-track="${other.id}"] .sound-toggle`).getAttribute('aria-checked'),String(other.id===take.id));
+      }
       await page.getByRole('button',{name:'Reset mix',exact:true}).click();
       await page.getByRole('button',{name:'Play',exact:true}).click();
       await page.waitForFunction(()=>Number(document.querySelector('#seek').value)>.15);

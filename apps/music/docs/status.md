@@ -1,10 +1,10 @@
 # Music workbench — handoff
 
-Updated 2026-10-10. Work in `apps/music`; the brainstorm workspace is historical.
+Updated 2026-10-12. Work in `apps/music`; the brainstorm workspace is historical.
 
 ## Current goal
 
-**Current handoff: [shared sound player](../player/README.md)** at [localhost:3046](http://localhost:3046/), Terminal Manager service `music-player`, bundle `exports/player-v002`. Olof clarified that the original chord instrument was acceptable; **the rhythm and echoes disrupted the flow**, and Haze was worse. [Steady rhythm](../projects/undercurrent/flow.md) restores the original samples with chords on beats two/four and restrained echoes; all other seven parts are identical. The original and revised chords are separate rows. The new version is enabled, paused at the start. Taste verdict pending.
+**Current handoff: [shared sound player](../player/README.md)** at [localhost:3046](http://localhost:3046/), Terminal Manager service `music-player`, bundle `exports/player-v003`. Olof approved the dark/bright-blue player and requested another chord-rhythm comparison. **[Offbeat pocket](../projects/undercurrent/pocket.md)** moves the chords between the beats in a repeating two-bar phrase, reduces rhythmic hits from 28 to 22, and removes the rhythmic delay. The same sample bank, held break and ending are retained. The seven other audio parts and both previous chord stems are copied exactly. Compare **Chords · offbeat pocket** (initially on) against **Chords · steady rhythm** (the previous version); the original is also preserved as a third row. Taste verdict pending.
 
 The player now has exclusive **Only**, on/off switches, and a shared read/control API with browser acknowledgements. Palette selection and notes UI are removed; earlier feedback and versions remain preserved. [Four user stories and Design Harness evidence](../player/design/README.md) guide the editor. Desktop/mobile live checks, 37 Python tests, six player-engine tests and Ruff pass.
 
@@ -59,7 +59,7 @@ Latest selections: [Pressure Lock and Negative Space](../projects/club-detail-sp
 
 ## Next work
 
-1. Compare the steady and original chord-rhythm rows with Olof. Use the shared control API to set up a listening comparison and read actual state; keep the other seven parts fixed.
+1. Compare offbeat pocket against steady rhythm with Olof. Use the shared control API to set up a listening comparison and read actual state; keep the other seven parts fixed.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 
