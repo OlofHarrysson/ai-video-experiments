@@ -1,0 +1,107 @@
+{
+  "study": "refinement-probes",
+  "date": "2026-10-12",
+  "status": "complete_still_gate_not_passed",
+  "human_direction": "Start with saved paintings; continue with video comparison including refinement feedback only if still refinement looks promising.",
+  "model": "Krea 2 Turbo FP8",
+  "runtime_comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "reference_nodes_commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+  "refinement_noise": [
+    0.15,
+    0.3
+  ],
+  "adapter_strength": 0.25,
+  "ref_boost": 0.01,
+  "grounding_px": 768,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": [
+    1536,
+    1024
+  ],
+  "actual_new_paintings": 6,
+  "source_frames": [
+    12,
+    108,
+    204
+  ],
+  "source_case": "nr-ref-tidal-edit025",
+  "jobs": [
+    {
+      "case": "nr-refine-tidal-early-n015",
+      "prompt_id": "efc6ede6-a621-467f-bc25-42e2e9259941",
+      "output_sha256": "6885af746e1250b4aaaa03f66e3c1c20b9eebf5d2cf36760b7a9daed2f906731"
+    },
+    {
+      "case": "nr-refine-tidal-early-n030",
+      "prompt_id": "2596254f-7a18-45ca-b2b2-9fb020290a31",
+      "output_sha256": "81bedfde45321259a7d3e58b7f7f505f7bd2aa257a17d3f9b54f50e3faa94e4b"
+    },
+    {
+      "case": "nr-refine-tidal-middle-n015",
+      "prompt_id": "660da7af-2f33-4fa7-a4cf-f6327c170125",
+      "output_sha256": "f3e6506e03d928c1324b1922d00b0caefa8b03f335113070217189bc1267bd6b"
+    },
+    {
+      "case": "nr-refine-tidal-middle-n030",
+      "prompt_id": "a9e89419-3b0f-485b-9d5a-490fbf7d7719",
+      "output_sha256": "29daaf285201ca8d0ae69048acb9f72ef6dea6a3cac00b1b854403faa197531b"
+    },
+    {
+      "case": "nr-refine-tidal-late-n015",
+      "prompt_id": "c3881d1f-b895-45b9-ac49-8a3a3008b7ef",
+      "output_sha256": "696c2e82037206e1926f38cc4fc3367cc9d7cf8db00b07f57285227ca1559935"
+    },
+    {
+      "case": "nr-refine-tidal-late-n030",
+      "prompt_id": "4fa0c35c-bf6a-4d88-a88a-2ffa9109e32b",
+      "output_sha256": "d7d72282c354ed3496f3d86758ceee9331d3814610d1fe42fe800e655e9be368"
+    }
+  ],
+  "screening": {
+    "date": "2026-10-12T18:00:41.784928+00:00",
+    "status": "still_gate_not_passed",
+    "video_stage_started": false,
+    "second_world_started": false,
+    "screening": {
+      "coverage": "All three saved sources and all six generated paintings inspected; nine matched native 448x320 crops across shell, terrain and sky",
+      "early": "0.15 stays close to saved frame, with slight edge and crack changes. 0.30 adds larger dimples, redraws cracks and shell flecks; does not clearly increase fine material relief. Ringed planet and moon persist.",
+      "middle": "Broad smooth shell chambers remain smooth at both levels. 0.30 strengthens patch-like patterns on the upper moon and changes local shell edges/terrain ripples; no convincing fine-grain recovery. Planet and two moons persist.",
+      "late": "Both retain the principal shell and sky objects. 0.30 reorganizes small chambers and terrain/sky markings; some terrace edges become rougher but broad smooth surfaces and rounded forms remain. No convincing recovery of the original fine mineral relief."
+    },
+    "decision": "Do not launch either video refinement arm. Neither tested setting provides a convincing surface-detail improvement across the saved paintings. Preserve original as recommendation, 0.30 as the more visible comparison, and all six outputs.",
+    "limits": [
+      "One scene and one matched refinement seed per saved source",
+      "Only current Krea/reference recipe at native resolution, three Euler intervals, sigma .15/.30",
+      "No claim that all refinement methods fail",
+      "Neither feedback policy nor temporal behavior tested",
+      "Assistant visual judgment; human preference pending"
+    ]
+  },
+  "verification": {
+    "exact_graph_history_png_parent_warp_dimensions": "All six jobs passed",
+    "stationary_input_pixels": "Exact equality for all three saved sources",
+    "pair_graph_isolation": "Only output names and sigma list differ within each pair",
+    "local_files_preserved": 102,
+    "local_preserved_bytes": 58636944,
+    "runtime_archive_sha256": "b560e9e0e702b5159cd7095dc6b9760468cca71b324576984020fd47a8f9e415",
+    "remote_duplicates_verified_and_removed": 12,
+    "queue_empty_before_cleanup": true
+  },
+  "resources": {
+    "pod_id": "jycujp301hb6hc",
+    "gpu": "NVIDIA L4",
+    "cost_per_hour_usd": 0.59,
+    "created_at": "2026-10-12T17:52:33.828000+00:00",
+    "deleted_at": "2026-10-12T18:00:50.011917+00:00",
+    "deletion_verified": true,
+    "model_volume_retained": "vd3jnbwko1",
+    "elapsed_minutes": 8.27,
+    "estimated_compute_usd": 0.0813,
+    "cost_scope": "Compute estimate; not posted billing; excludes retained storage"
+  },
+  "transport": "Local runner through SSH tunnel to ComfyUI; public proxy returned HTTP403. Tunnel closed after verified Pod deletion.",
+  "review": "projects/world-seed/exports/refinement-review-v001/inspection-manifest.json",
+  "private_receipts": "apps/deforum/work/refinement-study-session/",
+  "human_verdict": "Pending; assistant recommends retaining the unrefined paintings."
+}

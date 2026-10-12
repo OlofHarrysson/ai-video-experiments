@@ -1,0 +1,253 @@
+{
+  "study": "refinement-probes",
+  "date": "2026-10-12",
+  "question": "Can one gentle extra repaint add material relief to early, middle and late saved paintings without damaging major forms or color?",
+  "cases": [
+    {
+      "case": "nr-refine-tidal-early-n015",
+      "seed": 1012400,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.15
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0012.png",
+      "initial_sha256": "b56fbcbedd1422d9615871eda79db4ea961f595c7164db2abb35c124a50bc760",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 12,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    },
+    {
+      "case": "nr-refine-tidal-early-n030",
+      "seed": 1012400,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.3
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0012.png",
+      "initial_sha256": "b56fbcbedd1422d9615871eda79db4ea961f595c7164db2abb35c124a50bc760",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 12,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    },
+    {
+      "case": "nr-refine-tidal-middle-n015",
+      "seed": 1012408,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.15
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0108.png",
+      "initial_sha256": "264b620f9e3e6950adf8e68435d6bffa69f29085b1a28bad084c32b29e751052",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 108,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    },
+    {
+      "case": "nr-refine-tidal-middle-n030",
+      "seed": 1012408,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.3
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0108.png",
+      "initial_sha256": "264b620f9e3e6950adf8e68435d6bffa69f29085b1a28bad084c32b29e751052",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 108,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    },
+    {
+      "case": "nr-refine-tidal-late-n015",
+      "seed": 1012416,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.15
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0204.png",
+      "initial_sha256": "e25b299d2c5167ae4852e0ebbc365af3322bd6f0fbc87df4d5c8641d9c4b449e",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 204,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    },
+    {
+      "case": "nr-refine-tidal-late-n030",
+      "seed": 1012416,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.3
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/anchors/0204.png",
+      "initial_sha256": "e25b299d2c5167ae4852e0ebbc365af3322bd6f0fbc87df4d5c8641d9c4b449e",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "source_case": "nr-ref-tidal-edit025",
+      "source_frame": 204,
+      "purpose": "One stationary refinement of a saved painting; no feedback chain in this stage"
+    }
+  ]
+}

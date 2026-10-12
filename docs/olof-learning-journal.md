@@ -503,3 +503,7 @@ Olof prefers editing-adapter strength 0.5 over the prior full-strength reference
 ### 2026-10-12 — World Seed: 0.25 preferred; sampler alternatives remain useful
 
 After reviewing the follow-up, Olof likes editing-adapter strength **0.25**. He also likes **Heun and DPM++ 2M**, while saying they are not strictly better than the baseline and should not be discounted. Retain 0.25 as the preferred adapter candidate for this scene and both samplers as creative alternatives. The assistant’s lack of a clear fine-detail retention gain does not justify rejecting their overall appearance or movement. This feedback does not select a sampler winner or establish a tested combination of 0.25 with either sampler. [Recorded comparison](../apps/deforum/projects/world-seed/experiments/noise-reference/adapter-sampler-followup.md).
+
+### 2026-10-12 — World Seed: gate refinement video work on saved paintings
+
+Olof authorizes a staged refinement experiment: first test saved paintings, then continue to video only if refinement looks promising, explicitly including refined-image feedback into subsequent generations. Euler remains the baseline. The [six still probes](../apps/deforum/projects/world-seed/experiments/noise-reference/refinement.md) do not pass the assistant’s detail-improvement gate, so neither video feedback policy is tested. This is an assistant execution decision under the agreed gate, not Olof rejecting refinement or a verdict on all refinement methods. Human judgment of the new stills remains pending.
