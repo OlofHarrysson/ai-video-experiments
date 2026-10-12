@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "music-player-bright-studio",
+  "id": "music-player-dark-blue",
   "before": {
     "records": {
       "desktop-context": "evidence/before/desktop-context.json",
