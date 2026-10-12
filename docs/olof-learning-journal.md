@@ -495,3 +495,7 @@ After seeing that comparison, Olof judges the digital variant similar or worse a
 ### 2026-10-10 — component motion earns a positive response
 
 Olof says of [BILLIONS v015](../apps/canvas-animation/projects/title-sequence-study/studies/billions-motion-v015/README.md), “Yeah that's definitely more movement. Good job!” He approves a six-second silent BILLIONS → NEXT → KEEP UP cut focused on contrasting motion and connected transitions. The response supports using the component-motion study as the current baseline; it does not establish that its visual quality matches the film references or settle the full AI intro story.
+
+### 2026-10-12 — World Seed: half-strength editing preferred
+
+Olof prefers editing-adapter strength 0.5 over the prior full-strength reference treatments because the color problem is reduced. He approves exploring strengths around it and two more samplers on the same artwork. Keep reference boost 0.01 and the warped previous painting policy. This is a preference among reference experiments, not approval of a new full-film recipe. [Follow-up](../apps/deforum/projects/world-seed/experiments/noise-reference/adapter-sampler-followup.md).

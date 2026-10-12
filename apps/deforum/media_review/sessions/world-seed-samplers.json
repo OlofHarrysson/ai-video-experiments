@@ -1,29 +1,43 @@
 {
-  "title": "World Seed \u2014 sampler comparison",
+  "title": "World Seed — sampler comparison",
   "selected": [
     "euler060",
-    "ancestral060"
+    "dpmpp2m060"
   ],
   "clips": [
     {
       "id": "euler060",
-      "label": "Euler \u00b7 noise 0.60",
+      "label": "Euler · noise 0.60",
       "note": "Planet survives; cool palette and clear contours, but fine grain simplifies.",
-      "details": "Two seconds, 18 paintings, 1536\u00d71024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Ordinary Euler, exact sigmas 0.60 \u2192 0.512844085693 \u2192 0.310901075602 \u2192 0. All reference-editing paths off. Generated on L4; archived 0.72 control used RTX PRO 4500.",
-      "source": "projects/world-seed/exports/v002/nr-sampler-tidal-euler060/faster/rife-moving-tail/preview.mp4"
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Fresh same-GPU control reproduces all prior Euler 0.60 paintings pixel-for-pixel and the finished MP4 byte-for-byte. Same opening, camera, full material prompt, seeds, CFG1 and three sigma intervals. Three model evaluations per repaint. All reference-editing paths off. RIFE finishing outside recurrence.",
+      "source": "projects/world-seed/exports/v002/nr-sampler-tidal-euler060-repeat/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "heun060",
+      "label": "Heun · noise 0.60",
+      "note": "More scattered flecks and wavy folds; no clear fine-detail gain over Euler.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same GPU as the fresh Euler control, same opening, camera, full material prompt, seeds, CFG1 and exact 0.60 → 0.512844085693 → 0.310901075602 → 0 schedule. All reference-editing paths off. RIFE stays outside recurrence. Five model evaluations over the same three intervals; no fresh noise after initialization. Extra provisional evaluations change the update.",
+      "source": "projects/world-seed/exports/v002/nr-sampler-tidal-heun060/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "dpmpp2m060",
+      "label": "DPM++ 2M · noise 0.60",
+      "note": "More graphic, wavy shell layers and thinner spires; greater redesign, not finer material texture.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same GPU as the fresh Euler control, same opening, camera, full material prompt, seeds, CFG1 and exact 0.60 → 0.512844085693 → 0.310901075602 → 0 schedule. All reference-editing paths off. RIFE stays outside recurrence. Three model evaluations, using the preceding estimate within each repaint. No memory across paintings and no fresh noise after initialization.",
+      "source": "projects/world-seed/exports/v002/nr-sampler-tidal-dpmpp2m060/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "ancestral060",
-      "label": "Ancestral \u00b7 noise 0.60",
+      "label": "Ancestral · noise 0.60",
       "note": "Similar retention and palette; no clear fine-detail improvement from extra noise.",
-      "details": "Two seconds, 18 paintings, 1536\u00d71024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Euler ancestral with eta 0.25 and s_noise 1, exact sigmas 0.60 \u2192 0.512844085693 \u2192 0.310901075602 \u2192 0. All reference-editing paths off. Generated on the same L4 as the new 0.60 Euler arm.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Euler ancestral with eta 0.25 and s_noise 1, exact sigmas 0.60 → 0.512844085693 → 0.310901075602 → 0. All reference-editing paths off. Generated on the same L4 as the new 0.60 Euler arm.",
       "source": "projects/world-seed/exports/v002/nr-sampler-tidal-ancestral060/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "tidal-baseline",
-      "label": "Euler \u00b7 noise 0.72",
+      "label": "Euler · noise 0.72",
       "note": "Existing reference-free control; more freedom to redraw the scene.",
-      "details": "Two seconds, eighteen paintings at native 1536\u00d71024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and CFG1. Plain Krea 2 Turbo with previous-image initialization and ordinary text conditioning. No additional clean reference. This is a new matched control, not the original full film.",
+      "details": "Two seconds, eighteen paintings at native 1536×1024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72→0.615413→0.373081→0 Euler schedule and CFG1. Plain Krea 2 Turbo with previous-image initialization and ordinary text conditioning. No additional clean reference. This is a new matched control, not the original full film.",
       "source": "projects/world-seed/exports/v002/nr-move-tidal-baseline/faster/rife-moving-tail/preview.mp4"
     }
   ]

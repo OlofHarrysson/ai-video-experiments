@@ -41,3 +41,7 @@ All five two-second, 48-frame deliveries pass the finisher and reviewer provenan
 A transfer watcher stopped at the renderer handoff; the completed files were retrieved without rerendering, and full manifest verification passed before cleanup. Runtime source, logs, per-case archives and cleanup receipts remain under `work/sampler-reference-controls-session/`. [Execution receipt](sampler-reference-controls-execution.json).
 
 Recheck from `apps/deforum` with `uv run --locked python projects/world-seed/experiments/noise-reference/run.py check projects/world-seed/experiments/noise-reference/sampler-reference-controls.json`, then the same command with `reference-controls-hardware.json`. The local Terminal Manager reviewer remains running for Olof's inspection.
+
+## Subsequent human review
+
+Olof selects the half-strength editing adapter as the best reference variation, because it reduces the color problem. He approves bracketing that strength and trying two additional samplers in the [follow-up](adapter-sampler-followup.md). The sampler wording in his dictated reply is ambiguous, so no sampler preference is inferred.

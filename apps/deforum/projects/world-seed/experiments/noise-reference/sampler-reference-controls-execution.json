@@ -10,7 +10,7 @@
   ],
   "sampler_selection": "No clear detail or retention advantage from eta 0.25 over matched 0.60 Euler in this scene.",
   "reference_shortlist": "Keep the human-liked earlier 0.01 recipe; show edit strength 0.5 as a cooler but more redesigned alternative. No general fidelity winner selected.",
-  "human_verdict": "Pending for these new clips; earlier 0.01 explicitly promising.",
+  "human_verdict": "Olof prefers editing strength 0.5 because the color problem is reduced; approves further adapter strengths and two more samplers.",
   "settings": {
     "sampler_arms": {
       "starting_noise": 0.6,
@@ -243,8 +243,7 @@
     "One scene and one seed trajectory only",
     "Historical 0.72 control uses another GPU; two new sampler arms share hardware",
     "Reference comparisons use a fresh same-GPU control; older human-liked clip retained separately",
-    "No diagnosed mode collapse or measured total reference-conditioning percentage",
-    "No new human normal-speed playback preference yet"
+    "No diagnosed mode collapse or measured total reference-conditioning percentage"
   ],
   "runtime_receipts": "apps/deforum/work/sampler-reference-controls-session/",
   "transfer_recovery": "A local transfer watcher observed the first renderer exit before rechecking its final completion record; the control watcher also monitored that earlier PID. Both resumed from completed files with the correct process, without regenerating paintings. Final manifest verification passed."

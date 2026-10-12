@@ -24,12 +24,18 @@ INSTRUCTION = "Preserve this exact scene and its composition, all major objects,
 def transform(graph, config, seconds):
     mode = config.get("reference_mode", "none")
     sampler = config.get("sampler", "euler")
-    require(sampler in ("euler", "euler_ancestral"), "Unknown study sampler")
-    if sampler == "euler_ancestral":
+    require(
+        sampler in ("euler", "euler_ancestral", "heun", "dpmpp_2m"),
+        "Unknown study sampler",
+    )
+    if sampler != "euler":
         require(mode != "native", "Native edit uses its frozen Euler recipe")
+    if sampler == "euler_ancestral":
         graph["42"] = node(
             "SamplerEulerAncestral", eta=config["sampler_eta"], s_noise=1.0
         )
+    elif sampler != "euler":
+        graph["42"] = node("KSamplerSelect", sampler_name=sampler)
     if mode == "none":
         return
     require(mode in ("native", "hybrid"), "Unknown reference mode")

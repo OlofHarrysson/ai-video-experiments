@@ -70,3 +70,9 @@ From `apps/deforum`, run `uv run --locked python projects/world-seed/experiments
 `assets.json` pins the author node revision and full-rank adapter hash. The ordinary Krea model, Qwen3VL encoder and VAE remain the existing pinned assets. In the native controls the shared runner records the uploaded reference under its generic `initialization_sha256` field, but the executed sampler graph uses `EmptySD3LatentImage`; all hybrid cases use `VAEEncode(previous warped painting)` for initialization. In every reference case, the same uploaded image also supplies the clean appearance and image-grounded language paths.
 
 This compares complete editing recipes, including the adapter and preservation instruction. It does not measure a reference-only causal effect with the rest of the model unchanged. No direct percentage interpretation should be attached to reference attention boosts.
+
+## Adapter and sampler follow-up
+
+Olof prefers the half-strength editing adapter for its reduced color drift. The [follow-up](adapter-sampler-followup.md) tests editing strengths 0.25 and 0.75 around that control, plus Heun and DPM++ 2M against Euler at noise 0.60 with the reference paths off. [Frozen matrix](adapter-sampler-followup.json).
+
+The follow-up is complete: 0.25 stays cooler but invents moons and honeycomb-like geometry; 0.75 keeps a quieter sky but warms more. Neither additional sampler demonstrates a fine-detail gain over Euler. Keep the human-preferred 0.5 reference baseline; new-clip preference remains pending. Both repeated controls reproduce prior paintings and videos exactly. All 102 jobs and 1,446 remote files are verified locally, the GPU is deleted, and the model volume remains. Estimated compute $0.56 excluding storage. [Execution receipt](adapter-sampler-followup-execution.json).

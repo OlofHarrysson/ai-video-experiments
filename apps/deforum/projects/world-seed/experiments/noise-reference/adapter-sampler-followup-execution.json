@@ -1,0 +1,436 @@
+{
+  "date": "2026-10-12",
+  "status": "complete",
+  "matrix": "adapter-sampler-followup.json",
+  "human_direction": "Editing strength 0.5 preferred for reduced color drift; explore neighboring strengths and two more samplers.",
+  "expected_cases": 6,
+  "expected_new_paintings": 102,
+  "controls": {
+    "opening": "tidal-specific-b",
+    "reference_policy": "clean already-warped previous painting only",
+    "reference_boost": 0.01,
+    "grounding_px": 768,
+    "reference_noise": 0.72,
+    "sampler_noise": 0.6,
+    "cfg": 1,
+    "same_gpu_for_all_arms": true
+  },
+  "sampler_model_evaluations_per_painting": {
+    "euler": 3,
+    "heun": 5,
+    "dpmpp_2m": 3
+  },
+  "resources": {
+    "owned_pod": "o2uwpflsfcu4m7",
+    "gpu": "NVIDIA L4",
+    "price_per_hour_usd": 0.59,
+    "created_at": "2026-10-12T12:05:31.100000+00:00",
+    "retained_volume": "vd3jnbwko1",
+    "deleted_at": "2026-10-12T13:02:35.621192+00:00",
+    "deletion_verified": true,
+    "volume_retained": true,
+    "elapsed_hours": 0.9512558866666667,
+    "estimated_compute_usd": 0.5612,
+    "cost_scope": "Compute estimate, not posted billing; excludes retained storage"
+  },
+  "runtime": {
+    "system": {
+      "os": "linux",
+      "ram_total": 61999996928,
+      "ram_free": 39361404928,
+      "comfyui_version": "0.34.0",
+      "required_frontend_version": "1.49.6",
+      "installed_templates_version": "0.10.7",
+      "required_templates_version": "0.11.48",
+      "comfy_package_versions": [
+        {
+          "name": "comfyui-frontend-package",
+          "installed": "1.49.6",
+          "required": "1.49.6"
+        },
+        {
+          "name": "comfyui-workflow-templates",
+          "installed": "0.10.7",
+          "required": "0.11.48"
+        },
+        {
+          "name": "comfyui-embedded-docs",
+          "installed": "0.5.10",
+          "required": "0.5.10"
+        },
+        {
+          "name": "comfy-kitchen",
+          "installed": "0.2.31",
+          "required": "0.2.31"
+        },
+        {
+          "name": "comfy-aimdo",
+          "installed": "0.4.15",
+          "required": "0.4.15"
+        }
+      ],
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "pytorch_version": "2.10.0+cu128",
+      "embedded_python": false,
+      "deploy_environment": "local-git",
+      "argv": [
+        "main.py",
+        "--listen",
+        "0.0.0.0",
+        "--port",
+        "8188",
+        "--enable-cors-header"
+      ]
+    },
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA L4 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 23661248512,
+        "vram_free": 23457824768,
+        "torch_vram_total": 0,
+        "torch_vram_free": 0
+      }
+    ]
+  },
+  "graph_preflight": [
+    {
+      "case": "nr-ref-tidal-edit050-repeat",
+      "changed_nodes_vs_group_control": [],
+      "frames_checked": 17,
+      "verified": true
+    },
+    {
+      "case": "nr-ref-tidal-edit025",
+      "changed_nodes_vs_group_control": [
+        "11",
+        "50"
+      ],
+      "frames_checked": 17,
+      "verified": true
+    },
+    {
+      "case": "nr-ref-tidal-edit075",
+      "changed_nodes_vs_group_control": [
+        "11",
+        "50"
+      ],
+      "frames_checked": 17,
+      "verified": true
+    },
+    {
+      "case": "nr-sampler-tidal-euler060-repeat",
+      "changed_nodes_vs_group_control": [],
+      "frames_checked": 17,
+      "verified": true
+    },
+    {
+      "case": "nr-sampler-tidal-heun060",
+      "changed_nodes_vs_group_control": [
+        "11",
+        "42"
+      ],
+      "frames_checked": 17,
+      "verified": true
+    },
+    {
+      "case": "nr-sampler-tidal-dpmpp2m060",
+      "changed_nodes_vs_group_control": [
+        "11",
+        "42"
+      ],
+      "frames_checked": 17,
+      "verified": true
+    }
+  ],
+  "historical_graph_regression_cases": 47,
+  "human_verdict": "Pending new clips; 0.5 remains preferred reference baseline.",
+  "private_receipts": "apps/deforum/work/adapter-sampler-followup-session/",
+  "actual_cases": 6,
+  "actual_new_paintings": 102,
+  "preservation": {
+    "verified": true,
+    "files": 1446,
+    "bytes": 801302876,
+    "jobs": 102,
+    "cases": 6,
+    "manifest_sha256": "2c07ef31b4b9e71c51a324ae400e573779e17bfcf18940e412a62184a6e44974",
+    "transfer_sha256": {
+      "nr-ref-tidal-edit050-repeat.tar.gz": "d5c6accac62b24bab5405ca4eb98f3f455acec4ea68b6fb38e5c51f66de52130",
+      "nr-ref-tidal-edit025.tar.gz": "51a05bea59347069f6b030f83c026aeced2e9387d31001fc72176c7e7fa5a671",
+      "nr-ref-tidal-edit075.tar.gz": "67d0fd88797dc6ac6ff0afbae7aed1a3f7f3f83ccb0f4c8edd6b248fa48d5aac",
+      "nr-sampler-tidal-euler060-repeat.tar.gz": "3e2436219d5182862881f2ff30fbedc6ef653c9d7cd9f61737f333bd35e2227a",
+      "nr-sampler-tidal-heun060.tar.gz": "3da1e36d3c8270dd3de01878f44ba6fdb3edc0e5eea0aafaf4561a4f80545d0b",
+      "nr-sampler-tidal-dpmpp2m060.tar.gz": "d49a9a8b7e2b9b1d2f0c3d59adca4f81145976ee26cd6689d0beab5647c66b1c",
+      "runtime-evidence.tar.gz": "2f37edc549b8c6d6a19ed42ccf24c88b5bd2dbf4238d78180e73a4b51766fd94",
+      "remote-manifest.json": "2c07ef31b4b9e71c51a324ae400e573779e17bfcf18940e412a62184a6e44974"
+    }
+  },
+  "cleanup": {
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    },
+    "verified_duplicate_files_removed": 204,
+    "owned_symlinks_removed": [
+      "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+      "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+    ],
+    "retained_volume": "vd3jnbwko1"
+  },
+  "screening": {
+    "nr-ref-tidal-edit050-repeat": {
+      "source_overview": "All 18 paintings inspected; pixel-identical to prior half-strength control.",
+      "native_final": "Inspected earlier control final and confirmed new source pixels identical.",
+      "first_interval": "All 4 frames inspected; no gross doubled main silhouette.",
+      "delivery": "Both pair and full moving-tail MP4s byte-identical to prior screened delivery.",
+      "observations": "Planet retained, fine pits enlarge into round holes, foreground smooths; same transient extra small moon as prior control.",
+      "selection": "Human-preferred baseline retained."
+    },
+    "nr-ref-tidal-edit025": {
+      "status": "complete",
+      "source_overview": "All 18 raw paintings inspected.",
+      "native": "Paintings 6, 10 and 17 inspected at native resolution.",
+      "dense": "All four first-interval frames; 0.50-0.75s and 1.50-1.75s all 14 frames; extra sky-event interval 0.875-1.25s all 10 frames.",
+      "observations": "Cooler than 0.5; main ringed planet retained; large added moon grows early and persists. Smaller moon appears near 0.875s, disappears around 1.08s and later returns. Shell becomes more regular honeycomb and foreground grows rocks. Surface grain still simplifies; clean contours are not proof of more detail. No gross doubled major silhouette in inspected RIFE intervals.",
+      "selection": "Show as cooler but more inventive alternative; retain human preference 0.5 pending feedback."
+    },
+    "nr-ref-tidal-edit075": {
+      "status": "complete",
+      "source_overview": "All 18 raw paintings inspected.",
+      "native": "Paintings 7 and 17 inspected at native resolution.",
+      "dense": "All 4 first-interval frames and all 14 frames in 0.50-0.75s and 1.50-1.75s.",
+      "observations": "Main planet retained, no extra moons observed in the 18 paintings. Fewer, larger smooth shell folds and less honeycomb redesign than 0.25. Stronger amber treatment than 0.5, shell exterior becomes rust-colored, spires become glossy and terrain grain smooths. No gross doubled major silhouettes in inspected RIFE intervals.",
+      "selection": "Available preservation/color tradeoff, not shortlisted as detail improvement."
+    },
+    "nr-sampler-tidal-euler060-repeat": {
+      "status": "complete",
+      "source_overview": "All 18 paintings verified pixel-identical to prior screened Euler 0.60 control.",
+      "native": "Original matching native final inspected this session.",
+      "first_interval": "All four displayed frames inspected.",
+      "delivery": "Full moving-tail and pair MP4 byte-identical to prior screened deliveries; reuse that complete source/dense-window screening.",
+      "observations": "Main planet retained, reflection fills out, small shell pits enlarge and terrain smooths. Cooler than reference-editing branches.",
+      "selection": "Matched sampler baseline."
+    },
+    "nr-sampler-tidal-heun060": {
+      "status": "complete",
+      "source_overview": "All 18 paintings inspected.",
+      "native": "Paintings 6 and 17 inspected at native resolution; painting 6 compared directly with Euler.",
+      "dense": "All 4 first-interval frames, all 14 frames in 0.50-0.75s and 1.50-1.75s.",
+      "observations": "Main ringed planet remains; reflection fills into a full orb. More scattered dots, orange flecks and small pits appear on shell, ground and water; dense stars and reflected specks accumulate. Shell folds become more wavy and terrain edges more graphic. Added marks do not read as convincing fine mineral texture. No clear preservation/detail win over Euler despite two extra model evaluations per painting. No gross doubled major silhouette in screened RIFE windows.",
+      "selection": "Not preferred over Euler for crisp material detail."
+    },
+    "nr-sampler-tidal-dpmpp2m060": {
+      "status": "complete",
+      "source_overview": "All 18 paintings inspected.",
+      "native": "Final painting inspected at native resolution.",
+      "dense": "All 4 first-interval frames, all 14 frames in 0.50-0.75s and 1.50-1.75s.",
+      "observations": "Main ringed planet remains; lower crescent/reflection becomes a full orb. Shell layers become wavy and flatter, with more graphic dark and rust streaks. More small pits, dots and thin spires develop, some spires gain rounded tips. Edges can be crisp, but this is shape/mark invention rather than retention of original fine mineral relief. No clear fidelity gain over Euler; greater redesign than Heun by the end. No gross doubled major silhouette in screened RIFE windows.",
+      "selection": "Show beside Euler as the clearest sampler contrast; not preferred for requested material detail."
+    }
+  },
+  "controls_reproduced": {
+    "reference": [
+      {
+        "file": "faster/rife-moving-tail/preview.mp4",
+        "byte_identical": true,
+        "sha256": "2839e21f2126b9c610699f6e52876d74110452d666dacfe4efaff1405f8b0f5e"
+      },
+      {
+        "file": "faster/pair/preview.mp4",
+        "byte_identical": true,
+        "sha256": "792cd7dc00fa6d4320a173b2ad58ff5c36f14013800174eb89b23e33ec359092"
+      }
+    ],
+    "euler": [
+      {
+        "file": "faster/rife-moving-tail/preview.mp4",
+        "byte_identical": true,
+        "sha256": "e9ce79ea9bb544ab16dcdc9ac0cc9df901f65ccaf70400fe360f31be9c2bb3bd"
+      },
+      {
+        "file": "faster/pair/preview.mp4",
+        "byte_identical": true,
+        "sha256": "f132bd2b1f69bb68cf8101244a13a2d751744a597d6a379a4b9595de5713ce2e"
+      }
+    ],
+    "all_18_source_paintings_each_pixel_identical": true
+  },
+  "validation": {
+    "historical_graph_cases": 47,
+    "planned_graphs_checked": 102,
+    "ruff": "passed",
+    "media_review_server_unittests": 3,
+    "source_graph_parent_warp_png_history_checks": "All 102 jobs passed"
+  },
+  "assistant_recommendation": "Keep editing strength 0.5 as human-preferred reference baseline. Show 0.25 as cooler but more inventive alternative; 0.75 is warmer. Neither Heun nor DPM++ 2M demonstrates better fine material detail than Euler in this trajectory. No production recipe replaced.",
+  "limits": [
+    "One artwork and seed trajectory; no cross-scene or repeated-seed claim",
+    "Both controls reproduce previous results exactly on this runtime",
+    "Heun uses five model evaluations versus three for Euler and DPM++ 2M",
+    "Still/frame screening does not establish human normal-speed preference",
+    "No diagnosed mode-collapse mechanism or calibrated total reference percentage",
+    "No masks, fixed-opening reference, refinement, noise-schedule changes or sampler/adapter combination test"
+  ],
+  "executed_job_timing": {
+    "nr-ref-tidal-edit050-repeat": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 37.894,
+      "all_seconds": [
+        50.84,
+        37.382,
+        37.464,
+        37.683,
+        37.861,
+        37.563,
+        38.56,
+        37.928,
+        37.853,
+        37.967,
+        38.235,
+        37.944,
+        38.007,
+        37.948,
+        37.796,
+        37.855,
+        38.039
+      ]
+    },
+    "nr-ref-tidal-edit025": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 38.064,
+      "all_seconds": [
+        46.366,
+        37.818,
+        37.941,
+        37.958,
+        37.98,
+        37.846,
+        38.32,
+        38.569,
+        38.574,
+        38.151,
+        38.065,
+        38.192,
+        38.025,
+        38.067,
+        38.248,
+        38.064,
+        38.052
+      ]
+    },
+    "nr-ref-tidal-edit075": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 38.209,
+      "all_seconds": [
+        46.582,
+        38.207,
+        38.04,
+        38.211,
+        38.157,
+        38.253,
+        38.245,
+        38.228,
+        38.234,
+        38.285,
+        38.196,
+        38.202,
+        38.222,
+        38.285,
+        38.048,
+        38.061,
+        38.081
+      ]
+    },
+    "nr-sampler-tidal-euler060-repeat": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 12.986,
+      "all_seconds": [
+        14.023,
+        12.911,
+        13.253,
+        13.007,
+        12.946,
+        12.92,
+        12.996,
+        13.057,
+        12.941,
+        12.958,
+        12.99,
+        13.045,
+        12.983,
+        13.094,
+        12.997,
+        12.953,
+        12.901
+      ]
+    },
+    "nr-sampler-tidal-heun060": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 20.352,
+      "all_seconds": [
+        20.196,
+        20.241,
+        20.357,
+        20.177,
+        20.337,
+        20.383,
+        20.309,
+        20.348,
+        20.286,
+        20.486,
+        20.42,
+        20.348,
+        20.617,
+        20.277,
+        20.404,
+        20.38,
+        20.401
+      ]
+    },
+    "nr-sampler-tidal-dpmpp2m060": {
+      "jobs": 17,
+      "median_seconds_excluding_first": 13.104,
+      "all_seconds": [
+        13.075,
+        13.036,
+        13.071,
+        13.093,
+        13.179,
+        13.116,
+        13.12,
+        13.049,
+        13.076,
+        13.159,
+        13.005,
+        13.144,
+        13.069,
+        13.172,
+        13.161,
+        13.077,
+        13.14
+      ]
+    }
+  },
+  "review_http": {
+    "world-seed-samplers": {
+      "page": 200,
+      "euler060": 206,
+      "heun060": 206,
+      "dpmpp2m060": 206,
+      "ancestral060": 206,
+      "tidal-baseline": 206
+    },
+    "world-seed-reference-controls": {
+      "page": 200,
+      "edit050": 206,
+      "edit025": 206,
+      "edit075": 206,
+      "reference-control-l4": 206,
+      "ground384": 206,
+      "weight-001": 206
+    }
+  },
+  "review_validation": "Unchanged player layout; both pages and all 11 original-media range requests verified. Browser playback not rechecked in this sprint."
+}

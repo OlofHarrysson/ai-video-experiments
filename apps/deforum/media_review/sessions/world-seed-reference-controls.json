@@ -1,36 +1,50 @@
 {
-  "title": "World Seed \u2014 reference controls",
+  "title": "World Seed — reference controls",
   "selected": [
-    "reference-control-l4",
-    "edit050"
+    "edit050",
+    "edit025"
   ],
   "clips": [
     {
-      "id": "reference-control-l4",
-      "label": "Reference 0.01 \u00b7 control",
-      "note": "Warm drift persists; the main planet survives and extra small moons develop.",
-      "details": "Two seconds, 18 paintings, native 1536\u00d71024 and 24 fps. Changes only ref_boost from 1.0 to 0.01. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch\u2019s already-moved previous painting. No original-opening reference, mask, copyback or refinement. Repeated on the L4 used for both parameter variants; unchanged settings.",
-      "source": "projects/world-seed/exports/v002/nr-ref-tidal-control001-l4/faster/rife-moving-tail/preview.mp4"
-    },
-    {
       "id": "edit050",
-      "label": "Reference 0.01 \u00b7 half adapter",
-      "note": "Less amber than the control; larger shell holes and broader, rounder spires.",
-      "details": "Two seconds, 18 paintings, 1536\u00d71024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Changes only edit LoRA strength from 1 to 0.5. Reference boost 0.01, image grounding 768, ordinary Euler at 0.72. Only the already-moved previous painting is the clean reference. New L4 run; archived reference control used RTX PRO 4500.",
+      "label": "Adapter 0.50 · preferred",
+      "note": "Your preferred balance; less amber than full strength, with some smoothing and shape changes.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Reference boost 0.01, edit LoRA strength 0.5, grounding 768, Euler at noise 0.72, CFG1. Same detailed prompt, opening, seeds and camera. The fresh control on the GPU used for 0.25 and 0.75 reproduces every painting pixel-for-pixel and the finished MP4 byte-for-byte. Only the already-warped previous painting is the reference. RIFE stays outside feedback.",
       "source": "projects/world-seed/exports/v002/nr-ref-tidal-edit050/faster/rife-moving-tail/preview.mp4"
     },
     {
+      "id": "edit025",
+      "label": "Adapter 0.25 · cooler",
+      "note": "Cooler color, more honeycomb-like shapes; adds a large moon and a smaller moon that comes and goes.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Changes only editing LoRA strength from 0.5 to 0.25. Keeps boost 0.01, grounding 768, Euler noise 0.72, CFG1, full material prompt, camera and seeds. Same GPU as the repeated preferred control. Original planet persists. Fine grain still simplifies. Only the already-warped previous painting is the clean reference; no masks, opening reference or refinement.",
+      "source": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "edit075",
+      "label": "Adapter 0.75 · warmer",
+      "note": "Keeps the main planet without extra moons in this run; warmer color and smoother, glossier surfaces.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Changes only editing LoRA strength from 0.5 to 0.75. Boost 0.01, grounding 768, Euler noise 0.72, CFG1, full material prompt, camera and seeds remain fixed. Same GPU as the repeated 0.5 control and 0.25 branch. Only the already-warped previous painting is the reference. RIFE stays outside feedback. No demonstrated fine-detail improvement.",
+      "source": "projects/world-seed/exports/v002/nr-ref-tidal-edit075/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "reference-control-l4",
+      "label": "Adapter 1.00 · earlier control",
+      "note": "Warm drift persists; the main planet survives and extra small moons develop.",
+      "details": "Two seconds, 18 paintings, native 1536×1024 and 24 fps. Changes only ref_boost from 1.0 to 0.01. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72→0.615413→0.373081→0 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch’s already-moved previous painting. No original-opening reference, mask, copyback or refinement. Repeated on the L4 used for both parameter variants; unchanged settings.",
+      "source": "projects/world-seed/exports/v002/nr-ref-tidal-control001-l4/faster/rife-moving-tail/preview.mp4"
+    },
+    {
       "id": "ground384",
-      "label": "Reference 0.01 \u00b7 smaller grounding",
+      "label": "Grounding 384 · earlier test",
       "note": "Strong amber drift remains; smaller grounding does not recover fine grain.",
-      "details": "Two seconds, 18 paintings, 1536\u00d71024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Changes only image grounding resolution from 768 to 384. This changes the vision-language input, not a calibrated weight. Edit LoRA strength 1, reference boost 0.01, ordinary Euler at 0.72. Only the already-moved previous painting is the clean reference. New L4 run; archived reference control used RTX PRO 4500.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same opening, camera, full material prompt, per-painting seed trajectory and CFG1. Three sampling updates, identical RIFE finishing outside recurrence. Changes only image grounding resolution from 768 to 384. This changes the vision-language input, not a calibrated weight. Edit LoRA strength 1, reference boost 0.01, ordinary Euler at 0.72. Only the already-moved previous painting is the clean reference. New L4 run; archived reference control used RTX PRO 4500.",
       "source": "projects/world-seed/exports/v002/nr-ref-tidal-ground384/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "weight-001",
-      "label": "Reference 0.01 \u00b7 earlier GPU",
+      "label": "Earlier 0.01 reference",
       "note": "Olof finds this promising; color drift remains a concern.",
-      "details": "Two seconds, 18 paintings, native 1536\u00d71024 and 24 fps. Changes only ref_boost from 1.0 to 0.01. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch\u2019s already-moved previous painting. No original-opening reference, mask, copyback or refinement.",
+      "details": "Two seconds, 18 paintings, native 1536×1024 and 24 fps. Changes only ref_boost from 1.0 to 0.01. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72→0.615413→0.373081→0 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch’s already-moved previous painting. No original-opening reference, mask, copyback or refinement.",
       "source": "projects/world-seed/exports/v002/nr-weight-tidal-001/faster/rife-moving-tail/preview.mp4"
     }
   ]
