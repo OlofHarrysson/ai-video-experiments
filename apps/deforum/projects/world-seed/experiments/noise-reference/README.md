@@ -53,7 +53,7 @@ A rolling clean reference gives the model a stronger view of the previous painti
 
 Olof rejects the strength-1 reference result as too static and warm after inspecting the tidal scene. He does not consider this a successful film treatment and asks to keep the next check to that one artwork. His mode-collapse explanation remains a hypothesis. He rules out the proposed original-keyframe reference for now because it could conflict with a world evolving far from its opening.
 
-The approved follow-up tests [lower reference influence](reference-weights.md) at 0.5 and 0.2, using the already-moved previous painting throughout. Reference attention boosts are influence controls, not literal percentages or pixel blends. [Pinned author implementation and usage](https://github.com/lbouaraba/comfyui-krea2edit/tree/86f886dac23013d88996e3a2e99093ba44d322fb).
+The approved follow-up tests [lower reference influence](reference-weights.md) at 0.5 and 0.2, followed by [0.05 and 0.01](reference-low-weights.md), using the already-moved previous painting throughout. The very low values permit more local redesign, especially larger shell holes at 0.01, but do not resolve warming or fine-detail simplification. No weight is selected as a fidelity improvement. Reference attention boosts are influence controls, not literal percentages or pixel blends. [Pinned author implementation and usage](https://github.com/lbouaraba/comfyui-krea2edit/tree/86f886dac23013d88996e3a2e99093ba44d322fb).
 
 Masks, pixel copyback and refinement remain outside this study. No new production recipe is selected from these results.
 

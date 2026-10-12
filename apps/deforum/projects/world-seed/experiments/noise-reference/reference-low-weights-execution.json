@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-12",
+  "status": "complete",
+  "cases": 2,
+  "new_paintings": 34,
+  "reference_weights": [
+    0.05,
+    0.01
+  ],
+  "other_generation_settings_changed": false,
+  "production_recipe_changed": false,
+  "assistant_selection": null,
+  "human_quality_verdict": "pending",
+  "reference_policy": "Only each branch’s already-warped previous painting; no fixed opening reference.",
+  "findings": [
+    "0.05 retains the large planet and shell but warms and simplifies fine materials; small sky orbs appear.",
+    "0.01 changes shell folds more and develops much larger rounded holes; the main planet survives but warming and smooth surfaces persist.",
+    "Lower attention weight permits more redesign but does not establish a fidelity improvement in this one-scene trajectory."
+  ],
+  "review": {
+    "url": "http://localhost:3028/world-seed-reference-weight",
+    "frames_each": 48,
+    "seconds_each": 2,
+    "paintings_each": 18,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "all_raw_paintings_screened": true,
+    "native_final_images_screened": true,
+    "full_first_interpolation_interval_screened": true,
+    "dense_windows_seconds": [
+      [
+        0.5,
+        0.75
+      ],
+      [
+        1.5,
+        1.75
+      ]
+    ],
+    "human_playback_preference": null,
+    "browser_playback": "All three compared clips reached frame 47 at 1.958 seconds; both new clips left selected and paused at frame zero.",
+    "default_selected_weights": [
+      0.01,
+      0.05
+    ]
+  },
+  "preservation": {
+    "verified": true,
+    "files": 482,
+    "bytes": 250479730,
+    "jobs": 34,
+    "cases": 2,
+    "manifest_sha256": "7cf6da3ca693c3d5bb00ac2f5f17d0cb0624b46078dcbc320f997d7cf4722179",
+    "transfer_sha256": {
+      "remaining.tar.gz": "81db00ac731b58b0bbbdbc1eaa9fadd01418bc3c6ad63f7b25fe5a450c7944f4",
+      "runtime-evidence.tar.gz": "081055b9064e5e842889aca18ebcab4917addd015cecb21b7f0d35362f96da27",
+      "remote-manifest.json": "7cf6da3ca693c3d5bb00ac2f5f17d0cb0624b46078dcbc320f997d7cf4722179"
+    }
+  },
+  "resource": {
+    "pod_id": "0w9i35dz7otp35",
+    "created_utc": "2026-10-12T09:41:59.019000+00:00",
+    "deletion_observed_utc": "2026-10-12T09:59:45.974200+00:00",
+    "hourly_usd": 0.72,
+    "estimated_compute_usd": 0.2134,
+    "excludes_retained_storage": true,
+    "deleted": true,
+    "retained_volume": "vd3jnbwko1",
+    "cleanup": {
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      },
+      "verified_duplicate_files_removed": 68,
+      "owned_symlinks_removed": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_volume": "vd3jnbwko1"
+    }
+  },
+  "validation": [
+    "34 exact graph/history/PNG/parent-hash/recomputed-warp checks passed",
+    "Only reference weight and case/output name differ from earlier reference controls",
+    "482 remote files verified locally by SHA256 and byte length",
+    "Both final RIFE deliveries verified by the finisher",
+    "Reviewer validates hashes, dimensions, decoded timestamps and source provenance"
+  ],
+  "http": {
+    "page": 200,
+    "weight-001": 206,
+    "weight-005": 206,
+    "weight-02": 206,
+    "weight-05": 206,
+    "tidal-reference": 206,
+    "tidal-baseline": 206
+  },
+  "limits": [
+    "One scene and one seed trajectory only",
+    "No calibrated measurement of total reference influence",
+    "No sampler or adapter-strength experiment executed",
+    "No claim that mode collapse was diagnosed"
+  ]
+}

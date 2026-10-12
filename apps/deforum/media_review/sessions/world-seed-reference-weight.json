@@ -1,11 +1,24 @@
 {
   "title": "World Seed — reference influence",
   "selected": [
-    "weight-02",
-    "weight-05",
-    "tidal-baseline"
+    "weight-001",
+    "weight-005"
   ],
   "clips": [
+    {
+      "id": "weight-001",
+      "label": "Reference weight 0.01",
+      "note": "More shell redesign and large rounded holes; warming and smooth surfaces remain.",
+      "details": "Two seconds, 18 paintings, native 1536×1024 and 24 fps. Changes only ref_boost from 1.0 to 0.01. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72→0.615413→0.373081→0 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch’s already-moved previous painting. No original-opening reference, mask, copyback or refinement.",
+      "source": "projects/world-seed/exports/v002/nr-weight-tidal-001/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "weight-005",
+      "label": "Reference weight 0.05",
+      "note": "Main planet survives; small sky orbs appear and fine grain becomes glossy relief.",
+      "details": "Two seconds, 18 paintings, native 1536×1024 and 24 fps. Changes only ref_boost from 1.0 to 0.05. Keeps the image-aware text encoder, edit adapter at strength 1, grounding resolution 768, full scene text plus preservation instruction, CFG1, 0.72→0.615413→0.373081→0 Euler schedule and recorded seed/camera trajectory. Reference and target initialization both use this branch’s already-moved previous painting. No original-opening reference, mask, copyback or refinement.",
+      "source": "projects/world-seed/exports/v002/nr-weight-tidal-005/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "weight-02",
       "label": "Reference weight 0.2",
