@@ -63,6 +63,18 @@ Olof judged the hybrid YES closest to its target and the code reconstructions we
 
 **How the hybrid works** (`proof-v002/breakdown.mjs` → `breakdown-01/breakdown-{yes,marquee,crews}.png`): each card starts from one generated picture that code never redraws. Code derives masks from the picture's own pixels (brightness, colour, gaps), optional extra states (the unlit marquee is the same pixels darkened), and decides per frame what is visible, how bright and where: reveal through a growing mask, add light through a mask, swap hard to a flat code identity, or transform (slam, settle). Finding from the breakdown: the CREWS gap detector finds 9 chunks, not 15 letters, because the generated letters touch. The motion can only be as fine as the picture can be split.
 
+### Splitting study v001 — 2026-10-12
+
+Olof chose "better splitting" as the next learning experiment. [study-splitting-v001/](study-splitting-v001/) applies the **same animation** (parts drop in from the camera with depth shadows, a stadium wave, a parallax drift) to CREWS split three ways, opening on each method's colour-coded part map. Render: `node render.mjs output-NN`; `output-01/splitting.mp4` is the reviewed version.
+
+| Method | Parts | How | Tradeoff |
+|---|---|---|---|
+| 1 · Gaps (v002) | 9 chunks + 1 ribbon layer | Column gaps in a brightness mask | Free and instant; touching letters stay glued ("REW", "FO", "DAY") |
+| 2 · SAM 2.1 | 15 letters + 1 ribbon layer | [segment_letters.py](tools/segment_letters.py): `facebook/sam2.1-hiera-base-plus` on the Mac GPU, prompted with an estimated box and centre per letter; overlaps go to the more confident letter; unclaimed pixels join the nearest letter | Keeps the preferred picture; parts are cut from black (no real transparency), and anything one letter hid behind another does not exist when they move apart. SAM 3 (text prompts) is gated behind a Hugging Face login |
+| 3 · Generated apart | 15 letters + 4 ribbons | Regenerated with a transparent background and letters that never touch ([prompt](targets/prompts-splitting.json), ~$0.07); [segment_layers.py](tools/segment_layers.py) splits by connected alpha regions | Cleanest parts and true alpha with no segmentation model; designing for separability changes the composition (spaced letters, no interlocking) |
+
+Findings: motion can only be as fine as the parts, and the cheapest way to get good parts is to **plan them before generating**: ask for transparent backgrounds, gaps and separate elements. Segmentation rescues a picture that was not designed for it, with cleanup. Screening fixes: reading order (sort by part index, not position), ribbon flag for transparent layers, alpha from the strongest colour channel so dark navy ribbon stays opaque, and an unbounded leftover fill so SAM's unclaimed Y arm is kept.
+
 ## Files
 
 - `tools/`: reference analysis (`sheet.py` contact sheets, `changes.py` frame-change classes, `rhythm.py` and `sound.py` beat/onset/spectrogram) and the animatic renderer. Run with `uv run --script`.

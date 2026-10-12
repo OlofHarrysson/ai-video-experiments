@@ -1,2 +1,4 @@
 node_modules/
 proof-*/output*/
+proof-*/breakdown-*/
+study-*/output*/

@@ -1,0 +1,13 @@
+{
+  "shared": "A single vertical 9:16 frame from a high-end kinetic typography title sequence for a film event; typography is the entire image. Transparent background. Crisp professional lettering craft, spelled exactly as given. Keep all lettering inside the central safe area: nothing important in the top 12% or bottom 22% of the frame. No other words, no logos, no watermark, no UI, no people.",
+  "keyframes": [
+    {
+      "id": "k3s-crew-separable",
+      "text": "CREWS FORM FRIDAY",
+      "prompt": "\"CREWS / FORM / FRIDAY\" on three lines in woven ribbon lettering: every letter is constructed from several flat ribbons of different colours and materials (vermilion red, cobalt blue, ivory, gold foil, electric cyan) that interlace over and under one another, with crisp dimensional shading at each crossing. Every letter is a separate object with clear empty space around it: letters never touch or overlap each other, and lines never touch. Near the top of the frame four loose single ribbons float on their own, not touching any letter. Sophisticated, joyful, many strands becoming one."
+    }
+  ],
+  "models": [
+    {"id": "openai/gpt-image-2.5-sunburst", "params": {"aspect_ratio": "9:16", "quality": "high", "background": "transparent", "n": 2}}
+  ]
+}
