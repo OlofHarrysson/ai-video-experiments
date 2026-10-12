@@ -10,8 +10,8 @@
   "other_generation_settings_changed": false,
   "production_recipe_changed": false,
   "assistant_selection": null,
-  "human_quality_verdict": "pending",
-  "reference_policy": "Only each branch’s already-warped previous painting; no fixed opening reference.",
+  "human_quality_verdict": "Olof finds 0.01 promising and pretty decent; color drift remains objectionable. Continue reference controls.",
+  "reference_policy": "Only each branch\u2019s already-warped previous painting; no fixed opening reference.",
   "findings": [
     "0.05 retains the large planet and shell but warms and simplifies fine materials; small sky orbs appear.",
     "0.01 changes shell folds more and develops much larger rounded holes; the main planet survives but warming and smooth surfaces persist.",
@@ -39,7 +39,7 @@
         1.75
       ]
     ],
-    "human_playback_preference": null,
+    "human_playback_preference": "Continue 0.01",
     "browser_playback": "All three compared clips reached frame 47 at 1.958 seconds; both new clips left selected and paused at frame zero.",
     "default_selected_weights": [
       0.01,

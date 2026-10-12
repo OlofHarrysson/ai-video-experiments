@@ -23,6 +23,13 @@ INSTRUCTION = "Preserve this exact scene and its composition, all major objects,
 
 def transform(graph, config, seconds):
     mode = config.get("reference_mode", "none")
+    sampler = config.get("sampler", "euler")
+    require(sampler in ("euler", "euler_ancestral"), "Unknown study sampler")
+    if sampler == "euler_ancestral":
+        require(mode != "native", "Native edit uses its frozen Euler recipe")
+        graph["42"] = node(
+            "SamplerEulerAncestral", eta=config["sampler_eta"], s_noise=1.0
+        )
     if mode == "none":
         return
     require(mode in ("native", "hybrid"), "Unknown reference mode")
@@ -32,13 +39,13 @@ def transform(graph, config, seconds):
         clip=["2", 0],
         prompt=config.get("reference_instruction", INSTRUCTION) + prompt,
         image=["20", 0],
-        grounding_px=768,
+        grounding_px=config.get("grounding_px", 768),
     )
     graph["50"] = node(
         "LoraLoaderModelOnly",
         model=["1", 0],
         lora_name="krea2_identity_edit_v1_2.safetensors",
-        strength_model=1.0,
+        strength_model=config.get("edit_strength", 1.0),
     )
     target = ["24", 0]
     if mode == "native":

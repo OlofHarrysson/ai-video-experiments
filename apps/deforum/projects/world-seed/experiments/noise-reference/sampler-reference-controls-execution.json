@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-12",
+  "status": "complete",
+  "cases": 5,
+  "new_paintings": 85,
+  "production_recipe_changed": false,
+  "matrices": [
+    "sampler-reference-controls.json",
+    "reference-controls-hardware.json"
+  ],
+  "sampler_selection": "No clear detail or retention advantage from eta 0.25 over matched 0.60 Euler in this scene.",
+  "reference_shortlist": "Keep the human-liked earlier 0.01 recipe; show edit strength 0.5 as a cooler but more redesigned alternative. No general fidelity winner selected.",
+  "human_verdict": "Pending for these new clips; earlier 0.01 explicitly promising.",
+  "settings": {
+    "sampler_arms": {
+      "starting_noise": 0.6,
+      "sigmas": [
+        0.6,
+        0.512844085693,
+        0.310901075602,
+        0
+      ],
+      "samplers": [
+        "euler",
+        "euler_ancestral"
+      ],
+      "eta": 0.25,
+      "s_noise": 1,
+      "reference": "off"
+    },
+    "reference_arms": {
+      "starting_noise": 0.72,
+      "sampler": "euler",
+      "ref_boost": 0.01,
+      "control": {
+        "edit_strength": 1,
+        "grounding_px": 768
+      },
+      "variants": [
+        {
+          "edit_strength": 0.5,
+          "grounding_px": 768
+        },
+        {
+          "edit_strength": 1,
+          "grounding_px": 384
+        }
+      ]
+    }
+  },
+  "reference_policy": "Only the already-warped previous painting of each branch; no fixed opening, masks, pixel copyback or refinement.",
+  "review": {
+    "urls": [
+      "http://localhost:3028/world-seed-samplers",
+      "http://localhost:3028/world-seed-reference-controls"
+    ],
+    "frames_each": 48,
+    "seconds_each": 2,
+    "paintings_each": 18,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "all_raw_paintings_screened": true,
+    "native_final_images_screened": true,
+    "full_first_interpolation_intervals_screened": true,
+    "dense_windows_seconds": [
+      [
+        0.5,
+        0.75
+      ],
+      [
+        1.5,
+        1.75
+      ]
+    ],
+    "additional_half_adapter_window": [
+      1,
+      1.375
+    ],
+    "sampler_browser": "All three videos reached frame 47 at 1.958s; two new variants left selected and paused at frame zero.",
+    "reference_browser": "Control and half-adapter clips reached frame 47 at 1.958s together; left selected and paused at frame zero."
+  },
+  "screening": {
+    "nr-sampler-tidal-euler060": {
+      "reviewed": [
+        "all 18 raw paintings",
+        "native midpoint painting 8",
+        "full first RIFE interval, 4 frames",
+        "native final painting",
+        "every displayed frame in 0.5\u20130.75s and 1.5\u20131.75s"
+      ],
+      "observations": [
+        "Main planet remains through all 17 repaints.",
+        "Lower-left crescent becomes a full orb/reflection by early-middle sequence.",
+        "Hollow spires largely retain recognizable positions; shell chambers and pits change.",
+        "Palette stays cool relative to prior 0.01 reference.",
+        "Fine grains and terrace edge relief simplify; broad edges remain distinct.",
+        "No obvious doubled major silhouette in first interpolation interval."
+      ],
+      "selection": "pending ancestral comparison"
+    },
+    "nr-sampler-tidal-ancestral060": {
+      "reviewed": [
+        "all 18 raw paintings",
+        "native midpoint painting 8",
+        "full first RIFE interval, 4 frames",
+        "native final painting",
+        "every displayed frame in 0.5\u20130.75s and 1.5\u20131.75s"
+      ],
+      "observations": [
+        "Main planet remains through all 17 repaints.",
+        "Lower crescent becomes a full orb/reflection, as in Euler.",
+        "Cool palette and broad geometric development are close to the matched Euler branch.",
+        "Shell pits/folds and foreground spires differ locally; fine grain still simplifies.",
+        "No clear detail or retention advantage from eta 0.25 in this trajectory."
+      ],
+      "selection": "no clear winner over ordinary Euler"
+    },
+    "sampler_browser": "All three videos reached frame 47 at 1.958s; two new variants left selected and paused at frame zero.",
+    "nr-ref-tidal-edit050": {
+      "reviewed": [
+        "all 18 raw paintings",
+        "native painting 6",
+        "full first RIFE interval, 4 frames",
+        "native final painting",
+        "every displayed frame in 0.5\u20130.75s and 1.5\u20131.75s",
+        "every displayed frame in 1.0\u20131.375s around transient small moon"
+      ],
+      "observations": [
+        "Main planet remains through all 17 repaints.",
+        "Less amber than prior GPU reference at painting 6, but warming still develops.",
+        "Foreground spires broaden into smooth hollow cones with stepped bases.",
+        "Shell develops many enlarged dark holes, with substantial local redesign.",
+        "Small secondary moon appears near upper left around paintings 9\u201311; absent again by 12.",
+        "Fine grain still simplifies.",
+        "Small moon fades across paintings 11\u219212 around 1.21\u20131.33s; main planet remains intact.",
+        "Spires develop rounded tips by the final painting."
+      ],
+      "selection": "pending matched-hardware reference control"
+    },
+    "nr-ref-tidal-ground384": {
+      "reviewed": [
+        "native midpoint painting 8",
+        "all 18 raw paintings",
+        "native final painting",
+        "full first interpolation interval",
+        "every displayed frame in 0.5\u20130.75s and 1.5\u20131.75s"
+      ],
+      "observations": [
+        "Main planet and shell remain at midpoint.",
+        "Strong amber cast remains; smaller grounding image does not visibly fix warming.",
+        "Spires retain slim curved forms better than the half-adapter arm at this midpoint.",
+        "Shell chambers become smoother with larger holes.",
+        "Planet survives all 17 repaints; shell enlarges circular spots/holes and material grain simplifies.",
+        "Final palette remains strongly amber; no apparent color or grain advantage.",
+        "No obvious doubled major silhouette in inspected interpolation windows."
+      ],
+      "selection": "not shortlisted as an improvement"
+    },
+    "nr-ref-tidal-control001-l4": {
+      "reviewed": [
+        "all 18 raw paintings",
+        "native painting 6 and final painting",
+        "full first interpolation interval",
+        "every displayed frame in 0.5\u20130.75s and 1.5\u20131.75s"
+      ],
+      "observations": [
+        "Main planet remains through all 17 repaints.",
+        "Two additional sky points become smaller planets by the end.",
+        "Warm drift and material simplification reproduce the earlier broad failure, though shell markings differ.",
+        "Half-strength adapter is cooler than this matched control but redesigns holes and spires more.",
+        "No obvious doubled major silhouette in inspected windows."
+      ],
+      "selection": "matched control; original human-liked clip retained separately"
+    }
+  },
+  "preservation": {
+    "verified": true,
+    "files": 1205,
+    "bytes": 639163236,
+    "jobs": 85,
+    "cases": 5,
+    "manifest_sha256": "26adf15c00867bc821bad022aacc5a91e31b8a4e6c2b84a946e81130008fe79a",
+    "transfer_sha256": {
+      "nr-sampler-tidal-euler060.tar.gz": "5c400ba9cef5c6a84e747057364fe44942985348f74802d011250a8896e57a56",
+      "nr-sampler-tidal-ancestral060.tar.gz": "6827af52c2a27f1274cabe86e92564852a4e671d8e46bc6275976c660a87c069",
+      "nr-ref-tidal-edit050.tar.gz": "88482e48297516a764eb011bc5f40d4b07f879d86484c2225ff7341a52c566d9",
+      "nr-ref-tidal-ground384.tar.gz": "10566351c17325aac9ad47b98f191e0851516e95a6ce94098aceeb2e492536fc",
+      "nr-ref-tidal-control001-l4.tar.gz": "e633c2450136baa52b7816b57dbc9e8a7adc68024a27c0348c82d8cd9d1c42eb",
+      "runtime-evidence.tar.gz": "1026d4e447cfe0a96f38ef7700fe00e5bb9fa644463f0bd5dc304721480c2398",
+      "remote-manifest.json": "26adf15c00867bc821bad022aacc5a91e31b8a4e6c2b84a946e81130008fe79a"
+    }
+  },
+  "resource": {
+    "pod_id": "07zw0l1vs69gc4",
+    "gpu": "NVIDIA L4",
+    "created_utc": "2026-10-12T10:37:37.918000+00:00",
+    "deletion_observed_utc": "2026-10-12T11:27:28.074835+00:00",
+    "hourly_usd": 0.59,
+    "estimated_compute_usd": 0.4901,
+    "excludes_retained_storage": true,
+    "deleted": true,
+    "retained_volume": "vd3jnbwko1",
+    "cleanup": {
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      },
+      "verified_duplicate_files_removed": 170,
+      "owned_symlinks_removed": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_volume": "vd3jnbwko1"
+    }
+  },
+  "validation": [
+    "All 85 exact graph/history/PNG/parent-hash/recomputed-warp checks passed",
+    "All 42 historical case graphs unchanged under runner defaults",
+    "All 17 sampler indices share seed, prompt and sigmas; first warped input is identical; outputs differ",
+    "All 1205 remote files verified locally by SHA256 and byte length",
+    "All five final RIFE deliveries verified by finisher",
+    "Three media review server tests and focused Ruff checks passed",
+    "Reviewer validates source hashes, dimensions, decoded timestamps and painting provenance"
+  ],
+  "http": {
+    "world-seed-samplers": {
+      "page": 200,
+      "euler060": 206,
+      "ancestral060": 206,
+      "tidal-baseline": 206
+    },
+    "world-seed-reference-controls": {
+      "page": 200,
+      "reference-control-l4": 206,
+      "edit050": 206,
+      "ground384": 206,
+      "weight-001": 206
+    }
+  },
+  "limits": [
+    "One scene and one seed trajectory only",
+    "Historical 0.72 control uses another GPU; two new sampler arms share hardware",
+    "Reference comparisons use a fresh same-GPU control; older human-liked clip retained separately",
+    "No diagnosed mode collapse or measured total reference-conditioning percentage",
+    "No new human normal-speed playback preference yet"
+  ],
+  "runtime_receipts": "apps/deforum/work/sampler-reference-controls-session/",
+  "transfer_recovery": "A local transfer watcher observed the first renderer exit before rechecking its final completion record; the control watcher also monitored that earlier PID. Both resumed from completed files with the correct process, without regenerating paintings. Final manifest verification passed."
+}
