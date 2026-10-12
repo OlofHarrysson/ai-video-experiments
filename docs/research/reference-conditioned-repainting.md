@@ -1,6 +1,6 @@
 # Noise and clean references in recurrent image generation
 
-2026-10-12. Source and implementation research for World Seed, before new rendering. Olof prioritizes noise and reference conditioning, defers refinement, and rules out masks. This note explains mechanisms and specifies proposed experiments; no model weights were downloaded, no runtime was changed and no inference was submitted.
+2026-10-12. Source and implementation research for World Seed, recorded before new rendering. Olof prioritizes noise and reference conditioning, defers refinement, and rules out masks. This research phase did not download weights or submit inference. The subsequent approved execution and its evidence live in the [noise/reference study](../../apps/deforum/projects/world-seed/experiments/noise-reference/README.md).
 
 ## What happens in our current repaint
 

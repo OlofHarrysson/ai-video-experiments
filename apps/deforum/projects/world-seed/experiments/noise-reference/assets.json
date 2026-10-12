@@ -1,0 +1,15 @@
+{
+  "comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+  "base_assets_manifest": "serverless/modern-models.json",
+  "node_repo": "https://github.com/lbouaraba/comfyui-krea2edit",
+  "node_revision": "86f886dac23013d88996e3a2e99093ba44d322fb",
+  "lora_repo": "conradlocke/krea2-identity-edit",
+  "lora_revision": "89e9e7a09ee2e5c9331e952063d79b1b8a703280",
+  "filename": "krea2_identity_edit_v1_2.safetensors",
+  "bytes": 1828256432,
+  "sha256": "6adf9a69cc9502d286db7b69964d37da7e9cfe4b05b4d004bc275f087d3fd3cf",
+  "strength_model": 1,
+  "ref_boost": 1,
+  "grounding_px": 768,
+  "reference_policy": "Same already-warped previous painting as target initialization, clean VAE tokens, and image-grounded prompt input. Native control alone uses empty target initialization."
+}

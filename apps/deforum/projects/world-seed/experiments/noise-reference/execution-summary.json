@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-12",
+  "status": "complete",
+  "human_quality_verdict": "pending",
+  "production_recipe_changed": false,
+  "cases": 38,
+  "new_paintings": 196,
+  "worlds": [
+    "tidal-specific-b",
+    "city-full-material-a"
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "primary_comparison": {
+    "clips": 4,
+    "seconds_each": 2,
+    "frames_each": 48,
+    "paintings_each": 18,
+    "fps": 24,
+    "url": "http://localhost:3028/world-seed-reference"
+  },
+  "preservation": {
+    "verified": true,
+    "files": 2858,
+    "bytes": 1718357198,
+    "jobs": 196,
+    "cases": 38,
+    "manifest_sha256": "152987134b37d60a1507b66cd4b9573f51e060e4d8537a943b1fd09f3f0fe0e3",
+    "transfer_sha256": {
+      "remaining.tar.gz": "171f2a3674276618689608db5939e5619bf33045dad91492f2fe2691e28171d4",
+      "runtime-evidence.tar.gz": "5711b044023cfcfc70734d30511d373eefd7d4e0417b525b489cd252eb46143d",
+      "remote-manifest.json": "152987134b37d60a1507b66cd4b9573f51e060e4d8537a943b1fd09f3f0fe0e3"
+    }
+  },
+  "screening": {
+    "all_main_raw_paintings": true,
+    "all_second_seed_raw_paintings": true,
+    "all_transformation_raw_paintings": true,
+    "selected_native_resolution_images": true,
+    "primary_dense_windows_seconds": [
+      [
+        0.5,
+        0.75
+      ],
+      [
+        1.5,
+        1.75
+      ]
+    ],
+    "human_playback_preference": null
+  },
+  "findings": [
+    "No consistent preservation/detail win from the three tested noise schedules.",
+    "Clean editing references improve major-form retention in both worlds and two moving seed trajectories.",
+    "Accumulated simplification and warmer color remain; the recipe does not meet the sustained crisp-detail target.",
+    "Eight partial steps and added color/detail preservation text show no clear cure in six-repaint holds.",
+    "A small water-color edit remains possible but is attenuated with the reference."
+  ],
+  "resource": {
+    "pod_id": "d4mkgf0qzq9qtq",
+    "pod_created_utc": "2026-10-12T06:07:52.749000+00:00",
+    "deletion_observed_utc": "2026-10-12T07:07:56.007619+00:00",
+    "hourly_usd": 0.72,
+    "estimated_compute_usd": 0.7207,
+    "cost_basis": "elapsed time at quoted hourly compute rate; excludes retained storage",
+    "deleted": true,
+    "retained_volume": {
+      "id": "vd3jnbwko1",
+      "name": "deforum-models",
+      "gb": 50
+    },
+    "cleanup": {
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      },
+      "verified_duplicate_files_removed": 392,
+      "owned_symlinks_removed": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_volume": "vd3jnbwko1"
+    }
+  },
+  "validation": [
+    "196 exact graph/history/PNG-metadata/lineage/warp checks passed",
+    "2858 remote files matched local SHA256 and length",
+    "All four main deliveries passed frame, source and interpolation provenance checks",
+    "Reviewer builder verified source hashes, frame timestamps, dimensions and decoding",
+    "Comparison route HTTP 200; all four media routes HTTP 206",
+    "ruff passed; 3 media review server tests passed"
+  ],
+  "next_proposal": "Compare a camera-aligned original scene keyframe against the rolling previous-painting clean reference while retaining previous-image initialization; not executed.",
+  "exclusions": [
+    "masks",
+    "pixel copyback",
+    "refinement",
+    "resolution change",
+    "multi-reference weighting"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "World Seed \u2014 clean reference comparison",
+  "selected": [
+    "tidal-reference",
+    "tidal-baseline"
+  ],
+  "clips": [
+    {
+      "id": "tidal-reference",
+      "label": "Tidal world \u00b7 clean reference",
+      "note": "Tracks the original forms more closely; surface finish can still drift.",
+      "details": "Two seconds, eighteen paintings at native 1536\u00d71024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and CFG1. Adds Krea Identity Edit v1.2 (strength 1), image-grounded prompt encoding and clean VAE reference tokens from the same already-warped previous painting, plus a fixed preservation instruction. Reference attention boost 1. Previous-image initialization remains active. No masks, pixel copyback or refinement pass.",
+      "source": "projects/world-seed/exports/v002/nr-move-tidal-reference/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "tidal-baseline",
+      "label": "Tidal world \u00b7 usual repaint",
+      "note": "The existing 0.72 repaint, with the same camera and seeds.",
+      "details": "Two seconds, eighteen paintings at native 1536\u00d71024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and CFG1. Plain Krea 2 Turbo with previous-image initialization and ordinary text conditioning. No additional clean reference. This is a new matched control, not the original full film.",
+      "source": "projects/world-seed/exports/v002/nr-move-tidal-baseline/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "city-reference",
+      "label": "Engraved city \u00b7 clean reference",
+      "note": "Tracks the original forms more closely; surface finish can still drift.",
+      "details": "Two seconds, eighteen paintings at native 1536\u00d71024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and CFG1. Adds Krea Identity Edit v1.2 (strength 1), image-grounded prompt encoding and clean VAE reference tokens from the same already-warped previous painting, plus a fixed preservation instruction. Reference attention boost 1. Previous-image initialization remains active. No masks, pixel copyback or refinement pass.",
+      "source": "projects/world-seed/exports/v002/nr-move-city-reference/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "city-baseline",
+      "label": "Engraved city \u00b7 usual repaint",
+      "note": "The existing 0.72 repaint, with the same camera and seeds.",
+      "details": "Two seconds, eighteen paintings at native 1536\u00d71024, 24 fps, identical RIFE finishing outside feedback. Same opening, camera, full scene/material text, seed trajectory, 0.72\u21920.615413\u21920.373081\u21920 Euler schedule and CFG1. Plain Krea 2 Turbo with previous-image initialization and ordinary text conditioning. No additional clean reference. This is a new matched control, not the original full film.",
+      "source": "projects/world-seed/exports/v002/nr-move-city-baseline/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

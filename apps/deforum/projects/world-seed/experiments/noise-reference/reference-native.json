@@ -1,0 +1,164 @@
+{
+  "cases": [
+    {
+      "case": "nr-native-tidal-1012201",
+      "seed": 1012200,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 1.0
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.956723690032959,
+        0.9045307636260986,
+        0.8403487801551819,
+        0.7595109343528748,
+        0.6545668244361877,
+        0.5128440856933594,
+        0.31090107560157776,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/tidal-specific-b/anchors/0000.png",
+      "initial_sha256": "33e4683c961c444ca131869a7b0eba7e0c5bde99c71dd049cd2e5890d8b6d910",
+      "reference_mode": "native",
+      "ref_boost": 1.0
+    },
+    {
+      "case": "nr-native-tidal-1012202",
+      "seed": 1012201,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "tidal",
+          "prompt": "An alien tidal basin on a fractured moon. An enormous folded ivory shell rises diagonally from a perfectly still cobalt sea, its open inner chambers stepping inward into smaller repeating chambers. Rust-red mineral terraces sweep across the lower foreground, separated by narrow pools of deep turquoise water. Slender copper spires grow from the terraces and bend toward the shell. Bands of tiny eroded ridges, granular mineral deposits and intricate branching seams cover the stone. A distant ringed planet hangs low in a black star-filled sky. Vermilion, ivory, cobalt and oxidized copper, with raking amber sunlight from the upper left. Low wide view with a close foreground ledge, an open stretch of water and the immense shell beyond. No bridge, doorway, vegetation, people or text. A meticulous surreal digital environment. The shell has thin porcelain-like edges, finely pitted exterior layers and nacre within its deep chambers. Terraces expose thousands of razor-thin sedimentary laminae, tiny angular quartz grains and branching copper veins. Sharp reflected edges lie on the still water. Restrained highlights and clean contact shadows reveal physical relief; clear air, deep focus and finely resolved distant silhouettes."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 1.0
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.956723690032959,
+        0.9045307636260986,
+        0.8403487801551819,
+        0.7595109343528748,
+        0.6545668244361877,
+        0.5128440856933594,
+        0.31090107560157776,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/tidal-specific-b/anchors/0000.png",
+      "initial_sha256": "33e4683c961c444ca131869a7b0eba7e0c5bde99c71dd049cd2e5890d8b6d910",
+      "reference_mode": "native",
+      "ref_boost": 1.0
+    },
+    {
+      "case": "nr-native-city-1012201",
+      "seed": 1012200,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "city",
+          "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant cinematic digital environment, landscape 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 1.0
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.956723690032959,
+        0.9045307636260986,
+        0.8403487801551819,
+        0.7595109343528748,
+        0.6545668244361877,
+        0.5128440856933594,
+        0.31090107560157776,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/city-full-material-a/anchors/0000.png",
+      "initial_sha256": "239aa69c67a1c8c53d222fdee208fe94b4de89a6a8f7ec47005df3f47440aec5",
+      "reference_mode": "native",
+      "ref_boost": 1.0
+    },
+    {
+      "case": "nr-native-city-1012202",
+      "seed": 1012201,
+      "duration": 1,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "city",
+          "prompt": "An ancient lost city suspended inside an enormous seed shell, an impossible majestic civilization with no people. A curved avenue of densely engraved black basalt leads from the foreground into the distance through intricate golden aqueducts, needle towers, ribbed temples, staircases on multiple gravity planes and bridges spiraling overhead. Thousands of tiny sculpted chambers and filigree terraces are carved into every monumental building. Streams of molten gold flow upward between the towers. The architectural forms have the precision of an exceptionally detailed copperplate engraving and ornate black lacquer sculpture, with metallic gold illuminated in narrow shafts of amber light. Black, warm bone white and molten brass, restrained deep oxblood accents, no green vegetation. A large circular iris of interlocking stone blades floats at the end of the avenue, framing a small icy blue crystalline world beyond. Dramatic asymmetrical wide view, deep layered perspective, a legible passage between immense ornate structures, no central giant face, no text, no ordinary buildings, no people. Unreal and extravagant cinematic digital environment, landscape 3:2. Clear air, deep focus, precise surface relief, restrained glow and small controlled highlights."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 1.0
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.956723690032959,
+        0.9045307636260986,
+        0.8403487801551819,
+        0.7595109343528748,
+        0.6545668244361877,
+        0.5128440856933594,
+        0.31090107560157776,
+        0.0
+      ],
+      "phrases": [],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/city-full-material-a/anchors/0000.png",
+      "initial_sha256": "239aa69c67a1c8c53d222fdee208fe94b4de89a6a8f7ec47005df3f47440aec5",
+      "reference_mode": "native",
+      "ref_boost": 1.0
+    }
+  ]
+}
