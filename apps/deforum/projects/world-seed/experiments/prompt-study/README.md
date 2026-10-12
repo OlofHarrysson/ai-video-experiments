@@ -2,7 +2,11 @@
 
 Started 2026-10-10 at 17:51 UTC. Olof authorized roughly 60–90 minutes of iteration, testing several worlds and motion, and asked for the strongest screened result. He finds the previous `d03-crisp-digital` treatment similar or worse than the original; its cleaner linework did not supply the expected high fidelity. The original film remains selected.
 
-## Result and shortlist
+## Human review — 2026-10-12
+
+Olof finds starting noise **0.25 really bad**, **0.6 acceptable**, and **0.72 better in some respects**; **0.85 changes large objects too much**. Small flicker and incidental object changes are acceptable, but a major object such as the moon disappearing is too disruptive. This supersedes the assistant's moving shortlist below without establishing one universal noise setting. Keep the original film selected. Continue investigating material descriptions, with persistent focal forms and rich moving surfaces judged together. [Earlier tests and proposed next comparisons](../continuity-options.md).
+
+## Assistant shortlist before human review
 
 The strongest new moving material treatment is the [tidal world at 0.85](../../exports/v002/ps-tidal-specific-n085/faster/rife-moving-tail/preview.mp4): clear water, granular mineral shores, textured copper and a sharply lit ivory shell. It also has a visible planet-size jump at 0.33–0.46 seconds. The [gentler 0.25 alternative](../../exports/v002/ps-tidal-specific-n025/faster/rife-moving-tail/preview.mp4) preserves structure better but gradually smooths the surfaces. [Compare them in the reviewer](http://localhost:3028/world-seed-detail). This is an assistant artistic shortlist, not a new universal sampling default or a replacement for the original film.
 
