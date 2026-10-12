@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-12",
+  "status": "complete",
+  "cases": 2,
+  "new_paintings": 34,
+  "reference_weights": [
+    0.5,
+    0.2
+  ],
+  "control_weights": [
+    1.0
+  ],
+  "reference_policy": "Same already-warped previous painting; never a fixed opening reference.",
+  "other_generation_settings_changed": false,
+  "graph_control_check": "Only SaveImage output name and Krea2EditModelPatch ref_boost differ from the existing moving reference graph.",
+  "production_recipe_changed": false,
+  "assistant_selection": null,
+  "human_quality_verdict": "pending",
+  "findings": [
+    "0.5 remains visually close to 1.0, with warming and smooth/pitted simplification.",
+    "0.2 permits more local redesign: the lower-left crescent becomes a ringed orb and a small additional orb appears.",
+    "Both retain the restrained major-form evolution and detail loss that motivated the test; neither is selected as a clear improvement.",
+    "This single attention control does not establish a calibrated or sufficient flicker dial; grounded text, full-strength edit adapter and preservation instruction stay active."
+  ],
+  "review": {
+    "url": "http://localhost:3028/world-seed-reference-weight",
+    "new_clips": 2,
+    "frames_each": 48,
+    "seconds_each": 2,
+    "paintings_each": 18,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "raw_paintings_screened": 36,
+    "dense_windows_seconds": [
+      [
+        0.5,
+        0.75
+      ],
+      [
+        1.5,
+        1.75
+      ]
+    ],
+    "selected_native_resolution_inspection": true,
+    "human_playback_preference": null
+  },
+  "preservation": {
+    "verified": true,
+    "files": 482,
+    "bytes": 250914739,
+    "jobs": 34,
+    "cases": 2,
+    "manifest_sha256": "7d036236d93184e1c4e97d04a95c66e5d8e0c5eba1d73b60fb2aa0cbc7b6b2bd",
+    "transfer_sha256": {
+      "remaining.tar.gz": "1fcb402f7b9b1ced8b9c50148766f4934b0ac142d4eb7e78b4914be917897bd4",
+      "runtime-evidence.tar.gz": "93e9ca53b35bc69511d2033e0a5d52af8c4349fb4cf927d7c55f0d1ac8845f1c",
+      "remote-manifest.json": "7d036236d93184e1c4e97d04a95c66e5d8e0c5eba1d73b60fb2aa0cbc7b6b2bd"
+    }
+  },
+  "resource": {
+    "pod_id": "osjp1mpk5l7pjm",
+    "created_utc": "2026-10-12T08:49:32.171000+00:00",
+    "deletion_observed_utc": "2026-10-12T09:08:25.297226+00:00",
+    "hourly_usd": 0.72,
+    "estimated_compute_usd": 0.2266,
+    "excludes_retained_storage": true,
+    "deleted": true,
+    "retained_volume": "vd3jnbwko1",
+    "cleanup": {
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      },
+      "verified_duplicate_files_removed": 68,
+      "owned_symlinks_removed": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_volume": "vd3jnbwko1"
+    }
+  },
+  "validation": [
+    "34 graph/history/PNG/lineage/warp checks passed",
+    "482 remote files verified locally by SHA256 and length",
+    "Both new RIFE deliveries and moving tails verified",
+    "Reviewer builder validated original-video hashes, dimensions, decoding and timestamps",
+    "Named review returns HTTP 200; all four media paths return HTTP 206",
+    "Three server tests and focused Ruff checks passed"
+  ],
+  "limits": [
+    "One scene and one seed trajectory only",
+    "No direct metric of perceived flicker or playback appeal",
+    "Mode collapse mechanism not proven",
+    "No fixed-opening reference, prompt change, refinement, resolution change or adapter-strength sweep"
+  ]
+}

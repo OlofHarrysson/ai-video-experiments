@@ -13,6 +13,8 @@ SESSION = APP / "media_review/sessions/seed-for-sea-long.json"
 OUTPUT = APP / "projects/modern-model-study/exports/media-review-seed-for-sea-long-v001"
 DEFAULT_PORT = 3000
 NAMED_REVIEWS = {
+    "/world-seed-reference-weight": APP
+    / "projects/world-seed/exports/media-review-reference-weight-v001/local.html",
     "/world-seed-reference": APP
     / "projects/world-seed/exports/media-review-reference-v001/local.html",
     "/world-seed-detail": APP
