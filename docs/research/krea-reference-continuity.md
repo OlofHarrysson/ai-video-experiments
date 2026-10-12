@@ -2,6 +2,8 @@
 
 Source audit: 2026-09-13. Research only; no inference, remote-resource inspection, weight downloads, installs, or shared-code changes. Current repository files and public primary sources were inspected. Recommendations below are proposals for the main agent, not validated animation results.
 
+**Follow-up, 2026-10-12:** the proposed style-reference screen completed without a clear preservation advantage. The current [noise/reference research](reference-conditioned-repainting.md) incorporates that result and prioritizes an editing-trained reference route after a controlled noise-schedule comparison. Olof rules out masks and defers refinement. The session-specific restrictions and proposals below are historical.
+
 ## Recommendation
 
 **Krea 2 Turbo can receive an extra reference image while retaining VAE-encoded previous-image initialization.** The smallest existing-core experiment uses the Ostris style-reference LoRA, `TextEncodeQwenImageEditPlus`, and `FluxKontextMultiReferenceLatentMethod(index_timestep_zero)`. ComfyUI v0.34.0 already implements the reference-token path. No custom-node installation, Python dependency, or warm-process restart is inherently required for this graph.

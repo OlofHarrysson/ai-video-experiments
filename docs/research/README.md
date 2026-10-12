@@ -35,6 +35,7 @@ Return to the [project documentation index](../../AGENTS.md#documentation-index)
 - [Repeated repainting and accumulated image loss](repeated-repaint-degradation.md)
 - [Krea Turbo: low-noise repaint and nearby-noise diagnostics](krea-low-noise-diagnostics.md)
 - [Extra reference conditioning for recurrent Krea 2 Turbo](krea-reference-continuity.md)
+- [Noise and clean references in recurrent generation](reference-conditioned-repainting.md): current sampler behavior, editing-model mechanisms, prior reference results and the proposed World Seed comparison; refinement deferred.
 - [Smaller repaint changes and newer interpolation](diffusion-and-interpolation-next.md)
 
 ## ComfyUI, infrastructure and other animation approaches
