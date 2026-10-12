@@ -1,6 +1,6 @@
 # Adapter strength and deterministic sampler follow-up
 
-2026-10-12. Olof prefers editing strength 0.5 because color drift is reduced. He approves exploring more strengths and two additional samplers on the same artwork. This preference applies to the reference experiment, not a replacement of the selected full film.
+2026-10-12. Olof initially preferred editing strength 0.5 because color drift was reduced and approved exploring more strengths and two additional samplers on the same artwork. After reviewing this follow-up, he likes **0.25** and considers **Heun and DPM++ 2M** worthwhile alternatives, without calling either strictly better than the baseline. These preferences apply to the experiments; the selected full film remains unchanged.
 
 ## Frozen comparison
 
@@ -27,10 +27,10 @@ An earlier stationary lost-city study found no clear Heun advantage. Repeating i
 
 ## Evidence
 
-All three adapter trajectories are generated and screened. Both repeated controls reproduce all eighteen prior paintings pixel-for-pixel and both finished pair/full MP4s byte-for-byte. The current comparison therefore reproduces the preferred reference baseline and the earlier Euler 0.60 result, rather than relying only on matching settings.
+All three adapter trajectories are generated and screened. Both repeated controls reproduce all eighteen prior paintings pixel-for-pixel and both finished pair/full MP4s byte-for-byte. The current comparison therefore reproduces the previously preferred reference baseline and the earlier Euler 0.60 result, rather than relying only on matching settings.
 
-- **0.25:** cooler than 0.5, but the shell becomes more regular honeycomb and the foreground gains rocks. The original planet persists. A large additional moon grows early and remains; a smaller moon appears around 0.875–1.0s, disappears around 1.08s and later returns. Fine grain still simplifies. Show as the useful alternative, not a proven improvement.
-- **0.5:** preserve Olof's preferred balance. The reproduced clip retains the main planet but warms and smooths, with the previously noted transient extra small moon.
+- **0.25:** cooler than 0.5, but the shell becomes more regular honeycomb and the foreground gains rocks. The original planet persists. A large additional moon grows early and remains; a smaller moon appears around 0.875–1.0s, disappears around 1.08s and later returns. Fine grain still simplifies. Olof subsequently likes this variant; retain it as the preferred adapter candidate.
+- **0.5:** retain the previously preferred control for comparison. The reproduced clip retains the main planet but warms and smooths, with the previously noted transient extra small moon.
 - **0.75:** the main planet persists without extra moons observed in these eighteen paintings. Shell folds remain simpler and spires become glossy. Stronger amber coloration and a rust-colored shell exterior return; no convincing fine-detail gain. Available as a preservation/color tradeoff, not the default shortlist.
 
 The two new adapter clips receive complete eighteen-painting overviews, native intermediate/final inspection, all four frames of the first interval and all fourteen frames in 0.50–0.75s and 1.50–1.75s. The 0.25 sky event also receives every frame from 0.875–1.25s. No gross doubled major silhouette is observed in those interpolation windows. This does not establish normal-speed human preference.
@@ -43,9 +43,9 @@ Both new sampler clips receive complete eighteen-painting overviews, native fina
 
 ## Recommendation and limits
 
-Retain editing strength **0.5**, reference boost **0.01**, grounding **768** and ordinary Euler as the preferred reference recipe for this scene. Present **0.25** as the cooler but more inventive alternative. Increasing to 0.75 buys a quieter sky in this trajectory at the cost of more warmth. Neither new sampler beats Euler for the requested material detail in this comparison. Color bias and fine-grain loss remain separate issues: improving one has not solved the other.
+Following human review, retain editing strength **0.25**, reference boost **0.01**, grounding **768** and ordinary Euler as the preferred adapter candidate for this scene. Preserve 0.5 as the earlier control. Olof also likes **Heun and DPM++ 2M** and explicitly says they should not be discounted, although neither is strictly better than the baseline. Keep both as creative alternatives, with Euler as the sampler comparison baseline. The assistant found no clear fine-detail retention advantage; that narrower observation does not establish an overall artistic ranking. Color bias and fine-grain loss remain unresolved.
 
-This is one scene and one seed trajectory, with 17 new paintings per branch. It does not establish a universal best strength or sampler, stable thirty-second behavior, or human preference for the new clips. No production film is replaced and no sampler/adapter combination or refinement pass is tested. The next useful quality question is whether a separate light detail pass can add genuine surface relief without destabilizing the loop; it remains unrun.
+This is one scene and one seed trajectory, with 17 new paintings per branch. It does not establish a universal best strength or sampler or stable thirty-second behavior. Human feedback supports 0.25 and retaining both sampler alternatives; it does not select one sampler winner. No production film is replaced and no sampler/adapter combination or refinement pass is tested. The next useful quality question is whether a separate light detail pass can add genuine surface relief without destabilizing the loop; it remains unrun.
 
 [Compare adapter strengths](http://localhost:3028/world-seed-reference-controls) · [Compare samplers](http://localhost:3028/world-seed-samplers). Each page defaults to two clips; other tested variants remain selectable. The unchanged player is rebuilt from verified full-resolution originals. Both pages return 200 and all eleven original-media range requests return 206. Browser playback is not rechecked in this sprint.
 

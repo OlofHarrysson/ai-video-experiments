@@ -499,3 +499,7 @@ Olof says of [BILLIONS v015](../apps/canvas-animation/projects/title-sequence-st
 ### 2026-10-12 — World Seed: half-strength editing preferred
 
 Olof prefers editing-adapter strength 0.5 over the prior full-strength reference treatments because the color problem is reduced. He approves exploring strengths around it and two more samplers on the same artwork. Keep reference boost 0.01 and the warped previous painting policy. This is a preference among reference experiments, not approval of a new full-film recipe. [Follow-up](../apps/deforum/projects/world-seed/experiments/noise-reference/adapter-sampler-followup.md).
+
+### 2026-10-12 — World Seed: 0.25 preferred; sampler alternatives remain useful
+
+After reviewing the follow-up, Olof likes editing-adapter strength **0.25**. He also likes **Heun and DPM++ 2M**, while saying they are not strictly better than the baseline and should not be discounted. Retain 0.25 as the preferred adapter candidate for this scene and both samplers as creative alternatives. The assistant’s lack of a clear fine-detail retention gain does not justify rejecting their overall appearance or movement. This feedback does not select a sampler winner or establish a tested combination of 0.25 with either sampler. [Recorded comparison](../apps/deforum/projects/world-seed/experiments/noise-reference/adapter-sampler-followup.md).

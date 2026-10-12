@@ -15,14 +15,14 @@
     {
       "id": "heun060",
       "label": "Heun · noise 0.60",
-      "note": "More scattered flecks and wavy folds; no clear fine-detail gain over Euler.",
+      "note": "More scattered flecks and wavy folds; retained as a creative alternative after your review.",
       "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same GPU as the fresh Euler control, same opening, camera, full material prompt, seeds, CFG1 and exact 0.60 → 0.512844085693 → 0.310901075602 → 0 schedule. All reference-editing paths off. RIFE stays outside recurrence. Five model evaluations over the same three intervals; no fresh noise after initialization. Extra provisional evaluations change the update.",
       "source": "projects/world-seed/exports/v002/nr-sampler-tidal-heun060/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "dpmpp2m060",
       "label": "DPM++ 2M · noise 0.60",
-      "note": "More graphic, wavy shell layers and thinner spires; greater redesign, not finer material texture.",
+      "note": "More graphic, wavy shell layers and thinner spires; retained as a creative alternative after your review.",
       "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Same GPU as the fresh Euler control, same opening, camera, full material prompt, seeds, CFG1 and exact 0.60 → 0.512844085693 → 0.310901075602 → 0 schedule. All reference-editing paths off. RIFE stays outside recurrence. Three model evaluations, using the preceding estimate within each repaint. No memory across paintings and no fresh noise after initialization.",
       "source": "projects/world-seed/exports/v002/nr-sampler-tidal-dpmpp2m060/faster/rife-moving-tail/preview.mp4"
     },

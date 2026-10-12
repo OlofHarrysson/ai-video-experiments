@@ -7,16 +7,16 @@
   "clips": [
     {
       "id": "edit050",
-      "label": "Adapter 0.50 · preferred",
-      "note": "Your preferred balance; less amber than full strength, with some smoothing and shape changes.",
+      "label": "Adapter 0.50 · earlier control",
+      "note": "Less amber than full strength, with some smoothing and shape changes.",
       "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Reference boost 0.01, edit LoRA strength 0.5, grounding 768, Euler at noise 0.72, CFG1. Same detailed prompt, opening, seeds and camera. The fresh control on the GPU used for 0.25 and 0.75 reproduces every painting pixel-for-pixel and the finished MP4 byte-for-byte. Only the already-warped previous painting is the reference. RIFE stays outside feedback.",
       "source": "projects/world-seed/exports/v002/nr-ref-tidal-edit050/faster/rife-moving-tail/preview.mp4"
     },
     {
       "id": "edit025",
-      "label": "Adapter 0.25 · cooler",
+      "label": "Adapter 0.25 · preferred",
       "note": "Cooler color, more honeycomb-like shapes; adds a large moon and a smaller moon that comes and goes.",
-      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Changes only editing LoRA strength from 0.5 to 0.25. Keeps boost 0.01, grounding 768, Euler noise 0.72, CFG1, full material prompt, camera and seeds. Same GPU as the repeated preferred control. Original planet persists. Fine grain still simplifies. Only the already-warped previous painting is the clean reference; no masks, opening reference or refinement.",
+      "details": "Two seconds, 18 paintings, 1536×1024 and 24 fps. Changes only editing LoRA strength from 0.5 to 0.25. Keeps boost 0.01, grounding 768, Euler noise 0.72, CFG1, full material prompt, camera and seeds. Same GPU as the repeated 0.5 control. Original planet persists. Fine grain still simplifies. Only the already-warped previous painting is the clean reference; no masks, opening reference or refinement.",
       "source": "projects/world-seed/exports/v002/nr-ref-tidal-edit025/faster/rife-moving-tail/preview.mp4"
     },
     {

@@ -145,7 +145,7 @@
     }
   ],
   "historical_graph_regression_cases": 47,
-  "human_verdict": "Pending new clips; 0.5 remains preferred reference baseline.",
+  "human_verdict": "2026-10-12: Olof likes editing strength 0.25. He also likes Heun and DPM++ 2M, does not consider them strictly better than the baseline, and says they should not be discounted.",
   "private_receipts": "apps/deforum/work/adapter-sampler-followup-session/",
   "actual_cases": 6,
   "actual_new_paintings": 102,
@@ -186,7 +186,7 @@
       "first_interval": "All 4 frames inspected; no gross doubled main silhouette.",
       "delivery": "Both pair and full moving-tail MP4s byte-identical to prior screened delivery.",
       "observations": "Planet retained, fine pits enlarge into round holes, foreground smooths; same transient extra small moon as prior control.",
-      "selection": "Human-preferred baseline retained."
+      "selection": "Previously human-preferred control retained for comparison; subsequent feedback favors 0.25."
     },
     "nr-ref-tidal-edit025": {
       "status": "complete",
@@ -194,7 +194,7 @@
       "native": "Paintings 6, 10 and 17 inspected at native resolution.",
       "dense": "All four first-interval frames; 0.50-0.75s and 1.50-1.75s all 14 frames; extra sky-event interval 0.875-1.25s all 10 frames.",
       "observations": "Cooler than 0.5; main ringed planet retained; large added moon grows early and persists. Smaller moon appears near 0.875s, disappears around 1.08s and later returns. Shell becomes more regular honeycomb and foreground grows rocks. Surface grain still simplifies; clean contours are not proof of more detail. No gross doubled major silhouette in inspected RIFE intervals.",
-      "selection": "Show as cooler but more inventive alternative; retain human preference 0.5 pending feedback."
+      "selection": "Human likes this variant; current preferred adapter candidate for this scene."
     },
     "nr-ref-tidal-edit075": {
       "status": "complete",
@@ -219,7 +219,7 @@
       "native": "Paintings 6 and 17 inspected at native resolution; painting 6 compared directly with Euler.",
       "dense": "All 4 first-interval frames, all 14 frames in 0.50-0.75s and 1.50-1.75s.",
       "observations": "Main ringed planet remains; reflection fills into a full orb. More scattered dots, orange flecks and small pits appear on shell, ground and water; dense stars and reflected specks accumulate. Shell folds become more wavy and terrain edges more graphic. Added marks do not read as convincing fine mineral texture. No clear preservation/detail win over Euler despite two extra model evaluations per painting. No gross doubled major silhouette in screened RIFE windows.",
-      "selection": "Not preferred over Euler for crisp material detail."
+      "selection": "Retain as a creative alternative following human review; no strict superiority over baseline claimed. Assistant fine-detail observations do not establish overall artistic preference."
     },
     "nr-sampler-tidal-dpmpp2m060": {
       "status": "complete",
@@ -227,7 +227,7 @@
       "native": "Final painting inspected at native resolution.",
       "dense": "All 4 first-interval frames, all 14 frames in 0.50-0.75s and 1.50-1.75s.",
       "observations": "Main ringed planet remains; lower crescent/reflection becomes a full orb. Shell layers become wavy and flatter, with more graphic dark and rust streaks. More small pits, dots and thin spires develop, some spires gain rounded tips. Edges can be crisp, but this is shape/mark invention rather than retention of original fine mineral relief. No clear fidelity gain over Euler; greater redesign than Heun by the end. No gross doubled major silhouette in screened RIFE windows.",
-      "selection": "Show beside Euler as the clearest sampler contrast; not preferred for requested material detail."
+      "selection": "Retain as a creative alternative following human review; no strict superiority over baseline claimed. Assistant fine-detail observations do not establish overall artistic preference."
     }
   },
   "controls_reproduced": {
@@ -264,7 +264,7 @@
     "media_review_server_unittests": 3,
     "source_graph_parent_warp_png_history_checks": "All 102 jobs passed"
   },
-  "assistant_recommendation": "Keep editing strength 0.5 as human-preferred reference baseline. Show 0.25 as cooler but more inventive alternative; 0.75 is warmer. Neither Heun nor DPM++ 2M demonstrates better fine material detail than Euler in this trajectory. No production recipe replaced.",
+  "assistant_recommendation": "Use editing strength 0.25 as the preferred adapter candidate for this scene, retaining boost 0.01, grounding 768 and Euler. Keep Heun and DPM++ 2M as creative sampler alternatives and Euler as the comparison baseline. Fine-detail retention and overall artistic value are separate judgments. No sampler/adapter combination tested and no production film replaced.",
   "limits": [
     "One artwork and seed trajectory; no cross-scene or repeated-seed claim",
     "Both controls reproduce previous results exactly on this runtime",
