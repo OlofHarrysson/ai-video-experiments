@@ -511,3 +511,7 @@ Olof authorizes a staged refinement experiment: first test saved paintings, then
 ### 2026-10-12 — World Seed: return to the planned worlds
 
 Olof asks to resume filmmaking with the new settings and make a short part of the previously planned journey through different worlds. He reiterates the target as super crisp, highly detailed digital art and rejects blurry, grayed-out watercolor-like treatment. The [city-to-crystal passage](../apps/deforum/projects/world-seed/experiments/crisp-passage/README.md) applies the preferred adapter candidate to a new artistic sequence. This authorizes the short film experiment; it does not establish a preference for its new output or replace the selected thirty-second film.
+
+### 2026-10-13 — Continue The Crystal Gate
+
+Olof likes the direction of the six-second Crystal Gate draft and requests a longer movie. Continue from its saved ending with the same visual recipe and continuous motion. This feedback supports the direction without claiming that fine-detail retention is solved or that he selected it over the separate thirty-second film.

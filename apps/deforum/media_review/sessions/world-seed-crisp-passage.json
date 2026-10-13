@@ -1,7 +1,16 @@
 {
   "title": "World Seed — the crystal gate",
-  "selected": ["crisp-passage"],
+  "selected": [
+    "emerald-continuation"
+  ],
   "clips": [
+    {
+      "id": "emerald-continuation",
+      "label": "Through the crystal gate · 12 seconds",
+      "note": "The road continues into jade bands, copper branches and silver mineral trees. Fine distant detail remains soft; some small spheres near the ending become ball-like.",
+      "details": "The original 54 paintings are preserved, followed by 54 new recurrent paintings. The same Krea 2 Turbo recipe uses Euler at noise 0.72, three updates, CFG1, editing adapter 0.25, reference boost 0.01 and grounding 768. Only the already-moved previous painting supplies initialization and reference. Incoming camera speed is matched, then the push eases into a lateral glide with a gentle bank. RIFE finishing stays outside feedback. Twelve seconds at 24 fps, 1536×1024; no cuts or extra refinement. The original six-second draft remains available.",
+      "source": "projects/world-seed/exports/v002/nr-cp-emerald-continuation-a/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "crisp-passage",
       "label": "The crystal gate · six-second draft",

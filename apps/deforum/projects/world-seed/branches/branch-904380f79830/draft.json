@@ -1,0 +1,316 @@
+{
+  "status": "draft-not-generated",
+  "intent": "Pass under the hanging cyan crystal along the road, then release into a lateral glide through an emerald mineral garden. Continuous camera rhythm and crisp solid material relief.",
+  "source": {
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/faster/rife-moving-tail/preview.mp4",
+    "frame": 141,
+    "painting_sha256": "6f577cd0f46e7bc8abdd5583c41532b814d2792ea888ede09524205efe54c5cc",
+    "config_sha256": "1fbfcddbf5822a8993d8a97e367ad61a3875d3ec80a81279ba85a8a50ea414ea",
+    "video_sha256": "c13154295fa545ae72478797e63678ea9b3aabd84195a43602ad9866978558f9"
+  },
+  "motion_preview": {
+    "display_start": 5.875,
+    "source_frame": 636,
+    "duration": 6.0,
+    "source_duration": 27.0,
+    "speed": 4.5,
+    "zoom_min": 1.0,
+    "zoom_max": 3.5,
+    "zoom_end": 3.5,
+    "incoming_velocity": [
+      -3.782080252272522e-05,
+      0.017520591274160585,
+      0.07180775957316829,
+      -0.009980022674987588
+    ],
+    "outgoing_start_velocity": [
+      -3.782080252272522e-05,
+      0.017520591274160585,
+      0.07180775957316829,
+      -0.009980022674987588
+    ],
+    "incoming_residual": 1.675650281359591e-13,
+    "warnings": [],
+    "timeline": [
+      {
+        "after": 0.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 0.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 1.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 2.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 3.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 4.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.111,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.222,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.333,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.444,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.556,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.667,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.778,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 5.889,
+        "noise": 0.72,
+        "prompt": "New description"
+      },
+      {
+        "after": 6.0,
+        "noise": 0.72,
+        "prompt": "New description"
+      }
+    ],
+    "intent": "Pass under the hanging cyan crystal along the road, then release into a lateral glide through an emerald mineral garden. Continuous camera rhythm and crisp solid material relief.",
+    "prompt": "We move through an open crystalline world of sharply etched cyan and rose glass, immense ivory ribs and nested polyhedral gardens. The curved crystal path leads past close faceted branches toward a deep emerald chamber within the lattice. Cyan reflections trace thousands of fine mineral veins; small violet cavities, silver filigree and rose-colored prismatic edges remain individually legible. Deep clean cobalt spaces between the structures, strong sculptural depth and tightly controlled small highlights. The architectural rings have become a sprawling recursive mineral garden with a clear route into its heart. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture.",
+    "id": "904380f79830457d9df98d598a2dd4fb",
+    "lead_seconds": 1.0,
+    "frame_count": 169,
+    "fps": 24,
+    "preview_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/904380f79830457d9df98d598a2dd4fb/preview.mp4",
+    "summary_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/904380f79830457d9df98d598a2dd4fb/summary.json",
+    "request_path": "/Users/olof/git/ai-video-experiments/apps/deforum/work/motion-planner/904380f79830457d9df98d598a2dd4fb/request.json"
+  }
+}

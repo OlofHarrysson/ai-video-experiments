@@ -1,0 +1,272 @@
+[
+  {
+    "frame": 0,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0000.png",
+    "sha256": "bf805bc3a14842518e07594b2baab9571db40965cd511a569527cd868a8ceddb"
+  },
+  {
+    "frame": 12,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0012.png",
+    "sha256": "bc7ee98e30dabbeefa1fca0667ae26fe24a24972b070fc9e5a467b505b51047b"
+  },
+  {
+    "frame": 24,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0024.png",
+    "sha256": "8f447829f7254bcdd059d25a16792548a3dfc20277e8778c05826d39474736f9"
+  },
+  {
+    "frame": 36,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0036.png",
+    "sha256": "6e540dbb735e3311f42f9821dd3b4c947e9b65ac60818f26dd477ee8a81e06a9"
+  },
+  {
+    "frame": 48,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0048.png",
+    "sha256": "e70eef7471eb2e9b945e59ee5a440d7cf830eb7143ee5b070b48a1417b59805b"
+  },
+  {
+    "frame": 60,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0060.png",
+    "sha256": "af6518a1c80f04cae2f3adfb188ee760c0ab68745dcdc9c166cccd237615e974"
+  },
+  {
+    "frame": 72,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0072.png",
+    "sha256": "2edbbe31e32b474f7ead4e40bf5895ad4f76d8c0c95ecb69baee01de460e08e7"
+  },
+  {
+    "frame": 84,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0084.png",
+    "sha256": "a992ee0ab80bca3971552f529daf4b902db9dd8754a879cd45e44eead7f7b50c"
+  },
+  {
+    "frame": 96,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0096.png",
+    "sha256": "7ff1ca7a0665fbda6819a5bf90684c5aade0d0e1a1a946a161cd9e1354a1ecac"
+  },
+  {
+    "frame": 108,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0108.png",
+    "sha256": "807c20c4b5988102989f1abe117f8d86a2b2e5b31c5c99488fc155775749d00b"
+  },
+  {
+    "frame": 120,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0120.png",
+    "sha256": "e9d569dab6713d88601f3fad47284fb38496a45a91ce1bc2339b8d3fd8c8fc21"
+  },
+  {
+    "frame": 132,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0132.png",
+    "sha256": "7329272176d150ba60f29bcd5f6aef105b55ecaf4b91818191afe30488f537ab"
+  },
+  {
+    "frame": 144,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0144.png",
+    "sha256": "ddfe6a0c4b0d00180523e6fd4926f53e732fa013c4c979e17364a705b56c7cae"
+  },
+  {
+    "frame": 156,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0156.png",
+    "sha256": "fdbae3cd1126c4fa85169dbc812a5a1a15ffff97241d1e21720f346ccf030617"
+  },
+  {
+    "frame": 168,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0168.png",
+    "sha256": "6017b52dbd1e021b4d7bc6c5775773738ac54580d5d02ca7191dbc8f7208adc9"
+  },
+  {
+    "frame": 180,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0180.png",
+    "sha256": "0ec1529206efaa28343d9ce30341250c792e2626a8b07578cc95265057275108"
+  },
+  {
+    "frame": 192,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0192.png",
+    "sha256": "c764135b75c4773510c422546117932e4f315e6f9d56789fe3bd27de37f914ea"
+  },
+  {
+    "frame": 204,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0204.png",
+    "sha256": "f848a1610d949b8500df3ba9dc4b842512d85a2c045201cd8377a60b9e076a2a"
+  },
+  {
+    "frame": 216,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0216.png",
+    "sha256": "f8e80cfe9c04d01e5c75f5ecf8002337ba9b2dd484c6dc7c2d0d91d0c137381f"
+  },
+  {
+    "frame": 228,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0228.png",
+    "sha256": "d1e538dd7da6782c2b25038f45f3520a88714c2e713c986d6c777af9a2b1b51b"
+  },
+  {
+    "frame": 240,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0240.png",
+    "sha256": "868ff89d720a52168d3a2b57c52141f55da58d310ba3e480899521251924c94b"
+  },
+  {
+    "frame": 252,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0252.png",
+    "sha256": "ddb1fd9eb0a9940eac62ef6ba434c93b3098b84ad062516cf3f292b748e26012"
+  },
+  {
+    "frame": 264,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0264.png",
+    "sha256": "dcb9d4c734ab15db339fe06d9daedba5ada43bdd056f7e726e59fa5621e08348"
+  },
+  {
+    "frame": 276,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0276.png",
+    "sha256": "1d968a21a4797b6b012d444f5aa3d6ab51cdd415d95b8a36c21caa43ca72bfa6"
+  },
+  {
+    "frame": 288,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0288.png",
+    "sha256": "a6707180ad2f22a4409432165ae26183d97a916021628f3b82c43fa7e10c53b0"
+  },
+  {
+    "frame": 300,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0300.png",
+    "sha256": "bde5c6d7242883a7104557b200ca17561281234e87a7e5a31a36ac8105163c59"
+  },
+  {
+    "frame": 312,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0312.png",
+    "sha256": "e490e57e5ef6618e3c0bc6c7d1128af77622ca990e63413b4e783d1cd7004841"
+  },
+  {
+    "frame": 324,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0324.png",
+    "sha256": "cf5638ed29f444c2e24c7fa8f86d1cf7907e658f86f70c59d1a36844230f6bcf"
+  },
+  {
+    "frame": 336,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0336.png",
+    "sha256": "c65481e2c3eb6565b0087db63bd7fd2947dc1693f8654ba3da33d82998515dd3"
+  },
+  {
+    "frame": 348,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0348.png",
+    "sha256": "acd2bd8005b6e4bcef3634d1be6c742af7751635e6c694b40f4d1a35b7acdefa"
+  },
+  {
+    "frame": 360,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0360.png",
+    "sha256": "69c06c1d650a16b5eed3d530ef95afd5273de50fe1767a6ed990aa89470491f0"
+  },
+  {
+    "frame": 372,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0372.png",
+    "sha256": "c58619fcc21c290911974f9dc68d3bdbaaa91c7afac1339a72fb078db3a6f487"
+  },
+  {
+    "frame": 384,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0384.png",
+    "sha256": "55c3cae4f05fe8854dd7113cb4bc8378121fd76bc432c5f99ab0d4a913a48f92"
+  },
+  {
+    "frame": 396,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0396.png",
+    "sha256": "3bbcc9061f889f4da664a74347666ed4951917a30b48c75e73ac30bf22710932"
+  },
+  {
+    "frame": 408,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0408.png",
+    "sha256": "0994955e4511e15f07f34fd8ef7337db117d5ad5e8608886d7c5ab637f941907"
+  },
+  {
+    "frame": 420,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0420.png",
+    "sha256": "73e4a110013f63048c4ecc9202abeccce72167a9f0ad30137c70ba62d0c6f81e"
+  },
+  {
+    "frame": 432,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0432.png",
+    "sha256": "4554aecb91d83c9f4ce050937809d13214c832efd4b0d5d604b216fe34de8ce4"
+  },
+  {
+    "frame": 444,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0444.png",
+    "sha256": "f841281a5f25b04f2cf9f8d0a66d2ab35a93882374121c0ae436793242fe8db3"
+  },
+  {
+    "frame": 456,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0456.png",
+    "sha256": "fbb608c5d6364db65cc4284533978624417aa1f8b8e6ca1557a7d5ee13bafe8f"
+  },
+  {
+    "frame": 468,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0468.png",
+    "sha256": "ed434305ceae2697bd6ab943a2996b8f3e2b13a99c637d1653be73dc325a9ef8"
+  },
+  {
+    "frame": 480,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0480.png",
+    "sha256": "edc4630c7010f391192844f90905db3dab564ecdd42c397265d6e47eba852ea8"
+  },
+  {
+    "frame": 492,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0492.png",
+    "sha256": "f61b6213a162e0b0473e54766f856187b5e01a1a95d5f6998f21bda38c9d4bc0"
+  },
+  {
+    "frame": 504,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0504.png",
+    "sha256": "b63153c98bb3f2fee8eac324309fb356e5fb6c961dccf31080b54ec813c2f0e8"
+  },
+  {
+    "frame": 516,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0516.png",
+    "sha256": "49999f3a1e350b42087edf1f4197d02b3900a9d489150d563c89936fa6e89fe6"
+  },
+  {
+    "frame": 528,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0528.png",
+    "sha256": "fdbe7737df459a26a1af3be351d6dca5cc71d7af1b1d7111f2065c92eeb2fdd5"
+  },
+  {
+    "frame": 540,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0540.png",
+    "sha256": "ab18ba98f0621bd84a1ae49d04f488cf559a92786ac157a73d4779ba76c6ad3a"
+  },
+  {
+    "frame": 552,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0552.png",
+    "sha256": "8c99171913d1d0b301096d26e59605c69461031fcbb8e8002a59c3bbe85b4b37"
+  },
+  {
+    "frame": 564,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0564.png",
+    "sha256": "83ecc411a11523108176b8aaf5ae4989486aa690578c53fc1033c2dd26a327fc"
+  },
+  {
+    "frame": 576,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0576.png",
+    "sha256": "b5a7a968e015661c26f9d368e9fe96c52e4ed297a365f02a0fbdd9ccf78b8430"
+  },
+  {
+    "frame": 588,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0588.png",
+    "sha256": "cf364c1a5fed608a9026e431fee779e4ea1b2f511538263084f7fb6e7674fc47"
+  },
+  {
+    "frame": 600,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0600.png",
+    "sha256": "ad4f2af81cdd3201f7b562b0c6d30c8eb52686bf3de4568cc8ae9699b8bc9a4a"
+  },
+  {
+    "frame": 612,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0612.png",
+    "sha256": "3c16ef1205c3215419ec5a798cc8a4d217f4aad27d8f2d9adcc563a7d1cc5f18"
+  },
+  {
+    "frame": 624,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0624.png",
+    "sha256": "0d8a329070a23c24cdb0f94305d3ded4b6eb49f91e3e1f22344ee882f9f71e92"
+  },
+  {
+    "frame": 636,
+    "source": "projects/world-seed/exports/v002/nr-cp-city-crystal-a/anchors/0636.png",
+    "sha256": "6f577cd0f46e7bc8abdd5583c41532b814d2792ea888ede09524205efe54c5cc"
+  }
+]

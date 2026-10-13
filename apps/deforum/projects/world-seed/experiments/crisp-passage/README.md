@@ -10,7 +10,11 @@ Two [opening candidates](openings.json) hold the material prompt fixed and vary 
 
 Screen the opening and the first short stretch before extending. Preserve every draft and branch. Inspect all generated paintings, native checkpoints and dense interpolation windows. RIFE finishing remains outside feedback at 24 fps, with the established 4.5x source-clock conversion. This is an artistic passage test; differences from the old film are not an isolated adapter ablation or proof of a universal quality improvement.
 
-## Result
+## Latest continuation
+
+[The twelve-second continuation](extension.md) preserves the original paintings and develops the road into an emerald mineral grove. [Watch](http://localhost:3028/world-seed-crisp-passage). Olof likes the original six-second direction; the extension awaits his playback judgment.
+
+## Original six-second result
 
 The six-second draft is **The Crystal Gate** (`nr-cp-city-crystal-a`). [Watch the video](../../exports/v002/nr-cp-city-crystal-a/faster/rife-moving-tail/preview.mp4) · [Full-resolution reviewer](http://localhost:3028/world-seed-crisp-passage) · [Frozen direction, prompts and settings](passage-a.json).
 
@@ -18,7 +22,7 @@ Opening B was selected after viewing both native candidates: its wider road supp
 
 The actual development is more restrained than the storyboard: a black-and-gold city becomes a porous ivory/rose gateway studded with cyan and violet crystals. The city moves out of view, the outer rings become faceted, and small green cells appear. The main cyan crystal and curved road persist across all 54 paintings. We approach the new environment rather than completing the planned expansive garden reveal.
 
-**Assistant judgment:** the clear air, dark separation and solid contours move away from the earlier hazy treatment. The opening is the richest painting. Fine basalt engraving simplifies during recurrence; later forms have clean edges but broad smooth surfaces. Small cells, lights and crystal facets change, and an additional smaller cyan crystal appears near the end. This does not solve meticulous detail in every frame or establish superiority to Olof's selected film. Human playback judgment is pending. The original thirty-second film remains selected.
+**Assistant judgment:** the clear air, dark separation and solid contours move away from the earlier hazy treatment. The opening is the richest painting. Fine basalt engraving simplifies during recurrence; later forms have clean edges but broad smooth surfaces. Small cells, lights and crystal facets change, and an additional smaller cyan crystal appears near the end. This does not solve meticulous detail in every frame or establish superiority to Olof's selected film. On 2026-10-13, Olof says he likes this direction and asks to make the movie longer. This supports continuing the six-second draft; the original thirty-second film remains separately selected.
 
 The recipe uses the preferred 0.25 editing adapter with Euler, boost 0.01 and primary noise 0.72. A transformation-permitting reference instruction replaces the study's exact-scene preservation wording. The new opening, motion and scene prompts also differ from the older film, so this is an artistic application, not an isolated test of the adapter. No refinement result is fed back into the loop.
 

@@ -1,0 +1,431 @@
+{
+  "experiment": "Through the Crystal Gate",
+  "date": "2026-10-13",
+  "status": "complete_human_playback_review_pending",
+  "human_direction": "Olof likes the six-second direction and requests a longer movie.",
+  "configuration": "extension-a.json",
+  "configuration_sha256": "f1b799e735a32a0066d7369e3444fa526456342d6b0fb27f8ef54605e5e9567d",
+  "source_configuration_sha256": "1fbfcddbf5822a8993d8a97e367ad61a3875d3ec80a81279ba85a8a50ea414ea",
+  "original_paintings_preserved": 54,
+  "new_generation_jobs": 54,
+  "total_paintings": 108,
+  "model": "Krea 2 Turbo FP8",
+  "sampler": "euler",
+  "primary_noise": 0.72,
+  "sigmas": [
+    0.72,
+    0.6154129028316,
+    0.3730812907224,
+    0
+  ],
+  "cfg": 1,
+  "adapter_strength": 0.25,
+  "ref_boost": 0.01,
+  "grounding_px": 768,
+  "reference_policy": "Already-warped previous painting supplies initialization and clean reference; no masks, fixed opening, copyback or refinement.",
+  "motion": {
+    "preview": "904380f79830457d9df98d598a2dd4fb",
+    "preserved_draft": "../../branches/branch-904380f79830/config.json",
+    "branch_source_frame": 636,
+    "incoming_velocity_matched": true,
+    "continuation": "Sustained push eases into lateral glide with gentle bank; no cuts."
+  },
+  "runtime": {
+    "comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+    "reference_nodes_commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+    "adapter_sha256": "6adf9a69cc9502d286db7b69964d37da7e9cfe4b05b4d004bc275f087d3fd3cf",
+    "weights": "Three pinned Krea assets verified against serverless/modern-models.json; runtime and dependency evidence archived locally."
+  },
+  "new_jobs": [
+    {
+      "frame": 648,
+      "prompt_id": "510d7e25-9011-4621-8c79-aa17d2022e01",
+      "sha256": "9ba9cf4ba80e85e6c7b6f5cf6ea28caf54cd4f9579fdeaaa7c81e253760b8ad8"
+    },
+    {
+      "frame": 660,
+      "prompt_id": "ac544474-dd93-44dc-94b2-2f9b45608320",
+      "sha256": "eed518e8f15d372195db343acd49be93003e0f6ff045652e122cff4612aded4a"
+    },
+    {
+      "frame": 672,
+      "prompt_id": "58048974-c188-4fcf-a24f-570eeb63d5e2",
+      "sha256": "2a27c029d507147f2b4046ab6ecf8df1bf1604d1defd5f58f10f7c0c6fe1f7bd"
+    },
+    {
+      "frame": 684,
+      "prompt_id": "c672562d-c172-4c3c-a916-ec3d48c4e79f",
+      "sha256": "0fc41de4e18492588281ddee90eef812cfa9b422f3e519b29f080e997637f194"
+    },
+    {
+      "frame": 696,
+      "prompt_id": "c89fcb0a-55b3-4846-8541-526c98f510c1",
+      "sha256": "64136ecaa8acd95c398e9a2762f227a237a7a43e631060c96eee7adc4988b443"
+    },
+    {
+      "frame": 708,
+      "prompt_id": "3b525b73-3fb0-4837-9abe-336c0b96a2cf",
+      "sha256": "520d7829565e81f27c8489e3e15e0074ad856d90f2f3a616771271bc925a8cfa"
+    },
+    {
+      "frame": 720,
+      "prompt_id": "7f5c88d1-d43d-47ae-b7b9-e823ba887dc4",
+      "sha256": "f2e627b2674c947e970f7fbd892a49fa8712de6f24dcb2e7e89519231f7b527e"
+    },
+    {
+      "frame": 732,
+      "prompt_id": "b6eac377-593d-416e-ad02-0b902bc465b2",
+      "sha256": "9d37f2a6982adaddc89e7e9ebb6226cf24acaf534f761efd3f6faa104aa728a2"
+    },
+    {
+      "frame": 744,
+      "prompt_id": "a7e816bc-4ae8-4f42-93fd-d180a830c8ff",
+      "sha256": "ed93441ce46a81224291e8bb5fc604fb14c63f2c8304b00fe8d19f2456e4a593"
+    },
+    {
+      "frame": 756,
+      "prompt_id": "b4830299-e194-4bc9-836f-a1ea271b2a8e",
+      "sha256": "ab83a3b0009269baf02d54e34af922a0a94a0d9d00e0e6ad4aeda2be1f0f73aa"
+    },
+    {
+      "frame": 768,
+      "prompt_id": "3d4edf80-7ffa-4f69-b030-6ece9203439a",
+      "sha256": "8dc15502dafcacb478abaa8279520a6790773408a96679a0602a5138d0fb869b"
+    },
+    {
+      "frame": 780,
+      "prompt_id": "2713a23a-01dc-43df-8f54-16c203d64399",
+      "sha256": "58896f8aec670c7f312ce69b0657df0f35535f2725a9905cd5c4a9981ba33b93"
+    },
+    {
+      "frame": 792,
+      "prompt_id": "b39e5203-24a7-463a-b9ad-3f05d52233fd",
+      "sha256": "0a7a2edb2849a06b6406aa7afaeb0d2590d89aca5c3ca8631ad3af2bbd2280a0"
+    },
+    {
+      "frame": 804,
+      "prompt_id": "0143c414-d2fe-47ff-b469-33726f199843",
+      "sha256": "fdc47eb11297b9703319be41ed0ea6093874a295535e4b84ecbe8cae3b6ce337"
+    },
+    {
+      "frame": 816,
+      "prompt_id": "85ec7e8c-5889-464c-b699-3be5623adbc9",
+      "sha256": "8b0f1a15d5ddfe88476d5a45a8c8ff08a941cdf7fb92b4a3be77201bb5aa9c68"
+    },
+    {
+      "frame": 828,
+      "prompt_id": "3e5b5bf2-36bb-405c-b263-3e929513bc4c",
+      "sha256": "d332158e42f07f2d50187ad6a08aae358111a89c9d81c0063b60847fe8f046e4"
+    },
+    {
+      "frame": 840,
+      "prompt_id": "0c2e2eb5-4ce7-4be7-b01a-cc1c81142fd6",
+      "sha256": "9bd810ded6b7b7671838359e8dc19f6600a647134a921a0bf1a668cdd9f75a3e"
+    },
+    {
+      "frame": 852,
+      "prompt_id": "4cd73426-db8c-491b-9081-c7c82c20f821",
+      "sha256": "ced483502dbd26dc97b5d3a10a34fad195e0d951630d2d348b40968394035a78"
+    },
+    {
+      "frame": 864,
+      "prompt_id": "cbb19106-c8b7-46c9-b63c-316b55664c46",
+      "sha256": "d7a2f2e450f10ed459b1d8141aeddd563c107d10247cacb39cee27c3ca480066"
+    },
+    {
+      "frame": 876,
+      "prompt_id": "7c90e211-4987-47a3-8a7a-751a62bb52f1",
+      "sha256": "0175b3f652800a7deb09c8dc1aafa7ddb12e2de878c298ff4fe9984e20519dca"
+    },
+    {
+      "frame": 888,
+      "prompt_id": "747d9f8e-4641-4939-9365-8e645ca1ffc7",
+      "sha256": "9dc3bed96e5547e7055ff9b7103772ce67a07b63e15fd1e5ea9da45305ac83b4"
+    },
+    {
+      "frame": 900,
+      "prompt_id": "614c0083-2bde-47c2-88fb-fb5373e65e10",
+      "sha256": "ab214d5c2592fdad49ece8cf2e774084ee55c1388bf712fdd5e9deea0661c35f"
+    },
+    {
+      "frame": 912,
+      "prompt_id": "2de3b3d3-ad90-4ee8-89d1-c7c2f1848b0e",
+      "sha256": "273b57323e81ff1af06d7a2484e64420f8d55f58193eee05b6bbc4f1405abd0b"
+    },
+    {
+      "frame": 924,
+      "prompt_id": "5f873719-a1dd-462a-8cfc-7107cd6cb996",
+      "sha256": "69cc14320d39083dc3229a5237f3d0c23dc6835795551851dd8c7cb19cf38166"
+    },
+    {
+      "frame": 936,
+      "prompt_id": "4bab959c-6332-4116-9cf2-b71a49e33136",
+      "sha256": "d56ee216545ca58dd051365b5141ec4875c5ac51a09103f2d5cb61dde484a2aa"
+    },
+    {
+      "frame": 948,
+      "prompt_id": "2d56710d-5a37-45a8-83c0-98ee79b5fced",
+      "sha256": "333e068256abebb7760ef45c51ee1aebe49ac4df056d6e63a29f7fd9ce934788"
+    },
+    {
+      "frame": 960,
+      "prompt_id": "18ca58f4-8f36-441f-a141-d3a47350623c",
+      "sha256": "ca6ccb757ee20642e0787c98764aefc8ac5378a9d550ddb2d8ce5313e8863a15"
+    },
+    {
+      "frame": 972,
+      "prompt_id": "86b98b73-0265-47e2-a689-238f3dd9dad8",
+      "sha256": "1ebfcde6b11f3d9e67149333b0904c6b643935adc97fc26d0ba9e4352e7a300a"
+    },
+    {
+      "frame": 984,
+      "prompt_id": "54157633-e268-4d90-96c9-658af9084f76",
+      "sha256": "ff71dabcf1e8ee0be66cc09739b93fe8810c65d2c7f8bf1e5ef2a54f3ca15130"
+    },
+    {
+      "frame": 996,
+      "prompt_id": "116dd931-c0d4-4c20-a168-c87c5b8c27b3",
+      "sha256": "66c662db83b112255d609e914585090804d6ded703f9ba773ee6ac06247caabf"
+    },
+    {
+      "frame": 1008,
+      "prompt_id": "5a7b46bd-cf81-45b1-b30a-b2b277b4fea8",
+      "sha256": "42634349c60ca46ad11e2149f115f97396361bd3812b4fe035e27189a8f126f4"
+    },
+    {
+      "frame": 1020,
+      "prompt_id": "977510b3-f52e-4c20-b599-df9e421c9788",
+      "sha256": "951eb5a9d3b1356904ca91a320ca6bca0c292f3cf67db453d6bcb5f80b8176e4"
+    },
+    {
+      "frame": 1032,
+      "prompt_id": "6545a16c-9504-4f7f-8ace-bbe27a85509e",
+      "sha256": "abb2d7668b9ecf197c911ff8b30cd724475c8cf622ad91a57c1cf2bf95aa28da"
+    },
+    {
+      "frame": 1044,
+      "prompt_id": "0e8f75d5-dadb-4e7a-9aca-474c1c0002a2",
+      "sha256": "957853d5ef63dcfe4e00368567a6d81d35d28d55a4d996ea0c037e0814b5748a"
+    },
+    {
+      "frame": 1056,
+      "prompt_id": "3488d9fc-c371-4a57-91bc-2b35abe6e9b1",
+      "sha256": "2595cc61b061d6b856dacbdcd655b6ff60ff2be4d6edef80d1c900288833463b"
+    },
+    {
+      "frame": 1068,
+      "prompt_id": "d0f2d2a9-b774-4c33-875d-a2132ca650c6",
+      "sha256": "ef161efea34e5fa63a8e40c56cdcb0d11dc3118f407a19497e16fba0aee2b2ea"
+    },
+    {
+      "frame": 1080,
+      "prompt_id": "0f879990-683e-44c9-a03a-93d07fe3b942",
+      "sha256": "b090d62fe414d8999cb643d7fbdca4aa1a957e7b1ba0eda8480643f149ae0ada"
+    },
+    {
+      "frame": 1092,
+      "prompt_id": "259d917f-7342-4dc5-ad31-93e0d2ba89f0",
+      "sha256": "bf24c9f8baa6b9d1e324c1844affded678afb5b62b4f925e04c0f859f38cf1af"
+    },
+    {
+      "frame": 1104,
+      "prompt_id": "20414171-188b-413d-af4a-2834afed02f6",
+      "sha256": "9108944ef30591e5fce21d75c0613005f933b0979cad8839ed258c9c356f468f"
+    },
+    {
+      "frame": 1116,
+      "prompt_id": "616c8e31-7ab7-497e-a3a2-6125384c7542",
+      "sha256": "713f5d90f7c2710812067d62eff97adf40ec6b8e3eb40565ea985fd962f8f9b2"
+    },
+    {
+      "frame": 1128,
+      "prompt_id": "4b102099-23f1-4c70-ba19-de2b5c334e25",
+      "sha256": "b0ab4754dfccea1a7ce898ee5c269088e095696373ee6828f9c0bdf331b4941b"
+    },
+    {
+      "frame": 1140,
+      "prompt_id": "bc13bad1-a07e-4760-8c52-50ae84652f2f",
+      "sha256": "8a10760b91e3470ab33bd99ea51190c0e5df726aaf84af53beaea73029071c07"
+    },
+    {
+      "frame": 1152,
+      "prompt_id": "47545f8b-d8ed-4496-a96f-2615b95f97f7",
+      "sha256": "8aa4fc4cba6bff40a812c5a3cb4a141c228fbd80adc1623b229727d63d1f2432"
+    },
+    {
+      "frame": 1164,
+      "prompt_id": "d07f3502-a00b-4bfb-bb67-42e9efb3e10f",
+      "sha256": "0dc43abd85d22d68df8c490a54162cca519a726778ace3867934d1c2fab5dc37"
+    },
+    {
+      "frame": 1176,
+      "prompt_id": "4026651d-192c-4d01-a50f-a95e8489c522",
+      "sha256": "5872e23bc5fb8a5a94e85d38016715fbf40ae44742e663502b9bf1aa0d1d6fb4"
+    },
+    {
+      "frame": 1188,
+      "prompt_id": "4c7d9f39-45aa-4b4a-8c20-2557669f995c",
+      "sha256": "37957d03e8949cdd6ff5793a05e258f7cdc2d1157e08b31a14f20c69052f6d79"
+    },
+    {
+      "frame": 1200,
+      "prompt_id": "0ed410d9-2ea7-4c79-b1df-481917adf86b",
+      "sha256": "56e1bc9698c43e45647a6f337ab6485870ae4f2159626dc3c6d2fd890a190a10"
+    },
+    {
+      "frame": 1212,
+      "prompt_id": "e60dae78-8d29-4adc-be09-a8d51570841a",
+      "sha256": "7393f2404a57cbb077597a8b406e902585d42e6f945474a9eab8a5b80f083eb9"
+    },
+    {
+      "frame": 1224,
+      "prompt_id": "2876a53d-3566-4e13-8dff-c3b5eb0ff828",
+      "sha256": "c79637c4d54bc7f308748af883aef16848d0afa98f773c7cda1ec41fdb4cb485"
+    },
+    {
+      "frame": 1236,
+      "prompt_id": "385a1067-4924-42cd-a658-d90bf7c8e309",
+      "sha256": "ccdc467a98f89dbb857c79ec5c2c6f90add027a867212530ce9393a8e13631d4"
+    },
+    {
+      "frame": 1248,
+      "prompt_id": "fca55a34-7f59-4aa8-8581-01a5a538e22a",
+      "sha256": "87304e928b64c808a56bb4152a73f199b936bab0a8874e53e2bff2f3c16f024f"
+    },
+    {
+      "frame": 1260,
+      "prompt_id": "3a6d4978-d7dd-41fa-86a2-d856075b1192",
+      "sha256": "985850b0ea13aa1aa9cd7fbb8d4576d479b447487ac061147700a353275c8cf1"
+    },
+    {
+      "frame": 1272,
+      "prompt_id": "e4326436-dc9e-459b-b072-971d2763ecc5",
+      "sha256": "d1196dd983b5ec951697ee73ebcb6324933285ee198fc170e603158316516d4b"
+    },
+    {
+      "frame": 1284,
+      "prompt_id": "27e9993f-4112-458a-a3e4-7628670df34d",
+      "sha256": "5374cfb5daba57b29fae4ccfa896afbd256de1c51583dda44575288bd6851893"
+    }
+  ],
+  "screening": {
+    "motion_preview": "Warp-only overview and dense branch window inspected before generation.",
+    "first_checkpoint": {
+      "through_source_frame": 852,
+      "new_paintings": 18,
+      "total_paintings": 72,
+      "delivery_seconds": 8,
+      "all_new_paintings_viewed": true,
+      "decision": "Continue frozen plan; road/crystals persist and branching mineral forms emerge."
+    },
+    "all_new_paintings_viewed": 54,
+    "native_checkpoints": [
+      648,
+      672,
+      804,
+      852,
+      972,
+      1068,
+      1200,
+      1284
+    ],
+    "displayed_review": {
+      "opening_pair": 4,
+      "checkpoint_windows": [
+        [
+          5.75,
+          6.125
+        ],
+        [
+          7.29,
+          7.54
+        ]
+      ],
+      "checkpoint_additional_times": [
+        6.5,
+        7.875
+      ],
+      "final_overview": 8,
+      "final_windows": [
+        [
+          9.42,
+          9.67
+        ],
+        [
+          10.38,
+          10.63
+        ],
+        [
+          11.75,
+          11.959
+        ]
+      ],
+      "final_review": "projects/world-seed/exports/v002/nr-cp-emerald-continuation-a/faster/rife-moving-tail/reviews/preview/v001/review.json"
+    },
+    "observations": "Road remains continuous. Cyan crystal develops malachite bands and copper branching inclusions, then becomes a faceted hanging mineral pod; ivory lattice develops silver and copper trees and green terraces. Transformation stays more enclosed than the intended expansive vista. Small forms continue to repaint. The nearest material contours are crisp, while distant branches and surfaces remain soft. Black-and-white rounded forms become visibly football-like near the ending; this was not requested. No conspicuous doubled road/crystal contour or border holes found in inspected interpolation windows.",
+    "scope": "Assistant frame inspection; no claim of normal-speed human rhythm approval or universally improved detail."
+  },
+  "delivery": {
+    "path": "projects/world-seed/exports/v002/nr-cp-emerald-continuation-a/faster/rife-moving-tail/preview.mp4",
+    "sha256": "0b2dbc5239287169522ba8c2daba1641660fc1c6930243ee706877783b898b4d",
+    "seconds": 12,
+    "fps": 24,
+    "frames": 288,
+    "resolution": [
+      1536,
+      1024
+    ],
+    "finishing": "RIFE 4.25 outside feedback, original paintings retained, two final spatially warped frames."
+  },
+  "verification": {
+    "generation": "All 54 new requested, executed, history and PNG graphs match; all parent, warp and output hashes match. All 54 inherited paintings and their source configuration match.",
+    "prefix": {
+      "verified": true,
+      "original_displayed_frames_identical": 142,
+      "through_delivery_frame": 141,
+      "through_seconds": 5.875,
+      "original_paintings_preserved": 54,
+      "note": "The original last two moving-tail frames are replaced by interpolation into the continuation. MP4 encoding can differ."
+    },
+    "finishing": "Pair, full and moving-tail manifests verified; all source/delivery frames, timing, dimensions and full video decoding checked.",
+    "local_preserved_files": 1130,
+    "local_preserved_bytes": 1055401029,
+    "runtime_archive_sha256": "da525ebb948024c2ab607420d814df0471cca94739708a67b1e9b97bda6d64dd",
+    "remote_generation_files_verified": 108,
+    "queue_empty": true,
+    "reviewer": {
+      "verified": true,
+      "review_url": "http://localhost:3028/world-seed-crisp-passage",
+      "review_http": 200,
+      "original_film_http": 200,
+      "media_range_http": 206,
+      "content_range": "bytes 0-255/18996391",
+      "content_type": "video/mp4",
+      "served_bytes_match_original": true,
+      "range_bytes": 256,
+      "service_run_id": "0934d2e5-8104-433b-b6ca-75e6c4a78b69"
+    },
+    "code": "Verified inherited-prefix preparation and actual staged resume; wrong prefix hash/boundary rejected, old unbranched checkpoint passes. Ruff and compilation checks passed."
+  },
+  "resources": {
+    "pod_id": "bxqi9xaidmtr7x",
+    "gpu": "NVIDIA A40",
+    "region": "CA-MTL-1",
+    "cost_per_hour_usd": 0.59,
+    "created_at": "2026-10-13T15:09:46.781000+00:00",
+    "deleted_at": "2026-10-13T15:49:07.961570+00:00",
+    "pod_deletion_verified": true,
+    "temporary_volume": "ug4yzjupzs",
+    "temporary_volume_deletion_verified": true,
+    "retained_model_volume": "vd3jnbwko1",
+    "elapsed_minutes": 39.35,
+    "estimated_compute_usd": 0.387,
+    "cost_scope": "Compute estimate, not posted billing; excludes storage."
+  },
+  "operational_notes": [
+    "Original cached region could not allocate a GPU; an owned temporary volume and A40 in Canada ran the same pinned model and recipe.",
+    "Provider availability discrepancy and omitted PUBLIC_KEY provisioning setting recorded in friction log; both setup issues resolved before generation.",
+    "Owned SSH tunnel ended after Pod deletion. Existing media-review service remains ready for user playback."
+  ],
+  "private_receipts": "work/crystal-gate-extension-session"
+}

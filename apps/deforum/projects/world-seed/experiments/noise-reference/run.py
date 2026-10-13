@@ -103,6 +103,41 @@ def prepare(config):
     source = APP / config["initial_image"]
     require(sha(source) == config["initial_sha256"], "Opening changed")
     copy_verified(source, root / "anchors/0000.png")
+    rows = prefix_rows(config)
+    if rows:
+        for row in rows:
+            copy_verified(APP / row["source"], root / f"anchors/{row['frame']:04d}.png")
+        save(root / "prefix.json", rows)
+
+
+def prefix_rows(config):
+    if "prefix_root" not in config:
+        require("prefix_through" not in config, "Missing prefix source")
+        return []
+    source = (APP / config["prefix_root"]).resolve()
+    require(source.is_relative_to(OUT.resolve()), "Prefix must belong to v002 exports")
+    require(source != (OUT / config["case"]).resolve(), "Prefix cannot refer to itself")
+    require(
+        sha(source / "config.json") == config["prefix_config_sha256"],
+        "Prefix configuration differs",
+    )
+    through = config["prefix_through"]
+    positions = config["painting_frames"]
+    require(through in positions[:-1], "Expected a prefix painting boundary")
+    frames = [frame for frame in positions if frame <= through]
+    parent = read(source / "config.json")
+    require(
+        frames == [frame for frame in parent["painting_frames"] if frame <= through],
+        "Prefix timeline differs",
+    )
+    return [
+        {
+            "frame": frame,
+            "source": str((source / f"anchors/{frame:04d}.png").relative_to(APP)),
+            "sha256": sha(source / f"anchors/{frame:04d}.png"),
+        }
+        for frame in frames
+    ]
 
 
 def check(config, through=None):
@@ -114,8 +149,18 @@ def check(config, through=None):
     last = config["painting_frames"][-1] if through is None else through
     require(last in config["painting_frames"][1:], "Expected a repaint boundary")
     positions = [frame for frame in config["painting_frames"] if frame <= last]
+    prefix = prefix_rows(config)
+    if prefix:
+        require(read(root / "prefix.json") == prefix, "Prefix record differs")
+        for row in prefix:
+            require(
+                sha(root / f"anchors/{row['frame']:04d}.png") == row["sha256"],
+                "Preserved painting differs",
+            )
     jobs = []
     for previous, frame in pairwise(positions):
+        if frame <= config.get("prefix_through", 0):
+            continue
         row = read(root / f"anchor-{frame:04d}.json")
         run = OUT / row["run"]
         parent = root / f"anchors/{previous:04d}.png"
@@ -175,7 +220,10 @@ def check(config, through=None):
         if last == config["painting_frames"][-1]
         else f"study-check-through-{last:04d}.json"
     )
-    save(root / check_file, {"verified": True, "jobs": jobs})
+    result = {"verified": True, "jobs": jobs}
+    if prefix:
+        result["preserved_paintings"] = prefix
+    save(root / check_file, result)
     return jobs
 
 
@@ -211,7 +259,7 @@ def main():
                 config,
                 OUT,
                 PodClient.from_path(args.deployment),
-                first_frame=12,
+                first_frame=config.get("prefix_through", 0) + 12,
                 last_frame=last,
                 run_prefix=config["case"],
                 filename_prefix="world-seed/noise-reference/" + config["case"],
