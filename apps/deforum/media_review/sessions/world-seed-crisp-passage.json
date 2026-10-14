@@ -1,9 +1,16 @@
 {
   "title": "World Seed — the crystal gate",
   "selected": [
-    "emerald-continuation"
+    "bank-and-curl"
   ],
   "clips": [
+    {
+      "id": "bank-and-curl",
+      "label": "Banking through the gate · 8 seconds",
+      "note": "A strong bank, sideways plane turn and curling lattice carry us around the cyan crystal. Fine surface detail still smooths out.",
+      "details": "The first 18 paintings are preserved; 54 new paintings begin after about two seconds. A 33-degree bank and 32-degree plane turn lead into a regional spiral around the crystal. The later pullback attempts produced unwanted lettering and are excluded from this selection. Krea 2 Turbo, Euler at noise 0.72, three updates, CFG1, adapter 0.25, reference boost 0.01 and grounding 768. Initialization and clean reference both use the already-moved previous painting. RIFE finishing remains outside feedback. Eight continuous seconds, 24 fps, 1536×1024. No cuts, masks or extra refinement. The original versions remain available.",
+      "source": "projects/world-seed/exports/v002/nr-cp-curling-mineral-gate-b/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "emerald-continuation",
       "label": "Through the crystal gate · 12 seconds",

@@ -1,0 +1,284 @@
+{
+  "study": "crystal-gate-strong-motion",
+  "cases": [
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "seed": 1012600,
+      "duration": 54.0,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360,
+        372,
+        384,
+        396,
+        408,
+        420,
+        432,
+        444,
+        456,
+        468,
+        480,
+        492,
+        504,
+        516,
+        528,
+        540,
+        552,
+        564,
+        576,
+        588,
+        600,
+        612,
+        624,
+        636,
+        648,
+        660,
+        672,
+        684,
+        696,
+        708,
+        720,
+        732,
+        744,
+        756,
+        768,
+        780,
+        792,
+        804,
+        816,
+        828,
+        840,
+        852,
+        864,
+        876,
+        888,
+        900,
+        912,
+        924,
+        936,
+        948,
+        960,
+        972,
+        984,
+        996,
+        1008,
+        1020,
+        1032,
+        1044,
+        1056,
+        1068,
+        1080,
+        1092,
+        1104,
+        1116,
+        1128,
+        1140,
+        1152,
+        1164,
+        1176,
+        1188,
+        1200,
+        1212,
+        1224,
+        1236,
+        1248,
+        1260,
+        1272,
+        1284
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "engraved-city",
+          "prompt": "An ancient impossible city of jet-black basalt and polished metallic gold suspended beneath an ink-black cosmic sky. A sweeping elevated road curves from the lower left foreground toward a large open circular aperture just right of center. Needle towers and terraced palaces stand on both sides of the road; their densely carved facades contain miniature arches, fluted pillars and precise geometric relief. The road has razor-thin golden edge inlays and sharply incised basalt arabesques. Several immense interlocking architectural rings surround the distant aperture, framing a small luminous cyan faceted crystal. The black stone has crisp chipped edges, minute silver mineral flecks and engraved seams; golden rails carry closely spaced chased metal grooves. Deep cobalt shadows separate the structures. Small amber windows and thin cyan reflections provide bright color against the black and gold. Clear empty space between sharply resolved near and distant forms, deep focus, directional grazing light and controlled pinpoint reflections. A meticulously detailed surreal digital environment with clean color separation and strong local contrast. Wide asymmetrical composition, monumental scale, an unobstructed route into the aperture. The air is perfectly clear, the outlines precise, the materials solid and intricately modeled. No people, letters, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 6,
+          "name": "crystal-inside-the-aperture",
+          "prompt": "The elevated engraved black-basalt road leads into the enormous interlocking gold rings. The cyan crystal within the open aperture is unfolding into intricate branching mineral architecture: small nested faceted chambers and rose-quartz ribs appear inside the dark circular opening. The black city still frames the sides. Thin gold rails begin splitting into parallel ivory threads near the far end of the road; polished metal grooves turn into fine etched mineral veins. Jet black, metallic gold, electric cyan and small rose accents. Continuous open passage, precise sculptural forms and clear black space between branches. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 12,
+          "name": "rings-unfold-into-lattice",
+          "prompt": "Inside the great circular opening, the curved gold rails and black carved road unfold into sweeping ivory mineral ribs. Their engraved ornament becomes intricate recursive crystal lattice: slender rose-quartz branches, cyan faceted chambers and violet interior recesses. The gold remains only on the outer edges while pale mineral threads spread inward. A deep clear passage through the center leads into a higher-dimensional garden. Black void between the chambers preserves strong depth and contrast. Thousands of tiny etched facets, crisp overlapping laminae and minute geometric apertures cover the emerging ribs. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 18,
+          "name": "crystalline-world",
+          "prompt": "An immense higher-dimensional garden of clear cyan crystal, rose-quartz ribs and ivory mineral lattice unfolds through the ancient circular gateway. Sweeping faceted ribbons form interconnected polyhedral chambers at many different scales; tiny jewel cavities and sharply engraved silver seams fill every rib. The former road has become a slender carved crystal path through the nested chambers. Rich cobalt and violet voids separate the structures; rose-magenta inner facets and clear turquoise outer edges have distinct color. Transparent facets reveal tiny emerald mineral gardens within a few deeper cells. A continuous winding passage remains visible as the surrounding world opens outward. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 23,
+          "name": "inner-garden-reveal",
+          "prompt": "We move through an open crystalline world of sharply etched cyan and rose glass, immense ivory ribs and nested polyhedral gardens. The curved crystal path leads past close faceted branches toward a deep emerald chamber within the lattice. Cyan reflections trace thousands of fine mineral veins; small violet cavities, silver filigree and rose-colored prismatic edges remain individually legible. Deep clean cobalt spaces between the structures, strong sculptural depth and tightly controlled small highlights. The architectural rings have become a sprawling recursive mineral garden with a clear route into its heart. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 26.5,
+          "name": "lattice-begins-to-curl",
+          "prompt": "A huge faceted cyan crystal floats inside a rose-quartz lattice opening edged with metallic gold. The perforated lattice curls sideways into long engraved ivory and bronze ribbons around the crystal. The curved grey causeway remains connected through the opening. Slender grey towers stretch and branch into etched silver mineral stems; their blue conical caps flatten into sharply ridged cobalt fins. Small violet crystals remain embedded along the curling rose ribs. Deep midnight-blue voids between forms. Every visible surface has finely engraved seams, crisp overlapping mineral laminae, densely ridged edges and tiny angular inclusions. Clear empty space separates the sculptural forms. Meticulously detailed surreal digital environment, sharp focus, distinct saturated colors, directional grazing light, strong local contrast and controlled pinpoint reflections. No people, text, mist, bloom or brush texture."
+        },
+        {
+          "at": 31.5,
+          "name": "ribbons-unfurl",
+          "prompt": "The massive cyan crystal remains visible within an unfurling arch of rose-quartz ribbons and perforated ivory mineral branches. The former circular gold rim opens into layered bronze-edged fronds. Engraved silver stems and ridged cobalt fins branch from the receding causeway into an impossible mineral garden. Thin translucent jade blades appear between the rose ribs; tiny emerald geometric cavities repeat inside larger chambers. The spatial structure coils sideways while retaining clear open gaps. Every visible surface has finely engraved seams, crisp overlapping mineral laminae, densely ridged edges and tiny angular inclusions. Clear empty space separates the sculptural forms. Meticulously detailed surreal digital environment, sharp focus, distinct saturated colors, directional grazing light, strong local contrast and controlled pinpoint reflections. No people, text, mist, bloom or brush texture."
+        },
+        {
+          "at": 35.5,
+          "name": "a-world-curled-around-the-crystal",
+          "prompt": "An impossible miniature city curls around a horizontal faceted cyan crystal inside a vast perforated rose-quartz and ivory mineral shell. A slender silver causeway coils along the inner wall, its tiny pointed towers leaning with the spiral. Violet and emerald mineral cavities are set into the lattice. Closely spaced malachite bands and copper veins spread along the outer rim; slender jade fins branch outward. Clear cobalt void through the openings. The floating crystal remains the focal form as the space opens around it. Closely spaced chiseled grooves, hairline engraved seams, tiny mineral inclusions and crisp layered edges articulate the structures. Meticulously detailed surreal digital environment, solid dimensional forms, sharp focus, saturated separated colors, deep dark openings and directional grazing light. No people, text, fog, bloom or brush texture."
+        },
+        {
+          "at": 41.0,
+          "name": "jade-shell-opens",
+          "prompt": "The intricate mineral shell opens outward like an immense curled jade frond around a small city and its floating cyan crystal. A silver spiral causeway winds along the inner wall, with tiny cobalt-tipped architectural fins nested among ivory branches. Fine malachite bands, etched copper veins and deeply incised jade ridges articulate the wide outer rim. Rose and violet jewel cavities remain in the pale lattice. A deep blue star field becomes visible around the edges, with a clear sculptural silhouette. Closely spaced chiseled grooves, hairline engraved seams, tiny mineral inclusions and crisp layered edges articulate the structures. Meticulously detailed surreal digital environment, solid dimensional forms, sharp focus, saturated separated colors, deep dark openings and directional grazing light. No people, text, fog, bloom or brush texture."
+        },
+        {
+          "at": 47.0,
+          "name": "suspended-fractal-world",
+          "prompt": "A suspended higher-dimensional world of curled jade terraces and ivory mineral lattice holds a small horizontal cyan crystal within its open center. The silver causeway coils through many scales of nested arches and cobalt architectural fins. Copper mineral veins branch through the malachite-banded rim, with small violet and rose facets between the ridges. The entire intricate structure floats against deep cobalt space; thin silver branches extend into the surrounding void. Clear intervals of dark space separate the nested forms. Closely spaced chiseled grooves, hairline engraved seams, tiny mineral inclusions and crisp layered edges articulate the structures. Meticulously detailed surreal digital environment, solid dimensional forms, sharp focus, saturated separated colors, deep dark openings and directional grazing light. No people, text, fog, bloom or brush texture."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [
+        {
+          "kind": "continuation",
+          "start": 26.5,
+          "duration": 18.0,
+          "center": [
+            0.63,
+            0.55
+          ],
+          "end": [
+            0.4,
+            -0.18,
+            0.6418538861723947,
+            -0.15
+          ],
+          "velocity_start": [
+            -0.025781696232037896,
+            0.004126061543699645,
+            0.011022490004226579,
+            0.023983154446672317
+          ],
+          "velocity_end": [
+            0.025,
+            -0.006,
+            0.018,
+            -0.018
+          ]
+        },
+        {
+          "start": 27.0,
+          "duration": 14.0,
+          "center": [
+            0.63,
+            0.55
+          ],
+          "zoom": 0,
+          "turn": 95,
+          "radius": 0.72,
+          "travel": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "plane",
+          "start": 28.0,
+          "duration": 14.0,
+          "center": [
+            0.75,
+            0.5
+          ],
+          "tilt": [
+            14,
+            -28
+          ],
+          "distance": 2.0
+        },
+        {
+          "kind": "continuation",
+          "start": 35.5,
+          "duration": 18.0,
+          "center": [
+            0.75,
+            0.5
+          ],
+          "end": [
+            -0.2815399289223741,
+            -0.14528163444050907,
+            -0.7884573603642702,
+            -0.25
+          ],
+          "velocity_start": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "velocity_end": [
+            -0.012,
+            0.003,
+            -0.012,
+            -0.005
+          ]
+        }
+      ],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/cp-city-clear-b/anchors/0000.png",
+      "initial_sha256": "bf805bc3a14842518e07594b2baab9571db40965cd511a569527cd868a8ceddb",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "reference_instruction": "Continue this view coherently toward the scene described below. Keep the current perspective, crisp contours and fine material relief while allowing the described transformation of architecture, materials and colors. ",
+      "direction_note": "At source852 the horizontal cyan crystal is at [.72,.57], surrounded by a curling road and rose lattice. Preserve the full active B warp field; add a smooth outward reframe rather than resetting its regional velocity. Additional 0.455x scale counters accumulated approach, moving the tracked crystal toward [.64,.43] and opening space around the shell. The structure can develop jade surfaces without forcing its surviving little city to disappear. Inspect through1068 before completing1284.",
+      "prefix_root": "projects/world-seed/exports/v002/nr-cp-curling-mineral-gate-b",
+      "prefix_through": 852,
+      "prefix_config_sha256": "06861773205e5b18065d576215f996463deadae622a3ba36e4e16aa357dbf6a2",
+      "export_version": "v002"
+    }
+  ]
+}

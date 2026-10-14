@@ -1,0 +1,753 @@
+{
+  "experiment": "Banking through the Crystal Gate",
+  "date": "2026-10-14",
+  "status": "selected_short_passage_complete_human_playback_review_pending",
+  "human_direction": "Much more motion, using earlier direction for large smooth pans, banks, plane turns and regional deformation.",
+  "selected_case": "nr-cp-curling-mineral-gate-b",
+  "selected_video": "projects/world-seed/exports/v002/nr-cp-curling-mineral-gate-b/faster/rife-moving-tail/preview.mp4",
+  "video_sha256": "cfb27329164f862030421fc1de01e45b57d797c4b32645cc718834e8700c16d1",
+  "delivered_seconds": 8,
+  "planned_seconds": 12,
+  "reason_for_shorter_selection": "Both outward reveal attempts developed persistent pseudo-lettering; preserve them but select the clean eight-second passage.",
+  "configurations": [
+    {
+      "configuration": "motion-a.json",
+      "sha256": "91415bda82b0fb0825f1b3e9b83ad1924bb710d6e62be4a9f87724cfef5be7c6",
+      "case": "nr-cp-bank-through-gate-a",
+      "completed_through": 636,
+      "new_paintings": 36,
+      "selected": true,
+      "check_sha256": "9afa6eaa47f8314e3d527bd814b129da25a54380dff1f69e05f1e990ead97797"
+    },
+    {
+      "configuration": "motion-b.json",
+      "sha256": "b1fd8a43582155ed85c5d0ddda5db2fa50a4c46f85d32939bf2675bdd9f7a813",
+      "case": "nr-cp-curling-mineral-gate-b",
+      "completed_through": 852,
+      "new_paintings": 18,
+      "selected": true,
+      "check_sha256": "717da6035d1cfe778fb56c189c8b8e98d6f66a1cb75e8885c83abffd05b11ae6"
+    },
+    {
+      "configuration": "motion-c.json",
+      "sha256": "19a2f193d493cfc0f9a16db08d3f46a932886adb6b6020645c752f2ca72a0130",
+      "case": "nr-cp-unfurling-world-c",
+      "completed_through": 1068,
+      "new_paintings": 18,
+      "selected": false,
+      "check_sha256": "389aa9e6b496d51dbf8be82a5af9188babec637e68230399ca0678405bef0f23"
+    },
+    {
+      "configuration": "motion-d.json",
+      "sha256": "22e1bf40c7b7e9eae967cec66c9d698140f4d86629eb92f4988443225b284049",
+      "case": "nr-cp-geometric-reveal-d",
+      "completed_through": 1068,
+      "new_paintings": 18,
+      "selected": false,
+      "check_sha256": "d3894299160220ac22486e42ed08c71cb409dc09f135ebe6d56c2eb9afde0593"
+    }
+  ],
+  "original_paintings_preserved": 18,
+  "new_paintings_in_selected_film": 54,
+  "total_selected_paintings": 72,
+  "new_generation_jobs": 90,
+  "excluded_ending_jobs": 36,
+  "identical_initial_delivery_frames": 46,
+  "model": "Krea 2 Turbo FP8",
+  "sampler": "euler",
+  "primary_noise": 0.72,
+  "sigmas": [
+    0.72,
+    0.6154129028316,
+    0.3730812907224,
+    0
+  ],
+  "cfg": 1,
+  "adapter_strength": 0.25,
+  "ref_boost": 0.01,
+  "grounding_px": 768,
+  "reference_policy": "Already-warped previous painting supplies initialization and clean reference; no fixed opening, mask, copyback or refinement.",
+  "motion": {
+    "branch_source": 204,
+    "first_passage": "33-degree bank, sideways plane turn and substantial lateral translation",
+    "second_passage": "Regional curl around the actual crystal and an opposing plane turn; selected through source852",
+    "outward_reveal": "Attempted in C and D, excluded after repeated lettering artifacts"
+  },
+  "runtime": {
+    "comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+    "reference_nodes_commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+    "adapter_sha256": "6adf9a69cc9502d286db7b69964d37da7e9cfe4b05b4d004bc275f087d3fd3cf",
+    "weights": "Three pinned Krea assets verified against serverless/modern-models.json",
+    "evidence_archive_sha256": "c9d025184981eaf0459570460492a9d80bb70cabe9f27a820d2caeb17a3fa05c"
+  },
+  "jobs": [
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 216,
+      "prompt_id": "c0e95f92-7383-41d4-aba3-f7eeb3b0795a",
+      "sha256": "8f9a99ce1141273b0d37f7ae617c94be4b6590bf8486ee741151d70bf7488b87"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 228,
+      "prompt_id": "0998c0a2-aadd-4d0e-b54c-c4a199fab127",
+      "sha256": "6d6b4f8b229cc386d022c60e33496e4b105c4c3877783f93a0b5abbaffe323a5"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 240,
+      "prompt_id": "8b96ea5e-8957-4836-ad48-29d09a65e6ec",
+      "sha256": "78f36d151f9cb484912e74d681ff044b4094cd3f10ede99ed3bf3503754187bd"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 252,
+      "prompt_id": "3f81044a-59a3-42fd-9ec5-bd6c879bbda5",
+      "sha256": "3ad8c47500fd087098a1a3f010ae5cbc6a39fc167bb12672153ae7cd87bf5a61"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 264,
+      "prompt_id": "87669b11-4917-4521-b6a2-3d37bd2c3be1",
+      "sha256": "f13fb7237a9ecf3ceca9ce959c8378611734623aedf2bf56a4071335470f6db5"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 276,
+      "prompt_id": "db484515-6c84-4ece-87f8-cc0e2bc8c053",
+      "sha256": "eb782a47243e841a58e77597dbdd599722f4d60234ea99b832d78ee4d9c5ab88"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 288,
+      "prompt_id": "5f3e3de0-1307-4ee8-8aee-06046b5f7991",
+      "sha256": "c524e3e50556615bc275cb4a046293e395faecd89062d78d41c7ce5f4a372d40"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 300,
+      "prompt_id": "da397e26-941f-4206-996b-bb00215f740d",
+      "sha256": "cd973e22ca27693f1453e91e0fd6d691e73a28801da7e7ae86709833e4e371c5"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 312,
+      "prompt_id": "19a31d73-a29f-4881-891a-967156423064",
+      "sha256": "ff8fc5b7fee251bda320c6e0e61465d9314b52596dff7ab443787a3f4d1e9b39"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 324,
+      "prompt_id": "960012ed-9500-4405-ac41-8a8699771153",
+      "sha256": "dbe765710b51a9eeb9e045d75854a2471f9c9167a18be741f4d51422f81e60c7"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 336,
+      "prompt_id": "24ebcc3e-adcf-44a6-8305-35852f67fddb",
+      "sha256": "261b339f52fd2c326f0dc08a31427d0267f7c0bb9171a506cfb8069647c4d00b"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 348,
+      "prompt_id": "1aa4503f-a701-46c1-85fc-61c1659a9370",
+      "sha256": "acaac8d06d818c747e122924919f7cd46fa216c68fbba441b95a29efaa541200"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 360,
+      "prompt_id": "e20404db-65c9-425d-b790-945139d8aa89",
+      "sha256": "58006f48af6d6da1b968d36f85381a538b62801a045fc76425d9669d6669cdaa"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 372,
+      "prompt_id": "30b4cb8f-fe27-4875-bc86-d5d997180dd4",
+      "sha256": "6d06f81724107037171e4edd22468c3c2dfaec2571d59dcc88b0222d391d040e"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 384,
+      "prompt_id": "ad4f2b77-bea0-4b19-8bac-f5f6030f2b68",
+      "sha256": "6b606a759e75a0a05ff0d4874179393f2a096ed52d13cdad34fa4383080d900b"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 396,
+      "prompt_id": "b2f7bc58-fb3f-45ac-a186-fa5f5c54f913",
+      "sha256": "7ab570aab11d82180f2a4b00d5461d2e5a7cfdc6050358dd9d65b98c6c714815"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 408,
+      "prompt_id": "9708acc8-f298-4073-b405-693e71cabf6d",
+      "sha256": "0ec43931e23f88737148a2d80817806e35ce59aa935627daad8bc01ece83b536"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 420,
+      "prompt_id": "9b5bb316-794d-4571-adb6-68cd7ec3536d",
+      "sha256": "956502310ce35bc51b91e90c64b0064981ce3c2c9956d2249a8ea3d025482f23"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 432,
+      "prompt_id": "227f7aa8-e4c3-480a-beac-9c3f2e163861",
+      "sha256": "149264ed57d3a9b380c87a10bf853e8bcb81b1973cb8a0fab03336c14655892f"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 444,
+      "prompt_id": "9ffaa08f-8f51-48f9-9608-59d3850ac53d",
+      "sha256": "7fe3bb20a98b7c5bad4650d51d3a3d17207e68c7ad366bb5153111445e300a7d"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 456,
+      "prompt_id": "230bce4d-2c34-4ad4-b6bc-c01d46e18a93",
+      "sha256": "47901b4584c8297c2dd2a4f98bd216e90a8748a67a31aa68d0de2c5429baa3f5"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 468,
+      "prompt_id": "5d6b480b-0a28-4be2-8cb1-7d040cf69a5b",
+      "sha256": "637f3b7c9db2162d5b307c73f34f6bd11d7a7a20ed69de16d55c52387ca39808"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 480,
+      "prompt_id": "3120a668-3464-4544-8c30-56e2617fb19b",
+      "sha256": "cbe14cbe7c8e73607f512b65e82a6a9eb366ab882c18a93739bbee7853fde038"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 492,
+      "prompt_id": "e972aec1-514f-4d1f-bb4f-210a982ad681",
+      "sha256": "c91677118281ca274e7d7f450b91ec270c589ef6e1be04c1109f9513187f84ce"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 504,
+      "prompt_id": "4e5bd77d-4264-4769-8f91-0c5aaee472e0",
+      "sha256": "b202bb568d6d9659bf13c62b928a55a2e3834d7d96da3e357426a647ca9b612d"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 516,
+      "prompt_id": "7df2f4e7-479c-4c2b-8b9b-949709a82dd0",
+      "sha256": "0622139c07eb0c8492f609dd56c5788e9235189e55d500bedf14fe2c660cc6c8"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 528,
+      "prompt_id": "bb0dc88c-fa25-42a8-8d3b-9982c1a9fd66",
+      "sha256": "153d7e0413ecc34868a207fd8572f3504b83a57ce006a1f54904504399d7eb09"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 540,
+      "prompt_id": "00ae30f7-f9a6-484e-a60a-7a7c68875ab6",
+      "sha256": "71c1579fe76edd1e42de5d95edf08781f0bb5bcc9f251318dabc29864cf85342"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 552,
+      "prompt_id": "3a8887e1-4400-424e-b79f-9bc4c8543fe0",
+      "sha256": "2f4c1e53a459ef098928d165bb5cb05098ea33fd5c2041f2ae27bd993abdcd39"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 564,
+      "prompt_id": "2b0784a2-e0a3-4b9f-9cbc-70f5bcff6c37",
+      "sha256": "f8e653abfdb2ee3fa0cf2e71dc83be2705a7397777ec8b0cad8a6c08d7451b52"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 576,
+      "prompt_id": "5009b851-a470-438e-96a6-dfafd2fa121f",
+      "sha256": "665208e69facff9327cb3348d40f067b198c8af035fedbd84bc36a61b38cff77"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 588,
+      "prompt_id": "e0556fa1-c0b9-41bb-b510-fc220d99d5a2",
+      "sha256": "5eae5d41b65f460838801b77b180a46e241855b80f34ba8822083c0afc9d58eb"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 600,
+      "prompt_id": "be1114a8-8c37-4b35-b2b4-c3d3eb0a6ec2",
+      "sha256": "d4f01d613d37bb8f1ece2d16e067aa3448cb89e52b1f83625bea15dcc5bdb79b"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 612,
+      "prompt_id": "325ad6f7-5a83-4477-9ca7-78fc8be22062",
+      "sha256": "3f8927ae78de45450c8ea88e3b5522f3b501d67227a67de8bea94f70b38b05f5"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 624,
+      "prompt_id": "d848d2f9-03b6-4512-b118-6b2c8c80b34c",
+      "sha256": "8f0da3ecb85d48d23f2ebf6ef50c9a16d71580469152794950c7c80a63b3618c"
+    },
+    {
+      "case": "nr-cp-bank-through-gate-a",
+      "frame": 636,
+      "prompt_id": "8f5fbd83-36cf-40e3-9f89-04c913cb198a",
+      "sha256": "6154e985ff442aca43d3002cc624e967f1abb3dba7635b605fe9ce896992230e"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 648,
+      "prompt_id": "673629be-37af-43c3-ac09-a2973d5e607e",
+      "sha256": "cf62e88d27b4ffbcb559c4de3237d1f5ccd8ce0ef9330bfbafb9e9a3a98899a8"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 660,
+      "prompt_id": "f843e2cd-d395-4089-91d0-dd00b597e529",
+      "sha256": "2e6f2bfac5aa4705ed61f95efe6e46de65ff2edb568bb6f3d5eab42453050257"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 672,
+      "prompt_id": "1f3d8f10-85bf-4952-a0b0-7c4ddcc7ea55",
+      "sha256": "aadf284f552af8d9ae235ca55f4f96a8144400e8da5f87ca1ec991d05ef6f8e1"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 684,
+      "prompt_id": "fdc0ae28-7613-48bd-b67a-a1a0d4b06754",
+      "sha256": "c362ee8b6b63ba2f9cc66da8fca359a0a16cfb136589661ffd70f6dc03e22a5f"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 696,
+      "prompt_id": "d20eb122-88fa-4410-a7bc-d19bdad52107",
+      "sha256": "5acf8f64a9f4cdc49e0a355b1244c7303ddd9221b3a1784df8e91c86b98157ab"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 708,
+      "prompt_id": "d3e77cc9-12e5-4065-88cb-78686f78318c",
+      "sha256": "781870c211225c1484b49725621d04d017ba58a4a56e1fb8902f2da36d1c9e33"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 720,
+      "prompt_id": "c1db1f7e-3e73-432f-95a2-7ef36001ce5d",
+      "sha256": "ee99c1a28a750dca35dd8bca2c78e0a4fb1e451f8c4ba12fc56211584424d3f1"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 732,
+      "prompt_id": "fbd64842-69ad-419d-9afc-493d9d5e763d",
+      "sha256": "992f3185ee22acaae015484a04ac06dcf4437103ba692a8bad5bf6364a335a39"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 744,
+      "prompt_id": "d41cceec-90e0-4f5a-8aa3-b6b7ea5a9749",
+      "sha256": "e23a22e83e9c07f0cd2a0eba75ecb7bbcb26d4373af712fbff70cc2bd0e5133c"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 756,
+      "prompt_id": "3c6ad3c1-ba3a-427d-9fc3-104a0f29fc89",
+      "sha256": "18f7360a996ad0cedf958c57a487d05ab3e6fedefb1684ca329ece2f787401b5"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 768,
+      "prompt_id": "46f5d44b-977e-4c03-8cf9-196cb0fe93a8",
+      "sha256": "4ce55d7f5ac8ea77944505c964582a38d304608ed14f31604258206e347ba94b"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 780,
+      "prompt_id": "127480c2-b26c-4294-87bd-5c87659c4c4e",
+      "sha256": "ee0fe6db172d302070e1c02415354a3d6418d5ff692abf09306e86c953fea938"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 792,
+      "prompt_id": "6518c85f-fc41-4e9c-982d-bbfef34bfc63",
+      "sha256": "9b81ec0094cd9f54501fd2e40b44089f2541a71e5b19b4815df91d74d2be8cb9"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 804,
+      "prompt_id": "83f93577-b17a-417e-8fe9-4ce058b33a2a",
+      "sha256": "1f177eaf8ffd7c7a5f280463d9adbcdf71f47b30fca6aed1ac04e9e72ac61a84"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 816,
+      "prompt_id": "6375010f-2297-4e4b-991e-2a38369da900",
+      "sha256": "1ac61445d3d8aa5faf8148ca8317755e878c2196a4799f3f1b0fc3a175aa6d0c"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 828,
+      "prompt_id": "d9c1edd2-d5c1-4d9e-90b1-3886b3754ca8",
+      "sha256": "1834ccad25e231878026b30a1ca8b52b999cbb83327538daad59ccdbd7756667"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 840,
+      "prompt_id": "81a6c70a-23af-498a-8592-ab563c763bc3",
+      "sha256": "07b6e928d205c6bd3dbad749b87b06a00347666fe8ac5ce608946720b9cc8174"
+    },
+    {
+      "case": "nr-cp-curling-mineral-gate-b",
+      "frame": 852,
+      "prompt_id": "c5dfb142-7f94-40c1-acea-b42232310210",
+      "sha256": "4f04a83fd5f9ee064baecbaeaca1b94b9f2adccc3cf95f413a9fdadd916418b9"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 864,
+      "prompt_id": "f7dd8ac2-9216-49ad-97f9-04fd5cbbd456",
+      "sha256": "97ab65c54a31301e529e6f9302b3ead49a76c9ff3a63ce72b81b91ffeb4d73e0"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 876,
+      "prompt_id": "9ee5636d-36f7-43a1-933e-025e76c29ad2",
+      "sha256": "90ad08cac826020bfd6a6eff9823750bd1c5c97028a001410e7c58185697ac6c"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 888,
+      "prompt_id": "b8513462-e03b-4202-a9e8-1926aa30d479",
+      "sha256": "34a5705e27c717275014c2e8300a13341e4ecbd9bf52104bd2b8ba84ffa76a95"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 900,
+      "prompt_id": "1d694871-1fbb-49e3-807c-8e8e2062adf3",
+      "sha256": "381c7a96cd2a2514083ed09d7f4a15f6cf6c0cfd79a12fd84478fdffbccd27d2"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 912,
+      "prompt_id": "fe7cb517-c1ec-4bc2-a476-bbf340115f37",
+      "sha256": "04a505a1eb5f88626b28903d6b63c26412f6682f884da42cfa849e653107341d"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 924,
+      "prompt_id": "7502397d-4c84-4c42-b15a-6bffbe29014b",
+      "sha256": "3db4842f9968ef23c60d28a718200ae73888ef11e59f57244d140173c6f0017c"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 936,
+      "prompt_id": "54ae8be3-77f5-4c45-9eb1-59b49e3db63f",
+      "sha256": "077624049926dbb05b3ffed4067ed1b6d2c2b0eef5c2c8be0bcfe9f6774f0ecc"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 948,
+      "prompt_id": "1bf0fa34-d37d-467c-bc46-b334b22e9708",
+      "sha256": "295be5b89442aab42214dcca7eb71eb7b4e6d9401fc78525a454d66167e97b7a"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 960,
+      "prompt_id": "e0dc5e81-1780-446b-8eea-38fba066953b",
+      "sha256": "25a6e489ee966d7104fd76662684ae4f75e6a83e923b166a00866f6e9b1b5b01"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 972,
+      "prompt_id": "c7481906-72c5-4296-84f5-4dc950c524bf",
+      "sha256": "91ef636961ea1f35e92718aa3b1b605854b1cc6e32d372db0e4ac57be8e12acb"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 984,
+      "prompt_id": "85ac5517-f9f6-470a-a283-7832f744ee80",
+      "sha256": "d1fb44178376aef41738554099a5d99fc0c8625dede4b097c641414c17e1e312"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 996,
+      "prompt_id": "558785cc-65f2-425e-94b7-7bccac1bbe81",
+      "sha256": "282f9245381e206356f80c52a7f9cef2fa5d06d71691568ee84c7b0d9259803e"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1008,
+      "prompt_id": "e2a8debd-c483-4577-a18f-233de0572f34",
+      "sha256": "8df96ca1749d40e909ea7f365b2926909bd87d5b453ae9a2f6ba98d6813205b9"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1020,
+      "prompt_id": "b1f2f78e-2757-4d0f-bb03-710e691aac97",
+      "sha256": "5ad235271465b5a3310dfba840069fd01e35a86ce14749e5a19bfa5ec7cd9612"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1032,
+      "prompt_id": "5841dd30-a2d2-43ca-8d5b-76f5d3b5e323",
+      "sha256": "3e01dae4b7d81f60b71aee45e09c822b772bd77eeb9f32900a28ac36fd45e5c5"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1044,
+      "prompt_id": "632bd5a5-4f37-464e-bead-d17098cf824b",
+      "sha256": "cf03afefbbba169f49e1fa5e47b73fc27f2aae6a178a47048897e591d3e2c2d0"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1056,
+      "prompt_id": "6b3dc75d-3bae-4450-86e1-f33c447f5c1f",
+      "sha256": "5c4278d1067b6b8b86946d5da68a4a7b09854731fefc110ff709891ec2b29119"
+    },
+    {
+      "case": "nr-cp-unfurling-world-c",
+      "frame": 1068,
+      "prompt_id": "9600adfb-edd8-4d0e-ae03-41f077b2841e",
+      "sha256": "6b8e6463f31a1b7f4c415ff9eb20cd325fbeba74e8679cda1ff6c2965cee5e2f"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 864,
+      "prompt_id": "f252d1b1-42d2-4736-a64c-24e6e9afb7d7",
+      "sha256": "ddda2e57d3b8fd0648e6c63157352d008d11e12569940918f960b7b55af794ed"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 876,
+      "prompt_id": "caef6a78-99ec-4665-b732-7daf7d3b6e1f",
+      "sha256": "dcd896387994ff40bfa33401941eb038246268090bcabe15c11cd982137328bc"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 888,
+      "prompt_id": "b849b0ad-db17-491c-acc8-f1fcb5bc8bc1",
+      "sha256": "c87f08cc99c9db51fecd98318dca222e66ca1ae8fbc27f5e35afdc2776b65330"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 900,
+      "prompt_id": "a68f9856-a481-4fc6-930d-c2a9c6c1262c",
+      "sha256": "a16e6cee0d2feafc937c364d6a082c4d3a1aeeb776b87cb1f39a2612064f8a05"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 912,
+      "prompt_id": "18078389-c691-42ff-933c-7ac0ec61cd00",
+      "sha256": "bec3827835946db263bfeaaf8384a8deacfb50d489471447ae30aa9891d46d23"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 924,
+      "prompt_id": "e3d6343f-2e26-424f-aa4b-db3be569b229",
+      "sha256": "71b54280ceaa7bd9218f3b21311eb6f6ed9c20d1a141bee6e9c2750c5d9946e2"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 936,
+      "prompt_id": "bf387941-faa8-4d60-bc00-39c6fa54f0a0",
+      "sha256": "21478af0330e1a304041c66484fa22dc4e8f5ea8b8722956249c9bacc0294c1c"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 948,
+      "prompt_id": "63426088-33ec-4098-aaec-fab98a8a935e",
+      "sha256": "663ac9f01c0132f0dffcd4728464875d1d9b7f7a5904b53321a83b6f1eac4ab4"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 960,
+      "prompt_id": "f72ee775-c587-4c26-affb-df896cc869ae",
+      "sha256": "cf958e18f555e4d0063ddaa76daee383b24a0c43f24943402578b31ad3ee37a3"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 972,
+      "prompt_id": "41f1efb0-e174-4934-ac8d-2abfe8e59f4c",
+      "sha256": "b4eef68a6b3308ab6ea89277079ecc1191faa0aad7da8d991c71d48a332628cc"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 984,
+      "prompt_id": "216d8f69-ae30-41ba-88fb-127ebe06c725",
+      "sha256": "f5da6eb734a984ee2b9cbc9e9bcf1c4dd5141985fdda6e7c660e6fda96669b95"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 996,
+      "prompt_id": "1b3d6555-9cbb-4bf6-9615-55c4225ac058",
+      "sha256": "3bb509430f37d8fb3b13075666f94adc790fb7b64029c48d794ccec2db37c2e8"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1008,
+      "prompt_id": "5e8f9db0-50f7-459a-8857-7e0b8e1311e1",
+      "sha256": "feaa3947adcc9c30cf94358ae41e8872ff6acdb62495d3e702d9242de09fa336"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1020,
+      "prompt_id": "d59945d0-a32c-4137-9c92-66640a3791c7",
+      "sha256": "f48a586a885839ce5c82de288186a453c5ba5c7d55d4a54a4b327e876c258264"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1032,
+      "prompt_id": "b204cebd-5d97-4e10-89e2-14ce84ada62f",
+      "sha256": "d27cb1c8497088739d503ba8a5716cdd5cf1d6cec1e505025daba04293da7882"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1044,
+      "prompt_id": "dbf75d7b-2b1e-43e3-a145-6afc46a974c4",
+      "sha256": "f11dc856074afae51f50bf6efbb5e08072ce17bf7676dff1d5b7d4fd871f9fad"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1056,
+      "prompt_id": "dd6675e4-2938-47e0-b40f-b25b82fbe6d9",
+      "sha256": "6859df8c438faca5abb77d9c32f77db89f8b5e651cbd1d8f28c54f00155d69b1"
+    },
+    {
+      "case": "nr-cp-geometric-reveal-d",
+      "frame": 1068,
+      "prompt_id": "6f1134c8-00a4-4502-8dd9-0908c6f63aea",
+      "sha256": "3135c62337bd60618ebc7eb2a58f1f17f45b70f4e8e73263f4f1d4876ce76740"
+    }
+  ],
+  "screening": {
+    "all_new_paintings_viewed": true,
+    "native_checkpoints": {
+      "a": [
+        420,
+        564,
+        636
+      ],
+      "b": [
+        696,
+        744,
+        828,
+        852
+      ],
+      "c": [
+        936,
+        972
+      ],
+      "d": [
+        900
+      ]
+    },
+    "motion_only_previews": [
+      "nr-cp-bank-through-gate-a-v003",
+      "nr-cp-curling-mineral-gate-b",
+      "nr-cp-unfurling-world-c"
+    ],
+    "four_second_displayed_frame_windows": [
+      [
+        1.75,
+        2
+      ],
+      [
+        3.5,
+        3.75
+      ]
+    ],
+    "eight_second_displayed_frame_windows": [
+      [
+        5.75,
+        6
+      ],
+      [
+        7.4,
+        7.65
+      ],
+      [
+        7.7,
+        7.99
+      ]
+    ],
+    "final_overview_frames": 8,
+    "judgment": "Stronger composition-changing bank and curl; principal crystal remains identifiable. Small apertures and jewel surfaces redraw. Broad surfaces become smooth and towers become storybook-like. No conspicuous doubled main contour in screened windows. Normal-speed rhythm awaits human judgment.",
+    "rejected_endings": "C and D both develop lettering by source888 and retain it through1068; seed and wording retry did not solve the issue."
+  },
+  "delivery_check": {
+    "verified": true,
+    "frames": 192,
+    "fps": 24,
+    "paintings": 72,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "cfb27329164f862030421fc1de01e45b57d797c4b32645cc718834e8700c16d1",
+    "retiming_sha256": "3f9d2efc1d03b535e2c6467b3daba9f9fa0ce9d3f4af19e33561ff07890af03a",
+    "anchor_frames_sha256": "0017921f3f370447fac9c55bf5baf523a64cc3e7d45e35fde06b9b0d5e212ea6"
+  },
+  "reviewer_check": {
+    "url": "http://localhost:3028/world-seed-crisp-passage",
+    "http_status": 200,
+    "media_range_status": 206,
+    "content_range": "bytes 0-1023/13964841",
+    "range_bytes_match": true,
+    "receipt_clip": {
+      "id": "bank-and-curl",
+      "source": "/Users/olof/git/ai-video-experiments/apps/deforum/projects/world-seed/exports/v002/nr-cp-curling-mineral-gate-b/faster/rife-moving-tail/preview.mp4",
+      "source_sha256": "cfb27329164f862030421fc1de01e45b57d797c4b32645cc718834e8700c16d1",
+      "frame_count": 192,
+      "duration": 8.0,
+      "paintings": 72,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "provenance": {
+        "status": "verified",
+        "manifest": "/Users/olof/git/ai-video-experiments/apps/deforum/projects/world-seed/exports/v002/nr-cp-curling-mineral-gate-b/faster/rife-moving-tail/manifest.json",
+        "manifest_sha256": "23916d07886440ec650a096c43e7eb979a94e39246419cb3dbb9dcc0970fcbb7"
+      },
+      "preview": null,
+      "preview_sha256": null,
+      "preview_bytes": null,
+      "preview_dimensions": null
+    },
+    "existing_layout_unchanged": true,
+    "service": {
+      "name": "media-review",
+      "ready": true,
+      "run_id": "acbd20b4-606a-4847-b0b1-094855fa7a5c",
+      "effective_url": "http://localhost:3028/"
+    }
+  },
+  "resources": {
+    "pod_id": "6sb6da0jq6koa1",
+    "created_at": "2026-10-14T09:45:31.853000+00:00",
+    "deleted_by": "2026-10-14T10:27:07+00:00",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "hourly_usd": 0.89,
+    "estimated_compute_usd": 0.6169,
+    "storage_excluded": true,
+    "deletion_http_status": 204,
+    "subsequent_pods": [],
+    "retained_volume_id": "vd3jnbwko1",
+    "owned_remote_cleanup": {
+      "owned_files_deleted": 180,
+      "owned_symlinks_deleted": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_model_volume": true,
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      }
+    },
+    "local_preservation_manifest_sha256": "53e0943c8b1c199ad513d9cd87b2fa2eda5caa721898746410d555edb34dd9e5"
+  },
+  "operational_note": "MCP connection fields were initially null while CLI and direct application access worked; final get_pod returned matching connection fields. Cause unresolved. AF-20261014-121916."
+}

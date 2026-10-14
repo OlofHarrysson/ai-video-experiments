@@ -515,3 +515,8 @@ Olof asks to resume filmmaking with the new settings and make a short part of th
 ### 2026-10-13 — Continue The Crystal Gate
 
 Olof likes the direction of the six-second Crystal Gate draft and requests a longer movie. Continue from its saved ending with the same visual recipe and continuous motion. This feedback supports the direction without claiming that fine-detail retention is solved or that he selected it over the separate thirty-second film.
+
+
+### 2026-10-13–14 — More motion in The Crystal Gate
+
+Olof finds the twelve-second extension acceptable visually but boring and dominated by zoom. He says the assistant is too cautious with image transformations and asks it to recover prior conversation direction, then approves another attempt. Earlier messages explicitly request substantial smooth pans, roll, plane turns, regional warping, spirals and pullbacks without repeated stop-start pulses. The Cartographer’s Dream remains his positive motion reference. This authorizes the [new motion revision](../apps/deforum/projects/world-seed/experiments/crisp-passage/motion.md); it does not yet establish his preference for its result.
