@@ -1,0 +1,332 @@
+{
+  "study": "crystal-gate-finale",
+  "cases": [
+    {
+      "case": "nr-cp-above-the-canyon-a",
+      "seed": 1032600,
+      "duration": 76.5,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360,
+        372,
+        384,
+        396,
+        408,
+        420,
+        432,
+        444,
+        456,
+        468,
+        480,
+        492,
+        504,
+        516,
+        528,
+        540,
+        552,
+        564,
+        576,
+        588,
+        600,
+        612,
+        624,
+        636,
+        648,
+        660,
+        672,
+        684,
+        696,
+        708,
+        720,
+        732,
+        744,
+        756,
+        768,
+        780,
+        792,
+        804,
+        816,
+        828,
+        840,
+        852,
+        864,
+        876,
+        888,
+        900,
+        912,
+        924,
+        936,
+        948,
+        960,
+        972,
+        984,
+        996,
+        1008,
+        1020,
+        1032,
+        1044,
+        1056,
+        1068,
+        1080,
+        1092,
+        1104,
+        1116,
+        1128,
+        1140,
+        1152,
+        1164,
+        1176,
+        1188,
+        1200,
+        1212,
+        1224,
+        1236,
+        1248,
+        1260,
+        1272,
+        1284,
+        1296,
+        1308,
+        1320,
+        1332,
+        1344,
+        1356,
+        1368,
+        1380,
+        1392,
+        1404,
+        1416,
+        1428,
+        1440,
+        1452,
+        1464,
+        1476,
+        1488,
+        1500,
+        1512,
+        1524,
+        1536,
+        1548,
+        1560,
+        1572,
+        1584,
+        1596,
+        1608,
+        1620,
+        1632,
+        1644,
+        1656,
+        1668,
+        1680,
+        1692,
+        1704,
+        1716,
+        1728,
+        1740,
+        1752,
+        1764,
+        1776,
+        1788,
+        1800,
+        1812,
+        1824
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "engraved-city",
+          "prompt": "An ancient impossible city of jet-black basalt and polished metallic gold suspended beneath an ink-black cosmic sky. A sweeping elevated road curves from the lower left foreground toward a large open circular aperture just right of center. Needle towers and terraced palaces stand on both sides of the road; their densely carved facades contain miniature arches, fluted pillars and precise geometric relief. The road has razor-thin golden edge inlays and sharply incised basalt arabesques. Several immense interlocking architectural rings surround the distant aperture, framing a small luminous cyan faceted crystal. The black stone has crisp chipped edges, minute silver mineral flecks and engraved seams; golden rails carry closely spaced chased metal grooves. Deep cobalt shadows separate the structures. Small amber windows and thin cyan reflections provide bright color against the black and gold. Clear empty space between sharply resolved near and distant forms, deep focus, directional grazing light and controlled pinpoint reflections. A meticulously detailed surreal digital environment with clean color separation and strong local contrast. Wide asymmetrical composition, monumental scale, an unobstructed route into the aperture. The air is perfectly clear, the outlines precise, the materials solid and intricately modeled. No people, letters, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 6,
+          "name": "crystal-inside-the-aperture",
+          "prompt": "The elevated engraved black-basalt road leads into the enormous interlocking gold rings. The cyan crystal within the open aperture is unfolding into intricate branching mineral architecture: small nested faceted chambers and rose-quartz ribs appear inside the dark circular opening. The black city still frames the sides. Thin gold rails begin splitting into parallel ivory threads near the far end of the road; polished metal grooves turn into fine etched mineral veins. Jet black, metallic gold, electric cyan and small rose accents. Continuous open passage, precise sculptural forms and clear black space between branches. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 12,
+          "name": "rings-unfold-into-lattice",
+          "prompt": "Inside the great circular opening, the curved gold rails and black carved road unfold into sweeping ivory mineral ribs. Their engraved ornament becomes intricate recursive crystal lattice: slender rose-quartz branches, cyan faceted chambers and violet interior recesses. The gold remains only on the outer edges while pale mineral threads spread inward. A deep clear passage through the center leads into a higher-dimensional garden. Black void between the chambers preserves strong depth and contrast. Thousands of tiny etched facets, crisp overlapping laminae and minute geometric apertures cover the emerging ribs. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 18,
+          "name": "crystalline-world",
+          "prompt": "An immense higher-dimensional garden of clear cyan crystal, rose-quartz ribs and ivory mineral lattice unfolds through the ancient circular gateway. Sweeping faceted ribbons form interconnected polyhedral chambers at many different scales; tiny jewel cavities and sharply engraved silver seams fill every rib. The former road has become a slender carved crystal path through the nested chambers. Rich cobalt and violet voids separate the structures; rose-magenta inner facets and clear turquoise outer edges have distinct color. Transparent facets reveal tiny emerald mineral gardens within a few deeper cells. A continuous winding passage remains visible as the surrounding world opens outward. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 23,
+          "name": "inner-garden-reveal",
+          "prompt": "We move through an open crystalline world of sharply etched cyan and rose glass, immense ivory ribs and nested polyhedral gardens. The curved crystal path leads past close faceted branches toward a deep emerald chamber within the lattice. Cyan reflections trace thousands of fine mineral veins; small violet cavities, silver filigree and rose-colored prismatic edges remain individually legible. Deep clean cobalt spaces between the structures, strong sculptural depth and tightly controlled small highlights. The architectural rings have become a sprawling recursive mineral garden with a clear route into its heart. Every visible surface is sharply resolved: hairline engraved seams, tiny chipped mineral edges, precise faceted relief and controlled pinpoint highlights. Deep focus and perfectly clear air separate near and far forms. Meticulously detailed surreal digital environment, rich distinct colors, crisp solid materials. No people, text, mist, bloom or painted brush texture."
+        },
+        {
+          "at": 26.5,
+          "name": "lattice-begins-to-curl",
+          "prompt": "A huge faceted cyan crystal floats inside a rose-quartz lattice opening edged with metallic gold. The perforated lattice curls sideways into long engraved ivory and bronze ribbons around the crystal. The curved grey causeway remains connected through the opening. Slender grey towers stretch and branch into etched silver mineral stems; their blue conical caps flatten into sharply ridged cobalt fins. Small violet crystals remain embedded along the curling rose ribs. Deep midnight-blue voids between forms. Every visible surface has finely engraved seams, crisp overlapping mineral laminae, densely ridged edges and tiny angular inclusions. Clear empty space separates the sculptural forms. Meticulously detailed surreal digital environment, sharp focus, distinct saturated colors, directional grazing light, strong local contrast and controlled pinpoint reflections. No people, text, mist, bloom or brush texture."
+        },
+        {
+          "at": 31.5,
+          "name": "ribbons-unfurl",
+          "prompt": "The massive cyan crystal remains visible within an unfurling arch of rose-quartz ribbons and perforated ivory mineral branches. The former circular gold rim opens into layered bronze-edged fronds. Engraved silver stems and ridged cobalt fins branch from the receding causeway into an impossible mineral garden. Thin translucent jade blades appear between the rose ribs; tiny emerald geometric cavities repeat inside larger chambers. The spatial structure coils sideways while retaining clear open gaps. Every visible surface has finely engraved seams, crisp overlapping mineral laminae, densely ridged edges and tiny angular inclusions. Clear empty space separates the sculptural forms. Meticulously detailed surreal digital environment, sharp focus, distinct saturated colors, directional grazing light, strong local contrast and controlled pinpoint reflections. No people, text, mist, bloom or brush texture."
+        },
+        {
+          "at": 35.5,
+          "name": "the-crystal-opens",
+          "prompt": "The horizontal cyan crystal inside the curled ivory lattice begins opening into an impossible landscape. Its blue facets split into long midnight-blue channels between vermilion and burnt-orange mineral terraces. The curved causeway and small towers stretch into slender ivory branching formations along the sides of this opening. A few violet jewel cavities remain at its edge. The view travels continuously into this widening angular canyon, with the old shell still framing the margins. High-fidelity surreal digital environment. Dense sharp angular mineral facets, closely spaced thin rock strata, tiny crystalline inclusions and intricate branching structures remain individually resolved. Rich separate colors, solid dimensional forms, deep clear openings, sharp focus at all distances. Bright directional light rakes across small ridges, with tightly controlled pinpoint reflections. Purely abstract geometric mineral surfaces and perfectly clear air."
+        },
+        {
+          "at": 39.0,
+          "name": "crossing-the-mineral-threshold",
+          "prompt": "An alien canyon of richly layered vermilion mineral cliffs opens inside the former cyan crystal. The pale lattice unfurls into tall fluted ivory spires with many tiny forks and angular branch tips. Deep blue channels curve between red-orange terraces and black obsidian ledges. Small emerald crystals grow in tightly packed clusters along sheltered rock shelves. The opening fills the view as the gold and rose shell passes toward the outer edges. Monumental scale, steep overlapping landforms and deep open space beyond. High-fidelity surreal digital environment. Dense sharp angular mineral facets, closely spaced thin rock strata, tiny crystalline inclusions and intricate branching structures remain individually resolved. Rich separate colors, solid dimensional forms, deep clear openings, sharp focus at all distances. Bright directional light rakes across small ridges, with tightly controlled pinpoint reflections. Purely abstract geometric mineral surfaces and perfectly clear air."
+        },
+        {
+          "at": 42.0,
+          "name": "vermilion-canyon",
+          "prompt": "An immense alien world of vermilion mineral terraces, narrow cobalt channels and towering ivory branching spires extends into deep space. Hundreds of thin red-orange stone layers step down into the canyon. Black obsidian ledges carry dense clusters of needle-shaped emerald crystals. Slender ivory branches curl overhead, each lined with tiny angular mineral blades. A blue channel winds diagonally between the steep terraces into a distant fractured landscape beneath an ultramarine sky. Clear open intervals separate near formations from distant terrain. High-fidelity surreal digital environment. Dense sharp angular mineral facets, closely spaced thin rock strata, tiny crystalline inclusions and intricate branching structures remain individually resolved. Rich separate colors, solid dimensional forms, deep clear openings, sharp focus at all distances. Bright directional light rakes across small ridges, with tightly controlled pinpoint reflections. Purely abstract geometric mineral surfaces and perfectly clear air."
+        },
+        {
+          "at": 44.5,
+          "name": "through-the-blue-opening",
+          "prompt": "A narrow opening between immense dark layered mineral ribs reveals an alien canyon. A vivid blue channel winds away between vermilion terraces with hundreds of thin orange stone layers. Pale branching ivory formations frame the near sides. The dark ribbed opening expands toward the edges as the view passes continuously through it into the vast terrain beyond. The canyon is the central subject, deep and open, with close cliffs giving way to distant layered plateaus. High-fidelity surreal digital environment. Densely layered mineral strata, angular chipped rock edges, clusters of hair-thin crystal needles and finely fluted branching structures. Crisp resolved foreground texture and detailed distant formations. Deep focus, perfectly clear air, strong local contrast, rich vermilion and cobalt colors with pale ivory accents. Solid three-dimensional materials under bright raking light, controlled small specular highlights."
+        },
+        {
+          "at": 48.0,
+          "name": "canyon-fills-the-view",
+          "prompt": "Inside a vast alien canyon, a winding cobalt channel cuts between immense vermilion mineral terraces. Closely spaced orange and rust strata form sharp horizontal shelves on the cliffs. Pale ivory coral-like mineral trees fork into thousands of tiny pointed branches along the nearest ledges. Emerald needle crystals grow in dense clusters at their bases. Distant red terraces repeat at many smaller scales beneath a clear ultramarine sky. The last dark gateway ribs pass beyond the sides of the view. An open diagonal route follows the blue channel into the landscape. High-fidelity surreal digital environment. Densely layered mineral strata, angular chipped rock edges, clusters of hair-thin crystal needles and finely fluted branching structures. Crisp resolved foreground texture and detailed distant formations. Deep focus, perfectly clear air, strong local contrast, rich vermilion and cobalt colors with pale ivory accents. Solid three-dimensional materials under bright raking light, controlled small specular highlights."
+        },
+        {
+          "at": 51.0,
+          "name": "a-world-of-branching-terraces",
+          "prompt": "A panoramic alien landscape of steep vermilion terraces surrounds a sinuous cobalt river-channel. Every exposed cliff is built from hundreds of narrow alternating orange and rust mineral strata with sharp chipped edges. Ivory mineral trees rise from dark obsidian ledges, fine forks carrying clusters of tiny translucent jade needles. Small distant spires and nested red mesas repeat into a clear blue distance. The channel bends diagonally through the lower half of the view and continues toward the distant upper right. Open sky and clear gaps separate the intricate landforms. High-fidelity surreal digital environment. Densely layered mineral strata, angular chipped rock edges, clusters of hair-thin crystal needles and finely fluted branching structures. Crisp resolved foreground texture and detailed distant formations. Deep focus, perfectly clear air, strong local contrast, rich vermilion and cobalt colors with pale ivory accents. Solid three-dimensional materials under bright raking light, controlled small specular highlights."
+        },
+        {
+          "at": 53.5,
+          "name": "travelling-across-the-canyon",
+          "prompt": "A vast alien canyon of rust-orange mineral terraces and dark indigo columns surrounds a winding cobalt channel. Delicate ivory mineral trees grow along the orange shelves: their many branching trunks divide into fine fan-shaped crowns. Tiny emerald crystal clusters and pale thorn-like sprouts cover the protected ledges. The channel bends from the lower center into the upper right distance. The near terraces slide across the view as more of the right-hand landscape opens, with steep overlapping cliffs at many scales. Meticulously detailed surreal digital environment, crisp material textures and precise fine branching. Hundreds of narrow mineral bands line every terrace edge; tiny angular chips and clusters of needle-like crystals interrupt the smooth surfaces. Ivory branch tips divide into dense hair-thin fans that remain individually legible. Clear deep violet space between the forms, high local contrast, sharply resolved foreground and distance, directional raking light with small hard reflections."
+        },
+        {
+          "at": 57.0,
+          "name": "ivory-forest-on-the-terraces",
+          "prompt": "A sweeping view across an impossible canyon reveals a forest of delicate ivory mineral trees growing on red-orange terraces. Each ivory crown is a dense mesh of fine pointed branches and tiny fan-shaped crystal blades. Thin emerald needles cluster between the many small tree roots. Deep cobalt channels snake between tall indigo columns and narrow terraced ledges. Rust, vermilion and pale copper bands alternate along the cliffs. Near branching crowns overlap a distant landscape of slender blue spires and red shelves, with clear dark space separating their silhouettes. Meticulously detailed surreal digital environment, crisp material textures and precise fine branching. Hundreds of narrow mineral bands line every terrace edge; tiny angular chips and clusters of needle-like crystals interrupt the smooth surfaces. Ivory branch tips divide into dense hair-thin fans that remain individually legible. Clear deep violet space between the forms, high local contrast, sharply resolved foreground and distance, directional raking light with small hard reflections."
+        },
+        {
+          "at": 60.0,
+          "name": "the-canyon-opens-sideways",
+          "prompt": "An immense higher-dimensional landscape opens across vermilion terraces carrying intricate ivory mineral forests. Tall fluted indigo spires rise between sinuous cobalt channels. Dense little branching ivory trees grow in rows along the cliff ledges; their fine needle crowns and translucent jade inclusions catch bright cool light. Small nested red shelves and sharply separated blue ravines repeat far into the distance. Monumental clear sculptural depth with an open path between the near terraces and distant spires, richly colored solid digital art. Meticulously detailed surreal digital environment, crisp material textures and precise fine branching. Hundreds of narrow mineral bands line every terrace edge; tiny angular chips and clusters of needle-like crystals interrupt the smooth surfaces. Ivory branch tips divide into dense hair-thin fans that remain individually legible. Clear deep violet space between the forms, high local contrast, sharply resolved foreground and distance, directional raking light with small hard reflections."
+        },
+        {
+          "at": 62.5,
+          "name": "rising-along-the-ivory-trees",
+          "prompt": "The viewpoint rises along an alien canyon lined with ivory mineral trees. Their intricate white branching crowns extend above the dark indigo columns and rust-orange terraces. A winding cobalt channel remains visible below between the cliffs. The nearest right-hand cliff slips below the view, opening space above its rim. Thin crystal roots and tiny carved mineral channels cover the tiered ledges. Above the canyon, slender pale branches spread into a luminous turquoise vault. Meticulously detailed surreal digital environment, crystalline material relief, precise fine branching and closely spaced mineral seams. Sharp resolved silhouettes and clear separation at every scale. Rich solid colors, deep focus, cool directional raking light, small crisp reflections. Clear air and clean negative space."
+        },
+        {
+          "at": 67.0,
+          "name": "the-rim-opens",
+          "prompt": "Above the rim of an immense indigo canyon, a suspended forest of white branching crystal opens beneath a clear turquoise sky. The receding rust-orange terraces form a narrow lower edge; tall trees have silvery trunks and intricate fan-shaped crowns made of transparent emerald blades. Layer upon layer of tiny crystalline leaves overlap with sharp gaps between them. Broad open intervals reveal distant floating jade shelves and sapphire pools. The view lifts into the light above the canyon. Meticulously detailed surreal digital environment, crystalline material relief, precise fine branching and closely spaced mineral seams. Sharp resolved silhouettes and clear separation at every scale. Rich solid colors, deep focus, cool directional raking light, small crisp reflections. Clear air and clean negative space."
+        },
+        {
+          "at": 72.0,
+          "name": "an-aerial-crystal-forest",
+          "prompt": "An impossible aerial forest of branching silver crystal and transparent emerald leaves hangs above a deep blue void. Delicate pale root systems bind floating jade terraces, their edges studded with sharp quartz needles. Sapphire pools reflect small glints of cool white light. A few rust-orange shelves far below connect this brighter forest to the canyon beneath. Intricate lacework crowns open into sweeping arching branches, with generous clear turquoise space between the overlapping forms. Meticulously detailed surreal digital environment, crystalline material relief, precise fine branching and closely spaced mineral seams. Sharp resolved silhouettes and clear separation at every scale. Rich solid colors, deep focus, cool directional raking light, small crisp reflections. Clear air and clean negative space."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        }
+      ],
+      "sigma_ratios": [
+        1.0,
+        0.8547401428216667,
+        0.5181684593366667,
+        0.0
+      ],
+      "phrases": [
+        {
+          "kind": "continuation",
+          "start": 62.5,
+          "duration": 13.5,
+          "center": [
+            0.4,
+            0.25
+          ],
+          "end": [
+            0.36,
+            0.32,
+            0.4382549309311553,
+            0.25
+          ],
+          "velocity_start": [
+            -0.022672601543016403,
+            0.01127823051963972,
+            -0.026682749602482663,
+            0.022967211370674746
+          ],
+          "velocity_end": [
+            0.02,
+            0.03,
+            0.025,
+            0.012
+          ]
+        },
+        {
+          "kind": "plane",
+          "start": 63.0,
+          "duration": 12.0,
+          "center": [
+            0.75,
+            0.5
+          ],
+          "tilt": [
+            -12,
+            -20
+          ],
+          "distance": 2.0
+        }
+      ],
+      "initial_image": "projects/world-seed/exports/v002/prompt-study/cp-city-clear-b/anchors/0000.png",
+      "initial_sha256": "bf805bc3a14842518e07594b2baab9571db40965cd511a569527cd868a8ceddb",
+      "reference_mode": "hybrid",
+      "ref_boost": 0.01,
+      "edit_strength": 0.25,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "reference_instruction": "Continue this view coherently toward the scene described below. Keep the current perspective, crisp contours and fine material relief while allowing the described transformation of architecture, materials and colors. ",
+      "direction_note": "Source1500: follow the fine ivory tree crowns up the left ravine. Rise diagonally toward the upper-left grove, shifting the near dark right column out of view; keep a small bank and plane turn. Earlier outward preview reflected the crowded dark column into the center, so use a 1.55x approach with substantial lateral travel. Incoming fit residual=0.003061937444639927",
+      "prefix_root": "projects/world-seed/exports/v002/nr-cp-ivory-terraces-c",
+      "prefix_through": 1500,
+      "prefix_config_sha256": "98d14a2e7624b66f9b3977af3c451d09ff7645f7e645e14f2052d1a05ac1face",
+      "export_version": "v002"
+    }
+  ]
+}

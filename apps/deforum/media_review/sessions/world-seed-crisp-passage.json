@@ -1,9 +1,16 @@
 {
   "title": "World Seed — the crystal gate",
   "selected": [
-    "beyond-the-gate"
+    "crystal-gate-finale"
   ],
   "clips": [
+    {
+      "id": "crystal-gate-finale",
+      "label": "The Crystal Gate · 30 seconds",
+      "note": "The city gives way to a crystal gate, an ivory-tree canyon and a branching mineral world.",
+      "details": "Thirty continuous seconds at 24 fps and 1536×1024. The liked fourteen-second opening is preserved. Each new passage follows the actual preceding painting, with diagonal travel, local unfurling, sideways turns and outward reveals. All 270 paintings remain in the delivery; RIFE fills intervals outside feedback. Fine branches and clear contours survive, while some broad surfaces simplify. No cuts, masks or extra refinement.",
+      "source": "projects/world-seed/exports/v002/nr-cp-prismatic-bloom-d/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "beyond-the-gate",
       "label": "Beyond the crystal gate · 14 seconds",

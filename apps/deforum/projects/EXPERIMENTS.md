@@ -6,7 +6,8 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
-| Crystal Gate continues through a blue passage into an ivory-tree canyon | [World Seed canyon continuation](world-seed/experiments/crisp-passage/canyon.md) |
+| Crystal Gate completed to thirty seconds; motion, noise and final reference-free transformation | [World Seed finale](world-seed/experiments/crisp-passage/finale.md) |
+| Three high-fidelity opening directions for a new glass-ocean/coral film | [The Glass Tide](glass-tide/experiments/baseline.md) |
 | Noise schedules and clean references in recurrent paintings | [World Seed noise/reference study](world-seed/experiments/noise-reference/README.md) |
 | Prompt wording, material detail and cross-scene recurrence | [World Seed prompt study](world-seed/experiments/prompt-study/README.md) |
 | Contrasting surreal worlds in one continuous painting chain | [A World Inside Every Seed — bank, reveal and unfold](world-seed/experiments/choreography.md) |

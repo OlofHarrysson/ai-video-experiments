@@ -10,9 +10,9 @@ Two [opening candidates](openings.json) hold the material prompt fixed and vary 
 
 Screen the opening and the first short stretch before extending. Preserve every draft and branch. Inspect all generated paintings, native checkpoints and dense interpolation windows. RIFE finishing remains outside feedback at 24 fps, with the established 4.5x source-clock conversion. This is an artistic passage test; differences from the old film are not an isolated adapter ablation or proof of a universal quality improvement.
 
-## Latest continuation
+## Latest film
 
-[The twelve-second continuation](extension.md) preserves the original paintings and develops the road into an emerald mineral grove. [Watch](http://localhost:3028/world-seed-crisp-passage). Olof likes the original six-second direction; the extension awaits his playback judgment.
+[The completed thirty-second Crystal Gate](finale.md) preserves the liked fourteen-second opening and extends the canyon through branching glass crowns into a porcelain/glass bloom. [Watch](http://localhost:3028/world-seed-crisp-passage). The last five seconds use previous-painting initialization without the extra reference-conditioning route; other selected passages keep the preferred adapter. Euler/noise 0.72/three updates remains unchanged. All earlier drafts and rejected experiments are preserved. Human review of the new ending is pending.
 
 ## Original six-second result
 

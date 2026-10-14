@@ -1,0 +1,26 @@
+{
+  "study": "glass-tide-opening-directions",
+  "cases": [
+    {
+      "id": "gt-cobalt-reef-a",
+      "seed": 1041401,
+      "width": 1536,
+      "height": 1024,
+      "prompt": "A vast impossible ocean made of transparent cobalt glass curves upward into the sky. One enormous curling wave sweeps diagonally from the lower left foreground toward an open passage on the right. Its thin glass walls contain thousands of finely separated iridescent ribs, small suspended pearl-like worlds and delicate red coral branches. Magenta coral forests grow from dark blue shell islands beneath the wave. Every coral is a branching network of sharp vermilion and raspberry mineral blades; tiny silver beads sit on their tips. The far landscape consists of fractured sapphire fins and clear cyan pools, visible through the layered glass. The composition has a broad open route through the wave and strong separation between near intricate ribs and distant islands. Crisp high-fidelity surreal digital illustration, exact fine structure, polished transparent minerals with etched grooves, saturated jewel colors, tiny hard white reflections, sharply resolved depth and perfectly clear space. A spectacular alien sea with no horizon attached to reality. No people, letters, fog or brush texture."
+    },
+    {
+      "id": "gt-pearlescent-reef-b",
+      "seed": 1041402,
+      "width": 1536,
+      "height": 1024,
+      "prompt": "An oceanic fantasy world sculpted from mother-of-pearl, transparent turquoise glass and deep raspberry coral. A giant pale translucent shell opens like a long curling wave across the left half of the image, revealing a miniature archipelago of luminous cobalt islands inside. The shell has hundreds of thin overlapping nacre plates, minute engraved ridges and fine gold mineral veins. A winding clear-water channel leads from the foreground through the open shell toward a distant forest of red branching crystal. Small filament-like coral fans and many tiny prismatic fins cover the island ledges; clear dark gaps separate all the delicate silhouettes. The open right side reveals an expansive midnight-blue sea suspended in clear cosmic space. Asymmetrical wide composition with an unobstructed route and monumental changes of scale. Meticulously detailed surreal digital art, precise modeled relief, sharp edge highlights, vivid distinct color fields, deep focus, hard controlled reflections on polished glass and nacre. Solid dimensional forms, clear air, no haze, paint texture, typography or people."
+    },
+    {
+      "id": "gt-crimson-current-c",
+      "seed": 1041403,
+      "width": 1536,
+      "height": 1024,
+      "prompt": "A huge crimson coral ribbon spirals through an impossible sapphire sea suspended in black space. The ribbon forms an open arch just right of center; its edge is built from thousands of tiny thin red mineral fins, ivory spines and tightly branching coral filaments. Transparent cyan glass channels weave through the coral like luminous rivers. In the left foreground, layered midnight-blue shells carry densely branching pink coral gardens, engraved silver ridges and clusters of clear quartz needles. Beyond the arch are distant floating reefs with violet crystalline interiors and intricate white skeletal edges. Clear open intervals separate the massive curling foreground from the tiny distant worlds. The scene feels like an immense living mechanism made from glass, nacre and coral, seen in a sweeping diagonal composition. Ultra-fine material relief, sharply resolved digital fantasy environment, intense cobalt, carmine and pale silver, deep focus, oblique light catching individual ridges and small precise reflections. Clean hard surfaces and clear space, no mist, bloom, painted strokes, letters or people."
+    }
+  ]
+}

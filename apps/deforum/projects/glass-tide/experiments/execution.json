@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-15",
+  "status": "opening_studies_complete_human_review_pending",
+  "selected": "gt-crimson-current-c",
+  "cases": [
+    {
+      "id": "gt-cobalt-reef-a",
+      "sha256": "94ea294942617d55dfa90f82f127352ced427af8f08158b7f299f4dfde196196",
+      "prompt_id": "e5578162-4fbe-46a7-ac00-9f9392afeb15"
+    },
+    {
+      "id": "gt-pearlescent-reef-b",
+      "sha256": "e61c32976b4b65862776cec518739018061420fd095bef778fadf7a5098244fb",
+      "prompt_id": "65a92428-2be6-46be-b891-fc8afe4be807"
+    },
+    {
+      "id": "gt-crimson-current-c",
+      "sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
+      "prompt_id": "192940d6-64ec-4095-9a43-915d15139870"
+    }
+  ],
+  "runner_sha256": "8897b1bd91ee41e5956db5e5f28ff7c1662a10e30568206e492d7ceed972336b",
+  "matrix_sha256": "00d26174f3a76d9a0e89b8884e88d034f1568068ce30d19d8b73472d6fd91230",
+  "native_size": [
+    1536,
+    1024
+  ],
+  "all_originals_screened": true,
+  "recurrent_frames": 0,
+  "motion_preview_rendered": false,
+  "shared_resource_receipt": "projects/world-seed/experiments/crisp-passage/execution-finale.json",
+  "pod_deleted": true,
+  "model_volume_retained": true
+}
