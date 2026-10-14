@@ -45,3 +45,8 @@ Assistant screening covered all 90 newly generated paintings, the native checkpo
 The reviewer selects this eight-second revision. HTTP 200, original-media byte-range serving (206 with matching bytes), 192-frame timing and 72-painting provenance were verified. The established player layout is unchanged. Terminal Manager owns the running media-review service for Olof's review.
 
 All 90 jobs, both excluded endings and the runtime evidence were preserved locally. The 180 owned remote input/output duplicates and two owned symlinks were hash-verified before cleanup. The owned GPU was deleted and an empty Pod list confirmed; the original 50 GB EU-RO-1 model volume remains. Estimated compute was **$0.62**, excluding storage. A transient discrepancy between RunPod MCP and CLI connection metadata is recorded as AF-20261014-121916; final metadata agreed, with cause unverified.
+
+
+## Human feedback — 2026-10-14
+
+Olof says the motion is better and asks to continue into another world, retaining varied smooth movement and no cuts. He reiterates crisp, highly detailed artwork as the target. Continue from the selected ending; this supports the motion direction without establishing that surface detail is solved. [Next-world continuation](canyon.md).

@@ -6,7 +6,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
-| Crystal Gate with stronger banking, plane turns and a curling lattice | [World Seed motion revision](world-seed/experiments/crisp-passage/motion.md) |
+| Crystal Gate continues through a blue passage into an ivory-tree canyon | [World Seed canyon continuation](world-seed/experiments/crisp-passage/canyon.md) |
 | Noise schedules and clean references in recurrent paintings | [World Seed noise/reference study](world-seed/experiments/noise-reference/README.md) |
 | Prompt wording, material detail and cross-scene recurrence | [World Seed prompt study](world-seed/experiments/prompt-study/README.md) |
 | Contrasting surreal worlds in one continuous painting chain | [A World Inside Every Seed — bank, reveal and unfold](world-seed/experiments/choreography.md) |

@@ -1,9 +1,16 @@
 {
   "title": "World Seed — the crystal gate",
   "selected": [
-    "bank-and-curl"
+    "beyond-the-gate"
   ],
   "clips": [
+    {
+      "id": "beyond-the-gate",
+      "label": "Beyond the crystal gate · 14 seconds",
+      "note": "The crystal opens into an orange-and-indigo canyon, then the camera sweeps sideways past ivory trees. Fine branching is visible; broad cliff faces remain smooth.",
+      "details": "Keeps the approved opening and adds 54 recurrent paintings across three passages: opening the crystal, crossing the threshold, and turning across the canyon. Forward travel changes into a sideways plane turn, bank and slight pullback. Krea 2 Turbo, Euler at noise 0.72, three updates, CFG1, adapter 0.25, reference boost 0.01 and grounding 768. Each repaint uses the already-moved previous painting for initialization and clean reference. RIFE finishing stays outside feedback. Fourteen continuous seconds, 24 fps, 1536×1024. No cuts, masks or extra refinement. Earlier versions remain available.",
+      "source": "projects/world-seed/exports/v002/nr-cp-ivory-terraces-c/faster/rife-moving-tail/preview.mp4"
+    },
     {
       "id": "bank-and-curl",
       "label": "Banking through the gate · 8 seconds",

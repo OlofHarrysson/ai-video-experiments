@@ -520,3 +520,8 @@ Olof likes the direction of the six-second Crystal Gate draft and requests a lon
 ### 2026-10-13–14 — More motion in The Crystal Gate
 
 Olof finds the twelve-second extension acceptable visually but boring and dominated by zoom. He says the assistant is too cautious with image transformations and asks it to recover prior conversation direction, then approves another attempt. Earlier messages explicitly request substantial smooth pans, roll, plane turns, regional warping, spirals and pullbacks without repeated stop-start pulses. The Cartographer’s Dream remains his positive motion reference. This authorizes the [new motion revision](../apps/deforum/projects/world-seed/experiments/crisp-passage/motion.md); it does not yet establish his preference for its result.
+
+
+### 2026-10-14 — Keep the improved motion and enter another world
+
+Olof says the eight-second Crystal Gate revision has better motion. He requests a continuous extension into another world, keeping movement varied and smooth and the artwork crisp and highly detailed. The approved direction is stronger spatial choreography with continued quality work; it does not license cuts, a return to a single zoom, or treating clear silhouettes as solved fine detail. [Continuation](../apps/deforum/projects/world-seed/experiments/crisp-passage/canyon.md).

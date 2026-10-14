@@ -1,0 +1,521 @@
+{
+  "experiment": "Beyond the Crystal Gate",
+  "date": "2026-10-14",
+  "status": "complete_human_playback_review_pending",
+  "human_direction": "The eight-second motion revision is better. Continue into another world with varied smooth motion, no cuts and crisp highly detailed artwork.",
+  "selected_case": "nr-cp-ivory-terraces-c",
+  "selected_video": "projects/world-seed/exports/v002/nr-cp-ivory-terraces-c/faster/rife-moving-tail/preview.mp4",
+  "video_sha256": "db9d21eaef285360adac73c0c6a961cca56762feeae6cc9cbdf70ba2ea2c36e8",
+  "delivered_seconds": 14,
+  "added_seconds": 6,
+  "configurations": [
+    {
+      "configuration": "canyon-a.json",
+      "sha256": "9782c44c1f1f749984607128b50b3169659254712b39a523da5635a25f82a5d1",
+      "case": "nr-cp-prismatic-canyon-a",
+      "completed_through": 1068,
+      "new_paintings": 18,
+      "selected": true,
+      "check_sha256": "8c07b6b54dd5adad4256f60a71be7d32fe69649f7f6e0ce32d096f23c12ec582"
+    },
+    {
+      "configuration": "canyon-b.json",
+      "sha256": "91d8ef08036685bdaab4c722545a6bb65ba8335dfb4e5ce6348ec576e2653307",
+      "case": "nr-cp-crossing-into-canyon-b",
+      "completed_through": 1284,
+      "new_paintings": 18,
+      "selected": true,
+      "check_sha256": "515e606aa0bbfb96a0cc731ab7c2e0800ea9219de455021ae0870c2efb42319a"
+    },
+    {
+      "configuration": "canyon-c.json",
+      "sha256": "d7311337a20bd63fa1118a7a499c4d4797a53f6718f1844f43dad5f879c362d1",
+      "case": "nr-cp-ivory-terraces-c",
+      "completed_through": 1500,
+      "new_paintings": 18,
+      "selected": true,
+      "check_sha256": "27f7185df1b4c6287933176ff4a9b23aecc0969b63cddcbb09936ddd953eda33"
+    }
+  ],
+  "original_paintings_preserved": 72,
+  "new_paintings_in_selected_film": 54,
+  "total_selected_paintings": 126,
+  "new_generation_jobs": 54,
+  "identical_initial_delivery_frames": 190,
+  "model": "Krea 2 Turbo FP8",
+  "sampler": "euler",
+  "primary_noise": 0.72,
+  "sigmas": [
+    0.72,
+    0.6154129028316,
+    0.3730812907224,
+    0
+  ],
+  "cfg": 1,
+  "adapter_strength": 0.25,
+  "ref_boost": 0.01,
+  "grounding_px": 768,
+  "reference_policy": "Only the already-warped previous painting supplies initialization and clean-reference conditioning. No masks, fixed opening, extra refinement or independent replacement still.",
+  "motion": [
+    "Retain active curl while counter-banking into the crystal.",
+    "Match incoming velocity and advance through the opening, using the measured source-1068 composition.",
+    "Match incoming velocity and turn sideways across the canyon, with a small bank and slight pullback, using the actual source-1284 landscape."
+  ],
+  "runtime": {
+    "comfyui_commit": "12d5279438bfefc058a269eae805ceab6047777f",
+    "reference_nodes_commit": "86f886dac23013d88996e3a2e99093ba44d322fb",
+    "adapter_sha256": "6adf9a69cc9502d286db7b69964d37da7e9cfe4b05b4d004bc275f087d3fd3cf",
+    "weights": "Three pinned Krea assets verified against serverless/modern-models.json",
+    "evidence_archive_sha256": "14e3343af9507f8cc178477bdaadc49c4fe6f41af3007e65baf79a471f9b9145"
+  },
+  "jobs": [
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 864,
+      "prompt_id": "f28ce27f-8557-4b5a-b36c-29cc5c0406c6",
+      "sha256": "e4712ed61ab0fa076101c3b64eef9e64f79b6201374b72df9d8714e6a402b118"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 876,
+      "prompt_id": "89cc95f0-9a65-4415-9861-668e1657bc36",
+      "sha256": "52cf6b8116ec50795ca484f51adf79ac7a28b5b9c2422cbb347e294236ff71d9"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 888,
+      "prompt_id": "ca7c5a12-3570-41d9-8e7c-16ebfdfd16d1",
+      "sha256": "4f8cd439d4327970bf591a342bc56aa3c3d236b04345d802d28a7c7ead5d1669"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 900,
+      "prompt_id": "c75c3f4d-9bef-4819-b3fa-6957b65b2481",
+      "sha256": "5ab41da19aaf70fc3f7eb33ee5c92203ca1b204081468320da62634616af7e84"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 912,
+      "prompt_id": "fa0a42ea-3902-491f-926e-138733488db0",
+      "sha256": "87d7f788151ab5f5af69516329cf1f4472dfc729b7b8a072c4fc3c8d05c0cfac"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 924,
+      "prompt_id": "7838a625-205d-4725-b2a9-422c2ec372d3",
+      "sha256": "3cb5f8647e7f9647adc008ddcc3569d5cc324872cf4dc5fc30d28085e49a0fdc"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 936,
+      "prompt_id": "8c98582d-d04f-4be1-9949-8f28329ac667",
+      "sha256": "c64f60e21fe666680edcd0684c2c448ce8cd307b77597a05e23f8ccc0ed4cfb5"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 948,
+      "prompt_id": "485b6bdd-70fa-4c1a-8710-3d3367a19ff5",
+      "sha256": "bf5c8b4fc674d1236457dcda52fc9ff1679b44ab458483f95dbb5a1c2de86db5"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 960,
+      "prompt_id": "002c4c65-8e0f-4f99-aa61-df2be165cecd",
+      "sha256": "ca2b71e2112dcb8ecd9a89e8abeb36923cb818f6788082e7c2ee574b2596c6c1"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 972,
+      "prompt_id": "2c5ea594-2ca7-4cab-9f95-f713de702862",
+      "sha256": "cd1739945d75004d45d4878bb9359b9a3ef6c88535699c35c86d404009852b57"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 984,
+      "prompt_id": "9a9b5ca6-2342-43c9-bf2f-284c7a3ab8e1",
+      "sha256": "3da424c99241ccd5d484a82bdd6cc8d8dd3f51725ff8626e353fcdb6b597af6b"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 996,
+      "prompt_id": "438c659c-80c1-498a-a233-b7462bd03e89",
+      "sha256": "2de9689003e6aaf5e9d6a381700d1ad89d522ff90ae6b545366eb385122b0875"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1008,
+      "prompt_id": "6fc6a5c0-2b57-4bad-837b-0f9e58f8fc74",
+      "sha256": "f83538d1d3b3d8e7de08944e14425285cd25ffa8ab31e44f5cb3d242f02dc1cd"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1020,
+      "prompt_id": "61c62660-7ef6-4e49-b995-17ba34306fcb",
+      "sha256": "c7cfe2b505e0a577426bfe717b7c6d2427cb355ada785f479fea1fb7946442ad"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1032,
+      "prompt_id": "282b44e9-67ff-4bef-8ead-c6893262ef0f",
+      "sha256": "79f51ae7831229f9333ec99e01e11f5e1ca4710a408848905267e0bb71507e1f"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1044,
+      "prompt_id": "6f9fe171-556a-4748-a1ad-3288b7b8575b",
+      "sha256": "3474bf0d58e8d33aa2bf3a8066f7ba61f07f879b86f16a8515b18d619e0145e0"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1056,
+      "prompt_id": "3613dae5-9476-4ddb-9b43-bd5b7903dd00",
+      "sha256": "8e866f90d32f50b5176bbce5431a4a750fe1c7dc109a2c2fe65b3f4b75bff6d2"
+    },
+    {
+      "case": "nr-cp-prismatic-canyon-a",
+      "frame": 1068,
+      "prompt_id": "ad2dc45a-4219-4baa-9b3b-df09eff3908a",
+      "sha256": "8824e91527075a733fd5c1ce430db0e88bb65545c59e8990839d86071c0f509d"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1080,
+      "prompt_id": "0939b425-b8ce-4d1d-a1db-a90ae8e62aa3",
+      "sha256": "952b7ec5c63a966d1c5ae25a45cb80d553a29e8ba3849334499b0161761a4346"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1092,
+      "prompt_id": "d3ea6e68-9553-4029-bab7-325c2d44e29c",
+      "sha256": "1c198b19944a29f508ed404068f338ee42e4937a9d9c90feff5d650b2fd69aed"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1104,
+      "prompt_id": "69792fe1-7e94-4896-b256-1f500d1aaf70",
+      "sha256": "f7aa365bebaec02d393e7e1fe1d4152fa1310ec8f1d800f2a978c8719bcd25bc"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1116,
+      "prompt_id": "e3248d2b-0e71-4cca-bd69-4bd332d7cbc7",
+      "sha256": "0533def2e3a122b4b29f2c119a4fddbeeb67d0b86fee9db3aa8c34376700bc61"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1128,
+      "prompt_id": "c3403a1c-47da-441d-b60c-7467dc080dbb",
+      "sha256": "e702fede6dadf18436cd084de696a78844607e44da3ec0af3bc4d35f34d5081a"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1140,
+      "prompt_id": "bba791b9-8033-4746-8d26-0b89a96aa945",
+      "sha256": "10e58b4b35e501bbc8d051fe7c6cd44f3f9f659eeb3bef0e79ee06be54f1b3a9"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1152,
+      "prompt_id": "f5d552b6-bb98-4305-95b5-690d77eab678",
+      "sha256": "3f8f20991936a93fa58101f43ae7c21bea64caceb24e781327360a0152eda485"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1164,
+      "prompt_id": "ac63ba88-462e-43ce-a936-116a2fcc3a83",
+      "sha256": "fcc605c959ba0acc0e42e5cf70bb2638760d528011ee0327ea6c3f895abf2472"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1176,
+      "prompt_id": "78ee0eae-604a-4e4d-af72-462276f5e158",
+      "sha256": "ab4242715db72bbeff38a1953071ccbee19ae00080243629d2c457221e19295e"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1188,
+      "prompt_id": "f9010167-64c5-4c37-b574-6744fdc6bd0f",
+      "sha256": "c4db21bb9f6d4c895b2bbfbd717599eac33bde8b68cf236edbc6b228f8d6b644"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1200,
+      "prompt_id": "f35bac1c-b60a-48bb-b56c-0ff6c8c431e7",
+      "sha256": "97533cba6ca452ddbd3cb136409582cfe74ddb561b5248db04b8c7aa3c990483"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1212,
+      "prompt_id": "c8075777-0462-4a73-9478-3e1f0d4f9e48",
+      "sha256": "0e01998b356e8324e0ce28603de17cce39cde4196b2e048add2c56a37ccf21bf"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1224,
+      "prompt_id": "867c011f-fe20-4fd7-a2ff-6b38c4ace885",
+      "sha256": "236b58a8d7d1606d72dc78a6fca686fddf530f198cd77330f5acac5cbac80348"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1236,
+      "prompt_id": "c6352e16-0680-409e-bb44-7b263588f350",
+      "sha256": "90934bc5603a6a1479f4f4c16bf4c7c1a5e2b1b98520323dd7658dfb535c8bed"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1248,
+      "prompt_id": "474b775c-a753-41f5-8c1e-b8a4ba36a8e3",
+      "sha256": "e650941c4eec193f54f26d02df531fc6cf07c2d546aafbda7324019239e88f03"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1260,
+      "prompt_id": "ddffd8ce-b460-46b9-9f25-13533f337add",
+      "sha256": "91373fbc81862243c1070386e0ac98ac61e6214ff8916ba9ae4eb4f93187b7c9"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1272,
+      "prompt_id": "575ae903-bf9b-4eed-8c5c-ddd15d2684a8",
+      "sha256": "dd696013024febb4957e30bc57d095cfee16ff3e8085ac18241eae93e1fed610"
+    },
+    {
+      "case": "nr-cp-crossing-into-canyon-b",
+      "frame": 1284,
+      "prompt_id": "d3de31d2-df90-4f32-9a05-8db2658e707c",
+      "sha256": "7b5ffc1979176b3a81617655c223aac63da2ab8f99a998ba81c87e4ae4ac4d8a"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1296,
+      "prompt_id": "b56b6c1f-dace-49e1-89c6-8f1eccd51a2a",
+      "sha256": "ec43cfc1dbe1e8e28dbd77cb02f7894abf27e3bebe60d08196fa83f8ef7d46f2"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1308,
+      "prompt_id": "674dc9d7-98de-4191-9052-05569b63b881",
+      "sha256": "80cde954c3ca83e13b833f91a05ae7c7862259d4a1e3ba391c89036589a3487d"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1320,
+      "prompt_id": "fdf9e05b-9fb6-48f3-87f5-bf6bc24fec5b",
+      "sha256": "cf2ad845be703567c77d248ae0975526f57c66374a5bd82ad885d9dfec3d623b"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1332,
+      "prompt_id": "97e300ba-c2b2-4a74-b8e2-417a732227f7",
+      "sha256": "a6b9914c8050561279868572e42462f602b8c978caa077864d371d36c43c84f9"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1344,
+      "prompt_id": "6b78fdd7-5b50-4e2d-8c53-ced9ffcc1f68",
+      "sha256": "8a0d6b269e5b62aaa66ba6107b466b72adaef88d191ed60d42555b5ee417082e"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1356,
+      "prompt_id": "5784ae52-962c-4a83-937e-d5fc60df1cc6",
+      "sha256": "9f99a18ab45fde1aa3c6bce35bdd6e5befc78f1ec9ee5bd76110e4d17def82af"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1368,
+      "prompt_id": "a0673af8-8c6e-4cfb-8b7e-08386d015049",
+      "sha256": "c0a62e66082643d0a796b7ec1bd8f1247872847b904fc5f2eef7341dcc1ef9b6"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1380,
+      "prompt_id": "56e59deb-2260-44a4-b126-b157a9000ab5",
+      "sha256": "3f06bd8949c810a703990d2ee9e488e6ffe8fd69a5e4ac9ea008328bc4492699"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1392,
+      "prompt_id": "fb87a2d8-887e-4ca2-ad55-ddef791f3e5e",
+      "sha256": "7641c96c9031af3d5755d1b5bab1e22641541cb11c3ead26b2b01843621650da"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1404,
+      "prompt_id": "65387e34-0d8d-4fad-8f72-6fb3c44d917b",
+      "sha256": "4fa6369d414951d91e51a73531fca90d7eb8559135f17fdcf2dfaddebcabd6e7"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1416,
+      "prompt_id": "aa25732f-cda3-49fc-b917-60179ae4843b",
+      "sha256": "7ea41ec7a9edf943468b2bcb0d7d0e688f977edeb38db320237772b3a1c8fe27"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1428,
+      "prompt_id": "e8c37204-71c8-460b-a2fb-1cc9d51f9782",
+      "sha256": "58764d663feaf4620f0bd1a276967c41f82e1e393b3e70d6fb102b40fdf1c767"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1440,
+      "prompt_id": "b492fdf5-ae14-4fdd-9860-3420226b1ef8",
+      "sha256": "f5918abfc13ca3f4054719a5a953f5036ff02af57791e8363e7f77965f5d7374"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1452,
+      "prompt_id": "063fb642-725e-4093-bf04-0e0ba9e080bd",
+      "sha256": "1d69123620bedd55ad508642ab720394cb98e5a72d1bed93e544382c9f1cf711"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1464,
+      "prompt_id": "503583dc-1708-4c1a-a163-4c719a00ae1e",
+      "sha256": "502e3719e088834bb130ecafd750c49381938a2ef21f7b7644be579e6221384d"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1476,
+      "prompt_id": "c32e96d2-a2db-46a7-bd99-e40ff47637d3",
+      "sha256": "6dd300f188545e86ce45d24899fb3fc273d54e2956752fbd26d3c86a671396d2"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1488,
+      "prompt_id": "ddd079eb-ef45-4925-a036-4d4d490c0480",
+      "sha256": "304fc52f40f06143c22c12a50c4300f5adafc5c84a8396d6c8a9b287a15f6fc6"
+    },
+    {
+      "case": "nr-cp-ivory-terraces-c",
+      "frame": 1500,
+      "prompt_id": "8a44e205-b2f2-4bdd-8674-3202ebf11494",
+      "sha256": "111e44483e70f1a1428625afa324980aa9d96ee5bb6dfbd559c4c119471ae1d1"
+    }
+  ],
+  "screening": {
+    "new_paintings": 54,
+    "native_paintings": [
+      864,
+      1068,
+      1116,
+      1200,
+      1284,
+      1356,
+      1500
+    ],
+    "motion_previews": [
+      "A: eight overview frames and every displayed frame 0–0.25s",
+      "B 4.2x: eight overview frames and every displayed frame 0–0.25s; B 7x: eight overview frames",
+      "C: eight overview frames"
+    ],
+    "checkpoint_windows": [
+      [
+        7.75,
+        8
+      ],
+      [
+        9.2,
+        9.45
+      ]
+    ],
+    "final_overview_frames": 10,
+    "final_dense_windows": [
+      [
+        9.4,
+        9.65
+      ],
+      [
+        11.75,
+        12
+      ],
+      [
+        13.7,
+        13.99
+      ]
+    ],
+    "observations": "The crystal becomes a blue passage into a visibly different orange/indigo canyon. Ivory trees develop fine branching; broad cliff faces remain smooth. No pseudo-lettering or conspicuous doubled main contours were observed in the inspected material. Small forms still evolve. Final sideways motion continues through the two warped tail frames.",
+    "limits": "All new paintings were viewed, but only the named final-video windows were inspected frame by frame. Normal-speed rhythm and artistic quality remain for human judgment."
+  },
+  "delivery_check": {
+    "verified": true,
+    "frames": 336,
+    "fps": 24,
+    "paintings": 126,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "db9d21eaef285360adac73c0c6a961cca56762feeae6cc9cbdf70ba2ea2c36e8",
+    "retiming_sha256": "b836aa22e21f369c38b4847d4fbdc7c3c43de1e708de677e3413a824ba94d5cc",
+    "anchor_frames_sha256": "5f3c4a73697f7fdf695a0a0a1e49219f8853479f3cd661cf70ceffa06215c9f1"
+  },
+  "reviewer_check": {
+    "url": "http://localhost:3028/world-seed-crisp-passage",
+    "http_status": 200,
+    "media_range_status": 206,
+    "content_range": "bytes 0-1023/25398599",
+    "range_bytes_match": true,
+    "receipt_clip": {
+      "id": "beyond-the-gate",
+      "source": "/Users/olof/git/ai-video-experiments/apps/deforum/projects/world-seed/exports/v002/nr-cp-ivory-terraces-c/faster/rife-moving-tail/preview.mp4",
+      "source_sha256": "db9d21eaef285360adac73c0c6a961cca56762feeae6cc9cbdf70ba2ea2c36e8",
+      "frame_count": 336,
+      "duration": 14.0,
+      "paintings": 126,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "provenance": {
+        "status": "verified",
+        "manifest": "/Users/olof/git/ai-video-experiments/apps/deforum/projects/world-seed/exports/v002/nr-cp-ivory-terraces-c/faster/rife-moving-tail/manifest.json",
+        "manifest_sha256": "576e469dd7e8ec2c4b857c18d654e934da6b99827e6b3d95dd9bdd7bab69da92"
+      },
+      "preview": null,
+      "preview_sha256": null,
+      "preview_bytes": null,
+      "preview_dimensions": null
+    },
+    "existing_layout_unchanged": true,
+    "service": {
+      "name": "media-review",
+      "running": true,
+      "status": "ready",
+      "ready": true,
+      "runId": "da39adec-59ff-4b3e-94b9-37e7313706b9",
+      "lastRunId": "da39adec-59ff-4b3e-94b9-37e7313706b9",
+      "effectiveUrl": "http://localhost:3028/",
+      "port": 3028,
+      "warnings": [
+        "Preferred port 3000 was unavailable; assigned 3028."
+      ]
+    }
+  },
+  "resources": {
+    "pod_id": "y1ogdrz4h3if7h",
+    "created_at": "2026-10-14T13:42:30.273Z",
+    "deleted_by": "2026-10-14T14:18:09.902Z",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "hourly_usd": 0.89,
+    "estimated_compute_usd": 0.529,
+    "storage_excluded": true,
+    "deletion_http_status": 204,
+    "subsequent_pods": [],
+    "retained_volume_id": "vd3jnbwko1",
+    "owned_remote_cleanup": {
+      "owned_files_deleted": 108,
+      "owned_symlinks_deleted": [
+        "/workspace/runpod-slim/ComfyUI/custom_nodes/world-seed-krea2edit",
+        "/workspace/runpod-slim/ComfyUI/models/loras/krea2_identity_edit_v1_2.safetensors"
+      ],
+      "retained_model_volume": true,
+      "queue": {
+        "queue_running": [],
+        "queue_pending": []
+      }
+    },
+    "local_preservation_manifest_sha256": "a989ee993fb46cda5ddb7233abbfb26dfffb127cbd153693e183e8e9912bb2ad"
+  },
+  "operational_note": "One preflight read occurred during the ComfyUI restart and was retried after readiness; no generation job had been submitted. All 54 generation jobs completed. Reviewer verified after Terminal Manager reported ready."
+}

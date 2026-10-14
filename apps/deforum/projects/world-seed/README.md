@@ -4,7 +4,7 @@ A continuous thirty-second surreal journey: alien jungle, an ancient black-and-g
 
 [Watch the film](exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Direction and screening](experiments/choreography.md)
 
-[The Crystal Gate](experiments/crisp-passage/motion.md) now has an eight-second motion revision: a strong bank and sideways plane turn lead into a curling lattice around the cyan crystal. It follows Olof’s request for much more motion after the earlier zoom-heavy continuation. Two pullback attempts developed lettering and are excluded. Fine surface detail still smooths out; human playback judgment is pending. [Watch the revision](http://localhost:3028/world-seed-crisp-passage). The original six- and twelve-second drafts remain available.
+[Beyond the Crystal Gate](experiments/crisp-passage/canyon.md) continues the approved eight-second motion revision to fourteen seconds. The crystal opens into an orange/indigo canyon, followed by a sideways plane turn past ivory branching trees. The opening and rendering recipe are preserved, with no cuts. Fine branching and clear contours are visible, but broad cliff surfaces remain smooth. The new continuation awaits human playback judgment. [Watch the film](http://localhost:3028/world-seed-crisp-passage); earlier drafts remain available.
 
 ## The journey
 
