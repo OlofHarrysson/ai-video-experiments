@@ -1,0 +1,134 @@
+{
+  "study": "glass-tide-opening",
+  "cases": [
+    {
+      "case": "gt-violet-reef-c",
+      "seed": 1041500,
+      "duration": 18,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360,
+        372,
+        384,
+        396,
+        408,
+        420
+      ],
+      "initial_image": "projects/glass-tide/exports/v001/openings/gt-crimson-current-c/anchors/0000.png",
+      "initial_sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
+      "reference_mode": "none",
+      "edit_strength": 0.25,
+      "ref_boost": 0.01,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        }
+      ],
+      "sigma_ratios": [
+        1,
+        0.8547401428216667,
+        0.5181684593366667,
+        0
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "around-the-crimson-ring",
+          "prompt": "A huge crimson coral ribbon spirals through an impossible sapphire sea suspended in black space. The ribbon forms an open arch just right of center; its edge is built from thousands of tiny thin red mineral fins, ivory spines and tightly branching coral filaments. Transparent cyan glass channels weave through the coral like luminous rivers. In the left foreground, layered midnight-blue shells carry densely branching pink coral gardens, engraved silver ridges and clusters of clear quartz needles. Beyond the arch are distant floating reefs with violet crystalline interiors and intricate white skeletal edges. Clear open intervals separate the massive curling foreground from the tiny distant worlds. The scene feels like an immense living mechanism made from glass, nacre and coral, seen in a sweeping diagonal composition. Ultra-fine material relief, sharply resolved digital fantasy environment, intense cobalt, carmine and pale silver, deep focus, oblique light catching individual ridges and small precise reflections. Clean hard surfaces and clear space, no mist, bloom, painted strokes, letters or people."
+        },
+        {
+          "at": 4,
+          "name": "the-reef-opens",
+          "prompt": "A crimson branching coral arch encircles a magnificent violet reef in an impossible sapphire ocean. A transparent cyan glass current follows the inner lip of the arch. The violet reef opens like a many-layered mineral shell: densely nested paper-thin amethyst plates, intricate silver ribs and hundreds of small crystalline coral fans cover its folded surface. Fine vermilion coral lace clings to the outer ring. Clear dark blue openings separate the near coral branches from the violet shell behind. The nearest shell reveals finer engraved ridges and miniature passages between its overlapping purple plates. Sharply resolved high-fidelity digital fantasy environment, thousands of distinct thin mineral edges, tiny etched grooves and clean gaps between branches, intense saturated sapphire and violet against carmine, precise white reflections, deep focus and clear water. No mist, diffuse glow, paint strokes, lettering or people."
+        },
+        {
+          "at": 10,
+          "name": "inside-the-amethyst-folds",
+          "prompt": "A vast spiraling amethyst reef opens into an intricate underwater world. Nested violet crystal plates unfold into delicate silver colonnades and branching lavender coral gardens. Thin transparent cyan streams run between the closely layered ridges. Beyond each opening are smaller violet and sapphire reefs, their edges drawn by tiny bright crystal needles. A great carmine coral crescent remains around the outer edges, contrasting with the lilac interior. The crystalline architecture has thousands of crisp fine grooves, separated ridges and small branching structures; clear blue gaps reveal its depth. Sharply resolved high-fidelity digital fantasy environment, thousands of distinct thin mineral edges, tiny etched grooves and clean gaps between branches, intense saturated sapphire and violet against carmine, precise white reflections, deep focus and clear water. No mist, diffuse glow, paint strokes, lettering or people."
+        }
+      ],
+      "phrases": [
+        {
+          "kind": "continuation",
+          "start": 4,
+          "duration": 14,
+          "center": [
+            0.85,
+            0.59
+          ],
+          "end": [
+            -0.17,
+            -0.12,
+            0.3920420877760237,
+            -0.43
+          ],
+          "velocity_start": [
+            -0.013171084003268172,
+            0.009579144857375835,
+            0.012410689597749304,
+            -0.032985729029279036
+          ],
+          "velocity_end": [
+            0.005,
+            -0.016,
+            0.025,
+            -0.02
+          ]
+        },
+        {
+          "start": 8,
+          "duration": 12,
+          "center": [
+            0.8,
+            0.58
+          ],
+          "radius": 0.39,
+          "turn": 72,
+          "zoom": 0,
+          "travel": [
+            0,
+            0
+          ]
+        }
+      ],
+      "direction_note": "Selected reference-off opening keeps stronger crimson and cleaner cyan contours than the quarter-reference test, though both simplify small branches. Preserve frames0-96. Follow the actual violet reef and cyan lip through a sustained bank and closer approach; begin a local unfurling around the reef after 1.8 delivery seconds. Inspect source420 before planning the exit. Incoming velocity fit residual=0.002090714816776862",
+      "prefix_root": "projects/glass-tide/exports/v001/gt-coral-bank-b",
+      "prefix_through": 96,
+      "prefix_config_sha256": "aaca8f1dcd48dad690893304ef6d06402d868ed4454c64e0ffda008290d37b97"
+    }
+  ]
+}

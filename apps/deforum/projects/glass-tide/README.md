@@ -1,15 +1,20 @@
 # The Glass Tide
 
-A new continuous surreal film: an impossible ocean of transparent cobalt glass, crimson coral and pale nacre. The camera follows a curling wave into miniature reef worlds. This begins a separate visual direction after completing The Crystal Gate.
+A continuous surreal film through an impossible ocean of transparent cobalt glass, crimson coral and pale nacre. Olof approved the crimson coral-ring opening on 2026-10-15 and asked to start a new video from it.
 
-The first experiment compares three opening compositions: a transparent blue wave, a pale shell containing an archipelago, and a crimson coral ribbon. They share crisp material relief and clear spatial separation but differ in palette, silhouette and route. These are artistic alternatives with different prompts and seeds, not a controlled prompt-wording study.
+## Current cut
 
-Generate native 1536×1024 Krea 2 Turbo stills using the repository's preserved graph. Inspect each at full resolution, choose the most useful composition, and preview an opening movement before recurrent production. A strong image alone does not establish that its fine texture will survive the feedback loop.
+[Watch the eight-second opening](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-beyond-the-reef-d/faster/rife-moving-tail/preview.mp4) · [Cut v001](cuts/v001.md).
 
-The intended movement follows the actual wave or shell: a lateral approach, a bank along its curve and a broad reveal into a second environment. Keep an open route, strong foreground/background separation and varied smooth movement. No cuts, masks, copied-back regions or fixed first-image reference.
+The exact approved still opens the film. A sustained bank and sideways approach curl the violet reef into a spiral; the viewpoint then sweeps underneath it into a brighter cyan-and-ivory lattice. There are no cuts, masks, copied-back regions, fixed-opening references or extra refinement passes. All 72 paintings are retained in the 1536×1024, 24 fps delivery.
 
-All candidates, exact prompts, seeds, API graphs, completed job histories and original pixels remain preserved. The opening study shares the owned GPU session with The Crystal Gate finale, within Olof's existing funded balance. Funding settings remain unchanged; delete the session GPU after verified preservation and retain the existing model cache.
+The matched opening comparison favored reference-off for stronger crimson and cleaner cyan contours. Each new painting still starts from the warped previous painting. Fine branching simplifies during recurrence, and some broad surfaces become smooth; the film does not preserve every detail of the original still. Assistant screening is complete; human playback judgment is pending.
 
-## Current selection
+## Production records
 
-[Crimson Current](exports/v001/openings/gt-crimson-current-c/anchors/0000.png) is the assistant-selected opening. The saturated coral ring and cyan stream give a clear focal motif and a route toward the small violet reef inside. Three native openings are generated and verified; no recurrent film has been rendered yet. [Opening screening](experiments/baseline.md) · [Planned first movement](experiments/first-motion.json).
+- [Opening direction, comparison and screening](experiments/opening.md)
+- [Verified execution and resource closeout](experiments/execution-opening.json)
+- [Three opening compositions](experiments/baseline.md) and [exact prompts](experiments/openings.json)
+- [First movement brief](experiments/first-motion.json), [frozen camera plans](experiments/configs/)
+
+The selected [Crimson Current original](exports/v001/openings/gt-crimson-current-c/anchors/0000.png), both alternative stills, all generated paintings and job receipts remain preserved. The GPU is deleted; the existing model cache remains. The next continuation should follow the open blue spaces around the actual final reef, while seeking richer fine structure instead of extending smooth surfaces indefinitely.

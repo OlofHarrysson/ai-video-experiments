@@ -10,6 +10,6 @@ Budget and lifecycle: use the owned Crystal Gate finale Pod and the remaining fu
 
 ## Screening and selection
 
-All three 1536×1024 originals were viewed natively. A has a broad transparent wave and bright open horizon, but its foreground coral and some reflections are softer. B has the richest nacre folds and delicate fan-like organisms; the repeating pale platforms make its route legible but somewhat regular. C has the strongest red/blue contrast, distinct fine branching and a prominent coral-ring silhouette with open space around it. C is selected for the next motion preview; B is retained as a promising alternate material direction. No human preference has been recorded.
+All three 1536×1024 originals were viewed natively. A has a broad transparent wave and bright open horizon, but its foreground coral and some reflections are softer. B has the richest nacre folds and delicate fan-like organisms; the repeating pale platforms make its route legible but somewhat regular. C has the strongest red/blue contrast, distinct fine branching and a prominent coral-ring silhouette with open space around it. C is selected for the next motion preview; B is retained as a promising alternate material direction. Olof approved C on 2026-10-15, calling it gorgeous, and requested a new video from it.
 
 The three requested/executed/embedded graphs, dimensions, job IDs and output hashes pass the runner checks. Original PNGs and job receipts remain under `exports/v001/openings/`. The stills do not establish temporal consistency or detail retention in a recurrent film.

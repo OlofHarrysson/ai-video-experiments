@@ -1,0 +1,193 @@
+{
+  "study": "glass-tide-opening",
+  "cases": [
+    {
+      "case": "gt-beyond-the-reef-d",
+      "seed": 1041500,
+      "duration": 36,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360,
+        372,
+        384,
+        396,
+        408,
+        420,
+        432,
+        444,
+        456,
+        468,
+        480,
+        492,
+        504,
+        516,
+        528,
+        540,
+        552,
+        564,
+        576,
+        588,
+        600,
+        612,
+        624,
+        636,
+        648,
+        660,
+        672,
+        684,
+        696,
+        708,
+        720,
+        732,
+        744,
+        756,
+        768,
+        780,
+        792,
+        804,
+        816,
+        828,
+        840,
+        852
+      ],
+      "initial_image": "projects/glass-tide/exports/v001/openings/gt-crimson-current-c/anchors/0000.png",
+      "initial_sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
+      "reference_mode": "none",
+      "edit_strength": 0.25,
+      "ref_boost": 0.01,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        }
+      ],
+      "sigma_ratios": [
+        1,
+        0.8547401428216667,
+        0.5181684593366667,
+        0
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "around-the-crimson-ring",
+          "prompt": "A huge crimson coral ribbon spirals through an impossible sapphire sea suspended in black space. The ribbon forms an open arch just right of center; its edge is built from thousands of tiny thin red mineral fins, ivory spines and tightly branching coral filaments. Transparent cyan glass channels weave through the coral like luminous rivers. In the left foreground, layered midnight-blue shells carry densely branching pink coral gardens, engraved silver ridges and clusters of clear quartz needles. Beyond the arch are distant floating reefs with violet crystalline interiors and intricate white skeletal edges. Clear open intervals separate the massive curling foreground from the tiny distant worlds. The scene feels like an immense living mechanism made from glass, nacre and coral, seen in a sweeping diagonal composition. Ultra-fine material relief, sharply resolved digital fantasy environment, intense cobalt, carmine and pale silver, deep focus, oblique light catching individual ridges and small precise reflections. Clean hard surfaces and clear space, no mist, bloom, painted strokes, letters or people."
+        },
+        {
+          "at": 4,
+          "name": "the-reef-opens",
+          "prompt": "A crimson branching coral arch encircles a magnificent violet reef in an impossible sapphire ocean. A transparent cyan glass current follows the inner lip of the arch. The violet reef opens like a many-layered mineral shell: densely nested paper-thin amethyst plates, intricate silver ribs and hundreds of small crystalline coral fans cover its folded surface. Fine vermilion coral lace clings to the outer ring. Clear dark blue openings separate the near coral branches from the violet shell behind. The nearest shell reveals finer engraved ridges and miniature passages between its overlapping purple plates. Sharply resolved high-fidelity digital fantasy environment, thousands of distinct thin mineral edges, tiny etched grooves and clean gaps between branches, intense saturated sapphire and violet against carmine, precise white reflections, deep focus and clear water. No mist, diffuse glow, paint strokes, lettering or people."
+        },
+        {
+          "at": 10,
+          "name": "inside-the-amethyst-folds",
+          "prompt": "A vast spiraling amethyst reef opens into an intricate underwater world. Nested violet crystal plates unfold into delicate silver colonnades and branching lavender coral gardens. Thin transparent cyan streams run between the closely layered ridges. Beyond each opening are smaller violet and sapphire reefs, their edges drawn by tiny bright crystal needles. A great carmine coral crescent remains around the outer edges, contrasting with the lilac interior. The crystalline architecture has thousands of crisp fine grooves, separated ridges and small branching structures; clear blue gaps reveal its depth. Sharply resolved high-fidelity digital fantasy environment, thousands of distinct thin mineral edges, tiny etched grooves and clean gaps between branches, intense saturated sapphire and violet against carmine, precise white reflections, deep focus and clear water. No mist, diffuse glow, paint strokes, lettering or people."
+        },
+        {
+          "at": 17.5,
+          "name": "beneath-the-violet-overhang",
+          "prompt": "Beneath a great curling violet mineral overhang, an intricate crystal reef unfolds into an open cyan passage. The close violet shell sweeps toward the upper left; its cross-section is lined with many thin silver ridges and small amethyst chambers. Beyond it is a garden of delicate white branching coral spires and countless transparent sapphire fins. Narrow clear cyan glass channels wind between the finely textured mineral terraces. Occasional small carmine coral fans connect the distant garden to the near violet shell. Dense fine relief on every ridge, generous clear openings between the overlapping forms. High-fidelity surreal digital art, deeply engraved fine material relief, densely branching microscopic crystal structure, crisp separate edges at every scale, saturated clear jewel colors, tiny sharp white reflections. Deep focus, clear dark gaps, no haze, soft focus, glow, brushwork, text or people."
+        },
+        {
+          "at": 24,
+          "name": "the-inner-glass-garden",
+          "prompt": "An immense suspended reef garden of amethyst, clear cyan glass and branching ivory crystal. Thousands of slender silver coral filaments grow from dark violet terraces, each filament dividing into tiny fine needle-like twigs. Thin razor-edged sapphire lamellae stack into curling archways. Through the archways are numerous smaller mineral gardens and tiny cyan pools. Clear dark-blue gaps separate delicate foreground lace from the distant shelves. A few carmine coral fans mark the receding edge of the violet overhang. Close fine ribs and minute concentric etched grooves cover the polished mineral surfaces. High-fidelity surreal digital art, deeply engraved fine material relief, densely branching microscopic crystal structure, crisp separate edges at every scale, saturated clear jewel colors, tiny sharp white reflections. Deep focus, clear dark gaps, no haze, soft focus, glow, brushwork, text or people."
+        },
+        {
+          "at": 30,
+          "name": "a-tide-of-silver-reefs",
+          "prompt": "A luminous archipelago of intricate silver-white crystal reefs floats in clear ultramarine space. Fine branching ivory coral crowns spread over amethyst shelves and turquoise glass channels. Each reef contains dense tiny spires, paper-thin sapphire fins, closely spaced engraved ridges and miniature violet grottoes. A curling cyan stream connects the foreground mineral lace to distant reef islands. The open spaces are clear saturated deep blue, with sharply silhouetted layers of tiny white branches and pale lilac needles. Small deep red coral fronds punctuate the silver and blue world. High-fidelity surreal digital art, deeply engraved fine material relief, densely branching microscopic crystal structure, crisp separate edges at every scale, saturated clear jewel colors, tiny sharp white reflections. Deep focus, clear dark gaps, no haze, soft focus, glow, brushwork, text or people."
+        }
+      ],
+      "phrases": [
+        {
+          "kind": "continuation",
+          "start": 17.5,
+          "duration": 18.5,
+          "center": [
+            0.88,
+            0.6
+          ],
+          "end": [
+            -0.42,
+            -0.46,
+            0.3364722366212129,
+            0.48
+          ],
+          "velocity_start": [
+            0.011595909073267997,
+            -0.017015034094995798,
+            0.02648096958982129,
+            -0.0210047132783224
+          ],
+          "velocity_end": [
+            -0.029,
+            -0.027,
+            0.012,
+            0.03
+          ]
+        },
+        {
+          "kind": "plane",
+          "start": 18,
+          "duration": 17,
+          "center": [
+            0.88,
+            0.6
+          ],
+          "tilt": [
+            -26,
+            -20
+          ],
+          "distance": 2.2
+        },
+        {
+          "kind": "wave",
+          "start": 24,
+          "duration": 15,
+          "axis": "vertical",
+          "amplitude": 0.08,
+          "wavelength": 1.5,
+          "cycles": 0.25
+        }
+      ],
+      "direction_note": "At source420 the violet reef has become a large spiral in the upper-left. The usable route is the blue opening below and right of it. Keep incoming movement, then sweep below the overhang with a diagonal traverse, opposite bank and sideways plane turn; one broad current bend accompanies the reveal. Prompts stop reasserting a centered ring and describe the finer garden beyond. Screen a midpoint before finishing. Incoming velocity fit residual=0.006870332448616351",
+      "prefix_root": "projects/glass-tide/exports/v001/gt-violet-reef-c",
+      "prefix_through": 420,
+      "prefix_config_sha256": "e2852d491c3babc795c2de59e4c0b8a4f03ced3c3ced6f69800e940cf96f92e4"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "study": "glass-tide-opening",
+  "cases": [
+    {
+      "case": "gt-coral-bank-a",
+      "seed": 1041500,
+      "duration": 13.5,
+      "cadence": 12,
+      "cfg": 1,
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312
+      ],
+      "initial_image": "projects/glass-tide/exports/v001/openings/gt-crimson-current-c/anchors/0000.png",
+      "initial_sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
+      "reference_mode": "hybrid",
+      "edit_strength": 0.25,
+      "ref_boost": 0.01,
+      "grounding_px": 768,
+      "sampler": "euler",
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        }
+      ],
+      "sigma_ratios": [
+        1,
+        0.8547401428216667,
+        0.5181684593366667,
+        0
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "around-the-crimson-ring",
+          "prompt": "A huge crimson coral ribbon spirals through an impossible sapphire sea suspended in black space. The ribbon forms an open arch just right of center; its edge is built from thousands of tiny thin red mineral fins, ivory spines and tightly branching coral filaments. Transparent cyan glass channels weave through the coral like luminous rivers. In the left foreground, layered midnight-blue shells carry densely branching pink coral gardens, engraved silver ridges and clusters of clear quartz needles. Beyond the arch are distant floating reefs with violet crystalline interiors and intricate white skeletal edges. Clear open intervals separate the massive curling foreground from the tiny distant worlds. The scene feels like an immense living mechanism made from glass, nacre and coral, seen in a sweeping diagonal composition. Ultra-fine material relief, sharply resolved digital fantasy environment, intense cobalt, carmine and pale silver, deep focus, oblique light catching individual ridges and small precise reflections. Clean hard surfaces and clear space, no mist, bloom, painted strokes, letters or people."
+        }
+      ],
+      "phrases": [
+        {
+          "kind": "continuation",
+          "start": 0,
+          "duration": 13.5,
+          "center": [
+            0.98,
+            0.49
+          ],
+          "end": [
+            -0.24,
+            0.03,
+            0.26236426446749106,
+            -0.45
+          ],
+          "velocity_start": [
+            -0.017,
+            0.002,
+            0.018,
+            -0.034
+          ],
+          "velocity_end": [
+            -0.019,
+            -0.008,
+            0.022,
+            -0.03
+          ]
+        },
+        {
+          "kind": "plane",
+          "start": 0,
+          "duration": 15,
+          "center": [
+            0.98,
+            0.49
+          ],
+          "tilt": [
+            -12,
+            18
+          ],
+          "distance": 2.1
+        }
+      ],
+      "direction_note": "Begin already moving: a sustained rightward traverse and counterclockwise bank brings the distant violet reef toward center. The crimson ring and cyan channel sweep across the frame; a shallow plane turn opens its inner wall. Inspect the first nine paintings and source312 before designing the next route. No cut, fixed opening reference or mask. Camera warps and clean reference both use the previous painting."
+    }
+  ]
+}

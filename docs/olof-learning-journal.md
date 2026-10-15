@@ -529,3 +529,8 @@ Olof says the eight-second Crystal Gate revision has better motion. He requests 
 ### 2026-10-14 — Creative latitude after the canyon
 
 Olof calls the fourteen-second Crystal Gate continuation really good and sees substantial progress. He asks the assistant to experiment, choose what looks promising, complete one thirty-second film, then start a new project. He authorizes consuming the remaining funded account balance and will reload it if needed; this does not authorize changing funding settings. His confidence is in the developing direction, with uncertainty about the assistant's ability to judge its own art. Keep assistant screening distinct from human taste approval. [Finale](../apps/deforum/projects/world-seed/experiments/crisp-passage/finale.md).
+
+
+### 2026-10-15 — Glass Tide opening approved
+
+Olof calls the selected crimson coral-ring image gorgeous and asks to start a new video from it. He reports adding $50 to the RunPod balance; this authorizes generation within the configured funds, not changing funding settings. The approval is for this still and direction, not for unrendered motion or its eventual detail retention. [The Glass Tide](../apps/deforum/projects/glass-tide/README.md).

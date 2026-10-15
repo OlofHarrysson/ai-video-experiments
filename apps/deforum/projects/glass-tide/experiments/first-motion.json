@@ -1,5 +1,5 @@
 {
-  "status": "planned_not_rendered",
+  "status": "opening_v001_rendered_and_screened",
   "opening": "exports/v001/openings/gt-crimson-current-c/anchors/0000.png",
   "opening_sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
   "intent": "Follow the cyan stream around the crimson coral ring, then pass toward the small violet reef in its opening.",
@@ -21,5 +21,8 @@
     "Preview the actual full path before recurrent rendering.",
     "Do not assume the initial still detail survives recurrence.",
     "No masks, fixed first-image reference, independent replacement stills or cuts."
-  ]
+  ],
+  "camera_plan": "configs/gt-coral-bank-a.json",
+  "warp_preview": "../exports/motion-previews/gt-coral-bank-a/preview.mp4",
+  "selected_film": "../exports/v001/gt-beyond-the-reef-d/faster/rife-moving-tail/preview.mp4"
 }

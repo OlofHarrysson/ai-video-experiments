@@ -1,0 +1,33 @@
+{
+  "title": "The Glass Tide",
+  "selected": [
+    "glass-tide-opening"
+  ],
+  "clips": [
+    {
+      "id": "glass-tide-opening",
+      "label": "The Glass Tide \u00b7 8 seconds",
+      "note": "A bank around crimson coral leads into a violet spiral and through the reef.",
+      "details": "Starts with the exact approved coral-ring still. Continuous bank, sideways travel, regional curling and a diagonal sweep beneath the violet overhang. Krea 2 Turbo, Euler at noise 0.72, three updates, CFG1; each frame starts from the warped previous painting. Additional reference conditioning is off after a matched opening comparison. Every painting is retained in the 24 fps delivery; RIFE stays outside feedback. No cuts, masks or extra detail pass. Fine coral branching simplifies during recurrence.",
+      "source": "projects/glass-tide/exports/v001/gt-beyond-the-reef-d/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "violet-reef",
+      "label": "The violet reef \u00b7 4-second checkpoint",
+      "note": "The opening bank and local curl, before the passage beneath the reef.",
+      "source": "projects/glass-tide/exports/v001/gt-violet-reef-c/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "reference-off",
+      "label": "Opening \u00b7 reference off",
+      "note": "Matched one-second control: stronger crimson and a cleaner cyan lip; fine branches still simplify.",
+      "source": "projects/glass-tide/exports/v001/gt-coral-bank-b/through-0096/rife/preview.mp4"
+    },
+    {
+      "id": "quarter-reference",
+      "label": "Opening \u00b7 quarter reference",
+      "note": "Matched one-second test: more white patches and waxier surfaces. Preserved for comparison.",
+      "source": "projects/glass-tide/exports/v001/gt-coral-bank-a/through-0096/rife/preview.mp4"
+    }
+  ]
+}
