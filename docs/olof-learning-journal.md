@@ -534,3 +534,11 @@ Olof calls the fourteen-second Crystal Gate continuation really good and sees su
 ### 2026-10-15 — Glass Tide opening approved
 
 Olof calls the selected crimson coral-ring image gorgeous and asks to start a new video from it. He reports adding $50 to the RunPod balance; this authorizes generation within the configured funds, not changing funding settings. The approval is for this still and direction, not for unrendered motion or its eventual detail retention. [The Glass Tide](../apps/deforum/projects/glass-tide/README.md).
+
+### 2026-10-16 — The Curve: the AI race, not AI's skills
+
+Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.
+
+Mid-build he corrects the theme: "what people most resonate with… so many data centers that are being built, so many new models. Not necessarily that the AI can now make music… It's more about this big race." The "IT CAN …" capability captions were dropped for NEW MODEL tags, headline fragments and rising data centres. Treat the race (volume, competition, money, build-out) as this film's subject.
+
+On the four-frame look check he answers "Keep the look, build it". He could not tell which frame was which ("how can I see them? which is which?"): the first contact sheet had no labels and was only sent as a file card. Review sheets now carry burned-in numbers and titles and are opened in the Files pane. His approval covers the look's direction, not per-frame details or the unseen motion. [The Curve](../apps/remotion/projects/the-curve/README.md).
