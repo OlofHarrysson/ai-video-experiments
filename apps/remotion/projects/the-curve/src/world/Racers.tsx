@@ -27,6 +27,7 @@ type Props = {
   intensity?: number;
   worldWidth?: number;
   sMax?: number;
+  drain?: number;
 };
 
 const FUTURE = new Color(1, 1, 1);
@@ -39,11 +40,12 @@ const sampleRacer = (
   pts: Vector3[],
   bright: number[],
   colors: Color[],
+  drain: number,
 ) => {
   pts.length = 0;
   bright.length = 0;
   colors.length = 0;
-  const base = racerColor(racer);
+  const base = racerColor(racer).clone().lerp(FUTURE, drain);
   const p = new Vector3();
   let s = racer.sStart;
   // Walk from the tail to the head with steps sized by distance to the camera.
@@ -75,6 +77,7 @@ export const Racers: React.FC<Props> = ({
   intensity = 1,
   worldWidth = 0.12,
   sMax = Infinity,
+  drain = 0,
 }) => {
   const { batch, material } = useMemo(() => ({ batch: new LineBatch(16384), material: createGlowLineMaterial() }), []);
   const mesh = useMemo(() => {
@@ -92,7 +95,7 @@ export const Racers: React.FC<Props> = ({
     for (const racer of activeRacers(w)) {
       const sHead = Math.min(racerHead(racer, w), sMax);
       if (sHead <= racer.sStart + 1e-3) continue;
-      sampleRacer(racer, sHead, cam, mapping, pts, bright, colors);
+      sampleRacer(racer, sHead, cam, mapping, pts, bright, colors, drain);
       batch.add(pts, bright, racerColor(racer), colors);
     }
     batch.end();

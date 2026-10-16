@@ -1,9 +1,10 @@
 import { useThree } from "@react-three/fiber";
 import { useMemo } from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { Vector2, Vector3 } from "three";
-import { Shot, cameraAt, chaos } from "./camera";
-import { campusGlows, headlineCards, launchGlows, launchTags, nowMarker, tickLabels } from "./content";
+import { Color, Vector2, Vector3 } from "three";
+import { Shot } from "./camera";
+import { campusGlows, launchGlows, launchTags, nowMarker, stormLabels, tickLabels, youMarker } from "./content";
+import { PERSON, overwhelm, personPose, personShot } from "./person";
 import { endCamera } from "./ending";
 import { revealCamera, revealMapping } from "./reveal";
 import { IDENTITY, Mapping, leaderS, racerHead } from "./race";
@@ -22,7 +23,7 @@ import { Racers, activeRacers, headPosition, racerColor } from "./world/Racers";
 import { Sky } from "./world/Sky";
 import { keys, smoothstep } from "./lib/math";
 
-const HERO: [number, number, number] = [-0.45, 0, 0];
+const HERO: [number, number, number] = [PERSON.x, PERSON.y, PERSON.z];
 
 /** The ending's chart: a whole race squeezed into a floor line and a column. */
 export const END_MAP: Mapping = { sx: 0.27, sy: 0.05, sl: 0.13, x0: 3 };
@@ -31,8 +32,11 @@ const END_FOCUS = new Vector3(END_MAP.x0, 0, -30);
 const END_S_MAX = 165;
 const END_LIGHT = new Vector3(END_MAP.x0, 40, -30);
 const RACE_LIGHT = new Vector3(0, 2.5, -60);
+const WHITE = new Color(1, 1, 1);
+/** At the end the person looks up at the column. */
+const LOOKING_UP = { yaw: 0, headYaw: 0, headPitch: 0.82, lean: 0.07, step: 0, bob: 0 };
 
-const headGlows = (w: number, m: Mapping, out: Glow[], scale = 1, sMax = Infinity) => {
+const headGlows = (w: number, m: Mapping, out: Glow[], scale = 1, sMax = Infinity, drain = 0) => {
   for (const racer of activeRacers(w)) {
     if (racerHead(racer, w) > sMax) continue;
     const age = w - racer.spawn;
@@ -40,7 +44,7 @@ const headGlows = (w: number, m: Mapping, out: Glow[], scale = 1, sMax = Infinit
     const ignite = racer.id === 0 ? smoothstep(0.2, 1.4, w) : 1;
     out.push({
       position: headPosition(racer, w, m),
-      color: racerColor(racer),
+      color: racerColor(racer).clone().lerp(WHITE, drain),
       px: 7,
       world: 0.4 * scale,
       intensity: (1.1 + flash) * ignite,
@@ -60,10 +64,12 @@ const RaceWorld: React.FC<{ t: number; atlas: Atlas }> = ({ t, atlas }) => {
   const resolution = useResolution();
   const w = worldClock(t);
   const revealing = t >= ACT.reveal[0];
-  const shot: Shot = revealing ? revealCamera(t) : cameraAt(t);
+  const shot: Shot = revealing ? revealCamera(t) : personShot(t);
   const m = revealing ? revealMapping(t) : IDENTITY;
   const near = revealing ? Math.max(0.05, shot.position.length() * 0.002) : 0.05;
-  const c = chaos(t);
+  const c = overwhelm(t);
+  // The labs' colours bleach toward white-hot as it gets out of hand.
+  const drain = smoothstep(17, 23.5, w) * 0.85;
   // Into the reveal: the storm clears, and only NOW stays on the chart.
   const clear = 1 - smoothstep(ACT.reveal[0], ACT.reveal[0] + 0.5, t);
   const hit = revealing ? Math.exp(-(t - ACT.reveal[0]) * 5) : 0;
@@ -74,12 +80,15 @@ const RaceWorld: React.FC<{ t: number; atlas: Atlas }> = ({ t, atlas }) => {
   const cards: Label[] = [];
   campusGlows(w, m, glows);
   launchGlows(w, m, glows);
-  headGlows(w, m, glows);
+  headGlows(w, m, glows, 1, Infinity, drain);
   tickLabels(w, m, glows, ticks, clear);
   launchTags(w, m, tags, clear);
-  headlineCards(w, m, cards, clear);
+  stormLabels(w, clear, tags, cards);
   const strokes: Stroke[] = [];
-  if (revealing) nowMarker(m, smoothstep(ACT.reveal[0] + 0.6, ACT.reveal[0] + 1.2, t), strokes);
+  if (revealing) {
+    nowMarker(m, smoothstep(ACT.reveal[0] + 0.6, ACT.reveal[0] + 1.2, t), strokes);
+    youMarker(smoothstep(ACT.reveal[0] + 0.9, ACT.reveal[0] + 1.5, t), glows, ticks);
+  }
 
   const fog = revealing ? 2500 : keys(w, [[0, 70], [12, 100], [17, 220], [21, 600], [24, 900]]);
   return (
@@ -95,8 +104,8 @@ const RaceWorld: React.FC<{ t: number; atlas: Atlas }> = ({ t, atlas }) => {
         sy={m.sy}
       />
       <DataCenters t={w} cam={shot.position} fogDist={fog * 1.3} mapping={m} />
-      {t < 9 ? <Figure cam={shot.position} light={RACE_LIGHT} position={HERO} /> : null}
-      <Racers w={w} cam={shot.position} mapping={m} resolution={resolution} near={near} />
+      <Figure cam={shot.position} light={RACE_LIGHT} position={HERO} pose={personPose(t)} rim={1.6 + c * 0.8} />
+      <Racers w={w} cam={shot.position} mapping={m} resolution={resolution} near={near} drain={drain} />
       <Glows glows={glows} resolution={resolution} near={near} capacity={8192} />
       <GuideLines strokes={strokes} resolution={resolution} near={near} />
       <Labels atlas={atlas} labels={[...ticks, ...tags]} resolution={resolution} near={near} additive />
@@ -125,7 +134,7 @@ const EndWorld: React.FC<{ t: number }> = ({ t }) => {
       <CameraRig shot={shot} near={near} far={20000} />
       <Sky cam={shot.position} dawn={1.6} />
       <Ground cam={shot.position} headS={leaderS(w)} fogDist={110} sx={m.sx} sy={m.sy} poolStrength={0.5} poolWidth={1.2} />
-      <Figure cam={shot.position} light={END_LIGHT} position={HERO} lookUp={1} rim={2.2} />
+      <Figure cam={shot.position} light={END_LIGHT} position={HERO} pose={LOOKING_UP} rim={2.2} />
       <Crowd cam={shot.position} light={END_LIGHT} focus={END_FOCUS} reveal={0.4 + 0.6 * crowd} />
       <Racers w={w} cam={shot.position} mapping={m} resolution={resolution} near={near} intensity={1.4} worldWidth={0.3} sMax={END_S_MAX} />
       <Glows glows={glows} resolution={resolution} near={near} />

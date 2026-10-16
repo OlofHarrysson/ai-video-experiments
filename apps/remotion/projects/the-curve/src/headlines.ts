@@ -3,6 +3,9 @@ import { PALETTE } from "./palette";
 // Fragments of the news cycle. Generic on purpose: no company names, no figures to fact-check.
 export const TAG_TEXTS = ["NEW MODEL"];
 
+/** Chart annotations drawn like the time ticks. */
+export const MARKERS = ["YOU"];
+
 export type Headline = { text: string; bg: string; fg: string };
 
 const RED = "#e8202a";

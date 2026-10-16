@@ -2,11 +2,11 @@
 
 A silent, 45-second film about the AI race: so many labs, so many new models, so many data centres, all on a curve that keeps getting steeper. It is built in TypeScript with [Remotion](https://www.remotion.dev/) and Three.js (through `@remotion/three`), drawn entirely in code, and timed to a 120 BPM grid so music can be laid under it later.
 
-**The idea in one sentence:** we ride an exponential that keeps turning into a wall, and every time the chart refits, the wall we just climbed drops into the flat floor of a bigger one.
+**Feeling:** small, overwhelmed and unable to look away: awe and dread at once. **Message:** nobody can keep up anymore, and this is the slowest it will ever be. One person stays on screen the whole time; the race happens to them.
 
 ## Watch
 
-- Film: `renders/the-curve-v004.mp4` (1920×1080, 30 fps, H.264, no audio). v001–v003 are earlier passes, kept for comparison.
+- Film: `renders/the-curve-v005.mp4` (1920×1080, 30 fps, H.264, no audio). v001–v004 are earlier passes, kept for comparison.
 - Look check: `renders/look-v1/look-check.png`
 - Studio: `npm run dev`
 
@@ -14,31 +14,33 @@ Renders are local and ignored by Git.
 
 ## The film
 
-Olof chose the story, the captions-plus-closing-line text plan and 16:9 on 2026-10-16. He then made the race the theme ("so many data centres being built, so many new models… this big race") rather than what AI can do. The "IT CAN …" captions became NEW MODEL tags and headline fragments. He approved the look from the four style frames and asked for the motion to be built.
+Olof chose the story, the captions-plus-closing-line text plan and 16:9 on 2026-10-16. He then made the race the theme ("so many data centres being built, so many new models… this big race") rather than what AI can do, and the "IT CAN …" captions became NEW MODEL tags and headline fragments. After watching v004 he asked how it makes people feel and what the message is. The assistant judged v004 as mostly spectacle, because the person vanished for 27 of 45 seconds. Olof chose "can't keep up" as the feeling to leave people with. v005 retells the same race through the person.
 
 | Time | Beat | What happens |
 | --- | --- | --- |
-| 0–6 s | Stillness | A lone figure in a long coat, seen from behind, stands on an endless dot-grid chart at night. A spark leaves their feet and draws a line toward the dawn on the horizon. Years tick past: 2016, 2018, 2020. |
-| 6–12 s | The race starts | The camera arcs over the figure and rides with the spark. Rival lines sweep in from the dark, one colour per lab. Each launch pops a ring and a NEW MODEL tag, and leaves a bead on its line. Ticks run 2021–2025. |
-| 12–18 s | The build-out | Data centres rise beside and ahead of the pack: a glowing wireframe, then the shell, then rows of server lights and a red roof beacon. The curve bends up, the ticks turn into months, and more labs join. |
-| 18–24 s | The wall | The pack goes vertical and climbs together as a twisting ribbon. Headline cards (NEW MODEL, BILLIONS, NEW DATA CENTER, GIGAWATTS, IS THIS AGI? …) burst around the climb, one a beat, then four. Ticks run through days, hours and minutes to NOW. The camera rolls and shakes, and the city glows below. |
-| 24–25 s | Freeze | Everything stops mid-motion for one beat while the lens closes in a touch. This is where the music goes silent. |
-| 25–33 s | The reveal | The loudest hit lands on 25.0. The camera rockets back to a side view, and the climb is a hockey-stick chart over a city of data centres. The chart refits to the head again and again, sooner each time (2 s, 1.5 s, 1 s … 0.1 s). Each refit drops yesterday's wall into the floor, until the curve is an L. |
-| 33–45 s | The ending | A hard cut to the opening framing, changed: the same figure, now facing the whole race as a twisted column of light rising out of sight. The camera rises and pulls back to show thousands of people, heads tipped back, facing it. At 38 s: **THIS IS THE SLOWEST / IT WILL EVER BE.** Fade to black. |
+| 0–6 s | Stillness | A lone figure in a long coat, seen from behind, stands on an endless dot-grid chart at night. A spark leaves their feet and draws a line toward the dawn. The first NEW MODEL tag pops at 5 s. |
+| 6–12 s | It passes them | Rival labs streak in from behind and past them on both sides, converging on the horizon. Their head turns to follow each one: right, left, right. The camera comes in over their shoulder and starts to circle them. |
+| 12–18 s | It surrounds them | Data centres taller than buildings rise all around. The person turns to look behind, then steps back. Notification cards pop into the air around them (NEW MODEL, IS THIS AGI?, BILLIONS …), one a second at first. |
+| 18–24 s | Overwhelm | The race goes vertical into a tower of light far ahead, the labs' colours bleach toward white-hot, and the cards come about ten a second. The person looks up and steps back again. The camera's orbit becomes a dizzying spin that keeps them at its centre. |
+| 24–25 s | Freeze | Everything stops: a low angle from behind as they look up at the tower, the storm frozen around them. This is where the music goes silent. |
+| 25–33 s | Left behind | The loudest hit and a white flash land on 25.0, then the camera rockets back to a side view of the race as a chart. **YOU** marks the person at its start, **NOW** marks where we froze. Each refit drops yesterday's wall into the floor and slides NOW back toward YOU, while a bigger wall rises out of reach, sooner each time, until the curve is an L. |
+| 33–45 s | Ending | A hard cut to the opening framing, changed: the same person, head tipped back, facing the whole race as a column of light. **NOBODY CAN KEEP UP.** The camera rises to show thousands of others, all in the same place. **THIS IS THE SLOWEST / IT WILL EVER BE.** Fade to black. |
 
 ### Sync points for music
 
 The picture runs on 120 BPM at 30 fps, 15 frames to a beat, with bars at even seconds.
 
 - 0.0 s: fade up from black, quiet
-- 6.0 s: the race starts (the camera move begins at 5.0 s)
-- 12.0 s: the build-out
-- 18.0 s: the wall; launch density and cards keep accelerating to 24.0 s
+- 5.0 s: first NEW MODEL tag
+- 6.0–12.0 s: rivals pass the person, one per beat-pair at first
+- 12.0 s: data centres rise, the storm of cards begins
+- 18.0 s: overwhelm; launch density, cards and the spin keep accelerating to 24.0 s
 - **24.0 s: freeze, silence**
 - **25.0 s: the reveal, loudest hit**
 - 27.0, 28.5, 29.5, 30.1, 30.5 s …: refits, closing up toward 31.0 s
 - **33.0 s: hard cut to the ending**
-- 38.0 s: closing line
+- 36.5 s: NOBODY CAN KEEP UP.
+- 39.5 s: THIS IS THE SLOWEST IT WILL EVER BE.
 - 43.8–45.0 s: fade to black
 
 ### On-screen text
@@ -50,7 +52,7 @@ All of it is deliberately generic: years, months, weekdays and clock times; NEW 
 - **Chart space.** `src/race.ts` defines the curve `h(s) = 0.05 (e^(s/12) − 1)`, with `s` running along the ground away from the figure. A `Mapping` scales chart space into the world: time, height, ribbon width and a sideways offset. The ride uses the identity mapping. The reveal fits the mapping to the head, and the ending squeezes the whole race into a floor line and a column.
 - **The race.** The leader's progress is integrated from a speed table, so it never jumps. The leader slows along the ground in the wall while its climb keeps accelerating, then takes off after the freeze. Each lab enters on the beat grid with its own gap and wobble. Gaps are measured along the line, so the pack stays together when the curve stands up. The ribbon twists as it climbs.
 - **Launches.** `LAUNCHES` is a fixed, seeded schedule on sixteenth notes that speeds up from roughly one launch every few seconds per lab to several a second. Each launch leaves a bead, a ring and a NEW MODEL tag.
-- **The camera.** `ride()` sits in the curve's own frame: behind, out along the normal and to one side. As the curve stands up, the chase becomes a climb without a cut. `src/reveal.ts` owns the pull-back and the refits, and `src/ending.ts` owns the final crane.
+- **The person and the camera.** `src/person.ts` scripts the person's pose: head turns that follow each passing rival, a turn to look behind, two steps back, and a look up. The camera orbits the person on monotone splines, so its speed carries through each keyframe instead of stopping. Its aim never strays more than about a third of its distance from them, so they stay anchored while the world moves. `src/reveal.ts` owns the pull-back and the refits, and `src/ending.ts` owns the final crane.
 - **Drawing.** Lines are camera-facing strips with a white core, a coloured halo and near-plane clipping (`world/glowLine.ts`). Points of light, rings and text are instanced billboards. The data centres are one instanced box shader, the floor is a dot-grid shader whose fog meets the sky colour exactly, and the figures are merged primitives with a rim-light shader. Bloom, AgX tone mapping, chromatic aberration and the vignette come from `postprocessing`. The composer is built synchronously, so the first captured frame is already bloomed.
 - **Text.** Fonts load through `@remotion/google-fonts`: JetBrains Mono for ticks and tags, Anton for headlines and Inter for the closing line. The canvas mounts only after every string has been drawn into one atlas texture, so no frame renders without its text.
 - **Determinism.** Everything is a function of the frame: seeded hashes, no `Math.random`, no wall clock. Per-frame updates run in layout effects, before Remotion's ThreeCanvas advances the frame.
@@ -74,7 +76,8 @@ npm run lint                         # ESLint with Remotion's rules, then tsc
 - `src/timing.ts`: frame rate, beat grid, story beats and the world clock that holds through the freeze.
 - `src/race.ts`: the curve, the mapping, the leader, the labs, the lanes, the ticks.
 - `src/content.ts`: launches, tags, ticks and headline cards placed in the world.
-- `src/camera.ts`, `src/reveal.ts`, `src/ending.ts`: the three camera regimes.
+- `src/person.ts`: the person's performance and the camera that circles them (0–25 s).
+- `src/camera.ts`: the shot type. `src/reveal.ts` and `src/ending.ts` own the other two camera regimes.
 - `src/World.tsx`: assembles the race world (0–33 s) and the ending world (33–45 s).
 - `src/world/`: line, glow, label, ground, sky, data centre, figure, crowd and post-processing components.
 - `src/text/`: fonts and the text atlas. `src/headlines.ts`: the headline fragments.
@@ -87,7 +90,8 @@ npm run lint                         # ESLint with Remotion's rules, then tsc
 - **v002:** NaN fixed. The past stays colourful and the future draws white. A NOW drop line follows "now" into the floor. The ribbon stays face-on in the climb and twists only into the column.
 - **v003:** the ending column is tightened into a rope, and a single white flash lands on the 25.0 s hit.
 - **v004:** the data centres became visible. They now rise 7–25 units from the race, 2.5–5.5 s ahead of the pack, with brighter facades, a pop when each comes online and campus light pollution. The climb camera aims below the pack, so the race rises out of a lit city.
+- **v005:** retold through one person, for "can't keep up". The person is on screen throughout, with a posable head and body that turns, steps back and looks up. Rivals now come from behind and pass them, data centres are building-sized and rise around them, a storm of notification cards gathers, and the colours drain to white. The camera orbits them on splines and ends in a spin. YOU joins NOW in the reveal, and the closing words become "Nobody can keep up." / "This is the slowest it will ever be."
 
 ## Status
 
-The assistant screened v004 by frame samples across every beat and the transitions, and found no black frames or broken joins. It did not judge playback rhythm or pacing, and Olof has not yet watched it.
+The assistant screened v005 by frame samples across every beat and the transitions. The person is in every sampled frame before the reveal, and there are no black frames before the final fade. It did not judge playback rhythm or pacing, and Olof has not yet watched v005.

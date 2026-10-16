@@ -71,3 +71,42 @@ export const noise1 = (x: number, seed = 0) => {
   const u = f * f * (3 - 2 * f);
   return a + (b - a) * u;
 };
+
+/**
+ * Monotone cubic interpolation through [time, value] keys: speed carries through each key
+ * instead of stopping there, without overshooting flat stretches.
+ */
+export const spline = (t: number, points: ReadonlyArray<readonly [number, number]>) => {
+  const n = points.length;
+  if (t <= points[0][0]) return points[0][1];
+  if (t >= points[n - 1][0]) return points[n - 1][1];
+  const d: number[] = [];
+  for (let i = 0; i < n - 1; i++) d.push((points[i + 1][1] - points[i][1]) / (points[i + 1][0] - points[i][0]));
+  const m: number[] = [d[0]];
+  for (let i = 1; i < n - 1; i++) m.push(d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2);
+  m.push(d[n - 2]);
+  for (let i = 0; i < n - 1; i++) {
+    if (d[i] === 0) {
+      m[i] = 0;
+      m[i + 1] = 0;
+      continue;
+    }
+    const a = m[i] / d[i];
+    const b = m[i + 1] / d[i];
+    const s = a * a + b * b;
+    if (s > 9) {
+      const k = 3 / Math.sqrt(s);
+      m[i] = k * a * d[i];
+      m[i + 1] = k * b * d[i];
+    }
+  }
+  let i = 0;
+  while (t > points[i + 1][0]) i++;
+  const [t0, v0] = points[i];
+  const [t1, v1] = points[i + 1];
+  const h = t1 - t0;
+  const u = (t - t0) / h;
+  const u2 = u * u;
+  const u3 = u2 * u;
+  return (2 * u3 - 3 * u2 + 1) * v0 + (u3 - 2 * u2 + u) * h * m[i] + (-2 * u3 + 3 * u2) * v1 + (u3 - u2) * h * m[i + 1];
+};

@@ -1,5 +1,6 @@
 import { Vector3 } from "three";
-import { Shot, rideShot } from "./camera";
+import { Shot } from "./camera";
+import { personShot } from "./person";
 import { IDENTITY, Mapping, height, leaderS } from "./race";
 import { ACT, worldClock } from "./timing";
 import { lerp, smootherstep } from "./lib/math";
@@ -43,7 +44,7 @@ export const revealMapping = (t: number): Mapping => {
 
 /** From the frozen climb, straight back and out to a side view of the chart. */
 export const revealCamera = (t: number): Shot => {
-  const from = rideShot(ACT.reveal[0]);
+  const from = personShot(ACT.reveal[0]);
   const center = new Vector3(0, BOX.h * 0.42, -BOX.w * 0.5);
   const dist = ((BOX.h * 0.5) / Math.tan(((36 / 2) * Math.PI) / 180)) * 1.3;
   const side: Shot = {

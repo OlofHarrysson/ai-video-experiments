@@ -9,13 +9,11 @@ import {
   curveFrame,
   curvePoint,
   S_FREEZE,
-  height,
   leaderS,
-  sAtHeight,
   racerHead,
   racerPoint,
 } from "./race";
-import { BEAT } from "./timing";
+import { PERSON } from "./person";
 import { CAMPUSES } from "./world/DataCenters";
 import { Glow } from "./world/Glows";
 import { Stroke } from "./world/GuideLines";
@@ -115,60 +113,12 @@ export const tickLabels = (w: number, m: Mapping, glows: Glow[], out: Label[], f
     out.push({
       key: `tick:${tick.label}`,
       position: anchor,
-      minPx: now ? 30 : tick.major ? 17 : 13,
+      minPx: now ? 40 : tick.major ? 17 : 13,
       world: tick.major ? 0.34 : 0.2,
       maxPx: now ? 90 : tick.major ? 52 : 30,
       color: now ? [2.4, 2.4, 2.6] : rgb(PALETTE.tick, 1.15 * glow),
       opacity: (0.45 + 0.55 * Math.exp(-age * 0.8)) * keep,
       offset: [-0.55, 0.75],
-    });
-  }
-};
-
-// Headline cards appear around the climb, faster and faster, and the camera rushes past them.
-type Card = { w: number; s: number; lateral: number; normal: number; text: string; size: number; tilt: number };
-export const CARDS: Card[] = (() => {
-  const cards: Card[] = [];
-  let w = 17.5;
-  let i = 0;
-  while (w < 24) {
-    const r = (n: number) => hash(i, n, 909);
-    const ahead = 5 + r(1) * 14;
-    cards.push({
-      w,
-      s: sAtHeight(height(leaderS(w)) + ahead),
-      lateral: (r(2) < 0.5 ? -1 : 1) * (3.5 + r(3) * 11),
-      normal: -7 + r(4) * 13,
-      // Walk the list in a shuffled order so the same card never follows itself.
-      text: HEADLINES[(i * 5 + Math.floor(i / HEADLINES.length) * 3) % HEADLINES.length].text,
-      size: 0.9 + r(6) * 1.4,
-      tilt: (r(7) - 0.5) * 0.3,
-    });
-    // One card a beat at first, then four.
-    w += BEAT / keys(w, [[17.5, 1], [20, 2], [22.5, 4], [24, 6]]);
-    i++;
-  }
-  return cards;
-})();
-
-export const headlineCards = (w: number, m: Mapping, out: Label[], fade = 1) => {
-  if (fade <= 0.001) return;
-  for (const c of CARDS) {
-    if (c.w > w) break;
-    const age = w - c.w;
-    curvePoint(c.s, m, _p);
-    curveFrame(c.s, m, _t, _n);
-    const p = _p.clone().add(new Vector3(c.lateral, 0, 0)).addScaledVector(_n, c.normal);
-    const pop = easeOutBack(clamp(age / 0.12), 2.2);
-    out.push({
-      key: `headline:${c.text}`,
-      position: p,
-      minPx: 22 * pop,
-      world: c.size * 0.42 * pop,
-      maxPx: 230,
-      color: [1, 1, 1],
-      opacity: fade,
-      rotation: c.tilt,
     });
   }
 };
@@ -201,8 +151,90 @@ export const campusGlows = (w: number, m: Mapping, out: Glow[]) => {
       position: new Vector3(campus.x * m.sl, 0.4 * Math.min(1, m.sy), campus.z * m.sx),
       color: c,
       px: 4,
-      world: campus.radius * 3.2 * Math.max(m.sl, 0.3),
-      intensity: 0.16 * lit + 0.9 * pop,
+      world: Math.min(campus.radius * 2.6, 70) * Math.max(m.sl, 0.3),
+      intensity: 0.07 * lit + 0.5 * pop,
     });
   }
+};
+
+// ── The storm around the person ─────────────────────────────────────────────
+// Notifications pop up in the air around them, faster and faster, until they stand in a cloud
+// of NEW MODEL tags and headlines.
+type StormCard = {
+  w: number;
+  key: string;
+  tag: boolean;
+  pos: Vector3;
+  drift: Vector3;
+  size: number;
+  tilt: number;
+  color: [number, number, number];
+  life: number;
+};
+
+export const STORM: StormCard[] = (() => {
+  const cards: StormCard[] = [];
+  let w = 11.5;
+  let i = 0;
+  while (w < 24.2) {
+    const r = (n: number) => hash(i, n, 2024);
+    const angle = r(1) * Math.PI * 2;
+    // Outside the camera's orbit, so no card fills the lens.
+    const radius = 5 + r(2) * 9;
+    const tag = r(4) < 0.45;
+    const dir = new Vector3(Math.sin(angle), 0, Math.cos(angle));
+    cards.push({
+      w,
+      key: tag ? "tag:NEW MODEL" : `headline:${HEADLINES[(i * 7) % HEADLINES.length].text}`,
+      tag,
+      pos: PERSON.clone().addScaledVector(dir, radius).add(new Vector3(0, 0.5 + r(3) * 5.5, 0)),
+      drift: dir.clone().multiplyScalar(0.25).add(new Vector3(0, 0.18, 0)),
+      size: tag ? 0.3 + r(5) * 0.15 : 0.45 + r(5) * 0.5,
+      tilt: (r(6) - 0.5) * 0.35,
+      color: tag ? rgb(RACERS[i % RACERS.length].color, 1.8) : [1, 1, 1],
+      life: 1.8 + r(7) * 1.2,
+    });
+    // One every second or so at first, about ten a second by the end.
+    w += 1 / keys(w, [[11.5, 1.2], [15, 2.5], [18, 4.5], [21, 7], [23.5, 11]]);
+    i++;
+  }
+  return cards;
+})();
+
+export const stormLabels = (w: number, fade: number, tags: Label[], headlines: Label[]) => {
+  if (fade <= 0.001) return;
+  for (const c of STORM) {
+    if (c.w > w) break;
+    const age = w - c.w;
+    if (age > c.life) continue;
+    const pop = easeOutBack(clamp(age / 0.14), 2.0);
+    const out = 1 - smoothstep(c.life - 0.4, c.life, age);
+    (c.tag ? tags : headlines).push({
+      key: c.key,
+      position: c.pos.clone().addScaledVector(c.drift, age),
+      minPx: 12 * pop,
+      world: c.size * pop,
+      maxPx: 220,
+      color: c.color,
+      opacity: out * fade,
+      rotation: c.tilt,
+    });
+  }
+};
+
+/** In the reveal, YOU marks where the person still stands: the start of the chart. */
+export const youMarker = (strength: number, glows: Glow[], labels: Label[]) => {
+  if (strength <= 0.001) return;
+  const at = PERSON.clone().add(new Vector3(0, 0.3, 0));
+  glows.push({ position: at, color: color("#ffffff"), px: 5, world: 0.4, intensity: 1.6 * strength });
+  labels.push({
+    key: "tick:YOU",
+    position: at,
+    minPx: 40,
+    world: 0.5,
+    maxPx: 70,
+    color: [2.2, 2.2, 2.4],
+    opacity: strength,
+    offset: [0, 1.1],
+  });
 };

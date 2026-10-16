@@ -24,49 +24,62 @@ export const CAMPUSES: Campus[] = [];
 
 const NEAR_CAMPUSES = 230;
 const FAR_CAMPUSES = 320;
+const HOME_CAMPUSES = 110;
 
-const campus = (c: number, near: boolean, out: Hall[]) => {
-  const r = (n: number) => hash(c, n, near ? 4242 : 5151);
+type Kind = "near" | "far" | "home";
+
+const campus = (c: number, kind: Kind, out: Hall[]) => {
+  const near = kind === "near";
+  const r = (n: number) => hash(c, n, kind === "near" ? 4242 : kind === "far" ? 5151 : 6161);
   const side = r(1) < 0.5 ? -1 : 1;
   let sAlong: number;
   let dist: number;
   let build0: number;
-  if (near) {
-    // Beside the race, in view: each rises a few seconds before the pack arrives.
+  // Halls are building-sized against a 1.75-unit person: the ones around them tower.
+  const k = kind === "home" ? 5 : 3;
+  if (kind === "home") {
+    // Around the person, behind and beside them, rising one after another while they watch.
+    sAlong = -150 + r(3) * 150;
+    dist = 30 + Math.pow(r(2), 1.3) * 140;
+    build0 = 11.0 + 6.5 * Math.sqrt(r(4));
+  } else if (near) {
+    // Along the race: each rises a few seconds before the pack arrives.
     sAlong = 10 + r(3) * 92;
-    dist = (sAlong > 50 ? 16 : 7) + Math.pow(r(2), 1.5) * 18;
+    dist = (sAlong > 50 ? 24 : 14) + Math.pow(r(2), 1.5) * 30;
     build0 = Math.max(11.5, timeAtS(sAlong) - 2.5 - r(4) * 3);
   } else {
     // The boom: the whole plain fills, out to the horizon.
-    sAlong = -20 + r(3) * 280;
-    dist = 25 + Math.pow(r(2), 1.2) * 235;
-    build0 = 12.5 + 6 * Math.sqrt(r(4)) + dist * 0.006;
+    sAlong = -60 + r(3) * 360;
+    dist = 45 + Math.pow(r(2), 1.2) * 320;
+    build0 = 12.5 + 6 * Math.sqrt(r(4)) + dist * 0.004;
   }
   const rows = 1 + Math.floor(r(5) * 3);
   const cols = near ? 2 + Math.floor(r(6) * 3) : 2 + Math.floor(r(6) * 4);
-  const hw = near ? 3 + r(7) * 3 : 4 + r(7) * 5;
-  const hd = 2 + r(8) * 1.6;
-  const hh = near ? 0.7 + r(9) * 0.6 : 1.0 + r(9) * 1.2;
+  const hw = (near ? 3 + r(7) * 3 : 4 + r(7) * 5) * k;
+  const hd = (2 + r(8) * 1.6) * k;
+  const hh = (near ? 0.9 + r(9) * 0.6 : 1.0 + r(9) * 1.2) * k;
+  const gapW = 1.0 * k;
+  const gapD = 1.4 * k;
   // The campus grows away from the race, so its inner edge stays at dist.
-  const extent = ((cols - 1) * (hw + 1.0)) / 2 + hw / 2;
+  const extent = ((cols - 1) * (hw + gapW)) / 2 + hw / 2;
   CAMPUSES.push({
     x: side * (dist + extent),
     z: -sAlong,
-    radius: Math.max(extent, (rows * (hd + 1.4)) / 2),
+    radius: Math.max(extent, (rows * (hd + gapD)) / 2),
     build: build0 + (rows * cols) * 0.04 + 0.9,
     seed: r(11),
   });
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      const k = i * cols + j;
+      const n = i * cols + j;
       out.push({
-        x: side * (dist + extent) + (j - (cols - 1) / 2) * (hw + 1.0),
-        z: -sAlong + (i - (rows - 1) / 2) * (hd + 1.4),
+        x: side * (dist + extent) + (j - (cols - 1) / 2) * (hw + gapW),
+        z: -sAlong + (i - (rows - 1) / 2) * (hd + gapD),
         w: hw,
         d: hd,
-        h: hh * (0.85 + hash(c, k, 7) * 0.3),
-        build: build0 + k * 0.08 + hash(c, k, 9) * 0.2,
-        seed: hash(c, k, near ? 11 : 12),
+        h: hh * (0.85 + hash(c, n, 7) * 0.3),
+        build: build0 + n * 0.08 + hash(c, n, 9) * 0.2,
+        seed: hash(c, n, kind === "near" ? 11 : kind === "far" ? 12 : 13),
       });
     }
   }
@@ -74,8 +87,9 @@ const campus = (c: number, near: boolean, out: Hall[]) => {
 
 const halls: Hall[] = (() => {
   const out: Hall[] = [];
-  for (let c = 0; c < NEAR_CAMPUSES; c++) campus(c, true, out);
-  for (let c = 0; c < FAR_CAMPUSES; c++) campus(c, false, out);
+  for (let c = 0; c < NEAR_CAMPUSES; c++) campus(c, "near", out);
+  for (let c = 0; c < FAR_CAMPUSES; c++) campus(c, "far", out);
+  for (let c = 0; c < HOME_CAMPUSES; c++) campus(c, "home", out);
   return out;
 })();
 
@@ -161,11 +175,12 @@ void main() {
 
   if (!top) {
     // Rows of server lights: dashed horizontal strips that switch on bottom to top.
-    float rowH = 0.22;
+    // About fourteen rows of racks per wall, whatever the hall's size.
+    float rowH = max(0.22, dim.y / 14.0);
     float row = floor(uv.y / rowH);
     float inRow = fract(uv.y / rowH);
     float strip = smoothstep(0.42, 0.5, inRow) * (1.0 - smoothstep(0.58, 0.66, inRow));
-    float cell = floor(uv.x / 0.18);
+    float cell = floor(uv.x / (rowH * 0.8));
     float on = step(0.35, hash12(vec2(cell, row) + vSeed * 91.0));
     float flicker = 0.75 + 0.25 * sin(uTime * (3.0 + 7.0 * hash12(vec2(row, cell))) + vSeed * 40.0);
     float reach = step(uv.y / max(dim.y, 1e-3), lights * 1.05);
@@ -176,12 +191,13 @@ void main() {
     col += uLed * mix(detail, 0.9, blur) * reach * band * (1.0 + online * 2.0);
   } else {
     // Cooling fans on the roof.
-    vec2 g = fract(uv / 0.55) - 0.5;
+    float fanGrid = max(0.55, min(dim.x, dim.y) / 8.0);
+    vec2 g = fract(uv / fanGrid) - 0.5;
     float fan = smoothstep(0.24, 0.2, length(g)) - smoothstep(0.16, 0.12, length(g));
     col += uEdge * fan * 0.25 * lights + uLed * 0.05 * lights;
     // Beacon at one corner.
-    vec2 bc = vec2(0.25, 0.25);
-    float b = smoothstep(0.12, 0.0, length(uv - bc));
+    vec2 bc = vec2(fanGrid * 0.5);
+    float b = smoothstep(fanGrid * 0.2, 0.0, length(uv - bc));
     float blink = step(0.5, fract(uTime * 0.9 + vSeed * 3.0));
     col += uBeacon * b * blink * lights * 3.0;
   }

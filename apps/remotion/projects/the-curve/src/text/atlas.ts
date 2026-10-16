@@ -1,5 +1,5 @@
 import { CanvasTexture, LinearFilter, LinearMipmapLinearFilter, SRGBColorSpace } from "three";
-import { HEADLINES, TAG_TEXTS } from "../headlines";
+import { HEADLINES, MARKERS, TAG_TEXTS } from "../headlines";
 import { TICKS } from "../race";
 import { anton, mono } from "./fonts";
 
@@ -101,6 +101,7 @@ export const buildAtlas = (): Atlas => {
   const specs: Spec[] = [
     ...TAG_TEXTS.map(tagSpec),
     ...TICKS.map((t) => tickSpec(t.label)),
+    ...MARKERS.map(tickSpec),
     ...HEADLINES.map((h) => headlineSpec(h.text, h.bg, h.fg)),
   ];
   const unique = new Map<string, Spec>();
