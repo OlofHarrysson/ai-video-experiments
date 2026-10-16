@@ -1,6 +1,8 @@
 # Undercurrent
 
-**[Open the sound player](http://localhost:3046/)** to turn parts on/off or hear Only one part. Three chord rhythms are separate rows; **offbeat pocket** is initially on, alongside the previous **steady rhythm** and the original. [New offbeat comparison](pocket.md). Olof clarified that the original instrument was okay, but its rhythm/echoes disturbed the flow, and Haze was worse. [Rhythm revision and evidence](flow.md), [player and shared controls](../../player/README.md), [user stories and design](../../player/design/README.md).
+**[Open the sound player](http://localhost:3046/)** for the [new 15-second foreground study](foreground-study.md): evolving pulse, hollow hook and the previous chord part over one shared foundation. Turn on one alternative to replace the other, or use Only to isolate it. New [Sound Lab reports](foreground-study.md#what-inspection-changed) inspect these stems, mixes and the club phone reference.
+
+Earlier rhythm studies remain preserved: [offbeat pocket](pocket.md), [steady rhythm](flow.md). Olof subsequently found the sound palette basic and the melodic idea weak, motivating the new foreground study. [Player and shared controls](../../player/README.md), [user stories and design](../../player/design/README.md).
 
 **Previous comparison: [Original, Smoke and Wire](palette-comparison.md)** — the same 30-second score with two alternative sound palettes, matched in loudness. Olof says v002’s structure is closer, but remains unsure about its instruments.
 

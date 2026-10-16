@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 from uuid import uuid4
 
 WEB = Path(__file__).resolve().parent
+FILE_CHUNK_BYTES = 64 * 1024
 
 
 def make_handler(bundle):
@@ -70,7 +71,15 @@ def make_handler(bundle):
                 ".wav": "audio/wav",
                 ".json": "application/json",
             }
-            return self.reply(200, path.read_bytes(), kinds[path.suffix])
+            self.send_response(200)
+            self.send_header("Content-Type", kinds[path.suffix])
+            self.send_header("Content-Length", str(path.stat().st_size))
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Content-Type-Options", "nosniff")
+            self.end_headers()
+            with path.open("rb") as stream:
+                while chunk := stream.read(FILE_CHUNK_BYTES):
+                    self.wfile.write(chunk)
 
         def do_POST(self):
             origin = self.headers.get("Origin")

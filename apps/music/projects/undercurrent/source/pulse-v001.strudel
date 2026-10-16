@@ -1,0 +1,5 @@
+// Eight-bar foreground study. Same foundation is supplied by the player.
+setcpm(128/4)
+pulse: s("~ ucpulse ~ ucpulse ~ ucpulse ~ ucpulse").n("<0 0 1 2 3 4 2 0>").gain("<.23 .23 .25 .26 .27 .28 .24 .20>").clip(2).hpf(220).pan(.48).room(.16).delay(.075).delaytime(.3515625).delayfeedback(.22).orbit(5).postgain(.78)
+// A restrained fifth joins the rising middle, then yields to the initial tone.
+edge: s("~ ~ ~ ~ ~ ~ ucpulse ~").n("<0 0 1 2 3 4 1 0>").speed(1.4983).gain(.065).clip(1.5).hpf(400).lpf(2600).pan(.62).room(.16).mask("<0!4 1!2 0!2>").orbit(5).postgain(.78)

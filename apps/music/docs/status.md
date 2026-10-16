@@ -1,17 +1,17 @@
 # Music workbench — handoff
 
-Updated 2026-10-15. Work in `apps/music`; the brainstorm workspace is historical.
+Updated 2026-10-16. Work in `apps/music`; the brainstorm workspace is historical.
 
 ## Current goal
 
-**Latest feedback:** Olof finds the sound palette too basic and melodic ideas flat, especially the chord/hook part. His [club phone reference and audio comparison](../projects/undercurrent/club-reference-20261015.md) point the next study toward new foreground sound design and a stronger short idea. Rhythm-only revisions have not resolved his concern. No new composition has been approved; the player still holds the prior comparison.
+**Current handoff: [foreground study and Sound Lab](../projects/undercurrent/foreground-study.md).** Olof asked for a new example plus a local harness for inspecting sound. Two 15-second ideas replace the disliked chord foreground over the same foundation: **Theme · evolving pulse** (initially on) and **Theme · hollow hook**. **Chords · previous** remains a comparison row. All earlier versions are preserved. Human taste verdict pending.
 
-**Current handoff: [shared sound player](../player/README.md)** at [localhost:3046](http://localhost:3046/), Terminal Manager service `music-player`, bundle `exports/player-v003`. Olof approved the dark/bright-blue player and requested another chord-rhythm comparison. **[Offbeat pocket](../projects/undercurrent/pocket.md)** moves the chords between the beats in a repeating two-bar phrase, reduces rhythmic hits from 28 to 22, and removes the rhythmic delay. The same sample bank, held break and ending are retained. The seven other audio parts and both previous chord stems are copied exactly. Compare **Chords · offbeat pocket** (initially on) against **Chords · steady rhythm** (the previous version); the original is also preserved as a third row. Taste verdict pending.
+The [shared player](../player/README.md) is running at [localhost:3046](http://localhost:3046/), Terminal Manager service `music-player`, bundle `exports/player-v005`. Open/reload it to connect: headless desktop/mobile checks passed, but the user's in-app tab was unavailable while the Mac was locked. The dark/bright-blue design and shared controls are retained. An audio-file transfer failure found during testing was fixed with chunked responses.
 
-The player now has exclusive **Only**, on/off switches, and a shared read/control API with browser acknowledgements. Palette selection and notes UI are removed; earlier feedback and versions remain preserved. [Four user stories and Design Harness evidence](../player/design/README.md) guide the editor. Desktop/mobile live checks, 37 Python tests, six player-engine tests and Ruff pass.
+[Sound Lab](sound-lab.md) combines existing inspection with section recipes, shared-scale spectrograms, RMS/peak and 400 ms LUFS timelines, waveform close-ups, and peak-safe matched full mixes/reference copies. It was exercised on the new stems/mixes and the phone reference. Plots and audio-model observations support technical decisions, not taste approval. Final mixes are within 0.07 LUFS and below −3 dBTP. One review of the initial candidates cost $0.022872; the final pulse received a modest brightness reduction. 39 Python tests, six player-engine tests, Ruff and desktop/mobile live checks pass.
 
 
-Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Olof says its structure is closer but remains unsure about the instruments. The earlier [palette comparison](../projects/undercurrent/palette-comparison.md) is preserved. Current work targets the chord rhythm, following the more specific feedback above.
+Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Olof says its structure is closer but remains unsure about the instruments. The earlier [palette comparison](../projects/undercurrent/palette-comparison.md) is preserved. Current work targets foreground sound and motif, following the later feedback above.
 
 The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md) is complete; do not restart its goal. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
 
@@ -61,7 +61,7 @@ Latest selections: [Pressure Lock and Negative Space](../projects/club-detail-sp
 
 ## Next work
 
-1. Develop the proposed short foreground sound/idea comparison from the club reference with Olof. Preserve the existing player takes; evaluate a new sound and motif before extending the arrangement.
+1. Listen to the two foreground sketches with Olof in the player. Establish a preferred sound and motif before extending the arrangement; use Only to distinguish the foreground from the shared foundation.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 

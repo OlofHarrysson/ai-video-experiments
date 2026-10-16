@@ -1,0 +1,115 @@
+{
+  "source_bundle": "player-v003",
+  "seconds": 15,
+  "edge_fade_ms": 20,
+  "gains_db": {
+    "pulse": 4,
+    "hollow": 2,
+    "previous": 0
+  },
+  "bed": {
+    "kick": {
+      "source_sha256": "794e3bd225487d9669c12dfcc645a0dd55f94e2aedc17d4514f6693a5d323951",
+      "output_sha256": "6de91100927584d8fa4f809753b44d57364a8ab6be68ab762ccebb1a65c11a67",
+      "unchanged_before_seconds": 14.98
+    },
+    "bass": {
+      "source_sha256": "5be8baedd99c84d1d3cb0e0f3914e47f7546a0c880e324b2ee79f93dd8897421",
+      "output_sha256": "2d9cb4c63c49af7fda2112ac6a3fa73068700c8706c7e5c4f5e7271d9da7efae",
+      "unchanged_before_seconds": 14.98
+    },
+    "clap": {
+      "source_sha256": "595248dd5ff10ecc2c2c3300f37c0f142920bcbebb6b8ea2468843a94d76fe49",
+      "output_sha256": "81352d87fd6c9a69f48ddce12811bdfe18f848d208bac29a3f300eb6f28d04f6",
+      "unchanged_before_seconds": 14.98
+    },
+    "hat": {
+      "source_sha256": "a54b818fa65a9206cfd4c987bf3ff79cd29c60eacbf9f66c9ae5c27fa4f6beb7",
+      "output_sha256": "4c957c7141f3db937089bd3f073ca251b6846f9237cdfd8d81cf6235c7ef6190",
+      "unchanged_before_seconds": 14.98
+    },
+    "openhat": {
+      "source_sha256": "f3ad088a4aa458342bd5092fe5a1973197edd1af12370ec322c9055786ee15cb",
+      "output_sha256": "32526f28cc8ce7944eadbd9beecc0d5540dc7aa196db98e1b588dadae471ade3",
+      "unchanged_before_seconds": 14.98
+    },
+    "brush": {
+      "source_sha256": "1014b34adacfe65daa8cbb92768a82c3c1cbba6380be1530e3b0d8f310b8dd87",
+      "output_sha256": "fde00c1a13f19a8d3ee0febf4bb4911a63a405057e4427bc8d72f5c1faa0929a",
+      "unchanged_before_seconds": 14.98
+    },
+    "air": {
+      "source_sha256": "cfcf0cf279cfa171f75e874998c485fa81825ae28a583cf79ceac5908c5ebf6a",
+      "output_sha256": "6420d080245af8773c88dba4d31d2e6bba9ce5b51bceb370ee5918652e234ab0",
+      "unchanged_before_seconds": 14.98
+    }
+  },
+  "mixes": {
+    "pulse": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/exports/player-v005/mix-pulse.wav",
+      "sha256": "6ac845d1e5a07a76e83f3892dbec784b10f4fcc1acdf4c75733dff7b895957ee",
+      "seconds": 15.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -3.7311065292391996,
+      "rms_dbfs": -17.583086179826175,
+      "samples_at_or_above_full_scale": 0,
+      "sample_format": "FLOAT",
+      "pcm_rail_samples": null,
+      "pcm_rail_longest_run_frames": null,
+      "bpm_supplied": 128,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [],
+      "integrated_lufs": -17.47,
+      "true_peak_dbtp": -3.73,
+      "loudness_range_lu": 0.7,
+      "lr_correlation": 0.9989635832353525,
+      "mono_rms_dbfs": -17.585351795654695
+    },
+    "hollow": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/exports/player-v005/mix-hollow.wav",
+      "sha256": "1e09147ae36527d9932127dc24dbcccc1bd623ea52f407ad429fb73ffbcc4ef4",
+      "seconds": 15.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -3.137515529685792,
+      "rms_dbfs": -17.5685635395094,
+      "samples_at_or_above_full_scale": 0,
+      "sample_format": "FLOAT",
+      "pcm_rail_samples": null,
+      "pcm_rail_longest_run_frames": null,
+      "bpm_supplied": 128,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [],
+      "integrated_lufs": -17.45,
+      "true_peak_dbtp": -3.14,
+      "loudness_range_lu": 0.6,
+      "lr_correlation": 0.9991831554669347,
+      "mono_rms_dbfs": -17.570341272185335
+    },
+    "previous": {
+      "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/undercurrent/exports/player-v005/mix-previous.wav",
+      "sha256": "b31a961dae4079c0c0b20a1eb14174eedce80e6a5d9bb9472d882728a376211f",
+      "seconds": 15.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_peak_dbfs": -3.9335455026847654,
+      "rms_dbfs": -17.608202307860104,
+      "samples_at_or_above_full_scale": 0,
+      "sample_format": "FLOAT",
+      "pcm_rail_samples": null,
+      "pcm_rail_longest_run_frames": null,
+      "bpm_supplied": 128,
+      "silence_threshold_dbfs": -80,
+      "silence_min_seconds": 0.1,
+      "silence_intervals": [],
+      "integrated_lufs": -17.52,
+      "true_peak_dbtp": -3.93,
+      "loudness_range_lu": 0.6,
+      "lr_correlation": 0.9992313033664293,
+      "mono_rms_dbfs": -17.60987968445461
+    }
+  }
+}

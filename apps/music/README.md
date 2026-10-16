@@ -25,6 +25,10 @@ OPENROUTER_API_KEY=your-key-here
 
 The private file already exists and is ignored by Git. `.env.example` is safe to track. Shell-provided credentials take precedence over the file. All billing goes through OpenRouter; the selected Gemini provider still processes the uploaded audio. No direct Google account or billing setup is used.
 
+## Sound inspection harness
+
+The [sound lab](docs/sound-lab.md) compares selected passages across stems, mixes and references with spectrograms, momentary loudness, waveform close-ups and peak-safe level-matched listening copies. [Current foreground study](projects/undercurrent/foreground-study.md).
+
 ## Local tools
 
 These commands incur no API charges. Output paths must be new to preserve prior versions.

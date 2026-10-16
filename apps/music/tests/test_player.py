@@ -10,7 +10,8 @@ from player.server import make_handler
 def test_shared_control_reports_actual_acknowledged_browser_state(tmp_path):
     manifest = {"duration": 30, "tracks": [{"id": "chords", "url": "/audio.wav"}]}
     (tmp_path / "manifest.json").write_text(json.dumps(manifest))
-    (tmp_path / "audio.wav").write_bytes(b"audio")
+    audio = bytes(range(256)) * 32768
+    (tmp_path / "audio.wav").write_bytes(audio)
     (tmp_path / "private.txt").write_text("not a player asset")
     server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(tmp_path))
     thread = threading.Thread(target=server.serve_forever, daemon=True)
@@ -38,7 +39,9 @@ def test_shared_control_reports_actual_acknowledged_browser_state(tmp_path):
             actual = client.get("/api/state").json()
             assert actual["connected"] and actual["last_applied_command"] == 1
             assert actual["state"]["only"] == "chords"
-            assert client.get("/audio.wav").content == b"audio"
+            response = client.get("/audio.wav")
+            assert response.content == audio
+            assert int(response.headers["content-length"]) == len(audio)
             assert client.get("/private.txt").status_code == 404
             assert client.get("/../private.txt").status_code == 404
             for bad in [

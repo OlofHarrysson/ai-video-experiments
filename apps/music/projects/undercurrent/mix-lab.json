@@ -1,0 +1,29 @@
+{
+  "duration": 15,
+  "inputs": [
+    {
+      "name": "Previous mix",
+      "path": "exports/player-v005/mix-previous.wav",
+      "role": "mix",
+      "bpm": 128
+    },
+    {
+      "name": "Pulse mix",
+      "path": "exports/player-v005/mix-pulse.wav",
+      "role": "mix",
+      "bpm": 128
+    },
+    {
+      "name": "Hollow mix",
+      "path": "exports/player-v005/mix-hollow.wav",
+      "role": "mix",
+      "bpm": 128
+    },
+    {
+      "name": "Club phone reference",
+      "path": "references/assets/club-phone-20261015/audio.wav",
+      "start": 1,
+      "role": "reference"
+    }
+  ]
+}

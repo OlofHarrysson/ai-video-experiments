@@ -1,0 +1,23 @@
+{
+  "duration": 15,
+  "inputs": [
+    {
+      "name": "Previous chords",
+      "path": "exports/player-v005/audio/theme-previous.wav",
+      "role": "stem",
+      "bpm": 128
+    },
+    {
+      "name": "Evolving pulse",
+      "path": "exports/player-v005/audio/theme-pulse.wav",
+      "role": "stem",
+      "bpm": 128
+    },
+    {
+      "name": "Hollow hook",
+      "path": "exports/player-v005/audio/theme-hollow.wav",
+      "role": "stem",
+      "bpm": 128
+    }
+  ]
+}

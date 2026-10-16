@@ -1,0 +1,3 @@
+// Sparse, related two-bar calls; a lower answer develops the second phrase.
+setcpm(128/4)
+hook: s("<[~ uchollowf ~ ~ ~ uchollowf ~ ~] [~ uchollowf ~ ~ ~ ~ ucholloweb ~] [~ uchollowf ~ ~ ~ uchollowf ~ ~] [~ uchollowf ~ ~ uchollowc ~ ~ ~] [~ uchollowf ~ ~ ~ ucholloweb ~ ~] [~ uchollowf ~ ~ ~ ~ uchollowc ~] [~ uchollowf ~ ~ ~ uchollowf ~ ~] [~ uchollowf ~ ~ ~ ~ ~ ~]>").n("<1 0 2 1 3 4 2 0>").gain(".48 .36 .43 .32").clip(1.4).hpf(240).pan(.48).room(.17).delay(.12).delaytime(.3515625).delayfeedback(.26).orbit(5).postgain(.78)

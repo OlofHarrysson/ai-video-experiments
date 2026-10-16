@@ -21,16 +21,18 @@ try {
     await page.waitForFunction(()=>!document.querySelector('#play').disabled);
     const legacy=await page.locator('#palette').count()>0;
     const manifest=await page.request.get(url+'/manifest.json').then(r=>r.json());
+    const alternatives=manifest.tracks.filter(t=>t.alternativeGroup==='chords');
+    const focus=alternatives[0], prior=alternatives.at(-1);
     assert.equal(await page.locator('.track').count(),manifest.tracks.length);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
     if(phase==='after') {
       assert.equal(await page.locator('textarea, #save, .feedback, #palette').count(),0);
       await page.getByRole('button',{name:'Only Bass',exact:true}).click();
-      await page.getByRole('button',{name:'Only Chords · steady rhythm',exact:true}).click();
+      await page.getByRole('button',{name:`Only ${focus.name}`,exact:true}).click();
       assert.equal(await page.locator('.solo[aria-pressed=true]').count(),1);
       assert.equal(await page.locator('.track:not(.silent)').count(),1);
-      assert.equal(await page.locator('[data-track=chords-flow].silent').count(),0);
-      await page.getByRole('button',{name:'Only Chords · steady rhythm',exact:true}).click();
+      assert.equal(await page.locator(`[data-track="${focus.id}"].silent`).count(),0);
+      await page.getByRole('button',{name:`Only ${focus.name}`,exact:true}).click();
       assert.equal(await page.locator('.track:not(.silent)').count(),manifest.tracks.filter(t=>t.enabled).length);
       await page.getByRole('switch',{name:'Sound on/off Bass',exact:true}).click();
       assert.equal(await page.locator('[data-track=bass].silent').count(),1);
@@ -40,7 +42,6 @@ try {
       assert.equal(await page.locator('[data-track=bass].silent').count(),1);
       await page.getByRole('button',{name:'Reset mix',exact:true}).click();
       // Every published take participates in the same exclusive comparison group.
-      const alternatives=manifest.tracks.filter(t=>t.alternativeGroup==='chords');
       for(const take of alternatives) {
         await page.getByRole('switch',{name:`Sound on/off ${take.name}`,exact:true}).click();
         // A default-on take toggles off first; turn it on for this comparison.
@@ -55,9 +56,9 @@ try {
       await page.getByRole('button',{name:'Pause',exact:true}).click();
       // Human switches select alternative rows without restarting any audio.
       const position=Number(await page.locator('#seek').inputValue());
-      await page.getByRole('switch',{name:'Sound on/off Chords · original rhythm',exact:true}).click();
-      assert.equal(await page.locator('[data-track=chords-flow].silent').count(),1);
-      assert.equal(await page.locator('[data-track=chords-original].silent').count(),0);
+      await page.getByRole('switch',{name:`Sound on/off ${prior.name}`,exact:true}).click();
+      assert.equal(await page.locator(`[data-track="${focus.id}"].silent`).count(),1);
+      assert.equal(await page.locator(`[data-track="${prior.id}"].silent`).count(),0);
       assert.ok(Math.abs(Number(await page.locator('#seek').inputValue())-position)<.1);
       // Send a real agent command and wait for the browser's acknowledgement.
       async function control(command) {
@@ -71,9 +72,9 @@ try {
         assert.equal(actual.state.error,null);
         return actual.state;
       }
-      let state=await control({action:'only',track:'chords-original'});
-      assert.equal(state.only,'chords-original');
-      assert.deepEqual(state.tracks.filter(t=>t.audible).map(t=>t.id),['chords-original']);
+      let state=await control({action:'only',track:prior.id});
+      assert.equal(state.only,prior.id);
+      assert.deepEqual(state.tracks.filter(t=>t.audible).map(t=>t.id),[prior.id]);
       state=await control({action:'only',track:'bass'});
       assert.deepEqual(state.tracks.filter(t=>t.audible).map(t=>t.id),['bass']);
       state=await control({action:'seek',value:7.5});assert.equal(state.time,7.5);
@@ -81,8 +82,8 @@ try {
       state=await control({action:'loop',value:false});assert.equal(state.loop,false);
       state=await control({action:'play'});assert.equal(state.playing,true);
       state=await control({action:'pause'});assert.equal(state.playing,false);
-      state=await control({action:'enabled',track:'chords-flow',value:true});
-      assert.equal(state.only,null);assert.equal(state.tracks.find(t=>t.id==='chords-original').enabled,false);
+      state=await control({action:'enabled',track:focus.id,value:true});
+      assert.equal(state.only,null);assert.equal(state.tracks.find(t=>t.id===prior.id).enabled,false);
       await control({action:'reset'});await control({action:'volume',value:.8});await control({action:'loop',value:true});
       await page.getByRole('button',{name:'Restart',exact:true}).click();
     }
@@ -90,10 +91,10 @@ try {
       {id:'heading',selector:'header',role:'heading'},
       {id:'transport',selector:'.transport',role:'controls'},
       {id:'tracks',selector:'#tracks',role:'content'},
-      {id:'chords',selector:legacy?'[data-track=chords]':'[data-track=chords-flow]',role:'track'},
+      {id:'chords',selector:legacy?'[data-track=chords]':`[data-track="${focus.id}"]`,role:'track'},
     ],relationships:[]});
     assert.deepEqual(issues,[]);
-    for(const [view,crop] of [['context',undefined],['detail',legacy?'[data-track=chords]':'[data-track=chords-flow]']]) {
+    for(const [view,crop] of [['context',undefined],['detail',legacy?'[data-track=chords]':`[data-track="${focus.id}"]`]]) {
       const report=await writeEvidence(page,{basePath:`${output}/${name}-${view}`,identity:{target:'player',state:'paused',viewport:name},observation,issues,crop});
       assert.equal(report.status,'complete');
     }

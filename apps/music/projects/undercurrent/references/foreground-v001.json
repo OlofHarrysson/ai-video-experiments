@@ -1,0 +1,87 @@
+{
+  "origin": "Original oversampled procedural synthesis",
+  "sample_rate": 48000,
+  "oversampling": 4,
+  "files": [
+    {
+      "file": "references/assets/foreground-v001/ucpulse/00.wav",
+      "sha256": "87300fd4a90a1e316de11b6c3012046ac913d372044011a8ca53159897a165f0"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucpulse/01.wav",
+      "sha256": "87508fc54e9a497a775e2ebce9e8507dc771256ed4c956115edd49698ebdc69c"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucpulse/02.wav",
+      "sha256": "3b7292f7679986a0b92591a891681f125abd2f27de8e668bcae06b05dc442f03"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucpulse/03.wav",
+      "sha256": "1d47be7861c6719c88bd63c84b08277434a61f176a7b13457efa890298968429"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucpulse/04.wav",
+      "sha256": "ef4e3016f847e44857adff5bd98b98a64bf1272cb13299bc06ce2f74cf61e9dd"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowf/00.wav",
+      "sha256": "050fb882bb94d786f7ada7c5b69aad9531ec8d70627ae1b41977dac912c24ee3"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowf/01.wav",
+      "sha256": "3478aa21559bc98e268d6e97f594220cb9d82aeeb0dbdcdf284fbb63f01e52ef"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowf/02.wav",
+      "sha256": "1a4f27754926cea14deab14ff32f4f5f1eb8beb5919bedeb92687b3260f90e31"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowf/03.wav",
+      "sha256": "b3495004f194519a87190c9c196b117dcab01c8dced0aaded7efab203cf042ab"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowf/04.wav",
+      "sha256": "9838143a2258a121fce8fe10b6f2bb4627323c9e6f34f6c66f194722b973af42"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucholloweb/00.wav",
+      "sha256": "468b8151667c5e99c3ffa5e0eaef78c9e9cd548d8d67b8cc25cbcb747f22c55f"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucholloweb/01.wav",
+      "sha256": "cafdab3f9b7adf5be2169b5e524e55aeeb718d9599cb5a5dfd2c98b9de33b78b"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucholloweb/02.wav",
+      "sha256": "abca2a09dd8fddf4856d81e3177c3e80d2e89b336157d7b9a1033eaca64cf831"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucholloweb/03.wav",
+      "sha256": "ced06c9f0a85093801deaa1fb938bad46f9c7ec00e3ed0c70ca0a358a199c3f4"
+    },
+    {
+      "file": "references/assets/foreground-v001/ucholloweb/04.wav",
+      "sha256": "0c647c06b2408c5b97d6da1061c66593670d60efb12123b8ea68230c436dbf9a"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowc/00.wav",
+      "sha256": "fb5077e5e65caad3113dc84fc6c4c7e683d95a5ebf6388c178d4505f2f09683d"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowc/01.wav",
+      "sha256": "9ea5b26137dcba88b55fe98fd0b97051dca8689ac5b17b61745a3dd6f8cfa8f4"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowc/02.wav",
+      "sha256": "a5651610e1d05cdadfc783a480adae1e291d2d259382847b428c27673f81a831"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowc/03.wav",
+      "sha256": "b727fdc84d98582c66e3f4c0bd301bf351bd444cee693476a3bf10da6a8474bb"
+    },
+    {
+      "file": "references/assets/foreground-v001/uchollowc/04.wav",
+      "sha256": "5b29778259231341fe97b1828a3a9c38c64a84a599fab69bd4f367309bd764b0"
+    }
+  ]
+}
