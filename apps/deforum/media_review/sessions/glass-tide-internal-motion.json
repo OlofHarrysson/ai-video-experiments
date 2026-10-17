@@ -1,0 +1,20 @@
+{
+  "title": "Glass Tide · Motion inside the image",
+  "selected": ["repainting-only", "local-curl"],
+  "clips": [
+    {
+      "id": "repainting-only",
+      "label": "Repainting only",
+      "note": "All spatial transforms off. Watch the starburst patterns and small towers.",
+      "details": "Three seconds from the saved Glass Tide city painting. Constant original prompt, Krea 2 Turbo, Euler, noise 0.72, three updates, CFG 1, reference off. Each output feeds into the next repaint. No pan, zoom, roll, perspective or local deformation. RIFE 4.25 stays outside feedback; all 27 paintings retained. The model may still redraw objects or drift the composition.",
+      "source": "projects/glass-tide/exports/v001/gt-internal-repaint-a/faster/rife/preview.mp4"
+    },
+    {
+      "id": "local-curl",
+      "label": "Repainting + local curl",
+      "note": "Same setup, with a curl around the patterned shelf on the right.",
+      "details": "Matched starting painting, constant prompt, seeds, noise and RIFE finishing. Adds one smoothly eased radial twist centered on the right shelf; influence decreases with distance. Global zoom and travel are zero. The deformation operates on the previous painting before each repaint. No mask or fixed-opening reference.",
+      "source": "projects/glass-tide/exports/v001/gt-internal-curl-b/faster/rife/preview.mp4"
+    }
+  ]
+}

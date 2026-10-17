@@ -1,0 +1,86 @@
+{
+  "verified": true,
+  "new_generated_jobs": 52,
+  "controls": "Same initial image, constant original prompt, seed sequence, noise 0.72, three Euler intervals, CFG1 and reference-off; only local curl differs.",
+  "videos": [
+    {
+      "case": "gt-internal-repaint-a",
+      "source": "projects/glass-tide/exports/v001/gt-internal-repaint-a/faster/rife/preview.mp4",
+      "sha256": "3331cd9b4271f8530eb656e733758450f2a12cd382a7b394c124491c34933136",
+      "delivery": {
+        "verified": true,
+        "frames": 72,
+        "fps": 24,
+        "paintings": 27,
+        "final_holds": 2,
+        "final_warps": 0,
+        "tail_changed_pixels": null,
+        "video_sha256": "3331cd9b4271f8530eb656e733758450f2a12cd382a7b394c124491c34933136",
+        "retiming_sha256": "9f5f3d3e14198bf6bca18071ac78882934fc852ffece8ceed2a46cf4035aa3db",
+        "anchor_frames_sha256": "709a49d6a03c7e44f13b03d097f8ab58bb84d8de7e8f37161d04b3e2a01e07f2"
+      },
+      "generation_check_sha256": "8b521fd9fe8bae62e0244e0000275f503fd45e86ac7cc764b2164c36c0e1ea48"
+    },
+    {
+      "case": "gt-internal-curl-b",
+      "source": "projects/glass-tide/exports/v001/gt-internal-curl-b/faster/rife/preview.mp4",
+      "sha256": "157c94797b4b277ac1cfa796bf912297c6ddc7ed7283b50ea3680e98e1e52722",
+      "delivery": {
+        "verified": true,
+        "frames": 72,
+        "fps": 24,
+        "paintings": 27,
+        "final_holds": 2,
+        "final_warps": 0,
+        "tail_changed_pixels": null,
+        "video_sha256": "157c94797b4b277ac1cfa796bf912297c6ddc7ed7283b50ea3680e98e1e52722",
+        "retiming_sha256": "918b4466e310959a039703065e046a885f755070baa1e77097c551757a6fb391",
+        "anchor_frames_sha256": "709a49d6a03c7e44f13b03d097f8ab58bb84d8de7e8f37161d04b3e2a01e07f2"
+      },
+      "generation_check_sha256": "8e882506c2e31eb2bfe1e5caa5109f2e3bcdc4475943cf65455668d9e6565410"
+    }
+  ],
+  "original_film": {
+    "source": "projects/glass-tide/exports/v001/gt-sapphire-bloom-h/faster/rife-moving-tail/preview.mp4",
+    "sha256": "004c1f19e54f62a889dede254a88a6d22877e0bcf7d6af4e57cd576b74caae0e",
+    "verified": true
+  },
+  "resource": {
+    "pod_id": "vr4348gtfq1dux",
+    "pod_absent": true,
+    "volume_retained": "vd3jnbwko1",
+    "at": "2026-10-17T12:52:03+00:00",
+    "deletion_response_status": 204,
+    "gpu": "RTX 4090",
+    "rate_usd_per_hour": 0.89,
+    "allocation_seconds_upper_estimate": 778.183,
+    "estimated_compute_usd": 0.19238413055555553
+  },
+  "retained_remote_files": 735,
+  "removed_verified_owned_files": 104,
+  "runtime_archive_sha256": "12a6e61e7175cfc5f029c1cc840f0ae4678b6eb2afca53d2eb44c065973473e7",
+  "viewer": {
+    "verified": true,
+    "url": "http://localhost:3028/glass-tide-internal-motion",
+    "page_status": 200,
+    "selected": [
+      "repainting-only",
+      "local-curl"
+    ],
+    "media": [
+      {
+        "id": "repainting-only",
+        "status": 206,
+        "range": "bytes 0-1023/6516600"
+      },
+      {
+        "id": "local-curl",
+        "status": 206,
+        "range": "bytes 0-1023/6337720"
+      }
+    ],
+    "run_id": "00a5f327-e863-461d-9e1d-44dad9c799a1"
+  },
+  "billing_caveat": "Allocation lifetime through verified absence, including startup and transfer. Excludes retained-volume storage; not an invoice.",
+  "review": "Native paintings, complete overviews and selected every-frame windows screened; human playback preference pending."
+}

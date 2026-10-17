@@ -1,0 +1,82 @@
+{
+  "cadence": 12,
+  "cfg": 1,
+  "reference_mode": "none",
+  "sampler": "euler",
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.72
+    }
+  ],
+  "sigma_ratios": [
+    1,
+    0.8547401428216667,
+    0.5181684593366667,
+    0
+  ],
+  "seed": 1041616,
+  "duration": 13.5,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312
+  ],
+  "initial_image": "projects/glass-tide/exports/v001/gt-prismatic-vault-e/anchors/1392.png",
+  "initial_sha256": "9c89995cf36859d876c6f73036cb35edb94cb4289d3bb0b2bd892cfb61a43297",
+  "scenes": [
+    {
+      "at": 0,
+      "name": "crystalline-city-reveal",
+      "prompt": "An immense suspended city of thin turquoise crystal terraces and finely ribbed ivory vaults, floating in a clear sapphire sea. The nearest curling glass bridge opens onto many smaller stepped platforms with slender silver spires, tiny carved windows and intricate violet mineral gardens. Crimson coral filaments trace a few ledges. Brilliant teal transparent surfaces have precise etched grooves; pale nacre ribs reveal layers of delicate blue glass beneath. The foreground arcs around generous clear dark-blue passages leading into the distant architecture. High-fidelity surreal digital environment, precisely resolved thin edges and deep engraved material relief, tiny sharp specular highlights, saturated jewel colors, deep focus and clear dark gaps between layers. Every close surface carries fine parallel ridges, minute faceted crystals or intricate perforations. No haze, diffuse bloom, soft focus, watercolor, brushwork, lettering or people."
+    }
+  ],
+  "branch_origin": {
+    "case": "gt-prismatic-vault-e",
+    "source_frame": 1392,
+    "config_sha256": "d1c8870b49449a03e2d2f9db2db6cc97c0394714e635b79fc05230a777dc65d4",
+    "note": "Independent matched study; clock resets to zero and prompt stays fixed."
+  },
+  "case": "gt-internal-curl-b",
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 13.5,
+      "center": [
+        1.22,
+        0.55
+      ],
+      "turn": 50,
+      "zoom": 0,
+      "radius": 0.33,
+      "travel": [
+        0,
+        0
+      ]
+    }
+  ]
+}

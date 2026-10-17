@@ -14,6 +14,7 @@ Fine ribs, carved openings and glass edges remain clear, while broad pale surfac
 
 ## Production records
 
+- [Internal motion comparison](experiments/internal-motion.md): repainting alone versus one local curl, with a stationary authored camera. [Compare](http://localhost:3028/glass-tide-internal-motion).
 - [Thirty-second continuation and screening](experiments/finale.md), [execution and resource closeout](experiments/execution-finale.json)
 - [Original eight-second cut](cuts/v001.md), [opening comparison and screening](experiments/opening.md), [opening receipt](experiments/execution-opening.json)
 - [Three opening compositions](experiments/baseline.md), [exact opening prompts](experiments/openings.json)
