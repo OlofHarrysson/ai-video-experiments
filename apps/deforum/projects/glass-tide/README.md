@@ -1,24 +1,23 @@
 # The Glass Tide
 
-A continuous surreal film through an impossible ocean of transparent cobalt glass, crimson coral and pale nacre. Olof approved the crimson coral-ring opening on 2026-10-15 and requested a thirty-second continuation on 2026-10-17.
+A continuous surreal film through an impossible ocean of glass, coral and nacre. The accepted local curl grew into overlapping twists, travelling bends and varied camera movement; Olof approved that twelve-second direction and requested a finished one-to-one-and-a-half-minute film.
 
 ## Current cut
 
-[Watch the thirty-second film](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-sapphire-bloom-h/faster/rife-moving-tail/preview.mp4) · [Cut v002](cuts/v002.md).
+[Watch the 68-second film](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-world-in-the-shell-q/faster/rife-moving-tail/preview.mp4) · [Cut v003](cuts/v003.md).
 
-The exact approved still opens the film. A bank and sideways approach curl the violet reef into a spiral, leading into a blue-and-ivory city. The continuation traverses emerald glass inlays and amber branches, then pulls back through a rolling, unfolding reef. Lateral movement, banks, perspective turns and regional curls overlap. All 270 paintings are retained in the 1536×1024, 24 fps delivery, without cuts or a final hold.
+The crimson reef unfurls into an ivory forest city, amber and obsidian vaults, and blue-violet chambers. In the final reveal, miniature towers and trees occupy a glass coil around a turquoise pearl above a dark sea. Lateral travel, banks, plane turns, regional curls, shear and travelling bends overlap. The ending slows into a wider composition while movement continues. All 612 paintings are retained in the 1536×1024, 24 fps delivery, with no cuts or final hold.
 
-The established recipe remains Krea 2 Turbo, Euler at noise 0.72, three updates and CFG 1. Every new painting starts from the warped previous painting; additional reference conditioning is off. RIFE stays outside feedback. The original eight-second film and its paintings remain intact.
+The recipe remains Krea 2 Turbo, Euler at noise 0.72, three updates and CFG 1. Each new painting starts from the warped previous painting; additional reference conditioning is off. RIFE stays outside feedback. The approved twelve-second opening and the earlier thirty-second film remain preserved.
 
-Fine ribs, carved openings and glass edges remain clear, while broad pale surfaces are smoother and some distant forms soft. Recurrence preserves the architecture more strongly than the prompts' intended material changes. Assistant screening and technical verification are complete; human judgment of full-speed rhythm remains pending.
+Glass edges, engraved partitions and stair silhouettes are clear. Broad nacre faces are smoother, some miniature structures simplify during the blue-chamber passage, and a small transient text-like mark remains near 30 seconds. Native painting checks, overviews and selected every-frame windows are complete; human judgment of the full film's rhythm and ending remains pending.
 
 ## Production records
 
-- [The Unfurling Current](cuts/layered-motion-v001.md): a new twelve-second passage from the accepted local curl, stacking regional twists and travelling bends with camera travel. [Watch](http://localhost:3028/glass-tide-layered-motion) · [Screening](experiments/layered-motion.md) · [Receipt](experiments/execution-layered-motion.json). Edges remain sharp; the ending becomes more abstract and loses some miniature architectural detail. Human playback judgment is pending.
-- [Internal motion comparison](experiments/internal-motion.md): repainting alone versus one local curl, with a stationary authored camera. [Compare](http://localhost:3028/glass-tide-internal-motion).
-- [Thirty-second continuation and screening](experiments/finale.md), [execution and resource closeout](experiments/execution-finale.json)
-- [Original eight-second cut](cuts/v001.md), [opening comparison and screening](experiments/opening.md), [opening receipt](experiments/execution-opening.json)
-- [Three opening compositions](experiments/baseline.md), [exact opening prompts](experiments/openings.json)
-- [First movement brief](experiments/first-motion.json), [frozen camera plans](experiments/configs/)
+- [Long-film direction and screening](experiments/long-finale.md), [execution receipt](experiments/execution-long-finale.json), [frozen continuation configurations](experiments/configs/).
+- [The Unfurling Current](cuts/layered-motion-v001.md): the accepted twelve-second layered-motion opening. [Watch](http://localhost:3028/glass-tide-layered-motion) · [Screening](experiments/layered-motion.md).
+- [Internal motion comparison](experiments/internal-motion.md): repainting alone versus one local curl, with a stationary authored camera. Olof selects the curl. [Compare](http://localhost:3028/glass-tide-internal-motion).
+- [Earlier thirty-second film](cuts/v002.md). [Watch](http://localhost:3028/glass-tide-thirty-seconds) · [Screening](experiments/finale.md).
+- [Original eight-second cut](cuts/v001.md), [opening comparison](experiments/opening.md), [three opening compositions](experiments/baseline.md), [exact opening prompts](experiments/openings.json).
 
-The selected [Crimson Current original](exports/v001/openings/gt-crimson-current-c/anchors/0000.png), alternative stills, every generated painting and job receipt remain preserved. Both continuation allocations are deleted; the existing model cache remains. New iterations should branch from a selected saved painting and preserve this cut.
+Every original painting, alternative and generation receipt remains preserved. All 504 new jobs are verified locally. The owned GPU is deleted; the existing model cache remains. Estimated compute for this continuation is $2.41, excluding retained storage and not an invoice. New iterations should branch from a saved painting and preserve this cut.

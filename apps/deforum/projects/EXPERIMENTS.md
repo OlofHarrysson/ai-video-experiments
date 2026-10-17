@@ -1,12 +1,13 @@
 # Experiment notebook index
 
-Snapshot: 2026-09-17. Entries include plans, session reports and independent reviews as well as completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
+Snapshot: 2026-10-17. Entries include plans, session reports and independent reviews as well as completed renders. Session entries link their supporting research and review notes. Original reports own the findings, settings, media links and human feedback.
 
 ## Useful starting points
 
 | Interest | Start here |
 | --- | --- |
 | Crystal Gate completed to thirty seconds; motion, noise and final reference-free transformation | [World Seed finale](world-seed/experiments/crisp-passage/finale.md) |
+| Finish a 60–90-second continuous film with layered motion and a closing world-within-a-shell reveal | [Glass Tide: 68-second finale](glass-tide/experiments/long-finale.md) |
 | Stack regional twists and travelling bends with smooth camera travel | [Glass Tide: The Unfurling Current](glass-tide/experiments/layered-motion.md) |
 | Internal movement with a stationary camera: repainting alone versus one local curl | [Glass Tide internal-motion comparison](glass-tide/experiments/internal-motion.md) |
 | Extend the accepted opening to thirty seconds with varied continuous motion | [The Glass Tide continuation](glass-tide/experiments/finale.md) |

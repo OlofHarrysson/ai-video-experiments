@@ -545,6 +545,8 @@ Olof likes how patterns move within the completed film, beyond camera motion and
 
 Olof subsequently selects the local curl and requests a longer passage with smooth, varied camera motion and no cuts. He treats this as a broader family of local movement: twisting, turning and pulling the image, with overlapping effects used playfully to introduce more motion. Keep crisp, highly detailed digital art as the quality target; do not reduce his preference to one repeated curl or a single preset. [Layered passage](../apps/deforum/projects/glass-tide/experiments/layered-motion.md).
 
+After the twelve-second layered passage, Olof says “Now we're talking” and asks to wrap the film up at one to one and a half minutes with a cool ending. This approves the layered-motion direction and authorizes the longer film; judgment of the complete film and its new ending remains open. [Long-film production](../apps/deforum/projects/glass-tide/experiments/long-finale.md).
+
 ### 2026-10-16 — The Curve: the AI race, not AI's skills
 
 Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.

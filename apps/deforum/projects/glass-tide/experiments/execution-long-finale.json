@@ -1,0 +1,252 @@
+{
+  "verified": true,
+  "new_generated_jobs": 504,
+  "source": "projects/glass-tide/exports/v001/gt-world-in-the-shell-q/faster/rife-moving-tail/preview.mp4",
+  "sha256": "2cce4ec862684a0d10dc5bd8459491489e29b8003582aaa3e338d25531eabbbf",
+  "delivery": {
+    "verified": true,
+    "frames": 1632,
+    "fps": 24,
+    "paintings": 612,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "2cce4ec862684a0d10dc5bd8459491489e29b8003582aaa3e338d25531eabbbf",
+    "retiming_sha256": "0c985bb3e20a80c119f427cc607acd30769b70dc9f9bbfd2b22fd302f70ea27a",
+    "anchor_frames_sha256": "c0b03d04e9202feb839a918b8d56e6a5d2081ff9dacc06925eb4f7fd403c05b1"
+  },
+  "preservation": {
+    "verified": true,
+    "original_video_hashes": {
+      "gt-unfurling-current-j": "20ce9392513e17b86c83869cd3c635282c0addbf8195874bd8eab77f61446814",
+      "gt-sapphire-bloom-h": "004c1f19e54f62a889dede254a88a6d22877e0bcf7d6af4e57cd576b74caae0e"
+    },
+    "painting_prefix_count": 108,
+    "lossless_delivery_prefix_count": 286
+  },
+  "generation_checks": {
+    "gt-emerald-veins-k": {
+      "through": 1824,
+      "jobs": 45,
+      "sha256": "af0542db28074c8d6074176222aff7fb54a900a93940b15af27390b0c34fd8fb"
+    },
+    "gt-canopy-arches-l": {
+      "through": 3120,
+      "jobs": 108,
+      "sha256": "d44a30840be9ee243beac8155a939f0701cb0a9a9b6e8ce139a21bc954875bf6"
+    },
+    "gt-amber-vaults-m": {
+      "through": 4416,
+      "jobs": 108,
+      "sha256": "06fd043d1dde26b9d1b227e72352e5cebffe2192d25c48b2f7716cfb167a3cdd"
+    },
+    "gt-indigo-chambers-n": {
+      "through": 5712,
+      "jobs": 108,
+      "sha256": "e6997a92fb24e4a35e7071a7f2521ff3567cde5ae4a5c673a037968a0486762f"
+    },
+    "gt-shell-gather-p": {
+      "through": 6036,
+      "jobs": 27,
+      "sha256": "ca09f03536b942fd4401a4fe27ee10068d3500ecf5a275be9f9cc9e0512fa168"
+    },
+    "gt-world-in-the-shell-q": {
+      "through": 7332,
+      "jobs": 108,
+      "sha256": "8df65c04beeda4b952cbd91fe7900981b30c035ce3aef55029a9f0d791f61ede"
+    }
+  },
+  "resource": {
+    "pod_id": "jahrbouymvnz8m",
+    "pod_name": "glass-tide-long-finale",
+    "created_at": "2026-10-17T13:46:55.779Z",
+    "delete_requested_at": "2026-10-17T16:29:00.505Z",
+    "absence_verified_at": "2026-10-17T16:29:16.593Z",
+    "pod_absent": true,
+    "retained_model_volume": "vd3jnbwko1",
+    "retained_model_volume_verified": true,
+    "cost_per_hour_usd": 0.89,
+    "allocation_hours": 2.7057816666666668,
+    "estimated_compute_usd": 2.4081456833333332,
+    "billing_caveat": "Allocation lifetime through verified absence; excludes retained storage; not an invoice."
+  },
+  "retained_remote_files": 9058,
+  "removed_verified_owned_files": 1008,
+  "runtime_archive_sha256": "e79a1c28ec54bbd3405b687ea3a882a95d2be80d88ab43bdd357116db16821cc",
+  "viewer": {
+    "verified": true,
+    "url": "http://localhost:3028/glass-tide",
+    "page_status": 200,
+    "selected": [
+      "glass-tide-complete"
+    ],
+    "media": [
+      {
+        "id": "glass-tide-complete",
+        "status": 206,
+        "range": "bytes 0-1023/146650804",
+        "frames": 1632,
+        "paintings": 612,
+        "duration": 68.0
+      }
+    ],
+    "run_id": "14d68a0c-57a0-4fa0-a93d-bc5d73a4fe5b",
+    "browser": "No browser automation; served data and original media range responses verified."
+  },
+  "billing_caveat": "Allocation lifetime through verified absence, including startup and transfer. Excludes retained-volume storage; not an invoice.",
+  "review": {
+    "method": "Native paintings, overview contact sheets and selected every-displayed-frame windows; no full-speed human playback approval.",
+    "native_paintings": {
+      "K": [
+        1440,
+        1668,
+        1824
+      ],
+      "L": [
+        1920,
+        2040,
+        2376,
+        2628,
+        3120
+      ],
+      "M": [
+        3240,
+        3324,
+        3468,
+        3600,
+        3960,
+        4200,
+        4416
+      ],
+      "N": [
+        4536,
+        4776,
+        5076,
+        5364,
+        5532,
+        5712
+      ],
+      "P": [
+        5880,
+        6036
+      ],
+      "Q": [
+        6204,
+        6360,
+        6660,
+        7008,
+        7332
+      ]
+    },
+    "completed_prior_reviews": [
+      {
+        "workprint_seconds": 19,
+        "overview_frames": 8,
+        "windows": [
+          [
+            11.75,
+            12.125
+          ],
+          [
+            16.75,
+            17.25
+          ],
+          [
+            18.5,
+            18.875
+          ]
+        ],
+        "result": "Continuous spatial changes in sampled joins; softer emerald foreground gives way to clearer miniature architecture."
+      },
+      {
+        "workprint_seconds": 41,
+        "overview_frames": 8,
+        "windows": [
+          [
+            28.875,
+            29.125
+          ],
+          [
+            29.875,
+            30.25
+          ],
+          [
+            36.625,
+            37
+          ],
+          [
+            40.625,
+            40.875
+          ],
+          [
+            37.5,
+            38.125
+          ],
+          [
+            38.125,
+            38.75
+          ]
+        ],
+        "result": "Continuous sampled rims and contours; cathedral forms emerge gradually in the dark opening. Brief text-like mark near 30 seconds."
+      }
+    ],
+    "known_limitations": [
+      "Broad nacre and glass faces are smoother than detailed rims.",
+      "Miniature structures simplify late in the indigo passage before recovering in P/Q.",
+      "Small transient text-like mark near 30 seconds remains.",
+      "Human judgment of the complete film rhythm and ending remains pending."
+    ],
+    "body_review": {
+      "source": "projects/glass-tide/exports/v001/gt-world-in-the-shell-q/faster/rife/preview.mp4",
+      "record": "projects/glass-tide/exports/long-finale-review/complete-body/v001/review.json",
+      "overview_frames": 10,
+      "windows": [
+        [
+          40.875,
+          41.125
+        ],
+        [
+          52.875,
+          53.125
+        ],
+        [
+          55.875,
+          56.125
+        ],
+        [
+          64.5,
+          64.875
+        ]
+      ],
+      "displayed_images": 41,
+      "pages_viewed": 4,
+      "observations": "Rims remain continuous across the sampled M/N, N/P and P/Q handoffs. Miniature details change locally. The pearl and outer glass silhouette remain recognizable during the late turn and pullback; no conspicuous edit jump or doubled rim appears in these windows. Final two held frames in this workprint were replaced and screened separately.",
+      "unchanged_lossless_prefix_in_final": 1630
+    },
+    "ending_review": {
+      "source": "projects/glass-tide/exports/v001/gt-world-in-the-shell-q/faster/rife-moving-tail/preview.mp4",
+      "video_sha256": "2cce4ec862684a0d10dc5bd8459491489e29b8003582aaa3e338d25531eabbbf",
+      "record": "projects/glass-tide/exports/long-finale-review/complete-ending/v001/review.json",
+      "record_sha256": "00bf56ab5ebed7334bc3ef2975e2e01e41fb8026e3f5b257da7269eb7edb336e",
+      "windows": [
+        [
+          67.625,
+          67.999
+        ]
+      ],
+      "displayed_images": 9,
+      "pages_viewed": 1,
+      "observations": "The pearl, whole glass outline, ivory towers, plants and reflection remain coherent across all nine displayed closing frames. The final two spatial frames continue the subtle drift without a conspicuous discontinuity."
+    },
+    "assistant_selection": "Complete 68-second moving-tail cut",
+    "screening_complete": true
+  },
+  "storage": {
+    "verified": true,
+    "completed_deliveries": 20,
+    "shared_paths": 4958,
+    "bytes_represented": 10273494072,
+    "unique_media_removed": 0,
+    "caveat": "APFS byte-identical sharing; represented bytes are not measured physical savings."
+  }
+}

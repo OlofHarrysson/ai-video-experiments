@@ -1,0 +1,13 @@
+{
+  "title": "The Glass Tide · 68 seconds",
+  "selected": ["glass-tide-complete"],
+  "clips": [
+    {
+      "id": "glass-tide-complete",
+      "label": "The Glass Tide · 68 seconds",
+      "note": "Glass reefs, a forest city and jewelled chambers gather into a coiled world above a dark sea.",
+      "details": "Continues the approved twelve-second layered-motion passage. Camera travel, banks, regional curls and travelling bends lead into a slower final reveal. All 612 paintings retained at 1536×1024 and 24 fps. Krea 2 Turbo, noise 0.72, three Euler updates, CFG1, reference conditioning off. Each painting initializes from its moved predecessor. RIFE stays outside feedback; no cuts or final hold.",
+      "source": "projects/glass-tide/exports/v001/gt-world-in-the-shell-q/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}
