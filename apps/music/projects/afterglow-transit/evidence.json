@@ -1,15 +1,15 @@
 {
-  "revision": "v002",
+  "revision": "v003",
   "gain": 0.85,
   "end_fade_seconds": 0.15,
   "master": {
-    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/afterglow-transit/exports/player-v002/afterglow-transit.wav",
-    "sha256": "900bda223cb697c21fbc90921f4534d6f162913f4bd50e1e76cbc5f15ea164e3",
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/afterglow-transit/exports/player-v003/afterglow-transit.wav",
+    "sha256": "2772ebece25d1f38d9c8d9811d86b086b83870f893e48163c19494a7bd307841",
     "seconds": 64.76189583333333,
     "sample_rate": 48000,
     "channels": 2,
-    "sample_peak_dbfs": -2.599679476417671,
-    "rms_dbfs": -16.145526959161643,
+    "sample_peak_dbfs": -2.4159382851482167,
+    "rms_dbfs": -15.298369257768385,
     "samples_at_or_above_full_scale": 0,
     "sample_format": "FLOAT",
     "pcm_rail_samples": null,
@@ -18,58 +18,49 @@
     "silence_threshold_dbfs": -80,
     "silence_min_seconds": 0.1,
     "silence_intervals": [],
-    "integrated_lufs": -15.9,
-    "true_peak_dbtp": -2.6,
-    "loudness_range_lu": 6.9,
-    "lr_correlation": 0.83686967940075,
-    "mono_rms_dbfs": -16.515075182023132
+    "integrated_lufs": -15.18,
+    "true_peak_dbtp": -2.33,
+    "loudness_range_lu": 1.4,
+    "lr_correlation": 0.915920828116106,
+    "mono_rms_dbfs": -15.484934106794215
   },
   "stems": {
     "kick": {
-      "source_sha256": "50d7d935711f45f5d45f293bbebb186999cad86b5e537c5fc86027525f499c9d",
-      "published_sha256": "220de283d2d4e8073e5801653a1442e3ec7163c316f4f96e8c0e946fa1205a01"
+      "source_sha256": "76183eb95e9cd24f7e915bcbe0ddb9d7dc837f72b5190f0d7dd80d9ec0408736",
+      "published_sha256": "9c50026c46c03e662892146701eb7b4113451b5abdab55c88ff74f2372a1e021"
     },
     "bass": {
-      "source_sha256": "8a6d74408a4bd916f30b938cb1b0560d0a549c202dada863d568d697c1e17e07",
-      "published_sha256": "bb48873a055949677b44405554c65273207955b04b69bf07d724bb2b50c2b758"
+      "source_sha256": "f9b805e342b2a50b08e349853a7816ebae4ff607d8ffdd60a75dde0070c7d744",
+      "published_sha256": "e7a2c1cddb2235cfcc3232e2faa9223fc2b995dced1ed6b1831bcf44f7ab51b4"
     },
     "clap": {
-      "source_sha256": "7d1d5dbd495603453e74a3c3db6d1d73917bf0fc7ca3c49ecc3d127a6497c4b0",
-      "published_sha256": "883a96d4acfae84e7a1c9fe315549bf6d10fa0edb59c91632dbf328e880e8e9f"
+      "source_sha256": "a19bc455202fc84bd3a435702ab3076f612c64fb8c122612c01210501cc20aa2",
+      "published_sha256": "ec1c4970857cec37406649a3a3d62c523abddc0c8583c4253bdee3ed952f350f"
     },
     "hats": {
-      "source_sha256": "30ef5a313eb8148a261ec824a74664695b7ba56d7a42bffacc87dada9ccecf54",
-      "published_sha256": "de8642287b925ca219aaf67d9f225c9312dfdd66c07698a9745d32bf44e5db07"
+      "source_sha256": "f151746c8345cffa15c198c087bda3877d1a62159db6d9c4c8d13fe1b6b12e71",
+      "published_sha256": "808daf470efd742c1c80978c12ff2abae0ff1e8ad24f74090b4f598e655815f1"
     },
     "percussion": {
-      "source_sha256": "2d3e65cadea72651a8648752bfee4d62654304f60ab4e53c2495330f2fb8d041",
-      "published_sha256": "c0d31d6b942b146ac8b72a8846246a5b3887a4a37b678165a24a75d14d9a88ab"
+      "source_sha256": "7c6926dc9edd6ad4cbb0a2dd11f846c6c28e016cec88abc792ad9a7eef2217d7",
+      "published_sha256": "0d5a44fc6a1886f568e716a4bc7533c30ba6e811807bba2915c7507db5306721"
     },
     "harmony": {
-      "source_sha256": "6c1b569b5ca39c095da38b20481faac92d257e292a658e774c64d1615576952b",
-      "published_sha256": "dcba20ed8c4337c73b477d0e75f4970893cf7970b2d42924629732d3b4a4cc71"
+      "source_sha256": "c5a7d61578157e47e66a2393ac0e4eb96a92754757bc6c0a714f6757ffa2126e",
+      "published_sha256": "bd747972d02d44e312e69819c03256421f1b14b4fa168edc3d789664f0167975"
     },
     "melody": {
-      "source_sha256": "9366c8b1cae8dada13215432f2505b95515f487fc55b5807391a2bf0b150e67c",
-      "published_sha256": "f606742e4de26b7b76afa518afa19b0e9fe7d5f8f8717fa7984959f314578d63"
+      "source_sha256": "fa2cd9dc22e1603bc297da2cb1c8122850d5f4fcf1ed41c2018ae2b0ebe66976",
+      "published_sha256": "730cd56b00aff763a402a337164cd9d137205c7bdb091b4a76c00942fb98a4d3"
     },
     "arpeggio": {
-      "source_sha256": "66a6ff71f3270a757aab911926e5b1c351300f0594bb9776492c9257356bd3ad",
-      "published_sha256": "3e4421356c754f8f3aa03ee088bcdd51384a1d6193bb4670828d814505ece05c"
+      "source_sha256": "f28c2fe55a8b9ed6aa50e46ca9ec94743ee92ae0580bae169c59de5cf345b8ce",
+      "published_sha256": "7813304078408f612573ff845c3a721c56b006f29af6d7ce0aac8271c7633b2a"
     },
     "air": {
-      "source_sha256": "ae63caecbd314f3ac52e4acbfa081ecd2a4b95016f74eb609def992d872ee5b9",
-      "published_sha256": "5dbf4524cd3562b7804e8a10b9fe0361f886e66f842b45075364db37ad38f730"
+      "source_sha256": "df12515df77014262a2cee80b9bec3f06574723ed761e4098996c8cd0b343411",
+      "published_sha256": "b66f790d44c9f753074578ba3f8d937eb76e60bfc9ed13c00386732097805676"
     }
   },
-  "note": "Playback and standalone file use the same sum of separately rendered stems. The independently rendered wet master is preserved.",
-  "audit": {
-    "manifest_hashes_verified": true,
-    "stem_sum_peak_error": 4.859248292632401e-08,
-    "bass_silent_seconds": [
-      32,
-      45.7
-    ],
-    "final_sample_peak": 0.0
-  }
+  "note": "Playback and standalone file use the same sum of separately rendered stems. The independently rendered wet master is preserved."
 }

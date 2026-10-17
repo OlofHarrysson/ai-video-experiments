@@ -2,9 +2,15 @@
 
 2026-10-17. A new 126 BPM melodic deep-house/trance study requested by Olof, separate from Undercurrent. Approximately 65 seconds, with a new score, bass phrase and original procedural sound palette. Human taste verdict pending.
 
-[Open the shared player](http://localhost:3046/) or [play the complete mix](exports/player-v002/afterglow-transit.wav). Nine synchronized parts can be muted or isolated: kick, bass, clap, hats, wood percussion, warm chords, lead melody, arpeggio and air swells. The player and standalone WAV use the same sum of stems. Earlier songs and both revisions remain preserved.
+[Open the shared player](http://localhost:3046/) or [play the complete mix](exports/player-v003/afterglow-transit.wav). Nine synchronized parts can be muted or isolated: kick, bass, clap, hats, wood percussion, warm chords, lead melody, arpeggio and air swells. The player and standalone WAV use the same sum of stems. Earlier songs and both revisions remain preserved.
 
-## Musical intent
+## Current revision: v003
+
+Olof liked the direction and requested quieter warm chords, no break, and an audible arpeggio. Warm chords are reduced by 4.5 dB; the arpeggio is raised by 9 dB. The full kick and bass continue through bars 17–24, along with the regular percussion and melodic layers. The former half-time kick and clap build are removed. Duration, melody, harmonic sequence and sound palette stay the same; the final resolution/tails remain.
+
+[Instrument balance report](exports/balance-v003/report.md) and [measurements](balance-v003.json) compare the same active passage at 45.71–60.71 seconds. The previous arpeggio was about 15 dB below the lead in full-band RMS and about 14.6 dB below it in the 250–4000 Hz band. This supports investigating its low level; it does not independently prove perceptual masking. `check_balance.py` verifies the requested gain changes and continued kick/bass activity in every former break/build bar. Per-bar band analysis is available in `exports/bands-v002/` and `exports/bands-v003/` using the existing `analyze-project` command. No new paid model review was used for this adjustment. Measured changes are −4.46 dB for chords and +9.00 dB for the arpeggio; final playback is −15.18 LUFS / −2.33 dBTP with no overload. 39 Python tests and Ruff pass.
+
+## Original musical intent
 
 The harmonic loop is Dm9 → B-flat major 9 → F major 9 → Cadd9, with each harmony lasting two bars. Close upper voicings move above a changing bass root. The lead begins as a sparse question, develops through related phrases, and reaches higher notes during the final return. A quieter arpeggio adds movement behind it. The chord samples have a beat-synchronous volume dip to leave room for the kick, including during the exposed breakdown.
 
@@ -20,7 +26,7 @@ The harmonic loop is Dm9 → B-flat major 9 → F major 9 → Cadd9, with each h
 
 [make_palette.py](make_palette.py) synthesizes detuned harmonic pads/leads, an FM arpeggio, a pitched kick, filtered-noise hats/clap, wood percussion and air. Synthesis runs at 96 kHz before downsampling to 48 kHz PCM24; deterministic seed and sample hashes are in [palette provenance](references/palette-v001.json). No reference audio or artist sample is used.
 
-## Screening and revision
+## Earlier screening and revision
 
 V001's complete master and nine stems rendered successfully without PCM rail contacts. A 53-second master excerpt was sent to `google/gemini-4-argon` via OpenRouter/Google after verifying the live catalog. The high-reasoning response completed with finish reason `stop`, reporting $0.027. The prompt is [preserved](review-prompt.txt); receipts are local in `../../work/afterglow-transit-20261017/review/`.
 
@@ -30,15 +36,15 @@ The model recognized the broad roles and breakdown, and raised a concern that th
 
 Technical screening cannot establish taste, emotional impact or club quality. The next useful evidence is Olof's reaction to the complete piece and its isolated parts.
 
-The final playback measures **−15.90 LUFS / −2.60 dBTP**, with no overload. A sample check verifies the player-stem sum against the WAV within 4.9e−8, bass silence through the build, and a zero final sample. 39 Python tests, six engine tests, Ruff and desktop/mobile browser checks pass. Publishing a different song exposed a hardcoded player title; the heading and browser title now use the manifest, with live assertions. No visual redesign or renderer change was needed.
+The v002 playback measured **−15.90 LUFS / −2.60 dBTP**, with no overload. A sample check verifies the player-stem sum against the WAV within 4.9e−8, bass silence through the build, and a zero final sample. 39 Python tests, six engine tests, Ruff and desktop/mobile browser checks pass. Publishing a different song exposed a hardcoded player title; the heading and browser title now use the manifest, with live assertions. No visual redesign or renderer change was needed.
 
-## Reproduce
+## Reproduce current revision
 
 From `apps/music`, with the local sample assets restored:
 
 ```sh
-uv run --locked python music.py render-project projects/afterglow-transit/project.json --revision v002 --out NEW_RENDER
+uv run --locked python music.py render-project projects/afterglow-transit/project.json --revision v003 --out NEW_RENDER
 uv run --locked python sound_lab.py projects/afterglow-transit/sound-lab.json --out NEW_INSPECTION
 ```
 
-`project-v001.json` preserves the first revision's stem partition. `compose.py` records how the initial explicit score was expanded; `source/v002.strudel` is the authoritative revised score. `make_palette.py` creates its versioned asset directory only when absent. `publish.py` refuses to replace an output bundle; select new input/output version constants for a new publication. Media remains local/ignored; recipes, generators, sources and evidence are tracked.
+`project-v001.json` preserves the first revision's stem partition. `compose.py` records how the initial explicit score was expanded; `source/v003.strudel` is the authoritative current score; `project-v002.json` preserves the previous arrangement. `make_palette.py` creates its versioned asset directory only when absent. `publish.py` refuses to replace an output bundle; select new input/output version constants for a new publication. Media remains local/ignored; recipes, generators, sources and evidence are tracked.

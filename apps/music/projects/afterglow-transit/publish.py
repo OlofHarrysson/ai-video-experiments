@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import music
 
 ROOT = Path(__file__).resolve().parent
-RENDER = ROOT / "renders/v002"
-OUT = ROOT / "exports/player-v002"
+RENDER = ROOT / "renders/v003"
+OUT = ROOT / "exports/player-v003"
 GAIN = 0.85
 NAMES = {
     "kick": "Kick",
@@ -79,7 +79,7 @@ def main():
     music.save_json(
         ROOT / "evidence.json",
         {
-            "revision": "v002",
+            "revision": "v003",
             "gain": GAIN,
             "end_fade_seconds": 0.15,
             "master": metrics,
@@ -94,28 +94,28 @@ def main():
             "inputs": [
                 {
                     "name": "Theme: complete mix",
-                    "path": "exports/player-v002/afterglow-transit.wav",
+                    "path": "exports/player-v003/afterglow-transit.wav",
                     "start": 15.238095,
                     "role": "mix",
                     "bpm": 126,
                 },
                 {
                     "name": "Return: complete mix",
-                    "path": "exports/player-v002/afterglow-transit.wav",
+                    "path": "exports/player-v003/afterglow-transit.wav",
                     "start": 45.714286,
                     "role": "mix",
                     "bpm": 126,
                 },
                 {
                     "name": "Return: lead melody",
-                    "path": "exports/player-v002/audio/melody.wav",
+                    "path": "exports/player-v003/audio/melody.wav",
                     "start": 45.714286,
                     "role": "stem",
                     "bpm": 126,
                 },
                 {
                     "name": "Return: warm chords",
-                    "path": "exports/player-v002/audio/harmony.wav",
+                    "path": "exports/player-v003/audio/harmony.wav",
                     "start": 45.714286,
                     "role": "stem",
                     "bpm": 126,

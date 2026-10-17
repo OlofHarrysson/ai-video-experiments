@@ -3,28 +3,28 @@
   "inputs": [
     {
       "name": "Theme: complete mix",
-      "path": "exports/player-v002/afterglow-transit.wav",
+      "path": "exports/player-v003/afterglow-transit.wav",
       "start": 15.238095,
       "role": "mix",
       "bpm": 126
     },
     {
       "name": "Return: complete mix",
-      "path": "exports/player-v002/afterglow-transit.wav",
+      "path": "exports/player-v003/afterglow-transit.wav",
       "start": 45.714286,
       "role": "mix",
       "bpm": 126
     },
     {
       "name": "Return: lead melody",
-      "path": "exports/player-v002/audio/melody.wav",
+      "path": "exports/player-v003/audio/melody.wav",
       "start": 45.714286,
       "role": "stem",
       "bpm": 126
     },
     {
       "name": "Return: warm chords",
-      "path": "exports/player-v002/audio/harmony.wav",
+      "path": "exports/player-v003/audio/harmony.wav",
       "start": 45.714286,
       "role": "stem",
       "bpm": 126

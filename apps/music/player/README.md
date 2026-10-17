@@ -11,7 +11,7 @@ Feedback belongs in the conversation. The notes UI and endpoint are removed; his
 Terminal Manager service `music-player`, repository `/Users/olof/git/ai-video-experiments`, runs:
 
 ```sh
-uv run --locked python player/server.py --bundle projects/afterglow-transit/exports/player-v002
+uv run --locked python player/server.py --bundle projects/afterglow-transit/exports/player-v003
 ```
 
 It binds only to loopback at Terminal Manager's assigned `PORT`. Current verified URL: http://localhost:3046/. It is intentionally left running for Olof; stop through Terminal Manager when no longer needed. No paid service is involved. The service expects a version-2 manifest with flat `tracks` entries containing id, name, enabled, URL, hash and waveform. Optional `alternativeGroup` prevents doubling alternative takes. Prior palette bundles remain archives; [publish.py](../projects/afterglow-transit/publish.py) creates this version; previous bundles remain intact.

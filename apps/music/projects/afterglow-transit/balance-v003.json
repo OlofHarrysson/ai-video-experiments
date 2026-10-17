@@ -1,0 +1,184 @@
+{
+  "start_seconds": 45.714286,
+  "duration": 15,
+  "method": "Same active 15-second passage, published stem gains, channel-power RMS and fourth-order 250\u20134000 Hz bandpass. No individual normalization. Relative energy is not a perceptual masking score or a target of equal loudness.",
+  "rows": [
+    {
+      "version": "v002",
+      "id": "kick",
+      "name": "Kick",
+      "sha256": "220de283d2d4e8073e5801653a1442e3ec7163c316f4f96e8c0e946fa1205a01",
+      "rms_dbfs": -15.659062316019776,
+      "midrange_rms_dbfs": -38.44181094615163
+    },
+    {
+      "version": "v002",
+      "id": "bass",
+      "name": "Bass",
+      "sha256": "bb48873a055949677b44405554c65273207955b04b69bf07d724bb2b50c2b758",
+      "rms_dbfs": -29.37480971097509,
+      "midrange_rms_dbfs": -45.32600263768011
+    },
+    {
+      "version": "v002",
+      "id": "clap",
+      "name": "Clap",
+      "sha256": "883a96d4acfae84e7a1c9fe315549bf6d10fa0edb59c91632dbf328e880e8e9f",
+      "rms_dbfs": -45.55420723595671,
+      "midrange_rms_dbfs": -48.90492712009464
+    },
+    {
+      "version": "v002",
+      "id": "hats",
+      "name": "Hi-hats",
+      "sha256": "de8642287b925ca219aaf67d9f225c9312dfdd66c07698a9745d32bf44e5db07",
+      "rms_dbfs": -46.37254692046392,
+      "midrange_rms_dbfs": -61.59149959709514
+    },
+    {
+      "version": "v002",
+      "id": "percussion",
+      "name": "Wood percussion",
+      "sha256": "c0d31d6b942b146ac8b72a8846246a5b3887a4a37b678165a24a75d14d9a88ab",
+      "rms_dbfs": -42.73089017275645,
+      "midrange_rms_dbfs": -42.99916800058041
+    },
+    {
+      "version": "v002",
+      "id": "harmony",
+      "name": "Warm chords",
+      "sha256": "dcba20ed8c4337c73b477d0e75f4970893cf7970b2d42924629732d3b4a4cc71",
+      "rms_dbfs": -26.069271953528606,
+      "midrange_rms_dbfs": -27.531216368998756
+    },
+    {
+      "version": "v002",
+      "id": "melody",
+      "name": "Lead melody",
+      "sha256": "f606742e4de26b7b76afa518afa19b0e9fe7d5f8f8717fa7984959f314578d63",
+      "rms_dbfs": -25.60967880822583,
+      "midrange_rms_dbfs": -25.82908691342128
+    },
+    {
+      "version": "v002",
+      "id": "arpeggio",
+      "name": "Arpeggio",
+      "sha256": "3e4421356c754f8f3aa03ee088bcdd51384a1d6193bb4670828d814505ece05c",
+      "rms_dbfs": -40.25187972452805,
+      "midrange_rms_dbfs": -40.405743326636525
+    },
+    {
+      "version": "v002",
+      "id": "air",
+      "name": "Air swells",
+      "sha256": "5dbf4524cd3562b7804e8a10b9fe0361f886e66f842b45075364db37ad38f730",
+      "rms_dbfs": -56.25808963922469,
+      "midrange_rms_dbfs": -60.68147826982258
+    },
+    {
+      "version": "v003",
+      "id": "kick",
+      "name": "Kick",
+      "sha256": "9c50026c46c03e662892146701eb7b4113451b5abdab55c88ff74f2372a1e021",
+      "rms_dbfs": -15.657078524657518,
+      "midrange_rms_dbfs": -38.44105793576731
+    },
+    {
+      "version": "v003",
+      "id": "bass",
+      "name": "Bass",
+      "sha256": "e7a2c1cddb2235cfcc3232e2faa9223fc2b995dced1ed6b1831bcf44f7ab51b4",
+      "rms_dbfs": -29.372387949245194,
+      "midrange_rms_dbfs": -45.32445255593607
+    },
+    {
+      "version": "v003",
+      "id": "clap",
+      "name": "Clap",
+      "sha256": "ec1c4970857cec37406649a3a3d62c523abddc0c8583c4253bdee3ed952f350f",
+      "rms_dbfs": -45.5531410849672,
+      "midrange_rms_dbfs": -48.90403348158423
+    },
+    {
+      "version": "v003",
+      "id": "hats",
+      "name": "Hi-hats",
+      "sha256": "808daf470efd742c1c80978c12ff2abae0ff1e8ad24f74090b4f598e655815f1",
+      "rms_dbfs": -46.37254692046392,
+      "midrange_rms_dbfs": -61.59149959709514
+    },
+    {
+      "version": "v003",
+      "id": "percussion",
+      "name": "Wood percussion",
+      "sha256": "0d5a44fc6a1886f568e716a4bc7533c30ba6e811807bba2915c7507db5306721",
+      "rms_dbfs": -42.76772408658606,
+      "midrange_rms_dbfs": -43.038891931614806
+    },
+    {
+      "version": "v003",
+      "id": "harmony",
+      "name": "Warm chords",
+      "sha256": "bd747972d02d44e312e69819c03256421f1b14b4fa168edc3d789664f0167975",
+      "rms_dbfs": -30.530905499356592,
+      "midrange_rms_dbfs": -31.895393716422294
+    },
+    {
+      "version": "v003",
+      "id": "melody",
+      "name": "Lead melody",
+      "sha256": "730cd56b00aff763a402a337164cd9d137205c7bdb091b4a76c00942fb98a4d3",
+      "rms_dbfs": -25.749661151509827,
+      "midrange_rms_dbfs": -25.973175774318168
+    },
+    {
+      "version": "v003",
+      "id": "arpeggio",
+      "name": "Arpeggio",
+      "sha256": "7813304078408f612573ff845c3a721c56b006f29af6d7ce0aac8271c7633b2a",
+      "rms_dbfs": -31.247424594160464,
+      "midrange_rms_dbfs": -31.40134750317802
+    },
+    {
+      "version": "v003",
+      "id": "air",
+      "name": "Air swells",
+      "sha256": "b66f790d44c9f753074578ba3f8d937eb76e60bfc9ed13c00386732097805676",
+      "rms_dbfs": -56.2566599675351,
+      "midrange_rms_dbfs": -60.683742266305785
+    }
+  ],
+  "changes_db": {
+    "kick": 0.001983791362258458,
+    "bass": 0.0024217617298951666,
+    "clap": 0.0010661509895086851,
+    "hats": 0.0,
+    "percussion": -0.03683391382960366,
+    "harmony": -4.461633545827986,
+    "melody": -0.1399823432839966,
+    "arpeggio": 9.004455130367589,
+    "air": 0.0014296716895927375
+  },
+  "former_break_bar_rms": {
+    "kick": [
+      -15.713825951076402,
+      -15.713736483415932,
+      -15.713834252598655,
+      -15.713736841427096,
+      -15.713825661457953,
+      -15.713798399115904,
+      -15.713749833941087,
+      -15.713825951076402
+    ],
+    "bass": [
+      -29.38087802819915,
+      -29.384384775787737,
+      -29.265309728190193,
+      -29.248717711053246,
+      -29.426702530746542,
+      -29.415339943311455,
+      -29.304015359788306,
+      -29.2850118718841
+    ]
+  }
+}

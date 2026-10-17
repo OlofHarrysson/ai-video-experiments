@@ -2,9 +2,9 @@
   "version": 1,
   "title": "Afterglow Transit",
   "revisions": {
-    "v002": {
-      "source": "source/v002.strudel",
-      "notes": "Clearer return: sparse kick through early build, two-bar clap lift, bass/full kick withheld until bar 25; quieter air."
+    "v003": {
+      "source": "source/v003.strudel",
+      "notes": "Continuous groove through former break/build; chords -4.5 dB, arpeggio +9 dB; other sound design and melody retained."
     }
   },
   "end_cycle": 34,
@@ -14,16 +14,14 @@
   ],
   "stems": {
     "kick": [
-      "kick",
-      "buildkick"
+      "kick"
     ],
     "bass": [
       "sub",
       "bass"
     ],
     "clap": [
-      "clap",
-      "buildclap"
+      "clap"
     ],
     "hats": [
       "hats",
@@ -61,14 +59,6 @@
       12,
       16
     ],
-    "suspension": [
-      16,
-      20
-    ],
-    "build": [
-      20,
-      24
-    ],
     "return": [
       24,
       30
@@ -76,6 +66,10 @@
     "release": [
       30,
       34
+    ],
+    "continuation": [
+      16,
+      24
     ]
   }
 }
