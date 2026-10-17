@@ -6,7 +6,7 @@ A silent, 45-second film about the AI race: so many labs, so many new models, so
 
 ## Watch
 
-- Film: `renders/the-curve-v005.mp4` (1920×1080, 30 fps, H.264, no audio). v001–v004 are earlier passes, kept for comparison.
+- Film: `renders/the-curve-v005.mp4` (1920×1080, 30 fps, H.264, no audio): the locked current cut. v001–v004 are earlier passes, kept for comparison.
 - Look check: `renders/look-v1/look-check.png`
 - Studio: `npm run dev`
 
@@ -94,4 +94,4 @@ npm run lint                         # ESLint with Remotion's rules, then tsc
 
 ## Status
 
-The assistant screened v005 by frame samples across every beat and the transitions. The person is in every sampled frame before the reveal, and there are no black frames before the final fade. It did not judge playback rhythm or pacing, and Olof has not yet watched v005.
+**v005 is the locked current cut.** Olof watched it on 2026-10-17 and said "it lands". The assistant's screening covered frame samples across every beat and transition; playback rhythm is Olof's verdict. The film is silent; music is still to be laid on the sync points above.
