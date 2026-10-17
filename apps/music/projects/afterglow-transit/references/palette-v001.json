@@ -1,0 +1,104 @@
+{
+  "origin": "Original procedural synthesis; no reference sampling",
+  "sample_rate": 48000,
+  "synthesis_rate": 96000,
+  "seed": 171026,
+  "files": [
+    {
+      "file": "references/assets/v001/atpad/00.wav",
+      "sha256": "f25783ae0e24fe37d5656fcfa21dd85dc8bb78a1ff7451160204e6214e83a1a1"
+    },
+    {
+      "file": "references/assets/v001/atpad/01.wav",
+      "sha256": "0796aa4c65396a289ebe334090af12436b575a94bce14c0dd6f6543ab5738ff7"
+    },
+    {
+      "file": "references/assets/v001/atpad/02.wav",
+      "sha256": "b38ac97b7903d47daa290bf2fbcab720db26af71f808225d1a3a3527f4dba216"
+    },
+    {
+      "file": "references/assets/v001/atpad/03.wav",
+      "sha256": "dfcb0cb336d1e82f6b15d7b85aea975c640d983c6a81b9cb5ffb3a0dd7fc0c51"
+    },
+    {
+      "file": "references/assets/v001/atlead/00.wav",
+      "sha256": "3eb62003f06cbb6f16f33471932f8028a7049947f6ea79225646e1d7a4137cdd"
+    },
+    {
+      "file": "references/assets/v001/atarp/00.wav",
+      "sha256": "6d4116ed8dda39114d879240c3d01da758fcef7da38c72a0b5992edf01fb3326"
+    },
+    {
+      "file": "references/assets/v001/atlead/01.wav",
+      "sha256": "c3057774719450f476a23ced7ca0b50d18567029674a929cb099815454b9f21c"
+    },
+    {
+      "file": "references/assets/v001/atarp/01.wav",
+      "sha256": "1150227a86aa57c8ebca42e4da7011d7f1645ae984f201fba47043727128b0ab"
+    },
+    {
+      "file": "references/assets/v001/atlead/02.wav",
+      "sha256": "aedd36b31eeffa035b9c8f161dfaa863b1df6377856e1ddbdd85d52df6875e7a"
+    },
+    {
+      "file": "references/assets/v001/atarp/02.wav",
+      "sha256": "ccd04de2de697fb8a91eb26b777061c642a000ef8edb9ee13753e6bfa548311f"
+    },
+    {
+      "file": "references/assets/v001/atlead/03.wav",
+      "sha256": "4a070ce24d8a2f5d3ffd79a4d72c12eddb8f9c6d49ddcd91064a4b471ded3ff5"
+    },
+    {
+      "file": "references/assets/v001/atarp/03.wav",
+      "sha256": "ba07fa63dd721361f3f527a8f0f0c55cb8602c3e42fa312d42da33d7ec7cfdb2"
+    },
+    {
+      "file": "references/assets/v001/atlead/04.wav",
+      "sha256": "d5b98e0ca92812a060e47f7299982aca751787b1e91f08164fa0fe7de2ef3cac"
+    },
+    {
+      "file": "references/assets/v001/atarp/04.wav",
+      "sha256": "c4e1c9d30186102ce0c61303680696331fca64778e89e0527751b56258c9bf50"
+    },
+    {
+      "file": "references/assets/v001/atlead/05.wav",
+      "sha256": "e9a3497bf94993fc8c87144fc5a52d565c7c025c0206336d743f917996f4d823"
+    },
+    {
+      "file": "references/assets/v001/atarp/05.wav",
+      "sha256": "64ab72a10f293cfdb84844f119bf81cfb97ce4a5814e6532f7b8580659239a9e"
+    },
+    {
+      "file": "references/assets/v001/atlead/06.wav",
+      "sha256": "afc84566a885e27c00202ff10bb629123bfd2c8f46066f7c6aad0b9d2017a01f"
+    },
+    {
+      "file": "references/assets/v001/atarp/06.wav",
+      "sha256": "05a3f78e5e54284ed7413f61614fd01150174629aacf9a16b2814acb0e3dfda2"
+    },
+    {
+      "file": "references/assets/v001/atkick/00.wav",
+      "sha256": "20bbd4f362bc29d6fa3708501e1165522d158eb6e80c8513230af6079635bf64"
+    },
+    {
+      "file": "references/assets/v001/athat/00.wav",
+      "sha256": "d645d4fe1ff9dfae630e5da2f5497ba4f1a7f15b989f3378870da899f0b3350f"
+    },
+    {
+      "file": "references/assets/v001/athat/01.wav",
+      "sha256": "acaa1a07ea3d02ceef97bac4ef20d5ee1c6cd42f0426cad87eeb3b532ff5afd7"
+    },
+    {
+      "file": "references/assets/v001/atclap/00.wav",
+      "sha256": "6a34912785898657317969f562f18f27b31fa57b0101bb75a08790238b8e9bce"
+    },
+    {
+      "file": "references/assets/v001/atwood/00.wav",
+      "sha256": "29106f88a1de77cc6c71dabdc26872defaa71edeb56044c6117e37f187aef6ad"
+    },
+    {
+      "file": "references/assets/v001/atair/00.wav",
+      "sha256": "ec60239980e204862ab755b9a155e814cc7500679abf047cc7506f497543b03a"
+    }
+  ]
+}

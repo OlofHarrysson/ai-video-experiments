@@ -1,17 +1,21 @@
 # Music workbench — handoff
 
-Updated 2026-10-16. Work in `apps/music`; the brainstorm workspace is historical.
+Updated 2026-10-17. Work in `apps/music`; the brainstorm workspace is historical.
 
 ## Current goal
 
-**Current handoff: [foreground study and Sound Lab](../projects/undercurrent/foreground-study.md).** Olof asked for a new example plus a local harness for inspecting sound. Two 15-second ideas replace the disliked chord foreground over the same foundation: **Theme · evolving pulse** (initially on) and **Theme · hollow hook**. **Chords · previous** remains a comparison row. All earlier versions are preserved. Human taste verdict pending.
+**Current handoff: [Afterglow Transit](../projects/afterglow-transit/README.md).** Olof requested a completely different melodic trance/techno/deep-house song. V002 is 64.76 seconds at 126 BPM, with new Dm9/B-flatmaj9/Fmaj9/Cadd9 harmony, bass and related lead phrases, a breakdown and a defined return. Nine parts are available in the [shared player](http://localhost:3046/), Terminal Manager `music-player`, bundle `projects/afterglow-transit/exports/player-v002`. The previous studies are preserved. Human taste verdict pending.
 
-The [shared player](../player/README.md) is running at [localhost:3046](http://localhost:3046/), Terminal Manager service `music-player`, bundle `exports/player-v005`. Open/reload it to connect: headless desktop/mobile checks passed, but the user's in-app tab was unavailable while the Mac was locked. The dark/bright-blue design and shared controls are retained. An audio-file transfer failure found during testing was fixed with chunked responses.
+Final playback is the verified stem sum, −15.90 LUFS / −2.60 dBTP, no overload and a zero final sample. The Sound Lab report compares theme/return and isolated foreground parts. A completed audio-model review of v001 cost $0.027; a rhythm-entry concern informed v002, while inaccurate timing/repetition descriptions were not treated as facts. V002 has local technical screening. 39 Python tests, six player-engine tests and Ruff pass. Desktop/mobile live checks pass. The browser adapter now supports songs without alternative groups as well as comparisons, and the heading/tab title read the loaded song manifest.
+
+**Previous handoff: [foreground study and Sound Lab](../projects/undercurrent/foreground-study.md).** Olof asked for a new example plus a local harness for inspecting sound. Two 15-second ideas replace the disliked chord foreground over the same foundation: **Theme · evolving pulse** (initially on) and **Theme · hollow hook**. **Chords · previous** remains a comparison row. All earlier versions are preserved. Human taste verdict pending.
+
+That comparison remains in `projects/undercurrent/exports/player-v005`; the live player now serves Afterglow Transit. The dark/bright-blue design and shared controls are retained. An audio-file transfer failure found during that study was fixed with chunked responses.
 
 [Sound Lab](sound-lab.md) combines existing inspection with section recipes, shared-scale spectrograms, RMS/peak and 400 ms LUFS timelines, waveform close-ups, and peak-safe matched full mixes/reference copies. It was exercised on the new stems/mixes and the phone reference. Plots and audio-model observations support technical decisions, not taste approval. Final mixes are within 0.07 LUFS and below −3 dBTP. One review of the initial candidates cost $0.022872; the final pulse received a modest brightness reduction. 39 Python tests, six player-engine tests, Ruff and desktop/mobile live checks pass.
 
 
-Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Olof says its structure is closer but remains unsure about the instruments. The earlier [palette comparison](../projects/undercurrent/palette-comparison.md) is preserved. Current work targets foreground sound and motif, following the later feedback above.
+Olof prefers **Negative Space v012** to Pressure Lock v011 and considers both an improvement. Some unspecified instruments and the beat still do not suit his taste. He wants a recognizable, stable foundation with thematic development and surprises mostly in details, plus occasional larger breaks/returns. **[Undercurrent](../projects/undercurrent/README.md)** is the new 30-second response, using a fixed two-bar bass phrase, four-on-the-floor drums and related variations of one muted chord motif. Olof says its structure is closer but remains unsure about the instruments. The earlier [palette comparison](../projects/undercurrent/palette-comparison.md) is preserved. The subsequent foreground study explored new sound and motif choices; Afterglow Transit is a separate melodic direction.
 
 The [two-hour club-detail sprint](../projects/club-detail-sprint/README.md) is complete; do not restart its goal. Olof manages the OpenRouter balance; record usage without assistant-imposed dollar limits.
 
@@ -61,7 +65,7 @@ Latest selections: [Pressure Lock and Negative Space](../projects/club-detail-sp
 
 ## Next work
 
-1. Listen to the two foreground sketches with Olof in the player. Establish a preferred sound and motif before extending the arrangement; use Only to distinguish the foreground from the shared foundation.
+1. Listen to Afterglow Transit with Olof. Use the independent melody, harmony and bass rows to make feedback specific before developing another revision.
 2. Keep using saved project recipes, master-derived previews and explicit local sample folders. Add further tooling only for concrete friction encountered during composition.
 3. GitHub importing, vocal extraction, automatic beat/key detection and sample discovery remain deferred. Keep model listening questions specific and confirm objective claims locally.
 

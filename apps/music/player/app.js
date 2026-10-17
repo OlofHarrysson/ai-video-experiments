@@ -1,6 +1,8 @@
 import {Mixer} from './engine.js';
 const $ = id => document.getElementById(id);
 const config = await fetch('/manifest.json').then(r => {if(!r.ok) throw Error('Missing player bundle'); return r.json();});
+$('song-title').textContent = config.title;
+document.title = `${config.title} — sound player`;
 const context = new AudioContext();
 const mixer = new Mixer(context, config.duration);
 let ready = false, session, lastCommand = 0, lastError = null;

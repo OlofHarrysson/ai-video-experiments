@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "title": "Afterglow Transit",
+  "revisions": {
+    "v001": {
+      "source": "source/v001.strudel",
+      "notes": "New melodic deep-house / trance composition and original palette."
+    }
+  },
+  "end_cycle": 34,
+  "sample_rate": 48000,
+  "samples": [
+    "references/assets/v001"
+  ],
+  "stems": {
+    "kick": [
+      "kick"
+    ],
+    "bass": [
+      "sub",
+      "bass"
+    ],
+    "clap": [
+      "clap"
+    ],
+    "hats": [
+      "hats",
+      "shuffle",
+      "open"
+    ],
+    "percussion": [
+      "wood"
+    ],
+    "harmony": [
+      "pads",
+      "resolve"
+    ],
+    "melody": [
+      "lead",
+      "lastnote"
+    ],
+    "arpeggio": [
+      "arp"
+    ],
+    "air": [
+      "air"
+    ]
+  },
+  "sections": {
+    "arrival": [
+      0,
+      4
+    ],
+    "theme": [
+      4,
+      12
+    ],
+    "lift": [
+      12,
+      16
+    ],
+    "suspension": [
+      16,
+      20
+    ],
+    "build": [
+      20,
+      24
+    ],
+    "return": [
+      24,
+      30
+    ],
+    "release": [
+      30,
+      34
+    ]
+  }
+}

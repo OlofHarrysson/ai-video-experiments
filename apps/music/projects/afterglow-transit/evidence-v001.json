@@ -1,0 +1,66 @@
+{
+  "revision": "v001",
+  "gain": 0.85,
+  "end_fade_seconds": 0.15,
+  "master": {
+    "source": "/Users/olof/git/ai-video-experiments/apps/music/projects/afterglow-transit/exports/player-v001/afterglow-transit.wav",
+    "sha256": "05537fb2d539435b9cf71206a541034373d128b1f5885cd7e1ccb947ed2dbd72",
+    "seconds": 64.76189583333333,
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_peak_dbfs": -2.8104041104722484,
+    "rms_dbfs": -15.667296487955113,
+    "samples_at_or_above_full_scale": 0,
+    "sample_format": "FLOAT",
+    "pcm_rail_samples": null,
+    "pcm_rail_longest_run_frames": null,
+    "bpm_supplied": 126,
+    "silence_threshold_dbfs": -80,
+    "silence_min_seconds": 0.1,
+    "silence_intervals": [],
+    "integrated_lufs": -15.45,
+    "true_peak_dbtp": -2.8,
+    "loudness_range_lu": 6.9,
+    "lr_correlation": 0.8523193778531433,
+    "mono_rms_dbfs": -16.000461014747287
+  },
+  "stems": {
+    "kick": {
+      "source_sha256": "ecab21a58a4a1f7cba0d0d74e6870aaa44c14dc83c9beb423cc39e50efca6d46",
+      "published_sha256": "9f2815c85315ed467924b4f14afa14e4b0b63e9b11bf241a72cf4315b3f82f85"
+    },
+    "bass": {
+      "source_sha256": "099dffb6510e258afefea3f49d051ab1a5f73341fbd02779e547d6dc1d881ea5",
+      "published_sha256": "889c7629eea01b0ac2ce88e747dd79f48310bcea1ea8bbff776173fd3a4ae290"
+    },
+    "clap": {
+      "source_sha256": "be8e2e199dadc4400fcb8a5d849e7c26f4ad3e12043d0645c14b117e2e81a3eb",
+      "published_sha256": "3ca13be46ae7fc32d0c2357fa23320bc2621068435b18df0d3191d5ee74fa5d4"
+    },
+    "hats": {
+      "source_sha256": "078623bbf6f23642b9519e1f32111d6f82ca17a5c9f28bd9d385f8924db533dd",
+      "published_sha256": "9fdfc93b2be51faa7570cc0e0577d8fa38fb878a057ca24589bc8c8c33d0b8fa"
+    },
+    "percussion": {
+      "source_sha256": "81b09fe245e37edbe1b34dd689d5281fe83f953e534eee284af2ed032bc38074",
+      "published_sha256": "de233d353939a2e3ebb167c363e51cf63117319c264e130b1fc5d0988e4f193f"
+    },
+    "harmony": {
+      "source_sha256": "5184b9c62d65df5eef936214f660f1836136e4a36028412091a98d6d42e93901",
+      "published_sha256": "479d74bef01ab7fb2dcc434acbec43e68e95dbf667b1018f0809669910cf6390"
+    },
+    "melody": {
+      "source_sha256": "8976cd9aa30c8457576ff4038eaf0f4182c6c859905cf5e5be1a8f298784b6e9",
+      "published_sha256": "631c977f0648ce214ba789685a8e4e9a71c12413391078edd7d17406397d9886"
+    },
+    "arpeggio": {
+      "source_sha256": "414194eba58d4e6a3622d8803fc3db103317d7b89318f245686767da0e95e857",
+      "published_sha256": "e807c79a8a67231d5e9aa04cb505c661e143319c387f450976958f6602e99118"
+    },
+    "air": {
+      "source_sha256": "62274c941f8388abd99b341417a0bed21cafa9e144ad4f9e7fe60d9fb8dfa2ad",
+      "published_sha256": "5d1c0c966ac59dd8b1871a4e45cbfb64d477f97f004f7965f77cd7dec895b007"
+    }
+  },
+  "note": "Playback and standalone file use the same sum of separately rendered stems. The independently rendered wet master is preserved."
+}

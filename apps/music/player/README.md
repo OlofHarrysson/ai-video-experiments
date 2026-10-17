@@ -1,6 +1,6 @@
 # Sound player
 
-Local player for synchronized audio parts. The current [Undercurrent foreground study](../projects/undercurrent/foreground-study.md) has seven shared foundation/detail tracks and three alternative rows: **Theme · evolving pulse** (enabled initially), **Theme · hollow hook**, and **Chords · previous**. These are 15-second comparisons; earlier rhythms and palettes remain preserved.
+Local player for synchronized audio parts. Current song: [Afterglow Transit](../projects/afterglow-transit/README.md), 64.76 seconds with nine independent rows: kick, bass, clap, hats, wood percussion, warm chords, lead melody, arpeggio and air swells. Previous Undercurrent rhythm/palette comparisons remain archived.
 
 **On/off** includes or removes a sound without restarting playback. **Only** temporarily isolates exactly one row; pressing it again returns to the prior mix, including previous off switches. Choosing another Only replaces the selection. Turning a sound on/off exits Only. Chord alternatives share a group: turning one on turns the other off. **Reset mix** restores the initial arrangement. Transport supports play/pause, restart, seeking, loop and volume.
 
@@ -11,10 +11,10 @@ Feedback belongs in the conversation. The notes UI and endpoint are removed; his
 Terminal Manager service `music-player`, repository `/Users/olof/git/ai-video-experiments`, runs:
 
 ```sh
-uv run --locked python player/server.py --bundle projects/undercurrent/exports/player-v005
+uv run --locked python player/server.py --bundle projects/afterglow-transit/exports/player-v002
 ```
 
-It binds only to loopback at Terminal Manager's assigned `PORT`. Current verified URL: http://localhost:3046/. It is intentionally left running for Olof; stop through Terminal Manager when no longer needed. No paid service is involved. The service expects a version-2 manifest with flat `tracks` entries containing id, name, enabled, URL, hash and waveform. Optional `alternativeGroup` prevents doubling alternative takes. Prior palette bundles remain archives; [publish_foreground.py](../projects/undercurrent/publish_foreground.py) creates this version; previous bundles remain intact.
+It binds only to loopback at Terminal Manager's assigned `PORT`. Current verified URL: http://localhost:3046/. It is intentionally left running for Olof; stop through Terminal Manager when no longer needed. No paid service is involved. The service expects a version-2 manifest with flat `tracks` entries containing id, name, enabled, URL, hash and waveform. Optional `alternativeGroup` prevents doubling alternative takes. Prior palette bundles remain archives; [publish.py](../projects/afterglow-transit/publish.py) creates this version; previous bundles remain intact.
 
 ## Shared control
 
@@ -22,14 +22,14 @@ The open browser owns audio and sends actual state about three times per second.
 
 | Action | Fields | Effect |
 | --- | --- | --- |
-| `only` | `track: "theme-pulse"` (or null) | Isolate exactly one part, or return to the mix |
+| `only` | `track: "melody"` (or null) | Isolate exactly one part, or return to the mix |
 | `enabled` | `track`, boolean `value` | Set a part on/off; exit isolation |
 | `play`, `pause`, `reset` | none | Transport or initial mix |
 | `seek` | seconds in `value` | Move the shared playhead |
 | `volume` | 0–1 in `value` | Master volume |
 | `loop` | boolean `value` | Loop setting |
 
-Other IDs: `theme-hollow`, `theme-previous`, `kick`, `bass`, `clap`, `hat`, `openhat`, `brush`, `air`. Read the manifest/state for current IDs instead of assuming them for another song.
+Other IDs: `harmony`, `arpeggio`, `kick`, `bass`, `clap`, `hats`, `percussion`, `air`. Read the manifest/state for current IDs instead of assuming them for another song.
 
 A control response returns `queued`, not a claim of success. Wait for `last_applied_command` to reach that sequence and inspect `state.error` plus the actual tracks/playback state. `connected: false` means the state is stale; do not present it as current. A browser must be open, and its first playback may require a human or UI click to satisfy browser audio policy. No secret or model API is involved.
 
@@ -39,7 +39,7 @@ A control response returns `queued`, not a claim of success. Wait for `last_appl
 
 [User stories, design direction and Harness commands](design/README.md) own UI intent and before/after evidence. Harness modules are installed from pinned source with hashes; project-specific adapters remain outside managed files. All audio sources start on one AudioContext clock; mute, Only and alternative switching change gains without rescheduling.
 
-39 Python tests, six player-engine tests and Ruff pass. Desktop/mobile browser checks verify the manifest’s ten rows and all three chord alternatives, no palette/notes controls, exclusive Only, return to saved mix, chord alternatives, playback, and the real shared-control acknowledgement/state loop. Geometry/captures show no horizontal overflow at 1100 and 390 px. Musical taste is pending Olof's review.
+39 Python tests, six player-engine tests and Ruff pass. Desktop/mobile browser checks verify the manifest’s rows and any chord alternatives, no palette/notes controls, exclusive Only, return to saved mix, chord alternatives, playback, and the real shared-control acknowledgement/state loop. Geometry/captures show no horizontal overflow at 1100 and 390 px. Musical taste is pending Olof's review.
 
 ```sh
 uv run --locked pytest -q

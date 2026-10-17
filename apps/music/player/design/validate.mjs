@@ -21,8 +21,11 @@ try {
     await page.waitForFunction(()=>!document.querySelector('#play').disabled);
     const legacy=await page.locator('#palette').count()>0;
     const manifest=await page.request.get(url+'/manifest.json').then(r=>r.json());
+    assert.equal(await page.locator('h1').innerText(),manifest.title);
+    assert.equal(await page.title(),`${manifest.title} — sound player`);
     const alternatives=manifest.tracks.filter(t=>t.alternativeGroup==='chords');
-    const focus=alternatives[0], prior=alternatives.at(-1);
+    const focus=alternatives[0] || manifest.tracks.find(t=>t.id==='melody') || manifest.tracks.find(t=>t.id!=='bass');
+    const prior=alternatives.at(-1) || manifest.tracks.find(t=>t.id!==focus.id && t.id!=='bass');
     assert.equal(await page.locator('.track').count(),manifest.tracks.length);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
     if(phase==='after') {
@@ -57,8 +60,14 @@ try {
       // Human switches select alternative rows without restarting any audio.
       const position=Number(await page.locator('#seek').inputValue());
       await page.getByRole('switch',{name:`Sound on/off ${prior.name}`,exact:true}).click();
-      assert.equal(await page.locator(`[data-track="${focus.id}"].silent`).count(),1);
-      assert.equal(await page.locator(`[data-track="${prior.id}"].silent`).count(),0);
+      if(alternatives.length) {
+        assert.equal(await page.locator(`[data-track="${focus.id}"].silent`).count(),1);
+        assert.equal(await page.locator(`[data-track="${prior.id}"].silent`).count(),0);
+      } else {
+        assert.equal(await page.locator(`[data-track="${focus.id}"].silent`).count(),0);
+        assert.equal(await page.locator(`[data-track="${prior.id}"].silent`).count(),1);
+        await page.getByRole('switch',{name:`Sound on/off ${prior.name}`,exact:true}).click();
+      }
       assert.ok(Math.abs(Number(await page.locator('#seek').inputValue())-position)<.1);
       // Send a real agent command and wait for the browser's acknowledgement.
       async function control(command) {
@@ -83,7 +92,7 @@ try {
       state=await control({action:'play'});assert.equal(state.playing,true);
       state=await control({action:'pause'});assert.equal(state.playing,false);
       state=await control({action:'enabled',track:focus.id,value:true});
-      assert.equal(state.only,null);assert.equal(state.tracks.find(t=>t.id===prior.id).enabled,false);
+      assert.equal(state.only,null);assert.equal(state.tracks.find(t=>t.id===prior.id).enabled,alternatives.length===0);
       await control({action:'reset'});await control({action:'volume',value:.8});await control({action:'loop',value:true});
       await page.getByRole('button',{name:'Restart',exact:true}).click();
     }

@@ -1,0 +1,33 @@
+{
+  "duration": 15,
+  "inputs": [
+    {
+      "name": "Theme: complete mix",
+      "path": "exports/player-v002/afterglow-transit.wav",
+      "start": 15.238095,
+      "role": "mix",
+      "bpm": 126
+    },
+    {
+      "name": "Return: complete mix",
+      "path": "exports/player-v002/afterglow-transit.wav",
+      "start": 45.714286,
+      "role": "mix",
+      "bpm": 126
+    },
+    {
+      "name": "Return: lead melody",
+      "path": "exports/player-v002/audio/melody.wav",
+      "start": 45.714286,
+      "role": "stem",
+      "bpm": 126
+    },
+    {
+      "name": "Return: warm chords",
+      "path": "exports/player-v002/audio/harmony.wav",
+      "start": 45.714286,
+      "role": "stem",
+      "bpm": 126
+    }
+  ]
+}
