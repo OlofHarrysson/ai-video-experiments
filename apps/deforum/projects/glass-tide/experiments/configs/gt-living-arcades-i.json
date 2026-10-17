@@ -1,0 +1,213 @@
+{
+  "cadence": 12,
+  "cfg": 1,
+  "reference_mode": "none",
+  "sampler": "euler",
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.72
+    }
+  ],
+  "sigma_ratios": [
+    1,
+    0.8547401428216667,
+    0.5181684593366667,
+    0
+  ],
+  "seed": 1041616,
+  "duration": 31.5,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744
+  ],
+  "initial_image": "projects/glass-tide/exports/v001/gt-prismatic-vault-e/anchors/1392.png",
+  "initial_sha256": "9c89995cf36859d876c6f73036cb35edb94cb4289d3bb0b2bd892cfb61a43297",
+  "scenes": [
+    {
+      "at": 0,
+      "name": "crystalline-city-reveal",
+      "prompt": "An immense suspended city of thin turquoise crystal terraces and finely ribbed ivory vaults, floating in a clear sapphire sea. The nearest curling glass bridge opens onto many smaller stepped platforms with slender silver spires, tiny carved windows and intricate violet mineral gardens. Crimson coral filaments trace a few ledges. Brilliant teal transparent surfaces have precise etched grooves; pale nacre ribs reveal layers of delicate blue glass beneath. The foreground arcs around generous clear dark-blue passages leading into the distant architecture. High-fidelity surreal digital environment, precisely resolved thin edges and deep engraved material relief, tiny sharp specular highlights, saturated jewel colors, deep focus and clear dark gaps between layers. Every close surface carries fine parallel ridges, minute faceted crystals or intricate perforations. No haze, diffuse bloom, soft focus, watercolor, brushwork, lettering or people."
+    },
+    {
+      "at": 14,
+      "name": "the-living-arcade",
+      "prompt": "An impossible suspended ivory-and-sapphire reef city curves around a clear blue channel. The great transparent cyan glass arch has many fine engraved ribs and small starburst inlays. The layered pale terraces curl into elegant open loops, carrying tiny silver towers and crimson branching coral gardens. Narrow pierced arcades line every curling edge, with delicate violet mineral fans and smaller glass bridges visible through the open spaces. Meticulously detailed surreal digital environment. Finely engraved ivory ribs, thin polished sapphire edges, pierced mineral lace and sharply separated overlapping layers. Dense tiny faceted relief, deep clear cobalt openings, precise white specular reflections, saturated cyan, violet and crimson. Deep focus; no haze, diffuse bloom, brushwork or lettering."
+    },
+    {
+      "at": 23,
+      "name": "the-arcades-unfurl",
+      "prompt": "A living reef palace of curling sapphire glass ribbons and intricate silver-white mineral lace. The pale architectural terraces unfurl into thin ridged shell fans, each containing hundreds of tiny cut-glass windows and tightly nested engraved chambers. Slender ivory towers sit among crimson coral branches along the curling rims. Clear turquoise channels pass beneath the wide open arches, separating detailed foreground filigree from smaller receding terraces. Meticulously detailed surreal digital environment. Finely engraved ivory ribs, thin polished sapphire edges, pierced mineral lace and sharply separated overlapping layers. Dense tiny faceted relief, deep clear cobalt openings, precise white specular reflections, saturated cyan, violet and crimson. Deep focus; no haze, diffuse bloom, brushwork or lettering."
+    }
+  ],
+  "branch_origin": {
+    "case": "gt-prismatic-vault-e",
+    "source_frame": 1392,
+    "config_sha256": "d1c8870b49449a03e2d2f9db2db6cc97c0394714e635b79fc05230a777dc65d4",
+    "note": "Independent matched study; clock resets to zero and prompt stays fixed."
+  },
+  "case": "gt-living-arcades-i",
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 13.5,
+      "center": [
+        1.22,
+        0.55
+      ],
+      "turn": 50,
+      "zoom": 0,
+      "radius": 0.33,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "continuation",
+      "start": 13,
+      "duration": 18.5,
+      "center": [
+        0.82,
+        0.55
+      ],
+      "end": [
+        -0.16,
+        -0.08,
+        0.2468600779315258,
+        -0.36
+      ],
+      "velocity_start": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "velocity_end": [
+        -0.018,
+        0.006,
+        -0.006,
+        -0.025
+      ]
+    },
+    {
+      "start": 14,
+      "duration": 17.5,
+      "center": [
+        0.4,
+        0.65
+      ],
+      "turn": -42,
+      "zoom": 0,
+      "radius": 0.4,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "start": 18,
+      "duration": 17,
+      "center": [
+        1.23,
+        0.48
+      ],
+      "turn": 55,
+      "zoom": 0,
+      "radius": 0.28,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wave",
+      "start": 16,
+      "duration": 23,
+      "axis": "horizontal",
+      "amplitude": 0.07,
+      "wavelength": 1.15,
+      "cycles": 0.6,
+      "phase": 0.4
+    },
+    {
+      "kind": "plane",
+      "start": 15,
+      "duration": 20,
+      "center": [
+        0.82,
+        0.55
+      ],
+      "tilt": [
+        14,
+        -13
+      ],
+      "distance": 2.7
+    }
+  ],
+  "prefix_root": "projects/glass-tide/exports/v001/gt-internal-curl-b",
+  "prefix_through": 312,
+  "prefix_config_sha256": "7c22393c94ad24dea2d345490bfc2973c7c03811e0620cf38bdab98b70454e28",
+  "direction_note": "Preserve accepted local-curl paintings 0..312. Bank and travel along the cyan arch toward the central blue opening while two spatially separated curls and a broad travelling bend reshape the shelves. Their intervals overlap; camera travel continues through their speed changes. No new generation mechanism. Inspect actual painting 528 before completing 744, then plan the reveal."
+}

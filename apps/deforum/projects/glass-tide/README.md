@@ -14,6 +14,7 @@ Fine ribs, carved openings and glass edges remain clear, while broad pale surfac
 
 ## Production records
 
+- [The Unfurling Current](cuts/layered-motion-v001.md): a new twelve-second passage from the accepted local curl, stacking regional twists and travelling bends with camera travel. [Watch](http://localhost:3028/glass-tide-layered-motion) · [Screening](experiments/layered-motion.md) · [Receipt](experiments/execution-layered-motion.json). Edges remain sharp; the ending becomes more abstract and loses some miniature architectural detail. Human playback judgment is pending.
 - [Internal motion comparison](experiments/internal-motion.md): repainting alone versus one local curl, with a stationary authored camera. [Compare](http://localhost:3028/glass-tide-internal-motion).
 - [Thirty-second continuation and screening](experiments/finale.md), [execution and resource closeout](experiments/execution-finale.json)
 - [Original eight-second cut](cuts/v001.md), [opening comparison and screening](experiments/opening.md), [opening receipt](experiments/execution-opening.json)

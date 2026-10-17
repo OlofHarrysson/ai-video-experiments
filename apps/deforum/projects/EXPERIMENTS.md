@@ -7,6 +7,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 | Interest | Start here |
 | --- | --- |
 | Crystal Gate completed to thirty seconds; motion, noise and final reference-free transformation | [World Seed finale](world-seed/experiments/crisp-passage/finale.md) |
+| Stack regional twists and travelling bends with smooth camera travel | [Glass Tide: The Unfurling Current](glass-tide/experiments/layered-motion.md) |
 | Internal movement with a stationary camera: repainting alone versus one local curl | [Glass Tide internal-motion comparison](glass-tide/experiments/internal-motion.md) |
 | Extend the accepted opening to thirty seconds with varied continuous motion | [The Glass Tide continuation](glass-tide/experiments/finale.md) |
 | A continuous opening from the approved coral ring, with a matched reference comparison | [The Glass Tide opening](glass-tide/experiments/opening.md) |

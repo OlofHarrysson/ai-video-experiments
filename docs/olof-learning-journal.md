@@ -543,6 +543,8 @@ Olof asks to build the existing film out to thirty seconds, retaining varied smo
 
 Olof likes how patterns move within the completed film, beyond camera motion and whole-image transformations, and asks how this could work with the camera still. He authorizes a matched short comparison of recurrent repainting with all transforms off versus repainting with one local curl. This supports exploring internal evolution as an artistic ingredient; it does not yet select either new clip or imply that incidental flicker is always desirable. [Comparison](../apps/deforum/projects/glass-tide/experiments/internal-motion.md).
 
+Olof subsequently selects the local curl and requests a longer passage with smooth, varied camera motion and no cuts. He treats this as a broader family of local movement: twisting, turning and pulling the image, with overlapping effects used playfully to introduce more motion. Keep crisp, highly detailed digital art as the quality target; do not reduce his preference to one repeated curl or a single preset. [Layered passage](../apps/deforum/projects/glass-tide/experiments/layered-motion.md).
+
 ### 2026-10-16 — The Curve: the AI race, not AI's skills
 
 Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.

@@ -1,0 +1,19 @@
+{
+  "title": "Glass Tide · The Unfurling Current",
+  "selected": ["unfurling-current"],
+  "clips": [
+    {
+      "id": "unfurling-current",
+      "label": "The Unfurling Current · 12 seconds",
+      "note": "A bank along the glass arch opens into a twisting reef of perforated shells.",
+      "details": "Continues the accepted three-second local curl. Overlapping regional twists, travelling bends, a perspective turn and smooth camera travel lead into a pullback and counterbank. All 108 paintings retained at 1536×1024 and 24 fps. Krea 2 Turbo, noise 0.72, three Euler updates, CFG1, reference conditioning off. Each painting initializes from its moved predecessor. RIFE stays outside feedback; no cuts or final hold.",
+      "source": "projects/glass-tide/exports/v001/gt-unfurling-current-j/faster/rife-moving-tail/preview.mp4"
+    },
+    {
+      "id": "accepted-local-curl",
+      "label": "Accepted local curl · 3 seconds",
+      "note": "The original comparison clip that opens the new passage.",
+      "source": "projects/glass-tide/exports/v001/gt-internal-curl-b/faster/rife/preview.mp4"
+    }
+  ]
+}

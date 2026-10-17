@@ -1,0 +1,340 @@
+{
+  "cadence": 12,
+  "cfg": 1,
+  "reference_mode": "none",
+  "sampler": "euler",
+  "noise_schedule": [
+    {
+      "at": 0,
+      "noise": 0.72
+    }
+  ],
+  "sigma_ratios": [
+    1,
+    0.8547401428216667,
+    0.5181684593366667,
+    0
+  ],
+  "seed": 1041616,
+  "duration": 54,
+  "painting_frames": [
+    0,
+    12,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    108,
+    120,
+    132,
+    144,
+    156,
+    168,
+    180,
+    192,
+    204,
+    216,
+    228,
+    240,
+    252,
+    264,
+    276,
+    288,
+    300,
+    312,
+    324,
+    336,
+    348,
+    360,
+    372,
+    384,
+    396,
+    408,
+    420,
+    432,
+    444,
+    456,
+    468,
+    480,
+    492,
+    504,
+    516,
+    528,
+    540,
+    552,
+    564,
+    576,
+    588,
+    600,
+    612,
+    624,
+    636,
+    648,
+    660,
+    672,
+    684,
+    696,
+    708,
+    720,
+    732,
+    744,
+    756,
+    768,
+    780,
+    792,
+    804,
+    816,
+    828,
+    840,
+    852,
+    864,
+    876,
+    888,
+    900,
+    912,
+    924,
+    936,
+    948,
+    960,
+    972,
+    984,
+    996,
+    1008,
+    1020,
+    1032,
+    1044,
+    1056,
+    1068,
+    1080,
+    1092,
+    1104,
+    1116,
+    1128,
+    1140,
+    1152,
+    1164,
+    1176,
+    1188,
+    1200,
+    1212,
+    1224,
+    1236,
+    1248,
+    1260,
+    1272,
+    1284
+  ],
+  "initial_image": "projects/glass-tide/exports/v001/gt-prismatic-vault-e/anchors/1392.png",
+  "initial_sha256": "9c89995cf36859d876c6f73036cb35edb94cb4289d3bb0b2bd892cfb61a43297",
+  "scenes": [
+    {
+      "at": 0,
+      "name": "crystalline-city-reveal",
+      "prompt": "An immense suspended city of thin turquoise crystal terraces and finely ribbed ivory vaults, floating in a clear sapphire sea. The nearest curling glass bridge opens onto many smaller stepped platforms with slender silver spires, tiny carved windows and intricate violet mineral gardens. Crimson coral filaments trace a few ledges. Brilliant teal transparent surfaces have precise etched grooves; pale nacre ribs reveal layers of delicate blue glass beneath. The foreground arcs around generous clear dark-blue passages leading into the distant architecture. High-fidelity surreal digital environment, precisely resolved thin edges and deep engraved material relief, tiny sharp specular highlights, saturated jewel colors, deep focus and clear dark gaps between layers. Every close surface carries fine parallel ridges, minute faceted crystals or intricate perforations. No haze, diffuse bloom, soft focus, watercolor, brushwork, lettering or people."
+    },
+    {
+      "at": 14,
+      "name": "the-living-arcade",
+      "prompt": "An impossible suspended ivory-and-sapphire reef city curves around a clear blue channel. The great transparent cyan glass arch has many fine engraved ribs and small starburst inlays. The layered pale terraces curl into elegant open loops, carrying tiny silver towers and crimson branching coral gardens. Narrow pierced arcades line every curling edge, with delicate violet mineral fans and smaller glass bridges visible through the open spaces. Meticulously detailed surreal digital environment. Finely engraved ivory ribs, thin polished sapphire edges, pierced mineral lace and sharply separated overlapping layers. Dense tiny faceted relief, deep clear cobalt openings, precise white specular reflections, saturated cyan, violet and crimson. Deep focus; no haze, diffuse bloom, brushwork or lettering."
+    },
+    {
+      "at": 23,
+      "name": "the-arcades-unfurl",
+      "prompt": "A living reef palace of curling sapphire glass ribbons and intricate silver-white mineral lace. The pale architectural terraces unfurl into thin ridged shell fans, each containing hundreds of tiny cut-glass windows and tightly nested engraved chambers. Slender ivory towers sit among crimson coral branches along the curling rims. Clear turquoise channels pass beneath the wide open arches, separating detailed foreground filigree from smaller receding terraces. Meticulously detailed surreal digital environment. Finely engraved ivory ribs, thin polished sapphire edges, pierced mineral lace and sharply separated overlapping layers. Dense tiny faceted relief, deep clear cobalt openings, precise white specular reflections, saturated cyan, violet and crimson. Deep focus; no haze, diffuse bloom, brushwork or lettering."
+    },
+    {
+      "at": 31.5,
+      "name": "the-shell-fans-open",
+      "prompt": "An impossible reef palace built from pierced ivory shell fans and curling transparent sapphire channels. Hundreds of slender silver ribs spread across each pale fan, with finely etched grooves and minute violet crystal chambers between the ribs. The glass ribbon threads through broad open arches. Delicate crimson coral filaments grow along the scalloped rims; miniature carved towers cling to the layered mineral terraces. Meticulously detailed surreal digital art, sharply resolved etched grooves and thin cut-glass edges, fine parallel ridges, precise reflections and deep clear openings. Rich sapphire, pale silver, violet and crimson; delicate amber glints. Dense fine relief within the forms, generous clear space between them. No haze, diffuse bloom, soft-focus painting, lettering or people."
+    },
+    {
+      "at": 41,
+      "name": "the-unfurling-current",
+      "prompt": "A vast open spiral reef of paper-thin nacre fans, sapphire glass ribbons and intricate violet mineral lace. Curving fan-shaped terraces overlap around a transparent turquoise current, their rims densely lined with tiny cut-glass beads and branching crimson coral. Hundreds of narrow engraved ribs radiate through each open shell. Small silver arcades and finely pierced chambers are nested inside the curls, separated by clear cobalt gaps. Meticulously detailed surreal digital art, sharply resolved etched grooves and thin cut-glass edges, fine parallel ridges, precise reflections and deep clear openings. Rich sapphire, pale silver, violet and crimson; delicate amber glints. Dense fine relief within the forms, generous clear space between them. No haze, diffuse bloom, soft-focus painting, lettering or people."
+    },
+    {
+      "at": 49,
+      "name": "an-open-reef-of-glass",
+      "prompt": "A magnificent suspended reef of unfurling ivory and violet mineral fans, threaded with sinuous sapphire glass channels. Each curling shell contains many closely spaced fine silver ribs, tiny engraved chambers and delicate crimson coral lace. Dark blue openings reveal smaller layered terraces beyond the foreground filigree. Thin bright edges and precise jewel reflections articulate the overlapping glass and nacre structures. Meticulously detailed surreal digital art, sharply resolved etched grooves and thin cut-glass edges, fine parallel ridges, precise reflections and deep clear openings. Rich sapphire, pale silver, violet and crimson; delicate amber glints. Dense fine relief within the forms, generous clear space between them. No haze, diffuse bloom, soft-focus painting, lettering or people."
+    }
+  ],
+  "branch_origin": {
+    "case": "gt-prismatic-vault-e",
+    "source_frame": 1392,
+    "config_sha256": "d1c8870b49449a03e2d2f9db2db6cc97c0394714e635b79fc05230a777dc65d4",
+    "note": "Independent matched study; clock resets to zero and prompt stays fixed."
+  },
+  "case": "gt-unfurling-current-j",
+  "phrases": [
+    {
+      "start": 0,
+      "duration": 13.5,
+      "center": [
+        1.22,
+        0.55
+      ],
+      "turn": 50,
+      "zoom": 0,
+      "radius": 0.33,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "continuation",
+      "start": 13,
+      "duration": 18.5,
+      "center": [
+        0.82,
+        0.55
+      ],
+      "end": [
+        -0.16,
+        -0.08,
+        0.2468600779315258,
+        -0.36
+      ],
+      "velocity_start": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "velocity_end": [
+        -0.018,
+        0.006,
+        -0.006,
+        -0.025
+      ]
+    },
+    {
+      "start": 14,
+      "duration": 17.5,
+      "center": [
+        0.4,
+        0.65
+      ],
+      "turn": -42,
+      "zoom": 0,
+      "radius": 0.4,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "start": 18,
+      "duration": 17,
+      "center": [
+        1.23,
+        0.48
+      ],
+      "turn": 55,
+      "zoom": 0,
+      "radius": 0.28,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wave",
+      "start": 16,
+      "duration": 23,
+      "axis": "horizontal",
+      "amplitude": 0.07,
+      "wavelength": 1.15,
+      "cycles": 0.6,
+      "phase": 0.4
+    },
+    {
+      "kind": "plane",
+      "start": 15,
+      "duration": 20,
+      "center": [
+        0.82,
+        0.55
+      ],
+      "tilt": [
+        14,
+        -13
+      ],
+      "distance": 2.7
+    },
+    {
+      "kind": "continuation",
+      "start": 31,
+      "duration": 23,
+      "center": [
+        0.78,
+        0.57
+      ],
+      "end": [
+        0.25,
+        -0.1,
+        -0.2613647641344075,
+        1.3
+      ],
+      "velocity_start": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "velocity_end": [
+        0.012,
+        -0.006,
+        -0.004,
+        0.025
+      ]
+    },
+    {
+      "start": 32,
+      "duration": 20,
+      "center": [
+        1.1,
+        0.3
+      ],
+      "turn": -70,
+      "zoom": 0,
+      "radius": 0.4,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "start": 37.5,
+      "duration": 19.5,
+      "center": [
+        0.38,
+        0.8
+      ],
+      "turn": 60,
+      "zoom": 0,
+      "radius": 0.3,
+      "travel": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wave",
+      "start": 32,
+      "duration": 22,
+      "axis": "vertical",
+      "amplitude": 0.075,
+      "wavelength": 1.1,
+      "cycles": 0.65,
+      "phase": 1.1
+    }
+  ],
+  "prefix_root": "projects/glass-tide/exports/v001/gt-living-arcades-i",
+  "prefix_through": 744,
+  "prefix_config_sha256": "8a45f719cd1a44b71180380ef2cdd8e4ebf129819c6b0f4cfe55573889f9cc11",
+  "direction_note": "Source 744 has large scalloped ivory fans at upper right and a clear central blue opening. Continue all incoming fields, add a broad pullback and counterbank with zero initial velocity, then overlap opposite regional curls and a travelling vertical bend. Keep the glass channel readable while revealing a wider reef. Inspect source1008 before completing1284."
+}

@@ -29,7 +29,7 @@ The native starting painting and six-frame motion-only overview were inspected b
 
 **The local curl gives the right shelf a clearer directional sweep.** Its starbursts bend and become dark circular inlays; coral clusters and small openings move with the deforming shelf. The broad cyan arch remains recognizable, while towers elsewhere still redesign themselves. The curl's influence decays spatially, but the model's response is not confined to that region.
 
-Both retain crisp large silhouettes, narrow spokes, engraved tower faces and saturated cyan/purple colors. Raised starburst relief becomes flatter linework and broad pale surfaces remain smooth. Neither test establishes improved detail retention or object preservation. The assistant tentatively favors the curl as a way to direct internal movement; Olof's playback preference is pending. These two short runs establish behavior for this painting and seed sequence, not a universal recipe.
+Both retain crisp large silhouettes, narrow spokes, engraved tower faces and saturated cyan/purple colors. Raised starburst relief becomes flatter linework and broad pale surfaces remain smooth. Neither test establishes improved detail retention or object preservation. Olof prefers the local curl and authorizes a longer passage combining it with varied camera movement and overlapping internal deformations. The assistant's tentative preference agrees with his playback choice. These two short runs establish behavior for this painting and seed sequence, not a universal recipe.
 
 ## Screening and verification
 
@@ -38,5 +38,5 @@ Both retain crisp large silhouettes, narrow spokes, engraved tower faces and sat
 - [Painting overview](../exports/internal-motion-review/painting-comparison.jpg), [matched review metadata](../exports/internal-motion-review/matched/v001/review.json). In the review harness's generated sheets, A is the curl and B is repaint-only; the linked player uses descriptive labels.
 - All 52 jobs passed exact initialization-warp, parent/output hash, requested/executed/embedded graph and successful-job checks. The empty transform path was separately checked for pixel identity. The two configs differ only in case ID and the local curl phrase.
 - All remote files and runtime evidence were downloaded and hash-checked. Both deliveries passed retained-painting, interpolation provenance, frame count, size, duration and complete-decode checks. The original thirty-second MP4 hash remains unchanged.
-- The linked reviewer selects both clips and serves the original videos with verified HTTP range responses. Browser playback and human taste judgment remain unverified.
+- The linked reviewer selects both clips and serves the original videos with verified HTTP range responses. The assistant did not automate browser playback. Olof later watched the comparison and preferred the local curl.
 - The owned GPU is deleted; the existing model volume remains. Estimated compute **$0.19**, including startup and verification, excluding retained storage. [Execution and cleanup receipt](execution-internal-motion.json).

@@ -1,0 +1,99 @@
+{
+  "verified": true,
+  "new_generated_jobs": 81,
+  "source": "projects/glass-tide/exports/v001/gt-unfurling-current-j/faster/rife-moving-tail/preview.mp4",
+  "sha256": "20ce9392513e17b86c83869cd3c635282c0addbf8195874bd8eab77f61446814",
+  "delivery": {
+    "verified": true,
+    "frames": 288,
+    "fps": 24,
+    "paintings": 108,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "20ce9392513e17b86c83869cd3c635282c0addbf8195874bd8eab77f61446814",
+    "retiming_sha256": "547d959b3005c1b19b31cde4ae60611acbf71a3ec41cba639b073ba0c4e8f57b",
+    "anchor_frames_sha256": "a398003adc9ab5851161970a70b129f59a8c13051c518ed00e34701ad02a1ba7"
+  },
+  "preservation": {
+    "original_film_sha256": "004c1f19e54f62a889dede254a88a6d22877e0bcf7d6af4e57cd576b74caae0e",
+    "accepted_clip_sha256": "157c94797b4b277ac1cfa796bf912297c6ddc7ed7283b50ea3680e98e1e52722",
+    "originals_preserved": true,
+    "painting_prefix_count": 27,
+    "lossless_delivery_prefix_count": 70,
+    "repaint_only_control_sha256": "3331cd9b4271f8530eb656e733758450f2a12cd382a7b394c124491c34933136"
+  },
+  "generation_checks": {
+    "gt-living-arcades-i": "1a5b6a5871d78fdca57c0492505f49fef1448e84d65c580332d6e35c354170c0",
+    "gt-unfurling-current-j": "806a4742d2ca4ff43ef86a21b7debe6747891516781de7d5d698d2dbade9b1fe"
+  },
+  "resource": {
+    "pod_id": "wjtgj7jwbwsgp2",
+    "pod_absent": true,
+    "volume_retained": "vd3jnbwko1",
+    "at": "2026-10-17T13:25:41+00:00",
+    "deletion_response_status": 204,
+    "gpu": "RTX 4090",
+    "rate_usd_per_hour": 0.89,
+    "allocation_seconds_upper_estimate": 1500.473,
+    "estimated_compute_usd": 0.3709502694444444
+  },
+  "retained_remote_files": 1261,
+  "removed_verified_owned_files": 162,
+  "runtime_archive_sha256": "e6c14199e51740e8334122d7c9fe0fc685b249317addad6d69078cd239b3f1c1",
+  "viewer": {
+    "verified": true,
+    "url": "http://localhost:3028/glass-tide-layered-motion",
+    "page_status": 200,
+    "selected": [
+      "unfurling-current"
+    ],
+    "media": [
+      {
+        "id": "unfurling-current",
+        "status": 206,
+        "range": "bytes 0-1023/26711754"
+      },
+      {
+        "id": "accepted-local-curl",
+        "status": 206,
+        "range": "bytes 0-1023/6337720"
+      }
+    ],
+    "run_id": "ee98fd41-941b-48d4-a173-e543c1709701"
+  },
+  "billing_caveat": "Allocation lifetime through verified absence, including startup and transfer. Excludes retained-volume storage; not an invoice.",
+  "review": {
+    "native_checkpoints": [
+      528,
+      744,
+      1008,
+      1284
+    ],
+    "overview_frames": 8,
+    "every_frame_windows_seconds": [
+      [
+        2.75,
+        3.125
+      ],
+      [
+        4.25,
+        4.5
+      ],
+      [
+        6.75,
+        7.125
+      ],
+      [
+        9.25,
+        9.5
+      ],
+      [
+        11.75,
+        11.999
+      ]
+    ],
+    "limitation": "Sampled windows and native paintings screened; human full-speed rhythm judgment pending. Final three seconds become more abstract and lose miniature architectural detail.",
+    "browser": "No browser automation performed; local review data and media HTTP range responses verified."
+  }
+}
