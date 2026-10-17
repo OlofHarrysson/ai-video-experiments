@@ -535,6 +535,10 @@ Olof calls the fourteen-second Crystal Gate continuation really good and sees su
 
 Olof calls the selected crimson coral-ring image gorgeous and asks to start a new video from it. He reports adding $50 to the RunPod balance; this authorizes generation within the configured funds, not changing funding settings. The approval is for this still and direction, not for unrendered motion or its eventual detail retention. [The Glass Tide](../apps/deforum/projects/glass-tide/README.md).
 
+### 2026-10-17 — Continue Glass Tide to thirty seconds
+
+Olof asks to build the existing film out to thirty seconds, retaining varied smooth movement, no cuts and crisp, highly detailed artwork. Preserve the accepted opening and continue from its actual final painting. This authorizes the continuation; it does not establish approval of the later generated passages. [Continuation notebook](../apps/deforum/projects/glass-tide/experiments/finale.md).
+
 ### 2026-10-16 — The Curve: the AI race, not AI's skills
 
 Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.

@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Glass Tide](glass-tide/README.md) — eight-second continuous opening from the approved crimson coral ring, with a bank, violet spiral and diagonal reef passage. Screened and verified; human playback judgment pending.
+- [The Glass Tide](glass-tide/README.md) — thirty continuous seconds from the crimson reef through a glass city to a wider rolling reveal. Varied movement; all 270 paintings retained. Screened and verified, with human playback judgment pending.
 
 - [A World Inside Every Seed](world-seed/README.md) — thirty-second continuous journey through jungle, ancient city, opalescent geometry and a garden inside a crystalline seed. Broad banks, local unfurling, lateral travel and an outward ending; 180 new paintings, with the earlier opening and all previous versions preserved. Olof likes the movement and later worlds; opening/doorway detail is the next quality target.
 

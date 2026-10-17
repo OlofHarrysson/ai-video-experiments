@@ -7,6 +7,7 @@ Snapshot: 2026-09-17. Entries include plans, session reports and independent rev
 | Interest | Start here |
 | --- | --- |
 | Crystal Gate completed to thirty seconds; motion, noise and final reference-free transformation | [World Seed finale](world-seed/experiments/crisp-passage/finale.md) |
+| Extend the accepted opening to thirty seconds with varied continuous motion | [The Glass Tide continuation](glass-tide/experiments/finale.md) |
 | A continuous opening from the approved coral ring, with a matched reference comparison | [The Glass Tide opening](glass-tide/experiments/opening.md) |
 | Three high-fidelity opening directions for a new glass-ocean/coral film | [The Glass Tide](glass-tide/experiments/baseline.md) |
 | Noise schedules and clean references in recurrent paintings | [World Seed noise/reference study](world-seed/experiments/noise-reference/README.md) |

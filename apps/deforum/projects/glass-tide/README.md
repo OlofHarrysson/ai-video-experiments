@@ -1,20 +1,22 @@
 # The Glass Tide
 
-A continuous surreal film through an impossible ocean of transparent cobalt glass, crimson coral and pale nacre. Olof approved the crimson coral-ring opening on 2026-10-15 and asked to start a new video from it.
+A continuous surreal film through an impossible ocean of transparent cobalt glass, crimson coral and pale nacre. Olof approved the crimson coral-ring opening on 2026-10-15 and requested a thirty-second continuation on 2026-10-17.
 
 ## Current cut
 
-[Watch the eight-second opening](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-beyond-the-reef-d/faster/rife-moving-tail/preview.mp4) · [Cut v001](cuts/v001.md).
+[Watch the thirty-second film](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-sapphire-bloom-h/faster/rife-moving-tail/preview.mp4) · [Cut v002](cuts/v002.md).
 
-The exact approved still opens the film. A sustained bank and sideways approach curl the violet reef into a spiral; the viewpoint then sweeps underneath it into a brighter cyan-and-ivory lattice. There are no cuts, masks, copied-back regions, fixed-opening references or extra refinement passes. All 72 paintings are retained in the 1536×1024, 24 fps delivery.
+The exact approved still opens the film. A bank and sideways approach curl the violet reef into a spiral, leading into a blue-and-ivory city. The continuation traverses emerald glass inlays and amber branches, then pulls back through a rolling, unfolding reef. Lateral movement, banks, perspective turns and regional curls overlap. All 270 paintings are retained in the 1536×1024, 24 fps delivery, without cuts or a final hold.
 
-The matched opening comparison favored reference-off for stronger crimson and cleaner cyan contours. Each new painting still starts from the warped previous painting. Fine branching simplifies during recurrence, and some broad surfaces become smooth; the film does not preserve every detail of the original still. Assistant screening is complete; human playback judgment is pending.
+The established recipe remains Krea 2 Turbo, Euler at noise 0.72, three updates and CFG 1. Every new painting starts from the warped previous painting; additional reference conditioning is off. RIFE stays outside feedback. The original eight-second film and its paintings remain intact.
+
+Fine ribs, carved openings and glass edges remain clear, while broad pale surfaces are smoother and some distant forms soft. Recurrence preserves the architecture more strongly than the prompts' intended material changes. Assistant screening and technical verification are complete; human judgment of full-speed rhythm remains pending.
 
 ## Production records
 
-- [Opening direction, comparison and screening](experiments/opening.md)
-- [Verified execution and resource closeout](experiments/execution-opening.json)
-- [Three opening compositions](experiments/baseline.md) and [exact prompts](experiments/openings.json)
+- [Thirty-second continuation and screening](experiments/finale.md), [execution and resource closeout](experiments/execution-finale.json)
+- [Original eight-second cut](cuts/v001.md), [opening comparison and screening](experiments/opening.md), [opening receipt](experiments/execution-opening.json)
+- [Three opening compositions](experiments/baseline.md), [exact opening prompts](experiments/openings.json)
 - [First movement brief](experiments/first-motion.json), [frozen camera plans](experiments/configs/)
 
-The selected [Crimson Current original](exports/v001/openings/gt-crimson-current-c/anchors/0000.png), both alternative stills, all generated paintings and job receipts remain preserved. The GPU is deleted; the existing model cache remains. The next continuation should follow the open blue spaces around the actual final reef, while seeking richer fine structure instead of extending smooth surfaces indefinitely.
+The selected [Crimson Current original](exports/v001/openings/gt-crimson-current-c/anchors/0000.png), alternative stills, every generated painting and job receipt remain preserved. Both continuation allocations are deleted; the existing model cache remains. New iterations should branch from a selected saved painting and preserve this cut.

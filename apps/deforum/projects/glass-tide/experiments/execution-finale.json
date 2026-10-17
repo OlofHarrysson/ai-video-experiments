@@ -1,0 +1,42 @@
+{
+  "verified": true,
+  "pod_id": "20jxlw0tki5r83",
+  "pod_deleted": true,
+  "volume_retained": "vd3jnbwko1",
+  "initial_image_sha256": "d5000973060a6a609500338000882f5892ee84777d15e295dbb0ebd3867d9197",
+  "output": "projects/glass-tide/exports/v001/gt-sapphire-bloom-h/faster/rife-moving-tail/preview.mp4",
+  "video_sha256": "004c1f19e54f62a889dede254a88a6d22877e0bcf7d6af4e57cd576b74caae0e",
+  "delivery": {
+    "verified": true,
+    "frames": 720,
+    "fps": 24,
+    "paintings": 270,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "004c1f19e54f62a889dede254a88a6d22877e0bcf7d6af4e57cd576b74caae0e",
+    "retiming_sha256": "f9ba471a10af839473568141441bb92b1a46dbae39516df5ffe24dcdfb0703ce",
+    "anchor_frames_sha256": "4c4f57322a2016b885e786eb9e184de39e48f8fd494ce1ba0295237666331f82"
+  },
+  "paintings": 270,
+  "new_generated_jobs": 198,
+  "original_still_and_eight_second_cut_retained": true,
+  "preserved_prefix_delivery_frames": 190,
+  "remote_files_preserved_then_deleted": 396,
+  "runtime_archive_sha256": "3d6270c70c6e0b41360f6a30b026a09eb451ef744e224f46dc318097fcfd325d",
+  "gpu_rate_per_hour": 0.89,
+  "elapsed_seconds": 3642.0,
+  "estimated_gpu_usd": 0.9003833333333333,
+  "failed_allocation": {
+    "pod_id": "9fgjh6u0mabt97",
+    "deleted": true,
+    "generated_jobs": 0,
+    "approximate_elapsed_seconds": 427,
+    "gpu_rate_per_hour": 0.72,
+    "estimated_gpu_usd": 0.0854,
+    "friction_id": "AF-20261017-131358"
+  },
+  "estimated_total_compute_usd": 0.9857833333333333,
+  "billing_caveat": "Estimate from allocation lifetimes, including startup, transfer and validation. First failed allocation teardown time is approximate. Excludes retained-volume storage; not an invoice.",
+  "review": "Assistant screened motion-only previews, native paintings, progression boards, final overview and dense delivery windows. Human playback judgment pending."
+}
