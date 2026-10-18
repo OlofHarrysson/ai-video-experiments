@@ -113,6 +113,14 @@ class FrameCopyRetentionTest(unittest.TestCase):
                 self.assertEqual(retention.restore(receipt)['frames'], 1)
             self.assertEqual((target / rows[1]['file']).read_bytes(), b'image1')
             self.assertEqual((target / rows[2]['file']).read_bytes(), b'image2')
+            # Static-audit receipts reuse the restore path without claiming a prior rebuild.
+            state = json.loads(receipt.read_text())
+            state['kind'] = 'audited-interpolation-copies'
+            receipt.write_text(json.dumps(state))
+            (target / rows[1]['file']).unlink()
+            with patch.object(copies, 'dependencies'), patch.object(copies, 'rebuild', rebuild):
+                self.assertEqual(retention.restore(receipt)['frames'], 1)
+            self.assertEqual((target / rows[2]['file']).read_bytes(), b'image2')
             state = json.loads(base.read_text())
             state['rebuilt']['output_frames'] = []
             base.write_text(json.dumps(state))

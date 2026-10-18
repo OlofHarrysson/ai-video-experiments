@@ -181,7 +181,7 @@ def retire(manifest, plan, receipt, apply=False):
 def restore(receipt):
     receipt = Path(receipt).absolute()
     state = json.loads(receipt.read_text())
-    if state.get('kind') == 'verified-interpolation-copies':
+    if state.get('kind') in ('verified-interpolation-copies', 'audited-interpolation-copies'):
         from .frame_copies import restore_copies
         return restore_copies(receipt, state)
     manifest = Path(state['manifest'])

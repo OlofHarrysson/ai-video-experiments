@@ -110,3 +110,12 @@ Validation for the cleanup helpers: **15 focused tests passed**, Ruff passed, an
 The completed removal receipts cover **31 redundant archives (8,017,083,958 bytes)** and **26,187 interpolation PNG paths**: 15,180 in the 73 rebuilt sequences and 11,007 matching copies across 44 older deliveries. Copy processing retained 72 other deliveries and reported no failures. PNG path sizes total 45,149,077,102 bytes, but hardlinks and APFS clones mean this is not physical space recovered. `final-verification.json` records the observed volume-free-space change separately.
 
 Final readback passed: **26,882 retained files** matched their recorded hashes, all selected deletions were absent, and the retained archives remained present at their recorded sizes. Volume free space rose from **44.77 GB to 70.87 GB**, an observed **26.10 GB** increase during cleanup; unrelated writes and APFS behavior mean this is not an exclusive block accounting. Original paintings, final videos, model/runtime files and reconstruction records were preserved.
+
+
+### Conservative four-film cleanup, October 18
+
+Following a separate read-only audit and explicit approval, the conservative selection removed **19,933 interpolation PNG paths (37.28 GB logical)** across World Seed, Cartographer’s Dream, Glass Tide and Night Orchard. No reconstruction or re-encoding was performed. The latest review-pending cuts, original paintings, final videos/audio, anchors, unique warped frames, validation pairs and all recorded reconstruction dependencies remain.
+
+Private execution and restoration receipts are in `apps/deforum/work/storage-audit/four-films-20261018/conservative-cleanup/`. `completion.json` records preservation readback and the receipt index; `README.md` gives the restore command. The existing restore CLI accepts the new static-audit copy receipts, reconstructing the pinned base recipe only when restoration is explicitly requested. These receipts do not claim a fresh full reconstruction was demonstrated during cleanup.
+
+Volume free space increased by **21.28 GB**, from **54.25 GB to 75.52 GB**, during this deletion pass. APFS-shared data and unrelated writes explain why the observed change differs from 37.28 GB of deleted file sizes. All non-selected project files passed the final unchanged-file check. The 15 focused tests and Ruff passed; rendering was mocked in restoration tests.
