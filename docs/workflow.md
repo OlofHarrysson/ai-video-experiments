@@ -61,6 +61,7 @@ The first session follows this structure too: six attempts in the botanical proj
 6. Draft a cut as a new `cuts/vNNN.md`, selecting source ranges. Point “current cut” in the project README to the selected version. Reordering a cut never changes its sources.
 7. To change the movie, retain the selected prefix and create a new continuation run. Record parent run, source-frame index, and changed settings. The `continue` and `assemble` CLI commands implement this image-based branch and cut workflow.
 8. Verify local originals and exports before deleting experiment-owned cloud resources. Keep rejected takes. Never use cleanup to prune creative assets.
+9. When Olof accepts the result or closes the attempt and dependent editing is finished, perform the [storage completion checklist](storage.md#completion-checklist-for-future-experiments). Preserve original paintings, final videos and reconstruction inputs; remove only documented disposable finishing frames. Reuse production validation instead of rerendering every sequence just to delete it. Record the cleanup and restoration path in the experiment handoff.
 
 For a new experiment, copy the short headings from `experiments/baseline.md` into a descriptively named Markdown file. Use lowercase hyphenated IDs. The runner requires that note to exist, so every render has a question to return to.
 
@@ -78,7 +79,7 @@ Continuation also needs a global schedule frame: when branching from generated f
 
 ## Preserve versus back up
 
-Completed run media and settings are treated as immutable. New generations always get new IDs. Collection of an unfinished run can add missing artifacts; collection of a completed run returns its existing preview without contacting the expired Pod. No automatic media deletion is provided.
+Original generated run media and settings are treated as immutable. Derived finishing frames have the separate completion-time retention policy above. New generations always get new IDs. Collection of an unfinished run can add missing artifacts; collection of a completed run returns its existing preview without contacting the expired Pod. No automatic media deletion is provided; the agent performs the explicit completion checklist after the experiment is closed.
 
 Use `copy_verified` when reusing media: supported Mac volumes share storage through independent copy-on-write clones. Verify session archives as streams and retire redundant unpacked scratch copies only after checking every file against a retained archive. See [storage conventions and cleanup](storage.md). Unique generations, original references and cut versions remain preserved.
 

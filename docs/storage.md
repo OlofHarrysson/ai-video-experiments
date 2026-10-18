@@ -1,6 +1,6 @@
 # Local media storage
 
-Keep original paintings, references, cuts and final videos. Save space by sharing identical bytes, retiring verified duplicate archives, and selectively removing intermediate frames whose exact reconstruction has passed. No artwork quality reduction is required for this cleanup.
+Keep original paintings, references, cuts and final videos. Treat documented, reproducible finishing frames as temporary working media and clean them up when an experiment is finished, following the completion checklist below. Historical media with incomplete records needs a separate audit.
 
 ## What was taking space
 
@@ -27,10 +27,22 @@ Receipts are local in `apps/deforum/work/storage-audit/`: archive retirement rec
 1. Use `deforum_lab.records.copy_verified` for reused paintings and prefixes. It now makes independent APFS clones on supported Mac volumes. Linux and unsupported/cross-volume filesystems use ordinary copies. Permission errors and other failures surface. Existing saved copies still require matching hashes.
 2. Verify downloaded archives as a stream. Restore missing canonical project files directly; avoid retaining a second complete unpacked tree in `work/` after verification. Keep the final archive, its checksum and member inventory.
 3. Retire earlier cumulative archives only when every member is preserved in the retained archive. A later filename alone does not establish a complete superset: earlier source/config snapshots can differ.
-4. Retain every video's current playable export and every diffusion painting, settings/graphs, lineage, noise/latent diagnostics and reference. Derived RIFE frames may be retired only under the separately approved full-rebuild checks below; duplicate cleanup alone does not authorize their deletion.
-5. Keep the current project available locally. The next larger storage step would be a verified external archive for older frame sequences, with a small local index and the videos still reviewable. No external archive or backup is configured yet. The October 18 selective RIFE retirement below is separately authorized; other intermediate frames remain preserved.
+4. Retain every video's current playable export and every diffusion painting, settings/graphs, lineage, noise/latent diagnostics and reference. For future completed experiments, retire documented derived finishing frames using the completion checklist below. The full-rebuild checks later in this document describe the historical October 18 audit, not a requirement to rerender each future film.
+5. Keep the current project available locally. The next larger storage step would be a verified external archive for older frame sequences, with a small local index and the videos still reviewable. No external archive or backup is configured yet. The October 18 historical cleanup remains limited to its recorded selections; future completed experiments follow the checklist below.
 
 This improves preservation efficiency; it does not create a second-device backup. A shared clone is another usable path to the same underlying storage.
+
+## Completion checklist for future experiments
+
+Cleanup is part of finishing an experiment, after Olof has accepted the result or explicitly closed the attempt and any dependent editing, frame review or continuation work has ended. A successful render alone does not mark a project finished. Keep unfinished work available. The agent carrying out the experiment owns this closeout step; this is not a scheduled or automatic render-time deletion mechanism.
+
+1. **Keep the creative assets.** Preserve original paintings and references, unique generated takes including rejected alternatives, final videos and audio, versioned cuts, settings/graphs, seeds, lineage, and any intermediate used as a generation input or needed for continued editing.
+2. **Save the reconstruction recipe during production.** Record each output's role and hash, its exact input paths/hashes, ordered timing and finishing settings, pinned code/model weights and environment dependencies, and an explicit restoration command. Keep those inputs and dependencies locally. Missing or ambiguous provenance means retain the frames.
+3. **Verify the saved result once.** Use the normal final delivery checks: video decode, duration/frame count, dimensions, source/recipe integrity and human review. Reuse recorded successful checks when their inputs and output hashes are unchanged. Do not rerender the whole film solely to authorize deleting its intermediates. A changed finishing method may warrant one bounded reconstruction test, with its cost stated first; do not repeat that test for every unchanged recipe.
+4. **Delete only listed, disposable outputs.** Use a manifest-based allowlist for reproducible interpolation and finishing outputs. Verify their identity and check all known downstream input/continuation references before unlinking. Preserve unique warp/generation inputs and unclear frame roles. Check copied or hardlinked finishing frames too, so deleting one path does not leave another unnecessary copy. Never purge a mixed `frames/` directory by name or age.
+5. **Leave a receipt and usable review path.** Record deleted paths/hashes, retained inputs, the restore command and measured free-space change. Keep final-video playback available; frame-level review of retired PNGs requires restoration. Restore the needed sequence before future editing that requires those PNGs.
+
+This retains a documented route to regeneration; it does not promise byte-identical output after runtime or hardware changes. The existing `frame_retention retire` command below is restricted to the older audited project and still performs a full rebuild. Do not apply it as the default future closeout command. Future closeout must use a scoped cleanup implementation that follows this checklist, or retain the frames if that implementation cannot establish the required boundaries.
 
 ## Tools
 
