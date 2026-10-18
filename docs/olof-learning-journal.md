@@ -557,6 +557,10 @@ Olof subsequently says some passages may have too much motion, for the first tim
 
 After the isolated motion lesson, Olof likes the individual movements but dislikes the demonstrated travelling bend combined with a spiral/local curl: they compete with each other. Avoid that combination for the current direction. He suggests travelling bend plus perspective tilt as a potentially more compatible pairing; it has not been screened together. He supports giving one movement the lead with weaker support, depending on the effects and artwork. This is not a limit of one effect instance: a prominent object may call for one intentional curl around it, while an ocean or broad background may call for many smaller curls, potentially across most of the screen. Select their number, placement, coverage and strength from the artwork. A coordinated family of curls can be the leading movement.
 
+### 2026-10-18 — A new red-and-black nightmare
+
+Olof asks for a completely new artwork and a roughly one-minute film, planned together before production. His direction is very red, hellish, satanic, scary and surreal like a fever nightmare, with black, fire and lava. Devils, Satan, pitchforks and demons are examples to interpret, not an exhaustive object list. A clear plot is optional; recurring icons can supply continuity. He wants a small storyboard and a couple of reference images to choose between. This authorizes concept generation and planning, with alignment before video work. [The Red Rite](../apps/deforum/projects/red-rite/README.md) is an assistant working title; its proposed awakening arc and preferred reference remain unapproved.
+
 ### 2026-10-16 — The Curve: the AI race, not AI's skills
 
 Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.

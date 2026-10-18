@@ -1,0 +1,36 @@
+{
+  "created": "2026-10-18",
+  "generator": "built-in image_gen",
+  "model_id": "not returned by tool",
+  "prompt_file": "prompts-v001.json",
+  "selected": null,
+  "purpose": "concept reference selection before production",
+  "assets": [
+    {
+      "label": "A",
+      "title": "Cathedral of Ember",
+      "prompt_key": "red-rite-cathedral",
+      "file": "assets/cathedral-of-ember-v001.png",
+      "source": "/Users/olof/.codex/generated_images/01a120e4-0b64-7932-874d-1e9346caaa5c/exec-1f43754e-c7b6-4b53-9d9a-75c9a1a179fe.png",
+      "sha256": "e7ee417322778319459042cdf4a44dc01b071006a0febac08dbf6fd81dbc71ef",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "label": "B",
+      "title": "The Sleeping Presence",
+      "prompt_key": "red-rite-sleeping-presence",
+      "file": "assets/sleeping-presence-v001.png",
+      "source": "/Users/olof/.codex/generated_images/01a120e4-0b64-7932-874d-1e9346caaa5c/exec-bc3acdd6-7177-479c-8672-a984a459b468.png",
+      "sha256": "25b930f88b3aad4ec6aefd35947e4c64467ae4db81e05c24ee1023829eac85ab",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ]
+}
