@@ -1,6 +1,6 @@
 # Opening reference comparison
 
-Status: two concept images generated and screened, human selection pending. No film generation.
+Status: Olof selected **B — The Sleeping Presence** on 2026-10-18, approved the slow-awakening direction and requested a ten-second opening with a smooth start and smaller lava curls. This page preserves the still-image comparison; [the opening study](opening.md) owns the video result.
 
 ## Question
 
@@ -23,4 +23,4 @@ Both native 1536×1024 outputs were visually inspected. A has a clear horned cat
 
 B has the more distinctive central icon: a huge sleeping horned face with carved, finely ribbed surfaces, small crown buildings and surrounding red currents. Its palette is closer to deep scarlet and black, and the clear sky keeps the black sun readable. The head dominates the composition; an opening should travel around its temple/crown or follow a causeway rather than blindly zooming into its nose. Place small curls around the separate surrounding islands, preserving the face's readability.
 
-The assistant recommends B for the fever-nightmare direction, with A as the stronger straightforward gate-entry alternative. This is an artistic judgment from the stills, not proof of recurrent consistency or user approval. Both images are retained unchanged; no extra variant was necessary before Olof chooses.
+The assistant recommends B for the fever-nightmare direction, with A as the stronger straightforward gate-entry alternative. This is an artistic judgment from the stills, not proof of recurrent consistency or user approval. Both images are retained unchanged. Olof subsequently selected B.

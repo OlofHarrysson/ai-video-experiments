@@ -6,6 +6,7 @@ Snapshot: 2026-10-18. Entries include plans, session reports and independent rev
 
 | Interest | Start here |
 | --- | --- |
+| Animate the selected sleeping presence with a gentle onset and smaller lava curls | [The Red Rite ten-second opening](red-rite/experiments/opening.md) |
 | Plan a scarlet-and-black infernal nightmare and choose between two opening artworks | [The Red Rite reference comparison](red-rite/experiments/baseline.md) and [proposed storyboard](red-rite/experiments/storyboard-v001.md) |
 | Crystal Gate completed to thirty seconds; motion, noise and final reference-free transformation | [World Seed finale](world-seed/experiments/crisp-passage/finale.md) |
 | Finish a 60–90-second continuous film with layered motion and a closing world-within-a-shell reveal | [Glass Tide: 68-second finale](glass-tide/experiments/long-finale.md) |

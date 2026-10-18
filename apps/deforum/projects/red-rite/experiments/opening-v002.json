@@ -1,0 +1,248 @@
+{
+  "cases": [
+    {
+      "case": "rr-sleeping-presence-opening-v002",
+      "title": "The Red Rite \u2014 Sleeping Presence",
+      "duration": 45,
+      "delivery_duration": 10,
+      "cadence": 12,
+      "seed": 181026001,
+      "cfg": 1,
+      "sampler": "euler",
+      "reference_mode": "none",
+      "initial_image": "projects/red-rite/references/assets/sleeping-presence-v001.png",
+      "initial_sha256": "25b930f88b3aad4ec6aefd35947e4c64467ae4db81e05c24ee1023829eac85ab",
+      "painting_frames": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360,
+        372,
+        384,
+        396,
+        408,
+        420,
+        432,
+        444,
+        456,
+        468,
+        480,
+        492,
+        504,
+        516,
+        528,
+        540,
+        552,
+        564,
+        576,
+        588,
+        600,
+        612,
+        624,
+        636,
+        648,
+        660,
+        672,
+        684,
+        696,
+        708,
+        720,
+        732,
+        744,
+        756,
+        768,
+        780,
+        792,
+        804,
+        816,
+        828,
+        840,
+        852,
+        864,
+        876,
+        888,
+        900,
+        912,
+        924,
+        936,
+        948,
+        960,
+        972,
+        984,
+        996,
+        1008,
+        1020,
+        1032,
+        1044,
+        1056,
+        1068
+      ],
+      "scenes": [
+        {
+          "at": 0,
+          "name": "The sleeping presence",
+          "prompt": "Meticulously detailed surreal digital artwork. A colossal sleeping horned demon face forms an island of carved black obsidian in a scarlet lava sea. Closed eyelids, a broad sculpted nose and sealed lips remain legible as monumental architecture. Sweeping ribbed black horns rise on either side of a three-pronged cathedral crown. Tiny gothic spires, stairways and slender arched causeways are carved into the forehead and cheeks. Thin incandescent crimson fissures trace polished volcanic glass, engraved iron and sharply resolved basalt ridges. Small whorls of red molten lava curl around the surrounding islands. A black eclipsed sun with a narrow scarlet rim hangs low at upper right. Deep red sky, hard black silhouettes, precise red rim lighting, clean separation of intricate surfaces, crisp fine relief across the scene. A sleeping, ancient infernal presence, ominous and still."
+        }
+      ],
+      "noise_schedule": [
+        {
+          "at": 0,
+          "noise": 0.72
+        },
+        {
+          "at": 45,
+          "noise": 0.72
+        }
+      ],
+      "phrases": [
+        {
+          "name": "foreground lava curl",
+          "center": [
+            0.59,
+            0.88
+          ],
+          "radius": 0.11,
+          "turn": 75,
+          "start": 0,
+          "duration": 42,
+          "zoom": 0,
+          "travel": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "right lava curl",
+          "center": [
+            1.39,
+            0.77
+          ],
+          "radius": 0.105,
+          "turn": -65,
+          "start": 2.25,
+          "duration": 42,
+          "zoom": 0,
+          "travel": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "left lava curl",
+          "center": [
+            0.075,
+            0.57
+          ],
+          "radius": 0.075,
+          "turn": 55,
+          "start": 4.5,
+          "duration": 36,
+          "zoom": 0,
+          "travel": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "far right lava curl",
+          "center": [
+            1.4,
+            0.52
+          ],
+          "radius": 0.075,
+          "turn": 55,
+          "start": 6.75,
+          "duration": 40.5,
+          "zoom": 0,
+          "travel": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "camera onset",
+          "kind": "continuation",
+          "start": 0,
+          "duration": 4.5,
+          "center": [
+            0.75,
+            0.45
+          ],
+          "end": [
+            0.0006666666666666666,
+            0.0013333333333333333,
+            0.0023333333333333335,
+            -0.0011666666666666668
+          ],
+          "velocity_start": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "velocity_end": [
+            0.00044444444444444447,
+            0.0008888888888888889,
+            0.0015555555555555557,
+            -0.0007777777777777778
+          ]
+        },
+        {
+          "name": "camera settling into cruise",
+          "kind": "continuation",
+          "start": 4.5,
+          "duration": 4.5,
+          "center": [
+            0.75,
+            0.45
+          ],
+          "end": [
+            0.0013333333333333333,
+            0.0026666666666666666,
+            0.004666666666666667,
+            -0.0023333333333333335
+          ],
+          "velocity_start": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "velocity_end": [
+            0.00044444444444444447,
+            0.0008888888888888889,
+            0.0015555555555555557,
+            -0.0007777777777777778
+          ]
+        }
+      ]
+    }
+  ]
+}

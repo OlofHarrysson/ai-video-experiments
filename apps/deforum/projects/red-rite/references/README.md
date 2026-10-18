@@ -1,6 +1,6 @@
 # References
 
-Two independent concept artworks generated with built-in `image_gen` on 2026-10-18. Original tool outputs remain preserved; workspace copies are byte-verified. No reference is selected yet.
+Two independent concept artworks generated with built-in `image_gen` on 2026-10-18. Original tool outputs remain preserved; workspace copies are byte-verified. Olof selected **B — The Sleeping Presence** for the slow-awakening film.
 
 | Choice | Artwork | Purpose |
 | --- | --- | --- |

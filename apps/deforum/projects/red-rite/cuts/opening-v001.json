@@ -1,0 +1,11 @@
+{
+  "status": "opening checkpoint awaiting human playback feedback",
+  "case": "rr-sleeping-presence-opening-v003",
+  "source": "../exports/v001/rr-sleeping-presence-opening-v003/faster/rife-moving-tail/preview.mp4",
+  "duration_seconds": 10,
+  "fps": 24,
+  "frames": 240,
+  "paintings": 90,
+  "selected_reference": "B",
+  "full_minute_generated": false
+}

@@ -1,0 +1,13 @@
+{
+  "title": "The Red Rite",
+  "selected": ["sleeping-presence-opening"],
+  "clips": [
+    {
+      "id": "sleeping-presence-opening",
+      "label": "The Sleeping Presence · 10 seconds",
+      "note": "Small lava curls accompany a gradual drifting approach and bank around the sleeping face.",
+      "details": "Starts from the selected B artwork. Four regional curls act around the lava, with a camera onset that ramps over approximately two seconds. Krea 2 Turbo, three Euler updates, noise 0.72, CFG 1; warped-previous-image feedback with the additional reference adapter off. The material prompt emphasizes fine ribs, scarlet inlays and sharp black-glass reflections. RIFE stays outside feedback. The generated face is glossier and more stylized than the original; some tiny architecture simplifies during repainting.",
+      "source": "projects/red-rite/exports/v001/rr-sleeping-presence-opening-v003/faster/rife-moving-tail/preview.mp4"
+    }
+  ]
+}

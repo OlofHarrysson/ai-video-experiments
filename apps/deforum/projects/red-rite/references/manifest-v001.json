@@ -3,7 +3,7 @@
   "generator": "built-in image_gen",
   "model_id": "not returned by tool",
   "prompt_file": "prompts-v001.json",
-  "selected": null,
+  "selected": "B",
   "purpose": "concept reference selection before production",
   "assets": [
     {
@@ -32,5 +32,9 @@
       ],
       "mode": "RGB"
     }
-  ]
+  ],
+  "selection": {
+    "date": "2026-10-18",
+    "source": "User selected B, the sleeping presence and slow awakening, and requested a first 10-second opening with a smooth start and smaller curls in the lava."
+  }
 }

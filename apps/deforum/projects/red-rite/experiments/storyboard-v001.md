@@ -1,6 +1,6 @@
 # The Red Rite: proposed one-minute progression
 
-2026-10-18. Proposal for discussion; timing and ending are not locked. No video production is authorized by the reference-image phase alone.
+2026-10-18. Olof selected B, the sleeping presence, and the slow-awakening direction. The first ten seconds are authorized as a motion checkpoint; later timing and the ending remain proposals.
 
 ## Artistic intent
 

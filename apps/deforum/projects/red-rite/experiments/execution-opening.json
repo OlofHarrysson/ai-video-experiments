@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-18",
+  "project": "The Red Rite",
+  "selected_case": "rr-sleeping-presence-opening-v003",
+  "requested_scope": "first 10 seconds from B, slow awakening, gradual camera onset, smaller lava curls",
+  "generated_jobs": 101,
+  "selected_new_paintings": 89,
+  "preserved_short_alternative_jobs": 12,
+  "opening_original_preserved": true,
+  "delivery": {
+    "verified": true,
+    "frames": 240,
+    "fps": 24,
+    "paintings": 90,
+    "final_holds": 0,
+    "final_warps": 2,
+    "tail_changed_pixels": true,
+    "video_sha256": "bcfd50f1b01b2859e40c048c28e40f6e663f2df7b7d2627497fafecd27caf52b",
+    "retiming_sha256": "c7c2a274343c91e7489db6958370fa5be537fb97df1287793775686aad4ed117",
+    "anchor_frames_sha256": "72c9a1909f2588ed4ed6bf3413dc5c3e9b62d5d5ef88c1d3f2c8c19c07ef6e6b"
+  },
+  "pod_id": "zvph4z3ax0enqh",
+  "gpu": "RTX 4090",
+  "hourly_compute_usd": 0.89,
+  "created_at": "2026-10-18T13:40:28.946Z",
+  "termination_verified_at": "2026-10-18T14:14:44Z",
+  "estimated_compute_usd": 0.508,
+  "cost_scope": "Estimate from Pod lifetime and quoted compute rate; excludes retained network volume and disk storage. Not an itemized invoice.",
+  "owned_pod_absent": true,
+  "retained_volume": "vd3jnbwko1",
+  "preservation": {
+    "remote_files_hash_verified": 1462,
+    "runtime_archive_sha256": "5682a822039e80e54acc7f5d3d8c03e86d64ede2055bdee9e1ca23683e3ee70e",
+    "removed_verified_comfy_copies": 202
+  },
+  "evidence_directory": "work/red-rite-opening",
+  "reviewer_route": "/red-rite",
+  "validation": [
+    "All 101 execution receipts, parent/initialization/output hashes and actual warp pixels checked",
+    "Every selected painting retained in 240-frame, 24-fps, 1536x1024 delivery",
+    "RIFE pair preflight and full delivery verification",
+    "No appended static hold; moving tail verified",
+    "Ruff passed; 3 media server tests passed"
+  ],
+  "screening_limit": "Native paintings, overview and selected every-frame windows; normal-speed human playback verdict pending."
+}

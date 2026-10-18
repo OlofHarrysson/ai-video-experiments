@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Red Rite](red-rite/README.md) — proposed one-minute scarlet-and-black nightmare with recurring infernal icons. Two concept references and a continuous storyboard are ready for alignment; no video generation or opening selection yet.
+- [The Red Rite](red-rite/README.md) — selected Sleeping Presence reference and slow awakening; a ten-second opening with gradual camera onset and four small lava curls is ready for review. The face remains recognizable, while the first repaint changes materials and simplifies fine architecture.
 
 - [The Glass Tide](glass-tide/README.md) — 68 continuous seconds from a crimson reef through forest architecture and jewelled chambers to a coiled glass world above the sea. All 612 paintings retained; screened, verified and accepted by Olof. Next-film preferences: gentler onset of global movement and selectively lower intensity while preserving expressive overlap.
 
