@@ -30,6 +30,14 @@ The renderer already supports these controls individually and in combination. Se
 
 The browser additionally shows local expansion/pinch, radial ripples and unfolding. Those have historical experimental implementations, but are **not all exposed by the shared recurrent renderer**. Do not silently map an unknown `kind` to an unrelated transform or claim every browser effect is already connected. A regional expansion is the same effect wherever its center is placed; it is not named after a sun, house or other background object.
 
+## Choosing compatible overlaps
+
+Olof's Glass Tide feedback (2026-10-18) supports expressive layering with one leading movement or coordinated family and quieter supporting effects. A leading family may contain many local curls; there is no one-curl limit. Choose centres, radii, coverage, direction and timing from the artwork: one curl around a prominent form, or many smaller currents across an ocean or background. Effect count alone does not establish excessive motion.
+
+He dislikes the demonstrated travelling bend plus local curl because they compete. Avoid that pairing for the current direction. He proposes bend plus perspective tilt as a potentially better fit; that pairing remains untested in this discussion. Preserve these as taste evidence and a hypothesis, rather than a universal allowed-pairs table.
+
+For a candidate overlap, inspect whether the effects change the same structures in competing ways, whether their spatial scales and directions support a readable action, and whether their strongest moments coincide. A global tilt can carry a broad viewpoint change while a bend animates material within it. A bend and curl can both reshape the same local contours. Several curls can form a coherent current when their placement and timing support the scene; dense overlapping curls can also become incoherent. All are composable by the renderer, but compatibility must be judged on the actual painting and then the repainted result. [Explicit feedback](olof-learning-journal.md#2026-10-18--glass-tide-accepted-gentler-onset-next-time).
+
 ## Families and reference recipes
 
 The [Safety Marc comparison](research/bonsai-spatial-motion.md#current-palette-comparison--2026-09-15) separates four mechanisms. Deforum's menu labels alone do not make this distinction: all 95 saved presets select `3D`, including 45 with depth disabled.
