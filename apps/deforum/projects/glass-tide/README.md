@@ -10,7 +10,7 @@ The crimson reef unfurls into an ivory forest city, amber and obsidian vaults, a
 
 The recipe remains Krea 2 Turbo, Euler at noise 0.72, three updates and CFG 1. Each new painting starts from the warped previous painting; additional reference conditioning is off. RIFE stays outside feedback. The approved twelve-second opening and the earlier thirty-second film remain preserved.
 
-Glass edges, engraved partitions and stair silhouettes are clear. Broad nacre faces are smoother, some miniature structures simplify during the blue-chamber passage, and a small transient text-like mark remains near 30 seconds. Olof accepts the completed film on 2026-10-18 and asks to leave it unchanged. For the next film, make the first second's perceived onset more gradual while keeping the increasing motion he likes. Native painting checks, overviews and selected every-frame windows are complete.
+Glass edges, engraved partitions and stair silhouettes are clear. Broad nacre faces are smoother, some miniature structures simplify during the blue-chamber passage, and a small transient text-like mark remains near 30 seconds. Olof accepts the completed film on 2026-10-18 and asks to leave it unchanged. For the next film, make the onset of global movement more gradual wherever it begins. Preserve expressive overlap while selectively reducing excessive intensity and varying it over time. Native painting checks, overviews and selected every-frame windows are complete.
 
 ## Production records
 
