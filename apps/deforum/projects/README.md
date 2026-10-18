@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [The Glass Tide](glass-tide/README.md) — 68 continuous seconds from a crimson reef through forest architecture and jewelled chambers to a coiled glass world above the sea. All 612 paintings retained; screened and verified, with human full-film judgment pending.
+- [The Glass Tide](glass-tide/README.md) — 68 continuous seconds from a crimson reef through forest architecture and jewelled chambers to a coiled glass world above the sea. All 612 paintings retained; screened, verified and accepted by Olof. A gentler opening onset is the next-film preference.
 
 - [A World Inside Every Seed](world-seed/README.md) — thirty-second continuous journey through jungle, ancient city, opalescent geometry and a garden inside a crystalline seed. Broad banks, local unfurling, lateral travel and an outward ending; 180 new paintings, with the earlier opening and all previous versions preserved. Olof likes the movement and later worlds; opening/doorway detail is the next quality target.
 

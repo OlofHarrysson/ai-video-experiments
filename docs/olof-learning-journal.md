@@ -547,6 +547,12 @@ Olof subsequently selects the local curl and requests a longer passage with smoo
 
 After the twelve-second layered passage, Olof says “Now we're talking” and asks to wrap the film up at one to one and a half minutes with a cool ending. This approves the layered-motion direction and authorizes the longer film; judgment of the complete film and its new ending remains open. [Long-film production](../apps/deforum/projects/glass-tide/experiments/long-finale.md).
 
+### 2026-10-18 — Glass Tide accepted; gentler onset next time
+
+Olof calls the completed Glass Tide interesting, with plenty of movement and cool things happening, and says we are happy with the output. Keep this film unchanged. His reservation concerns approximately the first second: the apparent approach feels like an on/off switch after a static view. For the next film, he wants a gradual onset while retaining the progressively stronger motion he likes. He asks for an explanation of the effects and wants to decide what to change creatively before making another video; this is not an instruction to start generation now.
+
+The saved opening has no authored global zoom or travel for roughly the first three delivery seconds. Its local curl already uses smooth easing, while recurrent repainting can change apparent scale and structure. Therefore the perceived onset should be assessed in both the spatial preview and the first generated paintings; a camera-curve edit alone is not a proven fix. [Film and motion record](../apps/deforum/projects/glass-tide/experiments/long-finale.md).
+
 ### 2026-10-16 — The Curve: the AI race, not AI's skills
 
 Olof asks for a 30–60 second silent video in TypeScript, Three.js and Remotion. He wants it to capture AI's accelerating pace: hype, chaos, "an exponential that is speeding up", and fear and excitement at once, with music added later. He picks the recommended story (ride a curve that keeps turning into a wall; a pull-back reveal; a crowd ending with "This is the slowest it will ever be."), captions plus the closing line, and 16:9.

@@ -45,7 +45,7 @@ Fine glass edges and engraved rims remain clear. Broad nacre and glass faces are
 
 The complete RIFE workprint was screened with ten overview frames and every-frame windows at 40.875–41.125, 52.875–53.125, 55.875–56.125 and 64.5–64.875 seconds: 41 images across four inspected pages. Rims stay connected at the M/N, N/P and P/Q handoffs; local miniature details change while the pearl and outer shell remain recognizable in the late turn. No conspicuous edit jump or doubled rim appears in those windows.
 
-The final delivery retains the first 1,630 lossless frames of that workprint and replaces its two holds with spatial movement. All nine displayed frames at 67.625–67.999 seconds were inspected from the final MP4. The pearl, glass outline, towers, plants and reflection remain coherent; the last two frames continue a subtle drift. The assistant selects this cut. Full-speed human rhythm and ending preference remain open.
+The final delivery retains the first 1,630 lossless frames of that workprint and replaces its two holds with spatial movement. All nine displayed frames at 67.625–67.999 seconds were inspected from the final MP4. The pearl, glass outline, towers, plants and reflection remain coherent; the last two frames continue a subtle drift. The assistant selects this cut. On 2026-10-18 Olof accepts the overall result and asks to keep it unchanged. For the next film he wants a gentler onset in approximately the first second, while retaining the progressively stronger motion. The saved opening has no global zoom or travel until about 2.9 delivery seconds and its local curl is already eased; repainting-driven scale changes also need inspection before attributing the perceived switch to a camera control.
 
 ## Reproducibility and preservation
 
