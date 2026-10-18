@@ -119,3 +119,10 @@ Following a separate read-only audit and explicit approval, the conservative sel
 Private execution and restoration receipts are in `apps/deforum/work/storage-audit/four-films-20261018/conservative-cleanup/`. `completion.json` records preservation readback and the receipt index; `README.md` gives the restore command. The existing restore CLI accepts the new static-audit copy receipts, reconstructing the pinned base recipe only when restoration is explicitly requested. These receipts do not claim a fresh full reconstruction was demonstrated during cleanup.
 
 Volume free space increased by **21.28 GB**, from **54.25 GB to 75.52 GB**, during this deletion pass. APFS-shared data and unrelated writes explain why the observed change differs from 37.28 GB of deleted file sizes. All non-selected project files passed the final unchanged-file check. The 15 focused tests and Ruff passed; rendering was mocked in restoration tests.
+
+
+### Remaining interpolation cleanup and broader estimate, October 18
+
+The separately authorized remaining-interpolation pass removed **14,847 PNG paths / 24.66 GB logical** in 31 supported, intact sequences across Modern Model Study and Storm Engine, without rendering. Historical recipes, partial sequences and validation pairs stayed. All 102,324 other files in those projects passed unchanged-file verification. Observed free space increased by **10.12 GB**, to **96.14 GB**, during the pass; hardlinks, APFS sharing and other writes affect these measurements.
+
+Receipts and reconstruction recipes are in `apps/deforum/work/storage-audit/remaining-interpolation-20261018/`; its README contains restoration instructions. A separate estimate for deleting most PNGs from projects whose newest media is over seven days old found 173.3 GB of candidate inode allocation, or 122.8 GB excluding Cartographer’s Dream and Night Orchard while their latest cuts await feedback. That destructive retention change remains **estimate-only**, includes original images, and is not an approved blanket purge or future automation.
