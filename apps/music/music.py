@@ -419,10 +419,10 @@ def review(path, out, send=False, prompt=PROMPT, model_id=MODEL, provider=None):
     }
     if not send:
         return receipt
-    dotenv.load_dotenv(ROOT / ".env", override=False)
+    dotenv.load_dotenv(Path.home() / "git/codex-config/.env", override=False)
     key = os.environ.get("OPENROUTER_API_KEY", "").strip()
     if not key:
-        raise ValueError(f"Set OPENROUTER_API_KEY in {ROOT / '.env'}")
+        raise ValueError("Set OPENROUTER_API_KEY in ~/git/codex-config/.env")
     out = fresh_dir(out)
     work = ROOT / "work"
     work.mkdir(exist_ok=True)

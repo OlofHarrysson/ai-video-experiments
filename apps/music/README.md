@@ -17,13 +17,13 @@ npm ci
 uv run --locked python music.py --help
 ```
 
-Put the key in `/Users/olof/git/ai-video-experiments/apps/music/.env`:
+Put the key in `/Users/olof/git/codex-config/.env`:
 
 ```dotenv
 OPENROUTER_API_KEY=your-key-here
 ```
 
-The private file already exists and is ignored by Git. `.env.example` is safe to track. Shell-provided credentials take precedence over the file. All billing goes through OpenRouter; the selected Gemini provider still processes the uploaded audio. No direct Google account or billing setup is used.
+The shared private file is ignored by Git. The tracked Codex configuration `.env.template` documents the key. Shell-provided credentials take precedence over the file. All billing goes through OpenRouter; the selected Gemini provider still processes the uploaded audio. No direct Google account or billing setup is used.
 
 ## Sound inspection harness
 
