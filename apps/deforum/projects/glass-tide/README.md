@@ -2,6 +2,8 @@
 
 A continuous surreal film through an impossible ocean of glass, coral and nacre. The accepted local curl grew into overlapping twists, travelling bends and varied camera movement; Olof approved that twelve-second direction and requested a finished one-to-one-and-a-half-minute film.
 
+Storage, October 26: generated PNGs, including original paintings, were retired at Olof’s request. Videos, audio, reference folders and configurations remain. Historical preservation statements below describe the production state; PNG-based review, editing or continuation now requires restoring the relevant inputs. See the [cleanup record and restoration limits](../../../../docs/storage.md#additional-newer-project-png-retirement-october-26).
+
 ## Current cut
 
 [Watch the 68-second film](http://localhost:3028/glass-tide) · [Original MP4](exports/v001/gt-world-in-the-shell-q/faster/rife-moving-tail/preview.mp4) · [Cut v003](cuts/v003.md).

@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-Storage status: on October 26, Olof approved retiring generated PNGs from fifteen older studies and films while retaining every video, original reference folder and configuration. Those projects’ historical reports describe media that may no longer exist as loose PNGs; see the [affected projects and restoration limits](../../../docs/storage.md#approved-older-png-retirement-october-26) before frame review, editing or continuation.
+Storage status: on October 26, Olof approved retiring generated PNGs from fifteen older studies and films, then requested an additional cleanup covering World Seed and Glass Tide. Every video, original reference folder and configuration remains. Those projects’ historical reports describe media that may no longer exist as loose PNGs; see the [affected projects and restoration limits](../../../docs/storage.md#approved-older-png-retirement-october-26) before frame review, editing or continuation.
 
 - [The Red Rite](red-rite/README.md) — selected Sleeping Presence reference and slow awakening; a ten-second opening with gradual camera onset and four small lava curls is ready for review. The face remains recognizable, while the first repaint changes materials and simplifies fine architecture.
 

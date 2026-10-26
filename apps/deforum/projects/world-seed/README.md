@@ -2,6 +2,8 @@
 
 A continuous thirty-second surreal journey: alien jungle, an ancient black-and-gold city, opalescent geometry and a small living world inside a crystalline seed.
 
+Storage, October 26: generated PNGs, including original paintings, were retired at Olof’s request. Videos, audio, reference folders and configurations remain. Historical preservation statements below describe the production state; PNG-based review, editing or continuation now requires restoring the relevant inputs. See the [cleanup record and restoration limits](../../../../docs/storage.md#additional-newer-project-png-retirement-october-26).
+
 [Watch the film](exports/v002/p12-the-seed-holds-a-world/faster/rife-moving-tail/preview.mp4) · [Local reviewer](http://localhost:3028/world-seed) · [Direction and screening](experiments/choreography.md)
 
 [The Crystal Gate](experiments/crisp-passage/finale.md) is now a complete thirty-second film. It preserves the liked fourteen-second opening, rises through glass tree crowns, unfurls an ivory arch and ends in a cool porcelain-and-glass bloom. Diagonal travel, local spirals, sideways turns, a broad bend and outward reveals continue without cuts. Some broad surfaces remain simple. [Watch the film](http://localhost:3028/world-seed-crisp-passage); all earlier drafts remain available. Human review of the new ending is pending.
