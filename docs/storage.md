@@ -2,6 +2,8 @@
 
 Keep original paintings, references, cuts and final videos. Treat documented, reproducible finishing frames as temporary working media and clean them up when an experiment is finished, following the completion checklist below. Historical media with incomplete records needs a separate audit.
 
+**Current storage status, October 26:** Deforum occupies **196.6 GB** by `du`, down from **316.8 GB**. Olof explicitly approved a one-time retirement of older generated PNGs, including original paintings; the [October 26 record](#approved-older-png-retirement-october-26) identifies affected projects and the resulting restoration limits. The preservation rule above still applies to future work.
+
 ## What was taking space
 
 The 2026-09-15 audit measured about **155 GiB** in the checkout, including **148 GiB** in Deforum. Its project folders accounted for about **113 GiB**, working files **35 GiB**, and the Python environment **0.21 GiB**. These rounded `du` figures count existing hardlinks once.
@@ -125,4 +127,14 @@ Volume free space increased by **21.28 GB**, from **54.25 GB to 75.52 GB**, duri
 
 The separately authorized remaining-interpolation pass removed **14,847 PNG paths / 24.66 GB logical** in 31 supported, intact sequences across Modern Model Study and Storm Engine, without rendering. Historical recipes, partial sequences and validation pairs stayed. All 102,324 other files in those projects passed unchanged-file verification. Observed free space increased by **10.12 GB**, to **96.14 GB**, during the pass; hardlinks, APFS sharing and other writes affect these measurements.
 
-Receipts and reconstruction recipes are in `apps/deforum/work/storage-audit/remaining-interpolation-20261018/`; its README contains restoration instructions. A separate estimate for deleting most PNGs from projects whose newest media is over seven days old found 173.3 GB of candidate inode allocation, or 122.8 GB excluding Cartographer’s Dream and Night Orchard while their latest cuts await feedback. That destructive retention change remains **estimate-only**, includes original images, and is not an approved blanket purge or future automation.
+Receipts and reconstruction recipes are in `apps/deforum/work/storage-audit/remaining-interpolation-20261018/`; its README contains restoration instructions, subject to the later source retirements below. A separate estimate for deleting most PNGs from projects whose newest media is over seven days old found 173.3 GB of candidate inode allocation, or 122.8 GB excluding Cartographer’s Dream and Night Orchard while their latest cuts await feedback. That estimate included original images and was not approved for execution on October 18. The narrower October 26 selection below received separate approval; no future automatic purge is authorized.
+
+### Approved older-PNG retirement, October 26
+
+Olof approved a concrete selection of **78,645 PNG paths** to reduce Deforum below 200 GB. All selected paths were deleted. They represented **134.21 GB of logical file sizes**, or **120.33 GB of allocated file bytes counting hardlinks once**. The resulting folder measures **196.60 GB**. Observed volume free space increased by **61.22 GB**, from **35.05 GB to 96.27 GB**, during execution; APFS sharing and unrelated disk writes affect the physical-space measurement.
+
+The selection covers generated PNGs in Modern Model Study, Storm Engine, Motion Guide Study, Brain Entity Study, Botanical Cathedral, Guide Redraw, Lantern Marsh, Marsh Story, Model Comparison, Motion Lab, Redraw Lab, SDXL Settings, Seedream Motion, Seedream Repaint and Shape Injection. Original reference folders, Git-tracked files, every non-PNG file and all other projects were excluded. Cartographer’s Dream, Night Orchard, World Seed, Glass Tide, Red Rite and Rainbow Mane remain intact.
+
+This retirement **includes original generated paintings**. Historical preservation and restoration statements for affected versions no longer establish that their input PNGs remain available. Videos remain playable, but PNG-based frame review, editing and continuation require restoring the relevant inputs first. Retained work archives may contain some images; their recovery coverage was not audited and is not guaranteed. This approval does not authorize future automatic purges.
+
+Private evidence is in `apps/deforum/work/storage-audit/cleanup-20261026/`: the approved path list, execution script, authorization and plan hash, per-file deletion hashes, preservation snapshot, video hashes, and completion receipt. Execution verified every selected file’s identity against the approved plan, recorded its SHA-256 before unlinking, confirmed all selected paths absent, and checked **202,876 retained files** for unchanged identity/size/modification time. All **10,240 retained video paths** passed SHA-256 readback. No rendering, re-encoding or archive removal was performed.
