@@ -13,5 +13,26 @@
       "sha256": "3bd5b56eb796f158db83559f38d59971a024ceaab846f4cb71d758777f24960c",
       "purpose": "Public portfolio cover inspected; not used as a generation input."
     }
-  ]
+  ],
+  "room_refinement_2026_11_11": {
+    "source_frame": {
+      "file": "frame-reviews/v002/frames/000002.png",
+      "frame_number": 95,
+      "time_seconds": 3.9583333333333335,
+      "sha256": "58df627daec3fc46fa313e458fc0efa9577ac80136a74702f0e9f1973ebfc577",
+      "uploaded_to": "Fal connected account",
+      "purpose": "Approved original-film lighting, depth and room reference"
+    },
+    "character_crop": {
+      "file": "our-character-crop-v001.png",
+      "source": "../runs/still-a2-v001/image.png",
+      "crop_xyxy": [
+        1400,
+        170,
+        2230,
+        1080
+      ],
+      "sha256": "78d43f61c07cc77ee27f9dd2fbfece0a897c24ef373ca2c3562a366d5aeab95f"
+    }
+  }
 }

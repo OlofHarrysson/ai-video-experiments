@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-11",
+  "endpoint_id": "google/nano-banana-2.1/edit",
+  "request_id": "01a1c7c0-b152-7bb3-aba8-c5c2683d299c",
+  "recipe": {
+    "endpoint_id": "google/nano-banana-2.1/edit",
+    "input": {
+      "prompt": "Make a new animated film opening still based on IMAGE 2, the wide sunlit room frame. Use IMAGE 2's frontal camera angle, richly painted environment, glowing golden window light, dense foliage, desk arrangement, textures and warm film atmosphere. Keep the environment as richly detailed and dimensional as IMAGE 2, with soft painted background edges rather than comic outlines. Replace its girl with the recognizable character from IMAGE 1: chestnut ponytail, loose side strands, brown eyes, face and violet long-sleeved shirt. IMAGE 1 is a face-and-hair reference only.\n\nPull the camera back about 25 percent from IMAGE 2 to a medium-wide establishing view: girl behind the wooden desk, glowing window left, richly rumpled teal bed right, plants and pinned studies behind her. Add a few soft out-of-focus leaves at the near left edge and a low foreground stack of art books to establish parallax for a later camera move. Keep her face, hands and open sketchbook unobstructed. She is looking down and drawing a FULL-BODY graphite unicorn with a yellow pencil in her right hand; left hand rests on the page. One horn, four legs, mane and tail in the drawing. Delicate hand-drawn character against the luminous detailed painted room. Naturalistic textured wood, ceramic and foliage, nuanced bounce light, dappled sunlight, bright amber highlights and cool soft shadows. Clear visual hierarchy, not clutter covering the action. One landscape 16:9 image, no text, panels, borders or logos.",
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0ab1f6ff/iuOF5eHu8yWL_eqRELmrx_our-character-crop-v001.png",
+        "https://v3b.fal.media/files/b/0ab1f6ef/26IhE2Uqsxo5cDc-6RmlW_do-it-big-room-frame-003958.png"
+      ],
+      "aspect_ratio": "16:9",
+      "resolution": "2K",
+      "thinking_level": "high",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0ab1f701/rfdmn6x49_9E8U_BKRN2n_tKLpKbJI.png",
+        "content_type": "image/png",
+        "file_name": "rfdmn6x49_9E8U_BKRN2n_tKLpKbJI.png",
+        "file_size": null,
+        "width": 2752,
+        "height": 1536
+      }
+    ],
+    "description": ""
+  },
+  "reference_provenance": {
+    "original_page": "https://shuvfx.myportfolio.com/do-it-big",
+    "original_frame_file": "references/assets/frame-reviews/v002/frames/000002.png",
+    "original_frame_sha256": "58df627daec3fc46fa313e458fc0efa9577ac80136a74702f0e9f1973ebfc577",
+    "character_crop": {
+      "file": "references/assets/our-character-crop-v001.png",
+      "source": "runs/still-a2-v001/image.png",
+      "crop_xyxy": [
+        1400,
+        170,
+        2230,
+        1080
+      ],
+      "sha256": "78d43f61c07cc77ee27f9dd2fbfece0a897c24ef373ca2c3562a366d5aeab95f"
+    }
+  }
+}

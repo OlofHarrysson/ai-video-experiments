@@ -47,6 +47,8 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 ### sunlit-sketchbook — opening homage
 
+- [Room depth and revised storyboard](sunlit-sketchbook/experiments/room-depth.md): actual source-frame conditioning improves room composition, light and depth; room-v003 recommended, new camera/galaxy sequence planned.
+
 - [First animation](sunlit-sketchbook/experiments/video-v001.md): three Wan 3.0 Prime shots form a ten-second silent opening; sources and final cut decode correctly, visual frame screening complete, human playback judgment pending.
 
 - [Opening still results](sunlit-sketchbook/experiments/stills-v001.md): artist, sketch, dimensional transformation and outdoor unicorn; five Fal generations preserved, four selected for visual feedback before animation.

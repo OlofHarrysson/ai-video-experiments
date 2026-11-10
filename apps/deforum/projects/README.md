@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [Sunlit Sketchbook](sunlit-sketchbook/README.md) — opening homage to Shuvfx’s Do It Big; accepted stills animated into a ten-second silent cut, frame-screened and ready for playback review.
+- [Sunlit Sketchbook](sunlit-sketchbook/README.md) — opening homage to Shuvfx’s Do It Big; first ten-second cut prompted richer art direction and camera motion. Source-guided room-v003 is ready for look review, with a revised galaxy storyboard.
 
 Storage status: on October 26, Olof approved retiring generated PNGs from fifteen older studies and films, then requested an additional cleanup covering World Seed and Glass Tide. Every video, original reference folder and configuration remains. Those projects’ historical reports describe media that may no longer exist as loose PNGs; see the [affected projects and restoration limits](../../../docs/storage.md#approved-older-png-retirement-october-26) before frame review, editing or continuation.
 

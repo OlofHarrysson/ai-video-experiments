@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-11",
+  "endpoint_id": "google/nano-banana-2.1/edit",
+  "request_id": "01a1c7be-a76e-7663-8c09-98844019df65",
+  "recipe": {
+    "endpoint_id": "google/nano-banana-2.1/edit",
+    "input": {
+      "prompt": "Create ONE new cinematic animation opening frame for a homage, using these two reference images in different roles.\nIMAGE 1 is the PRIMARY reference for the art direction: luminous golden afternoon, richly painted three-dimensional room, dense small natural details, softly textured materials, atmospheric depth, and a clean hand-drawn girl integrated into that environment.\nIMAGE 2 supplies ONLY our existing character identity: her recognizable face, chestnut-brown hair gathered into a ponytail, loose side strands, brown eyes and plain violet long-sleeved shirt. Do not carry over image 2's flat outlined background or its side-on composition.\n\nCOMPOSITION: a wider frontal three-quarter view across a wooden drawing desk. The girl sits near the middle-right, visible from waist up, absorbed in drawing. A tall glowing window is on the left, an inviting bed with rumpled teal linen is farther back on the right. Leave natural room around the girl and above her for a later slow camera push. A few large softly blurred leaves at the lower-left edge and a blurred stack of art books establish a close foreground layer, without covering her face, hands or sketchbook. The character and sketchbook are sharp; distant shelving and bed fall gently softer. Full landscape 16:9 frame.\n\nART DIRECTION: the environmental richness and light behavior must be substantially closer to IMAGE 1. Warm sunlight pours through many individually shaped translucent leaves, creating intricate dappled light on the desk and worn floor. Fine wood grain, chipped edges on a ceramic pencil cup, paper texture and curled corners in pinned studies, bristles of brushes, glass reflections, varied small potted plants, trailing vines, book spines, softly wrinkled bedding. Paint the background with subtle naturalistic material shading and nuanced warm/cool color. Background objects have soft painted edges, NOT uniform black comic outlines. Amber and honey highlights contrast with soft cool blue-green shaded areas. Dimensional bounce light, delicate atmospheric bloom around the window, restrained depth of field. This must feel like a richly art-directed animated feature, not a flat comic panel and not a plastic 3D cartoon.\n\nACTION POSE: she holds ONE yellow graphite pencil in her right hand, its tip touching the page naturally, while her left hand rests on the paper. The open large spiral sketchbook shows a complete delicate graphite unicorn, with four legs, one horn, mane and tail, oriented for her to draw it. Keep hands anatomically coherent, expression quiet and engaged, eyes down. Preserve the recognizable girl from IMAGE 2 with elegant thin linework and subtle shaded skin; don't replace her with image 1's character.\n\nNo text, labels, watermark, logos, collage or split panels. Do not fill every gap with objects: preserve clear visual emphasis on the girl's face, the lit drawing and the window. One still image, not a storyboard sheet.",
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0ab1f6ef/26IhE2Uqsxo5cDc-6RmlW_do-it-big-room-frame-003958.png",
+        "https://v3b.fal.media/files/b/0ab1f596/D67YwMKFnPS7I1AZrcSd7_yODX7a60.png"
+      ],
+      "resolution": "2K",
+      "aspect_ratio": "16:9",
+      "thinking_level": "high",
+      "num_images": 1,
+      "output_format": "png"
+    },
+    "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+  },
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0ab1f6f4/mLXFJ221FcOQdGc7eeTKu_t4cC5di6.png",
+        "content_type": "image/png",
+        "file_name": "mLXFJ221FcOQdGc7eeTKu_t4cC5di6.png",
+        "file_size": null,
+        "width": 2752,
+        "height": 1536
+      }
+    ],
+    "description": ""
+  },
+  "reference_provenance": {
+    "original_page": "https://shuvfx.myportfolio.com/do-it-big",
+    "original_frame_file": "references/assets/frame-reviews/v002/frames/000002.png",
+    "original_frame_sha256": "58df627daec3fc46fa313e458fc0efa9577ac80136a74702f0e9f1973ebfc577",
+    "role": "lighting, materials, layered room detail",
+    "character_reference": "runs/still-a2-v001/image.png"
+  }
+}
