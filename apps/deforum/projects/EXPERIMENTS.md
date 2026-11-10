@@ -45,6 +45,10 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 ## All notes
 
+### sunlit-sketchbook — opening homage
+
+- [Opening stills](sunlit-sketchbook/experiments/baseline.md): artist, sketch, dimensional transformation and outdoor unicorn; prompts and original reference preserved, generation awaiting Fal plugin reconnection.
+
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 
 ### rainbow-mane — character transformation
