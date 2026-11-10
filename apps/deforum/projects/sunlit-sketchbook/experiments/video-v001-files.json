@@ -1,0 +1,53 @@
+[
+  {
+    "name": "artist",
+    "file": "runs/video-artist-v001/video.mp4",
+    "bytes": 9709414,
+    "sha256": "1478a87c34a408be74eb3698e5c2d57326949a2898df53fe65207b4eecf36e21",
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "90"
+      }
+    ],
+    "duration": "3.000000"
+  },
+  {
+    "name": "transformation",
+    "file": "runs/video-transformation-v001/video.mp4",
+    "bytes": 13141390,
+    "sha256": "5b315aa5c53175274ee1868bb60711b8e4362e5942459315ae653ddf95d7eb2a",
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "120"
+      }
+    ],
+    "duration": "4.000000"
+  },
+  {
+    "name": "outdoors",
+    "file": "runs/video-outdoors-v001/video.mp4",
+    "bytes": 15414660,
+    "sha256": "343ebec8f19ceb9428b4aac1cae3bd6e8fc1c9772d15229e17767e3b8b343c4b",
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "90"
+      }
+    ],
+    "duration": "3.000000"
+  }
+]

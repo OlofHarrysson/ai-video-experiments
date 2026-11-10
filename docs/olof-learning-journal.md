@@ -574,3 +574,7 @@ After watching v004 he asked: "The story, how does it make people FEEL? what is 
 ### 2026-10-17 — The Curve v005 lands
 
 Olof watched v005: "Watched v005 and it lands. Lock it as the current cut." This is playback approval of the "can't keep up" retelling as a whole: the person anchoring every shot, the storm, the spin and freeze, YOU and NOW in the reveal, and the two closing lines. It does not approve any specific parameter, and it doesn't settle music. Keep v005 as the baseline for any later change. [The Curve](../apps/remotion/projects/the-curve/README.md).
+
+### 2026-11-10 — Sunlit Sketchbook stills accepted; cosmic setting preferred
+
+Olof says the four opening stills are close enough to the reference. He feels the fourth, naturalistic forest unicorn fits less well and would personally prefer the space/galaxy imagery, but accepts the forest if it matches the original piece. The original opening does use a forest, with galaxy imagery later. This authorizes the small opening animation with the approved stills; it does not establish a general preference for forests or approve the unseen animation. Keep the cosmic-setting preference available for later artistic direction. [Sunlit Sketchbook](../apps/deforum/projects/sunlit-sketchbook/README.md).

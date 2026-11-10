@@ -1,0 +1,111 @@
+{
+  "status": "completed",
+  "jobs": [
+    {
+      "index": 0,
+      "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+      "request_id": "01a1c796-fa51-7321-981e-3d7fefae9082",
+      "result": {
+        "video": {
+          "url": "https://v3b.fal.media/files/b/0ab1f5f8/gB_Kq3DrYrwVAHE3etVEs_vRelirrh.mp4",
+          "content_type": "video/mp4",
+          "file_name": "gB_Kq3DrYrwVAHE3etVEs_vRelirrh.mp4",
+          "file_size": 9709414,
+          "width": 1920,
+          "height": 1080,
+          "fps": 30,
+          "duration": 3,
+          "num_frames": 90
+        },
+        "seed": 557715189,
+        "duration": 3,
+        "actual_prompt": null
+      },
+      "recipe": {
+        "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+        "input": {
+          "resolution": "1080p",
+          "aspect_ratio": "16:9",
+          "audio": false,
+          "enable_thinking": true,
+          "enable_prompt_expansion": true,
+          "start_image_url": "https://v3b.fal.media/files/b/0ab1f596/D67YwMKFnPS7I1AZrcSd7_yODX7a60.png",
+          "duration": 3,
+          "prompt": "A single continuous animated-film shot. The young woman makes two small, deliberate pencil strokes on the existing unicorn drawing, then pauses with the pencil tip just above the paper and a faint pleased smile. Her gaze remains on the sketchbook. Her other hand rests on the page. Subtle breathing and a small natural blink. Keep the exact face, violet shirt, illustration style, room arrangement and warm window light of the starting image. Locked camera. Small hand movements, coherent fingers and pencil, no new objects, no cuts, no speaking."
+        },
+        "note": "Submitted inputs, not resolved server defaults. Source URLs may expire."
+      }
+    },
+    {
+      "index": 1,
+      "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+      "request_id": "01a1c796-c40b-77c3-b7fa-c83fd6564b2d",
+      "result": {
+        "video": {
+          "url": "https://v3b.fal.media/files/b/0ab1f5f9/bD5-TQjXn3RcjxPfJQXHz_AhfIw18K.mp4",
+          "content_type": "video/mp4",
+          "file_name": "bD5-TQjXn3RcjxPfJQXHz_AhfIw18K.mp4",
+          "file_size": 13141390,
+          "width": 1920,
+          "height": 1080,
+          "fps": 30,
+          "duration": 4,
+          "num_frames": 120
+        },
+        "seed": 686033598,
+        "duration": 4,
+        "actual_prompt": null
+      },
+      "recipe": {
+        "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+        "input": {
+          "resolution": "1080p",
+          "aspect_ratio": "16:9",
+          "audio": false,
+          "enable_thinking": true,
+          "enable_prompt_expansion": true,
+          "start_image_url": "https://v3b.fal.media/files/b/0ab1f59e/ATA_Fs4SiXABbo1tbJE8-_BOFoyvM5.png",
+          "end_image_url": "https://v3b.fal.media/files/b/0ab1f5a2/3My2FnFgTaiV4V6lzesTU_B9VE2pID.png",
+          "duration": 4,
+          "prompt": "One continuous locked overhead shot, smoothly connecting the supplied start and end frames. For the first half second the graphite unicorn drawing remains visible. Its pencil lines then gradually soften into ivory fur, dimensional muscle shading and a pale golden horn, until the unicorn appears lifelike on the page exactly as in the ending image. The change grows gently across its body over the middle three seconds, finishing cleanly in the last half second. Keep the animal in the same standing pose, size and location on the page. Keep the book corners, binding, hands, pencil and wooden desk stationary and unchanged throughout. Only the unicorn's material and shading transform. No camera movement, no walking, no page turning, no glitter explosion, no cut or dissolve to another location."
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      }
+    },
+    {
+      "index": 2,
+      "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+      "request_id": "01a1c796-fa96-7212-aec4-b51606bcd4fa",
+      "result": {
+        "video": {
+          "url": "https://v3b.fal.media/files/b/0ab1f5f8/ORbyPi1HnRINBJOlxtZl9_nhCzaVY5.mp4",
+          "content_type": "video/mp4",
+          "file_name": "ORbyPi1HnRINBJOlxtZl9_nhCzaVY5.mp4",
+          "file_size": 15414660,
+          "width": 1920,
+          "height": 1080,
+          "fps": 30,
+          "duration": 3,
+          "num_frames": 90
+        },
+        "seed": 554438963,
+        "duration": 3,
+        "actual_prompt": null
+      },
+      "recipe": {
+        "endpoint_id": "alibaba/wan-3.0-prime/image-to-video",
+        "input": {
+          "resolution": "1080p",
+          "aspect_ratio": "16:9",
+          "audio": false,
+          "enable_thinking": true,
+          "enable_prompt_expansion": true,
+          "start_image_url": "https://v3b.fal.media/files/b/0ab1f5a6/6oSUEMAzw50zEwTzQzC_J_BwCMRRzS.png",
+          "duration": 3,
+          "prompt": "One continuous naturalistic film shot of this same ivory-white unicorn in the sunlit woodland clearing. The unicorn remains in place in right-facing profile, takes a gentle breath and makes one small ear flick and a subtle lift of its head. A soft breeze moves its mane, tail and the foreground fern tips. Warm backlight glows through the hair. Camera slowly glides forward a very short distance, keeping the full body and horn in frame. Preserve realistic horse anatomy, four legs and one horn, the forest layout and golden-hour lighting. No wings, no walking or galloping, no magical particles, no cuts."
+        },
+        "note": "Submitted inputs, not resolved server defaults. Source URLs may expire."
+      }
+    }
+  ]
+}

@@ -27,6 +27,8 @@ Inspected returned image pixels for all five generations, then decoded the four 
 
 The sketch-to-dimensional pair is the strongest mechanism result. The room’s visual richness is the main remaining taste question: whether this softer illustrated treatment is close enough, or whether to push it toward the source’s luminous, densely painted environment before animation. Do not infer Olof’s preference from successful generation.
 
+**Subsequent feedback:** Olof says the stills look close enough. He personally prefers space/galaxy imagery and feels the forest is less fitting, but accepts the forest for this test if it matches the original opening. The first animation proceeded within that scope; see [video v001](video-v001.md).
+
 After Olof reviews the stills, animate the artist shot, bridge B to C with a model supporting both frames, and animate D as a separate outdoor shot; assemble roughly ten seconds with a hard cut to the landscape. Music remains later.
 
 ## Records

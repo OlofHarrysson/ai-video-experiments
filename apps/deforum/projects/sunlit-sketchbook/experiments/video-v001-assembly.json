@@ -1,0 +1,131 @@
+{
+  "output": "exports/video-v001/sunlit-sketchbook-opening.mp4",
+  "sha256": "c40df6d6fd8ba017dd7763cd538c501d2bfd5a70eb12d3dd5f61d6f2718b6ba4",
+  "bytes": 38260575,
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-f",
+    "concat",
+    "-safe",
+    "0",
+    "-i",
+    "/Users/olof/git/ai-video-experiments/apps/deforum/projects/sunlit-sketchbook/exports/video-v001/concat.txt",
+    "-map",
+    "0:v:0",
+    "-an",
+    "-c:v",
+    "copy",
+    "-movflags",
+    "+faststart",
+    "/Users/olof/git/ai-video-experiments/apps/deforum/projects/sunlit-sketchbook/exports/video-v001/sunlit-sketchbook-opening.mp4"
+  ],
+  "sources": [
+    {
+      "file": "runs/video-artist-v001/video.mp4",
+      "sha256": "1478a87c34a408be74eb3698e5c2d57326949a2898df53fe65207b4eecf36e21"
+    },
+    {
+      "file": "runs/video-transformation-v001/video.mp4",
+      "sha256": "5b315aa5c53175274ee1868bb60711b8e4362e5942459315ae653ddf95d7eb2a"
+    },
+    {
+      "file": "runs/video-outdoors-v001/video.mp4",
+      "sha256": "343ebec8f19ceb9428b4aac1cae3bd6e8fc1c9772d15229e17767e3b8b343c4b"
+    }
+  ],
+  "validation": {
+    "decode": "passed",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 300,
+    "duration_seconds": 10.0,
+    "audio_present": false
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1088,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 4,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 153600,
+        "duration": "10.000000",
+        "bit_rate": "30604485",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "300",
+        "nb_read_frames": "300",
+        "extradata_size": 47,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc60.31.102 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Users/olof/git/ai-video-experiments/apps/deforum/projects/sunlit-sketchbook/exports/video-v001/sunlit-sketchbook-opening.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "10.000000",
+      "size": "38260575",
+      "bit_rate": "30608460",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.101"
+      }
+    }
+  }
+}
