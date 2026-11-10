@@ -5,5 +5,13 @@
   "local_file": "do-it-big-reference-576p.mp4",
   "sha256": "837050ddd5048dd9c559d6f154317a59b81a8d1dd4d90cfabfca4cda8ec648da",
   "bytes": 18049692,
-  "review_note": "Review metadata retains original /private/tmp paths; corresponding extracted frames preserved within frame-reviews."
+  "review_note": "Review metadata retains original /private/tmp paths; corresponding extracted frames preserved within frame-reviews.",
+  "additional_assets": [
+    {
+      "file": "source-cover.png",
+      "source_url": "https://cdn.myportfolio.com/0e6faaac-4b29-47b8-a3b8-25d46a515272/1588540e-4806-40ca-995f-58d6b84ed29f_rwc_0x0x1669x941x1669.png?h=baf7b540f6ee9e843b8f000a09eac438",
+      "sha256": "3bd5b56eb796f158db83559f38d59971a024ceaab846f4cb71d758777f24960c",
+      "purpose": "Public portfolio cover inspected; not used as a generation input."
+    }
+  ]
 }

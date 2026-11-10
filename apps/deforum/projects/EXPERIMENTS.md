@@ -47,7 +47,7 @@ These are navigation suggestions, not a ranking of successful experiments. For p
 
 ### sunlit-sketchbook — opening homage
 
-- [Opening stills](sunlit-sketchbook/experiments/baseline.md): artist, sketch, dimensional transformation and outdoor unicorn; prompts and original reference preserved, generation awaiting Fal plugin reconnection.
+- [Opening still results](sunlit-sketchbook/experiments/stills-v001.md): artist, sketch, dimensional transformation and outdoor unicorn; five Fal generations preserved, four selected for visual feedback before animation.
 
 Grouped by project, alphabetically within each project. New notes should be linked here; keep conclusions in their original report.
 

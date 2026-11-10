@@ -1,6 +1,6 @@
 # Opening stills
 
-Date: 2026-11-10. Status: prepared; generation blocked by Fal plugin reauthentication.
+Date: 2026-11-10. Status: still generation completed after Olof reconnected Fal; [results](stills-v001.md) await visual feedback.
 
 ## Question
 
@@ -27,6 +27,6 @@ Use Olof’s configured Fal service budget under standing paid-experiment author
 
 ## Runs and findings
 
-No runs yet. `recommend_model` returned `UNAUTHORIZED` with “This app connection requires reauthentication. Reconnect the app and try again.” This was a model-selection call, not a generation submission. Reconnect the plugin and resume selection; do not substitute a direct API account.
+Initial `recommend_model` returned `UNAUTHORIZED`. Olof reconnected the plugin, and the same connected-tool route subsequently worked. Five generations completed: A, its refinement A2, then B, C and D. A2/B/C/D form the review set. No direct API account was substituted. See [the results](stills-v001.md).
 
 The original video and all prior frame reviews are preserved in `references/assets/`; the source video copy was hash-verified. Source review found an on-page dimensional transformation followed by a hard cut at approximately 12.833 seconds. The source’s precise model, prompts and editing method remain unknown.

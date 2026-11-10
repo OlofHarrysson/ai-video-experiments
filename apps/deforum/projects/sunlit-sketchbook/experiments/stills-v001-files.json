@@ -1,0 +1,32 @@
+[
+  {
+    "id": "A",
+    "file": "runs/still-a-v001/image.png",
+    "bytes": 6671790,
+    "sha256": "c9edb072b956c687f48b34f5c16888bed6abacd3443991de02ef199a915c18b6"
+  },
+  {
+    "id": "A2",
+    "file": "runs/still-a2-v001/image.png",
+    "bytes": 6598681,
+    "sha256": "a43b40298e1be9cdd2906bf96ebe984281633f989e35da6e4253f12bd22bc494"
+  },
+  {
+    "id": "B",
+    "file": "runs/still-b-v001/image.png",
+    "bytes": 6395999,
+    "sha256": "4805980767434ea3c0ef962b0af944c9cfe8878a44e4e501e19f8f8a60112dc7"
+  },
+  {
+    "id": "C",
+    "file": "runs/still-c-v001/image.png",
+    "bytes": 6039990,
+    "sha256": "de67161d0e71e7fc7444af8c14d0e820aeef133a29bb0b8c2f31c4297d7e9d8e"
+  },
+  {
+    "id": "D",
+    "file": "runs/still-d-v001/image.png",
+    "bytes": 6833545,
+    "sha256": "d968d39ff5adb73df729c27036f2067566078876854d1cf6042b1fdc78f95c90"
+  }
+]

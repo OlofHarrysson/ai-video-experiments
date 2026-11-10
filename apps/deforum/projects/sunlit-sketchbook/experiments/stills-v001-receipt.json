@@ -1,0 +1,178 @@
+{
+  "experiment": "sunlit-sketchbook-opening-stills",
+  "date": "2026-11-10",
+  "jobs": [
+    {
+      "id": "A",
+      "selected": false,
+      "endpoint_id": "google/nano-banana-2.1",
+      "request_id": "01a1c788-18bd-7a52-9e8c-c2aa95e592b0",
+      "recipe": {
+        "endpoint_id": "google/nano-banana-2.1",
+        "input": {
+          "prompt": "A cinematic animated-film still, medium-wide view across a wooden drawing desk toward a young woman absorbed in her sketchbook. Chestnut-brown hair in a loose low ponytail, a few soft strands around her face, expressive brown eyes, plain loose violet long-sleeved shirt. Her right hand holds a yellow graphite pencil naturally against the page; her left hand rests lightly on the paper. Calm, thoughtful expression, eyes looking down. The open spiral-bound sketchbook contains a recognizable pencil drawing of a white unicorn in side profile facing right.\n\nLate-afternoon sunlight enters through a tall window on the left, illuminating her cheek, hair edges, hands and the paper. A black adjustable desk lamp, ceramic mug, jars of pencils, a few worn books and small trailing plants sit around the desk. Behind her are pinned sketches, shelves and a softly rumpled bed. Layered depth and lovingly observed everyday detail, without obscuring the girl or the drawing. Clear hand-drawn character contours and restrained cel shading against a richly painted room, textured wood, luminous amber light and soft green foliage; warm shadows retain their color. The image feels intimate and believable, not plastic or glossy. One girl, two anatomically coherent hands, one pencil, no additional people.\n\nLandscape 16:9, one full-frame image, no text, logos, panels or borders.",
+          "aspect_ratio": "16:9",
+          "resolution": "2K",
+          "thinking_level": "high",
+          "num_images": 1,
+          "output_format": "png"
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "result": {
+        "images": [
+          {
+            "url": "https://v3b.fal.media/files/b/0ab1f58e/3r8T-F-wdE1zPxIAQQOi4_gKczJ1h1.png",
+            "content_type": "image/png",
+            "file_name": "3r8T-F-wdE1zPxIAQQOi4_gKczJ1h1.png",
+            "file_size": null,
+            "width": 2752,
+            "height": 1536
+          }
+        ],
+        "description": ""
+      },
+      "submission_key": "sunlit-sketchbook-20261110-A-v001-9b3c"
+    },
+    {
+      "id": "A2",
+      "selected": true,
+      "endpoint_id": "google/nano-banana-2.1/edit",
+      "request_id": "01a1c789-3b01-70a3-8c72-f993aee46dbb",
+      "recipe": {
+        "endpoint_id": "google/nano-banana-2.1/edit",
+        "input": {
+          "prompt": "Refine this image into a richer cinematic animation frame while preserving this young woman's recognizable face, chestnut ponytail and plain violet shirt. Reframe to a frontal three-quarter medium-wide view across the desk, with her face near center, the tall window on image left, and the bed on image right. The room should be lush, sun-drenched and deeply layered: trailing ivy around the window, leafy potted plants and flowers catching sunlight, richly textured wood, scattered art supplies, pinned small colorful drawings, books, a soft teal blanket on the bed. Strong low golden sunlight streams in diagonally, bright amber pools on the desk and beautiful luminous rim lighting on hair and sleeves, green foliage and cool teal shadows balancing the warmth. Preserve simple elegant hand-drawn character contours and expressive face, but render the ENVIRONMENT as a much more detailed painterly film background with atmospheric depth and subtle soft foreground blur; avoid uniformly thick dark outlines or flat brown walls. Her right hand makes a pencil mark and her left hand rests naturally beside it. IMPORTANT: on the open ivory spiral sketchbook is a COMPLETE full-body graphite unicorn facing right, including torso, four legs, flowing mane, tail and a single horn, not a head portrait. The sketch is visibly oriented upright to the artist, not to the camera. Calm absorbed expression. No extra people, text or logos. Landscape 16:9, one image.",
+          "image_urls": [
+            "https://v3b.fal.media/files/b/0ab1f58e/3r8T-F-wdE1zPxIAQQOi4_gKczJ1h1.png"
+          ],
+          "aspect_ratio": "16:9",
+          "resolution": "2K",
+          "thinking_level": "high",
+          "num_images": 1,
+          "output_format": "png"
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "result": {
+        "images": [
+          {
+            "url": "https://v3b.fal.media/files/b/0ab1f596/D67YwMKFnPS7I1AZrcSd7_yODX7a60.png",
+            "content_type": "image/png",
+            "file_name": "D67YwMKFnPS7I1AZrcSd7_yODX7a60.png",
+            "file_size": null,
+            "width": 2752,
+            "height": 1536
+          }
+        ],
+        "description": ""
+      },
+      "submission_key": "sunlit-sketchbook-20261110-A-v002-4e02"
+    },
+    {
+      "id": "B",
+      "selected": true,
+      "endpoint_id": "google/nano-banana-2.1/edit",
+      "request_id": "01a1c78a-73d0-7b60-80fc-11f908613a7d",
+      "recipe": {
+        "endpoint_id": "google/nano-banana-2.1/edit",
+        "input": {
+          "prompt": "Create a new overhead close-up in the same room, keeping the exact desk materials, warm light direction, sketchbook design and violet sleeves from the reference. The spiral-bound sketchbook fills most of the image, viewed at a gentle oblique angle so its page remains easy to read. The girl is out of frame except for her hands at the lower edges. A yellow pencil lightly touches the drawing near the unicorn’s shoulder; fingers hold it naturally. Sparse desk props at the edges only.\n\nThe page shows a delicate graphite study of a graceful unicorn standing in side profile facing right: four coherent slender legs, long flowing mane and tail, one narrow spiraled horn, relaxed ears, believable horse anatomy. The unicorn is entirely a pencil drawing, with visible graphite strokes and light hatching on warm ivory paper. No color-filled horse, no physical animal standing on the book. Match the hand-drawn hands and painted surroundings of the reference.\n\nThe full unicorn's four legs, torso and tail must fit on the page. Make the drawing substantially more finely observed and anatomically convincing than the small sketch in the reference. Camera looks over the artist's hands, so the unicorn faces right on the page. Rich luminous afternoon light, finely painted textured desk, softly illustrated hands. One landscape 16:9 still, no text or borders.",
+          "image_urls": [
+            "https://v3b.fal.media/files/b/0ab1f596/D67YwMKFnPS7I1AZrcSd7_yODX7a60.png"
+          ],
+          "aspect_ratio": "16:9",
+          "resolution": "2K",
+          "thinking_level": "high",
+          "num_images": 1,
+          "output_format": "png"
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "result": {
+        "images": [
+          {
+            "url": "https://v3b.fal.media/files/b/0ab1f59e/ATA_Fs4SiXABbo1tbJE8-_BOFoyvM5.png",
+            "content_type": "image/png",
+            "file_name": "ATA_Fs4SiXABbo1tbJE8-_BOFoyvM5.png",
+            "file_size": null,
+            "width": 2752,
+            "height": 1536
+          }
+        ],
+        "description": ""
+      },
+      "submission_key": "sunlit-sketchbook-20261110-B-v001-4bc8"
+    },
+    {
+      "id": "C",
+      "selected": true,
+      "endpoint_id": "google/nano-banana-2.1/edit",
+      "request_id": "01a1c78b-271b-7a51-9df6-fc079ee56907",
+      "recipe": {
+        "endpoint_id": "google/nano-banana-2.1/edit",
+        "input": {
+          "prompt": "Edit only the unicorn drawing. Preserve the camera, page corners, binding, desk, surrounding objects, lighting and hand positions exactly. Transform the graphite unicorn into a lifelike ivory-white unicorn with fine fur, soft mane and tail, subtle warm shading and a pale golden spiraled horn. Keep its exact size, position, silhouette and right-facing standing pose. Its volume seems to emerge from the page while remaining within the drawing’s original footprint; a delicate contact shadow grounds the illusion. Keep the rest of the paper plain and unchanged. Do not turn the desk into a landscape or add wings.\n\nKeep its elegant narrow horse face, single horn, four legs, flowing mane and tail, with no wings. The image should make a clearly visible transition from graphite linework to soft realistic white fur and dimensional shading, while the hands, pencil, desk and book retain their illustrated style. One landscape 16:9 still, no text or borders.",
+          "image_urls": [
+            "https://v3b.fal.media/files/b/0ab1f59e/ATA_Fs4SiXABbo1tbJE8-_BOFoyvM5.png"
+          ],
+          "aspect_ratio": "16:9",
+          "resolution": "2K",
+          "thinking_level": "high",
+          "num_images": 1,
+          "output_format": "png"
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "result": {
+        "images": [
+          {
+            "url": "https://v3b.fal.media/files/b/0ab1f5a2/3My2FnFgTaiV4V6lzesTU_B9VE2pID.png",
+            "content_type": "image/png",
+            "file_name": "3My2FnFgTaiV4V6lzesTU_B9VE2pID.png",
+            "file_size": null,
+            "width": 2752,
+            "height": 1536
+          }
+        ],
+        "description": ""
+      },
+      "submission_key": "sunlit-sketchbook-20261110-C-v001-b5cc"
+    },
+    {
+      "id": "D",
+      "selected": true,
+      "endpoint_id": "google/nano-banana-2.1/edit",
+      "request_id": "01a1c78b-c201-7c21-8d2f-70c3d460e6b7",
+      "recipe": {
+        "endpoint_id": "google/nano-banana-2.1/edit",
+        "input": {
+          "prompt": "A cinematic naturalistic still of the same ivory-white unicorn now alive in a woodland clearing at golden hour. Preserve the right-facing profile, face shape, horn, mane and proportions from the reference. Show its entire body with all four legs clearly readable and space around the horn and tail. Fine white fur, long softly flowing ivory mane, pale golden spiraled horn, calm dark eye and believable equine anatomy. No wings or tack.\n\nWarm low sun behind and to the left rims its mane. Ferns, meadow grasses and small pale wildflowers in the foreground, trees framing a distant sunlit valley, soft atmospheric depth. Keep the unicorn as the clear focal point. Naturalistic fur and environmental detail, gentle magical warmth rather than conspicuous sparkle effects. No room, sketchbook, human hands or text.\n\nThe reference determines only unicorn identity and pale-gold horn, not the rendering of the environment. This shot should look like a real white horse filmed outdoors in a sunlit forest clearing with a physically believable horn, realistic hair detail, soft atmospheric bokeh and subtle lens depth, rather than a flat cel-shaded drawing. Low camera at horse chest height, full body, profile facing right. One landscape 16:9 still.",
+          "image_urls": [
+            "https://v3b.fal.media/files/b/0ab1f5a2/3My2FnFgTaiV4V6lzesTU_B9VE2pID.png"
+          ],
+          "aspect_ratio": "16:9",
+          "resolution": "2K",
+          "thinking_level": "high",
+          "num_images": 1,
+          "output_format": "png"
+        },
+        "note": "These are the submitted inputs, not resolved server defaults. For a variation, copy them and change only requested fields; reuse returned_seed when supported by the schema. Source URLs may expire."
+      },
+      "result": {
+        "images": [
+          {
+            "url": "https://v3b.fal.media/files/b/0ab1f5a6/6oSUEMAzw50zEwTzQzC_J_BwCMRRzS.png",
+            "content_type": "image/png",
+            "file_name": "6oSUEMAzw50zEwTzQzC_J_BwCMRRzS.png",
+            "file_size": null,
+            "width": 2752,
+            "height": 1536
+          }
+        ],
+        "description": ""
+      },
+      "submission_key": "sunlit-sketchbook-20261110-D-v001-90d1"
+    }
+  ]
+}

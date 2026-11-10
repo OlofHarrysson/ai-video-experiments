@@ -2,7 +2,7 @@
 
 Browse the [complete experiment notebook](EXPERIMENTS.md) for individual questions and their original reports.
 
-- [Sunlit Sketchbook](sunlit-sketchbook/README.md) — a Fal-generated opening homage to Shuvfx’s Do It Big; four still keyframes planned before animation, awaiting Fal plugin reconnection.
+- [Sunlit Sketchbook](sunlit-sketchbook/README.md) — opening homage to Shuvfx’s Do It Big; four Fal-generated still keyframes screened and ready for visual review before animation.
 
 Storage status: on October 26, Olof approved retiring generated PNGs from fifteen older studies and films, then requested an additional cleanup covering World Seed and Glass Tide. Every video, original reference folder and configuration remains. Those projects’ historical reports describe media that may no longer exist as loose PNGs; see the [affected projects and restoration limits](../../../docs/storage.md#approved-older-png-retirement-october-26) before frame review, editing or continuation.
 
