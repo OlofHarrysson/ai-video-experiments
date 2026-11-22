@@ -12,6 +12,10 @@ Updated: 2026-11-21
 - The detailed operational handoff lives in `docs/current-state.md`; it is
   newer and richer for Deforum films than these thread summaries.
 
+## Needs Olof
+
+- [55] Judge the Sunlit Sketchbook room still (room-v003). Why: No more shots get made until you say whether it fixes the flatness.
+
 ## Now
 
 - Image-first video: design shot stills (Nano Banana via Fal), then animate them
