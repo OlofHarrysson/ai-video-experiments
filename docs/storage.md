@@ -2,7 +2,7 @@
 
 Keep original paintings, references, cuts and final videos. Treat documented, reproducible finishing frames as temporary working media and clean them up when an experiment is finished, following the completion checklist below. Historical media with incomplete records needs a separate audit.
 
-**Current storage status, October 26:** Deforum occupies **135.4 GB** by `du`, down from **316.8 GB**, after an [older-project PNG retirement](#approved-older-png-retirement-october-26) and an [additional World Seed / Glass Tide cleanup](#additional-newer-project-png-retirement-october-26) requested by Olof. Both include original generated paintings; the records below identify affected projects and restoration limits. The two execution windows observed **88.03 GB** of additional physical free space combined; about **123 GB** is now free. The preservation rule above still applies to future work.
+**Current storage status, November 22:** Deforum occupies **75 GB** by `du`, down from **316.8 GB**, after the [older-project PNG retirement](#approved-older-png-retirement-october-26), the [World Seed / Glass Tide cleanup](#additional-newer-project-png-retirement-october-26) and the [shelved-project PNG retirement](#shelved-project-png-retirement-november-22). All three include original generated paintings; the records below identify affected projects and restoration limits. The preservation rule above still applies to future work.
 
 ## What was taking space
 
@@ -146,3 +146,11 @@ After seeing that APFS sharing reduced the first pass’s physical recovery, Olo
 Deforum now measures **135.42 GB**. Observed volume free space increased by another **26.81 GB**, from **96.20 GB to 123.01 GB**, during this pass. The script confirmed all selected paths absent, all **172,219 retained files** unchanged by identity/size/modification time, and all **10,240 retained video paths** unchanged by SHA-256. No rendering, re-encoding or archive deletion occurred. The same restoration limits described above apply to these two projects: videos remain playable, but historical reports do not establish that their PNG inputs remain available.
 
 Private evidence is in `apps/deforum/work/storage-audit/newer-pngs-20261026/`, including the exact allowlist, execution script, per-file deletion hashes, preservation snapshot, video hashes, physical-space observations and completion receipt. Cartographer’s Dream, Night Orchard, Red Rite and Rainbow Mane remain outside both October 26 deletion selections.
+
+### Shelved-project PNG retirement, November 22
+
+With the disk nearly full, Olof said the Deforum projects are shelved and asked to delete the still images in the projects the earlier passes had left intact. The scope was **Cartographer’s Dream, Night Orchard, Red Rite and Rainbow Mane**: **30,329 PNG paths**, **55.37 GB logical / 55.43 GB inode allocation**, including generated paintings. Every non-PNG file, Git-tracked file, reference folder, Sunlit Sketchbook and all other projects were excluded.
+
+Deforum now measures about **75 GB**. Observed volume free space increased by **33.90 GB** during the pass. The script confirmed all selected paths absent, all **142,430 retained files** unchanged by identity/size/modification time, and all **10,245 retained video paths** unchanged by SHA-256. No rendering, re-encoding or archive deletion occurred. The same restoration limits apply: videos remain playable, but PNG-based review, editing and continuation in these projects require regenerating their inputs.
+
+Private evidence is in `apps/deforum/work/storage-audit/final-pngs-20261122/`: the plan builder, exact allowlist, execution script, per-file deletion hashes, preservation snapshot, video hashes, free-space observations and completion receipt. Sunlit Sketchbook is the only project still holding its generated PNGs.
