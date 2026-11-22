@@ -4,13 +4,9 @@ Updated: 2026-11-21
 
 ## TL;DR
 
-- A public notebook for AI-assisted filmmaking: Deforum/Krea feedback films,
-  code-drawn Remotion shorts, typography studies and a music workbench. The Curve
-  (v005) is locked; The Moon Fisher is at animatic v006.
-- Latest focus is Sunlit Sketchbook, an homage to "Do It Big": Olof needs to judge
-  whether the new room still fixes the flatness before more shots are made.
-- The detailed operational handoff lives in `docs/current-state.md`; it is
-  newer and richer for Deforum films than these thread summaries.
+- A public notebook of AI-assisted film experiments.
+- Focus: Sunlit Sketchbook; Olof needs to judge the new room before more shots.
+- `docs/current-state.md` has the fuller handoff for the Deforum films.
 
 ## Needs Olof
 
